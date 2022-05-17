@@ -1,0 +1,103 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1652808988576' stop='1652808990121'>
+    <name>Products API tests: List All Products List all products orderby</name>
+    <title>Products API tests: List All Products List all products orderby</title>
+    <test-cases>
+        <test-case start='1652808988576' status='passed' stop='1652808988683'>
+            <name>default</name>
+            <title>default</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1652808988683' status='passed' stop='1652808988781'>
+            <name>date</name>
+            <title>date</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1652808988781' status='passed' stop='1652808988998'>
+            <name>id</name>
+            <title>id</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1652808988998' status='passed' stop='1652808989268'>
+            <name>title</name>
+            <title>title</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1652808989268' status='passed' stop='1652808989528'>
+            <name>slug</name>
+            <title>slug</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1652808989528' status='passed' stop='1652808989777'>
+            <name>price</name>
+            <title>price</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1652808989777' status='passed' stop='1652808989959'>
+            <name>include</name>
+            <title>include</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1652808989959' status='passed' stop='1652808990036'>
+            <name>rating (desc)</name>
+            <title>rating (desc)</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1652808990036' status='pending' stop='1652808990036'>
+            <name>rating (asc)</name>
+            <title>rating (asc)</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Temporarily disabled with xit</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1652808990036' status='passed' stop='1652808990121'>
+            <name>popularity (desc)</name>
+            <title>popularity (desc)</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1652808990121' status='pending' stop='1652808990121'>
+            <name>popularity (asc)</name>
+            <title>popularity (asc)</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Temporarily disabled with xit</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
