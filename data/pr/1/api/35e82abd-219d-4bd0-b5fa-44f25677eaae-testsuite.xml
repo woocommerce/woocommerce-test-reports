@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1652802366040' stop='1652802367880'>
+    <name>Orders API tests: CRUD Create an order</name>
+    <title>Orders API tests: CRUD Create an order</title>
+    <test-cases>
+        <test-case start='1652802366040' status='passed' stop='1652802366163'>
+            <name>can create a pending order by default</name>
+            <title>can create a pending order by default</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1652802366163' status='passed' stop='1652802366377'>
+            <name>can create an order with status 'pending'</name>
+            <title>can create an order with status 'pending'</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1652802366377' status='passed' stop='1652802366638'>
+            <name>can create an order with status 'processing'</name>
+            <title>can create an order with status 'processing'</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1652802366638' status='passed' stop='1652802366911'>
+            <name>can create an order with status 'on-hold'</name>
+            <title>can create an order with status 'on-hold'</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1652802366911' status='passed' stop='1652802367196'>
+            <name>can create an order with status 'completed'</name>
+            <title>can create an order with status 'completed'</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1652802367196' status='passed' stop='1652802367418'>
+            <name>can create an order with status 'cancelled'</name>
+            <title>can create an order with status 'cancelled'</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1652802367418' status='passed' stop='1652802367644'>
+            <name>can create an order with status 'refunded'</name>
+            <title>can create an order with status 'refunded'</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1652802367644' status='passed' stop='1652802367879'>
+            <name>can create an order with status 'failed'</name>
+            <title>can create an order with status 'failed'</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

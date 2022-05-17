@@ -1,0 +1,85 @@
+{
+  "uid" : "f237151b579aa8da",
+  "name" : "default",
+  "fullName" : "Orders API tests List all orders orderby.default",
+  "historyId" : "3dd8732e6d3855d59af67bcda6697b50",
+  "time" : {
+    "start" : 1652802358560,
+    "stop" : 1652802358721,
+    "duration" : 161
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests List all orders orderby"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests List all orders orderby"
+  }, {
+    "name" : "testMethod",
+    "value" : "default"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests List all orders orderby"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "6b65275c08a27ca0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652798009227,
+        "stop" : 1652798009434,
+        "duration" : 207
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "9812e15b8b4b5fe1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652798009227,
+          "stop" : 1652798009434,
+          "duration" : 207
+        }
+      }, {
+        "uid" : "6629f34ee5c7ebc1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652798009227,
+          "stop" : 1652798009434,
+          "duration" : 207
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f237151b579aa8da.json",
+  "parameterValues" : [ ]
+}
