@@ -19,16 +19,16 @@ get_comment_id() {
     # "Test reports for ... have been published"
     # And will return an array of comment id's.
     # The first id in the array will be saved as COMMENT_ID.
-    COMMENT_ID=$(gh api repos/woocommerce/woocommerce/issues/$PR_NUMBER/comments \
+    COMMENT_ID=$(gh api repos/$WOO_REPO/issues/$PR_NUMBER/comments \
         --jq "[.[] | select((.user.login == \"$REPORTS_USER\") and (.body | test(\".*Test reports for .* have been published\"))) | .id][0]")
 }
 
 add_comment() {
-    gh pr comment $PR_NUMBER --repo=woocommerce/woocommerce --body "$COMMENT_BODY"
+    gh pr comment $PR_NUMBER --repo=$WOO_REPO --body "$COMMENT_BODY"
 }
 
 update_comment() {
-    gh api -X PATCH repos/woocommerce/woocommerce/issues/comments/$COMMENT_ID -f body="$COMMENT_BODY"
+    gh api -X PATCH repos/$WOO_REPO/issues/comments/$COMMENT_ID -f body="$COMMENT_BODY"
 }
 
 set_comment_body
