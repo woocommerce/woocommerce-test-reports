@@ -94,4 +94,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
           REPORTS_REPO: ${{ github.repository }}
           REPORTS_REPO_OWNER: ${{ github.repository_owner }}
+          REPORTS_USER: ${{ secrets.REPORTS_USER }}
         run: bash add-pr-comment.sh
