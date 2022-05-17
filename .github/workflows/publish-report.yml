@@ -26,6 +26,9 @@ on:
       woo_repo:
         description: Repository that triggered this workflow.
         default: woocommerce/woocommerce
+      woo_repo_owner:
+        description: Owner of woo_repo.
+        default: woocommerce
       pr_number:
         description: If test_workflow is 'pr', this is the WooCommerce PR that generated the test report.
       commit_sha:
@@ -43,6 +46,7 @@ jobs:
       PR_NUMBER: ${{ github.event.inputs.pr_number }}
       COMMIT_SHA: ${{ github.event.inputs.commit_sha }}
       WOO_REPO: ${{ github.event.inputs.woo_repo }}
+      WOO_REPO_OWNER: ${{ github.event.inputs.woo_repo_owner }}
       DOWNLOAD_PATH: ${{ github.workspace }}/download
       REPO_PATH: ${{ github.workspace }}/repo
       GITHUB_TOKEN: ${{ github.token }}
