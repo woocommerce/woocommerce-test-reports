@@ -20,7 +20,7 @@ get_comment_id() {
     # And will return an array of comment id's.
     # The first id in the array will be saved as COMMENT_ID.
     COMMENT_ID=$(gh api repos/woocommerce/woocommerce/issues/$PR_NUMBER/comments \
-        --jq "[.[] | select((.user.login == \"botwoo\") and (.body | test(\".*Test reports for .* have been published\"))) | .id][0]")
+        --jq "[.[] | select((.user.login == \"$REPORTS_USER\") and (.body | test(\".*Test reports for .* have been published\"))) | .id][0]")
 }
 
 add_comment() {
