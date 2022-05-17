@@ -1,0 +1,85 @@
+{
+  "uid" : "7309eda602fc4bd2",
+  "name" : "can update status of an order to 'processing'",
+  "fullName" : "Orders API tests: CRUD Update an order.can update status of an order to 'processing'",
+  "historyId" : "dae2fb6f15bd432dc465047128d2f9a6",
+  "time" : {
+    "start" : 1652802368173,
+    "stop" : 1652802368304,
+    "duration" : 131
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can update status of an order to 'processing'"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "8f60dbadcfa288c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652798021452,
+        "stop" : 1652798021614,
+        "duration" : 162
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "8a5fef4105dcc4b0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652798021452,
+          "stop" : 1652798021614,
+          "duration" : 162
+        }
+      }, {
+        "uid" : "aa7294e5324224ab",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652798021452,
+          "stop" : 1652798021614,
+          "duration" : 162
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "7309eda602fc4bd2.json",
+  "parameterValues" : [ ]
+}

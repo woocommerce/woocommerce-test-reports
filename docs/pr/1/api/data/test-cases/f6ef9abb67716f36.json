@@ -1,0 +1,85 @@
+{
+  "uid" : "f6ef9abb67716f36",
+  "name" : "can create an order with status 'on-hold'",
+  "fullName" : "Orders API tests: CRUD Create an order.can create an order with status 'on-hold'",
+  "historyId" : "5605535c79e99af8e4c538472fdfa01",
+  "time" : {
+    "start" : 1652802366638,
+    "stop" : 1652802366911,
+    "duration" : 273
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can create an order with status 'on-hold'"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2ef0a2219e887144",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652798019456,
+        "stop" : 1652798019812,
+        "duration" : 356
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "af6cbaecc422ffc8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652798019456,
+          "stop" : 1652798019812,
+          "duration" : 356
+        }
+      }, {
+        "uid" : "cd4ac640126a53ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652798019456,
+          "stop" : 1652798019812,
+          "duration" : 356
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f6ef9abb67716f36.json",
+  "parameterValues" : [ ]
+}
