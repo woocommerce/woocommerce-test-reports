@@ -88,4 +88,6 @@ jobs:
         working-directory: ${{ env.REPO_PATH }}/.github/workflows/scripts
         env:
           GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
+          REPORTS_REPO: ${{ github.repository }}
+          REPORTS_REPO_OWNER: ${{ github.repository_owner }}
         run: bash add-pr-comment.sh
