@@ -1,18 +1,42 @@
 #!/usr/bin/env bash
 
-# Get the comment body as a variable
-COMMENT_BODY=$(cat templates/COMMENT_TEMPLATE.md)
+COMMENT_BODY=""
+COMMENT_ID=""
 
-# Replace variables in comment body
-COMMENT_BODY=${COMMENT_BODY//COMMIT_SHA/$COMMIT_SHA}
-COMMENT_BODY=${COMMENT_BODY//COMMIT_MESSAGE/$COMMIT_MESSAGE}
-COMMENT_BODY=${COMMENT_BODY//PR_NUMBER/$PR_NUMBER}
+set_comment_body() {
+    COMMENT_BODY=$(cat templates/COMMENT_TEMPLATE.md)
+    COMMENT_BODY=${COMMENT_BODY//COMMIT_SHA/$COMMIT_SHA}
+    COMMENT_BODY=${COMMENT_BODY//COMMIT_MESSAGE/$COMMIT_MESSAGE}
+    COMMENT_BODY=${COMMENT_BODY//PR_NUMBER/$PR_NUMBER}
 
-# Display comment body to user
-echo "Comment to be posted on pull request #$PR_NUMBER:"
-echo "\n\n"
-echo "$COMMENT_BODY"
-echo "\n\n"
+    echo "Comment to be posted on pull request #$PR_NUMBER:"
+    echo "$COMMENT_BODY"
+}
 
-# Add the comment to the pull request
-gh pr comment $PR_NUMBER --repo=woocommerce/woocommerce --body "$COMMENT_BODY"
+get_comment_id() {
+
+    # This command will look for existing PR comments by botwoo, and whose body contains:
+    # "Test reports for ... have been published"
+    # And will return an array of comment id's.
+    # The first id in the array will be saved as COMMENT_ID.
+    COMMENT_ID=$(gh api repos/woocommerce/woocommerce/issues/$PR_NUMBER/comments \
+        --jq "[.[] | select((.user.login == \"botwoo\") and (.body | test(\".*Test reports for .* have been published\"))) | .id][0]")
+}
+
+add_comment() {
+    gh pr comment $PR_NUMBER --repo=woocommerce/woocommerce --body "$COMMENT_BODY"
+}
+
+update_comment() {
+    gh api -X PATCH repos/woocommerce/woocommerce/issues/comments/$COMMENT_ID -f body="$COMMENT_BODY"
+}
+
+set_comment_body
+
+get_comment_id
+
+if [[ -z "$COMMENT_ID" ]]; then
+    add_comment
+else
+    update_comment
+fi
