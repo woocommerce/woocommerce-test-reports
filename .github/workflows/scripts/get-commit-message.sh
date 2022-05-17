@@ -7,7 +7,7 @@
 
 # Get the commit message using GitHub CLI
 COMMIT_MESSAGE=$(gh pr view $PR_NUMBER \
-    --repo woocommerce/woocommerce \
+    --repo $WOO_REPO \
     --json commits \
     --jq ".commits[] | select(.oid == \"$COMMIT_SHA\") | .messageHeadline")
 

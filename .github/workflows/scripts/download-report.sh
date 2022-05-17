@@ -11,7 +11,7 @@ for ((i = 1; i <= $MAX_ATTEMPTS; i++)); do
     echo "Downloading $ARTIFACT_NAME (try #$i)..."
     gh run download $RUN_ID \
         --name $ARTIFACT_NAME \
-        --repo woocommerce/woocommerce
+        --repo $WOO_REPO
 
     EXIT_CODE=$(echo $?)
 
