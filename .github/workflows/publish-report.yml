@@ -25,7 +25,7 @@ on:
         required: true
       woo_repo:
         description: Repository that triggered this workflow.
-        required: true
+        default: woocommerce/woocommerce
       pr_number:
         description: If test_workflow is 'pr', this is the WooCommerce PR that generated the test report.
       commit_sha:
