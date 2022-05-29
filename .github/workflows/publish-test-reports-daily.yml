@@ -19,34 +19,44 @@ jobs:
     env:
       RUN_ID: ${{ github.event.inputs.run_id }}
       API_ARTIFACT: ${{ github.event.inputs.api_artifact }}
-      DOWNLOAD_PATH: ${{ github.workspace }}/download
-      REPO_PATH: ${{ github.workspace }}/repo
-      GITHUB_TOKEN: ${{ github.token }}
       COMMIT_MESSAGE: ${{ github.event.inputs.commit_message }}
     steps:
       - name: Create dirs
         run: |
-          mkdir -p $DOWNLOAD_PATH
-          mkdir -p $REPO_PATH
+          mkdir -p download/api
+          mkdir -p repo
 
       - name: Checkout this repo
         uses: actions/checkout@v3
         with:
-          path: ${{ env.REPO_PATH }}
+          path: repo
           token: ${{ secrets.REPORTS_TOKEN }}
 
       - name: Install allure-commandline package
         run: npm install -g allure-commandline
 
       - name: Download API test report artifact
-        working-directory: ${{ env.REPO_PATH }}/.github/workflows/scripts
+        working-directory: repo/.github/workflows/scripts
         env:
           ARTIFACT_NAME: ${{ env.API_ARTIFACT }}
+          DOWNLOAD_PATH: ${{ github.workspace }}/download/api
         run: bash download-report.sh
 
-      - name: Regenerate 
-        if: ${{ false }}
-        run: ${{ env.REPO_PATH }}/.github/workflows/scripts/regenerate-report.sh
+      - name: Regenerate and combine reports
+        working-directory: repo/.github/workflows/scripts
+        env:
+          REPO_ALLURE_REPORT_PATH: ${{ github.workspace }}/repo/docs/daily/api/allure-report
+          REPO_ALLURE_RESULTS_PATH: ${{ github.workspace }}/repo/docs/daily/api/allure-results
+          DOWNLOAD_ALLURE_REPORT_PATH: ${{ github.workspace }}/download/api/allure-report
+          DOWNLOAD_ALLURE_RESULTS_PATH: ${{ github.workspace }}/download/api/allure-results
+        run: bash regenerate-combine-reports.sh
+
+      - name: Archive API test report
+        uses: actions/upload-artifact@v3
+        with:
+          name: daily-smoke-test-report
+          path: ${{ github.workspace }}/repo/docs/daily
+          retention-days: 5
 
       - name: Push changes to repo
         if: ${{ false }}
@@ -54,12 +64,12 @@ jobs:
           GH_USER: ${{ secrets.REPORTS_USER }}
           GH_EMAIL: ${{ secrets.REPORTS_EMAIL }}
           GH_TOKEN: ${{ secrets.REPORTS_TOKEN }}
-        run: ${{ env.REPO_PATH }}/.github/workflows/scripts/push-changes.sh
+        run: repo/.github/workflows/scripts/push-changes.sh
 
       - name: Prepare Slack message
         if: ${{ false }}
         id: slack_message
-        working-directory: ${{ env.REPO_PATH }}/.github/workflows/scripts
+        working-directory: repo/.github/workflows/scripts
         run: |
           SLACK_MESSAGE=$(COMMIT_MESSAGE="$COMMIT_MESSAGE" node prepare-slack-message-daily.js)
           echo "::set-output name=slack_message::$SLACK_MESSAGE"
