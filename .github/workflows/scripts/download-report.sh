@@ -4,13 +4,12 @@ MAX_ATTEMPTS=10
 EXIT_CODE=0
 WAIT_TIME=10
 
-cd $DOWNLOAD_PATH
-
 for ((i = 1; i <= $MAX_ATTEMPTS; i++)); do
 
     echo "Downloading $ARTIFACT_NAME (try #$i)..."
     gh run download $RUN_ID \
         --name $ARTIFACT_NAME \
+        --dir $DOWNLOAD_PATH \
         --repo woocommerce/woocommerce
 
     EXIT_CODE=$(echo $?)
