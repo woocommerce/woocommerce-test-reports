@@ -44,10 +44,12 @@ jobs:
           ARTIFACT_NAME: ${{ env.API_ARTIFACT }}
         run: bash download-report.sh
 
-      - name: Regenerate report
+      - name: Regenerate 
+        if: ${{ false }}
         run: ${{ env.REPO_PATH }}/.github/workflows/scripts/regenerate-report.sh
 
       - name: Push changes to repo
+        if: ${{ false }}
         env:
           GH_USER: ${{ secrets.REPORTS_USER }}
           GH_EMAIL: ${{ secrets.REPORTS_EMAIL }}
@@ -55,6 +57,7 @@ jobs:
         run: ${{ env.REPO_PATH }}/.github/workflows/scripts/push-changes.sh
 
       - name: Prepare Slack message
+        if: ${{ false }}
         id: slack_message
         working-directory: ${{ env.REPO_PATH }}/.github/workflows/scripts
         run: |
@@ -62,6 +65,7 @@ jobs:
           echo "::set-output name=slack_message::$SLACK_MESSAGE"
 
       - name: Post test report to Slack channel
+        if: ${{ false }}
         uses: slackapi/slack-github-action@v1.19.0
         env:
           SLACK_BOT_TOKEN: ${{ secrets.E2E_SLACK_TOKEN }}
