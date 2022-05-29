@@ -52,6 +52,21 @@ jobs:
           DOWNLOAD_ALLURE_RESULTS_PATH: ${{ github.workspace }}/download/api/allure-results
         run: bash regenerate-combine-reports.sh
 
+      - name: Customize Daily Smoke Test report title
+        working-directory: repo/.github/workflows/scripts
+        env:
+          INDEX_HTML_PATH: ${{ github.workspace }}/repo/docs/daily/api/allure-report/index.html
+          SUMMARY_JSON_PATH: ${{ github.workspace }}/repo/docs/daily/api/allure-report/widgets/summary.json
+          REPORT_TITLE: "[Daily API test report] ${{ env.COMMIT_MESSAGE }}"
+        run: node change-report-title.js "$REPORT_TITLE" "$INDEX_HTML_PATH" "$SUMMARY_JSON_PATH"
+
+      - name: Archive API test report
+        uses: actions/upload-artifact@v3
+        with:
+          name: daily-smoke-test-report
+          path: ${{ github.workspace }}/repo/docs/daily
+          retention-days: 1
+
       - name: Push changes to repo
         if: ${{ false }}
         env:
