@@ -70,7 +70,6 @@ jobs:
         run: bash push-changes-to-repo.sh
 
       - name: Prepare Slack message
-        if: ${{ false }}
         id: slack_message
         working-directory: repo/.github/workflows/scripts
         run: |
