@@ -1,0 +1,85 @@
+{
+  "uid" : "7f6e27f427e9f82a",
+  "name" : "can create an order with status 'processing'",
+  "fullName" : "Orders API tests: CRUD Create an order.can create an order with status 'processing'",
+  "historyId" : "65ff4b80a8f66d8d257f6d2fad6b28cd",
+  "time" : {
+    "start" : 1653689610673,
+    "stop" : 1653689610971,
+    "duration" : 298
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can create an order with status 'processing'"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "3409ceb9f96501d3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653604018811,
+        "stop" : 1653604019073,
+        "duration" : 262
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "9ba2e3967ba2a0d8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653689610673,
+          "stop" : 1653689610971,
+          "duration" : 298
+        }
+      }, {
+        "uid" : "d76e85fd7ea9392b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653604018811,
+          "stop" : 1653604019073,
+          "duration" : 262
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "7f6e27f427e9f82a.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,93 @@
+{
+  "uid" : "65420511fc5cb845",
+  "name" : "can update status of an order to 'failed'",
+  "fullName" : "Orders API tests: CRUD Update an order.can update status of an order to 'failed'",
+  "historyId" : "8af85bfe83a4d607b9083cd3cd96adca",
+  "time" : {
+    "start" : 1653502962524,
+    "stop" : 1653502962630,
+    "duration" : 106
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can update status of an order to 'failed'"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "19c78ab4c1bbee2a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653415898679,
+        "stop" : 1653415898772,
+        "duration" : 93
+      }
+    }, {
+      "uid" : "8fd7cbc01b618b5e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652790562776,
+        "stop" : 1652790562866,
+        "duration" : 90
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "3608ea130512e79b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653415898679,
+          "stop" : 1653415898772,
+          "duration" : 93
+        }
+      }, {
+        "uid" : "b5a79c8c598b2e4a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652790562776,
+          "stop" : 1652790562866,
+          "duration" : 90
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "65420511fc5cb845.json",
+  "parameterValues" : [ ]
+}

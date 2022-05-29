@@ -1,0 +1,50 @@
+{
+  "uid" : "82d62c85b10b06a3",
+  "name" : "can delete a refund",
+  "fullName" : "Refunds API tests.can delete a refund",
+  "historyId" : "1acb4253285ec26f54b09823d39f601a",
+  "time" : {
+    "start" : 1652864726066,
+    "stop" : 1652864726091,
+    "duration" : 25
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 200\n                Received: 404",
+  "statusTrace" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 200\n                Received: 404\n                    at Object.<anonymous> (/home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/tests/refunds/refunds.test.js:108:20)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Refunds API tests"
+  }, {
+    "name" : "testClass",
+    "value" : "Refunds API tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "can delete a refund"
+  }, {
+    "name" : "package",
+    "value" : "Refunds API tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "82d62c85b10b06a3.json",
+  "parameterValues" : [ ]
+}

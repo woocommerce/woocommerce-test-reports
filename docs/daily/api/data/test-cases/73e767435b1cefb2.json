@@ -1,0 +1,50 @@
+{
+  "uid" : "73e767435b1cefb2",
+  "name" : "can create a refund",
+  "fullName" : "Refunds API tests.can create a refund",
+  "historyId" : "cc88586c859601c7d23cc83cefdb0424",
+  "time" : {
+    "start" : 1653559566437,
+    "stop" : 1653559571440,
+    "duration" : 5003
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : ": Timeout - Async callback was not invoked within the 5000ms timeout specified by jest.setTimeout.",
+  "statusTrace" : "Timeout - Async callback was not invoked within the 5000ms timeout specified by jest.setTimeout.Error: \n                    at new Spec (/home/runner/work/woocommerce/woocommerce/node_modules/.pnpm/jest-jasmine2@25.5.4/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)\n                    at new Spec (/home/runner/work/woocommerce/woocommerce/node_modules/.pnpm/jest-jasmine2@25.5.4/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)\n                    at specFactory (/home/runner/work/woocommerce/woocommerce/node_modules/.pnpm/jest-jasmine2@25.5.4/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)\n                    at Env.it (/home/runner/work/woocommerce/woocommerce/node_modules/.pnpm/jest-jasmine2@25.5.4/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)\n                    at Env.it (/home/runner/work/woocommerce/woocommerce/node_modules/.pnpm/jest-jasmine2@25.5.4/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:128:23)\n                    at it (/home/runner/work/woocommerce/woocommerce/node_modules/.pnpm/jest-jasmine2@25.5.4/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)\n                    at Suite.<anonymous> (/home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/tests/refunds/refunds.test.js:58:2)\n                    at addSpecsToSuite (/home/runner/work/woocommerce/woocommerce/node_modules/.pnpm/jest-jasmine2@25.5.4/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)\n                    at Env.describe (/home/runner/work/woocommerce/woocommerce/node_modules/.pnpm/jest-jasmine2@25.5.4/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)\n                    at describe (/home/runner/work/woocommerce/woocommerce/node_modules/.pnpm/jest-jasmine2@25.5.4/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)\n                    at Object.<anonymous> (/home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/tests/refunds/refunds.test.js:13:1)\n                    at Runtime._execModule (/home/runner/work/woocommerce/woocommerce/node_modules/.pnpm/jest-runtime@25.5.4/node_modules/jest-runtime/build/index.js:1205:24)\n                    at Runtime._loadModule (/home/runner/work/woocommerce/woocommerce/node_modules/.pnpm/jest-runtime@25.5.4/node_modules/jest-runtime/build/index.js:805:12)\n                    at Runtime.requireModule (/home/runner/work/woocommerce/woocommerce/node_modules/.pnpm/jest-runtime@25.5.4/node_modules/jest-runtime/build/index.js:662:10)\n                    at jasmine2 (/home/runner/work/woocommerce/woocommerce/node_modules/.pnpm/jest-jasmine2@25.5.4/node_modules/jest-jasmine2/build/index.js:228:13)\n                    at runTestInternal (/home/runner/work/woocommerce/woocommerce/node_modules/.pnpm/jest-runner@25.5.4/node_modules/jest-runner/build/runTest.js:385:22)\n                    at runTest (/home/runner/work/woocommerce/woocommerce/node_modules/.pnpm/jest-runner@25.5.4/node_modules/jest-runner/build/runTest.js:465:34)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Refunds API tests"
+  }, {
+    "name" : "testClass",
+    "value" : "Refunds API tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "can create a refund"
+  }, {
+    "name" : "package",
+    "value" : "Refunds API tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "73e767435b1cefb2.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,93 @@
+{
+  "uid" : "733f906fabd34957",
+  "name" : "include",
+  "fullName" : "Orders API tests List all orders orderby.include",
+  "historyId" : "739a7429b1e76281fa5bf89bb9de4949",
+  "time" : {
+    "start" : 1653015770775,
+    "stop" : 1653015770998,
+    "duration" : 223
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests List all orders orderby"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests List all orders orderby"
+  }, {
+    "name" : "testMethod",
+    "value" : "include"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests List all orders orderby"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "6a9750fc1dec2f42",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652949086746,
+        "stop" : 1652949086950,
+        "duration" : 204
+      }
+    }, {
+      "uid" : "1f019eeb1a2fe844",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652932739618,
+        "stop" : 1652932739837,
+        "duration" : 219
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "975302033e3fde49",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652949086746,
+          "stop" : 1652949086950,
+          "duration" : 204
+        }
+      }, {
+        "uid" : "bae687798483656f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652932739618,
+          "stop" : 1652932739837,
+          "duration" : 219
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "733f906fabd34957.json",
+  "parameterValues" : [ ]
+}

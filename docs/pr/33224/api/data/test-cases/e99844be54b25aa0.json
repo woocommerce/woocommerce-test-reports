@@ -1,0 +1,181 @@
+{
+  "uid" : "e99844be54b25aa0",
+  "name" : "can update a coupon",
+  "fullName" : "Coupons API tests.can update a coupon",
+  "historyId" : "e47ddb3721f1431171dbdbfa6c310b60",
+  "time" : {
+    "start" : 1653626444946,
+    "stop" : 1653626445030,
+    "duration" : 84
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : true,
+  "retriesCount" : 7,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Coupons API tests"
+  }, {
+    "name" : "testClass",
+    "value" : "Coupons API tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "can update a coupon"
+  }, {
+    "name" : "package",
+    "value" : "Coupons API tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a2514ce88306485b",
+      "status" : "failed",
+      "statusDetails" : "SyntaxError: Unexpected token < in JSON at position 0",
+      "time" : {
+        "start" : 1653625155594,
+        "stop" : 1653625155635,
+        "duration" : 41
+      }
+    }, {
+      "uid" : "38ab35a87e62be56",
+      "status" : "failed",
+      "statusDetails" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 200\n                Received: 404",
+      "time" : {
+        "start" : 1653624155020,
+        "stop" : 1653624155248,
+        "duration" : 228
+      }
+    }, {
+      "uid" : "eadb9a3fd9a1de65",
+      "status" : "failed",
+      "statusDetails" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 200\n                Received: 404",
+      "time" : {
+        "start" : 1653623043870,
+        "stop" : 1653623044817,
+        "duration" : 947
+      }
+    }, {
+      "uid" : "35daf3577c8ef648",
+      "status" : "failed",
+      "statusDetails" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 200\n                Received: 404",
+      "time" : {
+        "start" : 1653621369215,
+        "stop" : 1653621369363,
+        "duration" : 148
+      }
+    }, {
+      "uid" : "78cdf5f5278b2abc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653620560615,
+        "stop" : 1653620560698,
+        "duration" : 83
+      }
+    }, {
+      "uid" : "223a7f657732b6ad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653619683625,
+        "stop" : 1653619683750,
+        "duration" : 125
+      }
+    }, {
+      "uid" : "847c0861fd969975",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653618716296,
+        "stop" : 1653618716483,
+        "duration" : 187
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 4,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 8
+      },
+      "items" : [ {
+        "uid" : "fa2fa2b798d567d8",
+        "status" : "failed",
+        "statusDetails" : "SyntaxError: Unexpected token < in JSON at position 0",
+        "time" : {
+          "start" : 1653625155594,
+          "stop" : 1653625155635,
+          "duration" : 41
+        }
+      }, {
+        "uid" : "96d3b9ff867f4e15",
+        "status" : "failed",
+        "statusDetails" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 200\n                Received: 404",
+        "time" : {
+          "start" : 1653624155020,
+          "stop" : 1653624155248,
+          "duration" : 228
+        }
+      }, {
+        "uid" : "1b92fe69e399f1ee",
+        "status" : "failed",
+        "statusDetails" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 200\n                Received: 404",
+        "time" : {
+          "start" : 1653623043870,
+          "stop" : 1653623044817,
+          "duration" : 947
+        }
+      }, {
+        "uid" : "2c99224c61e06ee0",
+        "status" : "failed",
+        "statusDetails" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 200\n                Received: 404",
+        "time" : {
+          "start" : 1653621369215,
+          "stop" : 1653621369363,
+          "duration" : 148
+        }
+      }, {
+        "uid" : "68d91de2e9724de4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653620560615,
+          "stop" : 1653620560698,
+          "duration" : 83
+        }
+      }, {
+        "uid" : "4fb7b3bfecb3fadc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653619683625,
+          "stop" : 1653619683750,
+          "duration" : 125
+        }
+      }, {
+        "uid" : "d45281f557a3cd25",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653618716296,
+          "stop" : 1653618716483,
+          "duration" : 187
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e99844be54b25aa0.json",
+  "parameterValues" : [ ]
+}

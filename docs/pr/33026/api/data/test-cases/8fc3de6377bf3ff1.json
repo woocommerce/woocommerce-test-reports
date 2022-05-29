@@ -1,0 +1,50 @@
+{
+  "uid" : "8fc3de6377bf3ff1",
+  "name" : "can batch update coupons",
+  "fullName" : "Coupons API tests Batch update coupons.can batch update coupons",
+  "historyId" : "983a710bbd7d8ec3797abb4be72e78f5",
+  "time" : {
+    "start" : 1652863736247,
+    "stop" : 1652863736282,
+    "duration" : 35
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 200\n                Received: 404",
+  "statusTrace" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 200\n                Received: 404\n                    at Object.<anonymous> (/home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/tests/coupons/coupons.test.js:136:41)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Coupons API tests Batch update coupons"
+  }, {
+    "name" : "testClass",
+    "value" : "Coupons API tests Batch update coupons"
+  }, {
+    "name" : "testMethod",
+    "value" : "can batch update coupons"
+  }, {
+    "name" : "package",
+    "value" : "Coupons API tests Batch update coupons"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8fc3de6377bf3ff1.json",
+  "parameterValues" : [ ]
+}

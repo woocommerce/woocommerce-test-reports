@@ -1,0 +1,50 @@
+{
+  "uid" : "8d735f40f234ce95",
+  "name" : "can create an order with status 'processing'",
+  "fullName" : "Orders API tests: CRUD Create an order.can create an order with status 'processing'",
+  "historyId" : "65ff4b80a8f66d8d257f6d2fad6b28cd",
+  "time" : {
+    "start" : 1652864724134,
+    "stop" : 1652864724164,
+    "duration" : 30
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 201\n                Received: 404",
+  "statusTrace" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 201\n                Received: 404\n                    at /home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/tests/orders/orders-crud.test.js:98:22\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can create an order with status 'processing'"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8d735f40f234ce95.json",
+  "parameterValues" : [ ]
+}

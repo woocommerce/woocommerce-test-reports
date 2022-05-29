@@ -1,0 +1,245 @@
+{
+  "uid" : "bf42acc746512d1a",
+  "name" : "can update status of an order to 'refunded'",
+  "fullName" : "Orders API tests: CRUD Update an order.can update status of an order to 'refunded'",
+  "historyId" : "80d0ad8dd95cc10f24e48a5a973318e0",
+  "time" : {
+    "start" : 1652683108865,
+    "stop" : 1652683108991,
+    "duration" : 126
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 11,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can update status of an order to 'refunded'"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "986a0e2d8ba9dfe4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652259462630,
+        "stop" : 1652259462760,
+        "duration" : 130
+      }
+    }, {
+      "uid" : "3c1dd5970d71adaa",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651652980105,
+        "stop" : 1651652980210,
+        "duration" : 105
+      }
+    }, {
+      "uid" : "569af4602d464a83",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651584071651,
+        "stop" : 1651584071757,
+        "duration" : 106
+      }
+    }, {
+      "uid" : "615b87865fbca967",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651575320426,
+        "stop" : 1651575320531,
+        "duration" : 105
+      }
+    }, {
+      "uid" : "d672f1070ad9fed2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649992646555,
+        "stop" : 1649992646677,
+        "duration" : 122
+      }
+    }, {
+      "uid" : "448bceea2aee65c6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649990485479,
+        "stop" : 1649990485582,
+        "duration" : 103
+      }
+    }, {
+      "uid" : "eddb21f09276a167",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649908369846,
+        "stop" : 1649908369957,
+        "duration" : 111
+      }
+    }, {
+      "uid" : "e4b4cc2f23f34b93",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649834718567,
+        "stop" : 1649834718673,
+        "duration" : 106
+      }
+    }, {
+      "uid" : "8250a9e2516f74f0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649827498846,
+        "stop" : 1649827498958,
+        "duration" : 112
+      }
+    }, {
+      "uid" : "e636476395c2ce5d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649813894862,
+        "stop" : 1649813894976,
+        "duration" : 114
+      }
+    }, {
+      "uid" : "3a8463f6fe2f1832",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649812504233,
+        "stop" : 1649812504317,
+        "duration" : 84
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 13,
+        "unknown" : 0,
+        "total" : 13
+      },
+      "items" : [ {
+        "uid" : "e1f2513bd83c9cc0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652259462630,
+          "stop" : 1652259462760,
+          "duration" : 130
+        }
+      }, {
+        "uid" : "992a07d3c46e25ee",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651652980105,
+          "stop" : 1651652980210,
+          "duration" : 105
+        }
+      }, {
+        "uid" : "c194f92d405ab369",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651584071651,
+          "stop" : 1651584071757,
+          "duration" : 106
+        }
+      }, {
+        "uid" : "6a04984804a017c7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651575320426,
+          "stop" : 1651575320531,
+          "duration" : 105
+        }
+      }, {
+        "uid" : "a7596054a09648a8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651575320426,
+          "stop" : 1651575320531,
+          "duration" : 105
+        }
+      }, {
+        "uid" : "6d3e3cc8eea3fd12",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649992646555,
+          "stop" : 1649992646677,
+          "duration" : 122
+        }
+      }, {
+        "uid" : "5be1643d95d54275",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649990485479,
+          "stop" : 1649990485582,
+          "duration" : 103
+        }
+      }, {
+        "uid" : "89de422fc32987dc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649908369846,
+          "stop" : 1649908369957,
+          "duration" : 111
+        }
+      }, {
+        "uid" : "fe608229a5492f2e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649834718567,
+          "stop" : 1649834718673,
+          "duration" : 106
+        }
+      }, {
+        "uid" : "e4869ddc295f35e1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649827498846,
+          "stop" : 1649827498958,
+          "duration" : 112
+        }
+      }, {
+        "uid" : "e2bd74f431ac5d80",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649813894862,
+          "stop" : 1649813894976,
+          "duration" : 114
+        }
+      }, {
+        "uid" : "eb004129fc86c2d9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649812504233,
+          "stop" : 1649812504317,
+          "duration" : 84
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "bf42acc746512d1a.json",
+  "parameterValues" : [ ]
+}

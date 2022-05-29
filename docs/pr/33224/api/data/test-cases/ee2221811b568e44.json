@@ -1,0 +1,50 @@
+{
+  "uid" : "ee2221811b568e44",
+  "name" : "can retrieve a coupon",
+  "fullName" : "Coupons API tests.can retrieve a coupon",
+  "historyId" : "ef9d4f1b49c3f4723a869137354511c3",
+  "time" : {
+    "start" : 1653621369199,
+    "stop" : 1653621369214,
+    "duration" : 15
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "SyntaxError: Unexpected token < in JSON at position 0",
+  "statusTrace" : "SyntaxError: Unexpected token < in JSON at position 0\n                    at JSON.parse (<anonymous>)\n                    at IncomingMessage.<anonymous> (/home/runner/work/woocommerce/woocommerce/node_modules/.pnpm/superagent@6.1.0/node_modules/superagent/src/node/parsers/json.js:11:31)\n                    at IncomingMessage.emit (node:events:539:35)\n                    at endReadableNT (node:internal/streams/readable:1345:12)\n                    at processTicksAndRejections (node:internal/process/task_queues:83:21)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Coupons API tests"
+  }, {
+    "name" : "testClass",
+    "value" : "Coupons API tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "can retrieve a coupon"
+  }, {
+    "name" : "package",
+    "value" : "Coupons API tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ee2221811b568e44.json",
+  "parameterValues" : [ ]
+}

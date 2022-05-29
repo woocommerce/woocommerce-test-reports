@@ -1,0 +1,77 @@
+{
+  "uid" : "69925de222c6c8da",
+  "name" : "can create an order with status 'on-hold'",
+  "fullName" : "Orders API tests: CRUD Create an order.can create an order with status 'on-hold'",
+  "historyId" : "5605535c79e99af8e4c538472fdfa01",
+  "time" : {
+    "start" : 1653607289582,
+    "stop" : 1653607289878,
+    "duration" : 296
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can create an order with status 'on-hold'"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "6b0e42ead185e7cd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653602975977,
+        "stop" : 1653602976262,
+        "duration" : 285
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "23773c5700bbfe4b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653602975977,
+          "stop" : 1653602976262,
+          "duration" : 285
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "69925de222c6c8da.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,50 @@
+{
+  "uid" : "d7b6f5bd9854eb92",
+  "name" : "can update status of an order to 'processing'",
+  "fullName" : "Orders API tests: CRUD Update an order.can update status of an order to 'processing'",
+  "historyId" : "dae2fb6f15bd432dc465047128d2f9a6",
+  "time" : {
+    "start" : 1652863738045,
+    "stop" : 1652863738091,
+    "duration" : 46
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 200\n                Received: 404",
+  "statusTrace" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 200\n                Received: 404\n                    at /home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/tests/orders/orders-crud.test.js:141:22\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can update status of an order to 'processing'"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d7b6f5bd9854eb92.json",
+  "parameterValues" : [ ]
+}

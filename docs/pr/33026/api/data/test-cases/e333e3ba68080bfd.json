@@ -1,0 +1,50 @@
+{
+  "uid" : "e333e3ba68080bfd",
+  "name" : "can retrieve an order",
+  "fullName" : "Orders API tests: CRUD Retrieve an order.can retrieve an order",
+  "historyId" : "ad58f79752d45c24c3677eb76f536c40",
+  "time" : {
+    "start" : 1652864724315,
+    "stop" : 1652864724343,
+    "duration" : 28
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 200\n                Received: 404",
+  "statusTrace" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 200\n                Received: 404\n                    at Object.<anonymous> (/home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/tests/orders/orders-crud.test.js:111:30)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Retrieve an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Retrieve an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can retrieve an order"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Retrieve an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e333e3ba68080bfd.json",
+  "parameterValues" : [ ]
+}

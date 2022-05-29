@@ -1,0 +1,77 @@
+{
+  "uid" : "5140d0680c153d0c",
+  "name" : "can create an order with status 'cancelled'",
+  "fullName" : "Orders API tests: CRUD Create an order.can create an order with status 'cancelled'",
+  "historyId" : "19aea94f1b81370bd4d0f1b0f55342a4",
+  "time" : {
+    "start" : 1652871713586,
+    "stop" : 1652871713808,
+    "duration" : 222
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can create an order with status 'cancelled'"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "23c54bbced49d162",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652870745272,
+        "stop" : 1652870745639,
+        "duration" : 367
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "224418d71eeeabc6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652870745272,
+          "stop" : 1652870745639,
+          "duration" : 367
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "5140d0680c153d0c.json",
+  "parameterValues" : [ ]
+}

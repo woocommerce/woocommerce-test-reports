@@ -1,0 +1,109 @@
+{
+  "uid" : "dc26d1660845a74d",
+  "name" : "can batch delete coupons",
+  "fullName" : "Coupons API tests Batch update coupons.can batch delete coupons",
+  "historyId" : "bf531c9708a6dfaeb1f2036c8f851f0e",
+  "time" : {
+    "start" : 1653462252888,
+    "stop" : 1653462253224,
+    "duration" : 336
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 3,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Coupons API tests Batch update coupons"
+  }, {
+    "name" : "testClass",
+    "value" : "Coupons API tests Batch update coupons"
+  }, {
+    "name" : "testMethod",
+    "value" : "can batch delete coupons"
+  }, {
+    "name" : "package",
+    "value" : "Coupons API tests Batch update coupons"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "8d33883d1b514be6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653381577240,
+        "stop" : 1653381577475,
+        "duration" : 235
+      }
+    }, {
+      "uid" : "7aec540b486b0ded",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653322981728,
+        "stop" : 1653322981962,
+        "duration" : 234
+      }
+    }, {
+      "uid" : "50ec272a92850a71",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653043123014,
+        "stop" : 1653043123277,
+        "duration" : 263
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "16d173a2241d117e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653381577240,
+          "stop" : 1653381577475,
+          "duration" : 235
+        }
+      }, {
+        "uid" : "9a3fb193004487d9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653322981728,
+          "stop" : 1653322981962,
+          "duration" : 234
+        }
+      }, {
+        "uid" : "c0cb59e550d4f6c7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653043123014,
+          "stop" : 1653043123277,
+          "duration" : 263
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "dc26d1660845a74d.json",
+  "parameterValues" : [ ]
+}

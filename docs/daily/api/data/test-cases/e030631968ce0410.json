@@ -1,0 +1,79 @@
+{
+  "uid" : "e030631968ce0410",
+  "name" : "can delete a refund",
+  "fullName" : "Refunds API tests.can delete a refund",
+  "historyId" : "1acb4253285ec26f54b09823d39f601a",
+  "time" : {
+    "start" : 1653559904887,
+    "stop" : 1653559909546,
+    "duration" : 4659
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : true,
+  "retriesCount" : 1,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Refunds API tests"
+  }, {
+    "name" : "testClass",
+    "value" : "Refunds API tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "can delete a refund"
+  }, {
+    "name" : "package",
+    "value" : "Refunds API tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "41a67f8b630ae0a4",
+      "status" : "failed",
+      "statusDetails" : ": Timeout - Async callback was not invoked within the 5000ms timeout specified by jest.setTimeout.",
+      "time" : {
+        "start" : 1653559573570,
+        "stop" : 1653559578572,
+        "duration" : 5002
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "b1549c83757805f6",
+        "status" : "failed",
+        "statusDetails" : ": Timeout - Async callback was not invoked within the 5000ms timeout specified by jest.setTimeout.",
+        "time" : {
+          "start" : 1653559573570,
+          "stop" : 1653559578572,
+          "duration" : 5002
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "e030631968ce0410.json",
+  "parameterValues" : [ ]
+}

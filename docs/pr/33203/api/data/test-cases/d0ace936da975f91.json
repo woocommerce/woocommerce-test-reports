@@ -1,0 +1,50 @@
+{
+  "uid" : "d0ace936da975f91",
+  "name" : "can batch create products",
+  "fullName" : "Products API tests: CRUD Batch update products.can batch create products",
+  "historyId" : "1c51dc9590e4de66f626cb6e3952cec7",
+  "time" : {
+    "start" : 1653553588612,
+    "stop" : 1653553588613,
+    "duration" : 1
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: connect ECONNREFUSED 127.0.0.1:8086",
+  "statusTrace" : "Error: connect ECONNREFUSED 127.0.0.1:8086\n                    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Products API tests: CRUD Batch update products"
+  }, {
+    "name" : "testClass",
+    "value" : "Products API tests: CRUD Batch update products"
+  }, {
+    "name" : "testMethod",
+    "value" : "can batch create products"
+  }, {
+    "name" : "package",
+    "value" : "Products API tests: CRUD Batch update products"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d0ace936da975f91.json",
+  "parameterValues" : [ ]
+}

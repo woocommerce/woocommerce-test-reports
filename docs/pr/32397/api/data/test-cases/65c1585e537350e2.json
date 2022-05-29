@@ -1,0 +1,245 @@
+{
+  "uid" : "65c1585e537350e2",
+  "name" : "can update status of an order to 'cancelled'",
+  "fullName" : "Orders API tests: CRUD Update an order.can update status of an order to 'cancelled'",
+  "historyId" : "243ad1eb823752561d41e2467405a926",
+  "time" : {
+    "start" : 1652683108734,
+    "stop" : 1652683108864,
+    "duration" : 130
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 11,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can update status of an order to 'cancelled'"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "4694a8ea45e841b5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652259462519,
+        "stop" : 1652259462630,
+        "duration" : 111
+      }
+    }, {
+      "uid" : "ae91e7ec92b9e55f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651652979994,
+        "stop" : 1651652980105,
+        "duration" : 111
+      }
+    }, {
+      "uid" : "e9ba3a16223a6d87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651584071546,
+        "stop" : 1651584071651,
+        "duration" : 105
+      }
+    }, {
+      "uid" : "c873aeaf81ffd767",
+      "status" : "passed",
+      "time" : {
+        "start" : 1651575320312,
+        "stop" : 1651575320426,
+        "duration" : 114
+      }
+    }, {
+      "uid" : "f881219c4150383f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649992646411,
+        "stop" : 1649992646555,
+        "duration" : 144
+      }
+    }, {
+      "uid" : "89c79d70c12bfcc2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649990485353,
+        "stop" : 1649990485479,
+        "duration" : 126
+      }
+    }, {
+      "uid" : "400c201c5b50f0a1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649908369726,
+        "stop" : 1649908369846,
+        "duration" : 120
+      }
+    }, {
+      "uid" : "96ba16bcb40e58ba",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649834718460,
+        "stop" : 1649834718567,
+        "duration" : 107
+      }
+    }, {
+      "uid" : "91c3a795f14794bf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649827498720,
+        "stop" : 1649827498846,
+        "duration" : 126
+      }
+    }, {
+      "uid" : "a1d66bc78a903a45",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649813894736,
+        "stop" : 1649813894862,
+        "duration" : 126
+      }
+    }, {
+      "uid" : "2cda1d09f4d00edc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649812504146,
+        "stop" : 1649812504233,
+        "duration" : 87
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 13,
+        "unknown" : 0,
+        "total" : 13
+      },
+      "items" : [ {
+        "uid" : "fa219b5b716b25a1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652259462519,
+          "stop" : 1652259462630,
+          "duration" : 111
+        }
+      }, {
+        "uid" : "2cd8d557fa3be029",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651652979994,
+          "stop" : 1651652980105,
+          "duration" : 111
+        }
+      }, {
+        "uid" : "ac177b796a3537c1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651584071546,
+          "stop" : 1651584071651,
+          "duration" : 105
+        }
+      }, {
+        "uid" : "74e402cc9003acbe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651575320312,
+          "stop" : 1651575320426,
+          "duration" : 114
+        }
+      }, {
+        "uid" : "f8a1bc61648124bc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1651575320312,
+          "stop" : 1651575320426,
+          "duration" : 114
+        }
+      }, {
+        "uid" : "f761a078684133ae",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649992646411,
+          "stop" : 1649992646555,
+          "duration" : 144
+        }
+      }, {
+        "uid" : "7ab277945d52ba3e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649990485353,
+          "stop" : 1649990485479,
+          "duration" : 126
+        }
+      }, {
+        "uid" : "2fe035626e237c0a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649908369726,
+          "stop" : 1649908369846,
+          "duration" : 120
+        }
+      }, {
+        "uid" : "d10f9e031db4967d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649834718460,
+          "stop" : 1649834718567,
+          "duration" : 107
+        }
+      }, {
+        "uid" : "2465044e2d3b7b6e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649827498720,
+          "stop" : 1649827498846,
+          "duration" : 126
+        }
+      }, {
+        "uid" : "cfc565e2d9b61224",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649813894736,
+          "stop" : 1649813894862,
+          "duration" : 126
+        }
+      }, {
+        "uid" : "31225c55d4cb73e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649812504146,
+          "stop" : 1649812504233,
+          "duration" : 87
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "65c1585e537350e2.json",
+  "parameterValues" : [ ]
+}

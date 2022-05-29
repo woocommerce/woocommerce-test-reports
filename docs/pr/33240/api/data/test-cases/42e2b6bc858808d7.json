@@ -1,0 +1,93 @@
+{
+  "uid" : "42e2b6bc858808d7",
+  "name" : "parent",
+  "fullName" : "Products API tests: List All Products List all products.parent",
+  "historyId" : "a3bb497327d60bad6016e464785d8301",
+  "time" : {
+    "start" : 1653670858907,
+    "stop" : 1653670859157,
+    "duration" : 250
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Products API tests: List All Products List all products"
+  }, {
+    "name" : "testClass",
+    "value" : "Products API tests: List All Products List all products"
+  }, {
+    "name" : "testMethod",
+    "value" : "parent"
+  }, {
+    "name" : "package",
+    "value" : "Products API tests: List All Products List all products"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "ace755259333145c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653669410242,
+        "stop" : 1653669410439,
+        "duration" : 197
+      }
+    }, {
+      "uid" : "c46a760154ae64b4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653663673321,
+        "stop" : 1653663673545,
+        "duration" : 224
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "1e38ef6b1c7b6e8f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653669410242,
+          "stop" : 1653669410439,
+          "duration" : 197
+        }
+      }, {
+        "uid" : "b5a98c0c95b4aac7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653663673321,
+          "stop" : 1653663673545,
+          "duration" : 224
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "42e2b6bc858808d7.json",
+  "parameterValues" : [ ]
+}

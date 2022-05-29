@@ -1,0 +1,273 @@
+{
+  "uid" : "4a0d96a196e9f6ee",
+  "name" : "can list all shipping zones",
+  "fullName" : "Shipping zones API tests.can list all shipping zones",
+  "historyId" : "716a87a4683ef7f0b09a71b94df9879e",
+  "time" : {
+    "start" : 1653646890613,
+    "stop" : 1653646890690,
+    "duration" : 77
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 13,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Shipping zones API tests"
+  }, {
+    "name" : "testClass",
+    "value" : "Shipping zones API tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "can list all shipping zones"
+  }, {
+    "name" : "package",
+    "value" : "Shipping zones API tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "f519fdee4d75aac2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653565948051,
+        "stop" : 1653565948141,
+        "duration" : 90
+      }
+    }, {
+      "uid" : "8eb29554ac55bde2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653405103427,
+        "stop" : 1653405103507,
+        "duration" : 80
+      }
+    }, {
+      "uid" : "d38d68dbc962714f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653398486317,
+        "stop" : 1653398486411,
+        "duration" : 94
+      }
+    }, {
+      "uid" : "cb2639bb3e010708",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653391566428,
+        "stop" : 1653391566503,
+        "duration" : 75
+      }
+    }, {
+      "uid" : "7ae1a14673c092bf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653390752044,
+        "stop" : 1653390752117,
+        "duration" : 73
+      }
+    }, {
+      "uid" : "8e52a6a0f7cb8c9b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653384750268,
+        "stop" : 1653384750342,
+        "duration" : 74
+      }
+    }, {
+      "uid" : "31d6a30a5b8c3b95",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653069863538,
+        "stop" : 1653069863639,
+        "duration" : 101
+      }
+    }, {
+      "uid" : "a70900e2f97d9a24",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653068383120,
+        "stop" : 1653068383195,
+        "duration" : 75
+      }
+    }, {
+      "uid" : "5c26393d506784ad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653045630269,
+        "stop" : 1653045630361,
+        "duration" : 92
+      }
+    }, {
+      "uid" : "98201c91f797fc35",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653043069497,
+        "stop" : 1653043069589,
+        "duration" : 92
+      }
+    }, {
+      "uid" : "32220bf40e3b74c4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652916010589,
+        "stop" : 1652916010667,
+        "duration" : 78
+      }
+    }, {
+      "uid" : "926afa24a9674232",
+      "status" : "failed",
+      "statusDetails" : "Error: expect(received).toHaveLength(expected)\n                \n                Matcher error: received value must have a length property whose value must be a number\n                \n                Received has type:  object\n                Received has value: {\"code\": \"rest_no_route\", \"data\": {\"status\": 404}, \"message\": \"No route was found matching the URL and request method.\"}",
+      "time" : {
+        "start" : 1652864725634,
+        "stop" : 1652864725660,
+        "duration" : 26
+      }
+    }, {
+      "uid" : "875f4d0ba90da482",
+      "status" : "failed",
+      "statusDetails" : "Error: expect(received).toHaveLength(expected)\n                \n                Matcher error: received value must have a length property whose value must be a number\n                \n                Received has type:  object\n                Received has value: {\"code\": \"rest_no_route\", \"data\": {\"status\": 404}, \"message\": \"No route was found matching the URL and request method.\"}",
+      "time" : {
+        "start" : 1652863739620,
+        "stop" : 1652863739655,
+        "duration" : 35
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 12,
+        "unknown" : 0,
+        "total" : 14
+      },
+      "items" : [ {
+        "uid" : "73d07e6169709259",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653565948051,
+          "stop" : 1653565948141,
+          "duration" : 90
+        }
+      }, {
+        "uid" : "210ae0011db9936f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653405103427,
+          "stop" : 1653405103507,
+          "duration" : 80
+        }
+      }, {
+        "uid" : "5d2e395a7e530037",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653398486317,
+          "stop" : 1653398486411,
+          "duration" : 94
+        }
+      }, {
+        "uid" : "5422482d04b2609f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653391566428,
+          "stop" : 1653391566503,
+          "duration" : 75
+        }
+      }, {
+        "uid" : "3179374b12989edf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653390752044,
+          "stop" : 1653390752117,
+          "duration" : 73
+        }
+      }, {
+        "uid" : "72d902df845bf0af",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653384750268,
+          "stop" : 1653384750342,
+          "duration" : 74
+        }
+      }, {
+        "uid" : "5a7299bab6c5d56d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653069863538,
+          "stop" : 1653069863639,
+          "duration" : 101
+        }
+      }, {
+        "uid" : "73f50e53ac2b64fc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653068383120,
+          "stop" : 1653068383195,
+          "duration" : 75
+        }
+      }, {
+        "uid" : "bca60039a5a59c73",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653045630269,
+          "stop" : 1653045630361,
+          "duration" : 92
+        }
+      }, {
+        "uid" : "5cb2be4522752e7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653043069497,
+          "stop" : 1653043069589,
+          "duration" : 92
+        }
+      }, {
+        "uid" : "df5308e5a6a2141b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652916010589,
+          "stop" : 1652916010667,
+          "duration" : 78
+        }
+      }, {
+        "uid" : "a9c802fba15ca83",
+        "status" : "failed",
+        "statusDetails" : "Error: expect(received).toHaveLength(expected)\n                \n                Matcher error: received value must have a length property whose value must be a number\n                \n                Received has type:  object\n                Received has value: {\"code\": \"rest_no_route\", \"data\": {\"status\": 404}, \"message\": \"No route was found matching the URL and request method.\"}",
+        "time" : {
+          "start" : 1652864725634,
+          "stop" : 1652864725660,
+          "duration" : 26
+        }
+      }, {
+        "uid" : "4c9e563578281aac",
+        "status" : "failed",
+        "statusDetails" : "Error: expect(received).toHaveLength(expected)\n                \n                Matcher error: received value must have a length property whose value must be a number\n                \n                Received has type:  object\n                Received has value: {\"code\": \"rest_no_route\", \"data\": {\"status\": 404}, \"message\": \"No route was found matching the URL and request method.\"}",
+        "time" : {
+          "start" : 1652863739620,
+          "stop" : 1652863739655,
+          "duration" : 35
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "4a0d96a196e9f6ee.json",
+  "parameterValues" : [ ]
+}

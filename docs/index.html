@@ -1,25 +1,60 @@
 ---
+title: WooCommerce Test Reports
+layout: default
 ---
-<!DOCTYPE html>
-<html dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="favicon" href="favicon.ico?v=2">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-        <link rel="stylesheet" href="plugins/screen-diff/styles.css">
-</head>
-<body>
-<div id="alert"></div>
-<div id="content">
-    <span class="spinner">
-        <span class="spinner__circle"></span>
-    </span>
-</div>
-<div id="popup"></div>
-<script src="app.js"></script>
-    <script src="plugins/behaviors/index.js"></script>
-    <script src="plugins/packages/index.js"></script>
-    <script src="plugins/screen-diff/index.js"></script>
-</body>
+
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+  </head>
+  <body>
+    <h1>{{ page.title }}</h1>
+    <hr />
+    <h3>Daily smoke test</h3>
+    <ul>
+      <li><a href="daily/api">API</a></li>
+      <li><a href="daily/e2e">E2E</a></li>
+    </ul>
+    <h3>Releases</h3>
+    <ul>
+      <li><a href="release/api">API</a></li>
+      <li><a href="release/e2e">E2E</a></li>
+    </ul>
+    <h3>Pull requests</h3>
+    <p>Test reports are sorted by last updated date.</p>
+    <!-- Create list of PR numbers -->
+    <ul>
+      {%- assign pr_pages = site.pages | where_exp: "page", "page.url contains
+      '/pr/'" | sort: "last_published" | reverse -%}
+      {%- assign pr_numbers = pr_pages | map: "pr_number" | uniq | compact -%}
+            
+      {%- for pr_num in pr_numbers -%}
+      <!-- Get PR title -->
+      {%- assign pr_pages_with_this_num = pr_pages | where: "pr_number", pr_num -%}
+      {%- assign pr_title_encoded = pr_pages_with_this_num[0].pr_title_encoded -%}
+
+      <!-- Create PR list item using the PR title and number-->
+      <li>
+        {{ pr_title_encoded | url_decode }}
+        <a href="https://github.com/woocommerce/woocommerce/pull/{{ pr_num }}"
+          >#{{ pr_num }}
+        </a>
+        <ul>
+          <!-- Get all the test types this PR has -->
+          {%- assign pr_test_types = pr_pages_with_this_num | map: "pr_test_type" | sort -%}
+
+          <!-- For each test type, create a list item -->
+          {%- for test_type in pr_test_types -%}
+          <li>
+            <a href="pr/{{ pr_num }}/{{ test_type }}"
+              >{{ test_type | upcase }}</a
+            >
+          </li>
+          {%- endfor -%}
+        </ul>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </body>
 </html>

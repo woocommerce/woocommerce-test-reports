@@ -1,0 +1,273 @@
+{
+  "uid" : "3cbc04c9e43a6d41",
+  "name" : "can limit result set to matching code",
+  "fullName" : "Coupons API tests List coupons.can limit result set to matching code",
+  "historyId" : "a4bc81e5f4da4e835ee6fbbc76e2db00",
+  "time" : {
+    "start" : 1653646881484,
+    "stop" : 1653646881562,
+    "duration" : 78
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 13,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Coupons API tests List coupons"
+  }, {
+    "name" : "testClass",
+    "value" : "Coupons API tests List coupons"
+  }, {
+    "name" : "testMethod",
+    "value" : "can limit result set to matching code"
+  }, {
+    "name" : "package",
+    "value" : "Coupons API tests List coupons"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a135e086b948d1a5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653565938823,
+        "stop" : 1653565938904,
+        "duration" : 81
+      }
+    }, {
+      "uid" : "b9052e43a22d92e4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653405094523,
+        "stop" : 1653405094593,
+        "duration" : 70
+      }
+    }, {
+      "uid" : "5c8110cffbb90256",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653398476817,
+        "stop" : 1653398476920,
+        "duration" : 103
+      }
+    }, {
+      "uid" : "3dc20dde037400cb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653391557252,
+        "stop" : 1653391557326,
+        "duration" : 74
+      }
+    }, {
+      "uid" : "3af52c3c032cb729",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653390743150,
+        "stop" : 1653390743222,
+        "duration" : 72
+      }
+    }, {
+      "uid" : "7a466d7515d88280",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653384740925,
+        "stop" : 1653384740999,
+        "duration" : 74
+      }
+    }, {
+      "uid" : "f121ea1caaa4c615",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653069850949,
+        "stop" : 1653069851046,
+        "duration" : 97
+      }
+    }, {
+      "uid" : "beaac6c90a092dd5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653068373672,
+        "stop" : 1653068373751,
+        "duration" : 79
+      }
+    }, {
+      "uid" : "15e0623542b9e13b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653045619787,
+        "stop" : 1653045619871,
+        "duration" : 84
+      }
+    }, {
+      "uid" : "dd2cd4ca94693fd5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653043058085,
+        "stop" : 1653043058188,
+        "duration" : 103
+      }
+    }, {
+      "uid" : "f5f1b173f028c41c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652916001371,
+        "stop" : 1652916001447,
+        "duration" : 76
+      }
+    }, {
+      "uid" : "ab12cb65a072da67",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read properties of undefined (reading 'find')",
+      "time" : {
+        "start" : 1652864722895,
+        "stop" : 1652864722923,
+        "duration" : 28
+      }
+    }, {
+      "uid" : "9c4c281680b18021",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read properties of undefined (reading 'find')",
+      "time" : {
+        "start" : 1652863736388,
+        "stop" : 1652863736422,
+        "duration" : 34
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 12,
+        "unknown" : 0,
+        "total" : 14
+      },
+      "items" : [ {
+        "uid" : "f76aa59cea56b97f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653565938823,
+          "stop" : 1653565938904,
+          "duration" : 81
+        }
+      }, {
+        "uid" : "7b02e47df9b4a4f2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653405094523,
+          "stop" : 1653405094593,
+          "duration" : 70
+        }
+      }, {
+        "uid" : "bb3705787c1aaaf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653398476817,
+          "stop" : 1653398476920,
+          "duration" : 103
+        }
+      }, {
+        "uid" : "d0e44bd643b08dc3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653391557252,
+          "stop" : 1653391557326,
+          "duration" : 74
+        }
+      }, {
+        "uid" : "eeae24beb573c977",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653390743150,
+          "stop" : 1653390743222,
+          "duration" : 72
+        }
+      }, {
+        "uid" : "15486a893b647b86",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653384740925,
+          "stop" : 1653384740999,
+          "duration" : 74
+        }
+      }, {
+        "uid" : "124eb7cba7bbc1b1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653069850949,
+          "stop" : 1653069851046,
+          "duration" : 97
+        }
+      }, {
+        "uid" : "b1ff29ff4e570003",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653068373672,
+          "stop" : 1653068373751,
+          "duration" : 79
+        }
+      }, {
+        "uid" : "3d31233e52cc2bbc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653045619787,
+          "stop" : 1653045619871,
+          "duration" : 84
+        }
+      }, {
+        "uid" : "3471344facfea361",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653043058085,
+          "stop" : 1653043058188,
+          "duration" : 103
+        }
+      }, {
+        "uid" : "b14ed0a5e025d43e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652916001371,
+          "stop" : 1652916001447,
+          "duration" : 76
+        }
+      }, {
+        "uid" : "708d0d38dc5bf99c",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read properties of undefined (reading 'find')",
+        "time" : {
+          "start" : 1652864722895,
+          "stop" : 1652864722923,
+          "duration" : 28
+        }
+      }, {
+        "uid" : "dec0e9008eb25433",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read properties of undefined (reading 'find')",
+        "time" : {
+          "start" : 1652863736388,
+          "stop" : 1652863736422,
+          "duration" : 34
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "3cbc04c9e43a6d41.json",
+  "parameterValues" : [ ]
+}

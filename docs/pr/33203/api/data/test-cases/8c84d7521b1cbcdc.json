@@ -1,0 +1,211 @@
+{
+  "uid" : "8c84d7521b1cbcdc",
+  "name" : "search",
+  "fullName" : "Orders API tests List all orders.search",
+  "historyId" : "c400624d633e0f72ee94ecf0543446df",
+  "time" : {
+    "start" : 1653798398071,
+    "stop" : 1653798398623,
+    "duration" : 552
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 9,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests List all orders"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests List all orders"
+  }, {
+    "name" : "testMethod",
+    "value" : "search"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests List all orders"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "5d4a6ef9738b7c0e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653729725645,
+        "stop" : 1653729726162,
+        "duration" : 517
+      }
+    }, {
+      "uid" : "4e44de93138d575e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653709070180,
+        "stop" : 1653709070644,
+        "duration" : 464
+      }
+    }, {
+      "uid" : "15fd74be8375b5fc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653707331246,
+        "stop" : 1653707331900,
+        "duration" : 654
+      }
+    }, {
+      "uid" : "29c90efd32055ac1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653559681741,
+        "stop" : 1653559682413,
+        "duration" : 672
+      }
+    }, {
+      "uid" : "5468653a2512bce6",
+      "status" : "failed",
+      "statusDetails" : "Error: connect ECONNREFUSED 127.0.0.1:8086",
+      "time" : {
+        "start" : 1653555586818,
+        "stop" : 1653555586820,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "b35d8d4b80b97c57",
+      "status" : "failed",
+      "statusDetails" : "Error: connect ECONNREFUSED 127.0.0.1:8086",
+      "time" : {
+        "start" : 1653554832163,
+        "stop" : 1653554832164,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "88bf01184e1fdd14",
+      "status" : "failed",
+      "statusDetails" : "Error: connect ECONNREFUSED 127.0.0.1:8086",
+      "time" : {
+        "start" : 1653553587990,
+        "stop" : 1653553587992,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "c1b2c0cca7c28954",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653550583911,
+        "stop" : 1653550584519,
+        "duration" : 608
+      }
+    }, {
+      "uid" : "95ca1964d04e4e94",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653547362913,
+        "stop" : 1653547363439,
+        "duration" : 526
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 7,
+        "unknown" : 0,
+        "total" : 10
+      },
+      "items" : [ {
+        "uid" : "9a75efb4957b850d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653729725645,
+          "stop" : 1653729726162,
+          "duration" : 517
+        }
+      }, {
+        "uid" : "75fa17d5740b5926",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653709070180,
+          "stop" : 1653709070644,
+          "duration" : 464
+        }
+      }, {
+        "uid" : "bb342e6d4fceb020",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653707331246,
+          "stop" : 1653707331900,
+          "duration" : 654
+        }
+      }, {
+        "uid" : "ea8ee0ad60f3d38c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653559681741,
+          "stop" : 1653559682413,
+          "duration" : 672
+        }
+      }, {
+        "uid" : "f7bbc398d9014d69",
+        "status" : "failed",
+        "statusDetails" : "Error: connect ECONNREFUSED 127.0.0.1:8086",
+        "time" : {
+          "start" : 1653555586818,
+          "stop" : 1653555586820,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "a21d421a40f295cf",
+        "status" : "failed",
+        "statusDetails" : "Error: connect ECONNREFUSED 127.0.0.1:8086",
+        "time" : {
+          "start" : 1653554832163,
+          "stop" : 1653554832164,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "7863c162cb34ce73",
+        "status" : "failed",
+        "statusDetails" : "Error: connect ECONNREFUSED 127.0.0.1:8086",
+        "time" : {
+          "start" : 1653553587990,
+          "stop" : 1653553587992,
+          "duration" : 2
+        }
+      }, {
+        "uid" : "59bc5c012fe25b88",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653550583911,
+          "stop" : 1653550584519,
+          "duration" : 608
+        }
+      }, {
+        "uid" : "cf2b046e056f7285",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653547362913,
+          "stop" : 1653547363439,
+          "duration" : 526
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8c84d7521b1cbcdc.json",
+  "parameterValues" : [ ]
+}

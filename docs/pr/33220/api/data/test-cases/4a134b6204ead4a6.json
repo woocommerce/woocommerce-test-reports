@@ -1,0 +1,77 @@
+{
+  "uid" : "4a134b6204ead4a6",
+  "name" : "can create an order with status 'refunded'",
+  "fullName" : "Orders API tests: CRUD Create an order.can create an order with status 'refunded'",
+  "historyId" : "fe3e72052e582714ce1df1f0e570b3b7",
+  "time" : {
+    "start" : 1653607290456,
+    "stop" : 1653607290702,
+    "duration" : 246
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can create an order with status 'refunded'"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "59a317924c473910",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653602976786,
+        "stop" : 1653602977055,
+        "duration" : 269
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "b05a1f792f97572d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653602976786,
+          "stop" : 1653602977055,
+          "duration" : 269
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "4a134b6204ead4a6.json",
+  "parameterValues" : [ ]
+}

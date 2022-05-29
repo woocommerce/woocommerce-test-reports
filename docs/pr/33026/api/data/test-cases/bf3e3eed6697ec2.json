@@ -1,0 +1,50 @@
+{
+  "uid" : "bf3e3eed6697ec2",
+  "name" : "can add coupon to an order",
+  "fullName" : "Coupons API tests Add coupon to order.can add coupon to an order",
+  "historyId" : "c171d1b4029036c69cb37000f3a90af1",
+  "time" : {
+    "start" : 1652863736559,
+    "stop" : 1652863736592,
+    "duration" : 33
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 201\n                Received: 404",
+  "statusTrace" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 201\n                Received: 404\n                    at Object.<anonymous> (/home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/tests/coupons/coupons.test.js:312:21)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Coupons API tests Add coupon to order"
+  }, {
+    "name" : "testClass",
+    "value" : "Coupons API tests Add coupon to order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can add coupon to an order"
+  }, {
+    "name" : "package",
+    "value" : "Coupons API tests Add coupon to order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bf3e3eed6697ec2.json",
+  "parameterValues" : [ ]
+}

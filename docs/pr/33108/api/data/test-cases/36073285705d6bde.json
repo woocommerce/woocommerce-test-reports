@@ -1,0 +1,125 @@
+{
+  "uid" : "36073285705d6bde",
+  "name" : "can update status of an order to 'pending'",
+  "fullName" : "Orders API tests: CRUD Update an order.can update status of an order to 'pending'",
+  "historyId" : "fe45469f809c65c4dc29f7aedbdb83d4",
+  "time" : {
+    "start" : 1653362644197,
+    "stop" : 1653362644281,
+    "duration" : 84
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 4,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can update status of an order to 'pending'"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "1765b4b28ab95cd7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653286592135,
+        "stop" : 1653286592214,
+        "duration" : 79
+      }
+    }, {
+      "uid" : "6d2cb7486b94e0b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652951211724,
+        "stop" : 1652951211807,
+        "duration" : 83
+      }
+    }, {
+      "uid" : "9416a8cdaae1b4d6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652944377918,
+        "stop" : 1652944378013,
+        "duration" : 95
+      }
+    }, {
+      "uid" : "3793d77456708a25",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652943600193,
+        "stop" : 1652943600269,
+        "duration" : 76
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "72d95d2f63b62ddd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653286592135,
+          "stop" : 1653286592214,
+          "duration" : 79
+        }
+      }, {
+        "uid" : "c440b65feeebe71a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652951211724,
+          "stop" : 1652951211807,
+          "duration" : 83
+        }
+      }, {
+        "uid" : "3573f03c4b3217cf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652944377918,
+          "stop" : 1652944378013,
+          "duration" : 95
+        }
+      }, {
+        "uid" : "8c73bdd0d96a1634",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652943600193,
+          "stop" : 1652943600269,
+          "duration" : 76
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "36073285705d6bde.json",
+  "parameterValues" : [ ]
+}

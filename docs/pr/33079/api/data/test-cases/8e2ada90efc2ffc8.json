@@ -1,0 +1,85 @@
+{
+  "uid" : "8e2ada90efc2ffc8",
+  "name" : "date",
+  "fullName" : "Orders API tests List all orders orderby.date",
+  "historyId" : "c1053c53e924b7b3bf6eb4e27314e2f4",
+  "time" : {
+    "start" : 1652817086885,
+    "stop" : 1652817087048,
+    "duration" : 163
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests List all orders orderby"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests List all orders orderby"
+  }, {
+    "name" : "testMethod",
+    "value" : "date"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests List all orders orderby"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "87720529c2f1d471",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652816125041,
+        "stop" : 1652816125196,
+        "duration" : 155
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "a815f536642a556d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652817086885,
+          "stop" : 1652817087048,
+          "duration" : 163
+        }
+      }, {
+        "uid" : "d26749537c87a423",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652816125041,
+          "stop" : 1652816125196,
+          "duration" : 155
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "8e2ada90efc2ffc8.json",
+  "parameterValues" : [ ]
+}

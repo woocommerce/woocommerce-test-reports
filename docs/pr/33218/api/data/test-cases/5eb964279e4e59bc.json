@@ -1,0 +1,85 @@
+{
+  "uid" : "5eb964279e4e59bc",
+  "name" : "can create an order with status 'cancelled'",
+  "fullName" : "Orders API tests: CRUD Create an order.can create an order with status 'cancelled'",
+  "historyId" : "19aea94f1b81370bd4d0f1b0f55342a4",
+  "time" : {
+    "start" : 1653689611552,
+    "stop" : 1653689611782,
+    "duration" : 230
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can create an order with status 'cancelled'"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Create an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "4195dee34f2d9dc9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653604019602,
+        "stop" : 1653604019845,
+        "duration" : 243
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "7e088c0f49217181",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653689611552,
+          "stop" : 1653689611782,
+          "duration" : 230
+        }
+      }, {
+        "uid" : "ac5c321fd0d9d6f4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653604019602,
+          "stop" : 1653604019845,
+          "duration" : 243
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "5eb964279e4e59bc.json",
+  "parameterValues" : [ ]
+}

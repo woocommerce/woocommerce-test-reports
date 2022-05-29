@@ -1,0 +1,77 @@
+{
+  "uid" : "fb52de1e32c4f634",
+  "name" : "price",
+  "fullName" : "Products API tests: List All Products List all products orderby.price",
+  "historyId" : "c000706f33622ea2bc7b62908830db6c",
+  "time" : {
+    "start" : 1653607265944,
+    "stop" : 1653607266277,
+    "duration" : 333
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Products API tests: List All Products List all products orderby"
+  }, {
+    "name" : "testClass",
+    "value" : "Products API tests: List All Products List all products orderby"
+  }, {
+    "name" : "testMethod",
+    "value" : "price"
+  }, {
+    "name" : "package",
+    "value" : "Products API tests: List All Products List all products orderby"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "bcc5ec64099d01dc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653602954747,
+        "stop" : 1653602955000,
+        "duration" : 253
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "57ede5c98cf2ac91",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653602954747,
+          "stop" : 1653602955000,
+          "duration" : 253
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "fb52de1e32c4f634.json",
+  "parameterValues" : [ ]
+}

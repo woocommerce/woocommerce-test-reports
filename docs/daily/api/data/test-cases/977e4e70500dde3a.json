@@ -1,0 +1,50 @@
+{
+  "uid" : "977e4e70500dde3a",
+  "name" : "can search by shipping post code",
+  "fullName" : "Order Search API tests.can search by shipping post code",
+  "historyId" : "f8f36fa462b36e4343145d3ef59810b0",
+  "time" : {
+    "start" : 1653559596385,
+    "stop" : 1653559597547,
+    "duration" : 1162
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: expect(received).toHaveLength(expected)\n                \n                Expected length: 1\n                Received length: 0\n                Received array:  []",
+  "statusTrace" : "Error: expect(received).toHaveLength(expected)\n                \n                Expected length: 1\n                Received length: 0\n                Received array:  []\n                    at /home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/tests/orders/order-search.test.js:74:18\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Order Search API tests"
+  }, {
+    "name" : "testClass",
+    "value" : "Order Search API tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "can search by shipping post code"
+  }, {
+    "name" : "package",
+    "value" : "Order Search API tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "977e4e70500dde3a.json",
+  "parameterValues" : [ ]
+}

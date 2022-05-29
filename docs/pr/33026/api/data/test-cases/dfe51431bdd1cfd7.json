@@ -1,0 +1,50 @@
+{
+  "uid" : "dfe51431bdd1cfd7",
+  "name" : "id",
+  "fullName" : "Products API tests: List All Products List all products orderby.id",
+  "historyId" : "b8c612521ea7703dc83bde0c11679e74",
+  "time" : {
+    "start" : 1652864720772,
+    "stop" : 1652864720798,
+    "duration" : 26
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: logoProducts.map is not a function",
+  "statusTrace" : "TypeError: logoProducts.map is not a function\n                    at createSampleGroupedProduct (/home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/data/product-list.js:1133:35)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at createSampleData (/home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/data/product-list.js:1645:26)\n                    at Object.<anonymous> (/home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/tests/products/product-list.test.js:22:16)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Products API tests: List All Products List all products orderby"
+  }, {
+    "name" : "testClass",
+    "value" : "Products API tests: List All Products List all products orderby"
+  }, {
+    "name" : "testMethod",
+    "value" : "id"
+  }, {
+    "name" : "package",
+    "value" : "Products API tests: List All Products List all products orderby"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "dfe51431bdd1cfd7.json",
+  "parameterValues" : [ ]
+}

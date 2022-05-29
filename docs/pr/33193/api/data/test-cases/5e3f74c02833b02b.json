@@ -1,0 +1,77 @@
+{
+  "uid" : "5e3f74c02833b02b",
+  "name" : "customer",
+  "fullName" : "Orders API tests List all orders.customer",
+  "historyId" : "cf930fb556800db82476b1295c8cc63",
+  "time" : {
+    "start" : 1653514212515,
+    "stop" : 1653514212848,
+    "duration" : 333
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests List all orders"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests List all orders"
+  }, {
+    "name" : "testMethod",
+    "value" : "customer"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests List all orders"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "cbcb4112fe147e15",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653513255146,
+        "stop" : 1653513255439,
+        "duration" : 293
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "b2a673464b25913d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653513255146,
+          "stop" : 1653513255439,
+          "duration" : 293
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "5e3f74c02833b02b.json",
+  "parameterValues" : [ ]
+}

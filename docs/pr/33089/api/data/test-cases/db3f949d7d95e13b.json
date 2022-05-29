@@ -1,0 +1,83 @@
+{
+  "uid" : "db3f949d7d95e13b",
+  "name" : "can list all shipping zones",
+  "fullName" : "Shipping zones API tests.can list all shipping zones",
+  "historyId" : "716a87a4683ef7f0b09a71b94df9879e",
+  "time" : {
+    "start" : 1652871718551,
+    "stop" : 1652871718633,
+    "duration" : 82
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: expect(received).toHaveLength(expected)\n                \n                Expected length: 100\n                Received length: 2\n                Received array:  [{\"id\": 0}, {\"id\": 1}]",
+  "statusTrace" : "Error: expect(received).toHaveLength(expected)\n                \n                Expected length: 100\n                Received length: 2\n                Received array:  [{\"id\": 0}, {\"id\": 1}]\n                    at Object.<anonymous> (/home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/tests/shipping/shipping-zones.test.js:87:18)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : true,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Shipping zones API tests"
+  }, {
+    "name" : "testClass",
+    "value" : "Shipping zones API tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "can list all shipping zones"
+  }, {
+    "name" : "package",
+    "value" : "Shipping zones API tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "951f14e224118b60",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652870752661,
+        "stop" : 1652870752765,
+        "duration" : 104
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "b01e8b13f9c3f1c8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652870752661,
+          "stop" : 1652870752765,
+          "duration" : 104
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "db3f949d7d95e13b.json",
+  "parameterValues" : [ ]
+}

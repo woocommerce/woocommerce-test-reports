@@ -1,0 +1,50 @@
+{
+  "uid" : "875f4d0ba90da482",
+  "name" : "can list all shipping zones",
+  "fullName" : "Shipping zones API tests.can list all shipping zones",
+  "historyId" : "716a87a4683ef7f0b09a71b94df9879e",
+  "time" : {
+    "start" : 1652863739620,
+    "stop" : 1652863739655,
+    "duration" : 35
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: expect(received).toHaveLength(expected)\n                \n                Matcher error: received value must have a length property whose value must be a number\n                \n                Received has type:  object\n                Received has value: {\"code\": \"rest_no_route\", \"data\": {\"status\": 404}, \"message\": \"No route was found matching the URL and request method.\"}",
+  "statusTrace" : "Error: expect(received).toHaveLength(expected)\n                \n                Matcher error: received value must have a length property whose value must be a number\n                \n                Received has type:  object\n                Received has value: {\"code\": \"rest_no_route\", \"data\": {\"status\": 404}, \"message\": \"No route was found matching the URL and request method.\"}\n                    at Object.<anonymous> (/home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/tests/shipping/shipping-zones.test.js:87:18)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Shipping zones API tests"
+  }, {
+    "name" : "testClass",
+    "value" : "Shipping zones API tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "can list all shipping zones"
+  }, {
+    "name" : "package",
+    "value" : "Shipping zones API tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "875f4d0ba90da482.json",
+  "parameterValues" : [ ]
+}

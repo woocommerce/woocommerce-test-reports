@@ -1,0 +1,93 @@
+{
+  "uid" : "672d6295047a168e",
+  "name" : "can add complex order",
+  "fullName" : "Orders API test.can add complex order",
+  "historyId" : "4b4a2e735451adced0823dd33109be06",
+  "time" : {
+    "start" : 1652861039301,
+    "stop" : 1652861039562,
+    "duration" : 261
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API test"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API test"
+  }, {
+    "name" : "testMethod",
+    "value" : "can add complex order"
+  }, {
+    "name" : "package",
+    "value" : "Orders API test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "3cb9d4f88135927c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652799336388,
+        "stop" : 1652799336691,
+        "duration" : 303
+      }
+    }, {
+      "uid" : "d90c297e1fe76059",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652786924737,
+        "stop" : 1652786925037,
+        "duration" : 300
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "6d3d9bb94506e91",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652799336388,
+          "stop" : 1652799336691,
+          "duration" : 303
+        }
+      }, {
+        "uid" : "62e75c6f046c924f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652786924737,
+          "stop" : 1652786925037,
+          "duration" : 300
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "672d6295047a168e.json",
+  "parameterValues" : [ ]
+}

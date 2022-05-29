@@ -1,0 +1,85 @@
+{
+  "uid" : "adeb56c4efaac65c",
+  "name" : "inclusion / exclusion",
+  "fullName" : "Orders API tests List all orders.inclusion / exclusion",
+  "historyId" : "ea4c73e22257b800b7df0d09a6bbdf6b",
+  "time" : {
+    "start" : 1653559749092,
+    "stop" : 1653559750688,
+    "duration" : 1596
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TypeError: Cannot read properties of undefined (reading 'id')",
+  "statusTrace" : "TypeError: Cannot read properties of undefined (reading 'id')\n                    at createSampleProductReviews (/home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/data/product-list.js:1573:59)\n                    at Object.createSampleData (/home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/data/product-list.js:1652:26)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at createSampleData (/home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/data/orders.js:17:26)\n                    at Object.<anonymous> (/home/runner/work/woocommerce/woocommerce/packages/js/api-core-tests/tests/orders/orders.test.js:49:16)",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests List all orders"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests List all orders"
+  }, {
+    "name" : "testMethod",
+    "value" : "inclusion / exclusion"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests List all orders"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "717f918bded71862",
+      "status" : "failed",
+      "statusDetails" : "TypeError: Cannot read properties of undefined (reading 'id')",
+      "time" : {
+        "start" : 1653559429328,
+        "stop" : 1653559430819,
+        "duration" : 1491
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "de8dc538fc65f435",
+        "status" : "failed",
+        "statusDetails" : "TypeError: Cannot read properties of undefined (reading 'id')",
+        "time" : {
+          "start" : 1653559429328,
+          "stop" : 1653559430819,
+          "duration" : 1491
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "adeb56c4efaac65c.json",
+  "parameterValues" : [ ]
+}

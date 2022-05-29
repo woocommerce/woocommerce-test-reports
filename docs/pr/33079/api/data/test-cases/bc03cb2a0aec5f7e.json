@@ -1,0 +1,85 @@
+{
+  "uid" : "bc03cb2a0aec5f7e",
+  "name" : "parent",
+  "fullName" : "Products API tests: List All Products List all products.parent",
+  "historyId" : "a3bb497327d60bad6016e464785d8301",
+  "time" : {
+    "start" : 1652817073287,
+    "stop" : 1652817073481,
+    "duration" : 194
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Products API tests: List All Products List all products"
+  }, {
+    "name" : "testClass",
+    "value" : "Products API tests: List All Products List all products"
+  }, {
+    "name" : "testMethod",
+    "value" : "parent"
+  }, {
+    "name" : "package",
+    "value" : "Products API tests: List All Products List all products"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a8a5f7944f9b988",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652816111353,
+        "stop" : 1652816111558,
+        "duration" : 205
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "3e5b57037c8b97ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652817073287,
+          "stop" : 1652817073481,
+          "duration" : 194
+        }
+      }, {
+        "uid" : "534fcf5e1c50f939",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652816111353,
+          "stop" : 1652816111558,
+          "duration" : 205
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "bc03cb2a0aec5f7e.json",
+  "parameterValues" : [ ]
+}

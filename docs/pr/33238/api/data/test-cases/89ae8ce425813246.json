@@ -1,0 +1,93 @@
+{
+  "uid" : "89ae8ce425813246",
+  "name" : "parent",
+  "fullName" : "Products API tests: List All Products List all products.parent",
+  "historyId" : "a3bb497327d60bad6016e464785d8301",
+  "time" : {
+    "start" : 1653667526792,
+    "stop" : 1653667527058,
+    "duration" : 266
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Products API tests: List All Products List all products"
+  }, {
+    "name" : "testClass",
+    "value" : "Products API tests: List All Products List all products"
+  }, {
+    "name" : "testMethod",
+    "value" : "parent"
+  }, {
+    "name" : "package",
+    "value" : "Products API tests: List All Products List all products"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "3d98bc7143d3a621",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653663940174,
+        "stop" : 1653663940364,
+        "duration" : 190
+      }
+    }, {
+      "uid" : "47007a5ab31e3a90",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653661242397,
+        "stop" : 1653661242635,
+        "duration" : 238
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "34e8133561177e0f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653663940174,
+          "stop" : 1653663940364,
+          "duration" : 190
+        }
+      }, {
+        "uid" : "fd58fabee01f891b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653661242397,
+          "stop" : 1653661242635,
+          "duration" : 238
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "89ae8ce425813246.json",
+  "parameterValues" : [ ]
+}

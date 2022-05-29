@@ -1,0 +1,79 @@
+{
+  "uid" : "fe5701b8ba904bc2",
+  "name" : "can retrieve a refund",
+  "fullName" : "Refunds API tests.can retrieve a refund",
+  "historyId" : "3c9f1525907c1a7490f069aa74872571",
+  "time" : {
+    "start" : 1653559901806,
+    "stop" : 1653559903407,
+    "duration" : 1601
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : true,
+  "retriesCount" : 1,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Refunds API tests"
+  }, {
+    "name" : "testClass",
+    "value" : "Refunds API tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "can retrieve a refund"
+  }, {
+    "name" : "package",
+    "value" : "Refunds API tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "24d45ebfc4c13221",
+      "status" : "failed",
+      "statusDetails" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 200\n                Received: 404",
+      "time" : {
+        "start" : 1653559571440,
+        "stop" : 1653559572434,
+        "duration" : 994
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "bbbd5aee16d7d5a3",
+        "status" : "failed",
+        "statusDetails" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: 200\n                Received: 404",
+        "time" : {
+          "start" : 1653559571440,
+          "stop" : 1653559572434,
+          "duration" : 994
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "fe5701b8ba904bc2.json",
+  "parameterValues" : [ ]
+}

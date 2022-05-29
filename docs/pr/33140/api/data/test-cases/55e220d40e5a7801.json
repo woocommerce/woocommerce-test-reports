@@ -1,0 +1,109 @@
+{
+  "uid" : "55e220d40e5a7801",
+  "name" : "can update status of an order to 'cancelled'",
+  "fullName" : "Orders API tests: CRUD Update an order.can update status of an order to 'cancelled'",
+  "historyId" : "243ad1eb823752561d41e2467405a926",
+  "time" : {
+    "start" : 1653462260777,
+    "stop" : 1653462260908,
+    "duration" : 131
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 3,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can update status of an order to 'cancelled'"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "1880c7f80e25b588",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653381583189,
+        "stop" : 1653381583283,
+        "duration" : 94
+      }
+    }, {
+      "uid" : "74a852b9b0a936a0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653322987546,
+        "stop" : 1653322987639,
+        "duration" : 93
+      }
+    }, {
+      "uid" : "b85b9746d40c3fb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653043129518,
+        "stop" : 1653043129621,
+        "duration" : 103
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "2b8741d0b442c875",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653381583189,
+          "stop" : 1653381583283,
+          "duration" : 94
+        }
+      }, {
+        "uid" : "fe81c4bed84f3cd6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653322987546,
+          "stop" : 1653322987639,
+          "duration" : 93
+        }
+      }, {
+        "uid" : "cbad11d0f10b1614",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653043129518,
+          "stop" : 1653043129621,
+          "duration" : 103
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "55e220d40e5a7801.json",
+  "parameterValues" : [ ]
+}

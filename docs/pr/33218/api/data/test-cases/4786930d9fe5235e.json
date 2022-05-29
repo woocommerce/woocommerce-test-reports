@@ -1,0 +1,85 @@
+{
+  "uid" : "4786930d9fe5235e",
+  "name" : "can add complex order",
+  "fullName" : "Orders API test.can add complex order",
+  "historyId" : "4b4a2e735451adced0823dd33109be06",
+  "time" : {
+    "start" : 1653689615148,
+    "stop" : 1653689615423,
+    "duration" : 275
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API test"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API test"
+  }, {
+    "name" : "testMethod",
+    "value" : "can add complex order"
+  }, {
+    "name" : "package",
+    "value" : "Orders API test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "fedeb870a980b326",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653604023148,
+        "stop" : 1653604023407,
+        "duration" : 259
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "9d8265d98feb4b8b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653689615148,
+          "stop" : 1653689615423,
+          "duration" : 275
+        }
+      }, {
+        "uid" : "4f79d52f120310a3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653604023148,
+          "stop" : 1653604023407,
+          "duration" : 259
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "4786930d9fe5235e.json",
+  "parameterValues" : [ ]
+}

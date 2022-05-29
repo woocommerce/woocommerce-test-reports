@@ -1,0 +1,85 @@
+{
+  "uid" : "fc388ca6eaac240",
+  "name" : "can update status of an order to 'processing'",
+  "fullName" : "Orders API tests: CRUD Update an order.can update status of an order to 'processing'",
+  "historyId" : "dae2fb6f15bd432dc465047128d2f9a6",
+  "time" : {
+    "start" : 1652817096839,
+    "stop" : 1652817096997,
+    "duration" : 158
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can update status of an order to 'processing'"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "b46be29f9357bbda",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652816135305,
+        "stop" : 1652816135444,
+        "duration" : 139
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "34498964be9416d6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652817096839,
+          "stop" : 1652817096997,
+          "duration" : 158
+        }
+      }, {
+        "uid" : "e9865dd43dae34b9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652816135305,
+          "stop" : 1652816135444,
+          "duration" : 139
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "fc388ca6eaac240.json",
+  "parameterValues" : [ ]
+}

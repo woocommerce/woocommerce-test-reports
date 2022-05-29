@@ -1,0 +1,85 @@
+{
+  "uid" : "5cadc678aa0c2490",
+  "name" : "tags",
+  "fullName" : "Products API tests: List All Products List all products.tags",
+  "historyId" : "9930862114aefcd7552ee6af1104def6",
+  "time" : {
+    "start" : 1653689589088,
+    "stop" : 1653689589170,
+    "duration" : 82
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Products API tests: List All Products List all products"
+  }, {
+    "name" : "testClass",
+    "value" : "Products API tests: List All Products List all products"
+  }, {
+    "name" : "testMethod",
+    "value" : "tags"
+  }, {
+    "name" : "package",
+    "value" : "Products API tests: List All Products List all products"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2f05580c907f5796",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653603998134,
+        "stop" : 1653603998215,
+        "duration" : 81
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "5df2e792ce151641",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653689589088,
+          "stop" : 1653689589170,
+          "duration" : 82
+        }
+      }, {
+        "uid" : "3bb3ccb493c33781",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653603998134,
+          "stop" : 1653603998215,
+          "duration" : 81
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "5cadc678aa0c2490.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,30 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Error: expect(received).toHaveLength(expected)\n                \n                Expected length: 100\n                Received length: 2\n                Received array:  [{\"id\": 0}, {\"id\": 1}]",
+      "children" : [ {
+        "name" : "can list all shipping zones",
+        "uid" : "db3f949d7d95e13b",
+        "parentUid" : "3eb9ead0f9e1505f4ba1263db7127c92",
+        "status" : "failed",
+        "time" : {
+          "start" : 1652871718551,
+          "stop" : 1652871718633,
+          "duration" : 82
+        },
+        "flaky" : false,
+        "newFailed" : true,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 1,
+        "retriesStatusChange" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3eb9ead0f9e1505f4ba1263db7127c92"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}

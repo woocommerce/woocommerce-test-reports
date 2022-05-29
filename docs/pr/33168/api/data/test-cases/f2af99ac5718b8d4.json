@@ -1,0 +1,101 @@
+{
+  "uid" : "f2af99ac5718b8d4",
+  "name" : "default",
+  "fullName" : "Orders API tests List all orders orderby.default",
+  "historyId" : "3dd8732e6d3855d59af67bcda6697b50",
+  "time" : {
+    "start" : 1653400363156,
+    "stop" : 1653400363394,
+    "duration" : 238
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 2,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests List all orders orderby"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests List all orders orderby"
+  }, {
+    "name" : "testMethod",
+    "value" : "default"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests List all orders orderby"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "e99e1f315d35eb85",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653387895942,
+        "stop" : 1653387896105,
+        "duration" : 163
+      }
+    }, {
+      "uid" : "8c283d40fde220b6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653363349469,
+        "stop" : 1653363349619,
+        "duration" : 150
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "d2e5df1398f2675e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653387895942,
+          "stop" : 1653387896105,
+          "duration" : 163
+        }
+      }, {
+        "uid" : "f079b6b22cedc9c1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653363349469,
+          "stop" : 1653363349619,
+          "duration" : 150
+        }
+      }, {
+        "uid" : "9e15d0d5a0494968",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653363349469,
+          "stop" : 1653363349619,
+          "duration" : 150
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "f2af99ac5718b8d4.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,85 @@
+{
+  "uid" : "3d5db46cb9241a0f",
+  "name" : "popularity (desc)",
+  "fullName" : "Products API tests: List All Products List all products orderby.popularity (desc)",
+  "historyId" : "6b9f8263f773fdaa34b2037e8e8fd94",
+  "time" : {
+    "start" : 1652817075017,
+    "stop" : 1652817075101,
+    "duration" : 84
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Products API tests: List All Products List all products orderby"
+  }, {
+    "name" : "testClass",
+    "value" : "Products API tests: List All Products List all products orderby"
+  }, {
+    "name" : "testMethod",
+    "value" : "popularity (desc)"
+  }, {
+    "name" : "package",
+    "value" : "Products API tests: List All Products List all products orderby"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2812509ceb4a361a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652816113096,
+        "stop" : 1652816113182,
+        "duration" : 86
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "66e55f95741d4079",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652817075017,
+          "stop" : 1652817075101,
+          "duration" : 84
+        }
+      }, {
+        "uid" : "e76d4f48b155586f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652816113096,
+          "stop" : 1652816113182,
+          "duration" : 86
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "3d5db46cb9241a0f.json",
+  "parameterValues" : [ ]
+}

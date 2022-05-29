@@ -1,0 +1,125 @@
+{
+  "uid" : "ec0735316f62bd37",
+  "name" : "can update status of an order to 'pending'",
+  "fullName" : "Orders API tests: CRUD Update an order.can update status of an order to 'pending'",
+  "historyId" : "fe45469f809c65c4dc29f7aedbdb83d4",
+  "time" : {
+    "start" : 1653509219783,
+    "stop" : 1653509219889,
+    "duration" : 106
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 4,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "testMethod",
+    "value" : "can update status of an order to 'pending'"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests: CRUD Update an order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "b958a1579419757c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653505526657,
+        "stop" : 1653505526733,
+        "duration" : 76
+      }
+    }, {
+      "uid" : "9cb2b178de3749a0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653504402393,
+        "stop" : 1653504402504,
+        "duration" : 111
+      }
+    }, {
+      "uid" : "c887048fbc3a06ed",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653482952189,
+        "stop" : 1653482952275,
+        "duration" : 86
+      }
+    }, {
+      "uid" : "a7d85eb717cb08fd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653400730510,
+        "stop" : 1653400730592,
+        "duration" : 82
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 5,
+        "unknown" : 0,
+        "total" : 5
+      },
+      "items" : [ {
+        "uid" : "7fd2fb6835af1584",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653505526657,
+          "stop" : 1653505526733,
+          "duration" : 76
+        }
+      }, {
+        "uid" : "b3f207485f5e9eaf",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653504402393,
+          "stop" : 1653504402504,
+          "duration" : 111
+        }
+      }, {
+        "uid" : "23bc304b08c833fc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653482952189,
+          "stop" : 1653482952275,
+          "duration" : 86
+        }
+      }, {
+        "uid" : "8f47301f9d3204ff",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653400730510,
+          "stop" : 1653400730592,
+          "duration" : 82
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "ec0735316f62bd37.json",
+  "parameterValues" : [ ]
+}

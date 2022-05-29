@@ -1,0 +1,273 @@
+{
+  "uid" : "52a9c818670916e1",
+  "name" : "can permanently delete an order",
+  "fullName" : "Orders API tests.can permanently delete an order",
+  "historyId" : "8e321565617ad654e70c2c180ac0ceb6",
+  "time" : {
+    "start" : 1653646873832,
+    "stop" : 1653646874006,
+    "duration" : 174
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 13,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Orders API tests"
+  }, {
+    "name" : "testClass",
+    "value" : "Orders API tests"
+  }, {
+    "name" : "testMethod",
+    "value" : "can permanently delete an order"
+  }, {
+    "name" : "package",
+    "value" : "Orders API tests"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "541797cd17c8bc19",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653565931164,
+        "stop" : 1653565931334,
+        "duration" : 170
+      }
+    }, {
+      "uid" : "a9e83bccc45e864",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653405087229,
+        "stop" : 1653405087397,
+        "duration" : 168
+      }
+    }, {
+      "uid" : "a7cf0886300b75e3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653398468808,
+        "stop" : 1653398468984,
+        "duration" : 176
+      }
+    }, {
+      "uid" : "1c1ea5c96839e1f3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653391549532,
+        "stop" : 1653391549707,
+        "duration" : 175
+      }
+    }, {
+      "uid" : "658532b23129f773",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653390735591,
+        "stop" : 1653390735760,
+        "duration" : 169
+      }
+    }, {
+      "uid" : "b0bd9fcb16b37ca1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653384732961,
+        "stop" : 1653384733134,
+        "duration" : 173
+      }
+    }, {
+      "uid" : "c4f64ffb50ae21ab",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653069840959,
+        "stop" : 1653069841209,
+        "duration" : 250
+      }
+    }, {
+      "uid" : "e986a9e0a44daf76",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653068365468,
+        "stop" : 1653068365655,
+        "duration" : 187
+      }
+    }, {
+      "uid" : "eb41fa608e9a1a30",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653045610729,
+        "stop" : 1653045610926,
+        "duration" : 197
+      }
+    }, {
+      "uid" : "474e35ac808b9dac",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653043048887,
+        "stop" : 1653043049120,
+        "duration" : 233
+      }
+    }, {
+      "uid" : "ca31f1ce9ee4b129",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652915993524,
+        "stop" : 1652915993704,
+        "duration" : 180
+      }
+    }, {
+      "uid" : "82c5f2a201357b75",
+      "status" : "failed",
+      "statusDetails" : "TypeError: logoProducts.map is not a function",
+      "time" : {
+        "start" : 1652864722065,
+        "stop" : 1652864722092,
+        "duration" : 27
+      }
+    }, {
+      "uid" : "bad84bc8647bf1a1",
+      "status" : "failed",
+      "statusDetails" : "TypeError: logoProducts.map is not a function",
+      "time" : {
+        "start" : 1652863735346,
+        "stop" : 1652863735377,
+        "duration" : 31
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 2,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 12,
+        "unknown" : 0,
+        "total" : 14
+      },
+      "items" : [ {
+        "uid" : "2a06f3df18a0224e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653565931164,
+          "stop" : 1653565931334,
+          "duration" : 170
+        }
+      }, {
+        "uid" : "cb7a6a4b6857b69e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653405087229,
+          "stop" : 1653405087397,
+          "duration" : 168
+        }
+      }, {
+        "uid" : "48f5b8149b833b71",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653398468808,
+          "stop" : 1653398468984,
+          "duration" : 176
+        }
+      }, {
+        "uid" : "5d675a513e876a49",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653391549532,
+          "stop" : 1653391549707,
+          "duration" : 175
+        }
+      }, {
+        "uid" : "806186d82bd40add",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653390735591,
+          "stop" : 1653390735760,
+          "duration" : 169
+        }
+      }, {
+        "uid" : "2abf13ceecff0ba2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653384732961,
+          "stop" : 1653384733134,
+          "duration" : 173
+        }
+      }, {
+        "uid" : "15a6fbe59c52b01e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653069840959,
+          "stop" : 1653069841209,
+          "duration" : 250
+        }
+      }, {
+        "uid" : "a7cca3d56e012dba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653068365468,
+          "stop" : 1653068365655,
+          "duration" : 187
+        }
+      }, {
+        "uid" : "a628f189f68bada8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653045610729,
+          "stop" : 1653045610926,
+          "duration" : 197
+        }
+      }, {
+        "uid" : "dc71674fc8d6d95e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1653043048887,
+          "stop" : 1653043049120,
+          "duration" : 233
+        }
+      }, {
+        "uid" : "1aba765b898e17e6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652915993524,
+          "stop" : 1652915993704,
+          "duration" : 180
+        }
+      }, {
+        "uid" : "9b89743673ed6bdb",
+        "status" : "failed",
+        "statusDetails" : "TypeError: logoProducts.map is not a function",
+        "time" : {
+          "start" : 1652864722065,
+          "stop" : 1652864722092,
+          "duration" : 27
+        }
+      }, {
+        "uid" : "ec22110bb5e17a3",
+        "status" : "failed",
+        "statusDetails" : "TypeError: logoProducts.map is not a function",
+        "time" : {
+          "start" : 1652863735346,
+          "stop" : 1652863735377,
+          "duration" : 31
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "52a9c818670916e1.json",
+  "parameterValues" : [ ]
+}
