@@ -52,13 +52,6 @@ jobs:
           DOWNLOAD_ALLURE_RESULTS_PATH: ${{ github.workspace }}/download/api/allure-results
         run: bash regenerate-combine-reports.sh
 
-      - name: Archive API test report
-        uses: actions/upload-artifact@v3
-        with:
-          name: daily-smoke-test-report
-          path: ${{ github.workspace }}/repo/docs/daily
-          retention-days: 5
-
       - name: Push changes to repo
         if: ${{ false }}
         env:
