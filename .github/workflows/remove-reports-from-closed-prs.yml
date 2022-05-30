@@ -30,4 +30,5 @@ jobs:
         working-directory: repo/docs/pr
         run: |
           ls > ${{ env.PR_LIST_PATH }}
+          echo "List of PR numbers currently in the repo:"
           cat ${{ env.PR_LIST_PATH }}
