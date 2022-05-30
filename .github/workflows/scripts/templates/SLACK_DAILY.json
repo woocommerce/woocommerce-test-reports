@@ -23,13 +23,34 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "Link to the workflow run logs"
+        "text": " :alphabet-white-hash: *Commit*"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "The latest commit made on `trunk` when the Daily Smoke Tests ran:"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "```$COMMIT_MESSAGE```"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "To view the workflow run in GitHub Actions, click this button."
       },
       "accessory": {
         "type": "button",
         "text": {
           "type": "plain_text",
-          "text": "Workflow run :sonic-run:",
+          "text": ":github: View run logs",
           "emoji": true
         },
         "value": "button_workflow_run",
@@ -44,23 +65,74 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": " :alphabet-white-hash: *Commit message* :alphabet-white-hash:"
+        "text": ":api: *API test report summary*"
       }
-    },
-    {
-      "type": "context",
-      "elements": [
-        {
-          "type": "mrkdwn",
-          "text": "This is the latest commit message in `trunk` when the Daily Smoke Test was triggered. "
-        }
-      ]
     },
     {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "```$COMMIT_MESSAGE```"
+        "text": "• passed: $PASSED_API"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "• failed: $FAILED_API"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "• skipped: $SKIPPED_API"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "• broken: $BROKEN_API"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "• unknown: $UNKNOWN_API"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "_Total number of tests: *$TOTAL_API*_"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "_Duration: *$DURATION_API*_"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "Link to the full API test report"
+      },
+      "accessory": {
+        "type": "button",
+        "text": {
+          "type": "plain_text",
+          "text": "View full API report ",
+          "emoji": true
+        },
+        "value": "full_api_report",
+        "url": "https://woocommerce.github.io/woocommerce-test-reports/daily/api/allure-report",
+        "action_id": "button-action"
       }
     },
     {
@@ -70,67 +142,74 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": ":api: *API Test Report Summary* :api:"
+        "text": ":playwright: *E2E test report summary*"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "• passed: TBC"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "• failed: TBC"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "• skipped: TBC"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "• broken: TBC"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "• unknown: TBC"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "_Total number of tests: *TBC*_"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "_Duration: *TBC*_"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "Link to the full E2E test report"
       },
       "accessory": {
         "type": "button",
         "text": {
           "type": "plain_text",
-          "text": "View full report ",
+          "text": "View full E2E report",
           "emoji": true
         },
-        "value": "button_api",
-        "url": "https://woocommerce.github.io/woocommerce-test-reports/daily/api",
+        "value": "full_e2e_report",
+        "url": "https://woocommerce.github.io/woocommerce-test-reports/daily/e2e/allure-report",
         "action_id": "button-action"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "• passed: $PASSED_API\n • failed: $FAILED_API\n• skipped: $SKIPPED_API\n• broken: $BROKEN_API\n• unknown: $UNKNOWN_API"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "_Total number of tests: *$TOTAL_API*_\n_Duration: *$DURATION_API*_"
-      }
-    },
-    {
-      "type": "divider"
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": ":playwright: *E2E Test Report Summary* :playwright:"
-      },
-      "accessory": {
-        "type": "button",
-        "text": {
-          "type": "plain_text",
-          "text": "View full report",
-          "emoji": true
-        },
-        "value": "button_e2e",
-        "url": "https://woocommerce.github.io/woocommerce-test-reports/daily/e2e",
-        "action_id": "button-action"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "• passed: TBC\n • failed: TBC\n• skipped: TBC\n• broken: TBC\n• unknown: TBC"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "_Total number of tests: *TBC*_\n_Duration: *TBC*_"
       }
     }
   ]
