@@ -1,0 +1,32 @@
+name: Remove test reports from closed or merged pull requests
+description: Runs every 7:30am UTC Sundays
+on:
+  schedule:
+    - cron: "30 7 * * 0"
+  workflow_dispatch:
+
+jobs:
+  remove-reports:
+    name: Remove reports
+    runs-on: ubuntu-20.04
+    env:
+      PR_LIST_PATH: ${{ github.workspace }}/tmp/pr_list.txt
+    steps:
+      - name: Create dirs
+        run: |
+          mkdir -p repo
+          mkdir -p tmp
+
+      - uses: actions/checkout@v3
+        with:
+          # MYTODO switch to trunk prior to merge
+          ref: 'update/delete-reports-from-closed-merged-prs'
+          path: repo
+          token: ${{ secrets.REPORTS_TOKEN }}
+
+      - name: List all PR numbers in repo
+        working-directory: repo/docs/pr
+        run: |
+          ls > ${{ env.PR_LIST_PATH }}
+          cat ${{ env.PR_LIST_PATH }}
+      
