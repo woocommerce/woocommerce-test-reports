@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-20.04
     env:
       PR_LIST_PATH: ${{ github.workspace }}/tmp/pr_list.txt
+      FILTERED_LIST_PATH: ${{ github.workspace }}/tmp/filtered_list.txt
     steps:
       - name: Create dirs
         run: |
@@ -32,3 +33,33 @@ jobs:
           ls > ${{ env.PR_LIST_PATH }}
           echo "List of PR numbers currently in the repo:"
           cat ${{ env.PR_LIST_PATH }}
+
+      - name: Filter closed or merged PR's
+        working-directory: repo/.github/workflow/scripts
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
+        run: |
+          bash filter-list.sh
+          echo "List of PR's that are already merged or closed:"
+          cat $FILTERED_LIST_PATH
+
+      - name: Run command for deleting reports from closed/merged PR's
+        working-directory: repo/.github/workflow/scripts
+        run: bash delete-closed-merged-pr-reports.sh
+
+      - name: Push changes to repo
+        if: ${{ false }}
+        working-directory: repo
+        env:
+          GITHUB_USER: ${{ secrets.REPORTS_USER }}
+          GITHUB_EMAIL: ${{ secrets.REPORTS_EMAIL }}
+          GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
+          BOT_COMMIT_MESSAGE: Cleanup reports from closed or merged pull requests
+        run: |
+          git config user.name $GITHUB_USER
+          git config user.email $GITHUB_EMAIL
+          git add .
+          git commit -m "$BOT_COMMIT_MESSAGE"
+          git pull --rebase
+          git push "https://$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY"
+
