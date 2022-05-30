@@ -3,9 +3,6 @@ on:
   schedule:
     - cron: "30 7 * * 0"
   workflow_dispatch:
-  push:
-    branches:
-      - update/delete-reports-from-closed-merged-prs
 
 jobs:
   remove-reports:
@@ -22,8 +19,7 @@ jobs:
 
       - uses: actions/checkout@v3
         with:
-          # MYTODO switch to trunk prior to merge
-          ref: update/delete-reports-from-closed-merged-prs
+          ref: trunk
           path: repo
           token: ${{ secrets.REPORTS_TOKEN }}
 
