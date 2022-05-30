@@ -1,5 +1,4 @@
 name: Remove test reports from closed or merged pull requests
-description: Runs every 7:30am UTC Sundays
 on:
   schedule:
     - cron: "30 7 * * 0"
