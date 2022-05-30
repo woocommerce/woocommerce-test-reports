@@ -1,8 +1,9 @@
-const fs = require("fs");
-const { COMMIT_MESSAGE } = process.env;
-const slackMessageTemplate = fs
-  .readFileSync("./templates/SLACK_DAILY.json")
-  .toString();
+const { readFileSync } = require("fs");
+const { COMMIT_MESSAGE, RUN_ID } = process.env;
+const API_SUMMARY_JSON = "../../../docs/daily/api/allure-report/widgets/summary.json";
+const SLACK_MESSAGE_TEMPLATE = readFileSync(
+  "./templates/SLACK_DAILY.json"
+).toString();
 
 const getStats = (summaryPath) => {
   const summary = require(summaryPath);
@@ -25,7 +26,16 @@ const getStats = (summaryPath) => {
   };
 };
 
-const apiSummaryJSONPath = "../../../docs/daily/api/widgets/summary.json";
+const getFormattedDate = () => {
+  const date = new Date();
+  return new Intl.DateTimeFormat("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }).format(date);
+};
+
 const {
   passed: passedApi,
   failed: failedApi,
@@ -34,10 +44,13 @@ const {
   unknown: unknownApi,
   total: totalApi,
   durationFormatted: durationApi,
-} = getStats(apiSummaryJSONPath);
+} = getStats(API_SUMMARY_JSON);
 
-const slackMessage = slackMessageTemplate
+const HEADER_DATE = getFormattedDate();
+
+const slackMessage = SLACK_MESSAGE_TEMPLATE.replace(/\$DATE/g, HEADER_DATE)
   .replace(/\$COMMIT_MESSAGE/g, COMMIT_MESSAGE)
+  .replace(/\$RUN_ID/g, RUN_ID)
   .replace(/\$PASSED_API/g, passedApi)
   .replace(/\$FAILED_API/g, failedApi)
   .replace(/\$SKIPPED_API/g, skippedApi)
