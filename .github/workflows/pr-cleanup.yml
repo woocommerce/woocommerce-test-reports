@@ -35,7 +35,7 @@ jobs:
           cat ${{ env.PR_LIST_PATH }}
 
       - name: Filter closed or merged PR's
-        working-directory: repo/.github/workflow/scripts
+        working-directory: repo/.github/workflows/scripts
         env:
           GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
         run: |
@@ -44,7 +44,7 @@ jobs:
           cat $FILTERED_LIST_PATH
 
       - name: Run command for deleting reports from closed/merged PR's
-        working-directory: repo/.github/workflow/scripts
+        working-directory: repo/.github/workflows/scripts
         run: bash delete-closed-merged-pr-reports.sh
 
       - name: Push changes to repo
