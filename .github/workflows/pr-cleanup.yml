@@ -48,7 +48,6 @@ jobs:
         run: bash delete-closed-merged-pr-reports.sh
 
       - name: Push changes to repo
-        if: ${{ false }}
         working-directory: repo
         env:
           GITHUB_USER: ${{ secrets.REPORTS_USER }}
