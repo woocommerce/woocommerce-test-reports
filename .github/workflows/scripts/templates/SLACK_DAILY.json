@@ -80,52 +80,92 @@
     },
     {
       "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "• passed: $PASSED_API"
-      }
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "*Status*"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Count*"
+        },
+        {
+          "type": "plain_text",
+          "text": "Passed",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "$PASSED_API",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "Failed",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "$FAILED_API",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "Skipped",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "$SKIPPED_API",
+          "emoji": true
+        }
+      ]
     },
     {
       "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "• failed: $FAILED_API"
-      }
+      "fields": [
+        {
+          "type": "plain_text",
+          "text": "Broken",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "$BROKEN_API",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "Unknown",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "$UNKNOWN_API",
+          "emoji": true
+        }
+      ]
     },
     {
       "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "• skipped: $SKIPPED_API"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "• broken: $BROKEN_API"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "• unknown: $UNKNOWN_API"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "_Total number of tests: *$TOTAL_API*_"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "_Duration: *$DURATION_API*_"
-      }
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "Total number of tests"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*$TOTAL_API*"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "Duration"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*$DURATION_API*"
+        }
+      ]
     },
     {
       "type": "divider"
@@ -160,52 +200,92 @@
     },
     {
       "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "• passed: TBC"
-      }
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "*Status*"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Count*"
+        },
+        {
+          "type": "plain_text",
+          "text": "Passed",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "TBC",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "Failed",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "TBC",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "Skipped",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "TBC",
+          "emoji": true
+        }
+      ]
     },
     {
       "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "• failed: TBC"
-      }
+      "fields": [
+        {
+          "type": "plain_text",
+          "text": "Broken",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "TBC",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "Unknown",
+          "emoji": true
+        },
+        {
+          "type": "plain_text",
+          "text": "TBC",
+          "emoji": true
+        }
+      ]
     },
     {
       "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "• skipped: TBC"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "• broken: TBC"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "• unknown: TBC"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "_Total number of tests: *TBC*_"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "_Duration: *TBC*_"
-      }
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "Total number of tests"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*TBC*"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "Duration"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*TBC*"
+        }
+      ]
     },
     {
       "type": "divider"
