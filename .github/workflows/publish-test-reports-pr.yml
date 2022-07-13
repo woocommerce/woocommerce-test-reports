@@ -1,0 +1,72 @@
+name: Publish PR test reports
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        required: true
+      api_artifact:
+        required: true
+      e2e_artifact:
+        required: true
+      pr_number:
+        required: true
+      commit_sha:
+        required: true
+
+jobs:
+  publish_pr_test_reports:
+    name: Publish PR test reports
+    runs-on: ubuntu-20.04
+    env:
+      RUN_ID: ${{ github.event.inputs.run_id }}
+      API_ARTIFACT: ${{ github.event.inputs.api_artifact }}
+      E2E_ARTIFACT: ${{ github.event.inputs.e2e_artifact }}
+      PR_NUMBER: ${{ github.event.inputs.pr_number }}
+      COMMIT_SHA: ${{ github.event.inputs.commit_sha }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - name: Validate PR number
+        run: gh pr view $PR_NUMBER --repo woocommerce/woocommerce >> /dev/null
+
+      - name: Install allure-commandline package
+        run: npm install -g allure-commandline
+
+      - name: Create dirs
+        run: |
+          mkdir -p artifacts/api
+          mkdir -p artifacts/e2e
+          mkdir -p repo
+
+      - name: Checkout this repo
+        uses: actions/checkout@v3
+        with:
+          path: repo
+          token: ${{ secrets.REPORTS_TOKEN }}
+
+      - name: Get commit message
+        working-directory: repo/.github/workflows/scripts
+        run: bash get-commit-message.sh
+
+      - name: Download API test report
+        env:
+          ARTIFACT_NAME: ${{ env.API_ARTIFACT }}
+          DOWNLOAD_PATH: ${{ github.workspace }}/artifacts/api
+        working-directory: repo/.github/workflows/scripts
+        run: bash download-report.sh
+
+      - name: Download E2E test report
+        env:
+          ARTIFACT_NAME: ${{ env.E2E_ARTIFACT }}
+          DOWNLOAD_PATH: ${{ github.workspace }}/artifacts/e2e
+        working-directory: repo/.github/workflows/scripts
+        run: bash download-report.sh
+
+      # - name: Regenerate report
+      #   run: ${{ env.REPO_PATH }}/.github/workflows/scripts/regenerate-report.sh
+
+      # - name: Push changes to repo
+      #   env:
+      #     GH_USER: ${{ secrets.REPORTS_USER }}
+      #     GH_EMAIL: ${{ secrets.REPORTS_EMAIL }}
+      #     GH_TOKEN: ${{ secrets.REPORTS_TOKEN }}
+      #   run: ${{ env.REPO_PATH }}/.github/workflows/scripts/push-changes.sh
