@@ -33,9 +33,13 @@ jobs:
 
       - name: Create dirs
         run: |
+          mkdir -p repo
           mkdir -p artifacts/api
           mkdir -p artifacts/e2e
-          mkdir -p repo
+          mkdir -p s3/api
+          mkdir -p s3/e2e
+          mkdir -p output/api
+          mkdir -p output/e2e
 
       - name: Checkout this repo
         uses: actions/checkout@v3
@@ -47,22 +51,92 @@ jobs:
         working-directory: repo/.github/workflows/scripts
         run: bash get-commit-message.sh
 
-      - name: Download API test report
+      - name: Download API test report artifact from PR
         env:
           ARTIFACT_NAME: ${{ env.API_ARTIFACT }}
           DOWNLOAD_PATH: ${{ github.workspace }}/artifacts/api
         working-directory: repo/.github/workflows/scripts
         run: bash download-report.sh
 
-      - name: Download E2E test report
+      - name: Download E2E test report artifact from PR
         env:
           ARTIFACT_NAME: ${{ env.E2E_ARTIFACT }}
           DOWNLOAD_PATH: ${{ github.workspace }}/artifacts/e2e
         working-directory: repo/.github/workflows/scripts
         run: bash download-report.sh
 
-      # - name: Regenerate report
-      #   run: ${{ env.REPO_PATH }}/.github/workflows/scripts/regenerate-report.sh
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: ${{ secrets.AWS_REGION }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Download existing API test report from S3 bucket
+        working-directory: repo/.github/workflows/scripts
+        id: api-s3-download
+        env:
+          SOURCE: ${{ secrets.S3_BUCKET_URL }}/${{ github.head_ref }}/pr/${{ env.PR_NUMBER }}/api
+          DESTINATION: ${{ github.workspace }}/s3/api
+        run: bash s3-download-report.sh
+
+      - name: Download existing E2E test report from S3 bucket
+        working-directory: repo/.github/workflows/scripts
+        id: e2e-s3-download
+        env:
+          SOURCE: ${{ secrets.S3_BUCKET_URL }}/${{ github.head_ref }}/pr/${{ env.PR_NUMBER }}/e2e
+          DESTINATION: ${{ github.workspace }}/s3/e2e
+        run: bash s3-download-report.sh
+
+      - name: Prepare first API report for upload
+        if: fromJSON( steps.api-s3-download.outputs.HAS_PREVIOUS_REPORT ) != true
+        run: cp -r s3/api/* output/api
+
+      - name: Prepare first E2E report for upload
+        if: fromJSON( steps.e2e-s3-download.outputs.HAS_PREVIOUS_REPORT ) != true
+        run: cp -r s3/e2e/* output/e2e
+
+      - name: Regenerate API test report with history
+        if: fromJSON( steps.api-s3-download.outputs.HAS_PREVIOUS_REPORT )
+        working-directory: repo/.github/workflows/scripts
+        env:
+          OLD_ALLURE_REPORT_PATH: ${{ github.workspace }}/s3/api
+          NEW_ALLURE_RESULTS_PATH: ${{ github.workspace }}/artifacts/api/allure-results
+          OUTPUT_PATH: ${{ github.workspace }}/output/api
+        run: bash regenerate-report-v2.sh
+
+      - name: Regenerate E2E test report with history
+        if: fromJSON( steps.e2e-s3-download.outputs.HAS_PREVIOUS_REPORT )
+        working-directory: repo/.github/workflows/scripts
+        env:
+          OLD_ALLURE_REPORT_PATH: ${{ github.workspace }}/s3/e2e
+          NEW_ALLURE_RESULTS_PATH: ${{ github.workspace }}/artifacts/e2e/allure-results
+          OUTPUT_PATH: ${{ github.workspace }}/output/e2e
+        run: bash regenerate-report-v2.sh
+
+      - name: Set API report title
+        working-directory: repo/.github/workflows/scripts
+        env:
+          REPORT_TITLE: "API Test Report - PR #${{ env.PR_NUMBER }} - ${{ env.COMMIT_MESSAGE }}"
+          INDEX_HTML_PATH: ${{ github.workspace }}/output/api/index.html
+          SUMMARY_JSON_PATH: ${{ github.workspace }}/output/api/widgets/summary.json
+        run: node change-report-title.js "$REPORT_TITLE" "$INDEX_HTML_PATH" "$SUMMARY_JSON_PATH"
+
+      - name: Set E2E report title
+        working-directory: repo/.github/workflows/scripts
+        env:
+          REPORT_TITLE: "E2E Test Report - PR #${{ env.PR_NUMBER }} - ${{ env.COMMIT_MESSAGE }}"
+          INDEX_HTML_PATH: ${{ github.workspace }}/output/e2e/index.html
+          SUMMARY_JSON_PATH: ${{ github.workspace }}/output/e2e/widgets/summary.json
+        run: node change-report-title.js "$REPORT_TITLE" "$INDEX_HTML_PATH" "$SUMMARY_JSON_PATH"
+
+      - name: Upload test reports to S3 bucket
+        env:
+          API_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ github.head_ref }}/pr/${{ env.PR_NUMBER }}/api
+          E2E_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ github.head_ref }}/pr/${{ env.PR_NUMBER }}/e2e
+        run: |
+          aws s3 sync output/api $API_DESTINATION --delete
+          aws s3 sync output/e2e $E2E_DESTINATION --delete
 
       # - name: Push changes to repo
       #   env:
