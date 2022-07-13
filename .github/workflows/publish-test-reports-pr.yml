@@ -90,11 +90,11 @@ jobs:
 
       - name: Prepare first API report for upload
         if: fromJSON( steps.api-s3-download.outputs.HAS_PREVIOUS_REPORT ) != true
-        run: cp -r s3/api/* output/api
+        run: cp -r artifacts/api/allure-report/* output/api
 
       - name: Prepare first E2E report for upload
         if: fromJSON( steps.e2e-s3-download.outputs.HAS_PREVIOUS_REPORT ) != true
-        run: cp -r s3/e2e/* output/e2e
+        run: cp -r artifacts/e2e/allure-report/* output/e2e
 
       - name: Regenerate API test report with history
         if: fromJSON( steps.api-s3-download.outputs.HAS_PREVIOUS_REPORT )
