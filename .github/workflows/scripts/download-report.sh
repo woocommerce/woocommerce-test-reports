@@ -1,8 +1,24 @@
+#
+# Script for downloading an artifact based on the given RUN_ID and ARTIFACT_NAME.
+# Artifacts will be saved on the given DOWNLOAD_PATH.
+# GitHub CLI is used to perform the download. Therefore, you'll need to set a GITHUB_TOKEN environment variable as mentioned in https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows
+# 
+# To use this script, you should first set these environment variables:
+# - RUN_ID
+# - ARTIFACT_NAME
+# - DOWNLOAD_PATH
+# - GITHUB_TOKEN
+#
+
 #!/usr/bin/env bash
 
+# Attempt download this many times
 MAX_ATTEMPTS=10
-EXIT_CODE=0
+
+# Wait time between each download attempt
 WAIT_TIME=10
+
+EXIT_CODE=0
 
 for ((i = 1; i <= $MAX_ATTEMPTS; i++)); do
 
@@ -21,7 +37,7 @@ for ((i = 1; i <= $MAX_ATTEMPTS; i++)); do
     fi
 
     if [[ $i -lt $MAX_ATTEMPTS ]]; then
-        echo "Retrying in $WAIT_TIME sec...\n\n"
+        echo "Download attempt FAILED. Retrying in $WAIT_TIME sec...\n\n"
         sleep $WAIT_TIME
     fi
 
