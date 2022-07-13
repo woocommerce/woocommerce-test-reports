@@ -76,7 +76,7 @@ jobs:
         working-directory: repo/.github/workflows/scripts
         id: api-s3-download
         env:
-          SOURCE: ${{ secrets.S3_BUCKET_URL }}/${{ github.head_ref }}/pr/${{ env.PR_NUMBER }}/api
+          SOURCE: ${{ secrets.S3_BUCKET_URL }}/${{ github.ref }}/pr/${{ env.PR_NUMBER }}/api
           DESTINATION: ${{ github.workspace }}/s3/api
         run: bash s3-download-report.sh
 
@@ -84,7 +84,7 @@ jobs:
         working-directory: repo/.github/workflows/scripts
         id: e2e-s3-download
         env:
-          SOURCE: ${{ secrets.S3_BUCKET_URL }}/${{ github.head_ref }}/pr/${{ env.PR_NUMBER }}/e2e
+          SOURCE: ${{ secrets.S3_BUCKET_URL }}/${{ github.ref }}/pr/${{ env.PR_NUMBER }}/e2e
           DESTINATION: ${{ github.workspace }}/s3/e2e
         run: bash s3-download-report.sh
 
@@ -132,8 +132,8 @@ jobs:
 
       - name: Upload test reports to S3 bucket
         env:
-          API_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ github.head_ref }}/pr/${{ env.PR_NUMBER }}/api
-          E2E_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ github.head_ref }}/pr/${{ env.PR_NUMBER }}/e2e
+          API_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ github.ref }}/pr/${{ env.PR_NUMBER }}/api
+          E2E_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ github.ref }}/pr/${{ env.PR_NUMBER }}/e2e
         run: |
           aws s3 sync output/api $API_DESTINATION --delete
           aws s3 sync output/e2e $E2E_DESTINATION --delete
