@@ -26,7 +26,7 @@ echo "pr_title_encoded: \"$PR_TITLE_ENCODED\"" >>$INDEX_PATH
 echo "pr_test_type: $TEST_TYPE" >>$INDEX_PATH
 echo "last_published: $LAST_PUBLISHED" >>$INDEX_PATH
 echo "commit_sha: $COMMIT_SHA" >>$INDEX_PATH
-echo "commit_message: $COMMIT_MESSAGE" >>$INDEX_PATH
+echo "commit_message: \"$COMMIT_MESSAGE\"" >>$INDEX_PATH
 echo "branch_name: $BRANCH_NAME" >>$INDEX_PATH
 echo "---" >>$INDEX_PATH
 echo "Done!"
