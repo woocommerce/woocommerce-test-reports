@@ -12,7 +12,7 @@ on:
         required: true
       commit_sha:
         required: true
-      root_dir:
+      s3_root:
         required: true
         type: choice
         options:
@@ -29,7 +29,7 @@ jobs:
       E2E_ARTIFACT: ${{ github.event.inputs.e2e_artifact }}
       PR_NUMBER: ${{ github.event.inputs.pr_number }}
       COMMIT_SHA: ${{ github.event.inputs.commit_sha }}
-      ROOT_DIR: ${{ github.event.inputs.root_dir }}
+      S3_ROOT: ${{ github.event.inputs.s3_root }}
       GITHUB_TOKEN: ${{ github.token }}
     steps:
       - name: Validate PR number
@@ -83,7 +83,7 @@ jobs:
         working-directory: repo/.github/workflows/scripts
         id: api-s3-download
         env:
-          SOURCE: ${{ secrets.S3_BUCKET_URL }}/${{ env.ROOT_DIR }}/pr/${{ env.PR_NUMBER }}/api
+          SOURCE: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_ROOT }}/pr/${{ env.PR_NUMBER }}/api
           DESTINATION: ${{ github.workspace }}/s3/api
         run: bash s3-download-report.sh
 
@@ -91,7 +91,7 @@ jobs:
         working-directory: repo/.github/workflows/scripts
         id: e2e-s3-download
         env:
-          SOURCE: ${{ secrets.S3_BUCKET_URL }}/${{ env.ROOT_DIR }}/pr/${{ env.PR_NUMBER }}/e2e
+          SOURCE: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_ROOT }}/pr/${{ env.PR_NUMBER }}/e2e
           DESTINATION: ${{ github.workspace }}/s3/e2e
         run: bash s3-download-report.sh
 
@@ -139,8 +139,8 @@ jobs:
 
       - name: Upload test reports to S3 bucket
         env:
-          API_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ env.ROOT_DIR }}/pr/${{ env.PR_NUMBER }}/api
-          E2E_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ env.ROOT_DIR }}/pr/${{ env.PR_NUMBER }}/e2e
+          API_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_ROOT }}/pr/${{ env.PR_NUMBER }}/api
+          E2E_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_ROOT }}/pr/${{ env.PR_NUMBER }}/e2e
         run: |
           aws s3 sync output/api $API_DESTINATION --delete
           aws s3 sync output/e2e $E2E_DESTINATION --delete
