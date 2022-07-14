@@ -18,6 +18,9 @@ on:
         options:
           - public
           - test
+concurrency:
+    group: pr-${{ github.event.inputs.pr_number }}
+    cancel-in-progress: true
 
 jobs:
   publish_pr_test_reports:
