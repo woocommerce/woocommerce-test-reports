@@ -58,7 +58,7 @@ jobs:
           INDEX_HTML_PATH: ${{ github.workspace }}/repo/docs/daily/api/allure-report/index.html
           SUMMARY_JSON_PATH: ${{ github.workspace }}/repo/docs/daily/api/allure-report/widgets/summary.json
           REPORT_TITLE: "[Daily API test report] ${{ env.COMMIT_MESSAGE }}"
-        run: node change-report-title.js "$REPORT_TITLE" "$INDEX_HTML_PATH" "$SUMMARY_JSON_PATH"
+        run: node change-report-title.js
 
       - name: Push changes to repo
         working-directory: repo/.github/workflows/scripts

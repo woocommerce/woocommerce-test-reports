@@ -20,8 +20,8 @@ on:
           - public
           - test
 concurrency:
-    group: pr-${{ github.event.inputs.pr_number }}
-    cancel-in-progress: true
+  group: pr-${{ github.event.inputs.pr_number }}
+  cancel-in-progress: true
 
 jobs:
   publish_pr_test_reports:
@@ -131,7 +131,7 @@ jobs:
           REPORT_TITLE: "API Test Report - PR #${{ env.PR_NUMBER }} - ${{ env.COMMIT_MESSAGE }}"
           INDEX_HTML_PATH: ${{ github.workspace }}/output/api/index.html
           SUMMARY_JSON_PATH: ${{ github.workspace }}/output/api/widgets/summary.json
-        run: node change-report-title.js "$REPORT_TITLE" "$INDEX_HTML_PATH" "$SUMMARY_JSON_PATH"
+        run: node change-report-title.js
 
       - name: Set E2E report title
         working-directory: repo/.github/workflows/scripts
@@ -139,7 +139,7 @@ jobs:
           REPORT_TITLE: "E2E Test Report - PR #${{ env.PR_NUMBER }} - ${{ env.COMMIT_MESSAGE }}"
           INDEX_HTML_PATH: ${{ github.workspace }}/output/e2e/index.html
           SUMMARY_JSON_PATH: ${{ github.workspace }}/output/e2e/widgets/summary.json
-        run: node change-report-title.js "$REPORT_TITLE" "$INDEX_HTML_PATH" "$SUMMARY_JSON_PATH"
+        run: node change-report-title.js
 
       - name: Upload test reports to S3 bucket
         env:

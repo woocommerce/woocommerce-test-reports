@@ -1,24 +1,20 @@
 const { readFileSync, writeFileSync } = require("fs");
-
-const args = process.argv.slice(2);
-const REPORT_TITLE = args[0];
-const INDEX_HTML = args[1];
-const SUMMARY_JSON = args[2];
+const { REPORT_TITLE, INDEX_HTML_PATH, SUMMARY_JSON_PATH } = process.env;
 
 const changeIndexHtmlTitle = () => {
-  const originalContent = readFileSync(INDEX_HTML);
+  const originalContent = readFileSync(INDEX_HTML_PATH);
   const newContent = originalContent
     .toString()
     .replace("<title>Allure Report</title>", `<title>${REPORT_TITLE}</title>`);
 
-  writeFileSync(INDEX_HTML, newContent);
+  writeFileSync(INDEX_HTML_PATH, newContent);
 };
 
 const changeSummaryJsonTitle = () => {
-  const summary = require(SUMMARY_JSON);
+  const summary = require(SUMMARY_JSON_PATH);
   summary.reportName = REPORT_TITLE;
 
-  writeFileSync(SUMMARY_JSON, JSON.stringify(summary));
+  writeFileSync(SUMMARY_JSON_PATH, JSON.stringify(summary));
 };
 
 changeIndexHtmlTitle();
