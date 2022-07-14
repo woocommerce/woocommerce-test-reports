@@ -14,6 +14,7 @@ on:
         required: true
       s3_root:
         required: true
+        default: test
         type: choice
         options:
           - public
