@@ -23,6 +23,7 @@ echo "layout: redirect" >>$INDEX_PATH
 echo "redirect_to: $S3_WEB_ENDPOINT/$S3_ROOT/pr/$PR_NUMBER/$TEST_TYPE/index.html" >>$INDEX_PATH
 echo "pr_number: $PR_NUMBER" >>$INDEX_PATH
 echo "pr_title_encoded: \"$PR_TITLE_ENCODED\"" >>$INDEX_PATH
+echo "pr_test_type: $TEST_TYPE" >>$INDEX_PATH
 echo "last_published: $LAST_PUBLISHED" >>$INDEX_PATH
 echo "commit_sha: $COMMIT_SHA" >>$INDEX_PATH
 echo "commit_message: $COMMIT_MESSAGE" >>$INDEX_PATH
