@@ -149,6 +149,22 @@ jobs:
           aws s3 sync output/api $API_DESTINATION --delete
           aws s3 sync output/e2e $E2E_DESTINATION --delete
 
+      - name: Create or update index.md file for API test report
+        working-directory: repo/.github/workflows/scripts
+        env:
+          TEST_TYPE: api
+          S3_WEB_ENDPOINT: ${{ secrets.S3_WEB_ENDPOINT }}
+        run: bash pr-set-index-md.sh
+
+      - name: Create or update index.md file for E2E test report
+        working-directory: repo/.github/workflows/scripts
+        env:
+          TEST_TYPE: e2e
+          S3_WEB_ENDPOINT: ${{ secrets.S3_WEB_ENDPOINT }}
+        run: bash pr-set-index-md.sh
+
+
+
       # - name: Push changes to repo
       #   env:
       #     GH_USER: ${{ secrets.REPORTS_USER }}
