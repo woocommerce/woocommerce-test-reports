@@ -4,6 +4,9 @@ MAX_ATTEMPTS=3
 
 cd "$GITHUB_WORKSPACE/repo"
 
+# To see if we're pushing to the correct branch.
+git branch
+
 git config user.name $GITHUB_USER
 git config user.email $GITHUB_EMAIL
 git add .

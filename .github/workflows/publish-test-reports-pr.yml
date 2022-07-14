@@ -167,9 +167,8 @@ jobs:
       - name: Push changes to branch
         working-directory: repo/.github/workflows/scripts
         env:
-          GH_USER: ${{ secrets.REPORTS_USER }}
-          GH_EMAIL: ${{ secrets.REPORTS_EMAIL }}
-          GH_TOKEN: ${{ secrets.REPORTS_TOKEN }}
-          REPO_PATH: ${{ github.workspace }}/repo
-          TEST_WORKFLOW: pr
-        run: bash push-changes.sh
+          GITHUB_USER: ${{ secrets.REPORTS_USER }}
+          GITHUB_EMAIL: ${{ secrets.REPORTS_EMAIL }}
+          GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
+          BOT_COMMIT_MESSAGE: "Add test report - PR #${{ env.PR_NUMBER }} - ${{ env.COMMIT_MESSAGE }}"
+        run: bash push-changes-to-repo.sh
