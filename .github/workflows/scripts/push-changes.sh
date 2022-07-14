@@ -25,6 +25,7 @@ set_commit_message() {
 
 push_to_repo() {
     cd $REPO_PATH
+    git branch
     git config user.name $GH_USER
     git config user.email $GH_EMAIL
     git add .
