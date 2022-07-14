@@ -20,7 +20,7 @@ on:
           - public
           - test
 concurrency:
-  group: pr-${{ github.event.inputs.pr_number }}
+  group: ${{ github.ref_name }}-pr-${{ github.event.inputs.pr_number }}
   cancel-in-progress: true
 
 jobs:
@@ -57,6 +57,7 @@ jobs:
         with:
           path: repo
           token: ${{ secrets.REPORTS_TOKEN }}
+          ref: ${{ github.ref_name }}
 
       - name: Get commit message
         working-directory: repo/.github/workflows/scripts
@@ -162,8 +163,6 @@ jobs:
           TEST_TYPE: e2e
           S3_WEB_ENDPOINT: ${{ secrets.S3_WEB_ENDPOINT }}
         run: bash pr-set-index-md.sh
-
-
 
       # - name: Push changes to repo
       #   env:
