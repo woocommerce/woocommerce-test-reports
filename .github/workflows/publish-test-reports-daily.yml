@@ -41,7 +41,7 @@ jobs:
           token: ${{ secrets.REPORTS_TOKEN }}
 
       - name: Install allure-commandline package
-        run: npm install -g allure-commandline
+        run: npm install -g allure-
 
       # ####################
       # API Test Report
@@ -100,14 +100,16 @@ jobs:
         run: node change-report-title.js
 
       - name: Push changes to repo
-        if: ${{ env.GITHUB_REF_NAME }} == trunk
+        if: ${{ env.GITHUB_REF_NAME }} == 'trunk'
         working-directory: repo/.github/workflows/scripts
         env:
           GITHUB_USER: ${{ secrets.REPORTS_USER }}
           GITHUB_EMAIL: ${{ secrets.REPORTS_EMAIL }}
           GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
           BOT_COMMIT_MESSAGE: Add daily test report
-        run: bash push-changes-to-repo.sh
+        run: |
+          echo "GITHUB_REF_NAME: $GITHUB_REF_NAME"
+          bash push-changes-to-repo.sh
 
       - name: Prepare Slack message
         id: prepare_slack_message
