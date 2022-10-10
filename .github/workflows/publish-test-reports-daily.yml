@@ -100,6 +100,7 @@ jobs:
         run: node change-report-title.js
 
       - name: Push changes to repo
+        if: ${{ env.GITHUB_REF_NAME }} == trunk
         working-directory: repo/.github/workflows/scripts
         env:
           GITHUB_USER: ${{ secrets.REPORTS_USER }}
