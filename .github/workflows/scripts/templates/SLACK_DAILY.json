@@ -226,7 +226,7 @@
         },
         {
           "type": "plain_text",
-          "text": "FAILED_E2E",
+          "text": "$FAILED_E2E",
           "emoji": true
         },
         {
@@ -236,7 +236,7 @@
         },
         {
           "type": "plain_text",
-          "text": "SKIPPED_E2E",
+          "text": "$SKIPPED_E2E",
           "emoji": true
         }
       ]
@@ -251,7 +251,7 @@
         },
         {
           "type": "plain_text",
-          "text": "BROKEN_E2E",
+          "text": "$BROKEN_E2E",
           "emoji": true
         },
         {
@@ -261,7 +261,7 @@
         },
         {
           "type": "plain_text",
-          "text": "UNKNOWN_E2E",
+          "text": "$UNKNOWN_E2E",
           "emoji": true
         }
       ]
@@ -275,7 +275,7 @@
         },
         {
           "type": "mrkdwn",
-          "text": "*TOTAL_E2E*"
+          "text": "*$TOTAL_E2E*"
         },
         {
           "type": "mrkdwn",
@@ -283,7 +283,7 @@
         },
         {
           "type": "mrkdwn",
-          "text": "*DURATION_E2E*"
+          "text": "*$DURATION_E2E*"
         }
       ]
     },
