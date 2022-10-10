@@ -31,6 +31,7 @@ jobs:
       - name: Create dirs
         run: |
           mkdir -p download/api
+          mkdir -p download/e2e
           mkdir -p repo
 
       - name: Checkout this repo
@@ -42,6 +43,9 @@ jobs:
       - name: Install allure-commandline package
         run: npm install -g allure-commandline
 
+      # ####################
+      # API Test Report
+      # ####################
       - name: Download API test report artifact
         working-directory: repo/.github/workflows/scripts
         env:
@@ -50,7 +54,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
         run: bash download-report.sh
 
-      - name: Regenerate and combine reports
+      - name: Regenerate and combine API test reports
         working-directory: repo/.github/workflows/scripts
         env:
           REPO_ALLURE_REPORT_PATH: ${{ github.workspace }}/repo/docs/daily/api/allure-report
@@ -59,12 +63,40 @@ jobs:
           DOWNLOAD_ALLURE_RESULTS_PATH: ${{ github.workspace }}/download/api/allure-results
         run: bash regenerate-combine-reports.sh
 
-      - name: Customize Daily Smoke Test report title
+      - name: Customize API test report title
         working-directory: repo/.github/workflows/scripts
         env:
           INDEX_HTML_PATH: ${{ github.workspace }}/repo/docs/daily/api/allure-report/index.html
           SUMMARY_JSON_PATH: ${{ github.workspace }}/repo/docs/daily/api/allure-report/widgets/summary.json
-          REPORT_TITLE: '[Daily API test report] ${{ env.COMMIT_MESSAGE }}'
+          REPORT_TITLE: Daily API test report - ${{ env.COMMIT_MESSAGE }}
+        run: node change-report-title.js
+
+      # ####################
+      # E2E Test Report
+      # ####################
+      - name: Download E2E test report artifact
+        working-directory: repo/.github/workflows/scripts
+        env:
+          ARTIFACT_NAME: ${{ env.E2E_ARTIFACT }}
+          DOWNLOAD_PATH: ${{ github.workspace }}/download/e2e
+          GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
+        run: bash download-report.sh
+
+      - name: Regenerate and combine E2E test reports
+        working-directory: repo/.github/workflows/scripts
+        env:
+          REPO_ALLURE_REPORT_PATH: ${{ github.workspace }}/repo/docs/daily/e2e/allure-report
+          REPO_ALLURE_RESULTS_PATH: ${{ github.workspace }}/repo/docs/daily/e2e/allure-results
+          DOWNLOAD_ALLURE_REPORT_PATH: ${{ github.workspace }}/download/e2e/allure-report
+          DOWNLOAD_ALLURE_RESULTS_PATH: ${{ github.workspace }}/download/e2e/allure-results
+        run: bash regenerate-combine-reports.sh
+
+      - name: Customize E2E test report title
+        working-directory: repo/.github/workflows/scripts
+        env:
+          INDEX_HTML_PATH: ${{ github.workspace }}/repo/docs/daily/e2e/allure-report/index.html
+          SUMMARY_JSON_PATH: ${{ github.workspace }}/repo/docs/daily/e2e/allure-report/widgets/summary.json
+          REPORT_TITLE: Daily E2E test report - ${{ env.COMMIT_MESSAGE }}
         run: node change-report-title.js
 
       - name: Push changes to repo
