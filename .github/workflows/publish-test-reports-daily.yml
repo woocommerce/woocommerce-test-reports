@@ -14,6 +14,10 @@ on:
         description: Latest commit message in woocommerce/woocommerce:trunk at the time the Daily smoke test worflow was triggered.
         required: true
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   publish_test_report:
     name: Publish test report
@@ -60,7 +64,7 @@ jobs:
         env:
           INDEX_HTML_PATH: ${{ github.workspace }}/repo/docs/daily/api/allure-report/index.html
           SUMMARY_JSON_PATH: ${{ github.workspace }}/repo/docs/daily/api/allure-report/widgets/summary.json
-          REPORT_TITLE: "[Daily API test report] ${{ env.COMMIT_MESSAGE }}"
+          REPORT_TITLE: '[Daily API test report] ${{ env.COMMIT_MESSAGE }}'
         run: node change-report-title.js
 
       - name: Push changes to repo
