@@ -8,6 +8,8 @@ on:
       api_artifact:
         description: API test report artifact.
         required: true
+      e2e_artifact:
+        description: E2E test report artifact.
       commit_message:
         description: Latest commit message in woocommerce/woocommerce:trunk at the time the Daily smoke test worflow was triggered.
         required: true
@@ -19,6 +21,7 @@ jobs:
     env:
       RUN_ID: ${{ github.event.inputs.run_id }}
       API_ARTIFACT: ${{ github.event.inputs.api_artifact }}
+      E2E_ARTIFACT: ${{ github.event.inputs.e2e_artifact }}
       COMMIT_MESSAGE: ${{ github.event.inputs.commit_message }}
     steps:
       - name: Create dirs
