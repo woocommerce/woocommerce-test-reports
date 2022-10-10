@@ -1,9 +1,6 @@
 const { readFileSync } = require('fs');
-const { COMMIT_MESSAGE, RUN_ID } = process.env;
-const API_SUMMARY_JSON =
-  '../../../docs/daily/api/allure-report/widgets/summary.json';
-const E2E_SUMMARY_JSON =
-  '../../../docs/daily/e2e/allure-report/widgets/summary.json';
+const { COMMIT_MESSAGE, RUN_ID, API_SUMMARY_JSON, E2E_SUMMARY_JSON } =
+  process.env;
 const SLACK_MESSAGE_TEMPLATE = readFileSync(
   './templates/SLACK_DAILY.json'
 ).toString();

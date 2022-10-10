@@ -154,7 +154,11 @@ jobs:
         working-directory: repo/.github/workflows/scripts
         run: |
           mkdir -p $GITHUB_WORKSPACE/slack
-          SLACK_MESSAGE=$(COMMIT_MESSAGE="$COMMIT_MESSAGE" RUN_ID=$RUN_ID node prepare-slack-message-daily.js)
+          SLACK_MESSAGE=$(COMMIT_MESSAGE="$COMMIT_MESSAGE" \
+            RUN_ID=$RUN_ID \
+            API_SUMMARY_JSON=${{ github.workspace }}/output/api/widgets/summary.json \
+            E2E_SUMMARY_JSON=${{ github.workspace }}/output/e2e/widgets/summary.json \
+            node prepare-slack-message-daily.js)
           echo "$SLACK_MESSAGE" > $GITHUB_WORKSPACE/slack/slack-message.json
           cat $GITHUB_WORKSPACE/slack/slack-message.json
 
