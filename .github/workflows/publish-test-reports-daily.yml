@@ -41,7 +41,7 @@ jobs:
           token: ${{ secrets.REPORTS_TOKEN }}
 
       - name: Install allure-commandline package
-        run: npm install -g allure-
+        run: npm install -g allure-commandline
 
       # ####################
       # API Test Report
