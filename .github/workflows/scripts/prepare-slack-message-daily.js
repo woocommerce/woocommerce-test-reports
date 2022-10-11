@@ -1,6 +1,5 @@
 const { readFileSync } = require('fs');
-const { COMMIT_MESSAGE, RUN_ID, API_SUMMARY_JSON, E2E_SUMMARY_JSON } =
-  process.env;
+const { RUN_ID, API_SUMMARY_JSON, E2E_SUMMARY_JSON } = process.env;
 const SLACK_MESSAGE_TEMPLATE = readFileSync(
   './templates/SLACK_DAILY.json'
 ).toString();
@@ -59,7 +58,6 @@ const {
 const HEADER_DATE = getFormattedDate();
 
 const slackMessage = SLACK_MESSAGE_TEMPLATE.replace(/\$DATE/g, HEADER_DATE)
-  .replace(/\$COMMIT_MESSAGE/g, COMMIT_MESSAGE)
   .replace(/\$RUN_ID/g, RUN_ID)
   .replace(/\$PASSED_API/g, passedApi)
   .replace(/\$FAILED_API/g, failedApi)

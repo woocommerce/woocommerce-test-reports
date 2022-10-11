@@ -10,9 +10,6 @@ on:
         required: true
       e2e_artifact:
         description: E2E test report artifact.
-      commit_message:
-        description: Latest commit message in woocommerce/woocommerce:trunk at the time the Daily smoke test worflow was triggered.
-        required: true
       s3_root:
         required: true
         default: test
@@ -32,7 +29,6 @@ jobs:
       RUN_ID: ${{ github.event.inputs.run_id }}
       API_ARTIFACT: ${{ github.event.inputs.api_artifact }}
       E2E_ARTIFACT: ${{ github.event.inputs.e2e_artifact }}
-      COMMIT_MESSAGE: ${{ github.event.inputs.commit_message }}
       S3_ROOT: ${{ github.event.inputs.s3_root }}
       GITHUB_TOKEN: ${{ github.token }}
     steps:
@@ -97,7 +93,7 @@ jobs:
       - name: Set API report title
         working-directory: repo/.github/workflows/scripts
         env:
-          REPORT_TITLE: 'Daily API Smoke Test Report - ${{ env.COMMIT_MESSAGE }}'
+          REPORT_TITLE: 'Daily API Smoke Test Report'
           INDEX_HTML_PATH: ${{ github.workspace }}/output/api/index.html
           SUMMARY_JSON_PATH: ${{ github.workspace }}/output/api/widgets/summary.json
         run: node change-report-title.js
@@ -136,7 +132,7 @@ jobs:
       - name: Set E2E report title
         working-directory: repo/.github/workflows/scripts
         env:
-          REPORT_TITLE: 'Daily E2E Smoke Test Report - ${{ env.COMMIT_MESSAGE }}'
+          REPORT_TITLE: 'Daily E2E Smoke Test Report'
           INDEX_HTML_PATH: ${{ github.workspace }}/output/e2e/index.html
           SUMMARY_JSON_PATH: ${{ github.workspace }}/output/e2e/widgets/summary.json
         run: node change-report-title.js
@@ -154,8 +150,7 @@ jobs:
         working-directory: repo/.github/workflows/scripts
         run: |
           mkdir -p $GITHUB_WORKSPACE/slack
-          SLACK_MESSAGE=$(COMMIT_MESSAGE="$COMMIT_MESSAGE" \
-            RUN_ID=$RUN_ID \
+          SLACK_MESSAGE=$(RUN_ID=$RUN_ID \
             API_SUMMARY_JSON=${{ github.workspace }}/output/api/widgets/summary.json \
             E2E_SUMMARY_JSON=${{ github.workspace }}/output/e2e/widgets/summary.json \
             node prepare-slack-message-daily.js)

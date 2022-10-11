@@ -33,34 +33,13 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": " :alphabet-white-hash: *Commit*"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "The latest commit made on `trunk` when the Daily Smoke Tests ran:"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "> $COMMIT_MESSAGE"
-      }
-    },
-    {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
         "text": "To view the workflow run in GitHub Actions, click this button."
       },
       "accessory": {
         "type": "button",
         "text": {
           "type": "plain_text",
-          "text": ":github: View run logs",
+          "text": "View run logs :github:",
           "emoji": true
         },
         "value": "button_workflow_run",
