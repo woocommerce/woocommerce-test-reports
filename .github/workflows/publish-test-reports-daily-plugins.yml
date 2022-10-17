@@ -57,7 +57,7 @@ jobs:
 
       - name: Download E2E test report artifact
         env:
-          ARTIFACT_NAME: ${{ env.E2E_ARTIFACT }}
+          ARTIFACT_NAME: ${{ env.ARTIFACT }}
           DOWNLOAD_PATH: ${{ github.workspace }}/artifacts/e2e
         working-directory: repo/.github/workflows/scripts
         run: bash download-report.sh
