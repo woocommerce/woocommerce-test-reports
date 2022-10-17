@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/35090/api/i
 pr_number: 35090
 pr_title_encoded: "Update+WooCommerce+beta+tester+README"
 pr_test_type: api
-last_published: "2022-10-13 23:37:02 +0000"
-commit_sha: a814d128b77c49242641d235686f6a3b3a1c637e
-commit_message: "Fix typo"
+last_published: "2022-10-14 19:16:54 +0000"
+commit_sha: ae413e4e23d01a33d645eb4c16ddd7f7bd12b4e3
+commit_message: "Update WC Admin Test Helper dev commands"
 branch_name: update/woocommerce-beta-tester-readme
 ---
