@@ -44,7 +44,6 @@ jobs:
         with:
           path: repo
           token: ${{ secrets.REPORTS_TOKEN }}
-          ref: add/daily-with-plugins
 
       - name: Install allure-commandline package
         run: npm install -g allure-commandline
