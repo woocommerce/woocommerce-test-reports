@@ -22,9 +22,9 @@ EXIT_CODE=0
 
 for ((i = 1; i <= $MAX_ATTEMPTS; i++)); do
 
-    echo "Downloading $ARTIFACT_NAME to $DOWNLOAD_PATH (try #$i)..."
+    echo "Downloading \"$ARTIFACT_NAME\" to $DOWNLOAD_PATH (try #$i)..."
     gh run download $RUN_ID \
-        --name $ARTIFACT_NAME \
+        --name "$ARTIFACT_NAME" \
         --dir $DOWNLOAD_PATH \
         --repo woocommerce/woocommerce
 

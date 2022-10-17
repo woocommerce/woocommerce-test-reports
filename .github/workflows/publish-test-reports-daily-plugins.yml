@@ -1,0 +1,99 @@
+name: Publish report: Daily smoke tests with plugins
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        required: true
+      artifact:
+        required: true
+      plugin:
+        required: true
+      slug:
+        required: true
+      s3_root:
+        required: true
+        type: choice
+        options:
+          - public
+          - test
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.inputs.slug }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    name: Publish report on ${{ github.event.inputs.plugin }}
+    runs-on: ubuntu-20.04
+    env:
+      RUN_ID: ${{ github.event.inputs.run_id }}
+      ARTIFACT: ${{ github.event.inputs.artifact }}
+      PLUGIN: ${{ github.event.inputs.plugin }}
+      SLUG: ${{ github.event.inputs.slug }}
+      S3_ROOT: ${{ github.event.inputs.s3_root }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - name: Create dirs
+        run: |
+          mkdir -p repo
+          mkdir -p artifacts/e2e
+          mkdir -p s3/e2e
+          mkdir -p output/e2e
+
+      - name: Checkout this repo
+        uses: actions/checkout@v3
+        with:
+          path: repo
+          token: ${{ secrets.REPORTS_TOKEN }}
+          ref: add/daily-with-plugins
+
+      - name: Install allure-commandline package
+        run: npm install -g allure-commandline
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: ${{ secrets.AWS_REGION }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Download E2E test report artifact
+        env:
+          ARTIFACT_NAME: ${{ env.E2E_ARTIFACT }}
+          DOWNLOAD_PATH: ${{ github.workspace }}/artifacts/e2e
+        working-directory: repo/.github/workflows/scripts
+        run: bash download-report.sh
+
+      - name: Download existing E2E test report from S3 bucket
+        working-directory: repo/.github/workflows/scripts
+        id: e2e-s3-download
+        env:
+          SOURCE: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_ROOT }}/daily/${{ env.SLUG }}/e2e
+          DESTINATION: ${{ github.workspace }}/s3/e2e
+        run: bash s3-download-report.sh
+
+      - name: Prepare first E2E report for upload
+        if: fromJSON( steps.e2e-s3-download.outputs.HAS_PREVIOUS_REPORT ) != true
+        run: cp -r artifacts/e2e/allure-report/* output/e2e
+
+      - name: Regenerate E2E test report with history
+        if: fromJSON( steps.e2e-s3-download.outputs.HAS_PREVIOUS_REPORT )
+        working-directory: repo/.github/workflows/scripts
+        env:
+          OLD_ALLURE_REPORT_PATH: ${{ github.workspace }}/s3/e2e
+          NEW_ALLURE_RESULTS_PATH: ${{ github.workspace }}/artifacts/e2e/allure-results
+          OUTPUT_PATH: ${{ github.workspace }}/output/e2e
+        run: bash regenerate-report-v2.sh
+
+      - name: Set report title
+        working-directory: repo/.github/workflows/scripts
+        env:
+          REPORT_TITLE: Daily smoke tests with ${{ env.PLUGIN }} plugin installed
+          INDEX_HTML_PATH: ${{ github.workspace }}/output/e2e/index.html
+          SUMMARY_JSON_PATH: ${{ github.workspace }}/output/e2e/widgets/summary.json
+        run: node change-report-title.js
+
+      - name: Upload test reports to S3 bucket
+        env:
+          E2E_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_ROOT }}/daily/${{ env.SLUG }}/e2e
+        run: |
+          aws s3 sync output/e2e $E2E_DESTINATION --delete
