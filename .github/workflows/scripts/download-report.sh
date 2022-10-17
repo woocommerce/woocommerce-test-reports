@@ -13,7 +13,7 @@
 #!/usr/bin/env bash
 
 # Attempt download this many times
-MAX_ATTEMPTS=10
+MAX_ATTEMPTS=12
 
 # Wait time between each download attempt
 WAIT_TIME=10
