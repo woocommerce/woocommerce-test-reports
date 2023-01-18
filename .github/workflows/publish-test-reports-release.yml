@@ -23,18 +23,18 @@ on:
         default: WP Latest
         type: choice
         options:
-            - WP Latest
-            - WP Latest-1
-            - WP Latest-2
-            - PHP 7.4
-            - PHP 8.0
-            - PHP 8.1
-            - WooCommerce Payments
-            - WooCommerce PayPal Payments
-            - WooCommerce Shipping & Tax
-            - WooCommerce Subscriptions
-            - WordPress SEO
-            - Contact Form 7
+          - WP Latest
+          - WP Latest-1
+          - WP Latest-2
+          - PHP 7.4
+          - PHP 8.0
+          - PHP 8.1
+          - WooCommerce Payments
+          - WooCommerce PayPal Payments
+          - WooCommerce Shipping & Tax
+          - WooCommerce Subscriptions
+          - WordPress SEO
+          - Contact Form 7
       s3_path:
         required: true
         default: test/release/unversioned/wp-latest
