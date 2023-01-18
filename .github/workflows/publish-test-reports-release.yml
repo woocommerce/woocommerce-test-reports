@@ -166,5 +166,28 @@ jobs:
           aws s3 sync output/api $API_DESTINATION --delete
           aws s3 sync output/e2e $E2E_DESTINATION --delete
 
+      - name: Create or update index.md file for API test report
+        working-directory: repo/.github/workflows/scripts
+        env:
+          TEST_TYPE: api
+          S3_WEB_ENDPOINT: ${{ secrets.S3_WEB_ENDPOINT }}
+        run: bash release-set-index-md.sh
+
+      - name: Create or update index.md file for E2E test report
+        working-directory: repo/.github/workflows/scripts
+        env:
+          TEST_TYPE: e2e
+          S3_WEB_ENDPOINT: ${{ secrets.S3_WEB_ENDPOINT }}
+        run: bash release-set-index-md.sh
+
+      - name: Push changes to branch
+        working-directory: repo/.github/workflows/scripts
+        env:
+          GITHUB_USER: ${{ secrets.REPORTS_USER }}
+          GITHUB_EMAIL: ${{ secrets.REPORTS_EMAIL }}
+          GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
+          BOT_COMMIT_MESSAGE: 'Add test report - PR #${{ env.PR_NUMBER }} - ${{ env.COMMIT_MESSAGE }}'
+        run: bash push-changes-to-repo.sh
+
       - name: Delete artifacts from bucket
         run: aws s3 rm ${{ secrets.S3_BUCKET_URL }}/artifacts/${{ env.RUN_ID }} --recursive
