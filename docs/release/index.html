@@ -10,6 +10,7 @@ layout: default
   </head>
   <body>
     <h1>{{ page.title }}</h1>
+    <hr />
 
     <!-- Declare variables -->
     <!-- release_pages -->
@@ -32,7 +33,7 @@ layout: default
       <tbody>
         <!-- Get the environment descriptions of each page -->
         {%- assign env_descs = r_pages_with_this_tag | map: "env_description" |
-        sort -%}
+        uniq | sort -%}
 
         <!-- Create row per env_desc -->
         {%- for env_d in env_descs -%}
