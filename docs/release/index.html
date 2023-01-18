@@ -10,6 +10,45 @@ layout: default
   </head>
   <body>
     <h1>{{ page.title }}</h1>
-    <p>Coming soon...</p>
+
+    <!-- Declare variables -->
+    <!-- release_pages -->
+    {%- assign release_pages = site.pages | where_exp: "page", "page.url
+    contains '/release/'" | sort: "last_published" | reverse -%}
+    <!-- release_tags -->
+    {%- assign release_tags = release_pages | map: "release_tag" | uniq -%}
+
+    <!-- Create header text from each release tag -->
+    {%- for r_tag in release_tags -%}
+    <h2>{{ r_tag }}</h2>
+
+    <!-- Get pages with this release tag -->
+    {%- assign r_pages_with_this_tag = release_pages | where: "release_tag",
+    r_tag -%}
+
+    <!-- Create table containing env_description, API, and E2E links -->
+    <table>
+      <tbody>
+        <!-- Get the environment descriptions of each page -->
+        {%- assign env_descs = r_pages_with_this_tag | map: "env_description" |
+        sort -%}
+
+        <!-- Create row per env_desc -->
+        {%- for env_d in env_descs -%}
+        <tr>
+          <!-- Env desc in first cell -->
+          <td>{{ env_d }}</td>
+
+          <!-- API link in second cell -->
+          <td><a href="{{ r_tag }}/{{ env_d }}/api">API</a></td>
+
+          <!-- E2E link in third cell -->
+          <td><a href="{{ r_tag }}/{{ env_d }}/e2e">E2E</a></td>
+        </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+
+    {%- endfor -%}
   </body>
 </html>
