@@ -186,7 +186,7 @@ jobs:
           GITHUB_USER: ${{ secrets.REPORTS_USER }}
           GITHUB_EMAIL: ${{ secrets.REPORTS_EMAIL }}
           GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
-          BOT_COMMIT_MESSAGE: 'Add test report - PR #${{ env.PR_NUMBER }} - ${{ env.COMMIT_MESSAGE }}'
+          BOT_COMMIT_MESSAGE: 'Add: Release ${{ env.RELEASE_TAG }} - ${{ env.ENV_DESCRIPTION }}'
         run: bash push-changes-to-repo.sh
 
       - name: Delete artifacts from bucket
