@@ -16,9 +16,27 @@ on:
         required: true
       e2e_artifact:
         description: E2E test report artifact.
+        required: true
+      env_description:
+        description: WP environment description.
+        required: true
+        default: WP Latest
+        type: choice
+        options:
+            - WP Latest
+            - WP Latest-1
+            - WP Latest-2
+            - PHP 8.0 
+            - PHP 8.1
+            - WooCommerce Payments
+            - WooCommerce PayPal Payments
+            - WooCommerce Shipping & Tax
+            - WooCommerce Subscriptions
+            - WordPress SEO
+            - Contact Form 7
       s3_path:
         required: true
-        default: test/release/unversioned
+        default: test/release/unversioned/wp-latest
 concurrency:
   group: ${{ github.event.inputs.s3_path }}
   cancel-in-progress: true
@@ -33,6 +51,7 @@ jobs:
       RELEASE_TAG: ${{ github.event.inputs.release_tag }}
       API_ARTIFACT: ${{ github.event.inputs.api_artifact }}
       E2E_ARTIFACT: ${{ github.event.inputs.e2e_artifact }}
+      ENV_DESCRIPTION: ${{ github.event.inputs.env_description }}
       S3_PATH: ${{ github.event.inputs.s3_path }}
       GITHUB_TOKEN: ${{ github.token }}
     steps:
@@ -96,7 +115,7 @@ jobs:
       - name: Set API report title
         working-directory: repo/.github/workflows/scripts
         env:
-          REPORT_TITLE: API Tests on WooCommerce ${{ env.RELEASE_TAG }} with WP Latest, run ${{ env.RUN_NUMBER }}
+          REPORT_TITLE: API Tests on WooCommerce ${{ env.RELEASE_TAG }} with ${{ env.ENV_DESCRIPTION }} (run ${{ env.RUN_NUMBER }})
           INDEX_HTML_PATH: ${{ github.workspace }}/output/api/index.html
           SUMMARY_JSON_PATH: ${{ github.workspace }}/output/api/widgets/summary.json
         run: node change-report-title.js
@@ -135,7 +154,7 @@ jobs:
       - name: Set E2E report title
         working-directory: repo/.github/workflows/scripts
         env:
-          REPORT_TITLE: E2E Tests on WooCommerce ${{ env.RELEASE_TAG }} with WP Latest, run ${{ env.RUN_NUMBER }}
+          REPORT_TITLE: E2E Tests on WooCommerce ${{ env.RELEASE_TAG }} with ${{ env.ENV_DESCRIPTION }} run ${{ env.RUN_NUMBER }}
           INDEX_HTML_PATH: ${{ github.workspace }}/output/e2e/index.html
           SUMMARY_JSON_PATH: ${{ github.workspace }}/output/e2e/widgets/summary.json
         run: node change-report-title.js
