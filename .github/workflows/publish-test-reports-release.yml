@@ -3,22 +3,24 @@ on:
   workflow_dispatch:
     inputs:
       run_id:
-        description: Release smoke test workflow run ID.
+        description: "Smoke test release" workflow run ID.
+        required: true
+      run_number:
+        description: "Smoke test release" workflow run number.
+        required: true
+      release_tag:
+        description: WooCommerce release tag.
         required: true
       api_artifact:
         description: API test report artifact.
         required: true
       e2e_artifact:
         description: E2E test report artifact.
-      s3_root:
+      s3_path:
         required: true
-        default: test
-        type: choice
-        options:
-          - public
-          - test
+        default: test/release/unversioned
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.event.inputs.s3_path }}
   cancel-in-progress: true
 
 jobs:
@@ -27,9 +29,11 @@ jobs:
     runs-on: ubuntu-20.04
     env:
       RUN_ID: ${{ github.event.inputs.run_id }}
+      RUN_NUMBER: ${{ github.event.inputs.run_number }}
+      RELEASE_TAG: ${{ github.event.inputs.release_tag }}
       API_ARTIFACT: ${{ github.event.inputs.api_artifact }}
       E2E_ARTIFACT: ${{ github.event.inputs.e2e_artifact }}
-      S3_ROOT: ${{ github.event.inputs.s3_root }}
+      S3_PATH: ${{ github.event.inputs.s3_path }}
       GITHUB_TOKEN: ${{ github.token }}
     steps:
       - name: Create dirs
@@ -47,7 +51,6 @@ jobs:
         with:
           path: repo
           token: ${{ secrets.REPORTS_TOKEN }}
-          ref: ${{ github.ref_name }}
 
       - name: Install allure-commandline package
         run: npm install -g allure-commandline
@@ -73,7 +76,7 @@ jobs:
         working-directory: repo/.github/workflows/scripts
         id: api-s3-download
         env:
-          SOURCE: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_ROOT }}/daily/api
+          SOURCE: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_PATH }}/api
           DESTINATION: ${{ github.workspace }}/s3/api
         run: bash s3-download-report.sh
 
@@ -93,7 +96,7 @@ jobs:
       - name: Set API report title
         working-directory: repo/.github/workflows/scripts
         env:
-          REPORT_TITLE: "Release API Smoke Test Report"
+          REPORT_TITLE: API Tests on WooCommerce ${{ env.RELEASE_TAG }} with WP Latest, run ${{ env.RUN_NUMBER }}
           INDEX_HTML_PATH: ${{ github.workspace }}/output/api/index.html
           SUMMARY_JSON_PATH: ${{ github.workspace }}/output/api/widgets/summary.json
         run: node change-report-title.js
@@ -112,7 +115,7 @@ jobs:
         working-directory: repo/.github/workflows/scripts
         id: e2e-s3-download
         env:
-          SOURCE: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_ROOT }}/daily/e2e
+          SOURCE: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_PATH }}/e2e
           DESTINATION: ${{ github.workspace }}/s3/e2e
         run: bash s3-download-report.sh
 
@@ -132,15 +135,15 @@ jobs:
       - name: Set E2E report title
         working-directory: repo/.github/workflows/scripts
         env:
-          REPORT_TITLE: "Release E2E Smoke Test Report"
+          REPORT_TITLE: E2E Tests on WooCommerce ${{ env.RELEASE_TAG }} with WP Latest, run ${{ env.RUN_NUMBER }}
           INDEX_HTML_PATH: ${{ github.workspace }}/output/e2e/index.html
           SUMMARY_JSON_PATH: ${{ github.workspace }}/output/e2e/widgets/summary.json
         run: node change-report-title.js
 
       - name: Upload test reports to S3 bucket
         env:
-          API_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_ROOT }}/daily/api
-          E2E_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_ROOT }}/daily/e2e
+          API_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_PATH }}/api
+          E2E_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_PATH }}/e2e
         run: |
           aws s3 sync output/api $API_DESTINATION --delete
           aws s3 sync output/e2e $E2E_DESTINATION --delete
