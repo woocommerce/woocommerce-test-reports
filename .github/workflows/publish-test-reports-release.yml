@@ -87,8 +87,8 @@ jobs:
       # ####################
       - name: Download API test report artifact
         env:
-            SOURCE: ${{ secrets.S3_BUCKET_URL }}/artifacts/${{ env.RUN_ID }}/${{ env.API_ARTIFACT }}
-            DESTINATION: artifacts/api
+          SOURCE: ${{ secrets.S3_BUCKET_URL }}/artifacts/${{ env.RUN_ID }}/${{ env.API_ARTIFACT }}
+          DESTINATION: artifacts/api
         run: aws s3 cp $SOURCE $DESTINATION --recursive
 
       - name: Download existing API test report from S3 bucket
@@ -125,8 +125,8 @@ jobs:
       # ####################
       - name: Download E2E test report artifact
         env:
-            SOURCE: ${{ secrets.S3_BUCKET_URL }}/artifacts/${{ env.RUN_ID }}/${{ env.E2E_ARTIFACT }}
-            DESTINATION: artifacts/e2e
+          SOURCE: ${{ secrets.S3_BUCKET_URL }}/artifacts/${{ env.RUN_ID }}/${{ env.E2E_ARTIFACT }}
+          DESTINATION: artifacts/e2e
         run: aws s3 cp $SOURCE $DESTINATION --recursive
 
       - name: Download existing E2E test report from S3 bucket
@@ -168,4 +168,3 @@ jobs:
 
       - name: Delete artifacts from bucket
         run: aws s3 rm ${{ secrets.S3_BUCKET_URL }}/artifacts/${{ env.RUN_ID }} --recursive
-
