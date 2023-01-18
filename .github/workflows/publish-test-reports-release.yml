@@ -154,7 +154,7 @@ jobs:
       - name: Set E2E report title
         working-directory: repo/.github/workflows/scripts
         env:
-          REPORT_TITLE: E2E Tests on WooCommerce ${{ env.RELEASE_TAG }} with ${{ env.ENV_DESCRIPTION }} run ${{ env.RUN_NUMBER }}
+          REPORT_TITLE: E2E Tests on WooCommerce ${{ env.RELEASE_TAG }} with ${{ env.ENV_DESCRIPTION }} (run ${{ env.RUN_NUMBER }})
           INDEX_HTML_PATH: ${{ github.workspace }}/output/e2e/index.html
           SUMMARY_JSON_PATH: ${{ github.workspace }}/output/e2e/widgets/summary.json
         run: node change-report-title.js
