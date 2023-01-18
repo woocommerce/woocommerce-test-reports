@@ -3,10 +3,10 @@ on:
   workflow_dispatch:
     inputs:
       run_id:
-        description: "Smoke test release" workflow run ID.
+        description: Smoke test release workflow run ID.
         required: true
       run_number:
-        description: "Smoke test release" workflow run number.
+        description: Smoke test release workflow run number.
         required: true
       release_tag:
         description: WooCommerce release tag.
