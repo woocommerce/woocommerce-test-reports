@@ -16,7 +16,8 @@ layout: default
     {%- assign release_pages = site.pages | where_exp: "page", "page.url
     contains '/release/'" | sort: "last_published" | reverse -%}
     <!-- release_tags -->
-    {%- assign release_tags = release_pages | map: "release_tag" | uniq -%}
+    {%- assign release_tags = release_pages | map: "release_tag" | uniq |
+    compact -%}
 
     <!-- Create header text from each release tag -->
     {%- for r_tag in release_tags -%}
