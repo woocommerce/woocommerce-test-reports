@@ -17,5 +17,5 @@ git commit -m "$BOT_COMMIT_MESSAGE" -m "Workflow run: https://github.com/woocomm
 git push --set-upstream origin $BRANCH_NAME
 
 # Create PR and merge
-gh pr create --title "$BOT_COMMIT_MESSAGE"
+gh pr create --title "$BOT_COMMIT_MESSAGE" --body ""
 gh pr merge --delete-branch --squash
