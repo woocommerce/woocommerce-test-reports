@@ -15,7 +15,7 @@ layout: default
     <!-- Declare variables -->
     <!-- release_pages -->
     {%- assign release_pages = site.pages | where_exp: "page", "page.url
-    contains '/release/'" | sort: "last_published" | reverse -%}
+    contains '/release/'" | sort: "created_at" | reverse -%}
     <!-- release_tags -->
     {%- assign release_tags = release_pages | map: "release_tag" | uniq |
     compact -%}
