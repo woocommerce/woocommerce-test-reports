@@ -2,6 +2,9 @@ name: Publish Release smoke test report
 on:
   workflow_dispatch:
     inputs:
+      created_at:
+        description: Creation date of the WooCommerce release zip.
+        required: true
       run_id:
         description: Smoke test release workflow run ID.
         required: true
@@ -48,6 +51,7 @@ jobs:
     runs-on: ubuntu-20.04
     env:
       RUN_ID: ${{ github.event.inputs.run_id }}
+      CREATED_AT: ${{ github.event.inputs.created_at }}
       RUN_NUMBER: ${{ github.event.inputs.run_number }}
       RELEASE_TAG: ${{ github.event.inputs.release_tag }}
       API_ARTIFACT: ${{ github.event.inputs.api_artifact }}
