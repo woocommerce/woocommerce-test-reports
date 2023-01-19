@@ -23,21 +23,21 @@ on:
       env_description:
         description: WP environment description.
         required: true
-        default: WP Latest
+        default: wp-latest
         type: choice
         options:
-          - WP Latest
-          - WP Latest-1
-          - WP Latest-2
-          - PHP 7.4
-          - PHP 8.0
-          - PHP 8.1
-          - WooCommerce Payments
-          - WooCommerce PayPal Payments
-          - WooCommerce Shipping & Tax
-          - WooCommerce Subscriptions
-          - WordPress SEO
-          - Contact Form 7
+          - wp-latest
+          - wp-latest-1
+          - wp-latest-2
+          - php-7.4
+          - php-8.0
+          - php-8.1
+          - woocommerce-payments
+          - woocommerce-paypal-payments
+          - woocommerce-services
+          - woocommerce-subscriptions
+          - wordpress-seo
+          - contact-form-7
       s3_path:
         required: true
         default: test/release/unversioned/wp-latest
