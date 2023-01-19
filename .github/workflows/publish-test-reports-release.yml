@@ -186,8 +186,8 @@ jobs:
           GITHUB_USER: ${{ secrets.REPORTS_USER }}
           GITHUB_EMAIL: ${{ secrets.REPORTS_EMAIL }}
           GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
-          BOT_COMMIT_MESSAGE: 'Add: Release ${{ env.RELEASE_TAG }} - ${{ env.ENV_DESCRIPTION }}'
-        run: bash push-changes-to-repo.sh
+          BOT_COMMIT_MESSAGE: 'Add: Release ${{ env.RELEASE_TAG }} with ${{ env.ENV_DESCRIPTION }}'
+        run: bash merge-changes-to-trunk.sh
 
       - name: Delete artifacts from bucket
         run: aws s3 rm ${{ secrets.S3_BUCKET_URL }}/artifacts/${{ env.RUN_ID }} --recursive
