@@ -25,9 +25,39 @@ layout: default
     <table>
       <tbody>
         <tr>
+          <!-- Get all 'wp-latest/' pages in this release tag -->
+          {% assign wp_latest_pages = release_pages | where: "release_tag",
+          r_tag | where: "env_description", "wp_latest" %}
+
+          <!-- Get the 'wp-latest/api' page -->
+          {% assign api_page = wp_latest_pages | where: "test_type", "api" | pop
+          %}
+          <!-- Get the 'wp-latest/e2e' page -->
+          {% assign e2e_page = wp_latest_pages | where: "test_type", "e2e" | pop
+          %}
+
+          <!-- Get API result. -->
+          {% assign api_passed = api_page.passed %}
+          <!-- Get E2E result. -->
+          {% assign e2e_passed = e2e_page.passed %}
+
           <td>WP Latest</td>
-          <td><a href="{{ r_tag }}/wp-latest/api">API</a></td>
-          <td><a href="{{ r_tag }}/wp-latest/e2e">E2E</a></td>
+          <td>
+            <a href="{{ r_tag }}/wp-latest/api">API</a>
+            &nbsp;
+            <!-- Check emoji if API test passed -->
+            {% if api_passed %} &#9989;
+            <!-- Else, cross mark emoji -->
+            {% else %} &#10060; {% endif %}
+          </td>
+          <td>
+            <a href="{{ r_tag }}/wp-latest/e2e">E2E</a>
+            &nbsp;
+            <!-- Check emoji if E2E test passed -->
+            {% if e2e_passed %} &#9989;
+            <!-- Else, cross mark emoji -->
+            {% else %} &#10060; {% endif %}
+          </td>
         </tr>
         <tr>
           <td>WP Latest-1</td>
