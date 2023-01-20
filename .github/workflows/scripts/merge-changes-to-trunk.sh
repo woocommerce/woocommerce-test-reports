@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BRANCH_NAME="add/release-$RELEASE_TAG-${ENV_DESCRIPTION}"
+BRANCH_NAME="add/release-$RELEASE_TAG-${ENV_DESCRIPTION}-run-${RUN_NUMBER}"
 
 cd "$GITHUB_WORKSPACE/repo"
 
