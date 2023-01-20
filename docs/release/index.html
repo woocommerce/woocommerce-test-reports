@@ -30,10 +30,10 @@ layout: default
           r_tag | where: "env_description", "wp_latest" %}
 
           <!-- Get the 'wp-latest/api' page -->
-          {% assign api_page = wp_latest_pages | where: "test_type", "api" | pop
+          {% assign api_page = wp_latest_pages | where: "test_type", "api" | first
           %}
           <!-- Get the 'wp-latest/e2e' page -->
-          {% assign e2e_page = wp_latest_pages | where: "test_type", "e2e" | pop
+          {% assign e2e_page = wp_latest_pages | where: "test_type", "e2e" | first
           %}
 
           <!-- Get API result. -->
