@@ -6,18 +6,17 @@ layout: default
 <html>
   <head>
     <title>{{ page.title }}</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
   </head>
   <body>
     <h1>{{ page.title }}</h1>
     <hr />
     <h3>Daily smoke test</h3>
-    <ul>
-      <li><a href="daily/api">API</a></li>
-      <li><a href="daily/e2e">E2E</a></li>
-    </ul>
+    <p style="margin-left: 40px">
+      <a href="daily">Click here to view all daily smoke test reports.</a>
+    </p>
     <h3>Releases</h3>
-    <p>
+    <p style="margin-left: 40px">
       <a href="release">Click here to view test reports on release builds.</a>
     </p>
     <h3>Pull requests</h3>
