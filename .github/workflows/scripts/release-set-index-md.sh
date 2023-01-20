@@ -1,5 +1,5 @@
 #
-# Create or recreate the index.md file in PR test reports. 
+# Create or recreate the index.md file in PR test reports.
 #
 #!/usr/bin/env bash
 
@@ -20,6 +20,7 @@ echo "test_type: $TEST_TYPE" >>"$INDEX_PATH"
 echo "release_tag: $RELEASE_TAG" >>"$INDEX_PATH"
 echo "env_description: \"$ENV_DESCRIPTION\"" >>"$INDEX_PATH"
 echo "created_at: \"$CREATED_AT\"" >>"$INDEX_PATH"
+echo "passed: $PASSED" >>"$INDEX_PATH"
 echo "---" >>"$INDEX_PATH"
 echo "Done!"
 echo "Contents of \"$INDEX_PATH\" is:"
