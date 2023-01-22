@@ -27,14 +27,14 @@ layout: default
         <tr>
           <!-- Get all 'wp-latest/' pages in this release tag -->
           {% assign wp_latest_pages = release_pages | where: "release_tag",
-          r_tag | where: "env_description", "wp_latest" %}
+          r_tag | where: "env_description", "wp-latest" %}
 
           <!-- Get the 'wp-latest/api' page -->
-          {% assign api_page = wp_latest_pages | where: "test_type", "api" | first
-          %}
+          {% assign api_page = wp_latest_pages | where: "test_type", "api" |
+          first %}
           <!-- Get the 'wp-latest/e2e' page -->
-          {% assign e2e_page = wp_latest_pages | where: "test_type", "e2e" | first
-          %}
+          {% assign e2e_page = wp_latest_pages | where: "test_type", "e2e" |
+          first %}
 
           <!-- Get API result. -->
           {% assign api_passed = api_page.passed %}
@@ -45,18 +45,26 @@ layout: default
           <td>
             <a href="{{ r_tag }}/wp-latest/api">API</a>
             &nbsp;
-            <!-- Check emoji if API test passed -->
-            {% if api_passed %} &#9989;
-            <!-- Else, cross mark emoji -->
-            {% else %} &#10060; {% endif %}
+            <!-- Did it pass? -->
+            {% case api_passed %}
+            <!-- If yes, print green check mark -->
+            {% when true %} &#9989;
+            <!-- If not, print red cross mark -->
+            {% when false %} &#10060;
+            <!-- If unknown, print a stopwatch signifying waiting status -->
+            {% when nil %} &#9201; {% endcase %}
           </td>
           <td>
             <a href="{{ r_tag }}/wp-latest/e2e">E2E</a>
             &nbsp;
-            <!-- Check emoji if E2E test passed -->
-            {% if e2e_passed %} &#9989;
-            <!-- Else, cross mark emoji -->
-            {% else %} &#10060; {% endif %}
+            <!-- Did it pass? -->
+            {% case e2e_passed %}
+            <!-- If yes, print green check mark -->
+            {% when true %} &#9989;
+            <!-- If not, print red cross mark -->
+            {% when false %} &#10060;
+            <!-- If unknown, print a stopwatch signifying waiting status -->
+            {% when nil %} &#9201; {% endcase %}
           </td>
         </tr>
         <tr>
