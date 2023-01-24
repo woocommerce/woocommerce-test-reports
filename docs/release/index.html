@@ -71,7 +71,7 @@ layout: default
       <tbody>
         {% for env_desc_rdable in arr_env_desc %}
         <tr>
-          <td width="60%">{{ env_desc_rdable }}</td>
+          <td width="50%">{{ env_desc_rdable }}</td>
 
           <!-- Get all env-desc pages in this release tag -->
           {% assign env_desc_slug = env_desc_rdable | slugify %} {% assign
@@ -82,12 +82,12 @@ layout: default
           {% assign test_type_page = env_desc_pages | where: 'test_type',
           test_type | first %} {% if test_type_page == null %}
           <!-- If test_type_page doesn't exist yet, print as text only, not a link -->
-          <td width="20%" style="color: gainsboro">{{ test_type | upcase }}</td>
+          <td width="25%" style="color: gainsboro">{{ test_type | upcase }}</td>
           {% else %}
           <!-- Read the 'passed' value -->
           {% assign passed = test_type_page.passed %}
 
-          <td width="20%">
+          <td width="25%">
             <a href="{{ r_tag }}/{{ env_desc_slug }}/{{ test_type }}"
               >{{ test_type | upcase }}</a
             >
