@@ -5,5 +5,5 @@ test_type: api
 release_tag: 6.9.4
 env_description: "wp-latest-1"
 created_at: "2022-09-26T13:07:05Z"
-passed: false
+passed: true
 ---
