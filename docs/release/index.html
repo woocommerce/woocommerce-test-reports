@@ -63,8 +63,12 @@ layout: default
             {% when true %} &#9989;
             <!-- If not, print red cross mark -->
             {% when false %} &#10060;
-            <!-- If unknown, print a question mark -->
-            {% when nil %} &#10068; {% endcase %}
+            <!-- If nil, don't print anything -->
+            {% when nil %}
+            <!-- Print nothing  -->
+            {% else %}
+            <!-- If any other status, print question mark -->
+            &#10068; {% endcase %}
           </td>
         </tr>
         <tr>
