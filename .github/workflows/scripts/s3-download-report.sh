@@ -11,7 +11,7 @@
 aws s3 sync $SOURCE $DESTINATION
 
 if [[ -z "$(ls $DESTINATION)" ]]; then
-    echo '::set-output name=HAS_PREVIOUS_REPORT::false'
+    echo 'HAS_PREVIOUS_REPORT=false' >> $GITHUB_OUTPUT
 else
-    echo '::set-output name=HAS_PREVIOUS_REPORT::true'
+    echo 'HAS_PREVIOUS_REPORT=true' >> $GITHUB_OUTPUT
 fi
