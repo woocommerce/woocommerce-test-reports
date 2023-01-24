@@ -36,9 +36,6 @@ on:
           - php-7.4
           - php-8.0
           - php-8.1
-      s3_path:
-        required: true
-        default: test/release/unversioned/wp-latest
 concurrency:
   group: ${{ github.event.inputs.release_tag }}-${{ github.event.inputs.env_description }}-${{ github.event.inputs.test_type }}
   cancel-in-progress: true
@@ -54,7 +51,6 @@ jobs:
       RELEASE_TAG: ${{ github.event.inputs.release_tag }}
       ARTIFACT: ${{ github.event.inputs.artifact }}
       ENV_DESCRIPTION: ${{ github.event.inputs.env_description }}
-      S3_PATH: ${{ github.event.inputs.s3_path }}
       TEST_TYPE: ${{ github.event.inputs.test_type }}
       GITHUB_TOKEN: ${{ github.token }}
     steps:
@@ -118,7 +114,7 @@ jobs:
         working-directory: repo/.github/workflows/scripts
         id: s3-download
         env:
-          SOURCE: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_PATH }}/${{ env.TEST_TYPE }}
+          SOURCE: ${{ secrets.S3_BUCKET_URL }}/public/release/${{ env.RELEASE_TAG }}/${{ env.ENV_DESCRIPTION }}/${{ env.TEST_TYPE }}
           DESTINATION: ${{ github.workspace }}/s3
         run: bash s3-download-report.sh
 
@@ -142,6 +138,18 @@ jobs:
           INDEX_HTML_PATH: ${{ github.workspace }}/output/index.html
           SUMMARY_JSON_PATH: ${{ github.workspace }}/output/widgets/summary.json
         run: node change-report-title.js
+
+      - name: Upload test reports to S3 bucket
+        env:
+          DESTINATION: ${{ secrets.S3_BUCKET_URL }}/public/release/${{ env.RELEASE_TAG }}/${{ env.ENV_DESCRIPTION }}/${{ env.TEST_TYPE }}
+        run: aws s3 sync output $DESTINATION --delete
+
+      - name: Create or update index.md
+        working-directory: repo/.github/workflows/scripts
+        env:
+          S3_WEB_ENDPOINT: ${{ secrets.S3_WEB_ENDPOINT }}
+          PASSED: ${{ steps.is-passed.outputs.result }}
+        run: bash release-set-index-md.sh
 
       - name: Create PR and merge
         working-directory: repo/.github/workflows/scripts
