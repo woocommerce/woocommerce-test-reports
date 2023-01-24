@@ -8,9 +8,48 @@ layout: default
     <title>{{ page.title }}</title>
     <link rel="icon" type="image/x-icon" href="favicon.png" />
   </head>
+
   <body>
     <h1>{{ page.title }}</h1>
     <hr />
+
+    <!-- Legend -->
+    <details>
+      <summary><i>Legend</i></summary>
+      <table>
+        <thead>
+          <tr>
+            <td width="30%" style="text-align: center">
+              <strong>Symbol</strong>
+            </td>
+            <td width="70%"><strong>Meaning</strong></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align: center">&#9989;</td>
+            <td>Test passed</td>
+          </tr>
+          <tr>
+            <td style="text-align: center">&#10060;</td>
+            <td>Test failed</td>
+          </tr>
+          <tr>
+            <td style="text-align: center">&#10068;</td>
+            <td>Test result unknown. Manually investigate.</td>
+          </tr>
+          <tr>
+            <td style="text-align: center">
+              <span style="color: gainsboro">API</span>
+            </td>
+            <td>(Grayed out text) Test not started, or in progress.</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
+    <br />
+    <br />
 
     <!-- Create list of all release tags, sorted in desc order -->
     {%- assign release_pages = site.pages | where_exp: "page", "page.url
@@ -21,70 +60,50 @@ layout: default
     {%- for r_tag in release_tags -%}
     <h2>{{ r_tag }}</h2>
 
+    <!-- Fixed array of env_descs -->
+    {% assign arr_env_desc = 'WP Latest,WP Latest-1,WP Latest-2' | split: ',' %}
+
+    <!-- Fixed array of test types -->
+    {% assign arr_test_types = 'api,e2e' | split: ',' %}
+
     <!-- Create table per release tag -->
     <table>
       <tbody>
+        {% for env_desc_rdable in arr_env_desc %}
         <tr>
-          <!-- Get all 'wp-latest/' pages in this release tag -->
-          {% assign wp_latest_pages = release_pages | where: "release_tag",
-          r_tag | where: "env_description", "wp-latest" %}
+          <td width="60%">{{ env_desc_rdable }}</td>
 
-          <!-- Get the 'wp-latest/api' page -->
-          {% assign api_page = wp_latest_pages | where: "test_type", "api" |
-          first %}
-          <!-- Get the 'wp-latest/e2e' page -->
-          {% assign e2e_page = wp_latest_pages | where: "test_type", "e2e" |
-          first %}
+          <!-- Get all env-desc pages in this release tag -->
+          {% assign env_desc_slug = env_desc_rdable | slugify %} {% assign
+          env_desc_pages = release_pages | where: 'release_tag', r_tag | where:
+          'env_description', env_desc_slug %} {% for test_type in arr_test_types
+          %}
+          <!-- Get the test_type page in this env_desc -->
+          {% assign test_type_page = env_desc_pages | where: 'test_type',
+          test_type | first %} {% if test_type_page == null %}
+          <!-- If test_type_page doesn't exist yet, print as text only, not a link -->
+          <td width="20%" style="color: gainsboro">{{ test_type | upcase }}</td>
+          {% else %}
+          <!-- Read the 'passed' value -->
+          {% assign passed = test_type_page.passed %}
 
-          <!-- Get API result. -->
-          {% assign api_passed = api_page.passed %}
-          <!-- Get E2E result. -->
-          {% assign e2e_passed = e2e_page.passed %}
-
-          <td width="60%">WP Latest</td>
           <td width="20%">
-            <a href="{{ r_tag }}/wp-latest/api">API</a>
+            <a href="{{ r_tag }}/{{ env_desc_slug }}/{{ test_type }}"
+              >{{ test_type | upcase }}</a
+            >
             &nbsp;
-            <!-- Did it pass? -->
-            {% case e2e_passed %}
-            <!-- If yes, print green check mark -->
-            {% when true %} &#9989;
-            <!-- If not, print red cross mark -->
-            {% when false %} &#10060;
-            <!-- If nil, don't print anything -->
-            {% when nil %}
-            <!-- Print nothing  -->
-            {% else %}
-            <!-- If any other status, print question mark -->
+            <!-- Print emoji based on 'passed' value -->
+            {% case passed %} {% when true %}
+            <!-- green check mark -->
+            &#9989; {% when false %}
+            <!-- red cross mark -->
+            &#10060; {% else %}
+            <!-- question emoji -->
             &#10068; {% endcase %}
           </td>
-          <td width="20%">
-            <a href="{{ r_tag }}/wp-latest/e2e">E2E</a>
-            &nbsp;
-            <!-- Did it pass? -->
-            {% case e2e_passed %}
-            <!-- If yes, print green check mark -->
-            {% when true %} &#9989;
-            <!-- If not, print red cross mark -->
-            {% when false %} &#10060;
-            <!-- If nil, don't print anything -->
-            {% when nil %}
-            <!-- Print nothing  -->
-            {% else %}
-            <!-- If any other status, print question mark -->
-            &#10068; {% endcase %}
-          </td>
+          {% endif %} {% endfor %}
         </tr>
-        <tr>
-          <td>WP Latest-1</td>
-          <td>API</td>
-          <td>E2E</td>
-        </tr>
-        <tr>
-          <td>WP Latest-2</td>
-          <td>API</td>
-          <td>E2E</td>
-        </tr>
+        {% endfor %}
       </tbody>
     </table>
 
