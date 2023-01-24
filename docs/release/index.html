@@ -41,20 +41,24 @@ layout: default
           <!-- Get E2E result. -->
           {% assign e2e_passed = e2e_page.passed %}
 
-          <td>WP Latest</td>
-          <td>
+          <td width="60%">WP Latest</td>
+          <td width="20%">
             <a href="{{ r_tag }}/wp-latest/api">API</a>
             &nbsp;
             <!-- Did it pass? -->
-            {% case api_passed %}
+            {% case e2e_passed %}
             <!-- If yes, print green check mark -->
             {% when true %} &#9989;
             <!-- If not, print red cross mark -->
             {% when false %} &#10060;
-            <!-- If unknown, print a question mark -->
-            {% when nil %} &#10068; {% endcase %}
+            <!-- If nil, don't print anything -->
+            {% when nil %}
+            <!-- Print nothing  -->
+            {% else %}
+            <!-- If any other status, print question mark -->
+            &#10068; {% endcase %}
           </td>
-          <td>
+          <td width="20%">
             <a href="{{ r_tag }}/wp-latest/e2e">E2E</a>
             &nbsp;
             <!-- Did it pass? -->
