@@ -14,7 +14,7 @@ git checkout -b $BRANCH_NAME
 # Commit changes
 git add .
 commit_result=$(git commit -m "$BOT_COMMIT_MESSAGE" -m "Workflow run: https://github.com/woocommerce/woocommerce/actions/runs/$RUN_ID")
-commit_exit_code=$(exit $?)
+commit_exit_code=$(echo $?)
 echo $commit_result
 
 # Gracefully exit when there's nothing to commit
