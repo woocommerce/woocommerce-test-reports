@@ -6,7 +6,8 @@ layout: default
 <html>
   <head>
     <title>{{ page.title }}</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../styles.css" />
   </head>
 
   <body>
@@ -52,13 +53,13 @@ layout: default
     <br />
 
     <!-- Create list of all release tags, sorted in desc order -->
-    {%- assign release_pages = site.pages | where_exp: "page", "page.url
-    contains '/release/'" | sort: "created_at" | reverse -%} {%- assign
-    release_tags = release_pages | map: "release_tag" | uniq | compact -%}
+    {%- assign release_pages = site.pages | where_exp: 'page', "page.url
+    contains '/release/'" | sort: 'created_at' | reverse -%} {%- assign
+    release_tags = release_pages | map: 'release_tag' | uniq | compact -%}
 
     <!-- Create header text from each release tag -->
     {%- for r_tag in release_tags -%}
-    <h2>{{ r_tag }}</h2>
+    <h2 class="accordion">{{ r_tag }}</h2>
 
     <!-- Fixed array of env_descs -->
     {% assign arr_env_desc = 'WP Latest,WP Latest-1,WP Latest-2,PHP 7.4,PHP
@@ -67,47 +68,52 @@ layout: default
     <!-- Fixed array of test types -->
     {% assign arr_test_types = 'api,e2e' | split: ',' %}
 
-    <!-- Create table per release tag -->
-    <table>
-      <tbody>
-        {% for env_desc_rdable in arr_env_desc %}
-        <tr>
-          <td width="50%">{{ env_desc_rdable }}</td>
+    <div class="panel">
+      <!-- Create table per release tag -->
+      <table>
+        <tbody>
+          {% for env_desc_rdable in arr_env_desc %}
+          <tr>
+            <td width="50%">{{ env_desc_rdable }}</td>
 
-          <!-- Get all env-desc pages in this release tag -->
-          {% assign env_desc_slug = env_desc_rdable | slugify: "pretty" %} {%
-          assign env_desc_pages = release_pages | where: 'release_tag', r_tag |
-          where: 'env_description', env_desc_slug %} {% for test_type in
-          arr_test_types %}
-          <!-- Get the test_type page in this env_desc -->
-          {% assign test_type_page = env_desc_pages | where: 'test_type',
-          test_type | first %} {% if test_type_page == null %}
-          <!-- If test_type_page doesn't exist yet, print as text only, not a link -->
-          <td width="25%" style="color: gainsboro">{{ test_type | upcase }}</td>
-          {% else %}
-          <!-- Read the 'passed' value -->
-          {% assign passed = test_type_page.passed %}
+            <!-- Get all env-desc pages in this release tag -->
+            {% assign env_desc_slug = env_desc_rdable | slugify: 'pretty' %} {%
+            assign env_desc_pages = release_pages | where: 'release_tag', r_tag
+            | where: 'env_description', env_desc_slug %} {% for test_type in
+            arr_test_types %}
+            <!-- Get the test_type page in this env_desc -->
+            {% assign test_type_page = env_desc_pages | where: 'test_type',
+            test_type | first %} {% if test_type_page == null %}
+            <!-- If test_type_page doesn't exist yet, print as text only, not a link -->
+            <td width="25%" style="color: gainsboro">
+              {{ test_type | upcase }}
+            </td>
+            {% else %}
+            <!-- Read the 'passed' value -->
+            {% assign passed = test_type_page.passed %}
 
-          <td width="25%">
-            <a href="{{ r_tag }}/{{ env_desc_slug }}/{{ test_type }}"
-              >{{ test_type | upcase }}</a
-            >
-            &nbsp;
-            <!-- Print emoji based on 'passed' value -->
-            {% case passed %} {% when true %}
-            <!-- green check mark -->
-            &#9989; {% when false %}
-            <!-- red cross mark -->
-            &#10060; {% else %}
-            <!-- question emoji -->
-            &#10068; {% endcase %}
-          </td>
-          {% endif %} {% endfor %}
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-
+            <td width="25%">
+              <a href="{{ r_tag }}/{{ env_desc_slug }}/{{ test_type }}"
+                >{{ test_type | upcase }}</a
+              >
+              &nbsp;
+              <!-- Print emoji based on 'passed' value -->
+              {% case passed %} {% when true %}
+              <!-- green check mark -->
+              &#9989; {% when false %}
+              <!-- red cross mark -->
+              &#10060; {% else %}
+              <!-- question emoji -->
+              &#10068; {% endcase %}
+            </td>
+            {% endif %} {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
     {%- endfor -%}
+
+    <script src="../script.js"></script>
   </body>
 </html>
