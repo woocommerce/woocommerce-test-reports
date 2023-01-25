@@ -61,7 +61,8 @@ layout: default
     <h2>{{ r_tag }}</h2>
 
     <!-- Fixed array of env_descs -->
-    {% assign arr_env_desc = 'WP Latest,WP Latest-1,WP Latest-2' | split: ',' %}
+    {% assign arr_env_desc = 'WP Latest,WP Latest-1,WP Latest-2,PHP 7.4,PHP
+    8.0,PHP 8.1' | split: ',' %}
 
     <!-- Fixed array of test types -->
     {% assign arr_test_types = 'api,e2e' | split: ',' %}
@@ -74,10 +75,10 @@ layout: default
           <td width="50%">{{ env_desc_rdable }}</td>
 
           <!-- Get all env-desc pages in this release tag -->
-          {% assign env_desc_slug = env_desc_rdable | slugify %} {% assign
-          env_desc_pages = release_pages | where: 'release_tag', r_tag | where:
-          'env_description', env_desc_slug %} {% for test_type in arr_test_types
-          %}
+          {% assign env_desc_slug = env_desc_rdable | slugify: "pretty" %} {%
+          assign env_desc_pages = release_pages | where: 'release_tag', r_tag |
+          where: 'env_description', env_desc_slug %} {% for test_type in
+          arr_test_types %}
           <!-- Get the test_type page in this env_desc -->
           {% assign test_type_page = env_desc_pages | where: 'test_type',
           test_type | first %} {% if test_type_page == null %}
