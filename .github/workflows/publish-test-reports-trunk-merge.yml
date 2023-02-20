@@ -34,7 +34,7 @@ jobs:
             --json commit \
             --jq '.[0].commit.message' \
             --repo woocommerce/woocommerce)"
-          echo "COMMIT_MESSAGE=\"$commit_message\"" >> $GITHUB_OUTPUT
+          echo "COMMIT_MESSAGE=$commit_message" >> $GITHUB_OUTPUT
 
       - name: Print commit message
-        run: echo "${{ steps.commit-message.outputs.COMMIT_MESSAGE }}"
+        run: echo ${{ steps.commit-message.outputs.COMMIT_MESSAGE }}
