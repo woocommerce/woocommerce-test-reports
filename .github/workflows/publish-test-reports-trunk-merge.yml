@@ -1,0 +1,40 @@
+name: Publish test report on trunk merge
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        required: true
+      artifact:
+        required: true
+      sha:
+        description: Commit hash in trunk
+        required: true
+      test_type:
+        description: e2e or api
+        required: true
+        type: choice
+        options:
+          - api
+          - e2e
+concurrency:
+  group: ${{ github.workflow }}-${{ inputs.sha }}
+
+jobs:
+  publish:
+    name: Publish report on trunk merge
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Get commit message
+        id: commit-message
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          commit_message="$(gh search commits \
+            --hash ${{ inputs.sha }} \
+            --json commit \
+            --jq '.[0].commit.message' \
+            --repo woocommerce/woocommerce)"
+          echo "COMMIT_MESSAGE=\"$commit_message\"" >> $GITHUB_OUTPUT
+
+      - name: Print commit message
+        run: echo "${{ steps.commit-message.outputs.COMMIT_MESSAGE }}"
