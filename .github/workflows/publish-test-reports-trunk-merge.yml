@@ -30,7 +30,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
           commit_message=$(gh search commits \
-            --hash d940569d5016a4987457eca45d21a6b606e608a2 \
+            --hash ${{ inputs.sha }} \
             --json commit \
             --jq '.[0].commit.message' \
             --repo woocommerce/woocommerce)
