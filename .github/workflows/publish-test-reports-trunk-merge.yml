@@ -37,4 +37,6 @@ jobs:
           echo "COMMIT_MESSAGE=$commit_message" >> $GITHUB_OUTPUT
 
       - name: Print commit message
-        run: echo "${{ steps.commit-message.outputs.COMMIT_MESSAGE }}"
+        env:
+          COMMIT_MESSAGE: ${{ steps.commit-message.outputs.COMMIT_MESSAGE }}
+        run: echo "$COMMIT_MESSAGE"
