@@ -29,11 +29,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
-          commit_message=$(gh search commits \
-            --hash ${{ inputs.sha }} \
-            --json commit \
-            --jq '.[0].commit.message' \
-            --repo woocommerce/woocommerce)
+          commit_message=$(gh api repos/woocommerce/woocommerce/commits/${{ inputs.sha }} --jq ".commit.message")
           echo "COMMIT_MESSAGE=$commit_message" >> $GITHUB_OUTPUT
 
       - name: Print commit message
