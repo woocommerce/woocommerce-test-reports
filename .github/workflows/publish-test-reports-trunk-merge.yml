@@ -6,8 +6,7 @@ on:
         required: true
       artifact:
         required: true
-      sha:
-        description: Commit hash in trunk
+      pr_number:
         required: true
       test_type:
         description: e2e or api
@@ -17,7 +16,7 @@ on:
           - api
           - e2e
 concurrency:
-  group: ${{ github.workflow }}-${{ inputs.sha }}
+  group: ${{ github.workflow }}-${{ inputs.pr_number }}
 
 jobs:
   publish:
@@ -29,7 +28,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
-          commit_message=$(gh api repos/woocommerce/woocommerce/commits/${{ inputs.sha }} --jq ".commit.message")
+          commit_message=$(gh api repos/woocommerce/woocommerce/commits/${{ inputs.pr_number }} --jq ".commit.message")
           echo "COMMIT_MESSAGE=$commit_message" >> $GITHUB_OUTPUT
 
       - name: Print commit message
