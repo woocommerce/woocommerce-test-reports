@@ -5,5 +5,5 @@ test_type: e2e
 release_tag: 7.5.0-beta.1
 env_description: "wp-latest"
 created_at: "2023-02-22T22:23:48Z"
-passed: false
+passed: true
 ---
