@@ -75,6 +75,7 @@ jobs:
         run: |
           mkdir -p $INDEX_MD_DIR
           echo "---" > $INDEX_MD_DIR/index.md
+          echo "layout: redirect" >> $INDEX_MD_DIR/index.md
           echo "redirect_to: ${{ secrets.S3_BUCKET_URL }}/public/pr-merge/${{ inputs.pr_number }}/${{ inputs.test_type }}/index.html" >> $INDEX_MD_DIR/index.md
           echo "---" >> $INDEX_MD_DIR/index.md
 
