@@ -158,6 +158,7 @@ jobs:
           GITHUB_EMAIL: ${{ secrets.REPORTS_EMAIL }}
           GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
           BOT_COMMIT_MESSAGE: 'Add: Release ${{ env.RELEASE_TAG }} ${{ env.TEST_TYPE }} test on ${{ env.ENV_DESCRIPTION }}'
+          BRANCH_NAME: 'add/${{ env.TEST_TYPE }}-report-on-release-${{ env.RELEASE_TAG }}-${{ env.ENV_DESCRIPTION }}-run${{ env.RUN_NUMBER }}'
         run: bash merge-changes-to-trunk.sh
 
       - name: Delete artifact from bucket

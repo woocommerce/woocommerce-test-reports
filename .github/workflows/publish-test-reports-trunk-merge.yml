@@ -67,5 +67,25 @@ jobs:
           DESTINATION: ${{ secrets.S3_BUCKET_URL }}/public/pr-merge/${{ inputs.pr_number }}/${{ inputs.test_type }}
         run: aws s3 sync $SOURCE $DESTINATION --delete
 
+      - name: Add index.md file
+        env:
+          INDEX_MD_DIR: docs/pr-merge/${{ inputs.pr_number }}/${{ inputs.test_type }}
+        run: |
+          mkdir -p $INDEX_MD_DIR
+          echo "---" > $INDEX_MD_DIR/index.md
+          echo "redirect_to: ${{ secrets.S3_BUCKET_URL }}/public/pr-merge/${{ inputs.pr_number }}/${{ inputs.test_type }}/index.html" >> $INDEX_MD_DIR/index.md
+          echo "---" >> $INDEX_MD_DIR/index.md
+
+      - name: Create PR and merge
+        working-directory: repo/.github/workflows/scripts
+        env:
+          GITHUB_USER: ${{ secrets.REPORTS_USER }}
+          GITHUB_EMAIL: ${{ secrets.REPORTS_EMAIL }}
+          GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
+          BOT_COMMIT_MESSAGE: 'Add: ${{ inputs.test_type }} test against trunk after merging PR ${{ inputs.pr_number }}'
+          BRANCH_NAME: 'add/${{ inputs.test_type }}-report-on-pr-merge-${{ inputs.pr_number }}-runid-${{ inputs.run_id }}'
+          RUN_ID: ${{ inputs.run_id }}
+        run: bash merge-changes-to-trunk.sh
+
       - name: Delete artifact from bucket
         run: aws s3 rm ${{ secrets.S3_BUCKET_URL }}/artifacts/${{ inputs.run_id }}/${{ inputs.artifact }} --recursive
