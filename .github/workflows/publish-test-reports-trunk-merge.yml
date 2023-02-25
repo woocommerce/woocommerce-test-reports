@@ -68,6 +68,7 @@ jobs:
         run: aws s3 sync $SOURCE $DESTINATION --delete
 
       - name: Add index.md file
+        working-directory: repo
         env:
           INDEX_MD_DIR: docs/pr-merge/${{ inputs.pr_number }}/${{ inputs.test_type }}
         run: |
