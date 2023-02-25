@@ -66,3 +66,6 @@ jobs:
           SOURCE: artifact/allure-report
           DESTINATION: ${{ secrets.S3_BUCKET_URL }}/public/pr-merge/${{ inputs.pr_number }}/${{ inputs.test_type }}
         run: aws s3 sync $SOURCE $DESTINATION --delete
+
+      - name: Delete artifact from bucket
+        run: aws s3 rm ${{ secrets.S3_BUCKET_URL }}/artifacts/${{ inputs.run_id }}/${{ inputs.artifact }} --recursive
