@@ -1,4 +1,4 @@
-name: Publish test report on trunk merge
+name: Publish test report on PR merge
 on:
   workflow_dispatch:
     inputs:
@@ -17,21 +17,52 @@ on:
           - e2e
 concurrency:
   group: ${{ github.workflow }}-${{ inputs.pr_number }}
+  cancel-in-progress: true
+permissions: {}
 
 jobs:
   publish:
-    name: Publish report on trunk merge
+    name: Publish Allure report
     runs-on: ubuntu-20.04
+    permissions:
+      contents: read
     steps:
-      - name: Get commit message
-        id: commit-message
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+      - name: Create dirs
         run: |
-          commit_message=$(gh api repos/woocommerce/woocommerce/commits/${{ inputs.pr_number }} --jq ".commit.message")
-          echo "COMMIT_MESSAGE=$commit_message" >> $GITHUB_OUTPUT
+          mkdir -p repo
+          mkdir -p artifact
 
-      - name: Print commit message
+      - name: Checkout this repo
+        uses: actions/checkout@v3
+        with:
+          path: repo
+
+      - name: Install allure-commandline package
+        run: npm install -g allure-commandline
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: ${{ secrets.AWS_REGION }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Download artifact
         env:
-          COMMIT_MESSAGE: ${{ steps.commit-message.outputs.COMMIT_MESSAGE }}
-        run: echo "$COMMIT_MESSAGE"
+          SOURCE: ${{ secrets.S3_BUCKET_URL }}/artifacts/${{ inputs.run_id }}/${{ inputs.artifact }}
+          DESTINATION: artifact
+        run: aws s3 cp $SOURCE $DESTINATION --recursive
+
+      - name: Set report title
+        working-directory: repo/.github/workflows/scripts
+        env:
+          REPORT_TITLE: ${{ inputs.test_type }} Tests on trunk after merging PR ${{ inputs.pr_number }}
+          INDEX_HTML_PATH: ${{ github.workspace }}/artifact/allure-report/index.html
+          SUMMARY_JSON_PATH: ${{ github.workspace }}/artifact/allure-report/widgets/summary.json
+        run: node change-report-title.js
+
+      - name: Upload test reports to S3 bucket
+        env:
+          SOURCE: artifact/allure-report
+          DESTINATION: ${{ secrets.S3_BUCKET_URL }}/public/pr-merge/${{ inputs.pr_number }}/${{ inputs.test_type }}
+        run: aws s3 sync $SOURCE $DESTINATION --delete
