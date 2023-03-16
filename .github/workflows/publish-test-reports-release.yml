@@ -142,7 +142,9 @@ jobs:
       - name: Upload test reports to S3 bucket
         env:
           DESTINATION: ${{ secrets.S3_BUCKET_URL }}/public/release/${{ env.RELEASE_TAG }}/${{ env.ENV_DESCRIPTION }}/${{ env.TEST_TYPE }}
-        run: aws s3 cp output $DESTINATION --recursive
+        run: |
+          aws s3 rm $DESTINATION --recursive
+          aws s3 cp output $DESTINATION --recursive
 
       - name: Create or update index.md
         working-directory: repo/.github/workflows/scripts
