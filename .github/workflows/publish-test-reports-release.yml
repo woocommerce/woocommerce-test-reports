@@ -58,7 +58,6 @@ jobs:
         run: |
           mkdir -p repo
           mkdir -p artifact
-          mkdir -p s3
           mkdir -p output
 
       - name: Checkout this repo
@@ -110,26 +109,8 @@ jobs:
             console.log("Unknown status.");
             return;
 
-      - name: Download existing report from S3 bucket
-        working-directory: repo/.github/workflows/scripts
-        id: s3-download
-        env:
-          SOURCE: ${{ secrets.S3_BUCKET_URL }}/public/release/${{ env.RELEASE_TAG }}/${{ env.ENV_DESCRIPTION }}/${{ env.TEST_TYPE }}
-          DESTINATION: ${{ github.workspace }}/s3
-        run: bash s3-download-report.sh
-
-      - name: Prepare first Allure report for upload
-        if: fromJSON( steps.s3-download.outputs.HAS_PREVIOUS_REPORT ) != true
+      - name: Copy allure-report folder
         run: cp -r artifact/allure-report/* output
-
-      - name: Regenerate Allure report with history
-        if: fromJSON( steps.s3-download.outputs.HAS_PREVIOUS_REPORT )
-        working-directory: repo/.github/workflows/scripts
-        env:
-          OLD_ALLURE_REPORT_PATH: ${{ github.workspace }}/s3
-          NEW_ALLURE_RESULTS_PATH: ${{ github.workspace }}/artifact/allure-results
-          OUTPUT_PATH: ${{ github.workspace }}/output
-        run: bash regenerate-report-v2.sh
 
       - name: Set report title
         working-directory: repo/.github/workflows/scripts
