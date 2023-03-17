@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/37252/e2e/i
 pr_number: 37252
 pr_title_encoded: "Move+CES+data+store+to+%40woocommerce%2Fcustomer-effort-score"
 pr_test_type: e2e
-last_published: "2023-03-15 19:53:22 +0000"
-commit_sha: 63ec7108fba975e70cdb705a36f8ba7ebb298f84
-commit_message: "Move CES data store to @woocommerce/customer-effort-score"
+last_published: "2023-03-16 14:20:09 +0000"
+commit_sha: 6e2ed19da78ca6f8ad5b0d18f2a0dc4fb253e0b6
+commit_message: "Fix typo in changelog message"
 branch_name: update/move-ces-data-store
 ---

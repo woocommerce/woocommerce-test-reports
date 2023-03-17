@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/37230/e2e/i
 pr_number: 37230
 pr_title_encoded: "add%3A+payment+transaction+processor+images+to+payment+recommendations"
 pr_test_type: e2e
-last_published: "2023-03-15 08:57:39 +0000"
-commit_sha: d18fa6ecd14f4ec60dc086ccabacefd02b320757
+last_published: "2023-03-17 05:17:21 +0000"
+commit_sha: 5a947a2fc5e29b99d5cf174c35fa58254d964048
 commit_message: "add: payment transaction processor images to payment recommendations"
 branch_name: add/payment-recommendations-images
 ---
