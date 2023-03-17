@@ -36,6 +36,12 @@ on:
           - php-7.4
           - php-8.0
           - php-8.1
+          - woocommerce-payments
+          - woocommerce-paypal-payments
+          - woocommerce-shipping-&-tax
+          - woocommerce-subscriptions
+          - wordpress-seo
+          - contact-form-7
 concurrency:
   group: ${{ github.event.inputs.release_tag }}-${{ github.event.inputs.env_description }}-${{ github.event.inputs.test_type }}
   cancel-in-progress: true
@@ -140,7 +146,7 @@ jobs:
           GITHUB_USER: ${{ secrets.REPORTS_USER }}
           GITHUB_EMAIL: ${{ secrets.REPORTS_EMAIL }}
           GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
-          BOT_COMMIT_MESSAGE: 'Add: Release ${{ env.RELEASE_TAG }} ${{ env.TEST_TYPE }} test on ${{ env.ENV_DESCRIPTION }}'
+          BOT_COMMIT_MESSAGE: 'Add: Release ${{ env.RELEASE_TAG }} ${{ env.TEST_TYPE }} test with ${{ env.ENV_DESCRIPTION }}'
           BRANCH_NAME: 'add/${{ env.TEST_TYPE }}-report-on-release-${{ env.RELEASE_TAG }}-${{ env.ENV_DESCRIPTION }}-run${{ env.RUN_NUMBER }}'
         run: bash merge-changes-to-trunk.sh
 
