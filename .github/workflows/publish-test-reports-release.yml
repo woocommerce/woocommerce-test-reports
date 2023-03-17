@@ -86,7 +86,7 @@ jobs:
         env:
           SOURCE: ${{ secrets.S3_BUCKET_URL }}/artifacts/${{ env.RUN_ID }}/${{ env.ARTIFACT }}
           DESTINATION: artifact
-        run: aws s3 cp $SOURCE $DESTINATION --recursive
+        run: aws s3 cp "$SOURCE" "$DESTINATION" --recursive
 
       - name: See if tests passed
         id: is-passed
@@ -130,8 +130,8 @@ jobs:
         env:
           DESTINATION: ${{ secrets.S3_BUCKET_URL }}/public/release/${{ env.RELEASE_TAG }}/${{ env.ENV_DESCRIPTION }}/${{ env.TEST_TYPE }}
         run: |
-          aws s3 rm $DESTINATION --recursive
-          aws s3 cp output $DESTINATION --recursive
+          aws s3 rm "$DESTINATION" --recursive
+          aws s3 cp output "$DESTINATION" --recursive
 
       - name: Create or update index.md
         working-directory: repo/.github/workflows/scripts
@@ -151,4 +151,6 @@ jobs:
         run: bash merge-changes-to-trunk.sh
 
       - name: Delete artifact from bucket
-        run: aws s3 rm ${{ secrets.S3_BUCKET_URL }}/artifacts/${{ env.RUN_ID }}/${{ env.ARTIFACT }} --recursive
+        env:
+          ARTIFACT_PATH: ${{ secrets.S3_BUCKET_URL }}/artifacts/${{ env.RUN_ID }}/${{ env.ARTIFACT }}
+        run: aws s3 rm "$ARTIFACT_PATH" --recursive
