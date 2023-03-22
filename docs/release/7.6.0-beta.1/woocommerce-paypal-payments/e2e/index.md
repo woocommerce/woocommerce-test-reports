@@ -5,5 +5,5 @@ test_type: e2e
 release_tag: 7.6.0-beta.1
 env_description: "woocommerce-paypal-payments"
 created_at: "2023-03-21T17:11:43Z"
-passed: true
+passed: false
 ---
