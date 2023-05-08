@@ -5,5 +5,5 @@ test_type: e2e
 release_tag: 7.7.0-beta.2
 env_description: "php-7.4"
 created_at: "2023-04-25T23:19:12Z"
-passed: true
+passed: false
 ---
