@@ -42,6 +42,8 @@ on:
           - woocommerce-subscriptions
           - wordpress-seo
           - contact-form-7
+          - gutenberg
+          - gutenberg-nightly
 concurrency:
   group: ${{ github.event.inputs.release_tag }}-${{ github.event.inputs.env_description }}-${{ github.event.inputs.test_type }}
   cancel-in-progress: true
