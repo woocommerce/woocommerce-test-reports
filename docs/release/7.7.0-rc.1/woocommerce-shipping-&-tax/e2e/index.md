@@ -5,5 +5,5 @@ test_type: e2e
 release_tag: 7.7.0-rc.1
 env_description: "woocommerce-shipping-&-tax"
 created_at: "2023-05-03T00:06:38Z"
-passed: true
+passed: false
 ---
