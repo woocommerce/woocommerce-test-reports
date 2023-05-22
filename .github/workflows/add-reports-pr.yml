@@ -4,9 +4,18 @@ on:
     inputs:
       report-url:
         required: true
+      pr-number:
+        required: true
+      test-type:
+        required: true
+        type: choice
+        options:
+          - api
+          - e2e
+          - k6
 
 concurrency:
-  group: ${{ github.ref_name }}-pr-${{ inputs.url }}
+  group: ${{ github.ref_name }}-pr/${{ inputs.pr-number }}/${{ inputs.test-type }}
   cancel-in-progress: true
 
 permissions: {}
@@ -20,14 +29,28 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Get path
-        id: path
+      - name: Get dir path
+        id: dir-path
         uses: actions/github-script@v6
         env:
           REPORT_URL: ${{ inputs.report-url }}
-          SCRIPT_PATH:
+          SCRIPT_PATH: ./.github/workflows/scripts/get-dir-path.js
         with:
           result-encoding: string
           script: |
             const script = require( process.env.SCRIPT_PATH );
             script( { core } );
+
+      - name: Create dirs and index.md
+        env:
+          DIR_PATH: ${{ steps.dir-path.outputs.absolute }}
+          SCRIPT_PATH: ./.github/workflows/scripts/create-index-pr.sh
+          REPORT_URL: ${{ inputs.report-url }}
+          PR_NUMBER: ${{ inputs.pr-number }}
+          TEST_TYPE: ${{ inputs.test-type }}
+          GITHUB_USER: ${{ secrets.REPORTS_USER }}
+          GITHUB_EMAIL: ${{ secrets.REPORTS_EMAIL }}
+          GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
+          BOT_COMMIT_MESSAGE: 'Add: ${{ steps.dir-path.outputs.absolute }}'
+        run: |
+          bash ${{ env.SCRIPT_PATH }}
