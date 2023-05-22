@@ -1,0 +1,33 @@
+name: Add PR report
+on:
+  workflow_dispatch:
+    inputs:
+      report-url:
+        required: true
+
+concurrency:
+  group: ${{ github.ref_name }}-pr-${{ inputs.url }}
+  cancel-in-progress: true
+
+permissions: {}
+
+jobs:
+  add-report:
+    name: Add PR report
+    runs-on: ubuntu-20.04
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get path
+        id: path
+        uses: actions/github-script@v6
+        env:
+          REPORT_URL: ${{ inputs.report-url }}
+          SCRIPT_PATH:
+        with:
+          result-encoding: string
+          script: |
+            const script = require( process.env.SCRIPT_PATH );
+            script( { core } );
