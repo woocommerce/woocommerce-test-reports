@@ -28,6 +28,7 @@ git commit -m "$BOT_COMMIT_MESSAGE"
 
 # Create PR and merge
 git push --set-upstream origin $BRANCH
+gh pr create --title "$BOT_COMMIT_MESSAGE" --body ""
 gh pr merge --delete-branch --squash
 
 # Echo exit code to GitHub action
