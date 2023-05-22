@@ -20,7 +20,8 @@ echo "last_published: \"$LAST_PUBLISHED\"" >> index.md
 echo "---" >> index.md
 
 # Commit changes to new branch
-BRANCH="add/pr-$PR_NUMBER-$TEST_TYPE-$(date +%s)"
+BRANCH="add/pr-$PR_NUMBER-$TEST_TYPE-run-$GITHUB_RUN_ID"
+BOT_COMMIT_MESSAGE="Add: pr/$PR_NUMBER/$TEST_TYPE run-$GITHUB_RUN_ID"
 cd $GITHUB_WORKSPACE
 git checkout -b $BRANCH
 git add .

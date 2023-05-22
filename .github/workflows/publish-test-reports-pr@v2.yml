@@ -51,6 +51,5 @@ jobs:
           GITHUB_USER: ${{ secrets.REPORTS_USER }}
           GITHUB_EMAIL: ${{ secrets.REPORTS_EMAIL }}
           GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
-          BOT_COMMIT_MESSAGE: 'Add: ${{ steps.dir-path.outputs.absolute }}'
         run: |
           bash ${{ env.SCRIPT_PATH }}
