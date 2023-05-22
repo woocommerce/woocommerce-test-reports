@@ -32,11 +32,12 @@ jobs:
           token: ${{ secrets.REPORTS_TOKEN }}
 
       - name: Get dir path
-        id: dir-path
+        id: paths
         uses: actions/github-script@v6
         env:
           REPORT_URL: ${{ inputs.report-url }}
-          SCRIPT_PATH: ./.github/workflows/scripts/get-dir-path.js
+          SCRIPT_PATH: ./.github/workflows/scripts/get-paths.js
+          S3_WEB_ENDPOINT: ${{ secrets.S3_WEB_ENDPOINT }}
         with:
           result-encoding: string
           script: |
@@ -45,9 +46,9 @@ jobs:
 
       - name: Create dirs and index.md
         env:
-          DIR_PATH: ${{ steps.dir-path.outputs.absolute }}
+          LOCAL_DIR: ${{ steps.paths.outputs.local-dir }}
+          S3_WEB_DIR: ${{ steps.paths.outputs.s3-web-dir }}
           SCRIPT_PATH: ./.github/workflows/scripts/create-index-pr.sh
-          REPORT_URL: ${{ inputs.report-url }}
           PR_NUMBER: ${{ inputs.pr-number }}
           TEST_TYPE: ${{ inputs.test-type }}
           GITHUB_USER: ${{ secrets.REPORTS_USER }}
