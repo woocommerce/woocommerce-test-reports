@@ -176,12 +176,17 @@ jobs:
         with:
           channel-id: ${{ secrets.SLACK_CHANNEL_ID_DAILY }}
           payload-file-path: ${{ github.workspace }}/slack/slack-message.json
+        
+      - name: Use JSON key file
+        working-directory: repo/
+        env:
+          SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+        run: |
+          echo "$SERVICE_ACCOUNT_KEY" > key.json
 
       - name: Update e2e test suite stats
         working-directory: repo/
         env:
-          GOOGLE_CLIENT_EMAIL: ${{ secrets.GOOGLE_CLIENT_EMAIL }}
-          GOOGLE_PRIVATE_KEY: ${{ secrets.GOOGLE_PRIVATE_KEY }}
           GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
         run: |
           node --version
