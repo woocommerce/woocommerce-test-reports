@@ -21,18 +21,15 @@ const auth = new GoogleAuth({
   scopes: ['https://www.googleapis.com/auth/spreadsheets']
 });
 
-// Obtain the client
-const client = await auth.getClient();
-
 // Size of test suite
 async function appendSuiteSize() {
   const range = 'Size of Test Suite!A:B'; // Specify the range where you want to write the data
   try {
-    // Authorize the client
-    await client.authorize();
+    // Obtain the client
+    const client = await auth.getClient();
 
     // Create a new instance of the Sheets API
-    const sheets = google.sheets({ version: 'v4', auth: client });
+    const sheets = google.sheets({ version: 'v4', auth });
 
     // Prepare the request body
     const request = {
@@ -56,11 +53,11 @@ async function appendSuiteSize() {
 async function appendExecutionTime() {
   const range = 'Execution Time!A:B'; // Specify the range where you want to write the data
   try {
-    // Authorize the client
-    await client.authorize();
+    // Obtain the client
+    const client = await auth.getClient();
 
     // Create a new instance of the Sheets API
-    const sheets = google.sheets({ version: 'v4', auth: client });
+    const sheets = google.sheets({ version: 'v4', auth });
 
     // Prepare the request body
     const request = {
@@ -84,11 +81,11 @@ async function appendExecutionTime() {
 async function appendFailures() {
   const range = 'Number of Failures!A:B'; // Specify the range where you want to write the data
   try {
-    // Authorize the client
-    await client.authorize();
+    // Obtain the client
+    const client = await auth.getClient();
 
     // Create a new instance of the Sheets API
-    const sheets = google.sheets({ version: 'v4', auth: client });
+    const sheets = google.sheets({ version: 'v4', auth });
 
     // Prepare the request body
     const request = {
@@ -112,11 +109,11 @@ async function appendFailures() {
 async function appendSkipped() {
   const range = 'Number of Skipped!A:B'; // Specify the range where you want to write the data
   try {
-    // Authorize the client
-    await client.authorize();
+    // Obtain the client
+    const client = await auth.getClient();
 
     // Create a new instance of the Sheets API
-    const sheets = google.sheets({ version: 'v4', auth: client });
+    const sheets = google.sheets({ version: 'v4', auth });
 
     // Prepare the request body
     const request = {
@@ -140,11 +137,11 @@ async function appendSkipped() {
 async function appendBroken() {
   const range = 'Number of Broken!A:B'; // Specify the range where you want to write the data
   try {
-    // Authorize the client
-    await client.authorize();
+    // Obtain the client
+    const client = await auth.getClient();
 
     // Create a new instance of the Sheets API
-    const sheets = google.sheets({ version: 'v4', auth: client });
+    const sheets = google.sheets({ version: 'v4', auth });
 
     // Prepare the request body
     const request = {
