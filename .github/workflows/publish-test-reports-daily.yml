@@ -179,7 +179,7 @@ jobs:
           payload-file-path: ${{ github.workspace }}/slack/slack-message.json
         
       - name: Use JSON key file
-        working-directory: repo/
+        working-directory: repo/.github/workflows/scripts
         env:
           SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
         run: |
