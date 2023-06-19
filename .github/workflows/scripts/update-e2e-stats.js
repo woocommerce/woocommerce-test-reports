@@ -1,5 +1,7 @@
+const { GoogleAuth } = require('google-auth-library');
 const { google } = require('googleapis');
 const data = require(process.env.E2E_SUMMARY_JSON);
+const credentials = require('./key.json');
 
 // Extract the required information
 const { total, skipped, broken, failed } = data.statistic;
@@ -10,15 +12,17 @@ const currentDate = new Date().toLocaleDateString('en-GB', {
   year: 'numeric'
 }).replace(/[\s,]+/g, '-');
 // Google Sheet ID and range
-const spreadsheetId = process.env.GOOGLE_SHEET_ID;
+const spreadsheetId = '1UjaaOCSGNLWW5hYdtw52P5s_PTBWexHW4_CmwHwvCps';
 
 // Credentials and authentication
-const client = new google.auth.JWT(
-  process.env.GOOGLE_CLIENT_EMAIL,
-  null,
-  process.env.GOOGLE_PRIVATE_KEY,
-  ['https://www.googleapis.com/auth/spreadsheets']
-);
+// Create an instance of GoogleAuth from the credentials
+const auth = new GoogleAuth({
+  credentials: credentials,
+  scopes: ['https://www.googleapis.com/auth/spreadsheets']
+});
+
+// Obtain the client
+const client = await auth.getClient();
 
 // Size of test suite
 async function appendSuiteSize() {
