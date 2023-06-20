@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/38815/e2e/i
 pr_number: 38815
 pr_title_encoded: "Do+not+show+%22Adding+new+attribute+failed%22+error+message+when+loading+of+product+screens+is+interrupted+by+page+unload"
 pr_test_type: e2e
-last_published: "2023-06-20 15:56:19 +0000"
-commit_sha: 97a9b024ab5f34945dde25a3842c02b9855dfdfa
-commit_message: "Update changelog"
+last_published: "2023-06-20 19:05:00 +0000"
+commit_sha: d1e6c41bad1cf6965223ddfbaf2c8099187823fe
+commit_message: "Only attempt to add empty attribute if page has attributes list"
 branch_name: fix/adding-new-attribute-failed-error
 ---
