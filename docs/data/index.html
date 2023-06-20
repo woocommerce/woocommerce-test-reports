@@ -390,7 +390,14 @@ layout: common
 						scales: {
 							y: {
 								min: 0,
-								beginAtZero: true
+								beginAtZero: true,
+								ticks: {
+									stepSize: 1,
+									callback: function (value, index, values) {
+										// Convert the tick value to an integer
+										return Math.floor(value);
+									}
+								}
 							}
 						},
 						plugins: {
