@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/37050/api/i
 pr_number: 37050
 pr_title_encoded: "%5BHPOS%5D+Synchronize+order+deletions"
 pr_test_type: api
-last_published: "2023-05-26 09:45:21 +0000"
-commit_sha: 7e2b4ba17c39012a292e2274896500c4e95bfc58
-commit_message: "Change references to Woo 7.7 to 7.9"
+last_published: "2023-06-20 09:13:55 +0000"
+commit_sha: 740e5e55a82708f3d04a6211f3ec44f675f3fa62
+commit_message: "Add missing 'use' in HPOSToggleTrait"
 branch_name: add/sync_of_deleted_orders
 ---
