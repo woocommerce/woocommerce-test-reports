@@ -183,6 +183,7 @@ jobs:
         env:
           SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
         run: |
+          pwd
           echo "$SERVICE_ACCOUNT_KEY" > key.json
 
       - name: Update e2e test suite stats
