@@ -20,7 +20,7 @@ on:
 env:
   FORCE_COLOR: 1
   CACHE: false
-  
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -52,7 +52,7 @@ jobs:
           path: repo
           token: ${{ secrets.REPORTS_TOKEN }}
           ref: ${{ github.ref_name }}
-      
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
@@ -177,7 +177,7 @@ jobs:
         with:
           channel-id: ${{ secrets.SLACK_CHANNEL_ID_DAILY }}
           payload-file-path: ${{ github.workspace }}/slack/slack-message.json
-        
+
       - name: Use JSON key file
         working-directory: repo/.github/workflows/scripts
         env:
@@ -188,11 +188,14 @@ jobs:
 
       - name: Update e2e test suite stats
         working-directory: repo/
-        env:
-          GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
         run: |
-          node --version
-          openssl version
           npm install
           E2E_SUMMARY_JSON=${{ github.workspace }}/output/e2e/widgets/summary.json \
           node .github/workflows/scripts/update-e2e-stats.js
+
+      - name: Update API test suite stats
+        working-directory: repo/
+        run: |
+          npm install
+          API_SUMMARY_JSON=${{ github.workspace }}/output/api/widgets/summary.json \
+          node .github/workflows/scripts/update-api-stats.js
