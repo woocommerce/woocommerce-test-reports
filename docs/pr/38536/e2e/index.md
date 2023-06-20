@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/38536/e2e/i
 pr_number: 38536
 pr_title_encoded: "Add+support+to+install+master+branch+when+using+WooCommerce+Beta+Tester"
 pr_test_type: e2e
-last_published: "2023-06-12 04:25:10 +0000"
-commit_sha: 2ef73bbd4d3fb7ac8ba3d0156db085c3ea482d1d
-commit_message: "Go back to admin_init so that our JS runs before hooks are run."
+last_published: "2023-06-20 06:55:16 +0000"
+commit_sha: a88daeeb354ed49e23242afb7cf423070f4e222b
+commit_message: "Merge remote-tracking branch 'origin/trunk' into add/trunk-to-beta-te…"
 branch_name: add/trunk-to-beta-tester
 ---
