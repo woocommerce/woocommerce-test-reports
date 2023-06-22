@@ -147,24 +147,16 @@ layout: common
 		google.charts.load('current', { 'packages': [ 'corechart' ] });
 		google.charts.setOnLoadCallback(chartData);
 		
-		// IDs for the Google Sheets for each set of data
-		const e2eSize = '0'; // size of e2e Suite
-		const e2eTime = '532697128'; // e2e execution time
-		const e2eFailures = '951115581'; // e2e failed tests
-		const e2eSkipped = '228043313'; // e2e skipped tests
-		const e2eBroken = '1541416936'; // e2e broken tests
-		
-		// Fetches the data from Google Sheets
-		function getData(url, chartFunction) {
-				// Define the query using the GViz Query Language
-				var query = new google.visualization.Query(`https://docs.google.com/spreadsheets/d/1UjaaOCSGNLWW5hYdtw52P5s_PTBWexHW4_CmwHwvCps/gviz/tq?gid=${url}&headers=1`);
-				// Send the query to Google Sheets API and handle the response
-				query.send(chartFunction);
-		}
-		
 		// ---------------------------
 		// --- E2E Number of Tests ---
 		// ---------------------------
+		function getNumberOfTests() {
+			// Define the query using the GViz Query Language
+			var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1UjaaOCSGNLWW5hYdtw52P5s_PTBWexHW4_CmwHwvCps/gviz/tq?gid=0&headers=1');
+			// Send the query to Google Sheets API and handle the response
+			query.send(chartNumberOfTests);
+		}
+		// Callback function to handle the query response
 		function chartNumberOfTests(response) {
 			if (response.isError()) {
 				console.error('Error in query: ' + response.getMessage());
@@ -220,6 +212,13 @@ layout: common
 		// --------------------------
 		// --- E2E Execution Time ---
 		// --------------------------
+		function getExecutionTime() {
+			// Define the query using the GViz Query Language
+			var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1UjaaOCSGNLWW5hYdtw52P5s_PTBWexHW4_CmwHwvCps/gviz/tq?gid=532697128&headers=1');
+			// Send the query to Google Sheets API and handle the response
+			query.send(chartExecutionTime);
+		}
+		// Callback function to handle the query response
 		function chartExecutionTime(response) {
 			if (response.isError()) {
 				console.error('Error in query: ' + response.getMessage());
@@ -277,6 +276,13 @@ layout: common
 		// ------------------------------
 		// --- E2E Number of Failures ---
 		// ------------------------------
+		function getNumberOfFailures() {
+				// Define the query using the GViz Query Language
+				var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1UjaaOCSGNLWW5hYdtw52P5s_PTBWexHW4_CmwHwvCps/gviz/tq?gid=951115581&headers=1');
+				// Send the query to Google Sheets API and handle the response
+				query.send(chartNumberOfFailures);
+			}
+		// Callback function to handle the query response
 		function chartNumberOfFailures(response) {
 				if (response.isError()) {
 					console.error('Error in query: ' + response.getMessage());
@@ -341,6 +347,13 @@ layout: common
 		// -----------------------------
 		// --- E2E Number of Skipped ---
 		// -----------------------------
+		function getNumberOfSkipped() {
+			// Define the query using the GViz Query Language
+			var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1UjaaOCSGNLWW5hYdtw52P5s_PTBWexHW4_CmwHwvCps/gviz/tq?gid=228043313&headers=1');
+			// Send the query to Google Sheets API and handle the response
+			query.send(chartNumberOfSkipped);
+		}
+		// Callback function to handle the query response
 		function chartNumberOfSkipped(response) {
 			if (response.isError()) {
 				console.error('Error in query: ' + response.getMessage());
@@ -396,76 +409,83 @@ layout: common
 		}
 		
 		// -------------------------------
-		// --- E2E Number of Broken ----
-		// -----------------------------		
-		function chartNumberOfBroken(response) {
-			if (response.isError()) {
-				console.error('Error in query: ' + response.getMessage());
-				return;
+			// --- E2E Number of Broken ----
+			// -----------------------------
+			function getNumberOfBroken() {
+				// Define the query using the GViz Query Language
+				var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1UjaaOCSGNLWW5hYdtw52P5s_PTBWexHW4_CmwHwvCps/gviz/tq?gid=1541416936&headers=1');
+				// Send the query to Google Sheets API and handle the response
+				query.send(chartNumberOfBroken);
 			}
+			// Callback function to handle the query response
+			function chartNumberOfBroken(response) {
+				if (response.isError()) {
+					console.error('Error in query: ' + response.getMessage());
+					return;
+				}
 
-			// Get the data table from the query response
-			var dataTable = response.getDataTable();
-			// Extract the labels and data from the DataTable
-			var labels = [];
-			var data = [];
-			var numRows = dataTable.getNumberOfRows();
-			for (var i = 0; i < numRows; i++) {
-				labels.push(dataTable.getFormattedValue(i, 0));
-				data.push(dataTable.getFormattedValue(i, 1));
-			}
+				// Get the data table from the query response
+				var dataTable = response.getDataTable();
+				// Extract the labels and data from the DataTable
+				var labels = [];
+				var data = [];
+				var numRows = dataTable.getNumberOfRows();
+				for (var i = 0; i < numRows; i++) {
+					labels.push(dataTable.getFormattedValue(i, 0));
+					data.push(dataTable.getFormattedValue(i, 1));
+				}
 
-			// Render the chart using Chart.js
-			var ctx = document.getElementById('numberOfBroken').getContext('2d');
-			new Chart(ctx, {
-				type: 'bar',
-				data: {
-					labels: labels,
-					datasets: [ {
-						label: 'Number of Tests',
-						data: data,
-						backgroundColor: 'rgba(75, 192, 192, 0.2)',
-						borderColor: 'rgba(75, 192, 192, 1)',
-						borderWidth: 1,
-						trendlineLinear: {
-							colorMin: 'red',
-							colorMax: 'blue',
-							lineStyle: 'dotted',
-							width: 2
-						}
-					} ]
-				},
-				options: {
-					responsive: true,
-					scales: {
-						y: {
-							min: 0,
-							beginAtZero: true,
-							ticks: {
-								stepSize: 1,
-								callback: function (value, index, values) {
-									// Convert the tick value to an integer
-									return Math.floor(value);
+				// Render the chart using Chart.js
+				var ctx = document.getElementById('numberOfBroken').getContext('2d');
+				new Chart(ctx, {
+					type: 'bar',
+					data: {
+						labels: labels,
+						datasets: [ {
+							label: 'Number of Tests',
+							data: data,
+							backgroundColor: 'rgba(75, 192, 192, 0.2)',
+							borderColor: 'rgba(75, 192, 192, 1)',
+							borderWidth: 1,
+							trendlineLinear: {
+								colorMin: 'red',
+								colorMax: 'blue',
+								lineStyle: 'dotted',
+								width: 2
+							}
+						} ]
+					},
+					options: {
+						responsive: true,
+						scales: {
+							y: {
+								min: 0,
+								beginAtZero: true,
+								ticks: {
+									stepSize: 1,
+									callback: function (value, index, values) {
+										// Convert the tick value to an integer
+										return Math.floor(value);
+									}
 								}
 							}
-						}
-					},
-					plugins: {
-						legend: {
-							display: false // Hide the legend
+						},
+						plugins: {
+							legend: {
+								display: false // Hide the legend
+							}
 						}
 					}
-				}
-			});
-		}
+				});
+			}
 
 		// Call of the functions to perform the charting
 		function chartData() {
-			getData(e2eSize, 'chartNumberOfTests');
-			getData(e2eTime, 'chartExecutionTime');
-			getData(e2eFailures, 'chartNumberOfFailures');
-			getData(e2eSkipped, 'chartNumberOfSkipped');
-			getData(e2eBroken, 'chartNumberOfBroken');
+			getNumberOfTests();
+			getExecutionTime();
+			getNumberOfFailures();
+			getNumberOfSkipped();
+			getNumberOfBroken();
 		}
 
 	</script>
