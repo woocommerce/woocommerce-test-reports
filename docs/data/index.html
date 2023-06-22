@@ -487,5 +487,346 @@ layout: common
 			getNumberOfSkipped();
 			getNumberOfBroken();
 		}
+		
+		// ---------------------------
+		// --- API Number of Tests ---
+		// ---------------------------
+		function getNumberOfAPITests() {
+			// Define the query using the GViz Query Language
+			var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1UjaaOCSGNLWW5hYdtw52P5s_PTBWexHW4_CmwHwvCps/gviz/tq?gid=1890484639&headers=1');
+			// Send the query to Google Sheets API and handle the response
+			query.send(chartNumberOfApiTests);
+		}
+		// Callback function to handle the query response
+		function chartNumberOfApiTests(response) {
+			if (response.isError()) {
+				console.error('Error in query: ' + response.getMessage());
+				return;
+			}
+			// Get the data table from the query response
+			var dataTable = response.getDataTable();
+			// Extract the labels and data from the DataTable
+			var labels = [];
+			var data = [];
+			var numRows = dataTable.getNumberOfRows();
+			for (var i = 0; i < numRows; i++) {
+				labels.push(dataTable.getFormattedValue(i, 0));
+				data.push(dataTable.getFormattedValue(i, 1));
+			}
+			// Render the chart using Chart.js
+			var ctx = document.getElementById('sizeOfAPISuite').getContext('2d');
+			new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: labels,
+					datasets: [ {
+						label: 'Number of Tests',
+						data: data,
+						backgroundColor: 'rgba(75, 192, 192, 0.2)',
+						borderColor: 'rgba(75, 192, 192, 1)',
+						borderWidth: 1,
+						trendlineLinear: {
+							colorMin: 'red',
+							colorMax: 'blue',
+							lineStyle: 'dotted',
+							width: 2
+						}
+					} ]
+				},
+				options: {
+					responsive: true,
+					scales: {
+						y: {
+							min: 180,
+							beginAtZero: false
+						}
+					},
+					plugins: {
+						legend: {
+							display: false // Hide the legend
+						}
+					}
+				}
+			});
+		}
+
+		// --------------------------
+		// --- API Execution Time ---
+		// --------------------------
+		function getAPIExecutionTime() {
+			// Define the query using the GViz Query Language
+			var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1UjaaOCSGNLWW5hYdtw52P5s_PTBWexHW4_CmwHwvCps/gviz/tq?gid=460738381&headers=1');
+			// Send the query to Google Sheets API and handle the response
+			query.send(chartAPIExecutionTime);
+		}
+		// Callback function to handle the query response
+		function chartAPIExecutionTime(response) {
+			if (response.isError()) {
+				console.error('Error in query: ' + response.getMessage());
+				return;
+			}
+
+			// Get the data table from the query response
+			var dataTable = response.getDataTable();
+			// Extract the labels and data from the DataTable
+			var labels = [];
+			var data = [];
+			var numRows = dataTable.getNumberOfRows();
+			for (var i = 0; i < numRows; i++) {
+				labels.push(dataTable.getFormattedValue(i, 0));
+				data.push(dataTable.getFormattedValue(i, 1));
+			}
+
+			// Render the chart using Chart.js
+			var ctx = document.getElementById('apiExecutionTime').getContext('2d');
+			new Chart(ctx, {
+				type: 'line',
+				data: {
+					labels: labels,
+					datasets: [ {
+						label: 'Seconds',
+						data: data,
+						backgroundColor: 'rgba(75, 192, 192, 0.2)',
+						borderColor: 'rgba(75, 192, 192, 1)',
+						borderWidth: 1,
+						trendlineLinear: {
+							colorMin: 'red',
+							colorMax: 'blue',
+							lineStyle: 'dotted',
+							width: 2
+						}
+					} ]
+				},
+				options: {
+					responsive: true,
+					scales: {
+						y: {
+							min: 700,
+							beginAtZero: true
+						}
+					},
+					plugins: {
+						legend: {
+							display: false // Hide the legend
+						}
+					}
+				}
+			});
+		}
+
+		// ------------------------------
+		// --- API Number of Failures ---
+		// ------------------------------
+		function getNumberOfApiFailures() {
+			// Define the query using the GViz Query Language
+			var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1UjaaOCSGNLWW5hYdtw52P5s_PTBWexHW4_CmwHwvCps/gviz/tq?gid=2058267052&headers=1');
+			// Send the query to Google Sheets API and handle the response
+			query.send(chartNumberOfApiFailures);
+		}
+		// Callback function to handle the query response
+		function chartNumberOfApiFailures(response) {
+			if (response.isError()) {
+				console.error('Error in query: ' + response.getMessage());
+				return;
+			}
+
+			// Get the data table from the query response
+			var dataTable = response.getDataTable();
+			// Extract the labels and data from the DataTable
+			var labels = [];
+			var data = [];
+			var numRows = dataTable.getNumberOfRows();
+			for (var i = 0; i < numRows; i++) {
+				labels.push(dataTable.getFormattedValue(i, 0));
+				data.push(dataTable.getFormattedValue(i, 1));
+			}
+
+			// Render the chart using Chart.js
+			var ctx = document.getElementById('numberOfApiFailures').getContext('2d');
+			new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: labels,
+					datasets: [ {
+						label: 'Number of Tests',
+						data: data,
+						backgroundColor: 'rgba(75, 192, 192, 0.2)',
+						borderColor: 'rgba(75, 192, 192, 1)',
+						borderWidth: 1,
+						trendlineLinear: {
+							colorMin: 'red',
+							colorMax: 'blue',
+							lineStyle: 'dotted',
+							width: 2
+						}
+					} ]
+				},
+				options: {
+					responsive: true,
+					scales: {
+						y: {
+							min: 0,
+							beginAtZero: true,
+							ticks: {
+								stepSize: 1,
+								callback: function (value, index, values) {
+									// Convert the tick value to an integer
+									return Math.floor(value);
+								}
+							}
+						}
+					},
+					plugins: {
+						legend: {
+							display: false // Hide the legend
+						}
+					}
+				}
+			});
+		}
+
+		// -----------------------------
+		// --- API Number of Skipped ---
+		// -----------------------------
+		function getNumberOfApiSkipped() {
+			// Define the query using the GViz Query Language
+			var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1UjaaOCSGNLWW5hYdtw52P5s_PTBWexHW4_CmwHwvCps/gviz/tq?gid=276913046&headers=1');
+			// Send the query to Google Sheets API and handle the response
+			query.send(chartNumberOfApiSkipped);
+		}
+		// Callback function to handle the query response
+		function chartNumberOfApiSkipped(response) {
+			if (response.isError()) {
+				console.error('Error in query: ' + response.getMessage());
+				return;
+			}
+
+			// Get the data table from the query response
+			var dataTable = response.getDataTable();
+			// Extract the labels and data from the DataTable
+			var labels = [];
+			var data = [];
+			var numRows = dataTable.getNumberOfRows();
+			for (var i = 0; i < numRows; i++) {
+				labels.push(dataTable.getFormattedValue(i, 0));
+				data.push(dataTable.getFormattedValue(i, 1));
+			}
+
+			// Render the chart using Chart.js
+			var ctx = document.getElementById('numberOfApiSkipped').getContext('2d');
+			new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: labels,
+					datasets: [ {
+						label: 'Number of Tests',
+						data: data,
+						backgroundColor: 'rgba(75, 192, 192, 0.2)',
+						borderColor: 'rgba(75, 192, 192, 1)',
+						borderWidth: 1,
+						trendlineLinear: {
+							colorMin: 'red',
+							colorMax: 'blue',
+							lineStyle: 'dotted',
+							width: 2
+						}
+					} ]
+				},
+				options: {
+					responsive: true,
+					scales: {
+						y: {
+							min: 0,
+							beginAtZero: true
+						}
+					},
+					plugins: {
+						legend: {
+							display: false // Hide the legend
+						}
+					}
+				}
+			});
+		}
+
+		// -------------------------------
+		// --- API Number of Broken ----
+		// -----------------------------
+		function getNumberOfApiBroken() {
+			// Define the query using the GViz Query Language
+			var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1UjaaOCSGNLWW5hYdtw52P5s_PTBWexHW4_CmwHwvCps/gviz/tq?gid=1926458098&headers=1');
+			// Send the query to Google Sheets API and handle the response
+			query.send(chartNumberOfApiBroken);
+		}
+		// Callback function to handle the query response
+		function chartNumberOfApiBroken(response) {
+			if (response.isError()) {
+				console.error('Error in query: ' + response.getMessage());
+				return;
+			}
+
+			// Get the data table from the query response
+			var dataTable = response.getDataTable();
+			// Extract the labels and data from the DataTable
+			var labels = [];
+			var data = [];
+			var numRows = dataTable.getNumberOfRows();
+			for (var i = 0; i < numRows; i++) {
+				labels.push(dataTable.getFormattedValue(i, 0));
+				data.push(dataTable.getFormattedValue(i, 1));
+			}
+
+			// Render the chart using Chart.js
+			var ctx = document.getElementById('numberOfApiBroken').getContext('2d');
+			new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: labels,
+					datasets: [ {
+						label: 'Number of Tests',
+						data: data,
+						backgroundColor: 'rgba(75, 192, 192, 0.2)',
+						borderColor: 'rgba(75, 192, 192, 1)',
+						borderWidth: 1,
+						trendlineLinear: {
+							colorMin: 'red',
+							colorMax: 'blue',
+							lineStyle: 'dotted',
+							width: 2
+						}
+					} ]
+				},
+				options: {
+					responsive: true,
+					scales: {
+						y: {
+							min: 0,
+							beginAtZero: true,
+							ticks: {
+								stepSize: 1,
+								callback: function (value, index, values) {
+									// Convert the tick value to an integer
+									return Math.floor(value);
+								}
+							}
+						}
+					},
+					plugins: {
+						legend: {
+							display: false // Hide the legend
+						}
+					}
+				}
+			});
+		}
+
+		// Call of the functions to perform the charting
+		function chartData() {
+			getNumberOfApiTests();
+			getApiExecutionTime();
+			getNumberOfApiFailures();
+			getNumberOfApiSkipped();
+			getNumberOfApiBroken();
+		}
 
 	</script>
