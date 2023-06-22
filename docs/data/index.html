@@ -411,85 +411,76 @@ layout: common
 		}
 		
 		// -------------------------------
-			// --- E2E Number of Broken ----
-			// -----------------------------
-			function getNumberOfBroken() {
-				// Define the query using the GViz Query Language
-				var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1UjaaOCSGNLWW5hYdtw52P5s_PTBWexHW4_CmwHwvCps/gviz/tq?gid=1541416936&headers=1');
-				// Send the query to Google Sheets API and handle the response
-				query.send(chartNumberOfBroken);
+		// --- E2E Number of Broken ----
+		// -----------------------------
+		function getNumberOfBroken() {
+			// Define the query using the GViz Query Language
+			var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1UjaaOCSGNLWW5hYdtw52P5s_PTBWexHW4_CmwHwvCps/gviz/tq?gid=1541416936&headers=1');
+			// Send the query to Google Sheets API and handle the response
+			query.send(chartNumberOfBroken);
+		}
+		// Callback function to handle the query response
+		function chartNumberOfBroken(response) {
+			if (response.isError()) {
+				console.error('Error in query: ' + response.getMessage());
+				return;
 			}
-			// Callback function to handle the query response
-			function chartNumberOfBroken(response) {
-				if (response.isError()) {
-					console.error('Error in query: ' + response.getMessage());
-					return;
-				}
 
-				// Get the data table from the query response
-				var dataTable = response.getDataTable();
-				// Extract the labels and data from the DataTable
-				var labels = [];
-				var data = [];
-				var numRows = dataTable.getNumberOfRows();
-				for (var i = 0; i < numRows; i++) {
-					labels.push(dataTable.getFormattedValue(i, 0));
-					data.push(dataTable.getFormattedValue(i, 1));
-				}
+			// Get the data table from the query response
+			var dataTable = response.getDataTable();
+			// Extract the labels and data from the DataTable
+			var labels = [];
+			var data = [];
+			var numRows = dataTable.getNumberOfRows();
+			for (var i = 0; i < numRows; i++) {
+				labels.push(dataTable.getFormattedValue(i, 0));
+				data.push(dataTable.getFormattedValue(i, 1));
+			}
 
-				// Render the chart using Chart.js
-				var ctx = document.getElementById('numberOfBroken').getContext('2d');
-				new Chart(ctx, {
-					type: 'bar',
-					data: {
-						labels: labels,
-						datasets: [ {
-							label: 'Number of Tests',
-							data: data,
-							backgroundColor: 'rgba(75, 192, 192, 0.2)',
-							borderColor: 'rgba(75, 192, 192, 1)',
-							borderWidth: 1,
-							trendlineLinear: {
-								colorMin: 'red',
-								colorMax: 'blue',
-								lineStyle: 'dotted',
-								width: 2
-							}
-						} ]
-					},
-					options: {
-						responsive: true,
-						scales: {
-							y: {
-								min: 0,
-								beginAtZero: true,
-								ticks: {
-									stepSize: 1,
-									callback: function (value, index, values) {
-										// Convert the tick value to an integer
-										return Math.floor(value);
-									}
+			// Render the chart using Chart.js
+			var ctx = document.getElementById('numberOfBroken').getContext('2d');
+			new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: labels,
+					datasets: [ {
+						label: 'Number of Tests',
+						data: data,
+						backgroundColor: 'rgba(75, 192, 192, 0.2)',
+						borderColor: 'rgba(75, 192, 192, 1)',
+						borderWidth: 1,
+						trendlineLinear: {
+							colorMin: 'red',
+							colorMax: 'blue',
+							lineStyle: 'dotted',
+							width: 2
+						}
+					} ]
+				},
+				options: {
+					responsive: true,
+					scales: {
+						y: {
+							min: 0,
+							beginAtZero: true,
+							ticks: {
+								stepSize: 1,
+								callback: function (value, index, values) {
+									// Convert the tick value to an integer
+									return Math.floor(value);
 								}
 							}
-						},
-						plugins: {
-							legend: {
-								display: false // Hide the legend
-							}
+						}
+					},
+					plugins: {
+						legend: {
+							display: false // Hide the legend
 						}
 					}
-				});
-			}
-
-		// Call of the functions to perform the charting
-		function chartData() {
-			getNumberOfTests();
-			getExecutionTime();
-			getNumberOfFailures();
-			getNumberOfSkipped();
-			getNumberOfBroken();
+				}
+			});
 		}
-		
+
 		// ---------------------------
 		// --- API Number of Tests ---
 		// ---------------------------
@@ -821,14 +812,19 @@ layout: common
 				}
 			});
 		}
-
+		
 		// Call of the functions to perform the charting
 		function chartData() {
+			getNumberOfTests();
+			getExecutionTime();
+			getNumberOfFailures();
+			getNumberOfSkipped();
+			getNumberOfBroken();
 			getNumberOfApiTests();
 			getApiExecutionTime();
 			getNumberOfApiFailures();
 			getNumberOfApiSkipped();
 			getNumberOfApiBroken();
 		}
-
+		
 	</script>
