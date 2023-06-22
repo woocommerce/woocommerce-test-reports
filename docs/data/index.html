@@ -555,14 +555,14 @@ layout: common
 		// --------------------------
 		// --- API Execution Time ---
 		// --------------------------
-		function getAPIExecutionTime() {
+		function getApiExecutionTime() {
 			// Define the query using the GViz Query Language
 			var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1UjaaOCSGNLWW5hYdtw52P5s_PTBWexHW4_CmwHwvCps/gviz/tq?gid=460738381&headers=1');
 			// Send the query to Google Sheets API and handle the response
-			query.send(chartAPIExecutionTime);
+			query.send(chartApiExecutionTime);
 		}
 		// Callback function to handle the query response
-		function chartAPIExecutionTime(response) {
+		function chartApiExecutionTime(response) {
 			if (response.isError()) {
 				console.error('Error in query: ' + response.getMessage());
 				return;
