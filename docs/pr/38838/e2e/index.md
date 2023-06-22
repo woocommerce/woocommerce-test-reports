@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/38838/e2e/i
 pr_number: 38838
 pr_title_encoded: "Monorepo+Utils%3A+Add+workflow+profiler+command"
 pr_test_type: e2e
-last_published: "2023-06-22 02:41:24 +0000"
-commit_sha: db7e45a9ac9d1f9d5c43e1ab5cdd2356d2ac0b0a
-commit_message: "Add variadic command"
+last_published: "2023-06-22 22:42:40 +0000"
+commit_sha: 16dd9c94e90bf0df010f047f6e799c4fc1f5a91d
+commit_message: "initialize dotenv in utils"
 branch_name: add/worflow-profiler-profile
 ---
