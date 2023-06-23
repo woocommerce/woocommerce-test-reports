@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/38874/api/i
 pr_number: 38874
 pr_title_encoded: "%5BWIP%5D+MVP+process+manifest+JSON+and+convert+to+Wordpress+categories%2Fposts"
 pr_test_type: api
-last_published: "2023-06-22 12:00:18 +0000"
-commit_sha: 9fa773ae89818ea2994255d2ced511bb9f8c61ea
-commit_message: "Merge remote-tracking branch 'origin/trunk' into add/wc-docs-manifest"
+last_published: "2023-06-23 03:21:32 +0000"
+commit_sha: bbeeca73396ab7d3cf73f042ac868a8913c6c0b9
+commit_message: "Add comment for the logger_action_id param."
 branch_name: add/wc-docs-manifest
 ---
