@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/38921/api/i
 pr_number: 38921
 pr_title_encoded: "Add+Variations+tab+to+Product+Block+Editor"
 pr_test_type: api
-last_published: "2023-06-23 18:36:47 +0000"
-commit_sha: 030fe1a1c8e8f816477f2975982aa8bf7f528743
-commit_message: "Add changelog"
+last_published: "2023-06-23 19:03:12 +0000"
+commit_sha: 0d333d5c9ca943b61f457b05163319c6ed61fed4
+commit_message: "Fix lint"
 branch_name: add/38880_add_variations_tab_to_product_block_editor
 ---
