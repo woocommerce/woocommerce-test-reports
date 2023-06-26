@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/38715/e2e/i
 pr_number: 38715
 pr_title_encoded: "Make+e2e+test+%60can+discard+industry+changes+when+navigating+back+to+%22Store+Details%22%60+independent+from+previous+tests"
 pr_test_type: e2e
-last_published: "2023-06-14 18:08:01 +0000"
-commit_sha: 24c0aa098dfdf7a678edfadd768b4902c37043df
-commit_message: "handle modal on test"
+last_published: "2023-06-26 05:21:17 +0000"
+commit_sha: 19a632a25d42e635f510d326043d782dec0cbac4
+commit_message: "Update deprecated method"
 branch_name: e2e/make-tests-independant-from-previous-tests
 ---
