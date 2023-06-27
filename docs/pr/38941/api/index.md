@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/38941/api/i
 pr_number: 38941
 pr_title_encoded: "Fix+grey+background+when+menu+collapsed"
 pr_test_type: api
-last_published: "2023-06-27 20:47:45 +0000"
-commit_sha: fda4ba5f97bc0a9db51dab90c144557a180a62d8
-commit_message: "Fix header"
+last_published: "2023-06-27 21:58:21 +0000"
+commit_sha: 52d218ec9a8c78f41cc73663237d70215a568633
+commit_message: "Fix lint"
 branch_name: fix/38887_grey_background_when_menu_collapsed
 ---
