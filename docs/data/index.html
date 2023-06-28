@@ -262,7 +262,7 @@ layout: common
 					responsive: true,
 					scales: {
 						y: {
-							min: 700,
+							min: 500,
 							beginAtZero: true
 						}
 					},
@@ -530,7 +530,14 @@ layout: common
 					responsive: true,
 					scales: {
 						y: {
-							beginAtZero: false
+							beginAtZero: false,
+							ticks: {
+								stepSize: 1,
+								callback: function (value, index, values) {
+									// Convert the tick value to an integer
+									return Math.floor(value);
+								}
+							}
 						}
 					},
 					plugins: {
