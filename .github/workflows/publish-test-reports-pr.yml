@@ -70,12 +70,66 @@ jobs:
         working-directory: repo/.github/workflows/scripts
         run: bash download-report.sh
 
+      - name: See if API tests passed
+        id: is-api-passed
+        uses: actions/github-script@v6
+        with:
+          result-encoding: string
+          script: |
+            const { statistic } = require('./artifacts/api/allure-report/widgets/summary.json');
+            const { failed, broken, passed } = statistic;
+
+            if (passed === 0) {
+              console.log("No tests passed. Considered FAIL.");
+              return false;
+            }
+
+            if (failed + broken > 0) {
+              console.log("There were failed and/or broken tests. Considered FAIL.");
+              return false;
+            }
+
+            if (passed > 0) {
+              console.log("Tests passed, no failures. Considered PASS.");
+              return true;
+            }
+
+            console.log("Unknown status.");
+            return;
+
       - name: Download E2E test report artifact from PR
         env:
           ARTIFACT_NAME: ${{ env.E2E_ARTIFACT }}
           DOWNLOAD_PATH: ${{ github.workspace }}/artifacts/e2e
         working-directory: repo/.github/workflows/scripts
         run: bash download-report.sh
+
+      - name: See if e2e tests passed
+        id: is-e2e-passed
+        uses: actions/github-script@v6
+        with:
+          result-encoding: string
+          script: |
+            const { statistic } = require('./artifacts/e2e/allure-report/widgets/summary.json');
+            const { failed, broken, passed } = statistic;
+
+            if (passed === 0) {
+              console.log("No tests passed. Considered FAIL.");
+              return false;
+            }
+
+            if (failed + broken > 0) {
+              console.log("There were failed and/or broken tests. Considered FAIL.");
+              return false;
+            }
+
+            if (passed > 0) {
+              console.log("Tests passed, no failures. Considered PASS.");
+              return true;
+            }
+
+            console.log("Unknown status.");
+            return;
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -155,6 +209,7 @@ jobs:
         env:
           TEST_TYPE: api
           S3_WEB_ENDPOINT: ${{ secrets.S3_WEB_ENDPOINT }}
+          PASSED: ${{ steps.is-api-passed.outputs.result }}
         run: bash pr-set-index-md.sh
 
       - name: Create or update index.md file for E2E test report
@@ -162,6 +217,7 @@ jobs:
         env:
           TEST_TYPE: e2e
           S3_WEB_ENDPOINT: ${{ secrets.S3_WEB_ENDPOINT }}
+          PASSED: ${{ steps.is-e2e-passed.outputs.result }}
         run: bash pr-set-index-md.sh
 
       - name: Push changes to branch

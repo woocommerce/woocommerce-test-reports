@@ -28,5 +28,6 @@ echo "last_published: \"$LAST_PUBLISHED\"" >>$INDEX_PATH
 echo "commit_sha: $COMMIT_SHA" >>$INDEX_PATH
 echo "commit_message: \"$COMMIT_MESSAGE\"" >>$INDEX_PATH
 echo "branch_name: $BRANCH_NAME" >>$INDEX_PATH
+echo "passed: $PASSED" >>"$INDEX_PATH"
 echo "---" >>$INDEX_PATH
 echo "Done!"
