@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/38874/api/i
 pr_number: 38874
 pr_title_encoded: "MVP+process+manifest+JSON+and+convert+to+WordPress+categories%2Fposts"
 pr_test_type: api
-last_published: "2023-06-28 13:31:50 +0000"
-commit_sha: 7d425e7e391fe41fd75fcf703f0d215848fe8eaf
-commit_message: "address initial processing of manifest"
+last_published: "2023-06-28 14:00:46 +0000"
+commit_sha: 3b9b637187f2c824ac96478b954f65913dc55310
+commit_message: "appease PHPCS"
 branch_name: add/wc-docs-manifest
 ---
