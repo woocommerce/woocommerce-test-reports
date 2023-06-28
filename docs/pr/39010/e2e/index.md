@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39010/e2e/i
 pr_number: 39010
 pr_title_encoded: "Run+complete+API+test+suite+daily"
 pr_test_type: e2e
-last_published: "2023-06-28 22:20:19 +0000"
-commit_sha: 6471924f3ea417687950234b1abbe4c7dfd55ec5
-commit_message: "Run complete API test suite"
+last_published: "2023-06-28 22:51:01 +0000"
+commit_sha: b1d6f6e04791486e7fcda57cdf0a10fce1b380d7
+commit_message: "Run in order but on success or failure"
 branch_name: run-all-api-tests-daily
 passed: true
 ---
