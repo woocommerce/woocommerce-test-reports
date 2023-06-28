@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39007/api/i
 pr_number: 39007
 pr_title_encoded: "Add+gitignore+to+package+and+update+package.json"
 pr_test_type: api
-last_published: "2023-06-28 20:39:17 +0000"
-commit_sha: 3608202f2a8ba99eb2bcbfbbfb330744e6bf7746
-commit_message: "Update package.json"
+last_published: "2023-06-28 21:02:46 +0000"
+commit_sha: 45e83463bc780b1c4b9e158ec774513f000d0c77
+commit_message: "Add changelog"
 branch_name: update/add_gitignore_to_package
 ---
