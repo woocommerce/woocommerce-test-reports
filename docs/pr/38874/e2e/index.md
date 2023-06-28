@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/38874/e2e/i
 pr_number: 38874
 pr_title_encoded: "MVP+process+manifest+JSON+and+convert+to+WordPress+categories%2Fposts"
 pr_test_type: e2e
-last_published: "2023-06-27 12:47:00 +0000"
-commit_sha: e2b294c0879ac653cb33d4c03a562d9a94b80593
-commit_message: "One more fix to manifest UI so the add manifest UI still shows when n…"
+last_published: "2023-06-28 12:18:28 +0000"
+commit_sha: bba8ec9cb9c249489701d356ca1f4af894b1e176
+commit_message: "Check for hash prop on json before trying to access."
 branch_name: add/wc-docs-manifest
 ---
