@@ -4,8 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/38993/api/i
 pr_number: 38993
 pr_title_encoded: "Refresh+UX+to+enable+HPOS+tables"
 pr_test_type: api
-last_published: "2023-06-28 12:57:12 +0000"
-commit_sha: 54c27753b225654330d2a14e45413bbe62e3a4a6
-commit_message: "Use inbuilt rendering block instead of writing a new template."
+last_published: "2023-06-29 11:21:16 +0000"
+commit_sha: 94c6f10682c05cdc60f263f93d4ab20611b407e2
+commit_message: "Fix options for back compat and readibility."
 branch_name: fix/34975
+passed: true
 ---
