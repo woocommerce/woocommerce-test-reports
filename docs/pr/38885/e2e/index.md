@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/38885/e2e/i
 pr_number: 38885
 pr_title_encoded: "Add+%60Marketplace%60+class+for+Reactified+marketplace"
 pr_test_type: e2e
-last_published: "2023-06-30 15:20:51 +0000"
-commit_sha: 8c018b282c0e83dc6867e6f0646a7a204f01238e
-commit_message: "Addressing linter errors."
+last_published: "2023-06-30 17:20:40 +0000"
+commit_sha: 1996c3e8abc33f89f40870ff82e06f0086fabcfc
+commit_message: "Correcting error in registration of pages introduced in bff51c0e74407…"
 branch_name: update/react-marketplace
 passed: true
 ---
