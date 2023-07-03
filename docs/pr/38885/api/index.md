@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/38885/api/i
 pr_number: 38885
 pr_title_encoded: "Add+%60Marketplace%60+class+for+Reactified+marketplace"
 pr_test_type: api
-last_published: "2023-06-30 17:50:10 +0000"
-commit_sha: ebb0bd7b2bf33a98633a7995c8e2436e55bc764a
-commit_message: "Fixing linter errors."
+last_published: "2023-07-03 12:31:04 +0000"
+commit_sha: e2b61c5b037653a983f999a57495ae2adcc921d2
+commit_message: "Added `discover` key for default tab to constants."
 branch_name: update/react-marketplace
 passed: true
 ---
