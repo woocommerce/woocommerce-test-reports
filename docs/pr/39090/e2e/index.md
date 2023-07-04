@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39090/e2e/i
 pr_number: 39090
 pr_title_encoded: "Add+button+on+toolbar+to+toggle+show%2Fhide+block+inspector"
 pr_test_type: e2e
-last_published: "2023-07-04 17:30:44 +0000"
-commit_sha: e20f88306062b00542d569ef0d63603ee9e36175
-commit_message: "Move changelog"
+last_published: "2023-07-04 21:11:22 +0000"
+commit_sha: eb2376db36491d57e1edc0505419f9b203bfa298
+commit_message: "Copy drawerright icon from @wordpress/icons"
 branch_name: add/show-hide-block-inspector
 passed: true
 ---
