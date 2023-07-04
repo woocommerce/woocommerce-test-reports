@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/37050/api/i
 pr_number: 37050
 pr_title_encoded: "%5BHPOS%5D+Synchronize+order+deletions"
 pr_test_type: api
-last_published: "2023-07-04 04:19:02 +0000"
-commit_sha: 9e10e5c605e02efc3aa6a452a3f41fd829575fbe
-commit_message: "Fix linting errors in StringUtilTest"
+last_published: "2023-07-04 08:09:06 +0000"
+commit_sha: 7a8891feedcd0fd004b586fbe750b566bfe98a8d
+commit_message: "Migration fixed."
 branch_name: add/sync_of_deleted_orders
 passed: true
 ---
