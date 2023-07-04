@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/38993/api/i
 pr_number: 38993
 pr_title_encoded: "Refresh+UX+to+enable+HPOS+tables"
 pr_test_type: api
-last_published: "2023-07-03 14:21:02 +0000"
-commit_sha: 767a7bc0888d033a22f1765e2267aa1cdf99c1b7
-commit_message: "More resilient unit tests + return errors as expected from fetching f…"
+last_published: "2023-07-04 11:18:13 +0000"
+commit_sha: f48bf40c432731003206f359a6122d739a1c5fea
+commit_message: "More unit test fixes + throw error when transaction level is invalid."
 branch_name: fix/34975
 passed: true
 ---
