@@ -4,8 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/38910/e2e/i
 pr_number: 38910
 pr_title_encoded: "Experimental%3A+Load+the+Cart+Fragments+script+on+specific+pages"
 pr_test_type: e2e
-last_published: "2023-06-23 05:56:09 +0000"
-commit_sha: d5dfc48cfc2f86b590ede324b9298363ae619d6f
-commit_message: "Load the Cart Fragments script on specific pages"
+last_published: "2023-07-04 02:41:51 +0000"
+commit_sha: 468fdefcfac6b270c8c0718617166c51c28c6661
+commit_message: "Fix the empty Cart Widget bug"
 branch_name: try/load-cart-fragments-script-on-specific-pages
+passed: true
 ---
