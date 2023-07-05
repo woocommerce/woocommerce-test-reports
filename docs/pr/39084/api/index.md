@@ -2,11 +2,11 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39084/api/index.html
 pr_number: 39084
-pr_title_encoded: "E2E%3A+Skip+core+profiler+in+global+setup"
+pr_title_encoded: "E2E%3A+Fix+skipping+of+core+profiler+in+%60page-loads.spec.js%60"
 pr_test_type: api
-last_published: "2023-07-04 11:11:16 +0000"
-commit_sha: 7a8f861c185393d5a2700a7029e517277c0cd575
-commit_message: "Add changelog"
+last_published: "2023-07-05 03:57:55 +0000"
+commit_sha: 85dba1addfc02c3825d2e6f7729f3a7c6106bf12
+commit_message: "Move skip action to beforeAll hook"
 branch_name: e2e/skip-core-profiler
 passed: true
 ---
