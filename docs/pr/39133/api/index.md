@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39133/api/i
 pr_number: 39133
 pr_title_encoded: "Add+unit+tests+to+tracks+events+fired+through+PHP"
 pr_test_type: api
-last_published: "2023-07-06 18:34:03 +0000"
-commit_sha: bcbd4c9680d07d1b777acfd0ac8e768cf4f681b5
-commit_message: "Add tests for importer tracking and fix phpcs issues"
+last_published: "2023-07-06 18:57:56 +0000"
+commit_sha: 21e7bab7fff718409594308c3b97b99cd9188327
+commit_message: "Disable phpcs rules"
 branch_name: dev/tracks-tests
 passed: true
 ---
