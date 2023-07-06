@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39121/api/i
 pr_number: 39121
 pr_title_encoded: "Marketplace+feature+branch"
 pr_test_type: api
-last_published: "2023-07-06 11:16:46 +0000"
-commit_sha: f11e3058e36ec1c7bca8d6099429ef7cb377a769
-commit_message: "Add `Marketplace` class for Reactified marketplace (#38885)"
+last_published: "2023-07-06 11:44:27 +0000"
+commit_sha: ea1344fc8d6560943bee8eb5843d5762b5100192
+commit_message: "Added comment to empty SCSS file to silence stylelint `no-empty-sourc…"
 branch_name: feature/marketplace
 passed: true
 ---
