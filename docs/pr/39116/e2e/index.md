@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39116/e2e/i
 pr_number: 39116
 pr_title_encoded: "Allow+registered+React-powered+page+to+specify+%27parent+path%27"
 pr_test_type: e2e
-last_published: "2023-07-07 09:31:33 +0000"
-commit_sha: 95078edf6d93ecd54fc3d24cf03b631f0bc2e012
+last_published: "2023-07-09 16:24:00 +0000"
+commit_sha: 10205fda7a841658101933d003348f0a15816861
 commit_message: "Changelog."
 branch_name: add/override-menu-item-highlight
 passed: true
