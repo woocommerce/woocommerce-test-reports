@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/38920/e2e/i
 pr_number: 38920
 pr_title_encoded: "Adding+basic+Woo+AI+settings+screen"
 pr_test_type: e2e
-last_published: "2023-07-10 21:03:38 +0000"
-commit_sha: 500b2b8b6e4795090c94d3a1993267125b3af09f
-commit_message: "Adding changelog"
+last_published: "2023-07-10 21:35:02 +0000"
+commit_sha: 146eba512f7746760fd3014e1d7b41364e3796c2
+commit_message: "Regenerating lock file"
 branch_name: add/ai-settings-38746
 passed: true
 ---
