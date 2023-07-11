@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39182/api/i
 pr_number: 39182
 pr_title_encoded: "%5BDRAFT%5D+Fix%2Fadmin+colors+use+theme"
 pr_test_type: api
-last_published: "2023-07-11 15:24:48 +0000"
-commit_sha: b467c0f25bc6c52b5f1ac8167abfef7c7ea79d6f
-commit_message: "Shipping methods empty state follow theme colors (and minor improveme…"
+last_published: "2023-07-11 16:45:31 +0000"
+commit_sha: 6ee83e0f5e437494a268af3d996afdca7bb8bcd7
+commit_message: "Fix activation css to use wp-admin-theme-color"
 branch_name: fix/admin-colors-use-theme
 passed: true
 ---
