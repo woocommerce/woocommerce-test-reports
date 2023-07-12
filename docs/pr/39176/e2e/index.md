@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39176/e2e/i
 pr_number: 39176
 pr_title_encoded: "Add+directory+for+snippet+docs+and+include+README.md"
 pr_test_type: e2e
-last_published: "2023-07-10 23:07:30 +0000"
-commit_sha: 71b0d3221649167ca1e3a66f794d363d0d88b641
-commit_message: "add directory for snippet docs and include README.md"
+last_published: "2023-07-12 13:13:14 +0000"
+commit_sha: a5f46e9b9624fd36f516df5e6d28bad4d1e6646a
+commit_message: "Use sentence case for heading."
 branch_name: docs/create-snippets-directory
 passed: true
 ---
