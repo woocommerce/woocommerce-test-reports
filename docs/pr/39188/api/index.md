@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39188/api/i
 pr_number: 39188
 pr_title_encoded: "Change+WooCommerce+Payments+to+WooPayments+across+the+WC+Core"
 pr_test_type: api
-last_published: "2023-07-12 10:29:39 +0000"
-commit_sha: 4cf6bec9d3067f77410d16a246cea66286596b4e
-commit_message: "Change banner image and task description"
+last_published: "2023-07-12 12:37:30 +0000"
+commit_sha: 5dd4fed5c3e6ebeb15eb87ad8e435e3485e08385
+commit_message: "Fix lint error"
 branch_name: add/woopayments-branding-rollout-in-core
 passed: true
 ---
