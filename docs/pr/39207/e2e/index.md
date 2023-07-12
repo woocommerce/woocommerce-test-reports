@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39207/e2e/i
 pr_number: 39207
 pr_title_encoded: "Fixes+for+the+WCPay+welcome+page+incentives"
 pr_test_type: e2e
-last_published: "2023-07-12 18:07:08 +0000"
-commit_sha: 36abbfd23337fd05d97784f42e9516ae1544f4eb
-commit_message: "refact: Use short array syntax"
+last_published: "2023-07-12 21:02:23 +0000"
+commit_sha: 96f15ec5bdd1ae10424e354860a2fdbcfd18a5be
+commit_message: "Update incentive cache logic to use context hash for cache invalidation"
 branch_name: fix/wcpay-welcome-page-incentives
 passed: true
 ---
