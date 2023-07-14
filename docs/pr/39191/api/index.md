@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39191/api/i
 pr_number: 39191
 pr_title_encoded: "Fix%2Forder+confirmation+access"
 pr_test_type: api
-last_published: "2023-07-12 02:33:17 +0000"
-commit_sha: 35b85181e251a180486b5d884d5a80624bc13790
-commit_message: "Merge remote branch (includes generated changelog)."
+last_published: "2023-07-14 20:59:23 +0000"
+commit_sha: a418a9e4c9ba3d1a7061cdf56fa4c690675dd873
+commit_message: "Coding standard fixes for E2E utility plugin."
 branch_name: fix/order-confirmation-access
 passed: true
 ---
