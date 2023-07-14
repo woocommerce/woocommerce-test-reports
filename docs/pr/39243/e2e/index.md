@@ -2,11 +2,11 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39243/e2e/index.html
 pr_number: 39243
-pr_title_encoded: "Update%2Fcode+freeze+version+bump+a+releases"
+pr_title_encoded: "Monrepo+Utils+code-freeze%3A+Update+version+bump+to+modify+release+branches"
 pr_test_type: e2e
-last_published: "2023-07-14 04:39:23 +0000"
-commit_sha: ed62c73abc6f608090a0214537911ba8d1aad1a1
-commit_message: "better dry run logging"
+last_published: "2023-07-14 05:35:17 +0000"
+commit_sha: a44e4ca18efdadc160fd9edfa26998152a0ee190
+commit_message: "fix a.x version bump"
 branch_name: update/code-freeze-version-bump-a-releases
 passed: true
 ---
