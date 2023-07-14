@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39253/api/i
 pr_number: 39253
 pr_title_encoded: "Add+Branding+%2B+Tone+to+Product+Descriptions"
 pr_test_type: api
-last_published: "2023-07-14 13:40:03 +0000"
-commit_sha: 2c98e5fab80a648d4dc0dc69bc4d257baf9a9b2d
-commit_message: "Add branding context provider for multiple components."
+last_published: "2023-07-14 16:03:58 +0000"
+commit_sha: 4f7eabc2ce5c3dc66c8ba36bfa2323681727a935
+commit_message: "Fix linting issues."
 branch_name: add/description-branding-39197
-passed: false
+passed: true
 ---
