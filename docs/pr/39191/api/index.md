@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39191/api/i
 pr_number: 39191
 pr_title_encoded: "Introduce+grace+period+before+asking+guests+to+verify+their+email+address"
 pr_test_type: api
-last_published: "2023-07-17 22:37:45 +0000"
-commit_sha: 48fb4388ba30ecb3d0afe83a52a290441c78c432
-commit_message: "e2e: Update locators for headings to use getByRole, add await to clea…"
+last_published: "2023-07-17 23:03:35 +0000"
+commit_sha: 234323602f1230b24e75b19fdd5b19b6a8a45711
+commit_message: "e2e: Abstract the cookie domain to work on non-localhost test sites"
 branch_name: fix/order-confirmation-access
 passed: true
 ---
