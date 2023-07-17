@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39173/api/i
 pr_number: 39173
 pr_title_encoded: "Add+Product+Card+component"
 pr_test_type: api
-last_published: "2023-07-17 10:39:51 +0000"
-commit_sha: ed76e0eac105f81664ec25225fa46ded777dd3aa
-commit_message: "Merge branch 'add/marketplace-react-skeleton-layout' into add/marketp…"
+last_published: "2023-07-17 12:38:26 +0000"
+commit_sha: 2433f288036ee317402746d5dbce260ec081ca62
+commit_message: "Fix spaces in functions files"
 branch_name: add/marketplace-product-card-component
 passed: true
 ---
