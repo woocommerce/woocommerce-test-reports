@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39245/api/i
 pr_number: 39245
 pr_title_encoded: "Use+syncpack+customTypes+to+keep+pnpm+and+node+in+sync.+Update+pnpm+to+8.6.7"
 pr_test_type: api
-last_published: "2023-07-14 08:28:58 +0000"
-commit_sha: 43451c8326643587a1fdfed50fa92f5f3bf933e7
-commit_message: "Update lockfile."
+last_published: "2023-07-17 06:45:37 +0000"
+commit_sha: 049a2cf193df214a2f72a7597edd886465369c31
+commit_message: "Merge remote-tracking branch 'origin/trunk' into dev/sync-pnpm"
 branch_name: dev/sync-pnpm
 passed: true
 ---
