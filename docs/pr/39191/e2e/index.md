@@ -2,11 +2,11 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39191/e2e/index.html
 pr_number: 39191
-pr_title_encoded: "Fix%2Forder+confirmation+access"
+pr_title_encoded: "Introduce+grace+period+before+asking+guests+to+verify+their+email+address"
 pr_test_type: e2e
-last_published: "2023-07-14 20:59:23 +0000"
-commit_sha: a418a9e4c9ba3d1a7061cdf56fa4c690675dd873
-commit_message: "Coding standard fixes for E2E utility plugin."
+last_published: "2023-07-17 22:37:46 +0000"
+commit_sha: 48fb4388ba30ecb3d0afe83a52a290441c78c432
+commit_message: "e2e: Update locators for headings to use getByRole, add await to clea…"
 branch_name: fix/order-confirmation-access
 passed: true
 ---
