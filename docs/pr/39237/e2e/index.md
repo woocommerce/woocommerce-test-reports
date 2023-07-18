@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39237/e2e/i
 pr_number: 39237
 pr_title_encoded: "Generating+the+short+description+on+the+product+editor"
 pr_test_type: e2e
-last_published: "2023-07-18 19:55:10 +0000"
-commit_sha: a818e4f6473c6e8eedd8b59481e57722dd0960bc
-commit_message: "Displaying errors via snackbar instead of in editor."
+last_published: "2023-07-18 20:29:28 +0000"
+commit_sha: c5f739e91eb6fefb0636b7b39b1243db9c01b44d
+commit_message: "Restoring UI after error is thrown on description completion"
 branch_name: add/update-short-description-39151
 passed: true
 ---
