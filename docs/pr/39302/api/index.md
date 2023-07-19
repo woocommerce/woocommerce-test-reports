@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39302/api/i
 pr_number: 39302
 pr_title_encoded: "Shard+unit+test+runs"
 pr_test_type: api
-last_published: "2023-07-18 19:11:45 +0000"
-commit_sha: ef436db905ab14f5fc18d8b78a0c9c30f97f86b0
-commit_message: "add changelog file"
+last_published: "2023-07-19 14:43:12 +0000"
+commit_sha: 934add99cf544ba6e64d641a35c3be4c27cc0509
+commit_message: "add some asserts to help debug runs failing only in ci"
 branch_name: dev/shard-unit-tests
 passed: true
 ---
