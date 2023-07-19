@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39308/e2e/i
 pr_number: 39308
 pr_title_encoded: "E2e%2Ffix+flaky+add+section+back+in"
 pr_test_type: e2e
-last_published: "2023-07-19 07:46:26 +0000"
-commit_sha: f6291281192a71746270b398b86a5b50aff71eb6
-commit_message: "Set request headers in config"
+last_published: "2023-07-19 08:53:34 +0000"
+commit_sha: e2b7ae9242e11f7d38c97af721c356d0acde7b61
+commit_message: ""
 branch_name: e2e/fix-flaky-add-section-back-in
-passed: false
+passed: true
 ---
