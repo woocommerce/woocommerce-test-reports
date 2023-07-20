@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39327/api/i
 pr_number: 39327
 pr_title_encoded: "Update%2F39325+typo+in+core+profiler+data+sharing+copy"
 pr_test_type: api
-last_published: "2023-07-19 21:58:11 +0000"
-commit_sha: a4258f2ad1010c9abb72cd41eab4adfbbdc17bc4
-commit_message: "Add changelog"
+last_published: "2023-07-20 14:00:25 +0000"
+commit_sha: 7564248a1d5742f96f4814ae5b0447e03a4e0bfd
+commit_message: "Put ,"
 branch_name: update/39325-typo-in-core-profiler-data-sharing-copy
 passed: true
 ---
