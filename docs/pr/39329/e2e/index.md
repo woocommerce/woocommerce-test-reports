@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39329/e2e/i
 pr_number: 39329
 pr_title_encoded: "Abstract+PR+scrub+action+so+it+can+be+used+in+two+places"
 pr_test_type: e2e
-last_published: "2023-07-20 01:00:03 +0000"
-commit_sha: 2048e285d6fb0fbf68c8263b090da05c0df6621c
-commit_message: "Abstract PR scrub action so it can be used in two places"
+last_published: "2023-07-20 18:55:19 +0000"
+commit_sha: 56e42227b39e171f4846250a8a3b9aab4abae116
+commit_message: "Rename composite action; add newline"
 branch_name: update/abstract-scrub-session
 passed: true
 ---
