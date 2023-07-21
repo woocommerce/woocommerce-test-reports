@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39253/api/i
 pr_number: 39253
 pr_title_encoded: "Add+Branding+%2B+Tone+to+Product+Descriptions"
 pr_test_type: api
-last_published: "2023-07-19 15:33:26 +0000"
-commit_sha: eeb91a5813121e54798af9980ff08a5971ac4056
-commit_message: "Refactor useStoreBranding hook and error notices."
+last_published: "2023-07-21 12:29:34 +0000"
+commit_sha: 65de7b59481dc51e0504538a253992b4418f0806
+commit_message: "Fix the description generation prompt."
 branch_name: add/description-branding-39197
 passed: true
 ---
