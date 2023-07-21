@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39086/api/i
 pr_number: 39086
 pr_title_encoded: "Setup+marketplace+React+skeleton+layout"
 pr_test_type: api
-last_published: "2023-07-19 13:48:11 +0000"
-commit_sha: 02e37f43d85d781e77de2becf17f1671d5060422
-commit_message: ""
+last_published: "2023-07-21 11:24:07 +0000"
+commit_sha: f0f6e2e27f0dc7bdb69fb8d7fc62da36e14d75f8
+commit_message: "Merge branch 'feature/marketplace' into add/marketplace-react-skeleto…"
 branch_name: add/marketplace-react-skeleton-layout
 passed: true
 ---
