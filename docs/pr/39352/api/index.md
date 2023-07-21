@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39352/api/i
 pr_number: 39352
 pr_title_encoded: "WooCommerce+Docs%3A+Handle+multiple+category+posts"
 pr_test_type: api
-last_published: "2023-07-21 00:09:13 +0000"
-commit_sha: 36222ca2cbe078dc5199524bbd02458e559a8c9d
-commit_message: "don't overwrite the previous run's category.posts"
+last_published: "2023-07-21 00:38:56 +0000"
+commit_sha: 15e6f29df402d822ac38ea3cd1504a72b9ac9870
+commit_message: "Revert "new line""
 branch_name: fix/md-docs-multiple-files
 passed: true
 ---
