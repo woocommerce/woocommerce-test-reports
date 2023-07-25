@@ -2,11 +2,11 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39392/api/index.html
 pr_number: 39392
-pr_title_encoded: "Boilerplate+for+example+page"
+pr_title_encoded: "Using+PhotoRoom+for+background+removal"
 pr_test_type: api
-last_published: "2023-07-24 23:01:05 +0000"
-commit_sha: 4ea910f93e3830d702eddb0ac62d652a67e54f6c
-commit_message: "Restyling a bit"
+last_published: "2023-07-25 01:38:41 +0000"
+commit_sha: 9bfd7c9040339e03314fa46ea5debf5cae59f41a
+commit_message: ""
 branch_name: try/photo-room-api-39350
 passed: true
 ---
