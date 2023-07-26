@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39382/e2e/i
 pr_number: 39382
 pr_title_encoded: "Setup+marketplace+React+skeleton+layout"
 pr_test_type: e2e
-last_published: "2023-07-24 17:08:14 +0000"
-commit_sha: ffe99a53df50024c07a1a458503c737d51b0e966
-commit_message: "New marketplace search component (#39149)"
+last_published: "2023-07-26 10:47:17 +0000"
+commit_sha: 022dafb204037a95d46d0c9fedec3af5d1c0ae34
+commit_message: "Add translation in some places"
 branch_name: add/marketplace-skeleton-branch2
 passed: true
 ---
