@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39121/api/i
 pr_number: 39121
 pr_title_encoded: "Marketplace+feature+branch"
 pr_test_type: api
-last_published: "2023-07-21 10:37:31 +0000"
-commit_sha: 30e23d22d5871a9b5af660f415a361b837932227
-commit_message: "Changed `Tabs` to use `useQuery` instead of `getQuery`, so the browse…"
+last_published: "2023-07-26 11:17:41 +0000"
+commit_sha: 19ba93ca523a50e515ed5432b89b833ee5f2e312
+commit_message: "Setup marketplace React skeleton layout (#39382)"
 branch_name: feature/marketplace
 passed: true
 ---
