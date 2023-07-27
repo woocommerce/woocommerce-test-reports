@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39173/api/i
 pr_number: 39173
 pr_title_encoded: "Add+Product+Card+component"
 pr_test_type: api
-last_published: "2023-07-24 17:03:54 +0000"
-commit_sha: 2527d30db55432b50c4bcb4db751ce52a67451a0
-commit_message: "Add extensions page data for product cards"
+last_published: "2023-07-27 09:42:34 +0000"
+commit_sha: df7c809a6aaeb32dea869e458eaeec47ddb149c0
+commit_message: "Merge branch 'feature/marketplace' into add/marketplace-product-card-…"
 branch_name: add/marketplace-product-card-component
 passed: true
 ---
