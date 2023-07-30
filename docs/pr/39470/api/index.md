@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39470/api/i
 pr_number: 39470
 pr_title_encoded: "Add%2Fadd+block+to+block+template"
 pr_test_type: api
-last_published: "2023-07-30 11:57:06 +0000"
-commit_sha: afe2cd30c4f61acc94457a5dc39cfc0c4f455bfd
-commit_message: "Changelog"
+last_published: "2023-07-30 12:26:01 +0000"
+commit_sha: 682bc3de124398437601b9611c891b49d12ccaf4
+commit_message: "Add get_block_by_id to BlockBasedTemplateInterface"
 branch_name: add/add-block-to-block-template
 passed: true
 ---
