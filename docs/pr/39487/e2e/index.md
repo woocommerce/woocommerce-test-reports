@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39487/e2e/i
 pr_number: 39487
 pr_title_encoded: "Remove+all+schema+checking+code+from+Code+Analyzer."
 pr_test_type: e2e
-last_published: "2023-07-31 06:54:42 +0000"
-commit_sha: 363457e5e7bc2020c4729057f4af0a9f21d05365
-commit_message: "Remove all schema checking code from Code Analyzer."
+last_published: "2023-07-31 10:21:55 +0000"
+commit_sha: 8aea38a4388e18da0d1d2a297150280b753314de
+commit_message: "Increment package version, remove schema usage, improve types of option."
 branch_name: dev/ca-remove-schema-checks
 passed: true
 ---
