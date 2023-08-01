@@ -5,5 +5,5 @@ test_type: e2e
 release_tag: 8.0.0-rc.1
 env_description: "woocommerce-payments"
 created_at: "2023-08-01T17:01:56Z"
-passed: false
+passed: true
 ---
