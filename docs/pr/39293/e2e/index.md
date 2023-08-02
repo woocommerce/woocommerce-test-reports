@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39293/e2e/i
 pr_number: 39293
 pr_title_encoded: "WooCommerce+Docs%3A+Relative+Link+Parsing"
 pr_test_type: e2e
-last_published: "2023-07-31 05:37:58 +0000"
-commit_sha: d455a4afa22850e6acf7b91f42579bdfaa3cf380
-commit_message: "Fix wrong import name."
+last_published: "2023-08-02 05:00:45 +0000"
+commit_sha: 8ec44122ea6a4ae1200107d3fc3a1e74ebc1abc6
+commit_message: "Merge remote-tracking branch 'origin/trunk' into dev/relative-linking"
 branch_name: dev/relative-linking
 passed: true
 ---
