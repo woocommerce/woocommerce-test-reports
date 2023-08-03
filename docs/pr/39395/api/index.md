@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39395/api/i
 pr_number: 39395
 pr_title_encoded: "WooCommerce+Docs%3A+Delete+posts+when+it+removed+from+the+manifest"
 pr_test_type: api
-last_published: "2023-08-03 01:22:25 +0000"
-commit_sha: 881b3450bdf41dd21f0493e4de29b5773f2d6fbf
-commit_message: "whitespace"
+last_published: "2023-08-03 01:44:20 +0000"
+commit_sha: 0e6a53682b44510971318eddbefe46a63fb2301a
+commit_message: "move collect_doc_ids_from_manifest"
 branch_name: update/md-docs-delete-removed-posts
 passed: true
 ---
