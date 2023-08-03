@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39547/e2e/i
 pr_number: 39547
 pr_title_encoded: "Add+E2E+tests+to+general+tab"
 pr_test_type: e2e
-last_published: "2023-08-02 21:21:36 +0000"
+last_published: "2023-08-03 13:48:00 +0000"
 commit_sha: aebe22b19220e21969031462c4af6b4cef409072
 commit_message: "Add sale price"
 branch_name: add/39411_tests_to_general_tab
