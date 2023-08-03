@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39173/e2e/i
 pr_number: 39173
 pr_title_encoded: "Add+Product+Card+component"
 pr_test_type: e2e
-last_published: "2023-07-27 19:18:51 +0000"
-commit_sha: 520307cb9760d4ef2d455c09301259bb6dfe861f
-commit_message: "Fix CSS for product cards"
+last_published: "2023-08-03 05:59:07 +0000"
+commit_sha: 95d1639c59ef3d6ba761d88496364fc0eb2b63bc
+commit_message: "Fix CSS styles to improve responsiveness across different screen sizes."
 branch_name: add/marketplace-product-card-component
 passed: true
 ---
