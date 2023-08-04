@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39237/api/i
 pr_number: 39237
 pr_title_encoded: "Generating+the+short+description+on+the+product+editor"
 pr_test_type: api
-last_published: "2023-07-21 17:23:40 +0000"
-commit_sha: dfaf798396fd1a23d23967f3aea9171757bcb7b0
-commit_message: "Adding line to prompt to prevent special characters"
+last_published: "2023-08-04 13:13:29 +0000"
+commit_sha: dacb476663c8886e4ad04e90a8ce0e6d9ce3ac39
+commit_message: "Remove CSS that was needed for temporary snackbar fix."
 branch_name: add/update-short-description-39151
 passed: true
 ---
