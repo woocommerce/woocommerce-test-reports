@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39173/api/i
 pr_number: 39173
 pr_title_encoded: "Add+Product+Card+component"
 pr_test_type: api
-last_published: "2023-08-04 15:22:16 +0000"
-commit_sha: 50c89a3b94b35bd809f2006c784a1970df19ec0e
-commit_message: "Switch currency and price"
+last_published: "2023-08-04 17:30:33 +0000"
+commit_sha: 071ff62ee0b93b12eaf851a6c86f220d3af261db
+commit_message: "Allow for max 2 lines for the product name"
 branch_name: add/marketplace-product-card-component
 passed: true
 ---
