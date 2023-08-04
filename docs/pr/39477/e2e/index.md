@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39477/e2e/i
 pr_number: 39477
 pr_title_encoded: "Add+product+visibility+blocks"
 pr_test_type: e2e
-last_published: "2023-08-04 13:45:44 +0000"
-commit_sha: 9949d9e7eb5a37ad7b49112bc14509cb0daca3e7
-commit_message: "Add catalog_visibility property to the Product type"
+last_published: "2023-08-04 15:22:49 +0000"
+commit_sha: 52a8e3cd26e445870eec1581ac5094185ccf835e
+commit_message: ""
 branch_name: add/39125
 passed: true
 ---
