@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39173/api/i
 pr_number: 39173
 pr_title_encoded: "Add+Product+Card+component"
 pr_test_type: api
-last_published: "2023-08-03 05:59:06 +0000"
-commit_sha: 95d1639c59ef3d6ba761d88496364fc0eb2b63bc
-commit_message: "Fix CSS styles to improve responsiveness across different screen sizes."
+last_published: "2023-08-04 15:22:16 +0000"
+commit_sha: 50c89a3b94b35bd809f2006c784a1970df19ec0e
+commit_message: "Switch currency and price"
 branch_name: add/marketplace-product-card-component
 passed: true
 ---
