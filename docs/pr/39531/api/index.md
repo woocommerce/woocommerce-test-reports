@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39531/api/i
 pr_number: 39531
 pr_title_encoded: "Upgrade+TypeScript+to+v5.1"
 pr_test_type: api
-last_published: "2023-08-07 05:22:06 +0000"
-commit_sha: 861e56e78458ac4940ba333c35471eafd8e271bd
-commit_message: "Add expect error tags on types that need to be fixed."
+last_published: "2023-08-07 06:57:37 +0000"
+commit_sha: 7464eef2b3a01642fa8196e4ce13db04e39ba80c
+commit_message: "Add changefile(s) from automation for the following project(s): @wooc…"
 branch_name: dev/upgrade-ts-5
 passed: true
 ---
