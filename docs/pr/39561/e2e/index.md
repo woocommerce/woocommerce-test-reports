@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39561/e2e/i
 pr_number: 39561
 pr_title_encoded: "Marketplace%3A+Category+selector+UI"
 pr_test_type: e2e
-last_published: "2023-08-04 13:54:45 +0000"
-commit_sha: 399d577a6eeefbd3137d890a33665754d2b23d53
-commit_message: "Marketplace: Add category selector"
+last_published: "2023-08-07 12:33:16 +0000"
+commit_sha: 62289f4eed5114d245a7dd1a6209518e0d7dd700
+commit_message: "Marketplace: add MARKETPLACE_URL constant"
 branch_name: add/17438-category-filter
 passed: true
 ---
