@@ -1,0 +1,12 @@
+---
+layout: redirect
+redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39609/api/index.html
+pr_number: 39609
+pr_title_encoded: "Add+marketplace+feedback+component"
+pr_test_type: api
+last_published: "2023-08-07 10:15:36 +0000"
+commit_sha: b0433556b00283892233bf3729b579a9bf71074d
+commit_message: "Add feedback modal to content"
+branch_name: add/wccom-17602-marketplace-feedback-component
+passed: true
+---
