@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39610/api/i
 pr_number: 39610
 pr_title_encoded: "%5BProduct+Block+Editor%5D+Remove+additional+create+term+modal"
 pr_test_type: api
-last_published: "2023-08-07 19:15:00 +0000"
-commit_sha: 67698ed4467c45c1ea7bfff45ccb0d9ac75517e2
-commit_message: "Add changelog"
+last_published: "2023-08-08 14:48:56 +0000"
+commit_sha: 05e95ee7d87bd317c1f13d11de1592e4c97c36e2
+commit_message: "Fix list refresh and add loading state"
 branch_name: dev/39223_remove_create_term_modal
 passed: true
 ---
