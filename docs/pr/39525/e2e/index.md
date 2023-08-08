@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39525/e2e/i
 pr_number: 39525
 pr_title_encoded: "HPOS+Features%3A+Revert+to+one+feature"
 pr_test_type: e2e
-last_published: "2023-08-05 02:13:21 +0000"
-commit_sha: af8e748f5f12a147f576fbda8539324340a1deef
-commit_message: "Move legacy status to feature definition"
+last_published: "2023-08-08 22:44:48 +0000"
+commit_sha: 62d03368533e82147a60141744019abcb953b5db
+commit_message: "Move more hard-coded feature logic into the definition"
 branch_name: try/feature-sub-settings
 passed: true
 ---
