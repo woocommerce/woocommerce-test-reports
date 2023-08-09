@@ -2,11 +2,11 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39620/e2e/index.html
 pr_number: 39620
-pr_title_encoded: "Fix+attribute+terms+disappearing+in+list+and+auto+create+global+attribute+term"
+pr_title_encoded: "Fix+attribute+terms+disappearing+in+list"
 pr_test_type: e2e
-last_published: "2023-08-09 12:13:35 +0000"
-commit_sha: 55b63dfb0736c9699bdc19577fea525b9ed1bf00
-commit_message: "Add invalidate resolution call and error notice"
+last_published: "2023-08-09 12:54:56 +0000"
+commit_sha: 242239e9ce905d77cb7eadf9dffa05e47c4c3448
+commit_message: "Revert auto create on select changes"
 branch_name: fix/attribute_terms_dissapearing
 passed: true
 ---
