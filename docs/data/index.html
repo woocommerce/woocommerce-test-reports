@@ -25,7 +25,7 @@ layout: common
 		<div class="card" style="width: 100%;">
 			<canvas id="executionTime" class="card-img-top"></canvas>
 			<div class="card-body">
-				<h5 class="card-title">Execution Time</h5>
+				<h5 class="card-title">Execution Time (last 60 days)</h5>
 				<p class="card-text">The amount of time it takes for the test suite to complete (seconds).</p>
 			</div>
 		</div>
@@ -40,7 +40,7 @@ layout: common
 		<div class="card" style="width: 100%;">
 			<canvas id="numberOfFailures" class="card-img-top"></canvas>
 			<div class="card-body">
-				<h5 class="card-title">Number of Failures</h5>
+				<h5 class="card-title">Number of Failures (last 60 days)</h5>
 				<p class="card-text">The number of tests marked as failing each run.</p>
 			</div>
 		</div>
@@ -50,7 +50,7 @@ layout: common
 		<div class="card" style="width: 100%;">
 			<canvas id="numberOfSkipped" class="card-img-top"></canvas>
 			<div class="card-body">
-				<h5 class="card-title">Number of Skipped Tests</h5>
+				<h5 class="card-title">Number of Skipped Tests (last 60 days)</h5>
 				<p class="card-text">The number of tests we skip each run.</p>
 			</div>
 		</div>
@@ -66,7 +66,7 @@ layout: common
 		<div class="card" style="width: 100%;">
 			<canvas id="numberOfBroken" class="card-img-top"></canvas>
 			<div class="card-body">
-				<h5 class="card-title">Number of Broken Tests</h5>
+				<h5 class="card-title">Number of Broken Tests (last 60 days)</h5>
 				<p class="card-text">The number of tests marked as broken each run.</p>
 			</div>
 		</div>
@@ -95,7 +95,7 @@ layout: common
 		<div class="card" style="width: 100%;">
 			<canvas id="apiExecutionTime" class="card-img-top"></canvas>
 			<div class="card-body">
-				<h5 class="card-title">Execution Time</h5>
+				<h5 class="card-title">Execution Time (last 60 days)</h5>
 				<p class="card-text">The amount of time it takes for the test suite to complete (seconds).</p>
 			</div>
 		</div>
@@ -110,7 +110,7 @@ layout: common
 		<div class="card" style="width: 100%;">
 			<canvas id="numberOfApiFailures" class="card-img-top"></canvas>
 			<div class="card-body">
-				<h5 class="card-title">Number of Failures</h5>
+				<h5 class="card-title">Number of Failures (last 60 days)</h5>
 				<p class="card-text">The number of tests marked as failing each run.</p>
 			</div>
 		</div>
@@ -120,7 +120,7 @@ layout: common
 		<div class="card" style="width: 100%;">
 			<canvas id="numberOfApiSkipped" class="card-img-top"></canvas>
 			<div class="card-body">
-				<h5 class="card-title">Number of Skipped Tests</h5>
+				<h5 class="card-title">Number of Skipped Tests (last 60 days)</h5>
 				<p class="card-text">The number of tests we skip each run.</p>
 			</div>
 		</div>
@@ -136,7 +136,7 @@ layout: common
 		<div class="card" style="width: 100%;">
 			<canvas id="numberOfApiBroken" class="card-img-top"></canvas>
 			<div class="card-body">
-				<h5 class="card-title">Number of Broken Tests</h5>
+				<h5 class="card-title">Number of Broken Tests (last 60 days)</h5>
 				<p class="card-text">The number of tests marked as broken each run.</p>
 			</div>
 		</div>
@@ -233,7 +233,8 @@ layout: common
 			var labels = [];
 			var data = [];
 			var numRows = dataTable.getNumberOfRows();
-			for (var i = 0; i < numRows; i++) {
+			var startIndex = Math.max(0, numRows - 60);
+			for (var i = startIndex; i < numRows; i++) {
 				labels.push(dataTable.getFormattedValue(i, 0));
 				data.push(dataTable.getFormattedValue(i, 1));
 			}
@@ -297,7 +298,8 @@ layout: common
 				var labels = [];
 				var data = [];
 				var numRows = dataTable.getNumberOfRows();
-				for (var i = 0; i < numRows; i++) {
+				var startIndex = Math.max(0, numRows - 60);
+				for (var i = startIndex; i < numRows; i++) {
 					labels.push(dataTable.getFormattedValue(i, 0));
 					data.push(dataTable.getFormattedValue(i, 1));
 				}
@@ -368,7 +370,8 @@ layout: common
 			var labels = [];
 			var data = [];
 			var numRows = dataTable.getNumberOfRows();
-			for (var i = 0; i < numRows; i++) {
+			var startIndex = Math.max(0, numRows - 60);
+			for (var i = startIndex; i < numRows; i++) {
 				labels.push(dataTable.getFormattedValue(i, 0));
 				data.push(dataTable.getFormattedValue(i, 1));
 			}
@@ -432,7 +435,8 @@ layout: common
 			var labels = [];
 			var data = [];
 			var numRows = dataTable.getNumberOfRows();
-			for (var i = 0; i < numRows; i++) {
+			var startIndex = Math.max(0, numRows - 60);
+			for (var i = startIndex; i < numRows; i++) {
 				labels.push(dataTable.getFormattedValue(i, 0));
 				data.push(dataTable.getFormattedValue(i, 1));
 			}
@@ -571,7 +575,8 @@ layout: common
 			var labels = [];
 			var data = [];
 			var numRows = dataTable.getNumberOfRows();
-			for (var i = 0; i < numRows; i++) {
+			var startIndex = Math.max(0, numRows - 60);
+			for (var i = startIndex; i < numRows; i++) {
 				labels.push(dataTable.getFormattedValue(i, 0));
 				data.push(dataTable.getFormattedValue(i, 1));
 			}
@@ -634,7 +639,8 @@ layout: common
 			var labels = [];
 			var data = [];
 			var numRows = dataTable.getNumberOfRows();
-			for (var i = 0; i < numRows; i++) {
+			var startIndex = Math.max(0, numRows - 60);
+			for (var i = startIndex; i < numRows; i++) {
 				labels.push(dataTable.getFormattedValue(i, 0));
 				data.push(dataTable.getFormattedValue(i, 1));
 			}
@@ -705,7 +711,8 @@ layout: common
 			var labels = [];
 			var data = [];
 			var numRows = dataTable.getNumberOfRows();
-			for (var i = 0; i < numRows; i++) {
+			var startIndex = Math.max(0, numRows - 60);
+			for (var i = startIndex; i < numRows; i++) {
 				labels.push(dataTable.getFormattedValue(i, 0));
 				data.push(dataTable.getFormattedValue(i, 1));
 			}
@@ -776,7 +783,8 @@ layout: common
 			var labels = [];
 			var data = [];
 			var numRows = dataTable.getNumberOfRows();
-			for (var i = 0; i < numRows; i++) {
+			var startIndex = Math.max(0, numRows - 60);
+			for (var i = startIndex; i < numRows; i++) {
 				labels.push(dataTable.getFormattedValue(i, 0));
 				data.push(dataTable.getFormattedValue(i, 1));
 			}
