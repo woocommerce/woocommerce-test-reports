@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39565/api/i
 pr_number: 39565
 pr_title_encoded: "Fix+saving+bug+with+Woo+AI+settings+page+and+simplify."
 pr_test_type: api
-last_published: "2023-08-09 14:15:34 +0000"
-commit_sha: 2a8fdbee8386fa14e9172df8dd34921b89e6fe55
-commit_message: "Resolve merge conflict and re-order settings elements to be more unif…"
+last_published: "2023-08-11 12:31:43 +0000"
+commit_sha: fdd3d4a0a93ccfd832ee30e5269cb0be7cc16e2f
+commit_message: "Help prevent flashing of Woo AI settings on page load and code refactor."
 branch_name: fix/woo-ai-settings-page
 passed: true
 ---
