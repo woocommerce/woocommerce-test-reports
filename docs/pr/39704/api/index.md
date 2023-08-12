@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39704/api/i
 pr_number: 39704
 pr_title_encoded: "Add+a+workflow+to+separate+out+eslint+and+annotate+PRs."
 pr_test_type: api
-last_published: "2023-08-12 07:23:34 +0000"
-commit_sha: 7072819fed9b571fececeb197fd7191c75274e7c
-commit_message: "Test annotation of an eslint issue."
+last_published: "2023-08-12 07:54:15 +0000"
+commit_sha: 75d0729ec111aa64735cdd0bf9fe40875497ecb7
+commit_message: "Add changefile(s) from automation for the following project(s): @wooc…"
 branch_name: dev/include-eslint-annotations
 passed: true
 ---
