@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39613/api/i
 pr_number: 39613
 pr_title_encoded: "Add+loading+indicator+when+submitting+location+in+Tax+task"
 pr_test_type: api
-last_published: "2023-08-14 04:00:35 +0000"
-commit_sha: e3caf5e5409a275dc39a28de1f021642b657b6a7
-commit_message: "Changelog"
+last_published: "2023-08-14 05:44:12 +0000"
+commit_sha: 4a04d19b6067b5eb30d06d2208bb51d02b57c804
+commit_message: "Lint"
 branch_name: tweak/loading-indicator-tax-task-store-location
 passed: false
 ---
