@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39437/e2e/i
 pr_number: 39437
 pr_title_encoded: "Suggest+product+categories+with+AI"
 pr_test_type: e2e
-last_published: "2023-08-09 20:32:02 +0000"
-commit_sha: d5468681609e3178b29b3cfe65f1ab6b2cc23686
-commit_message: "Fix merge conflict"
+last_published: "2023-08-15 21:07:29 +0000"
+commit_sha: ef8e3c8eeda816d5e3e9866f33863c8c6234bebc
+commit_message: "Merge branch 'trunk' into feature/suggest-product-categories-39436"
 branch_name: feature/suggest-product-categories-39436
-passed: true
+passed: false
 ---
