@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39701/e2e/i
 pr_number: 39701
 pr_title_encoded: "%5BWIP%5D+Add+order+source+attribution"
 pr_test_type: e2e
-last_published: "2023-08-15 23:00:38 +0000"
-commit_sha: 8d7a16369b87e3e3ab42e568f93fefa04c2dba93
-commit_message: "Add WCCom tracking controller"
+last_published: "2023-08-16 23:09:19 +0000"
+commit_sha: 7312f00403c5983e724dd3c5a0500b5d5b01d720
+commit_message: "Add consent API integration"
 branch_name: feature/order_source_attribution
 passed: true
 ---
