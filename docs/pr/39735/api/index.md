@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39735/api/i
 pr_number: 39735
 pr_title_encoded: "dev%3A+refactor+core+profiler+loader"
 pr_test_type: api
-last_published: "2023-08-16 13:03:22 +0000"
-commit_sha: 81d8826323603fa839b157c688283d05cd17a97b
-commit_message: "Apply suggestions from code review"
+last_published: "2023-08-18 04:59:58 +0000"
+commit_sha: 0b8ee7f4e2ea4cfab1a7e9d4ed64e4907ad9ee49
+commit_message: "addressed review feedback"
 branch_name: dev/refactor-onboarding-loader
 passed: true
 ---
