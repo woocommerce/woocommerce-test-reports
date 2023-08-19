@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39117/e2e/i
 pr_number: 39117
 pr_title_encoded: "Update+%40wordpress+packages+to+wp-6.2"
 pr_test_type: e2e
-last_published: "2023-08-18 17:03:41 +0000"
-commit_sha: c34a9b62e5ec07ec2555c8825bce78cd1772317a
-commit_message: "Fix woocommerce/components tests"
+last_published: "2023-08-19 00:00:09 +0000"
+commit_sha: 149152d65d48e9771678a635669d6de151ada9e6
+commit_message: "Remove unused imports in test causing lint failure."
 branch_name: dev/update-wp--6.2
 passed: true
 ---
