@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39830/e2e/i
 pr_number: 39830
 pr_title_encoded: "Update+Yoast+PHPUnit+Polyfill+to+2.0"
 pr_test_type: e2e
-last_published: "2023-08-21 20:01:38 +0000"
-commit_sha: b653043b259fc523c9b55384396ec59e64ca5c88
-commit_message: ""
+last_published: "2023-08-21 20:46:32 +0000"
+commit_sha: 8153657e945c6f465de4516008e273d3422b3f88
+commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
 branch_name: update/yoast-phpunit-polyfill
 passed: true
 ---
