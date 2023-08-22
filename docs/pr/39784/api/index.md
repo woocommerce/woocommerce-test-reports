@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39784/api/i
 pr_number: 39784
 pr_title_encoded: "Add+Woo+AI+Personalization+enabled+setting+and+check+setting+when+gen%E2%80%A6"
 pr_test_type: api
-last_published: "2023-08-17 13:31:48 +0000"
-commit_sha: 59b908dee650ec6834ae5a88c1312494bfbc1bd9
-commit_message: "Merge branch 'fix/woo-ai-settings-group' into fix/woo-ai-settings-toggle"
+last_published: "2023-08-22 15:25:04 +0000"
+commit_sha: 45e3cef9cb57a3932639960fcf31b9b0e0fe38d2
+commit_message: "Remove Woo AI enabled checkbox and use settings values when they exist."
 branch_name: fix/woo-ai-settings-toggle
 passed: true
 ---
