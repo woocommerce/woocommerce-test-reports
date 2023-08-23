@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39857/e2e/i
 pr_number: 39857
 pr_title_encoded: "Fix+new+category+name+field+error"
 pr_test_type: e2e
-last_published: "2023-08-22 20:34:03 +0000"
-commit_sha: 1b7b7fdf77cf26c83177e377835efdcb6a52f4e9
-commit_message: "Add changelog"
+last_published: "2023-08-23 18:38:54 +0000"
+commit_sha: f87be3a2ec796b679d36ffe2cc55b4f66e263241
+commit_message: "Move changelog"
 branch_name: fix/39825_new_category_name_persists
 passed: true
 ---
