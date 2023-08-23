@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39849/api/i
 pr_number: 39849
 pr_title_encoded: "Add+code+snippet+to+add+or+modify+states"
 pr_test_type: api
-last_published: "2023-08-23 13:52:35 +0000"
-commit_sha: 1b85b89bc053e4e2c4034b63f67c1ddbad4aaf49
-commit_message: "Merge branch 'trunk' into docs/add-or-modify-states"
+last_published: "2023-08-23 21:13:18 +0000"
+commit_sha: 67d50f551a73eed3b446fe8ebe98af2f816cab52
+commit_message: "Update README.md"
 branch_name: docs/add-or-modify-states
 passed: true
 ---
