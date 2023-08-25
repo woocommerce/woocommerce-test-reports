@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39912/e2e/i
 pr_number: 39912
 pr_title_encoded: "tweak+some+of+the+HPOS+Settings+UI"
 pr_test_type: e2e
-last_published: "2023-08-25 17:25:56 +0000"
-commit_sha: 8d3a6fc2c0c9f4dffd02ce522d5950bcb1fa6f3f
-commit_message: "add changelog file"
+last_published: "2023-08-25 18:14:04 +0000"
+commit_sha: 6417edd296f1024bd7ab9540dde05c4627a369cb
+commit_message: "update wording in a test"
 branch_name: update/hpos-ui-tweaks
 passed: true
 ---
