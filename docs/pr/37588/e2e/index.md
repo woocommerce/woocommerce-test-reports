@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/37588/e2e/i
 pr_number: 37588
 pr_title_encoded: "Add+woocommerce+pay+order+before+payment+action+in+pay-for-order+page"
 pr_test_type: e2e
-last_published: "2023-08-24 20:50:20 +0000"
-commit_sha: c0aaa4e9334b0e90f286c2ac96ad9499e938da97
-commit_message: "Add changelog entry"
+last_published: "2023-08-25 21:36:52 +0000"
+commit_sha: 8f20f6875c378609e870921d06c2b4a2b1be36bc
+commit_message: "Update plugins/woocommerce/templates/checkout/form-pay.php"
 branch_name: add/woocommerce-pay-order-before-payment-action
-passed: false
+passed: true
 ---
