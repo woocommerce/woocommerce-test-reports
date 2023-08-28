@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39911/api/i
 pr_number: 39911
 pr_title_encoded: "Update+modified+date+when+a+metadata+is+saved+for+HPOS."
 pr_test_type: api
-last_published: "2023-08-28 10:58:48 +0000"
-commit_sha: aa08add6e3c250338ac23b54de139004ef456aab
-commit_message: "Defencive checks around meta."
+last_published: "2023-08-28 11:41:39 +0000"
+commit_sha: d2178198247e03067c27183cef1dde0db7068795
+commit_message: "Use same precision as DB timezone to prevent unnecessary updates."
 branch_name: fix/cache_data_store
 passed: true
 ---
