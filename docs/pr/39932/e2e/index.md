@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39932/e2e/i
 pr_number: 39932
 pr_title_encoded: "Add+customize+store+assembler+hub+logo"
 pr_test_type: e2e
-last_published: "2023-08-29 06:14:31 +0000"
-commit_sha: b581c8dbdc385d24dfe67cd88d5491e364637ddb
+last_published: "2023-08-30 06:19:35 +0000"
+commit_sha: 741faafb35e7420e8854527755f80ae857451333
 commit_message: "Update pnpm-lock.yaml"
 branch_name: add/customize-store-assembler-hub-logo
 passed: true
