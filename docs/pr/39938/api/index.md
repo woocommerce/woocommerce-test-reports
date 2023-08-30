@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39938/api/i
 pr_number: 39938
 pr_title_encoded: "Make+sure+we+also+save+default+attributes+prior+to+variation+generation"
 pr_test_type: api
-last_published: "2023-08-29 15:43:27 +0000"
-commit_sha: f1094484837900f5855df55b679bd3bf2034d0e9
-commit_message: "Fix tests and add a few more for testing default attributes"
+last_published: "2023-08-30 14:11:15 +0000"
+commit_sha: 26dfa129d58ff4641f526ddb359c88609ef28bbd
+commit_message: "Fix lint error"
 branch_name: fix/39840_product_editor_variations_auto_save_bug
 passed: true
 ---
