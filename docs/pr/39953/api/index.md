@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39953/api/i
 pr_number: 39953
 pr_title_encoded: "Customize+Your+Store+-+Add+AI+wizard+business+info+step"
 pr_test_type: api
-last_published: "2023-08-30 01:18:11 +0000"
-commit_sha: 88fed1ffd7d48adac494f6735594e2138e2729f4
-commit_message: "Remove duplicated style import"
+last_published: "2023-08-30 19:58:08 +0000"
+commit_sha: 122314ff22c9c568ab727d6af0bd66ae77ef841c
+commit_message: "Lint fix"
 branch_name: add/39709-ai-wizard-business-info-step
-passed: false
+passed: true
 ---
