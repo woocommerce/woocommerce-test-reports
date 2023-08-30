@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39967/api/i
 pr_number: 39967
 pr_title_encoded: "Update+variation+pagination+table"
 pr_test_type: api
-last_published: "2023-08-30 19:11:30 +0000"
-commit_sha: 9b04c24763514b1be7f5b7bdc7117130c8daa17d
-commit_message: "Fix lint errors"
+last_published: "2023-08-30 20:54:25 +0000"
+commit_sha: af509a1f6e35fb4d779de143f9a59fbd2818f3fd
+commit_message: "Fix merge conflict"
 branch_name: update/39885_variation_pagination_table
 passed: true
 ---
