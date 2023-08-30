@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39914/api/i
 pr_number: 39914
 pr_title_encoded: "Product+Block+Editor%3A+add+tracks+to+the+Variations+tab"
 pr_test_type: api
-last_published: "2023-08-30 13:33:40 +0000"
-commit_sha: 4dc5f359ad1b21638af8603a6f10f1e83aa7a157
-commit_message: "Get attribute options from the terms prop instead of options, this en…"
+last_published: "2023-08-30 17:49:44 +0000"
+commit_sha: e5ad91bfa4422e52c6a724fa0dde0fa28a5669c9
+commit_message: "Add Variation options section back"
 branch_name: add/39831
 passed: true
 ---
