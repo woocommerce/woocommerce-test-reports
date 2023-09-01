@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39918/api/i
 pr_number: 39918
 pr_title_encoded: "Couple+of+caching+fixes+for+daily+tests"
 pr_test_type: api
-last_published: "2023-08-25 22:24:17 +0000"
-commit_sha: 80cced2d23f110c96c6d46899636493f98633561
-commit_message: "Add changelog"
+last_published: "2023-09-01 18:22:46 +0000"
+commit_sha: e83de75c423e416e4e48de23d27e3a2155f0357d
+commit_message: "Skip one additional assertion on external site"
 branch_name: api/fix-tax-api-test
 passed: true
 ---
