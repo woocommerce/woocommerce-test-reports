@@ -6,11 +6,15 @@ const credentials = require('./key.json');
 // Extract the required information
 const { total, skipped, broken, failed } = data.statistic;
 const duration = data.time.duration / 1000;
-const currentDate = new Date().toLocaleDateString('en-GB', {
+const dateObj = new Date();
+const formattedDate = dateObj.toLocaleDateString('en-GB', {
   day: 'numeric',
   month: 'short',
   year: 'numeric'
-}).replace(/[\s,]+/g, '-');
+});
+const [day, month, year] = formattedDate.split(' ');
+const shortMonth = month.substring(0, 3);
+const currentDate = `${day}-${shortMonth}-${year}`;
 // Google Sheet ID and range
 const spreadsheetId = '1UjaaOCSGNLWW5hYdtw52P5s_PTBWexHW4_CmwHwvCps';
 
