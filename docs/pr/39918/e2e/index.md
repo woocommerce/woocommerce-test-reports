@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39918/e2e/i
 pr_number: 39918
 pr_title_encoded: "Couple+of+caching+fixes+for+daily+tests"
 pr_test_type: e2e
-last_published: "2023-09-01 19:22:08 +0000"
-commit_sha: 023183e2b11fb097a76b06e242689a4afa1e79cc
-commit_message: "Merge branch 'trunk' into api/fix-tax-api-test"
+last_published: "2023-09-01 21:33:03 +0000"
+commit_sha: d6240d5636d631df2ccc467aea2f8fe62ac042aa
+commit_message: "More test fixes"
 branch_name: api/fix-tax-api-test
 passed: true
 ---
