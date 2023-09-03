@@ -5,5 +5,5 @@ test_type: e2e
 release_tag: 8.1.0-a.4
 env_description: "woocommerce-subscriptions"
 created_at: "2023-08-30T23:21:13Z"
-passed: false
+passed: true
 ---
