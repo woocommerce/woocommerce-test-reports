@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39838/api/i
 pr_number: 39838
 pr_title_encoded: "Include+plugin+test+results+in+Slack+summary+for+daily+tests"
 pr_test_type: api
-last_published: "2023-09-01 05:46:55 +0000"
-commit_sha: 910f8cf583e45f7b3c856d94bcf4e76b920e5ce9
-commit_message: "Handle skipped plugin tests more gracefully"
+last_published: "2023-09-03 01:37:50 +0000"
+commit_sha: d8a07b030b15afe4d16f100a3895965070865c9a
+commit_message: "Add changelog"
 branch_name: e2e/slack-daily-plugins
 passed: true
 ---
