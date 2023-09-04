@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39932/api/i
 pr_number: 39932
 pr_title_encoded: "Add+customize+store+assembler+hub+logo"
 pr_test_type: api
-last_published: "2023-08-30 06:19:35 +0000"
-commit_sha: 741faafb35e7420e8854527755f80ae857451333
-commit_message: "Update pnpm-lock.yaml"
+last_published: "2023-09-04 08:12:52 +0000"
+commit_sha: 0fe57002e79874e241ffe707191794d5b72d380e
+commit_message: "Update plugins/woocommerce-admin/client/customize-store/assembler-hub…"
 branch_name: add/customize-store-assembler-hub-logo
-passed: true
+passed: false
 ---
