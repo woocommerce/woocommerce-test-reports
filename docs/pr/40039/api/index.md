@@ -1,0 +1,12 @@
+---
+layout: redirect
+redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40039/api/index.html
+pr_number: 40039
+pr_title_encoded: "Add+filter+woocommerce_hpos_enable_sync_on_read+to+disable+sync+on+read+with+HPOS+sync+enabled."
+pr_test_type: api
+last_published: "2023-09-05 09:38:56 +0000"
+commit_sha: 1d0665a8dded7267142dd6275095701d929661af
+commit_message: "Add filter woocommerce_hpos_enable_sync_on_read to disable sync on re…"
+branch_name: add/filter-sync-on-read
+passed: false
+---
