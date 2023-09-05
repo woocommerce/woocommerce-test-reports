@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40030/api/i
 pr_number: 40030
 pr_title_encoded: "Avoing+string+to+int+comparison+and+add+the+id+clause+only+when+available"
 pr_test_type: api
-last_published: "2023-09-05 06:22:30 +0000"
-commit_sha: c8cc44523c5b2b8334d7c8eb2ca2dfe2a62f2cdc
-commit_message: "Avoing string to int comparison and add the id clause only when avail…"
+last_published: "2023-09-05 06:46:31 +0000"
+commit_sha: 5a22751aa153087bd1f06bdf999a4d2e912d8e16
+commit_message: "Add unit test + changelog."
 branch_name: fix/cust_bought_product_query_cache
 passed: true
 ---
