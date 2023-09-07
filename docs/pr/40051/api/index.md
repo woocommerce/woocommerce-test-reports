@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40051/api/i
 pr_number: 40051
 pr_title_encoded: "Add+customize+store+colors"
 pr_test_type: api
-last_published: "2023-09-06 05:13:29 +0000"
-commit_sha: 67291c30a612df9ef03582c90e270ce7082c6e64
-commit_message: "Add reference links"
+last_published: "2023-09-07 07:42:10 +0000"
+commit_sha: 536d647aada528b8e104274ab946c51cff83f730
+commit_message: "Rename files"
 branch_name: add/cys-color-palette
-passed: true
+passed: false
 ---
