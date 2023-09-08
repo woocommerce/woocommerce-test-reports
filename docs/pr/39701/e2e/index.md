@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39701/e2e/i
 pr_number: 39701
 pr_title_encoded: "%5BWIP%5D+Add+order+source+attribution"
 pr_test_type: e2e
-last_published: "2023-09-08 16:51:41 +0000"
-commit_sha: 41cff0f393317f22b7c9bcb2521c2d746d694675
-commit_message: "Make the on_plugins_loaded function protected"
+last_published: "2023-09-08 22:14:56 +0000"
+commit_sha: 77d64a750f5b51a1cd010b79c910ab02031cba1f
+commit_message: "Move SourceAttribution test to correct location"
 branch_name: feature/order_source_attribution
 passed: true
 ---
