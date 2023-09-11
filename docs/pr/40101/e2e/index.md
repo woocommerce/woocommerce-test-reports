@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40101/e2e/i
 pr_number: 40101
 pr_title_encoded: "Update+CLDR+sourced+data+from+39.0+to+43.1"
 pr_test_type: e2e
-last_published: "2023-09-10 20:43:47 +0000"
-commit_sha: caefc0b3f5398da12a1d313250df82d6f30a19b6
-commit_message: "Remove obsolete no_NO locale"
+last_published: "2023-09-11 19:28:34 +0000"
+commit_sha: 3de8ed8c55df591024db9f25148e908d87376228
+commit_message: "Bump version tag, remove debug code"
 branch_name: update/locale-files-from-latest-cldr
 passed: true
 ---
