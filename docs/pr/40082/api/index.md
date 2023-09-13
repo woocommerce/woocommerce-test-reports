@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40082/api/i
 pr_number: 40082
 pr_title_encoded: "Add+customize+store+-+fonts"
 pr_test_type: api
-last_published: "2023-09-12 08:30:52 +0000"
-commit_sha: a7a851e88e3b0a56195becddbf52a72adc66a0e5
-commit_message: "Add inline comment for font-hosting note"
+last_published: "2023-09-13 08:03:29 +0000"
+commit_sha: e20ab485533907ba87e853b97d45c1fc70f13927
+commit_message: "Remove duplicated External dependencies"
 branch_name: add/cys-fonts
 passed: true
 ---
