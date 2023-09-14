@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40136/e2e/i
 pr_number: 40136
 pr_title_encoded: "Customize+Your+Store+-+Footer"
 pr_test_type: e2e
-last_published: "2023-09-14 01:24:35 +0000"
-commit_sha: 0fd161abce287c35dee4e0939f533b8c62bb590b
-commit_message: "Filter footer blocks"
+last_published: "2023-09-14 20:08:18 +0000"
+commit_sha: f0502a297bcf7e99d3587163c87696409e255586
+commit_message: "Implement highlight effect"
 branch_name: add/39719-cys-footer
 passed: true
 ---
