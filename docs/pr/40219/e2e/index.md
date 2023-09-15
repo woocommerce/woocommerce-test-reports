@@ -1,0 +1,12 @@
+---
+layout: redirect
+redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40219/e2e/index.html
+pr_number: 40219
+pr_title_encoded: "Fix+issue+with+deleting+variations+in+new+product+editor"
+pr_test_type: e2e
+last_published: "2023-09-15 17:21:24 +0000"
+commit_sha: dd5ff180826b5030ec628befeea55da93cecdb4f
+commit_message: ""
+branch_name: fix/40168_delete_variation
+passed: false
+---
