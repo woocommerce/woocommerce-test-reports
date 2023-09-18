@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40235/api/i
 pr_number: 40235
 pr_title_encoded: "Add+basic+e2e+setup+and+tests+for+the+Assembler+Hub"
 pr_test_type: api
-last_published: "2023-09-18 05:19:02 +0000"
-commit_sha: c7c46d45a7dcf0ac3df05ea6fca4848b75ccf109
-commit_message: "Add support to set wp options in helper, refactor tests to turn off w…"
+last_published: "2023-09-18 05:53:06 +0000"
+commit_sha: b72e468c6a9ef170b67c83f622896ba332aec289
+commit_message: "Rename features helpers to camelCase instead of snake_case"
 branch_name: dev/add-assembler-e2e-tests
 passed: true
 ---
