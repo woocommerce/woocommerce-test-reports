@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40136/api/i
 pr_number: 40136
 pr_title_encoded: "Customize+Your+Store+-+Footer"
 pr_test_type: api
-last_published: "2023-09-15 20:44:04 +0000"
-commit_sha: 53a6cd884eb3daf2c633aaff4cdff5bc959cf782
-commit_message: "Update block list"
+last_published: "2023-09-18 07:10:35 +0000"
+commit_sha: ebad4a932b528510a6abe77b16dafb14d76d89c2
+commit_message: "Update footer sidebar"
 branch_name: add/39719-cys-footer
 passed: true
 ---
