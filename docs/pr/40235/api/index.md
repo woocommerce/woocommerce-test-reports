@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40235/api/i
 pr_number: 40235
 pr_title_encoded: "Add+basic+e2e+setup+and+tests+for+the+Assembler+Hub"
 pr_test_type: api
-last_published: "2023-09-18 02:56:10 +0000"
-commit_sha: a78fa99afbc16e62ed47be482e05445e593df3bd
-commit_message: "Use locators for tests."
+last_published: "2023-09-18 05:19:02 +0000"
+commit_sha: c7c46d45a7dcf0ac3df05ea6fca4848b75ccf109
+commit_message: "Add support to set wp options in helper, refactor tests to turn off w…"
 branch_name: dev/add-assembler-e2e-tests
 passed: true
 ---
