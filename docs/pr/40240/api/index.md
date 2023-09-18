@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40240/api/i
 pr_number: 40240
 pr_title_encoded: "add%3A+cys+ai+font+pairing"
 pr_test_type: api
-last_published: "2023-09-18 06:42:53 +0000"
+last_published: "2023-09-18 07:32:49 +0000"
 commit_sha: f8be2914587a2cd3b5d25b911903c3253117596f
 commit_message: "add: cys ai font pairing suggestion"
 branch_name: add/cys-ai-font-pairing
