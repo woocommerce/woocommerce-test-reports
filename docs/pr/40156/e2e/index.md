@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40156/e2e/i
 pr_number: 40156
 pr_title_encoded: "Add+tracks+to+CYS+assembler-hub+and+hide+pages+sidebar+screen"
 pr_test_type: e2e
-last_published: "2023-09-14 05:42:31 +0000"
-commit_sha: 6f287bc7e570ed53baf1a869ec8e336e48f72676
-commit_message: "Add tracks to assembler-hub and hide add pages menu"
+last_published: "2023-09-18 05:29:52 +0000"
+commit_sha: 71a1613da7495ba7fa87a76e790552b618b37919
+commit_message: "Merge branch 'trunk' into add/cys-assembler-hub-tracks"
 branch_name: add/cys-assembler-hub-tracks
 passed: true
 ---
