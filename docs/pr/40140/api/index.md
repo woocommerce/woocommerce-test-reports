@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40140/api/i
 pr_number: 40140
 pr_title_encoded: "Customize+Your+Store+-+Homepage+sidebar"
 pr_test_type: api
-last_published: "2023-09-18 13:58:17 +0000"
-commit_sha: b0ee5eabe78994818b1821270e43f3a1be92bfd3
-commit_message: "Enqueue jetpack block editor assets"
+last_published: "2023-09-19 05:42:41 +0000"
+commit_sha: e9e453839d7cba3f2b20244bbe75e3ab5a0fde6f
+commit_message: "Fix styles"
 branch_name: add/39720-cys-homepagel-template
 passed: true
 ---
