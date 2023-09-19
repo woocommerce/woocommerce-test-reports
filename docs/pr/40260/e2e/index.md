@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40260/e2e/i
 pr_number: 40260
 pr_title_encoded: "Remove+core-profiler+checks+from+the+tests"
 pr_test_type: e2e
-last_published: "2023-09-19 05:52:36 +0000"
-commit_sha: 8940db51511884bda482f8c024846156871c3eb2
-commit_message: "Change to trigger GH jobs"
+last_published: "2023-09-19 07:32:48 +0000"
+commit_sha: 3273c68f8d9cf14375b9fb498aea97b7cca0f0ee
+commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
 branch_name: update/remove-core-profiler-related-test-code
 passed: true
 ---
