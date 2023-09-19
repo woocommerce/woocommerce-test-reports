@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40265/api/i
 pr_number: 40265
 pr_title_encoded: "Shipping+Settings%3A+CSS%2FHTML+tweaks+and+Modal+changes+to+Shipping+Zones+%282%29"
 pr_test_type: api
-last_published: "2023-09-19 03:48:44 +0000"
-commit_sha: 6e709f3b7d10475afa98322d59e2160c4d111acf
-commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
+last_published: "2023-09-19 05:35:43 +0000"
+commit_sha: efd2f8a0b4a8b4d67eb2b480527d5b4882d88d5a
+commit_message: "Merge branch 'update/shipping-zone-settings-css-take-2' of github.com…"
 branch_name: update/shipping-zone-settings-css-take-2
 passed: true
 ---
