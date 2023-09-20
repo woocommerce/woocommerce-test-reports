@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40247/e2e/i
 pr_number: 40247
 pr_title_encoded: "In-app+marketplace+-+add+themes+tab"
 pr_test_type: e2e
-last_published: "2023-09-18 14:08:28 +0000"
-commit_sha: 507c53e2517760af1ab9115d9119880cf2ded4cc
-commit_message: "Fix case where no vendor URL causes errors"
+last_published: "2023-09-20 10:40:58 +0000"
+commit_sha: d42ebeca7349d79b42cbe159c343bd90de699e01
+commit_message: "Address PR feedback"
 branch_name: add/wccom-18032-marketplace-themes-tab
-passed: true
+passed: false
 ---
