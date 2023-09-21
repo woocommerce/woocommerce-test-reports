@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40320/e2e/i
 pr_number: 40320
 pr_title_encoded: "Add+test+to+bulk+update+order+status"
 pr_test_type: e2e
-last_published: "2023-09-21 17:27:16 +0000"
+last_published: "2023-09-21 17:58:48 +0000"
 commit_sha: eb495a0c33f2bd1822021c552ab9578078f90612
 commit_message: "Merge branch 'trunk' into e2e/bulk-update-order-status"
 branch_name: e2e/bulk-update-order-status
