@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40317/api/i
 pr_number: 40317
 pr_title_encoded: "Add+test+to+add+and+remove+order+notes."
 pr_test_type: api
-last_published: "2023-09-20 21:40:51 +0000"
-commit_sha: 864eed302d8b988a1a3b503b42037e0716de9b14
-commit_message: "Changelog"
+last_published: "2023-09-21 17:25:35 +0000"
+commit_sha: c3d1bd029e16556afe3309c90ff1947bf4614257
+commit_message: "Merge branch 'trunk' into e2e/add-order-notes"
 branch_name: e2e/add-order-notes
 passed: true
 ---
