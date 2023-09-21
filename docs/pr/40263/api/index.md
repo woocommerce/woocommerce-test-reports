@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40263/api/i
 pr_number: 40263
 pr_title_encoded: "Template+API%3A+Expose+template+block+id+and+order+to+client"
 pr_test_type: api
-last_published: "2023-09-21 14:59:25 +0000"
-commit_sha: 2cf765f2b2123d4a2f150138fb8ddcc67851fb92
-commit_message: "Fix tabs tests by mocking useWooBlockProps"
+last_published: "2023-09-21 15:27:40 +0000"
+commit_sha: d5fa0f5df5be05c8b5fefab857b29638246a9b4a
+commit_message: "Allow header duplication under different nesting"
 branch_name: add/expose-block-id-and-order
 passed: true
 ---
