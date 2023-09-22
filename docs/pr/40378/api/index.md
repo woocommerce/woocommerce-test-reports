@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40378/api/i
 pr_number: 40378
 pr_title_encoded: "Fix+attribute+list+styles"
 pr_test_type: api
-last_published: "2023-09-22 17:58:04 +0000"
-commit_sha: 051436e6d09be6c4d33853f1d57cf7ffee053dd0
-commit_message: "Add changelog"
+last_published: "2023-09-22 18:41:08 +0000"
+commit_sha: 231622f74601406b441dba9d7bab655f71b3c97a
+commit_message: "Move changelog"
 branch_name: fix/39224_styles_attribute_list
 passed: true
 ---
