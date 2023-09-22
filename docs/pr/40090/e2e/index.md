@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40090/e2e/i
 pr_number: 40090
 pr_title_encoded: "Updates+the+marketing+knowledgebase+posts+endpoint"
 pr_test_type: e2e
-last_published: "2023-09-21 16:17:52 +0000"
+last_published: "2023-09-22 14:06:30 +0000"
 commit_sha: 01b99e98036e365d7e57112f2c539b12789aac7f
 commit_message: "Removes the default topic for unavailable topics."
 branch_name: update/marketing-kb-endpoints
