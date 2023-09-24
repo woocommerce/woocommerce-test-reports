@@ -11,6 +11,7 @@ on:
       e2e_artifact:
         description: E2E test report artifact.
       s3_root:
+        description: Root prefix of the test report.
         required: true
         default: test
         type: choice
