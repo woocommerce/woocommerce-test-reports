@@ -160,6 +160,7 @@ jobs:
           aws s3 sync output/e2e $E2E_DESTINATION --delete
 
       - name: Use JSON key file
+        if: ${{ github.ref_name == 'trunk' }}
         working-directory: repo/.github/workflows/scripts
         env:
           SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
@@ -168,6 +169,7 @@ jobs:
           echo "$SERVICE_ACCOUNT_KEY" > key.json
 
       - name: Update e2e test suite stats
+        if: ${{ github.ref_name == 'trunk' }}
         working-directory: repo/
         run: |
           npm install
@@ -175,6 +177,7 @@ jobs:
           node .github/workflows/scripts/update-e2e-stats.js
 
       - name: Update API test suite stats
+        if: ${{ github.ref_name == 'trunk' }}
         working-directory: repo/
         run: |
           npm install
