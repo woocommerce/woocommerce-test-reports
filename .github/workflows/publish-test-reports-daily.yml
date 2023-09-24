@@ -2,6 +2,7 @@ name: Publish Daily smoke test report
 on:
   workflow_dispatch:
     inputs:
+      #  mytodo: remove RUN_ID?
       run_id:
         description: Daily smoke test workflow run ID.
         required: true
@@ -157,26 +158,6 @@ jobs:
         run: |
           aws s3 sync output/api $API_DESTINATION --delete
           aws s3 sync output/e2e $E2E_DESTINATION --delete
-
-      - name: Prepare Slack message
-        id: prepare_slack_message
-        working-directory: repo/.github/workflows/scripts
-        run: |
-          mkdir -p $GITHUB_WORKSPACE/slack
-          SLACK_MESSAGE=$(RUN_ID=$RUN_ID \
-            API_SUMMARY_JSON=${{ github.workspace }}/output/api/widgets/summary.json \
-            E2E_SUMMARY_JSON=${{ github.workspace }}/output/e2e/widgets/summary.json \
-            node prepare-slack-message-daily.js)
-          echo "$SLACK_MESSAGE" > $GITHUB_WORKSPACE/slack/slack-message.json
-          cat $GITHUB_WORKSPACE/slack/slack-message.json
-
-      - name: Post test report to Slack channel
-        uses: slackapi/slack-github-action@v1.19.0
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.E2E_SLACK_TOKEN }}
-        with:
-          channel-id: ${{ secrets.SLACK_CHANNEL_ID_DAILY }}
-          payload-file-path: ${{ github.workspace }}/slack/slack-message.json
 
       - name: Use JSON key file
         working-directory: repo/.github/workflows/scripts
