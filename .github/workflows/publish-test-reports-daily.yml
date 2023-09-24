@@ -2,7 +2,6 @@ name: Publish Daily smoke test report
 on:
   workflow_dispatch:
     inputs:
-      #  mytodo: remove RUN_ID?
       run_id:
         description: Daily smoke test workflow run ID.
         required: true
