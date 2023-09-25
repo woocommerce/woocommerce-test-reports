@@ -11,6 +11,7 @@ on:
       e2e_artifact:
         description: E2E test report artifact.
       s3_root:
+        description: Root prefix of the test report.
         required: true
         default: test
         type: choice
@@ -158,27 +159,8 @@ jobs:
           aws s3 sync output/api $API_DESTINATION --delete
           aws s3 sync output/e2e $E2E_DESTINATION --delete
 
-      - name: Prepare Slack message
-        id: prepare_slack_message
-        working-directory: repo/.github/workflows/scripts
-        run: |
-          mkdir -p $GITHUB_WORKSPACE/slack
-          SLACK_MESSAGE=$(RUN_ID=$RUN_ID \
-            API_SUMMARY_JSON=${{ github.workspace }}/output/api/widgets/summary.json \
-            E2E_SUMMARY_JSON=${{ github.workspace }}/output/e2e/widgets/summary.json \
-            node prepare-slack-message-daily.js)
-          echo "$SLACK_MESSAGE" > $GITHUB_WORKSPACE/slack/slack-message.json
-          cat $GITHUB_WORKSPACE/slack/slack-message.json
-
-      - name: Post test report to Slack channel
-        uses: slackapi/slack-github-action@v1.19.0
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.E2E_SLACK_TOKEN }}
-        with:
-          channel-id: ${{ secrets.SLACK_CHANNEL_ID_DAILY }}
-          payload-file-path: ${{ github.workspace }}/slack/slack-message.json
-
       - name: Use JSON key file
+        if: ${{ github.ref_name == 'trunk' }}
         working-directory: repo/.github/workflows/scripts
         env:
           SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
@@ -187,6 +169,7 @@ jobs:
           echo "$SERVICE_ACCOUNT_KEY" > key.json
 
       - name: Update e2e test suite stats
+        if: ${{ github.ref_name == 'trunk' }}
         working-directory: repo/
         run: |
           npm install
@@ -194,6 +177,7 @@ jobs:
           node .github/workflows/scripts/update-e2e-stats.js
 
       - name: Update API test suite stats
+        if: ${{ github.ref_name == 'trunk' }}
         working-directory: repo/
         run: |
           npm install
