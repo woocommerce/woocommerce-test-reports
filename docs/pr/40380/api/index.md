@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40380/api/i
 pr_number: 40380
 pr_title_encoded: "Add+new+E2E+tests+to+cover+Shopper+Mini+Cart"
 pr_test_type: api
-last_published: "2023-09-22 20:55:01 +0000"
-commit_sha: 34a37e2e4ee3992db06d6697df2a52fd4f9bd822
-commit_message: "Add new E2E tests to cover Shopper Mini Cart"
+last_published: "2023-09-25 12:17:07 +0000"
+commit_sha: 4899b7e3097ef7ba9dedc3a0a151b86aa09515c2
+commit_message: "Update test not to look for tax label and to check for 2 quantity price"
 branch_name: e2e/add-new-tests-shopper-mini-cart
 passed: true
 ---
