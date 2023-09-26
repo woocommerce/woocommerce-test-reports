@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40076/api/i
 pr_number: 40076
 pr_title_encoded: "Add+product+image+by+SKU"
 pr_test_type: api
-last_published: "2023-09-07 23:00:54 +0000"
-commit_sha: f501550816b6ea74eb84b08c0f9a4cd0dc24c068
-commit_message: "add CSV import support"
+last_published: "2023-09-26 17:28:35 +0000"
+commit_sha: cb0d4bec6e233df892052dee036360c9e3465e09
+commit_message: "update from feedback- move to products advanced settings"
 branch_name: add/product-image-by-sku
-passed: false
+passed: true
 ---
