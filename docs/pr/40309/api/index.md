@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40309/api/i
 pr_number: 40309
 pr_title_encoded: "Create+initial+version+of+Product+Editor+Development+Handbook"
 pr_test_type: api
-last_published: "2023-09-26 17:53:09 +0000"
-commit_sha: 575e2cf32976089bd0c53e73fe82effc8fa4c950
-commit_message: "Iterate over code review suggestions"
+last_published: "2023-09-26 19:28:52 +0000"
+commit_sha: 9bf6257a7c1ffaf77785fa0edded1d6392e9dd90
+commit_message: "Replace product editor structure image"
 branch_name: poc/blocks-doc
 passed: true
 ---
