@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40456/e2e/i
 pr_number: 40456
 pr_title_encoded: "WIP%3A+Fix+Customize+Your+Store+UI+bugs"
 pr_test_type: e2e
-last_published: "2023-09-27 11:08:06 +0000"
-commit_sha: 4ea833cf877c21637c1dcdeb18997c97958b1459
-commit_message: "Add use-selected-pattern hoook to add selected style to pattern"
+last_published: "2023-09-28 06:10:26 +0000"
+commit_sha: 07fd90e1b610e61abf7721d8785df5d1fb4e7a39
+commit_message: "Fix opacity preview issue"
 branch_name: fix/cys-ui-issues
-passed: true
+passed: false
 ---
