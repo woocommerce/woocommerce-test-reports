@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40492/api/i
 pr_number: 40492
 pr_title_encoded: "Cache+Marketplace+search+results"
 pr_test_type: api
-last_published: "2023-09-28 15:20:49 +0000"
-commit_sha: 1c1f36c7d0dc2d55bb1d133b97e8aa6e16d2951c
-commit_message: "Happier TS types"
+last_published: "2023-09-28 16:53:44 +0000"
+commit_sha: 5e34eb4c7860e3bd80daa8f39f357176ed6ff5a8
+commit_message: "Enable apiFetch to use cache too"
 branch_name: add/wccom-18292-cache-marketplace-results
-passed: false
+passed: true
 ---
