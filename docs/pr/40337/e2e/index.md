@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40337/e2e/i
 pr_number: 40337
 pr_title_encoded: "Create+woocommerce%2Fproduct-text-field+block"
 pr_test_type: e2e
-last_published: "2023-09-29 13:36:23 +0000"
-commit_sha: 4d079c0e110aaadcac4cd79936eaa996476f99df
-commit_message: "Fix bug: the meta property shouldn't contain "meta_data.""
+last_published: "2023-10-02 20:40:38 +0000"
+commit_sha: 4733d23de2c226c62608066235f625a5cf58b4ea
+commit_message: "Implement code review suggestions"
 branch_name: add/input-field
 passed: true
 ---
