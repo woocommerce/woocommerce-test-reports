@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40551/api/i
 pr_number: 40551
 pr_title_encoded: "Do+not+override+pagination+args+if+%60woocommerce_hpos_pre_query%60+doesn%27t+override+query"
 pr_test_type: api
-last_published: "2023-10-02 17:56:51 +0000"
-commit_sha: 9f6c58486be77a19b4d685f3f647dffc51e02e4f
-commit_message: ""
+last_published: "2023-10-02 19:04:27 +0000"
+commit_sha: 17f81d10894f99edfb81e1b143415e6ec940af19
+commit_message: "Add unit test"
 branch_name: fix/40548
 passed: true
 ---
