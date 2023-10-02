@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40513/e2e/i
 pr_number: 40513
 pr_title_encoded: "Introduce+a+remote+inbox+rule+for+Woo+Express+sites"
 pr_test_type: e2e
-last_published: "2023-09-29 13:47:11 +0000"
-commit_sha: 24385808a4ea572e13b30a0f9b97a228d170b749
-commit_message: "Update function description"
+last_published: "2023-10-02 08:56:45 +0000"
+commit_sha: 8c613aebaadaf367e2357c0bc2e1940d1ce591ec
+commit_message: "Lint markdown"
 branch_name: add/wooexpress-rin-rule
 passed: true
 ---
