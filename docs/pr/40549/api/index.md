@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40549/api/i
 pr_number: 40549
 pr_title_encoded: "Omit+WooCommerce+plugin+from+the+list+of+Woo+extensions+in+Helper"
 pr_test_type: api
-last_published: "2023-10-03 10:51:24 +0000"
-commit_sha: 7fd9c7ef5711941a31ab4235b97d8762f68daaf1
-commit_message: "Restored `woocommerce_show_addons_page` filter, which is used to add …"
+last_published: "2023-10-03 15:06:15 +0000"
+commit_sha: 9bcef3a0151f07a9b645a5cfd25b9b19c3b9459b
+commit_message: "Addressing linter issues. Hook comment."
 branch_name: update/helper-skip-woo-af-plugin
 passed: true
 ---
