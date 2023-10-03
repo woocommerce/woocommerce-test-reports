@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40562/e2e/i
 pr_number: 40562
 pr_title_encoded: "Marketplace%3A+Fix+the+Marketplace+header+being+invisible+after+viewing+other+WC+Admin+pages."
 pr_test_type: e2e
-last_published: "2023-10-03 10:47:33 +0000"
-commit_sha: a1c834c374fc056795a6568ba01156217a0289da
-commit_message: "Marketplace: Change the way we space out heading and content area"
+last_published: "2023-10-03 16:47:00 +0000"
+commit_sha: 44f76f69f9ed1d87b88cc13548e9bb07b76f95f9
+commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
 branch_name: fix/wccom-18329-unvisible-header
 passed: true
 ---
