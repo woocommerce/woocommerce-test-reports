@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40528/api/i
 pr_number: 40528
 pr_title_encoded: "Ensure+HPOS+is+disabled+if+ENABLE_HPOS+is+set+to+%270%27"
 pr_test_type: api
-last_published: "2023-10-03 12:14:10 +0000"
-commit_sha: c7ae09b75fe978ba5a14e6f06998ddf232e267c9
-commit_message: "add in ENABLE_HPOS check"
+last_published: "2023-10-03 15:58:23 +0000"
+commit_sha: a2fe69ab4d1efa242cef8567b1fc14c3aacbf8f2
+commit_message: "Merge remote-tracking branch 'origin/trunk' into e2e/ensure-HPOS-is-d…"
 branch_name: e2e/ensure-HPOS-is-disabled-when-required
 passed: false
 ---
