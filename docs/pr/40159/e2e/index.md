@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40159/e2e/i
 pr_number: 40159
 pr_title_encoded: "Marketplace+Themes%3A+Feature+Branch"
 pr_test_type: e2e
-last_published: "2023-10-04 13:59:25 +0000"
-commit_sha: 06a55014bc76d6124c09d972d5590eedefc3e03f
-commit_message: "Marketplace search view more button & categories (#40375)"
+last_published: "2023-10-04 14:35:43 +0000"
+commit_sha: c1a8f457fec02b7ce733b44564f90d59c57ae0a3
+commit_message: "Support for themes in in-app marketplace."
 branch_name: feature/marketplace-themes
 passed: true
 ---
