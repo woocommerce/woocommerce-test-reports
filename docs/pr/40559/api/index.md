@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40559/api/i
 pr_number: 40559
 pr_title_encoded: "Update+mobile+app+onboarding+modal+to+focus+on+app+installation"
 pr_test_type: api
-last_published: "2023-10-06 02:25:11 +0000"
-commit_sha: 9a30b9aaefe969b72f9e0b4cd5fc7d20b9738fff
-commit_message: "Replace mobile static QR code SVG with `QRCodeSVG`."
+last_published: "2023-10-06 06:14:01 +0000"
+commit_sha: 6a3a94ee42c5125ed4c7c4046f0ca8a2e898f2f2
+commit_message: "Fit mobile app modal height to content with a max height that's talle…"
 branch_name: wcios/mobile-onboarding-task
 passed: true
 ---
