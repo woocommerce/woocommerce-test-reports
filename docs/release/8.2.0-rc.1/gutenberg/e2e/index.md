@@ -5,5 +5,5 @@ test_type: e2e
 release_tag: 8.2.0-rc.1
 env_description: "gutenberg"
 created_at: "2023-10-03T22:20:53Z"
-passed: true
+passed: false
 ---
