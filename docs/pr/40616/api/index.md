@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40616/api/i
 pr_number: 40616
 pr_title_encoded: "add%3A+CYS+task-completed+intro+flow"
 pr_test_type: api
-last_published: "2023-10-06 07:28:59 +0000"
-commit_sha: d3a863c3be0108184f324afa924187659bdd0a34
-commit_message: "add: save ai generated theme id to options"
+last_published: "2023-10-06 08:17:33 +0000"
+commit_sha: 094798f66100ab231cf625800050fad18e68c470
+commit_message: "fixed tests"
 branch_name: add/cys-intro-task-completed-flow
-passed: false
+passed: true
 ---
