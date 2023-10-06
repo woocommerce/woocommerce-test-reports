@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40613/e2e/i
 pr_number: 40613
 pr_title_encoded: "%5BWIP%5D+Update+mobile+app+onboarding+modal+to+be+two+steps"
 pr_test_type: e2e
-last_published: "2023-10-05 09:25:00 +0000"
-commit_sha: 5bf349a36923ae99be0ba75cb0fb408a43ab9a58
-commit_message: "Update the second step view when Jetpack is installed."
+last_published: "2023-10-06 06:24:53 +0000"
+commit_sha: 9614122f08ab970c36b41377af0b4410e31bb736
+commit_message: "Design tweaks."
 branch_name: wcios/mobile-onboarding-task-iteration-2
 passed: true
 ---
