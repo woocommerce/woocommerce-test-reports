@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40572/e2e/i
 pr_number: 40572
 pr_title_encoded: "Refactored+Linting+%26+Unit+Testing+Workflows"
 pr_test_type: e2e
-last_published: "2023-10-06 23:40:30 +0000"
-commit_sha: 33ad4b23d48976b141494c6debb37db7ff9ef125
-commit_message: "Added Custom Test Env Command"
+last_published: "2023-10-08 08:27:11 +0000"
+commit_sha: c353b741553e425afaa64f8f6de8c7fa1ce5b5c1
+commit_message: "Removed E2E From CI Workflow"
 branch_name: refactor/unit-test-workflow
 passed: true
 ---
