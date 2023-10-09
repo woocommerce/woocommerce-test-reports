@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40606/api/i
 pr_number: 40606
 pr_title_encoded: "Change+the+blocks+editor+header+to+support+variations"
 pr_test_type: api
-last_published: "2023-10-05 20:57:42 +0000"
-commit_sha: 74eda398b3aab5cd8e214e4b4dbe251fd2a85166
-commit_message: "Change changelog"
+last_published: "2023-10-09 14:15:26 +0000"
+commit_sha: 90980865fd77e085e14dacd33d7af57c8bd2b60a
+commit_message: "Add changelog"
 branch_name: dev/40590_change_header_to_support_variation
 passed: true
 ---
