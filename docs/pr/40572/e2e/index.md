@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40572/e2e/i
 pr_number: 40572
 pr_title_encoded: "Refactored+Linting+%26+Unit+Testing+Workflows"
 pr_test_type: e2e
-last_published: "2023-10-09 23:15:54 +0000"
-commit_sha: 785ebc5c5a2a17735d5207d2731ac1e7e6d717ab
-commit_message: "Fixed Accidental Test Config Mistake"
+last_published: "2023-10-09 23:47:10 +0000"
+commit_sha: 71f644a9f2e21cac60a7eaa3dcdfe94ca88780d3
+commit_message: "Made Linting Script Shell Agnostic"
 branch_name: refactor/unit-test-workflow
-passed: false
+passed: true
 ---
