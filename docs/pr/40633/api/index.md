@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40633/api/i
 pr_number: 40633
 pr_title_encoded: "Complete+General+tab+for+Single+Variation+page"
 pr_test_type: api
-last_published: "2023-10-06 18:54:50 +0000"
-commit_sha: 76dc6b47efa4618760d40af3a9a8bb891e774d08
-commit_message: "Fix DropZone min height in Image section"
+last_published: "2023-10-10 12:20:31 +0000"
+commit_sha: 015d769f51ee3fff85198974db0cbc25e30f297e
+commit_message: ""
 branch_name: add/40592
 passed: false
 ---
