@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40630/e2e/i
 pr_number: 40630
 pr_title_encoded: "Add+My+subscriptions+install"
 pr_test_type: e2e
-last_published: "2023-10-11 11:44:58 +0000"
-commit_sha: 02617c9566708a2ddd2df5c2d258c0e0e6055ee1
-commit_message: "Marketplace: add plugin install from the subscriptions page"
+last_published: "2023-10-11 20:05:32 +0000"
+commit_sha: 326a97de20c4ce9e4116bb695324065030dafaba
+commit_message: "Marketplace: Use the activation function to show install button"
 branch_name: add/my-subscriptions-install
 passed: true
 ---
