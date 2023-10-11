@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40705/e2e/i
 pr_number: 40705
 pr_title_encoded: "Add+%60store_id%60+to+WC_Tracker+and+Tracks"
 pr_test_type: e2e
-last_published: "2023-10-11 14:24:27 +0000"
-commit_sha: 664ce667b0c8385e5ae8b4ca4398788344f981d9
-commit_message: "add store_id to WC_Tracker and Tracks; add blog_id to WC_Tracker"
+last_published: "2023-10-11 14:47:03 +0000"
+commit_sha: e619c463c273d5d0c26fa44fe19b4cd623ce4e0a
+commit_message: "update wc-install-test; add wc-tracks-test"
 branch_name: add/store-id-to-wc-tracker-and-tracks
-passed: true
+passed: false
 ---
