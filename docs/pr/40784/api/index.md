@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40784/api/i
 pr_number: 40784
 pr_title_encoded: "Add+package+and+composer+dependencies"
 pr_test_type: api
-last_published: "2023-10-13 20:17:20 +0000"
-commit_sha: 2069bd9069bc1aeb1a861838fe663b12dfbcfa71
-commit_message: "Added creation of package composer json files"
+last_published: "2023-10-13 20:34:03 +0000"
+commit_sha: b34942453542bd9f1147ca8c065f52b02bc8bd78
+commit_message: "Fix validation error"
 branch_name: add/40312_package_and_composer_dependencies
 passed: false
 ---
