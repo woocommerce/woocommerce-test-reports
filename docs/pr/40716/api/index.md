@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40716/api/i
 pr_number: 40716
 pr_title_encoded: "Test+PR%2C+do+not+merge"
 pr_test_type: api
-last_published: "2023-10-13 22:33:35 +0000"
-commit_sha: 0515caa7fb7399749b743c041ab760a27e2a401d
-commit_message: "Yep"
+last_published: "2023-10-13 23:09:28 +0000"
+commit_sha: 4c463011633156e37b276069027f49917508ad65
+commit_message: "Yep  again"
 branch_name: test/php-core-change
-passed: false
+passed: true
 ---
