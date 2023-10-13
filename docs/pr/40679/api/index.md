@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40679/api/i
 pr_number: 40679
 pr_title_encoded: "Display+notice+at+the+top+single+variations"
 pr_test_type: api
-last_published: "2023-10-13 12:54:21 +0000"
-commit_sha: 47de56d1d550cc66f5b7e67d5a1ba7aaeb990b0b
-commit_message: "Remove context"
+last_published: "2023-10-13 13:29:45 +0000"
+commit_sha: 4a963d583828842476fee56ef6dadbda5f7639e2
+commit_message: "Add useConfirmUnsavedProductChanges to Notice block"
 branch_name: dev/40597_display_notice_at_top_single_variation
 passed: true
 ---
