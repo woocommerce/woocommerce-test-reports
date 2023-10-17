@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40627/e2e/i
 pr_number: 40627
 pr_title_encoded: "Replace+the+Legacy+REST+API+with+a+stub+that+always+returns+an+error"
 pr_test_type: e2e
-last_published: "2023-10-17 08:30:36 +0000"
-commit_sha: 1e2540238ee66d8d6fd428189b006f6dcfb7b916
-commit_message: "Fix: required argument not passed to query_vars filter"
+last_published: "2023-10-17 08:53:02 +0000"
+commit_sha: c10d66504dab618a3922e4758f9e67e32d90b977
+commit_message: "Fix code styling"
 branch_name: remove_legacy_rest_api
 passed: false
 ---
