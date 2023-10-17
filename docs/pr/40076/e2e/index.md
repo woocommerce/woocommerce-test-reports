@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40076/e2e/i
 pr_number: 40076
 pr_title_encoded: "Add+product+image+by+SKU"
 pr_test_type: e2e
-last_published: "2023-09-26 17:28:36 +0000"
-commit_sha: cb0d4bec6e233df892052dee036360c9e3465e09
-commit_message: "update from feedback- move to products advanced settings"
+last_published: "2023-10-17 18:01:26 +0000"
+commit_sha: c840d1de38070b8428dc28dc1a0a9055669dd5a6
+commit_message: "address phpcs"
 branch_name: add/product-image-by-sku
 passed: true
 ---
