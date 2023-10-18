@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40752/api/i
 pr_number: 40752
 pr_title_encoded: "My+subscription+product+updates"
 pr_test_type: api
-last_published: "2023-10-16 09:16:55 +0000"
-commit_sha: c98f5ce8960ed22a456dac5a65e9538b13288cb9
-commit_message: "Remove all data from API"
+last_published: "2023-10-18 16:33:23 +0000"
+commit_sha: 57b57a615646a93278c11bae87de823fb8c8be59
+commit_message: "Remove merge string"
 branch_name: add/my-subscription-product-update
 passed: true
 ---
