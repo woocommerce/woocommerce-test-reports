@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40627/api/i
 pr_number: 40627
 pr_title_encoded: "Replace+the+Legacy+REST+API+with+a+stub+that+always+returns+an+error"
 pr_test_type: api
-last_published: "2023-10-17 08:53:01 +0000"
-commit_sha: c10d66504dab618a3922e4758f9e67e32d90b977
-commit_message: "Fix code styling"
+last_published: "2023-10-18 10:57:59 +0000"
+commit_sha: 3d204d992858a9702a06cd9a9e9aedfde4d2e526
+commit_message: "Adjust webhooks for the removal of the legacy REST API."
 branch_name: remove_legacy_rest_api
 passed: false
 ---
