@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40884/api/i
 pr_number: 40884
 pr_title_encoded: "Use+a+modified+version+of+edit-site+lock-unlock+module+to+make+it+CYS%E2%80%A6"
 pr_test_type: api
-last_published: "2023-10-19 23:11:39 +0000"
-commit_sha: ef8df7875d0bd4136316497dcb4f5c126d6a2c40
-commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
+last_published: "2023-10-20 00:48:21 +0000"
+commit_sha: 448a7e1fea169a16efee1329ec088b839dfd9b6f
+commit_message: "Update version compare logic to include higher versions"
 branch_name: update/40840-customize-blank-issue-with-wp-6.4
 passed: true
 ---
