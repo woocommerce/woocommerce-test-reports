@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39988/api/i
 pr_number: 39988
 pr_title_encoded: "Add+the+wc_allow_changing_orders_storage_while_sync_is_pending+filter"
 pr_test_type: api
-last_published: "2023-10-24 11:44:43 +0000"
-commit_sha: 4d28e2059372930a55813ee20abde6b845aaace6
-commit_message: "Fix linting issue"
+last_published: "2023-10-24 14:39:46 +0000"
+commit_sha: abb1edc2ea0e98607d45e188e904322f6d9a08e1
+commit_message: "Fix unit tests"
 branch_name: add-wc_allow_changing_orders_storage_while_sync_is_pending-filter
 passed: true
 ---
