@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40973/api/i
 pr_number: 40973
 pr_title_encoded: "Test%2Frun+ci+with+cart+and+checkout+blocks+as+default"
 pr_test_type: api
-last_published: "2023-10-24 16:40:46 +0000"
-commit_sha: 312f154483574105f441c0b540e0fc21fbee82ae
-commit_message: "removed trouble test"
+last_published: "2023-10-25 10:06:49 +0000"
+commit_sha: f4649ef9f6291a08a21bac46e00ca91837def186
+commit_message: "Merge branch '40865-enhancement-enable-cart-and-checkout-blocks-as-th…"
 branch_name: test/run_ci_with_cart_and_checkout_blocks_as_default
 passed: true
 ---
