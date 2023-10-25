@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40662/api/i
 pr_number: 40662
 pr_title_encoded: "Logging%3A+Add+a+list+table+to+browse+log+files"
 pr_test_type: api
-last_published: "2023-10-25 19:06:54 +0000"
-commit_sha: 3e7b8d1eec3526fa83537e22b729a552e36030ae
-commit_message: "Update unit test to account for log files generated elsewhere in the …"
+last_published: "2023-10-25 23:36:00 +0000"
+commit_sha: 35f2fda9a884d2d9afb951d442538adc6f5f1c13
+commit_message: "More phpcs cleanup"
 branch_name: try/log-file-browser
 passed: true
 ---
