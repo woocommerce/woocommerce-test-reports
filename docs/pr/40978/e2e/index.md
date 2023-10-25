@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40978/e2e/i
 pr_number: 40978
 pr_title_encoded: "Add+filters+to+Variation+table"
 pr_test_type: e2e
-last_published: "2023-10-24 20:47:47 +0000"
-commit_sha: 233fcfc0cf0c32ddf328d1a9e75488a7a22a8246
-commit_message: "Add changelog files"
+last_published: "2023-10-25 12:57:34 +0000"
+commit_sha: f6935e186a4c23c051642326b7e50ed88663f3a3
+commit_message: "Change the min amount of options to show the search input"
 branch_name: add/39890
 passed: true
 ---
