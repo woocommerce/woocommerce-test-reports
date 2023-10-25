@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40936/api/i
 pr_number: 40936
 pr_title_encoded: "Try+using+iframe+for+loading+assembler+hub+behind+the+scenes"
 pr_test_type: api
-last_published: "2023-10-24 08:38:14 +0000"
-commit_sha: 96d751581e6bf5d0f192ae4a2766e9fee8967081
-commit_message: "Update plugins/woocommerce-admin/client/customize-store/design-with-a…"
+last_published: "2023-10-25 08:13:00 +0000"
+commit_sha: 0e65ed7647a4ca3fe21c3d04ead1eec93e3b6345
+commit_message: "Increase loader timeout to 30 seconds"
 branch_name: try/cys-temporary-iframe-solution
 passed: true
 ---
