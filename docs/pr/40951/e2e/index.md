@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40951/e2e/i
 pr_number: 40951
 pr_title_encoded: "Add+improved+tracking+to+the+marketplace"
 pr_test_type: e2e
-last_published: "2023-10-25 10:50:32 +0000"
-commit_sha: 58fe816b8fbc4bbce22924eefdee767d198653e2
-commit_message: "Removed unused import."
+last_published: "2023-10-25 11:41:06 +0000"
+commit_sha: cc83ffd387f93fd659aa1970f7915af7980f375a
+commit_message: "Removed `recordMarketplaceView` from `showSection` in `Products` comp…"
 branch_name: add/wccom-18294-marketplace-tracking
-passed: false
+passed: true
 ---
