@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40990/api/i
 pr_number: 40990
 pr_title_encoded: "Update%2Fmy+subscriptions+wp+installer"
 pr_test_type: api
-last_published: "2023-10-25 08:54:27 +0000"
-commit_sha: 877b71db7a5655083f38ab406ad3e45d769478e3
-commit_message: "Add download_link if subscription exists"
+last_published: "2023-10-26 08:22:41 +0000"
+commit_sha: 11df32098544a2983651999686609ae1cebfcfae
+commit_message: "Add store for installing state"
 branch_name: update/my-subscriptions-wp-installer
 passed: true
 ---
