@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41043/api/i
 pr_number: 41043
 pr_title_encoded: "Add%2Fblock+template+inspector"
 pr_test_type: api
-last_published: "2023-10-26 13:01:05 +0000"
-commit_sha: 15a5bfd6d016b878f19b499a668e29f6e20dfd20
-commit_message: "Refactor menu item components"
+last_published: "2023-10-26 18:02:21 +0000"
+commit_sha: cc46ec5016a23a18a4f91bfacbdd15ea5d683edc
+commit_message: "Initial block inspector panel"
 branch_name: add/block-template-inspector
-passed: false
+passed: true
 ---
