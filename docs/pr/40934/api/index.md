@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40934/api/i
 pr_number: 40934
 pr_title_encoded: "My+subscriptions+action+modals"
 pr_test_type: api
-last_published: "2023-10-24 11:11:23 +0000"
-commit_sha: 35dc504480899b7a3586ebb0f87034eff5c7be57
-commit_message: "Merge branch 'add/my-subscriptions-action-modals' of https://github.c…"
+last_published: "2023-10-26 05:21:28 +0000"
+commit_sha: 9dcb4a0f6991e5b6a0dfae8130430a02e9efa1f5
+commit_message: "Update plugins/woocommerce-admin/client/marketplace/components/my-sub…"
 branch_name: add/my-subscriptions-action-modals
 passed: true
 ---
