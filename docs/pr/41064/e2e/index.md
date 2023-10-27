@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41064/e2e/i
 pr_number: 41064
 pr_title_encoded: "Add+new+test+scenario+for+mini-cart+inclusive+tax+price"
 pr_test_type: e2e
-last_published: "2023-10-27 12:10:53 +0000"
-commit_sha: 03644ddbd9eb37dbf22e748757882fc2a4bd0e45
-commit_message: "Include changelog file"
+last_published: "2023-10-27 12:54:31 +0000"
+commit_sha: 4f2196300e162e3512cdecb199d4fb5e7a0c40f4
+commit_message: "Move changelog file to the right place"
 branch_name: e2e/add-test-mini-cart-taxes
 passed: false
 ---
