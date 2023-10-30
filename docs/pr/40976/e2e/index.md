@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40976/e2e/i
 pr_number: 40976
 pr_title_encoded: "Fix+attributes+modal+incorrect+notice"
 pr_test_type: e2e
-last_published: "2023-10-24 15:07:25 +0000"
-commit_sha: 7ef013f52560648230c3568e8349eb64d5806faf
-commit_message: "Add changelog"
+last_published: "2023-10-30 16:23:29 +0000"
+commit_sha: 857c4dfca4b8d83666a46a2e01c42f3651c1fdba
+commit_message: "Fix build error"
 branch_name: fix/40113_attributes_modal_incorrect_notice
-passed: false
+passed: true
 ---
