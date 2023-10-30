@@ -5,7 +5,7 @@ const credentials = require('./key.json');
 
 // Extract the required information
 const { total, skipped, broken, failed } = data.statistic;
-const duration = data.time.duration / 1000;
+const duration = ( data.time.duration ?? 0 ) / 1000;
 const dateObj = new Date();
 const formattedDate = dateObj.toLocaleDateString('en-GB', {
   day: 'numeric',
