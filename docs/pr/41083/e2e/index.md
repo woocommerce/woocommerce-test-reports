@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41083/e2e/i
 pr_number: 41083
 pr_title_encoded: "%5BCYS%5D+Fix+undefined+query+id+warning"
 pr_test_type: e2e
-last_published: "2023-10-30 10:38:35 +0000"
-commit_sha: 3e8f06a1e742810b0531ea130e9f194661820743
-commit_message: "Add changelog"
+last_published: "2023-10-30 12:09:49 +0000"
+commit_sha: 4039c7f1f7bb122f2ae3da13dfd4e40585919a75
+commit_message: "Update trigger save button logo"
 branch_name: fix/undefined-queryId-warning
 passed: true
 ---
