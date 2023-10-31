@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41130/e2e/i
 pr_number: 41130
 pr_title_encoded: "Render+site+thumbnail+in+CYS+intro+screen"
 pr_test_type: e2e
-last_published: "2023-10-31 14:33:51 +0000"
-commit_sha: 9a6b27dc0916615c265ba6b38100f1dfb00aaf32
-commit_message: "Merge branch 'trunk' into add/40902-render-site-thumbnail"
+last_published: "2023-10-31 16:06:15 +0000"
+commit_sha: d09253e4909bf500db3de9c87c4ff34084c512ac
+commit_message: "Fix lint issues"
 branch_name: add/40902-render-site-thumbnail
 passed: true
 ---
