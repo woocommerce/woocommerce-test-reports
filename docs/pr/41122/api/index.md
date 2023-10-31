@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41122/api/i
 pr_number: 41122
 pr_title_encoded: "%5BCYS%5D+Reduce+the+logo+preview+to+a+maximum+width+of+60px"
 pr_test_type: api
-last_published: "2023-10-31 07:25:21 +0000"
-commit_sha: 81f8eb4f58ad9b21913b1c3be4251e836721a338
-commit_message: "Add changelog"
+last_published: "2023-10-31 14:48:01 +0000"
+commit_sha: 00d3c38f1aaec7d841388f84f757f0cca2f3a9f2
+commit_message: "Set max height and width to 250px"
 branch_name: update/logo-preview-size
 passed: true
 ---
