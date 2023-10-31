@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39701/api/i
 pr_number: 39701
 pr_title_encoded: "Add+order+source+attribution+feature"
 pr_test_type: api
-last_published: "2023-10-31 01:50:51 +0000"
-commit_sha: 9083c4b23dee305f76fd4f76bfa274456fb5b491
-commit_message: "Handle orgin column registration for HPOS compatibility"
+last_published: "2023-10-31 02:05:13 +0000"
+commit_sha: 07ddf860c090977e61d9a641d9f8f7f89870e89a
+commit_message: "Return early when there's already an order object."
 branch_name: feature/order_source_attribution
 passed: true
 ---
