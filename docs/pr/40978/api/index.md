@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40978/api/i
 pr_number: 40978
 pr_title_encoded: "Add+filters+to+Variation+table"
 pr_test_type: api
-last_published: "2023-10-31 15:07:33 +0000"
-commit_sha: a72bc4e55a44316caa19cde1494197941bcd3ba1
-commit_message: ""
+last_published: "2023-10-31 16:05:38 +0000"
+commit_sha: 93730d3542afd03dada1760a346c847347c1f318
+commit_message: "Revert adding selected options as part of the dropdown toggle text"
 branch_name: add/39890
 passed: true
 ---
