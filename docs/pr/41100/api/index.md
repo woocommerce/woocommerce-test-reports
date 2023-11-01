@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41100/api/i
 pr_number: 41100
 pr_title_encoded: "Change+block+default+order+to+10000"
 pr_test_type: api
-last_published: "2023-10-31 21:11:42 +0000"
-commit_sha: 2adfd784e411557ba083aca8d61539b89dcb3491
-commit_message: "Change block default order to 10000"
+last_published: "2023-11-01 13:21:39 +0000"
+commit_sha: d928c2f5f422b156d2914b11d57b2f96cb093bbe
+commit_message: "Update tests"
 branch_name: update/block-def-order
 passed: true
 ---
