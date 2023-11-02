@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41146/api/i
 pr_number: 41146
 pr_title_encoded: "Add+hooks+to+customize+the+behavior+of+the+cart+shipping+calculator+"
 pr_test_type: api
-last_published: "2023-11-01 03:27:32 +0000"
-commit_sha: ad0441d85e4c94cf9a86e846f6d0de2d84fc77e7
-commit_message: "Update `@since` tags, reformat hook docblocks."
+last_published: "2023-11-02 19:52:26 +0000"
+commit_sha: 7f9f47f4c4b7276b49ee0c8e88c4d2e475edead7
+commit_message: "Break apart conditions relating to postcode-requirements for the ship…"
 branch_name: add/cart-shipping-calc-hooks
 passed: true
 ---
