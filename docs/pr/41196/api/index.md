@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41196/api/i
 pr_number: 41196
 pr_title_encoded: "Fix+failing+simple+product+test"
 pr_test_type: api
-last_published: "2023-11-02 18:32:49 +0000"
-commit_sha: 3b72303d956535f1f73d1f1cddb4c877dcd83911
-commit_message: "Fix failing simple product test"
+last_published: "2023-11-02 21:12:09 +0000"
+commit_sha: c20f3d844e614328bbcff3b4f2d4303e229ba931
+commit_message: "Update locator and add changelog"
 branch_name: fix/failing-e2e-unblock-prs
 passed: true
 ---
