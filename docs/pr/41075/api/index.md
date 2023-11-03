@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41075/api/i
 pr_number: 41075
 pr_title_encoded: "delay+the+community+label+until+after+triage-label+workflow"
 pr_test_type: api
-last_published: "2023-11-02 20:49:23 +0000"
-commit_sha: 8349fd2726aac5c9b5ec8421a684b117c9144f73
-commit_message: "update to use actions/scripts"
+last_published: "2023-11-03 14:27:24 +0000"
+commit_sha: 3b471f0452410e3084008ad8573bd4f864ec9ed5
+commit_message: "Merge branch 'trunk' into add/community-delay"
 branch_name: add/community-delay
 passed: true
 ---
