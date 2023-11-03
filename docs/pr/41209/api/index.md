@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41209/api/i
 pr_number: 41209
 pr_title_encoded: "Fix+CYS+UI+bugs+-+Nov+3"
 pr_test_type: api
-last_published: "2023-11-03 07:53:48 +0000"
-commit_sha: ef53ebaf166bf2664d36b4a39a07850c09250a28
-commit_message: "Add changelog"
+last_published: "2023-11-03 08:14:00 +0000"
+commit_sha: 9a702eab4f295de80cb1f6120019156d13fba6a3
+commit_message: "Expand the custom color panel when the user has set a custom color pa…"
 branch_name: fix/cys-ui
 passed: true
 ---
