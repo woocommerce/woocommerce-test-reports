@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40289/e2e/i
 pr_number: 40289
 pr_title_encoded: "Remove+use+of+SQL_CALC_FOUND_ROWS+in+low+stock+query+"
 pr_test_type: e2e
-last_published: "2023-11-03 09:56:02 +0000"
-commit_sha: a5632223f5600161ede620a7f198b93de1ace299
-commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
+last_published: "2023-11-03 11:46:12 +0000"
+commit_sha: 292920adc416c78fdf7e88d56eda312c043855f7
+commit_message: "Merge branch 'trunk' into fix/38932-fix-slow-low-in-stock-query"
 branch_name: fix/38932-fix-slow-low-in-stock-query
-passed: false
+passed: true
 ---
