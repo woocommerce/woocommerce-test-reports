@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41189/api/i
 pr_number: 41189
 pr_title_encoded: "Product+Editor%3A+Select+product+name+block+initially+if+set+to+autofocus"
 pr_test_type: api
-last_published: "2023-11-06 16:01:42 +0000"
-commit_sha: 253172934f1f506f93e7e5ec52639d2e07afecb2
+last_published: "2023-11-06 16:41:27 +0000"
+commit_sha: 2f65ad23a52ab420efa81595dcd3d4b4c95b5cc5
 commit_message: "Changelog"
 branch_name: fix/select-product-name-block-initially
 passed: true
