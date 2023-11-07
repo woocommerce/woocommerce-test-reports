@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41008/e2e/i
 pr_number: 41008
 pr_title_encoded: "Update+the+select+all+behavior+in+the+variations+table"
 pr_test_type: e2e
-last_published: "2023-10-31 19:55:53 +0000"
-commit_sha: a7ca937d91155078d5f5ffc865bd468f68a9b3ae
-commit_message: "Add changelog files"
+last_published: "2023-11-07 19:08:58 +0000"
+commit_sha: b20727cde4490cfdb17ff62dc7ff87a41c9848af
+commit_message: "Fix linter"
 branch_name: add/40214
-passed: true
+passed: false
 ---
