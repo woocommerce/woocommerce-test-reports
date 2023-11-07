@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41205/e2e/i
 pr_number: 41205
 pr_title_encoded: "Avoid+a+type+error+when+performing+an+%60array_sum%28%29%60+under+PHP+8.3."
 pr_test_type: e2e
-last_published: "2023-11-07 11:56:39 +0000"
-commit_sha: e09ea78f76feb8e71f880e2c715cd721b31b56a2
+last_published: "2023-11-07 13:43:40 +0000"
+commit_sha: eb55a375d6191de1f12896e3a06c2d39dcadc576
 commit_message: "avoid short array syntax (linter)"
 branch_name: fix/40660-array-sum-php83
-passed: true
+passed: false
 ---
