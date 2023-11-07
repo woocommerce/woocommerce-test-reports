@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41241/api/i
 pr_number: 41241
 pr_title_encoded: "update+references+to+woocommerce.com+to+now+reference+woo.com"
 pr_test_type: api
-last_published: "2023-11-07 21:18:13 +0000"
-commit_sha: b5924255fd6eb404b92b5eb0694fecf6be240d57
-commit_message: "fix typo in test_wc_rest_urlencode_rfc3986"
+last_published: "2023-11-07 21:50:47 +0000"
+commit_sha: 1df1dacea8adf27971d5b7777eda3d75328dcff6
+commit_message: "more linter work"
 branch_name: update/woocommerce-com-to-woo-com
 passed: true
 ---
