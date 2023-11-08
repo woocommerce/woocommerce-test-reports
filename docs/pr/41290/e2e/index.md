@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41290/e2e/i
 pr_number: 41290
 pr_title_encoded: "Ensure+some+wpdb+properties+exist+before+accessing+them"
 pr_test_type: e2e
-last_published: "2023-11-08 12:30:10 +0000"
-commit_sha: cf808fcfade90c10300af14948916c1dbc906806
-commit_message: "ensure the properties exist before accessing them"
+last_published: "2023-11-08 13:10:15 +0000"
+commit_sha: 3cffe37c5f9671928011e479dfb57596a3003e89
+commit_message: "add changelog file"
 branch_name: fix/failing-test-php8-wp64
-passed: true
+passed: false
 ---
