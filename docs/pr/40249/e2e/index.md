@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40249/e2e/i
 pr_number: 40249
 pr_title_encoded: "Marketplace%3A+My+Subscriptions+feature+branch"
 pr_test_type: e2e
-last_published: "2023-10-23 06:29:56 +0000"
-commit_sha: 83b7b95850e48e45e17b06318d6fabbe97c1162e
-commit_message: "Add subscriptions empty state (#40862)"
+last_published: "2023-11-08 12:47:21 +0000"
+commit_sha: f30426e261f11a52ef19ba68bc02b9b0becc5170
+commit_message: "Merge branch 'trunk' into feature/marketplace-subscriptions"
 branch_name: feature/marketplace-subscriptions
-passed: true
+passed: false
 ---
