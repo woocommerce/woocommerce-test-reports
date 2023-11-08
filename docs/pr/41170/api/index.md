@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41170/api/i
 pr_number: 41170
 pr_title_encoded: "Move+Template+implementation+classes+to+internal+namespace"
 pr_test_type: api
-last_published: "2023-11-07 23:27:42 +0000"
+last_published: "2023-11-08 17:08:20 +0000"
 commit_sha: 1e92783c83a4ffed4d1cb68907176faed970a1c7
 commit_message: "Adapt to new lint rules"
 branch_name: tweak/template-internal
