@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41244/api/i
 pr_number: 41244
 pr_title_encoded: "Remove+unused+large+banner+image"
 pr_test_type: api
-last_published: "2023-11-06 18:03:51 +0000"
-commit_sha: 74ffe182dfa3405a510d98fb3b3835ca88c7213e
+last_published: "2023-11-09 13:43:52 +0000"
+commit_sha: 94f6d2108539e1e9ef346baff45a95382f789a6d
 commit_message: "Add changelog"
 branch_name: update/delete_unused_large_image
 passed: true
