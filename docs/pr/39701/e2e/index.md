@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39701/e2e/i
 pr_number: 39701
 pr_title_encoded: "Add+order+source+attribution+feature"
 pr_test_type: e2e
-last_published: "2023-11-02 16:12:09 +0000"
-commit_sha: 8244924388b0997ea0a5978a4322ceb698ddce70
-commit_message: "Add docblock to the woocommerce_order_save_attribution_source_data hook"
+last_published: "2023-11-11 00:30:23 +0000"
+commit_sha: fc2301ec357ef5e42b318ebddbb078d999b1df23
+commit_message: "Remove unnecessary PHPCS exclusions"
 branch_name: feature/order_source_attribution
-passed: false
+passed: true
 ---
