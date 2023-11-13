@@ -1,0 +1,12 @@
+---
+layout: redirect
+redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41395/api/index.html
+pr_number: 41395
+pr_title_encoded: "Check+if+wc_admin_register_page+exists+before+loading+Marketplace+pages"
+pr_test_type: api
+last_published: "2023-11-13 07:22:26 +0000"
+commit_sha: f8c7bb6ad63c711d9d2a70e8bfa39b1363a0e4e3
+commit_message: "Check if wc_admin_register_page exists before using it"
+branch_name: fix/undefined-wc_admin_register_page-in-marketplce
+passed: true
+---
