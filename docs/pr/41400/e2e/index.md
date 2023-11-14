@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41400/e2e/i
 pr_number: 41400
 pr_title_encoded: "Run+nvm+automatically+post-merge"
 pr_test_type: e2e
-last_published: "2023-11-13 13:43:47 +0000"
-commit_sha: f3c55405617a50e335c44f0125adbb970d43bb6b
-commit_message: "Run nvm automatically post-merge"
+last_published: "2023-11-14 22:24:32 +0000"
+commit_sha: d3fc1d12b23e3b1e87fbf4098a006076e7a4a147
+commit_message: "make this work from any directory in the monorepo"
 branch_name: try/run-nvm-automatically-post-merge
 passed: true
 ---
