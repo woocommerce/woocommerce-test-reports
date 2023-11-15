@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41453/api/i
 pr_number: 41453
 pr_title_encoded: "Improve+CYS+assembler+hub+performance"
 pr_test_type: api
-last_published: "2023-11-15 11:30:33 +0000"
-commit_sha: 66653e013267d97fad462687301317ba9fb78b4a
-commit_message: ""
+last_published: "2023-11-15 11:59:20 +0000"
+commit_sha: a3c85a32df9b68d4c8618b08181a419c21cb7e5a
+commit_message: "Fix isScrollable"
 branch_name: perf/cys-iframe-loading
 passed: true
 ---
