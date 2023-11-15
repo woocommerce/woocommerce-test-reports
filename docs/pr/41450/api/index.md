@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41450/api/i
 pr_number: 41450
 pr_title_encoded: "fix%3A+fixed+all+instances+of+translator+lint+rule+violations"
 pr_test_type: api
-last_published: "2023-11-15 09:58:19 +0000"
+last_published: "2023-11-15 10:43:25 +0000"
 commit_sha: a3e81caad672dc14e88e4c8a8eb2033b9e9ecdc8
 commit_message: "empty commit to trigger CI"
 branch_name: dev/fix-translator-comment-lint-rule
