@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41163/api/i
 pr_number: 41163
 pr_title_encoded: "Use+%27+instead+of+backspace+for+escaping+in+csv+export"
 pr_test_type: api
-last_published: "2023-11-14 11:07:06 +0000"
-commit_sha: df2f304c49425e0ebae08f772d5d35fd7df857b2
-commit_message: "Add changelog"
+last_published: "2023-11-15 08:03:23 +0000"
+commit_sha: ffbc1a9bf6be2d6f8faa5ab6ee9bfdb5151a060f
+commit_message: "Escape tab and carriage return chars too"
 branch_name: add/change-csv-export-escape-char
 passed: true
 ---
