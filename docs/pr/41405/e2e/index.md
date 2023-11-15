@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41405/e2e/i
 pr_number: 41405
 pr_title_encoded: "Do+not+allow+selecting+text+in+the+Paginator+component+of+the+Product+editor"
 pr_test_type: e2e
-last_published: "2023-11-13 16:19:36 +0000"
-commit_sha: d54008b3c272ca34c7e395413ced8899da1c73f8
-commit_message: "don't allow to select paginator text"
+last_published: "2023-11-15 00:26:41 +0000"
+commit_sha: ab64d9a79fce2ab3e354e649df4a77b033e45ba8
+commit_message: "move changelog file to components/ folder"
 branch_name: update/do-not-allow-selecting-text-in-paginator
-passed: true
+passed: false
 ---
