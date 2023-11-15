@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41442/e2e/i
 pr_number: 41442
 pr_title_encoded: "%5BExternal+products%5D+Product+details"
 pr_test_type: e2e
-last_published: "2023-11-15 18:21:26 +0000"
-commit_sha: 28b156c7d357ba8391520ab4dfada0b95065eca0
-commit_message: "Extends the product-text-field validation system"
+last_published: "2023-11-15 20:07:58 +0000"
+commit_sha: 3484ed5121c85caed50373ff58198c330f2aabbf
+commit_message: "Add changelog files"
 branch_name: add/35148
-passed: true
+passed: false
 ---
