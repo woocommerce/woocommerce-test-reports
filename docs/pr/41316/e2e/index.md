@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41316/e2e/i
 pr_number: 41316
 pr_title_encoded: "Template+API%3A+Server-side+logging"
 pr_test_type: e2e
-last_published: "2023-11-09 16:40:59 +0000"
-commit_sha: 9cac8e84ea96721fa52c41812a7d623503a11ca4
-commit_message: "Update message for hide condition added to detached block"
+last_published: "2023-11-15 16:08:25 +0000"
+commit_sha: 6698262cb9bbc2153124d2e481a9e3a1856241bf
+commit_message: "Fix duplicate template registration caused by incorrect rebase confli…"
 branch_name: add/template-api-server-side-logging
 passed: true
 ---
