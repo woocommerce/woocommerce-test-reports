@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41499/api/i
 pr_number: 41499
 pr_title_encoded: "Remove+Codisto+from+default+free+extensions."
 pr_test_type: api
-last_published: "2023-11-16 13:14:16 +0000"
-commit_sha: 2de28b04d04575939d8ecb32d03167713755f81e
-commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
+last_published: "2023-11-16 16:07:53 +0000"
+commit_sha: 20ab36ed4c5b24b5756097183a66ba9e13623d27
+commit_message: "Merge branch 'trunk' into remove/marketing-codisto"
 branch_name: remove/marketing-codisto
 passed: true
 ---
