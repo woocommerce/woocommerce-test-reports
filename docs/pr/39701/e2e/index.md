@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39701/e2e/i
 pr_number: 39701
 pr_title_encoded: "Add+order+source+attribution+feature"
 pr_test_type: e2e
-last_published: "2023-11-14 20:42:53 +0000"
-commit_sha: fa5196e240cdb953addb89f855f2b1a209207616
-commit_message: "Include hide/show text in detail toggle and reverse carets"
+last_published: "2023-11-16 23:06:43 +0000"
+commit_sha: b15b8fbfdf93952a4a4665e390010a6f2437087e
+commit_message: "Adding AbstractInterfaceServiceProvider unit test and test supplies."
 branch_name: feature/order_source_attribution
-passed: true
+passed: false
 ---
