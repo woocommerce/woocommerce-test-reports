@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41436/api/i
 pr_number: 41436
 pr_title_encoded: "Remove+unnecessary+focus+on+block+divs+in+product+editor"
 pr_test_type: api
-last_published: "2023-11-14 19:29:42 +0000"
-commit_sha: e98ddc804a1b70f0899ad72f82c7d8d3c0c3787f
-commit_message: "Fix property name in test"
+last_published: "2023-11-16 13:13:30 +0000"
+commit_sha: 463fb0df374889652fcb6b950681971b84b4391b
+commit_message: "Fix typo"
 branch_name: fix/focus-block
 passed: true
 ---
