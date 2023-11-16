@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41520/api/i
 pr_number: 41520
 pr_title_encoded: "%5BExternal+products%5D+Inventory+tab"
 pr_test_type: api
-last_published: "2023-11-16 19:54:47 +0000"
-commit_sha: dd531f5155cba7a85b68a533d34b9bd8b8e72899
-commit_message: "Add changelog file"
+last_published: "2023-11-16 20:16:00 +0000"
+commit_sha: 6b8ce3efa3ebadfbd8a1712ea7adfaf3f60af1f6
+commit_message: "Fix php linter errors"
 branch_name: add/35149
 passed: true
 ---
