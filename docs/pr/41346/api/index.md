@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41346/api/i
 pr_number: 41346
 pr_title_encoded: "Dev+Tools%3A+View+template+and+template+events"
 pr_test_type: api
-last_published: "2023-11-16 02:40:39 +0000"
-commit_sha: 723c0d50b179683726125973e0c6a5de07a2c0d7
-commit_message: "Initial templates tab"
+last_published: "2023-11-17 21:26:20 +0000"
+commit_sha: cb3af88c65bac8b9ed2954c8534e4d23ff602c5a
+commit_message: "Split template panel into separate tree and details panes"
 branch_name: add/dev-tools-template-events
 passed: true
 ---
