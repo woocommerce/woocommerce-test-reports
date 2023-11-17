@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41202/api/i
 pr_number: 41202
 pr_title_encoded: "Refactoring+Task+Infrastructure"
 pr_test_type: api
-last_published: "2023-11-16 19:50:32 +0000"
-commit_sha: bd8bfff2b04fb612d33391029e71c8ea1db07b7a
-commit_message: "Merge branch 'trunk' into refactor/task-infrastructure"
+last_published: "2023-11-17 18:19:13 +0000"
+commit_sha: 7b0bc9d825c579659f79d4093fc1c5d434e23ea3
+commit_message: "Updated `setup-woocommerce-monorepo` Usage"
 branch_name: refactor/task-infrastructure
-passed: false
+passed: true
 ---
