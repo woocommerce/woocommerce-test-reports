@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41345/api/i
 pr_number: 41345
 pr_title_encoded: "Improve+e2e+stability"
 pr_test_type: api
-last_published: "2023-11-16 20:16:00 +0000"
-commit_sha: dfecf13449d91662633922dedc740f52e7a10132
-commit_message: "Merge branch 'trunk' into fix/improve-e2e-stability"
+last_published: "2023-11-17 22:35:58 +0000"
+commit_sha: ada581f7d508b7657f0d2c49f2f8624fe999376b
+commit_message: "Update a few locators"
 branch_name: fix/improve-e2e-stability
 passed: true
 ---
