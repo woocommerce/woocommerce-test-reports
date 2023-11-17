@@ -2,11 +2,11 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41505/api/index.html
 pr_number: 41505
-pr_title_encoded: "Update%2Fmarketplace+design"
+pr_title_encoded: "Marketplace+design+improvements"
 pr_test_type: api
-last_published: "2023-11-16 12:32:09 +0000"
-commit_sha: 0ca9d33e395fb0919a99fde59c521885f605013f
-commit_message: "Use the same layout of columns for both tables"
+last_published: "2023-11-17 14:56:32 +0000"
+commit_sha: 468da31d4fb0e9edfb3095e089096792346930c5
+commit_message: "Styling tweaks. Changed font-weight of `.woocommerce-marketplace__pro…"
 branch_name: update/marketplace-design
 passed: true
 ---
