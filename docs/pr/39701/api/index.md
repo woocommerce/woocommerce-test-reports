@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39701/api/i
 pr_number: 39701
 pr_title_encoded: "Add+order+source+attribution+feature"
 pr_test_type: api
-last_published: "2023-11-20 15:01:34 +0000"
-commit_sha: 2b53dbf0d745798a60cb5d9261e91102afec5347
+last_published: "2023-11-20 18:03:54 +0000"
+commit_sha: 215cd1c97b8d08d5c129efd87180fc28bc9bc8f5
 commit_message: ""
 branch_name: feature/order_source_attribution
 passed: true
