@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41548/e2e/i
 pr_number: 41548
 pr_title_encoded: "Fix+currency+breaking+lines+when+2+or+more+characters"
 pr_test_type: e2e
-last_published: "2023-11-17 17:36:27 +0000"
-commit_sha: 942eb125f5040a0a7a56f90ae62d398f24807743
-commit_message: "Fix currency breaking lines when 2 or more characters"
+last_published: "2023-11-20 13:16:57 +0000"
+commit_sha: 113ce18fe9e852c882935b780f7805d42feb67af
+commit_message: "Add missing changelog"
 branch_name: fix/currency-wrap
 passed: true
 ---
