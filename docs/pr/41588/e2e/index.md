@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41588/e2e/i
 pr_number: 41588
 pr_title_encoded: "Create+woocommerce-plugin-api-callback.md"
 pr_test_type: e2e
-last_published: "2023-11-20 17:09:28 +0000"
-commit_sha: bec6ce7d74d0c7f0d191b5496a41104992973d64
+last_published: "2023-11-21 23:52:02 +0000"
+commit_sha: c6f4ccdc720a8f5022f73da8abb66b3351b21283
 commit_message: "Update woocommerce-plugin-api-callback.md"
 branch_name: API-callbacks-doc
 passed: true
