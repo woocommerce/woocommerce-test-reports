@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41455/api/i
 pr_number: 41455
 pr_title_encoded: "Marketplace%3A+Add+Tracks+events+to+My+Subscriptions+page"
 pr_test_type: api
-last_published: "2023-11-15 10:20:30 +0000"
-commit_sha: b8ffb37ac20ecac0396679f130eacec89e7a0027
-commit_message: "Marketplace: add Tracks events for the subscription page"
+last_published: "2023-11-21 15:48:12 +0000"
+commit_sha: 3c2e20ed9e7ddfe745ecd545624f9a9b4699f465
+commit_message: "Merge branch 'feature/marketplace-subscriptions' into add/wccom-18721…"
 branch_name: add/wccom-18721-tracks-events-to-marketplace
 passed: true
 ---
