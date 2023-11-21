@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40249/api/i
 pr_number: 40249
 pr_title_encoded: "Marketplace%3A+My+Subscriptions+feature+branch"
 pr_test_type: api
-last_published: "2023-11-10 11:24:42 +0000"
-commit_sha: b7b6a78063673d99ee68d49a5e719130e4fd7089
-commit_message: "Merge branch 'trunk' into feature/marketplace-subscriptions"
+last_published: "2023-11-21 07:13:31 +0000"
+commit_sha: 5fe2e401f02bf38f9408d763637a5d2c58214a9d
+commit_message: "Marketplace - tracking enhancements (#41365)"
 branch_name: feature/marketplace-subscriptions
 passed: true
 ---
