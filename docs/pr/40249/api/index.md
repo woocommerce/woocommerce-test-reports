@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40249/api/i
 pr_number: 40249
 pr_title_encoded: "Marketplace%3A+My+Subscriptions+feature+branch"
 pr_test_type: api
-last_published: "2023-11-22 14:57:24 +0000"
-commit_sha: 3b6d53efe5741d6fd149efc03824ae45fb081947
-commit_message: "Removed refresh button spin animation – was going backwards, and isn'…"
+last_published: "2023-11-22 15:40:06 +0000"
+commit_sha: 6e39f5494ab5a9a6a6fb0f2f20dc9177454e4517
+commit_message: "Merge branch 'trunk' into feature/marketplace-subscriptions"
 branch_name: feature/marketplace-subscriptions
 passed: true
 ---
