@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41633/api/i
 pr_number: 41633
 pr_title_encoded: "Add+Woo+button+to+plugins+list"
 pr_test_type: api
-last_published: "2023-11-22 12:05:55 +0000"
+last_published: "2023-11-22 12:40:27 +0000"
 commit_sha: 05ddbefc66d3ecdabdcfb84cb66fe06de56400ef
 commit_message: "Remove comment"
 branch_name: add/marketplace-button-to-plugins
