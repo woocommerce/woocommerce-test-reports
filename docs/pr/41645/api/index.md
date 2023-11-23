@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41645/api/i
 pr_number: 41645
 pr_title_encoded: "Email+the+site+admin+when+a+payment+gateway+is+enabled"
 pr_test_type: api
-last_published: "2023-11-23 12:07:58 +0000"
-commit_sha: 8c7f44d9e6a8713ca1ab6d9624fe05437850b6d3
-commit_message: "indent assignments correctly"
+last_published: "2023-11-23 14:16:52 +0000"
+commit_sha: 044b82abd204095eaa4eb96b090496edffae867d
+commit_message: "ensure gateway title is set"
 branch_name: add/notify-payment-changes
 passed: true
 ---
