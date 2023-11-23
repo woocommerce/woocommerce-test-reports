@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41660/e2e/i
 pr_number: 41660
 pr_title_encoded: "Update+WooCommerce+Core+WP.org+product+page+readme"
 pr_test_type: e2e
-last_published: "2023-11-23 12:09:50 +0000"
-commit_sha: 7764c64bda5533822ac858d8fcfa14136600b474
-commit_message: "Transform to sub-header texts"
+last_published: "2023-11-23 12:51:10 +0000"
+commit_sha: b3bba5b6ce689c02483c22e798aede181799afcd
+commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
 branch_name: update/woocommerce-core-wp-org-product-page-readme
 passed: true
 ---
