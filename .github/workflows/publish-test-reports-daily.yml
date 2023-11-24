@@ -112,14 +112,6 @@ jobs:
           SUMMARY_JSON_PATH: ${{ github.workspace }}/output/api/widgets/summary.json
         run: node .github/workflows/scripts/change-report-title.js
 
-      - name: Update API test suite stats
-        if: ${{ github.ref_name == 'trunk' }}
-        working-directory: repo/
-        run: |
-          npm install
-          API_SUMMARY_JSON=${{ github.workspace }}/output/api/widgets/summary.json \
-          node .github/workflows/scripts/update-api-stats.js
-
       # ####################
       # E2E Test Report
       # ####################
@@ -175,6 +167,14 @@ jobs:
         run: |
           pwd
           echo "$SERVICE_ACCOUNT_KEY" > key.json
+
+      - name: Update API test suite stats
+        if: ${{ github.ref_name == 'trunk' }}
+        working-directory: repo/
+        run: |
+          npm install
+          API_SUMMARY_JSON=${{ github.workspace }}/output/api/widgets/summary.json \
+          node .github/workflows/scripts/update-api-stats.js
 
       - name: Update e2e test suite stats
         if: ${{ github.ref_name == 'trunk' }}
