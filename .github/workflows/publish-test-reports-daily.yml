@@ -112,6 +112,14 @@ jobs:
           SUMMARY_JSON_PATH: ${{ github.workspace }}/output/api/widgets/summary.json
         run: node .github/workflows/scripts/change-report-title.js
 
+      - name: Update API test suite stats
+        if: ${{ github.ref_name == 'trunk' }}
+        working-directory: repo/
+        run: |
+          npm install
+          API_SUMMARY_JSON=${{ github.workspace }}/output/api/widgets/summary.json \
+          node .github/workflows/scripts/update-api-stats.js
+
       # ####################
       # E2E Test Report
       # ####################
@@ -176,10 +184,12 @@ jobs:
           E2E_SUMMARY_JSON=${{ github.workspace }}/output/e2e/widgets/summary.json \
           node .github/workflows/scripts/update-e2e-stats.js
 
-      - name: Update API test suite stats
-        if: ${{ github.ref_name == 'trunk' }}
+      - name: Create issues for failed E2E tests
         working-directory: repo/
+        env:
+          GITHUB_ISSUE_TOKEN: ${{ secrets.WOO_ISSUES_TOKEN }}
+          RUN_ID: ${{ github.event.inputs.run_id }}
         run: |
           npm install
-          API_SUMMARY_JSON=${{ github.workspace }}/output/api/widgets/summary.json \
-          node .github/workflows/scripts/update-api-stats.js
+          E2E_TEST_REPORT_CSV=${{ github.workspace }}/output/e2e/data/suites.csv \
+          node .github/workflows/scripts/track-flaky-e2e-tests.js
