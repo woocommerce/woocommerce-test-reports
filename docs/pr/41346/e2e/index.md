@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41346/e2e/i
 pr_number: 41346
 pr_title_encoded: "Dev+Tools%3A+View+template+and+template+events"
 pr_test_type: e2e
-last_published: "2023-11-22 14:30:09 +0000"
-commit_sha: 6389a517babf6c289aa806bd3e88dbec0b77eb17
-commit_message: "Separate out disable and hide conditions in details"
+last_published: "2023-11-24 14:43:37 +0000"
+commit_sha: 0f5a2e163698a9efa61d4cfa43b3de80f1f3a219
+commit_message: "Don't show error message when blank expression"
 branch_name: add/dev-tools-template-events
-passed: true
+passed: false
 ---
