@@ -4,6 +4,7 @@ const axios = require('axios');
 
 const token = process.env.GITHUB_ISSUE_TOKEN;
 const csvFile = process.env.E2E_TEST_REPORT_CSV;
+const labels = [ 'team: Solaris', 'focus: e2e tests', 'metric: flaky e2e test' ];
 
 // load the CSV with test run results
 fs.readFile(csvFile, 'utf8', (error, csvData) => {
@@ -45,7 +46,11 @@ fs.readFile(csvFile, 'utf8', (error, csvData) => {
 					// if no matching issue is found, create a new issue.
 					console.log( 'No matching issues found' );
 					const createIssueUrl = `https://api.github.com/repos/${owner}/${repo}/issues`;
-					return axios.post( createIssueUrl, { title: issueData.title, body: issueData.body }, {
+					return axios.post( createIssueUrl, { 
+						title: issueData.title, 
+						body: issueData.body,
+						labels: labels,
+					}, {
 						headers: {
 							Authorization: `Bearer ${ token }`,
 						},
@@ -60,34 +65,3 @@ fs.readFile(csvFile, 'utf8', (error, csvData) => {
 			} );
 	} );
 });
-
-
-
-  //   // Step 4: Create GitHub issues using the API
-  //   failedRows.forEach(row => {
-  //     const issueData = {
-  //       title: row.title,
-  //       body: row.description,
-  //       // Add more properties as needed
-  //     };
-
-  //     fetch('https://api.github.com/repos/{owner}/{repo}/issues', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //         Authorization: 'Bearer YOUR_ACCESS_TOKEN',
-  //       },
-  //       body: JSON.stringify(issueData),
-  //     })
-  //       .then(response => response.json())
-  //       .then(data => {
-  //         console.log('GitHub issue created:', data.html_url);
-  //       })
-  //       .catch(error => {
-  //         console.error('Error creating GitHub issue:', error);
-  //       });
-  //   });
-  // })
-  // .catch(error => {
-  //   console.error('Error reading CSV file:', error);
-  // });
