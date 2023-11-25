@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41346/e2e/i
 pr_number: 41346
 pr_title_encoded: "Dev+Tools%3A+View+template+and+template+events"
 pr_test_type: e2e
-last_published: "2023-11-24 14:43:37 +0000"
-commit_sha: 0f5a2e163698a9efa61d4cfa43b3de80f1f3a219
-commit_message: "Don't show error message when blank expression"
+last_published: "2023-11-25 13:31:26 +0000"
+commit_sha: c9c5e25f6800d289ffcd8eae8fe9fa388c517d2b
+commit_message: "Expression field readonly handling"
 branch_name: add/dev-tools-template-events
 passed: false
 ---
