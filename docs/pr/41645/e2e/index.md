@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41645/e2e/i
 pr_number: 41645
 pr_title_encoded: "Email+the+site+admin+when+a+payment+gateway+is+enabled"
 pr_test_type: e2e
-last_published: "2023-11-27 07:22:57 +0000"
-commit_sha: b31a984c73579408af4e046bf400ae36f3255390
+last_published: "2023-11-27 15:36:16 +0000"
+commit_sha: 5aa6f29b85c3cc4c76c7ee0a4c577a3428d5a0c5
 commit_message: "fix typo"
 branch_name: add/notify-payment-changes
-passed: false
+passed: true
 ---
