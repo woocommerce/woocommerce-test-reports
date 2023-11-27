@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41707/e2e/i
 pr_number: 41707
 pr_title_encoded: "Prepare+block+templates+package+for+release"
 pr_test_type: e2e
-last_published: "2023-11-27 16:14:16 +0000"
+last_published: "2023-11-27 17:34:33 +0000"
 commit_sha: d7cf4768541fdf05947c71e92a644a6e4dadf106
 commit_message: "Prepare block templates package for release"
 branch_name: release/prepare-block-templates
