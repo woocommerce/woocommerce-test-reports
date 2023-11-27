@@ -228,3 +228,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
           BOT_COMMIT_MESSAGE: "Add test report - PR #${{ env.PR_NUMBER }} - ${{ env.COMMIT_MESSAGE }}"
         run: bash push-changes-to-repo.sh
+
+      - name: Create issues for failed E2E tests
+        working-directory: repo/
+        env:
+          GITHUB_ISSUE_TOKEN: ${{ secrets.WOO_ISSUES_TOKEN }}
+          RUN_ID: ${{ github.event.inputs.run_id }}
+        run: |
+          npm install
+          E2E_TEST_REPORT_CSV=${{ github.workspace }}/output/e2e/data/suites.csv \
+          node .github/workflows/scripts/track-flaky-e2e-tests.js
