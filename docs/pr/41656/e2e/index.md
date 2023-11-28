@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41656/e2e/i
 pr_number: 41656
 pr_title_encoded: "CYS+-+AI+Offline+flow"
 pr_test_type: e2e
-last_published: "2023-11-27 23:17:16 +0000"
+last_published: "2023-11-28 10:00:30 +0000"
 commit_sha: a318b6848c02f9b031b90507257998fdd816fa7e
 commit_message: "Set aiOnline from the upstream"
 branch_name: update/41623-cys-ai-offline-flow
