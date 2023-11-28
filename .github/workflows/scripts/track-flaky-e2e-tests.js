@@ -4,7 +4,7 @@ const axios = require('axios');
 
 const token = process.env.GITHUB_ISSUE_TOKEN;
 const csvFile = process.env.E2E_TEST_REPORT_CSV;
-const labels = ['team: Solaris', 'focus: e2e tests', 'metric: flaky e2e test'];
+const labels = ['team: SRE', 'focus: e2e tests', 'metric: flaky e2e test'];
 
 (async () => {
   // load the CSV with test run results
