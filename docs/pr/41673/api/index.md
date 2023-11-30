@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41673/api/i
 pr_number: 41673
 pr_title_encoded: "Poc%2FWooWizard+assistant"
 pr_test_type: api
-last_published: "2023-11-29 15:14:08 +0000"
-commit_sha: 9544305307d1b3c878328956b2bdd8143e4b2f12
-commit_message: "Merge branch 'trunk' into poc/woolf-assistant"
+last_published: "2023-11-30 10:23:32 +0000"
+commit_sha: ba17f5d960a6fb9a9599537f7151247338060eb3
+commit_message: "Use react-markdown to display markdown in chat."
 branch_name: poc/woolf-assistant
 passed: false
 ---
