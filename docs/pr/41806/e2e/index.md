@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41806/e2e/i
 pr_number: 41806
 pr_title_encoded: "Update+order+attribution+default+cookie+lifetime."
 pr_test_type: e2e
-last_published: "2023-11-30 14:49:55 +0000"
-commit_sha: 48f60670fc9961cdb0f0befbc36845b577b75edd
-commit_message: "Update plugins/woocommerce/src/Internal/Orders/OrderAttributionContro…"
+last_published: "2023-11-30 15:14:58 +0000"
+commit_sha: ea51e4ee85c57f090e1c0489c9dd3f0560570b6a
+commit_message: "Remove mention of fractions."
 branch_name: update/order-attribution-session-length
 passed: true
 ---
