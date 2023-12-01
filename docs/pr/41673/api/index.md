@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41673/api/i
 pr_number: 41673
 pr_title_encoded: "Poc%2FWooWizard+assistant"
 pr_test_type: api
-last_published: "2023-11-30 10:23:32 +0000"
-commit_sha: ba17f5d960a6fb9a9599537f7151247338060eb3
-commit_message: "Use react-markdown to display markdown in chat."
+last_published: "2023-12-01 11:51:22 +0000"
+commit_sha: a861c37a0489c8399b0ce3ef9428b2322c31ba12
+commit_message: "Sync dependencies for wp-6.3"
 branch_name: poc/woolf-assistant
 passed: false
 ---
