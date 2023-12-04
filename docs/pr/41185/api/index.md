@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41185/api/i
 pr_number: 41185
 pr_title_encoded: "Fix+z-index+issue+with+the+Image+Background+Removal+Spotlight."
 pr_test_type: api
-last_published: "2023-11-09 17:22:54 +0000"
-commit_sha: 707505ecc459a8d35891e42f368704afe9e2a66a
-commit_message: "Utilize same selector as previously."
+last_published: "2023-12-04 14:13:03 +0000"
+commit_sha: cef70b5a67251980142ab1ff92ee65c2f34fec93
+commit_message: "Merge branch 'trunk' into fix/actually-fix-spotlight"
 branch_name: fix/actually-fix-spotlight
 passed: true
 ---
