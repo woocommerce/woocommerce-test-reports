@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41878/api/i
 pr_number: 41878
 pr_title_encoded: "%5BProduct+Block+Editor%5D%3A+move+Modal+editor+out+of+the+description+block+edit+component"
 pr_test_type: api
-last_published: "2023-12-05 13:56:56 +0000"
-commit_sha: f90970c9dc8b1e2db4ee331c24c722a70d5b83d3
+last_published: "2023-12-05 20:25:34 +0000"
+commit_sha: 65e45578406e8f243742b236439da7a3621d8d1e
 commit_message: "changelog"
 branch_name: update/product-editor-move-modal-editor-to-editor-level
 passed: false
