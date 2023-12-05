@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41202/api/i
 pr_number: 41202
 pr_title_encoded: "Refactoring+Task+Infrastructure"
 pr_test_type: api
-last_published: "2023-12-05 22:40:12 +0000"
-commit_sha: cad438e41f3aa589034dc538aad3f636d8c5dfe7
-commit_message: "Persist Package Newline After Dependency Parse"
+last_published: "2023-12-05 23:26:22 +0000"
+commit_sha: 15efc48fb4fec2a9072a3f18392ed4b3f2473f63
+commit_message: "Disabled CI Install Filtering"
 branch_name: refactor/task-infrastructure
 passed: true
 ---
