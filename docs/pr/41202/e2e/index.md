@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41202/e2e/i
 pr_number: 41202
 pr_title_encoded: "Refactoring+Task+Infrastructure"
 pr_test_type: e2e
-last_published: "2023-11-30 18:31:35 +0000"
-commit_sha: 874aebd52b9cbdcce2e1f2a76b6df93c072cd316
-commit_message: "Merge branch 'trunk' into refactor/task-infrastructure"
+last_published: "2023-12-05 22:28:23 +0000"
+commit_sha: 1f2ed21c2437f618ddd03775d9195f28e16148a6
+commit_message: ""
 branch_name: refactor/task-infrastructure
-passed: false
+passed: true
 ---
