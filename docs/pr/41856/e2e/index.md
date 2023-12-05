@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41856/e2e/i
 pr_number: 41856
 pr_title_encoded: "Fix+Consent+API+integration+with+OSA"
 pr_test_type: e2e
-last_published: "2023-12-04 16:37:53 +0000"
-commit_sha: 60d16fe9f6a83836830c83c19352144ae147b8a4
-commit_message: "Stop tracking order attribution when the consent is revoked on the sa…"
+last_published: "2023-12-05 15:48:05 +0000"
+commit_sha: d9c71921fdd243d40001a6344b0b71296eab4817
+commit_message: "Register WPConsentAPI integration for OrderAttribution"
 branch_name: fix/osa-contsent-revoke
-passed: false
+passed: true
 ---
