@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41876/e2e/i
 pr_number: 41876
 pr_title_encoded: "Update+WooCommerce+Blocks+to+11.7.0"
 pr_test_type: e2e
-last_published: "2023-12-05 13:13:42 +0000"
-commit_sha: 2790823a7c98847cbe77e7fda4f85513c993bedd
-commit_message: "Merge branch 'trunk' into update/woocommerce-blocks-11.7.0"
+last_published: "2023-12-05 13:29:48 +0000"
+commit_sha: 46bd388c9f00afe1e7d3bdca739a8409362eecf0
+commit_message: "Update Mini-Cart block e2e Playwright tests"
 branch_name: update/woocommerce-blocks-11.7.0
 passed: false
 ---
