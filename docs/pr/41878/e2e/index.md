@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41878/e2e/i
 pr_number: 41878
 pr_title_encoded: "%5BProduct+Block+Editor%5D%3A+move+Modal+editor+out+of+the+description+block+edit+component"
 pr_test_type: e2e
-last_published: "2023-12-06 16:16:56 +0000"
-commit_sha: cb11593ad8d0e193c9929bdce1448cd4c6536d34
-commit_message: "fix prettier issue"
+last_published: "2023-12-06 21:10:51 +0000"
+commit_sha: e494d53aeec9887296b8d2302cb9eee169e72e55
+commit_message: "introduce showBackButton prop"
 branch_name: update/product-editor-move-modal-editor-to-editor-level
 passed: true
 ---
