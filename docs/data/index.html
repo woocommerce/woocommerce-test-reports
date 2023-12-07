@@ -238,6 +238,7 @@ layout: common
 				labels.push(dataTable.getFormattedValue(i, 0));
 				data.push(dataTable.getFormattedValue(i, 1));
 			}
+			const goalLine = for (let i = 0; i < 60; i++) { 900,  }
 
 			// Render the chart using Chart.js
 			var ctx = document.getElementById('executionTime').getContext('2d');
@@ -258,7 +259,7 @@ layout: common
 							width: 2
 						},
 						label: 'Goal runtime',
-						data: for( let i = 0; i< 60; i++ ) { 900, },
+						data: goalLine,
 						borderColor: 'red',
 						borderWidth: 2,
 						lineStyle: 'dashed'
