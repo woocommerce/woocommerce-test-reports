@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41937/e2e/i
 pr_number: 41937
 pr_title_encoded: "Template+API%3A+Registration+of+custom+blocks"
 pr_test_type: e2e
-last_published: "2023-12-07 01:35:32 +0000"
-commit_sha: 14516261822cddf8b05338e1b9502ba951899b42
-commit_message: "Make the BlockRegistry a singleton"
+last_published: "2023-12-07 21:05:22 +0000"
+commit_sha: c93c3e3fcd823eff11b2b606ab3e81f6587a2bc5
+commit_message: "Assert that template attributes and usesContext are augmented"
 branch_name: add/register_product_editor_block_type
 passed: true
 ---
