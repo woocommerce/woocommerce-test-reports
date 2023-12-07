@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41880/api/i
 pr_number: 41880
 pr_title_encoded: "Update+color+palettes+when+AI+is+no+available"
 pr_test_type: api
-last_published: "2023-12-07 10:39:26 +0000"
+last_published: "2023-12-07 10:53:58 +0000"
 commit_sha: 422e9ce1b96f86faa9c4d85f3d1fcbdc1c933247
 commit_message: "Merge branch 'trunk' into update-color-palettes-no-ai"
 branch_name: update-color-palettes-no-ai
