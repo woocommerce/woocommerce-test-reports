@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41986/api/i
 pr_number: 41986
 pr_title_encoded: "Fix+Post-Merge+Dependency+Issues"
 pr_test_type: api
-last_published: "2023-12-09 20:17:27 +0000"
-commit_sha: 6c8207541af91c6ed503dda9c6f4027eea40d74d
-commit_message: "Resolved Type Errors"
+last_published: "2023-12-09 20:37:42 +0000"
+commit_sha: 02828cc5d4331c28f8d2024072938f6ee0b56aef
+commit_message: "Fixed CI Inconsistencies"
 branch_name: merge/dependency-update
 passed: false
 ---
