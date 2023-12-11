@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42017/api/i
 pr_number: 42017
 pr_title_encoded: "remove+woocommerce-blocks+from+text+domain+substitution"
 pr_test_type: api
-last_published: "2023-12-11 18:10:50 +0000"
-commit_sha: e0c15ac930e5102a5a8109cb805e58eb2100a760
-commit_message: "restore prior art commented out"
+last_published: "2023-12-11 19:41:02 +0000"
+commit_sha: 2e105bf428246a54bcc21321634e9f4e165e56d5
+commit_message: "update blocks composer.json"
 branch_name: fix/domain-substitution
 passed: true
 ---
