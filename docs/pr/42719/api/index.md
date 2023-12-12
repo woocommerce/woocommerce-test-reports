@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42719/api/i
 pr_number: 42719
 pr_title_encoded: "Product+gallery%2Flegacy%2Ftransform"
 pr_test_type: api
-last_published: "2023-12-12 20:20:30 +0000"
-commit_sha: 645879e2c6cc68f780dceab8d7e43d9550d49312
-commit_message: "Ensure we first check for block existance"
+last_published: "2023-12-12 21:03:45 +0000"
+commit_sha: 639f460e1e1bdeb5adb956ce056cd51b756df672
+commit_message: "Add/delete changelog file"
 branch_name: product-gallery/legacy/transform
 passed: true
 ---
