@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42705/e2e/i
 pr_number: 42705
 pr_title_encoded: "fix%3A+CYS+-+fix+path+images+patterns"
 pr_test_type: e2e
-last_published: "2023-12-13 09:19:49 +0000"
-commit_sha: d5b641dc865242a877adf5f8c5e30043c003e153
-commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
+last_published: "2023-12-13 15:21:15 +0000"
+commit_sha: cc04beb8e4d4c3dcbe2b06eb0df2ae4ed24a3e00
+commit_message: "Merge branch 'trunk' of github.com:woocommerce/woocommerce into fix/p…"
 branch_name: fix/path-images-patterns
-passed: false
+passed: true
 ---
