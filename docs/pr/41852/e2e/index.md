@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41852/e2e/i
 pr_number: 41852
 pr_title_encoded: "add%3A+easyship+to+shipping+task+for+AU%2C+NZ%2C+SG%2C+HK"
 pr_test_type: e2e
-last_published: "2023-12-13 07:45:40 +0000"
-commit_sha: d4b5e73e0a8c2152efd695d82801cc447144400f
-commit_message: "addressed changes from business side"
+last_published: "2023-12-13 14:23:05 +0000"
+commit_sha: ffabc4cd2f5a61443e15ddf7584fbe43e504ce9e
+commit_message: "Fix lint"
 branch_name: add/shipping-task-easyship
 passed: true
 ---
