@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42692/e2e/i
 pr_number: 42692
 pr_title_encoded: "Fix+notice+styles"
 pr_test_type: e2e
-last_published: "2023-12-13 06:57:33 +0000"
-commit_sha: 7f712d1efcf6fc6e85932e90ba8d811f50b20f08
-commit_message: "Adjust tests"
+last_published: "2023-12-13 07:14:28 +0000"
+commit_sha: 927189e48e35e959b3eb74275e6779fbe5bf336c
+commit_message: "Adjust template version numbers"
 branch_name: fix/42690-fix-notice-styles
-passed: true
+passed: false
 ---
