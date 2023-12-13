@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41673/api/i
 pr_number: 41673
 pr_title_encoded: "Poc%2FWooWizard+assistant"
 pr_test_type: api
-last_published: "2023-12-13 15:59:58 +0000"
-commit_sha: 1a74045b8ef973b2341926ef3f0942fcea569465
-commit_message: "Add a retry button to assistant messages and refactor chat form for l…"
+last_published: "2023-12-13 16:30:24 +0000"
+commit_sha: 2d7d4951feedbcb09c2b066ca41bc00af7a03271
+commit_message: "Add a typing indicator component and show when processing request."
 branch_name: poc/woolf-assistant
 passed: false
 ---
