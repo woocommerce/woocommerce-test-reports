@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42695/api/i
 pr_number: 42695
 pr_title_encoded: "Introduce+Additional+Fields+extensibility+API"
 pr_test_type: api
-last_published: "2023-12-14 11:27:27 +0000"
-commit_sha: d15182ec1ac741f6aa11ba2dea106f8bf14fa267
-commit_message: "revert test to what it was"
+last_published: "2023-12-14 17:03:41 +0000"
+commit_sha: 6478e7bddca5741f490a04d83e47e9f6a316d59f
+commit_message: "Ensure address data is added on the cart block too"
 branch_name: add/custom-fields-for-checkout-block
 passed: true
 ---
