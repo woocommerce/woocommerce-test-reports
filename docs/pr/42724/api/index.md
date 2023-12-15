@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42724/api/i
 pr_number: 42724
 pr_title_encoded: "Move+the+switch+to+classic+shortcode+block+button+to+separate+component"
 pr_test_type: api
-last_published: "2023-12-15 09:13:22 +0000"
-commit_sha: ffb624cfb9e195ca2c82a1cd7bde91e305f0dc8f
-commit_message: "Update plugins/woocommerce-blocks/assets/js/editor-components/switch-…"
+last_published: "2023-12-15 09:50:30 +0000"
+commit_sha: c36d78428747a699fb98dc35ce5006f5cdad6b3a
+commit_message: "Refactor SwitchToClassicShortcodeButton component"
 branch_name: update/42072-move-switch-classic-cart-checkout-button
 passed: true
 ---
