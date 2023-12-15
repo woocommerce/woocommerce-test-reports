@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42804/e2e/i
 pr_number: 42804
 pr_title_encoded: "Playwright+test+workflow+migration+from+Blocks+repo"
 pr_test_type: e2e
-last_published: "2023-12-15 09:27:16 +0000"
-commit_sha: 0ddc728e5d5d01a506c83924b4439ee57cfff284
-commit_message: "remove unnecessary file"
+last_published: "2023-12-15 14:55:23 +0000"
+commit_sha: a3a9b8d33b21b4a33288ad693a31da72db19dc06
+commit_message: "Update the artifacts path"
 branch_name: dev/migrate-playwright-from-blocks
-passed: false
+passed: true
 ---
