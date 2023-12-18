@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41838/e2e/i
 pr_number: 41838
 pr_title_encoded: "Add+tracking+when+opening+or+searching+in+the+Command+Palette"
 pr_test_type: e2e
-last_published: "2023-12-12 08:50:48 +0000"
-commit_sha: a0c8922d2a4c4e148ac08d5eb8018644da6058d3
+last_published: "2023-12-18 12:41:00 +0000"
+commit_sha: 88e468a6844c4a880cbd29c9646a24fdec963c33
 commit_message: "Add 'origin' property to all Command Palette events"
 branch_name: update/41837-command-palette-tracking
 passed: true
