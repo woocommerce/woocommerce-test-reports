@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42010/e2e/i
 pr_number: 42010
 pr_title_encoded: "Add+redirect+to+new+In-App+marketplace+installer"
 pr_test_type: e2e
-last_published: "2023-12-15 14:16:11 +0000"
-commit_sha: 6dd96a35f011b1f8380fe21d374c4baddb56e216
-commit_message: "Fix linter issues"
+last_published: "2023-12-18 07:46:58 +0000"
+commit_sha: 836cba0901c74909b55a5f0a1ee6f0ceb9540d2d
+commit_message: "Add linter exception"
 branch_name: add/wccom-18953-redirect-to-new-marketplace-installer
-passed: true
+passed: false
 ---
