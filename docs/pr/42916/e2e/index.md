@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42916/e2e/i
 pr_number: 42916
 pr_title_encoded: "Fix+shipping+cost+formatting+to+respect+shipping+formula"
 pr_test_type: e2e
-last_published: "2023-12-19 06:42:18 +0000"
-commit_sha: 1c1da9bd0986ff8c9702eca0dacd98c768ed65da
-commit_message: "Reduce complexity by only formatting numbers, add support to handle a…"
+last_published: "2023-12-19 11:57:50 +0000"
+commit_sha: e1c3fde6f976f79183aa5fe5181de7d22b8e90d9
+commit_message: "Update tests"
 branch_name: fix/42892-shipping-formula-formatting
 passed: true
 ---
