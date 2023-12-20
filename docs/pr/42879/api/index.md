@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42879/api/i
 pr_number: 42879
 pr_title_encoded: "Update+tracks+events+hooks+for+HPOS"
 pr_test_type: api
-last_published: "2023-12-20 13:46:40 +0000"
-commit_sha: 38a0760a2d3c38afb37fc4bf059b0f1300038274
-commit_message: "Fix some linting issues"
+last_published: "2023-12-20 14:12:44 +0000"
+commit_sha: 26d8151e202e356d58fc2da491451687f8618956
+commit_message: "Make PHPCS happy"
 branch_name: fix/38886
 passed: true
 ---
