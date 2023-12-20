@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42937/e2e/i
 pr_number: 42937
 pr_title_encoded: "Tweak+Order+Attribution+meta+data+and+Tracks+data"
 pr_test_type: e2e
-last_published: "2023-12-19 11:35:17 +0000"
-commit_sha: 5fcbe53605c3fc1368ccfdeaa9df10960f924c4b
-commit_message: "Use native order method `get_total_refunded`"
+last_published: "2023-12-20 11:09:08 +0000"
+commit_sha: 39ef2e11df276a505142f20ac7df5a29844e5a64
+commit_message: "Update tests to match new labels"
 branch_name: add/order-attribution-changes
 passed: true
 ---
