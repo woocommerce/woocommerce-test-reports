@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42903/api/i
 pr_number: 42903
 pr_title_encoded: "Add+Playwright+tests+for+All+Reviews%2C+Reviews+by+Product+and+Reviews+by+Category+blocks"
 pr_test_type: api
-last_published: "2023-12-20 12:14:17 +0000"
-commit_sha: 71594547640528e93457703b8ee5e0b7ec0b64c0
-commit_message: "Update test so instead of creating a new post in each test, we go to …"
+last_published: "2023-12-20 16:31:59 +0000"
+commit_sha: ee863d81ab677ed9f20387cbf27a8dd1d09b137f
+commit_message: "Add source comments to reviews data to match it with the script"
 branch_name: add/review-blocks-tests
 passed: true
 ---
