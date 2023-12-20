@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42977/e2e/i
 pr_number: 42977
 pr_title_encoded: "Skip+BlockRegistry+tests+for+now+until+we+can+figure+out+why+they+are+flaky"
 pr_test_type: e2e
-last_published: "2023-12-20 03:20:13 +0000"
+last_published: "2023-12-20 03:45:27 +0000"
 commit_sha: 5baa8db45b99cdaa6e1250fb01bca6fab7ae278b
 commit_message: "Skip BlockRegistry tests for now until we can figure out why they are…"
 branch_name: fix/disable-block-registry-unit-tests
-passed: false
+passed: true
 ---
