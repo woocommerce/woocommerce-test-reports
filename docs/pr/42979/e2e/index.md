@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42979/e2e/i
 pr_number: 42979
 pr_title_encoded: "Logging%3A+Add+settings+UI+to+configure+the+logger"
 pr_test_type: e2e
-last_published: "2023-12-21 01:43:32 +0000"
-commit_sha: a5c10adccb4b7c9377623b5391f759f982dea453
-commit_message: "Add most unit tests. Still needs a couple more"
+last_published: "2023-12-21 19:59:39 +0000"
+commit_sha: 99349f0d827de293849d2590a20b143a21c4d3d5
+commit_message: "Add changelog file"
 branch_name: fix/40527/log-settings-ui
-passed: false
+passed: true
 ---
