@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43013/e2e/i
 pr_number: 43013
 pr_title_encoded: "%5BProduct+Block+Editor%5D%3A+add+Linked+product+sections.+First+approach."
 pr_test_type: e2e
-last_published: "2023-12-21 21:09:39 +0000"
-commit_sha: ebdb78f2be6e127bbcb3c4eadcc98f1b944e46ac
-commit_message: "fix linting issue :-|"
+last_published: "2023-12-22 21:45:44 +0000"
+commit_sha: c0a58c8ebb30c0e564abd8b694f37a6f8fd4f13b
+commit_message: "Merge branch 'trunk' into update/product-editor-add-upsell-linked-pro…"
 branch_name: update/product-editor-add-upsell-linked-product-section
-passed: false
+passed: true
 ---
