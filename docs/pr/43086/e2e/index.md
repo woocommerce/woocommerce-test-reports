@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43086/e2e/i
 pr_number: 43086
 pr_title_encoded: "CYS+%3E+Update+Products+and+Patterns+AI+content+generation"
 pr_test_type: e2e
-last_published: "2023-12-23 17:43:20 +0000"
-commit_sha: 23375487bedee803d9f3ca1113ed5dfc2255bade
-commit_message: "Undo PatternsHelper rename"
+last_published: "2023-12-23 19:05:59 +0000"
+commit_sha: c969830fe617a2311b899463c458c88322938971
+commit_message: "Merge branch 'trunk' into enhance/ai-content-generation"
 branch_name: enhance/ai-content-generation
 passed: true
 ---
