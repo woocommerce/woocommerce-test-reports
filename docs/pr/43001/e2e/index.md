@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43001/e2e/i
 pr_number: 43001
 pr_title_encoded: "Add+Default+Fallback+Marketing+Channel+Recommendations"
 pr_test_type: e2e
-last_published: "2023-12-26 17:13:47 +0000"
-commit_sha: 9a5ab094ba175daa16f1c35df1c73e4ec51d7233
-commit_message: "Add icons for fallback marketing recommendations."
+last_published: "2023-12-27 13:54:51 +0000"
+commit_sha: abd8195530cf5f9953eff7afcf9fa90604473547
+commit_message: "Merge branch 'trunk' into add/fallback-marketing-recommendations"
 branch_name: add/fallback-marketing-recommendations
 passed: true
 ---
