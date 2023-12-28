@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42879/api/i
 pr_number: 42879
 pr_title_encoded: "Update+tracks+events+hooks+for+HPOS"
 pr_test_type: api
-last_published: "2023-12-20 14:12:44 +0000"
-commit_sha: 26d8151e202e356d58fc2da491451687f8618956
-commit_message: "Make PHPCS happy"
+last_published: "2023-12-28 10:35:48 +0000"
+commit_sha: 4e44411d41cb8231cb73fd99f8d153c189911e26
+commit_message: "Better handle deprecating old method"
 branch_name: fix/38886
 passed: true
 ---
