@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42811/api/i
 pr_number: 42811
 pr_title_encoded: "%5BExperimental%5D+Add%3A+QueryFilters+class+to+calculate+filter+data+for+product+queries"
 pr_test_type: api
-last_published: "2023-12-28 14:39:40 +0000"
-commit_sha: 64c0360f05db9f93ea11496242546710d5409bb6
-commit_message: "Merge remote-tracking branch 'origin/trunk' into add/collection-filterer"
+last_published: "2023-12-29 04:01:22 +0000"
+commit_sha: f21a95eab6c941d1a15e1b1cf27484817fb22d61
+commit_message: "[Experimental] Collection Filter blocks: ensure the namespace is alwa…"
 branch_name: add/collection-filterer
 passed: true
 ---
