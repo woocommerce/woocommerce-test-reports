@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43144/e2e/i
 pr_number: 43144
 pr_title_encoded: "Add+tooltip+attribute+to+Pricing+field"
 pr_test_type: e2e
-last_published: "2023-12-27 23:28:50 +0000"
-commit_sha: f41aaed8b302a46921f16aa5979c250bd9a34f41
-commit_message: "Remove "labelToShow" const"
+last_published: "2023-12-29 13:39:47 +0000"
+commit_sha: 366afb098a0557fc305e7d524d4f962ef54f59e7
+commit_message: "Add changelog"
 branch_name: add/42825_tooltip_attribute_to_pricing_field
-passed: false
+passed: true
 ---
