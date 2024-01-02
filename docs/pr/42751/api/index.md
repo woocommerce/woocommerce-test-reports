@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42751/api/i
 pr_number: 42751
 pr_title_encoded: "Update+generic+incompatibility+notice"
 pr_test_type: api
-last_published: "2023-12-26 15:05:05 +0000"
-commit_sha: 2c9b5a8f744f4bc7ec6d7839bb2b8c1f7e1b6279
+last_published: "2024-01-02 18:03:07 +0000"
+commit_sha: 4c5608709703ad9a6b1d8b3979fafef12ac90aaa
 commit_message: "Merge branch 'trunk' into update/42072-update-incompatibility-generic…"
 branch_name: update/42072-update-incompatibility-generic-notice
 passed: true
