@@ -1,0 +1,12 @@
+---
+layout: redirect
+redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43217/e2e/index.html
+pr_number: 43217
+pr_title_encoded: "%5BExperimental%5D+Use+CheckboxList+component+in+interactivity+attribute+filter"
+pr_test_type: e2e
+last_published: "2024-01-02 11:40:25 +0000"
+commit_sha: be943cc4b612e5ac6cf9d8aa04deb2a91aa5e9c2
+commit_message: "Remove include of checkbox styles that is no longer needed."
+branch_name: dev/use-checkbox-list-attribute-filter
+passed: false
+---
