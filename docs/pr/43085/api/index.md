@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43085/api/i
 pr_number: 43085
 pr_title_encoded: "Fix+bug+when+searching+orders+with+a+term+starting+with+d%2C+s%2C+or+f"
 pr_test_type: api
-last_published: "2024-01-03 09:30:51 +0000"
-commit_sha: 5dc022b9550f991da66e13b3610e2354a8fbfd37
-commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
+last_published: "2024-01-03 09:54:59 +0000"
+commit_sha: 379c7382f6c3a1a94190eaa478bf0144b66f7190
+commit_message: "Fix linting issue"
 branch_name: fix/43084-search-query-prepare
 passed: true
 ---
