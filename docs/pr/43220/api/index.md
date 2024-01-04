@@ -2,11 +2,11 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43220/api/index.html
 pr_number: 43220
-pr_title_encoded: "%5BWIP%5D+%5BExperimental%5D+Filter+out+filter+options+that+would+result+in+0+products.+"
+pr_title_encoded: "%5BExperimental%5D+Filter+out+filter+options+that+would+result+in+0+products.+"
 pr_test_type: api
-last_published: "2024-01-03 10:32:57 +0000"
-commit_sha: 5c8227270b83f6619b417ba969f2c8944a669378
-commit_message: "Merge remote-tracking branch 'origin/trunk' into dev/dont-display-fil…"
+last_published: "2024-01-04 04:15:26 +0000"
+commit_sha: 0a80bbcef72690452b9ab8e9aee0e8f6e6cf7280
+commit_message: "Use alias to fix lint issue."
 branch_name: dev/dont-display-filters-zero-products
 passed: true
 ---
