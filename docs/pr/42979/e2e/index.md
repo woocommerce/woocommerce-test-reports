@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42979/e2e/i
 pr_number: 42979
 pr_title_encoded: "Logging%3A+Add+settings+UI+to+configure+the+logger"
 pr_test_type: e2e
-last_published: "2023-12-28 00:31:07 +0000"
-commit_sha: 57ff84cc519458ab879bd1d3029adf3fc6bccfe5
-commit_message: "Merge branch 'trunk' into fix/40527/log-settings-ui"
+last_published: "2024-01-04 21:23:18 +0000"
+commit_sha: a4e81d2c232c76e5cf88ee6e878789e26da722e2
+commit_message: "Update webooks link to logs, undeprecate"
 branch_name: fix/40527/log-settings-ui
 passed: false
 ---
