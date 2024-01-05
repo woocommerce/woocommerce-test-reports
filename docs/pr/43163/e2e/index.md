@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43163/e2e/i
 pr_number: 43163
 pr_title_encoded: "Linked+product+list+empty+state"
 pr_test_type: e2e
-last_published: "2024-01-04 14:37:55 +0000"
-commit_sha: a860f0ac5f136488533d3d290b00826d3dad3a35
-commit_message: "Remove upsells and cross-sells block to use linked-product-list block…"
+last_published: "2024-01-05 18:38:36 +0000"
+commit_sha: 4dae971dfce0117bd7fb7e6d5adb07765c0ecad0
+commit_message: "Add changelog files"
 branch_name: add/42923-empty-state
-passed: true
+passed: false
 ---
