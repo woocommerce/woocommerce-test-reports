@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43057/api/i
 pr_number: 43057
 pr_title_encoded: "Migrate+merchant+local-pickup+e2e+tests+to+Playwright"
 pr_test_type: api
-last_published: "2024-01-04 17:35:58 +0000"
-commit_sha: 33583a1d5d4a9e42d14b101021e852ab593f5daa
-commit_message: "Added changelog"
+last_published: "2024-01-05 12:34:28 +0000"
+commit_sha: 771e0af1ee24c5b4516f73204287bb095f1369c3
+commit_message: "Corrected linting errors"
 branch_name: update/convert-merchant-localpickup-e2e-tests
 passed: true
 ---
