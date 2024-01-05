@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43088/api/i
 pr_number: 43088
 pr_title_encoded: "Support+additional+fields+in+the+Contact+step+for+Checkout"
 pr_test_type: api
-last_published: "2024-01-05 13:12:59 +0000"
-commit_sha: d20b7417c4f8f096c6463e079254d0806ffd338a
-commit_message: "fix linting issues"
+last_published: "2024-01-05 16:15:13 +0000"
+commit_sha: 7a5cce4e728986d375ead8605ab4fe639679adb7
+commit_message: "fix the email issue"
 branch_name: add/additional-fields-in-contact-block
 passed: true
 ---
