@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41836/api/i
 pr_number: 41836
 pr_title_encoded: "Force+marketing+menu+items+order."
 pr_test_type: api
-last_published: "2024-01-02 13:33:20 +0000"
-commit_sha: 6c9e1050625ef7d7ac336064d4cf4d7958c915b8
-commit_message: "Use fallback for different languages."
+last_published: "2024-01-05 11:51:41 +0000"
+commit_sha: c6038552bacb1b72cc3df86fcf6f4e3f35a9aa5d
+commit_message: "Use location as a fallback for names."
 branch_name: update/force-marketing-menu-items-order
 passed: true
 ---
