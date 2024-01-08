@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43315/e2e/i
 pr_number: 43315
 pr_title_encoded: "Redirect+Woo.com+connect+request+to+selected+page"
 pr_test_type: e2e
-last_published: "2024-01-08 09:14:56 +0000"
-commit_sha: 2ff19fafd3b90d1ecadae9409ad5e452ffbac9e1
-commit_message: "Linter fixes"
+last_published: "2024-01-08 10:08:22 +0000"
+commit_sha: 08f6b55236137345fcbeffd185bf3af1019707a7
+commit_message: "Remove install changes"
 branch_name: add/wc-admin-connect-redirects
 passed: true
 ---
