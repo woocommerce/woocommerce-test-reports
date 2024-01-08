@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43293/api/i
 pr_number: 43293
 pr_title_encoded: "Add+background+HPOS+cleanup+process"
 pr_test_type: api
-last_published: "2024-01-04 17:55:01 +0000"
-commit_sha: 72c84cecb3f9d47a8d9157ca40069dfd58ec63e8
-commit_message: "Make CI happy"
+last_published: "2024-01-08 18:26:22 +0000"
+commit_sha: c471cbaa5cafbc0156e2f565cc252c36c8942c2c
+commit_message: "Improve option handling"
 branch_name: hpos/41915
 passed: true
 ---
