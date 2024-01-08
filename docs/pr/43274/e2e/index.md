@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43274/e2e/i
 pr_number: 43274
 pr_title_encoded: "Add+additional+information+block+for+custom+checkout+fields"
 pr_test_type: e2e
-last_published: "2024-01-08 19:12:25 +0000"
+last_published: "2024-01-08 20:06:31 +0000"
 commit_sha: 6d88a8e01205c599942cde233b9d01d34289dff5
 commit_message: "Remove default description from Additional information step"
 branch_name: add/rebase-42081-additional-fields
-passed: false
+passed: true
 ---
