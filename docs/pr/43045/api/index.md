@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43045/api/i
 pr_number: 43045
 pr_title_encoded: "Add+showStepButtons+attribute+for+Number+block+and+component"
 pr_test_type: api
-last_published: "2024-01-05 18:11:42 +0000"
-commit_sha: 8425d17399077642d055621fe74d54866322dd09
-commit_message: "Use native step buttons"
+last_published: "2024-01-08 17:52:00 +0000"
+commit_sha: 233942cc0458e304a3195170294d43cec394aaa3
+commit_message: "Revert type="number" as it's not working well with number formatting"
 branch_name: add/step-buttons
 passed: true
 ---
