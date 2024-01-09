@@ -2,11 +2,11 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43045/api/index.html
 pr_number: 43045
-pr_title_encoded: "Add+showStepButtons+attribute+for+Number+block+and+component"
+pr_title_encoded: "Add+step+buttons+for+Number+block+and+component"
 pr_test_type: api
-last_published: "2024-01-09 17:29:00 +0000"
-commit_sha: 1f512a7aa20dae7aa2991411726a9825e5b148ea
-commit_message: "Remove unnecessary onBlur and prevent default event when onKeyUp"
+last_published: "2024-01-09 19:57:16 +0000"
+commit_sha: b3a330ec54bd9ba10154a8c1a23115594f0e712a
+commit_message: "Update changelog"
 branch_name: add/step-buttons
-passed: false
+passed: true
 ---
