@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43356/e2e/i
 pr_number: 43356
 pr_title_encoded: "Add+support+for+specifying+filters+when+searching+orders."
 pr_test_type: e2e
-last_published: "2024-01-09 09:46:26 +0000"
-commit_sha: 68c94eaf036c9ec02afc0419ee4fa3f6be501526
-commit_message: "Fix merge conflict."
+last_published: "2024-01-09 10:16:40 +0000"
+commit_sha: b668395ff9450ed0eb33e117d3869d515a655e10
+commit_message: "Add changelog."
 branch_name: fix/41454
 passed: true
 ---
