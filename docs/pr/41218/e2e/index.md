@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41218/e2e/i
 pr_number: 41218
 pr_title_encoded: "Add+new+E2E+tests+to+cover+Shopper+Checkout+Block+flow"
 pr_test_type: e2e
-last_published: "2023-12-21 15:25:10 +0000"
-commit_sha: a658286061aba75a755d0d51be5ce320dd11d467
-commit_message: "Add util helper for adding products to cart"
+last_published: "2024-01-10 19:30:49 +0000"
+commit_sha: 41e62fe7d40a31e59c01f9403557ed04debdb92f
+commit_message: "Merge branch 'trunk' into e2e/add-new-tests-shopper-checkout-block"
 branch_name: e2e/add-new-tests-shopper-checkout-block
-passed: false
+passed: true
 ---
