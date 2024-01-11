@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43489/e2e/i
 pr_number: 43489
 pr_title_encoded: "Data%3A+add+selector+to+get+related+products"
 pr_test_type: e2e
-last_published: "2024-01-10 21:38:00 +0000"
-commit_sha: d41e770f51642c785e63d67ee617c35aae990009
-commit_message: "changelog"
+last_published: "2024-01-11 12:07:21 +0000"
+commit_sha: 9a449fe2233e0803238ec54a2751be803711aa1a
+commit_message: "fix ES issue"
 branch_name: update/data-add-selector-to-get-related-products
 passed: true
 ---
