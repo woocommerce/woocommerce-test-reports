@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43363/api/i
 pr_number: 43363
 pr_title_encoded: "%5BExperimental%5D+Rename+Collection+Filters+to+Product+Filters"
 pr_test_type: api
-last_published: "2024-01-09 10:42:40 +0000"
-commit_sha: 6465df4f122e65de97954306f8ee053bbeeefec6
-commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
+last_published: "2024-01-11 04:03:12 +0000"
+commit_sha: 80f9098e293f315a3bfb1b402a10f2cae02686a3
+commit_message: "Update playwright tests for filters to new block naming."
 branch_name: dev/unify-product-filter-naming-convention
 passed: true
 ---
