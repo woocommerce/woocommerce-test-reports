@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43532/api/i
 pr_number: 43532
 pr_title_encoded: "Use+%60ci-jobs%60+Utility+For+%60ci.yml%60+Matrix"
 pr_test_type: api
-last_published: "2024-01-11 21:24:14 +0000"
-commit_sha: 25e8d0ebd8fb1cb92f656535e26c131631bd0a8f
-commit_message: "CI Trigger"
+last_published: "2024-01-11 21:34:55 +0000"
+commit_sha: 9251bfc8469ff11e6791624af39eec0435cdeda9
+commit_message: "Logging"
 branch_name: add/cli-to-ci-workflow
-passed: true
+passed: false
 ---
