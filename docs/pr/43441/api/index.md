@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43441/api/i
 pr_number: 43441
 pr_title_encoded: "Add+slotFill+for+variation+menus"
 pr_test_type: api
-last_published: "2024-01-11 05:54:42 +0000"
-commit_sha: 5de0c33e147d61eade4fc5be3738e93ea8c00c88
-commit_message: "split variation-actions-menu"
+last_published: "2024-01-11 06:08:14 +0000"
+commit_sha: 7448d3ad11a0454e3c8d9ce186ae159a0effbdcc
+commit_message: "Remove variation-actions-menu and variations-actions-menu"
 branch_name: dev/42737_slotfill_for_variation_menus
 passed: true
 ---
