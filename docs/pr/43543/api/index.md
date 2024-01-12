@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43543/api/i
 pr_number: 43543
 pr_title_encoded: "Rework+UX+guidelines+to+be+in+distinct+folders+and+files"
 pr_test_type: api
-last_published: "2024-01-12 18:15:15 +0000"
-commit_sha: 84ecff5ebd230041cacaf30efb160d93df7cd9c7
-commit_message: "Rename "user experience guidelines" to "extension guidelines""
+last_published: "2024-01-12 18:30:55 +0000"
+commit_sha: f40f35f52910566f527938d597b819af8cddd6a3
+commit_message: "Moved payments blurb from onboarding to readme"
 branch_name: docs/rework-ux-guidelines
 passed: true
 ---
