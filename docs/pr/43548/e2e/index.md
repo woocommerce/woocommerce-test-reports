@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43548/e2e/i
 pr_number: 43548
 pr_title_encoded: "Product+Collection%3A+add+E2E+tests+to+Editor+filters+-+by+tag+and+by+stock+status"
 pr_test_type: e2e
-last_published: "2024-01-12 10:01:36 +0000"
-commit_sha: f96f7498485e72cc650b05cac9a39849680c2767
-commit_message: "Add changelog"
+last_published: "2024-01-12 10:29:48 +0000"
+commit_sha: f74ace0991047653c637c464588d15929cd19428
+commit_message: "Use more specific selector"
 branch_name: 42284-product-collection-add-e2e-tests-which-require-fixture-data
 passed: true
 ---
