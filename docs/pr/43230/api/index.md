@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43230/api/i
 pr_number: 43230
 pr_title_encoded: "Apply+Rector+suggestions+for+PHP+8.1"
 pr_test_type: api
-last_published: "2024-01-03 19:32:31 +0000"
-commit_sha: 069ec94e8ccee83f926741c7daccfbb9812126e5
-commit_message: "Add changelog entry"
+last_published: "2024-01-12 23:10:36 +0000"
+commit_sha: c3e15ac66f50d9e1c83385a861fe7c5403283a76
+commit_message: "Remove unnecessary default assignment"
 branch_name: as-diff-D129164
 passed: true
 ---
