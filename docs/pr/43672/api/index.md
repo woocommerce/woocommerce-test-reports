@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43672/api/i
 pr_number: 43672
 pr_title_encoded: "Change+HPOS+and+non+HPOS+e2e+tests+to+use+5+shards+each"
 pr_test_type: api
-last_published: "2024-01-15 20:03:40 +0000"
-commit_sha: 4bbf41b027d620224bfc4ce4b537f9a5e94cc8fa
-commit_message: "Add changelog"
+last_published: "2024-01-15 20:23:06 +0000"
+commit_sha: cf3da3e1f453c937eb19463f85e3ddee19c750ee
+commit_message: "Update numbering"
 branch_name: dev/change-sharding-to-5-each
-passed: false
+passed: true
 ---
