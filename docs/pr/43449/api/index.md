@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43449/api/i
 pr_number: 43449
 pr_title_encoded: "%5BExperimental%5D+Surface+additional+checkout+fields+on+Order+Confirmation+page+"
 pr_test_type: api
-last_published: "2024-01-15 13:52:18 +0000"
-commit_sha: 2e29da41382c69b8825b6374fd316cdce11e6e1f
-commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
+last_published: "2024-01-15 15:03:35 +0000"
+commit_sha: 82d47141897320d18134c5b1be52a92807a032b0
+commit_message: "Unused import"
 branch_name: add/additional-information-section-fields
 passed: true
 ---
