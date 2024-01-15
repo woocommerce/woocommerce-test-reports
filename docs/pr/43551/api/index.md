@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43551/api/i
 pr_number: 43551
 pr_title_encoded: "Update+copy+for+CYS+intro+screen+sidebar"
 pr_test_type: api
-last_published: "2024-01-15 09:28:12 +0000"
-commit_sha: d1f95e53cc85edc0cb1c26ad69cdcc8413610c9c
-commit_message: "Merge branch 'trunk' into 43482-update-intro-screen-copy"
+last_published: "2024-01-15 10:30:24 +0000"
+commit_sha: b62b791dc55cdda552a30b7fa20eb56cd74cd8db
+commit_message: "Avoid using variables in __()"
 branch_name: 43482-update-intro-screen-copy
 passed: true
 ---
