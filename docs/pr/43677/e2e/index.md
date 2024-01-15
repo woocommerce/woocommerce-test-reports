@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43677/e2e/i
 pr_number: 43677
 pr_title_encoded: "Remove+manually+found+unicode+characters+in+docs"
 pr_test_type: e2e
-last_published: "2024-01-15 22:16:39 +0000"
-commit_sha: b9196471d09eacad38129404d6dc8c4452ddc90c
-commit_message: "fix more linting issues"
+last_published: "2024-01-15 22:47:59 +0000"
+commit_sha: 2f7ac16b73268bb6d8ce19a5c335aee5219d1ec7
+commit_message: "Fix more linting"
 branch_name: docs/manually-fix-unicode-chars
-passed: false
+passed: true
 ---
