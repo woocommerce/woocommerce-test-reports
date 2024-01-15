@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43675/api/i
 pr_number: 43675
 pr_title_encoded: "Rename+%22Contributing%22+category+%2B+tag+files"
 pr_test_type: api
-last_published: "2024-01-15 21:08:00 +0000"
-commit_sha: 2b9e585859db209a11991c31cb9464c9ee075480
-commit_message: "Update manifest"
+last_published: "2024-01-15 21:43:03 +0000"
+commit_sha: 6b9cfc374bbcd4a3c42c0da08e6fe44f45a24efb
+commit_message: "Fix unicode issues"
 branch_name: docs/rename-contributing-category
 passed: true
 ---
