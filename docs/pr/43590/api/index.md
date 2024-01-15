@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43590/api/i
 pr_number: 43590
 pr_title_encoded: "%5BE2E%5D+Tests+for+coupon+usage+restrictions"
 pr_test_type: api
-last_published: "2024-01-12 23:04:58 +0000"
-commit_sha: db17ce0677174b4cd09fca50261088392f275338
-commit_message: "Tests for restricted coupons"
+last_published: "2024-01-15 20:11:30 +0000"
+commit_sha: 1bf773a9e534aa5e8a613cd4f3b9cb64bac12b60
+commit_message: "Update to test checkout not cart… which is what I should have been using"
 branch_name: e2e/respect-coupon-usage-contraints
 passed: true
 ---
