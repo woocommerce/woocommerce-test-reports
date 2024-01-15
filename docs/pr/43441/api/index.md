@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43441/api/i
 pr_number: 43441
 pr_title_encoded: "Add+slotFill+for+variation+menus"
 pr_test_type: api
-last_published: "2024-01-15 03:23:08 +0000"
-commit_sha: 4f18d70cd85673410b4cff46bd412ab7fef2618b
-commit_message: "Show multipleSelection items in both components"
+last_published: "2024-01-15 04:24:00 +0000"
+commit_sha: e5383ff190f75ff9a219343e55991dfdd02307d7
+commit_message: "Take fills as MenuItems"
 branch_name: dev/42737_slotfill_for_variation_menus
-passed: true
+passed: false
 ---
