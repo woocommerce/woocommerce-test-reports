@@ -2,11 +2,11 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43517/api/index.html
 pr_number: 43517
-pr_title_encoded: "Fix%2Funserialize+order+meta+with+nonexistent+class"
+pr_title_encoded: "HPOS%3A+fix+handling+order+meta+containing+nonexistent+class+when+sync+is+on"
 pr_test_type: api
-last_published: "2024-01-15 09:51:23 +0000"
-commit_sha: c1778ff810ffbfee8fb6f46db8e1d7dcc5c857a2
-commit_message: "add asserts for the $meta's object_vars"
+last_published: "2024-01-15 15:33:53 +0000"
+commit_sha: 8ab6a34b6eb3a406e76d7fdb1b1f9202f8f4fa67
+commit_message: "appease the linter"
 branch_name: fix/unserialize-order-meta-with-nonexistent-class
-passed: true
+passed: false
 ---
