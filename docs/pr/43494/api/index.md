@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43494/api/i
 pr_number: 43494
 pr_title_encoded: "Update+%40wordpress%2Fcomponents%2C+core-data+and+React+to+18"
 pr_test_type: api
-last_published: "2024-01-16 05:51:47 +0000"
-commit_sha: 1814858c2ab2e8250d76d4bb3811bfe6ca6ead9e
-commit_message: "Fix a typo in comment."
+last_published: "2024-01-16 06:08:26 +0000"
+commit_sha: ee91b584a2efcc3a82081a3da8d3947e5f60cbbb
+commit_message: "Update snapshots, only framework generated class names changed."
 branch_name: dev/update-react-18
 passed: true
 ---
