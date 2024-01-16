@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43688/api/i
 pr_number: 43688
 pr_title_encoded: "%5BWIP%5D++product+filters+wrapper"
 pr_test_type: api
-last_published: "2024-01-16 07:47:48 +0000"
-commit_sha: 4676714c92a8da401e090abe473e05a79a7d3819
-commit_message: "Remove wrapper, make Product Filters the wrapper."
+last_published: "2024-01-16 12:53:20 +0000"
+commit_sha: c48f3165b7874e55c673e630a00d70aa11ab7eb1
+commit_message: "Remove unused util."
 branch_name: dev/introduce-product-filters-wrapper
-passed: true
+passed: false
 ---
