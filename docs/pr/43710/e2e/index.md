@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43710/e2e/i
 pr_number: 43710
 pr_title_encoded: "%5Be2e%5D+Expand+simple+product+creation+with+more+details"
 pr_test_type: e2e
-last_published: "2024-01-16 16:41:34 +0000"
-commit_sha: 8d883f7d4a283691e21e8e6e6b6b7b845ce57cb0
-commit_message: "Merge branch 'trunk' into e2e/expand-simple-product"
+last_published: "2024-01-16 16:54:38 +0000"
+commit_sha: 0aa8f62cf7f986901aeddd91bacacf307e155b86
+commit_message: "changelog add"
 branch_name: e2e/expand-simple-product
 passed: true
 ---
