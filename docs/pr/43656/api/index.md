@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43656/api/i
 pr_number: 43656
 pr_title_encoded: "%5BProduct+Block+Editor%5D%3A+add+loading+for+the+%60Choose+products+for+me%60+button"
 pr_test_type: api
-last_published: "2024-01-16 12:46:33 +0000"
-commit_sha: 94eddfbcd60707845475bdec719bc546c991c03f
-commit_message: "restore changes"
+last_published: "2024-01-16 13:20:28 +0000"
+commit_sha: a3f1c018326ef69aec914560a25b6a8ec5891092
+commit_message: "fiox rebase issue"
 branch_name: update/roduct-editor-add-choose-buttton-loading-state
 passed: true
 ---
