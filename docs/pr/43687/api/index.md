@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43687/api/i
 pr_number: 43687
 pr_title_encoded: "Add+slotFills+for+header+items"
 pr_test_type: api
-last_published: "2024-01-16 08:16:06 +0000"
-commit_sha: 59c7eba0a2dc6c4d741d5f9bd0b44ffe4fa2b0c4
-commit_message: "Add changelog"
+last_published: "2024-01-16 09:39:15 +0000"
+commit_sha: dea021cd6fe7993c078e23dca32c7f858d2d42f3
+commit_message: "Remove order prop"
 branch_name: add/42805_slotfills_for_header_items
 passed: true
 ---
