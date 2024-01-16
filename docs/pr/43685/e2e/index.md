@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43685/e2e/i
 pr_number: 43685
 pr_title_encoded: "Further+adjustment+of+post+titles%2C+menu+titles%2C+and+tags"
 pr_test_type: e2e
-last_published: "2024-01-16 17:47:00 +0000"
-commit_sha: 6e9a8bfb88bfeb374e24c85fe493642ef777d831
-commit_message: "Merge branch 'trunk' into post-titles-and-menu-titles"
+last_published: "2024-01-16 17:59:51 +0000"
+commit_sha: 2d3d0e6b3768f3f26142f2f9f3330de2da8597b5
+commit_message: "Move HPOS/CLI contents into README"
 branch_name: post-titles-and-menu-titles
-passed: false
+passed: true
 ---
