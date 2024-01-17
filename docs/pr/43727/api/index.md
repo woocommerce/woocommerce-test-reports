@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43727/api/i
 pr_number: 43727
 pr_title_encoded: "HPOS%3A+Remove+buggy+check+in+the+data+cleanup+tool."
 pr_test_type: api
-last_published: "2024-01-17 08:23:20 +0000"
-commit_sha: 8df5b5d451f8d53f7c2e0df84be478b4d5f6b45d
-commit_message: "PHPCS fixes."
+last_published: "2024-01-17 09:06:15 +0000"
+commit_sha: ba3dd30b8267688857e3adcfbb2421c77ad341f4
+commit_message: "Added more assertions after cleanup to verify cleanup worked."
 branch_name: fix/42848
 passed: true
 ---
