@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43688/api/i
 pr_number: 43688
 pr_title_encoded: "%5BExperimental%5D+Product+Filters+-+Reintroduce+Wrapper+Block"
 pr_test_type: api
-last_published: "2024-01-17 04:49:58 +0000"
-commit_sha: caeb9f9d55ab8cb58f9471bd4326607a79b697b0
-commit_message: "Fix upgrade/downgrade functionality."
+last_published: "2024-01-17 05:41:18 +0000"
+commit_sha: 302c7de2fca10b3d9e562c19eb61e97b2b5d6929
+commit_message: "Remove tests of wrapper block that are no longer relevant."
 branch_name: dev/introduce-product-filters-wrapper
 passed: true
 ---
