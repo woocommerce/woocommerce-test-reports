@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42816/e2e/i
 pr_number: 42816
 pr_title_encoded: "Add+tracking+for+incompatible+extensions"
 pr_test_type: e2e
-last_published: "2023-12-28 05:40:13 +0000"
-commit_sha: fe5a0b0127b1187b1179ff49c7f7e72035cea004
-commit_message: "Remove console.log call"
+last_published: "2024-01-17 06:04:17 +0000"
+commit_sha: eb8d10dfe87d5408ffa0bcc4f310d06822f56f42
+commit_message: "Add tracking for incompatible extensions"
 branch_name: add/42101-track-incompatible-extensions
-passed: false
+passed: true
 ---
