@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43237/e2e/i
 pr_number: 43237
 pr_title_encoded: "Apply+Rector+suggestions+for+PHP+8.1"
 pr_test_type: e2e
-last_published: "2024-01-17 20:25:32 +0000"
-commit_sha: 3b8f16db7e339930ea9de65cca60b757446fe6dc
-commit_message: "Update changelog entry"
+last_published: "2024-01-17 20:38:53 +0000"
+commit_sha: 8a1c0fd0f14371a4c5b52f735194e2432c5b0d67
+commit_message: "Typo"
 branch_name: as-diff-D128959
-passed: false
+passed: true
 ---
