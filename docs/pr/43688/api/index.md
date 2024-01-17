@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43688/api/i
 pr_number: 43688
 pr_title_encoded: "%5BExperimental%5D+Product+Filters+-+Reintroduce+Wrapper+Block"
 pr_test_type: api
-last_published: "2024-01-17 05:56:53 +0000"
-commit_sha: ec62aa1effcf1f7c0b3d0cf4121f10c1e07fe2d7
-commit_message: "Adjust test, we no longer auto insert all filters."
+last_published: "2024-01-17 06:24:21 +0000"
+commit_sha: cda0d3c47cd338b1aaad73cc6097116d3a64edfc
+commit_message: "Fix headings of product wrapper to title case."
 branch_name: dev/introduce-product-filters-wrapper
 passed: true
 ---
