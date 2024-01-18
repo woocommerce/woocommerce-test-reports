@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43236/api/i
 pr_number: 43236
 pr_title_encoded: "Apply+Rector+suggestions+for+PHP+8.1+"
 pr_test_type: api
-last_published: "2024-01-17 21:10:49 +0000"
-commit_sha: 8265e109cce224b5fc74cf440dbff02846fa87f4
-commit_message: "Add changelog entry"
+last_published: "2024-01-18 23:24:19 +0000"
+commit_sha: 41349cf333c3ad61b5025a54a05786762a8ff029
+commit_message: "Fix PHP lint issues"
 branch_name: as-diff-D128937
 passed: true
 ---
