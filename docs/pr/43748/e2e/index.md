@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43748/e2e/i
 pr_number: 43748
 pr_title_encoded: "%5BExperimental%5D+Surface+additional+checkout+fields+values+in+Admin+order+page."
 pr_test_type: e2e
-last_published: "2024-01-18 11:55:04 +0000"
-commit_sha: 49309e9607dc0015eb0938805712b6db6d833783
-commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
+last_published: "2024-01-18 13:57:44 +0000"
+commit_sha: d2c1cc10deb1fad462cd72ee3e9f0390b92d368e
+commit_message: "Fix CSS rule"
 branch_name: add/additional-information-admin-fields
 passed: true
 ---
