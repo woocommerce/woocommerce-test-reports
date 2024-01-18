@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43775/api/i
 pr_number: 43775
 pr_title_encoded: "%5Be2e+tests%5D+Add+tests+for+product+images"
 pr_test_type: api
-last_published: "2024-01-18 12:16:33 +0000"
-commit_sha: 03a11a4432a4c1865c92adf452316bc226ab8727
-commit_message: "Implement can update the product image"
+last_published: "2024-01-18 12:46:55 +0000"
+commit_sha: c10aacafac0b5b6f3ee6e8e8a9cb452a132f4295
+commit_message: "Skip not implemented test"
 branch_name: e2e/product-images-tests
 passed: true
 ---
