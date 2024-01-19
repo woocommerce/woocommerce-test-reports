@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43823/api/i
 pr_number: 43823
 pr_title_encoded: "%5BExperimental%5D+Surface+custom+fields+in+My+Account+pages"
 pr_test_type: api
-last_published: "2024-01-19 15:21:47 +0000"
-commit_sha: 58e07adf8fa969ce38b39dd2f801deb453480e16
-commit_message: "remove comment"
+last_published: "2024-01-19 15:47:32 +0000"
+commit_sha: bd7f002d6bcaa79ae938f449a51528e999cf143c
+commit_message: "Hook docblocks"
 branch_name: add/additional-information-myaccount-fields
-passed: false
+passed: true
 ---
