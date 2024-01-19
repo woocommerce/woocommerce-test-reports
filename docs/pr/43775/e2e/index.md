@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43775/e2e/i
 pr_number: 43775
 pr_title_encoded: "%5Be2e+tests%5D+Add+tests+for+product+images"
 pr_test_type: e2e
-last_published: "2024-01-19 14:49:19 +0000"
-commit_sha: 15b50cad7436d793041274e346d1184b14027e76
-commit_message: "Partial implementation of can create a product gallery"
+last_published: "2024-01-19 16:19:23 +0000"
+commit_sha: 51cbd144444e6555bce92582d6cebd07133b846a
+commit_message: "Merge branch 'trunk' of github.com:woocommerce/woocommerce into e2e/p…"
 branch_name: e2e/product-images-tests
-passed: false
+passed: true
 ---
