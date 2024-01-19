@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43688/api/i
 pr_number: 43688
 pr_title_encoded: "%5BExperimental%5D+Product+Filters+-+Reintroduce+Wrapper+Block"
 pr_test_type: api
-last_published: "2024-01-17 09:36:40 +0000"
-commit_sha: 379baa628eb44d13c1a2bf2e6c065d447d6f4545
-commit_message: "Merge remote-tracking branch 'origin' into dev/introduce-product-filt…"
+last_published: "2024-01-19 05:38:20 +0000"
+commit_sha: 8a6aa4fbea3881bf630e67cf396a6a0da5fa56c6
+commit_message: "Ensure a navigation ID is always rendered for ProductFilters block."
 branch_name: dev/introduce-product-filters-wrapper
 passed: true
 ---
