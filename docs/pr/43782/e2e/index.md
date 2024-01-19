@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43782/e2e/i
 pr_number: 43782
 pr_title_encoded: "Add+additional+checkout+fields+documentation"
 pr_test_type: e2e
-last_published: "2024-01-19 11:57:05 +0000"
-commit_sha: 1669de10d44868ab87fc761d3c90e65c80b5344c
-commit_message: "Update readme to include link to new file"
+last_published: "2024-01-19 12:46:23 +0000"
+commit_sha: 7d92d0ca6cfbf6eba008fe0e4d73c5c4a8a3ceff
+commit_message: "Fix lint errors"
 branch_name: add/additional-fields-documentation
 passed: true
 ---
