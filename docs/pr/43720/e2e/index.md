@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43720/e2e/i
 pr_number: 43720
 pr_title_encoded: "Add+suggested-products+product+endpoint"
 pr_test_type: e2e
-last_published: "2024-01-19 19:28:46 +0000"
-commit_sha: ce922566f003595c7004c071e501d1b4004cb157
-commit_message: "update"
+last_published: "2024-01-19 19:47:40 +0000"
+commit_sha: 3eab6e972b934ecbd0f08d861e7c0dcb32744952
+commit_message: "fix typo"
 branch_name: update/add-product-related-products-endpoint
 passed: true
 ---
