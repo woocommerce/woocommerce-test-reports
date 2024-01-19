@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43230/e2e/i
 pr_number: 43230
 pr_title_encoded: "Apply+Rector+suggestions+for+PHP+8.1"
 pr_test_type: e2e
-last_published: "2024-01-17 22:11:34 +0000"
-commit_sha: 52884f6db0e3972b96600eed63ea1f16655273af
-commit_message: "Remove unnecessary default assignment"
+last_published: "2024-01-19 17:45:28 +0000"
+commit_sha: ec6ba7554c883a23725475f29cf15a375cd76c0d
+commit_message: "Fix PHP Lint issues"
 branch_name: as-diff-D129164
 passed: true
 ---
