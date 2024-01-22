@@ -2,11 +2,11 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43803/e2e/index.html
 pr_number: 43803
-pr_title_encoded: "Fix%2F42280+change+address+link+in+cart+block"
+pr_title_encoded: "Display+the+%22change+address%22+link+in+the+Cart+block+when+fallback+shipping+options+available"
 pr_test_type: e2e
-last_published: "2024-01-22 13:41:59 +0000"
-commit_sha: 55b2d18e9fe3b4617b278683f4e8abe78a04004e
-commit_message: "Update shipping address label"
+last_published: "2024-01-22 18:10:05 +0000"
+commit_sha: 33d62d4a00aef07a5712a888db945e6bb5fa6a1f
+commit_message: "Merge branch 'trunk' into fix/42280-change-address-link-in-cart-block"
 branch_name: fix/42280-change-address-link-in-cart-block
 passed: true
 ---
