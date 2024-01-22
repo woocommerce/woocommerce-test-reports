@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43872/api/i
 pr_number: 43872
 pr_title_encoded: "Deny+and+present+custom+error+message+for+not+in+allowed+emails+coupons"
 pr_test_type: api
-last_published: "2024-01-22 18:48:38 +0000"
-commit_sha: 8a90561a87baf3ee2777f6870a371b086886ba2f
-commit_message: "Reverted wrongly changed line."
+last_published: "2024-01-22 22:40:14 +0000"
+commit_sha: 532cf13d3bfbee8713af3a25e90dae27d3a98369
+commit_message: "Added validate_coupon_allowed_emails() to WC_Discounts"
 branch_name: enhancement/26289-coupons-allowed-emails-dont-work-as-expected
 passed: true
 ---
