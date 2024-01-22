@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43859/api/i
 pr_number: 43859
 pr_title_encoded: "Update+eslint+parser+to+%40babel%2Feslint-parser"
 pr_test_type: api
-last_published: "2024-01-22 16:12:30 +0000"
-commit_sha: f81865c992204c49af9c7ecd0c39c0b1077c38d5
-commit_message: "Revert overrides for tests/e2e/**/*.spec.js"
+last_published: "2024-01-22 17:28:04 +0000"
+commit_sha: 91717b2db2dae37fe9094a3d02fde9b36508a207
+commit_message: "Merge branch 'trunk' into fix/eslint-parser"
 branch_name: fix/eslint-parser
 passed: true
 ---
