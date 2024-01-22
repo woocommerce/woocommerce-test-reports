@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43851/e2e/i
 pr_number: 43851
 pr_title_encoded: "Improve+the+logging%2Fnoticing+of+Legacy+REST+API+usages"
 pr_test_type: e2e
-last_published: "2024-01-22 14:56:45 +0000"
-commit_sha: f19027c3eebb00e8c78195fd7d7d9ff4d074b4f9
-commit_message: "Add sanitization for route and user agent"
+last_published: "2024-01-22 15:22:00 +0000"
+commit_sha: 37515deb7c36a4581b43532e0517aff32fd3a68b
+commit_message: "Fix linting issues"
 branch_name: improve-legacy-rest-api-usage-logging
 passed: true
 ---
