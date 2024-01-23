@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43988/api/i
 pr_number: 43988
 pr_title_encoded: "%5BExperimental%5D+Product+Gallery%3A+Change+overlay+background+to+white"
 pr_test_type: api
-last_published: "2024-01-23 00:37:07 +0000"
-commit_sha: 78b21a9e28d5941836f3672944f5006a62846f16
-commit_message: "Change overlay background to white"
+last_published: "2024-01-23 00:49:11 +0000"
+commit_sha: f30c208467e0f21ac7415c2b85f729adec2285e8
+commit_message: "Add changelog file"
 branch_name: product-gallery/overlay-full-size
 passed: true
 ---
