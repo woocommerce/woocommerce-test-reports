@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43803/e2e/i
 pr_number: 43803
 pr_title_encoded: "Display+the+%22change+address%22+link+in+the+Cart+block+when+fallback+shipping+options+available"
 pr_test_type: e2e
-last_published: "2024-01-23 12:37:31 +0000"
-commit_sha: a7dc67a0345a83ae8497c02b324281fd39393bdc
-commit_message: "Update plugins/woocommerce-blocks/assets/js/base/components/cart-chec…"
+last_published: "2024-01-23 14:28:14 +0000"
+commit_sha: f0d67163ac8e542e502bfc459197d86deca64c96
+commit_message: "Display shipping calculator for locations outside all other zones"
 branch_name: fix/42280-change-address-link-in-cart-block
-passed: true
+passed: false
 ---
