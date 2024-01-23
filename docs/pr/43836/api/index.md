@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43836/api/i
 pr_number: 43836
 pr_title_encoded: "Add+E2E+tests+for+Additional+Checkout+Fields"
 pr_test_type: api
-last_published: "2024-01-23 11:24:53 +0000"
-commit_sha: b8693c7fa133c7a798840dbc37805ee422afedde
-commit_message: "Await email input to check Checkout block is loaded"
+last_published: "2024-01-23 16:42:22 +0000"
+commit_sha: cf42cbef0b62b3d8cd7a39b6bba3cb67c8bc4ddd
+commit_message: "Add server-side validation tests"
 branch_name: add/additiona-checkout-fields-e2e
 passed: true
 ---
