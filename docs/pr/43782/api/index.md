@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43782/api/i
 pr_number: 43782
 pr_title_encoded: "Add+additional+checkout+fields+documentation"
 pr_test_type: api
-last_published: "2024-01-23 18:09:26 +0000"
-commit_sha: 5872de36c77a028f8bec495869782d654f5a84c0
-commit_message: "Fix lint errors"
+last_published: "2024-01-23 19:34:53 +0000"
+commit_sha: 37d447198078f343cce981c396ef44af8713a4b9
+commit_message: "Update hook documentation"
 branch_name: add/additional-fields-documentation
 passed: true
 ---
