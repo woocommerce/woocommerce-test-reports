@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43836/e2e/i
 pr_number: 43836
 pr_title_encoded: "Add+E2E+tests+for+Additional+Checkout+Fields"
 pr_test_type: e2e
-last_published: "2024-01-19 22:45:33 +0000"
-commit_sha: e9348251f0fb7d862d20381e74ca52b3e389dac2
-commit_message: "Check billing gov-id is different to shipping one"
+last_published: "2024-01-23 11:24:54 +0000"
+commit_sha: b8693c7fa133c7a798840dbc37805ee422afedde
+commit_message: "Await email input to check Checkout block is loaded"
 branch_name: add/additiona-checkout-fields-e2e
 passed: true
 ---
