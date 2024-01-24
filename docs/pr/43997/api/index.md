@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43997/api/i
 pr_number: 43997
 pr_title_encoded: "Getting+the+Product+Collection+location%2Fcontext"
 pr_test_type: api
-last_published: "2024-01-24 12:33:30 +0000"
-commit_sha: 56bff2380d7a41f23d56cb73a233c195b97c97e7
-commit_message: "Display the info about the location of Product Collection"
+last_published: "2024-01-24 17:29:12 +0000"
+commit_sha: 2a278dd127fb15c21e91422d0f6d97f66cbe926c
+commit_message: "Fix typo"
 branch_name: 43694/get-product-collection-location-context
 passed: true
 ---
