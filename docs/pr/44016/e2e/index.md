@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44016/e2e/i
 pr_number: 44016
 pr_title_encoded: "Atomizing+and+Improving+WC-CLI+documentation+-+Fixed+PR"
 pr_test_type: e2e
-last_published: "2024-01-23 19:26:34 +0000"
-commit_sha: 278cd197fe7ecb5c155b5689df0192a83702ad19
-commit_message: "Adds new docs manifest, deletes previous manifest, renames new manifest"
+last_published: "2024-01-24 21:01:07 +0000"
+commit_sha: 58684fb27613ed2387fdb22916ce11c1084e1515
+commit_message: "Merge branch 'trunk' into atomize-test"
 branch_name: atomize-test
 passed: true
 ---
