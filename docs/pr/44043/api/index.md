@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44043/api/i
 pr_number: 44043
 pr_title_encoded: "Data%3A+reduxify+suggested+products"
 pr_test_type: api
-last_published: "2024-01-24 17:48:57 +0000"
-commit_sha: bfdded59aeca35198a7901dada7d4965cf5d1b6b
-commit_message: ""
+last_published: "2024-01-24 18:11:30 +0000"
+commit_sha: 4a50d7442b65080990fc8fa81a6d31c339d8ffed
+commit_message: "fixing tests"
 branch_name: update/redux-suggested-products
-passed: false
+passed: true
 ---
