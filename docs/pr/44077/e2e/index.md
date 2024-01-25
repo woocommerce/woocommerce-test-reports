@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44077/e2e/i
 pr_number: 44077
 pr_title_encoded: "Add+%22can+view+product+review%22+test"
 pr_test_type: e2e
-last_published: "2024-01-25 12:53:12 +0000"
+last_published: "2024-01-25 13:33:45 +0000"
 commit_sha: db1b1393610e235bc4216232aff61f4a8ea2de25
 commit_message: "Merge branch 'e2e/check-product-review' of https://github.com/woocomm…"
 branch_name: e2e/check-product-review
