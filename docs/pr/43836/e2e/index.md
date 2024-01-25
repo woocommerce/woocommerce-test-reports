@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43836/e2e/i
 pr_number: 43836
 pr_title_encoded: "Add+E2E+tests+for+Additional+Checkout+Fields"
 pr_test_type: e2e
-last_published: "2024-01-24 16:27:02 +0000"
-commit_sha: f6660abc52d8eaeacb7452ca395f40c525289d51
-commit_message: "Fill in gov ID confirmation field"
+last_published: "2024-01-25 19:37:39 +0000"
+commit_sha: 6440219d7d594337a52be76396be0b05dd9a2406
+commit_message: ""
 branch_name: add/additiona-checkout-fields-e2e
-passed: true
+passed: false
 ---
