@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40998/e2e/i
 pr_number: 40998
 pr_title_encoded: "Fix+coupon+codes+containing+apostrophes"
 pr_test_type: e2e
-last_published: "2023-12-15 15:05:32 +0000"
-commit_sha: 98a24e15022ac630ddd413e966e129d8eaab2796
+last_published: "2024-01-25 13:34:55 +0000"
+commit_sha: a92cd0b55f43a141894f520a950c28aeb5dccc08
 commit_message: "Try alternative wp_kses function"
 branch_name: fix/coupon-title-sanitization-39481
-passed: false
+passed: true
 ---
