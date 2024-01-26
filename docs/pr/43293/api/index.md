@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43293/api/i
 pr_number: 43293
 pr_title_encoded: "Add+background+HPOS+cleanup+process"
 pr_test_type: api
-last_published: "2024-01-26 16:32:55 +0000"
-commit_sha: 516a3c19992cc7b0e5d2ce060a6a04adaa8935a8
-commit_message: "Move order cleanup to Tools"
+last_published: "2024-01-26 17:08:24 +0000"
+commit_sha: d4af1cd5a57d9dc3fd92a43192f9b23b7cef8099
+commit_message: "PHPCS fixes"
 branch_name: hpos/41915
 passed: true
 ---
