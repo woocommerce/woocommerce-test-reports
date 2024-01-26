@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43769/api/i
 pr_number: 43769
 pr_title_encoded: "Add+wireit+build+config+for+woo-ai+plugin"
 pr_test_type: api
-last_published: "2024-01-22 18:24:14 +0000"
-commit_sha: bb1f2b8b7621607197e28abeeb0bba4f017ee827
-commit_message: "Add lint config for woo-ai plugin js and css"
+last_published: "2024-01-26 21:52:21 +0000"
+commit_sha: 6985e0ed16143e89ac02b1cf0ac6f2d1e69810af
+commit_message: ""
 branch_name: add/woo-ai-watch
-passed: true
+passed: false
 ---
