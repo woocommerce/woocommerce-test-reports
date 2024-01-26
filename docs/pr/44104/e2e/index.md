@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44104/e2e/i
 pr_number: 44104
 pr_title_encoded: "%5BProduct+Block+Editor%5D%3A+introduce+TextArea+field+block"
 pr_test_type: e2e
-last_published: "2024-01-26 17:08:48 +0000"
-commit_sha: d49fd8ce6cc86d4b6d0e56e7cce32f23f9d1ad10
-commit_message: "intrduce placehholder attribute"
+last_published: "2024-01-26 17:32:50 +0000"
+commit_sha: f7b7aef385961e2ab94def9ae2230d19fc504066
+commit_message: "property is the only required attribute"
 branch_name: update/introduce-text-area-block
 passed: false
 ---
