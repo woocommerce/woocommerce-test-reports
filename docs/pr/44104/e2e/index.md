@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44104/e2e/i
 pr_number: 44104
 pr_title_encoded: "%5BProduct+Block+Editor%5D%3A+introduce+TextArea+field+block"
 pr_test_type: e2e
-last_published: "2024-01-25 23:32:20 +0000"
-commit_sha: 2a73a8a9cd178481d615095b3a8d4f2f508a043e
-commit_message: "fix whitespace lint issue"
+last_published: "2024-01-26 17:08:48 +0000"
+commit_sha: d49fd8ce6cc86d4b6d0e56e7cce32f23f9d1ad10
+commit_message: "intrduce placehholder attribute"
 branch_name: update/introduce-text-area-block
 passed: false
 ---
