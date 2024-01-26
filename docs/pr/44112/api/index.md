@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44112/api/i
 pr_number: 44112
 pr_title_encoded: "%5Be2e+tests%5D+Add+downloadable+product+test"
 pr_test_type: api
-last_published: "2024-01-26 18:14:25 +0000"
-commit_sha: a33b446ad18dac1eda93c47b1d857185991213d1
-commit_message: "Use a fixture for category"
+last_published: "2024-01-26 18:35:36 +0000"
+commit_sha: 7055e423da700b997bc2ad8e1113838cd0a31d67
+commit_message: "Switch to text mode in short description editor"
 branch_name: e2e/add/downloadable-product-test
 passed: true
 ---
