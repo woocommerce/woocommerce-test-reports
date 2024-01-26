@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44123/e2e/i
 pr_number: 44123
 pr_title_encoded: "Fix+incorrect+product+data+displayed+in+Product+Collection+in+context+of+Single+Product+block"
 pr_test_type: e2e
-last_published: "2024-01-26 15:59:27 +0000"
-commit_sha: 176a65a8527a083b9930a4f7fde9666ae59bbd04
-commit_message: "Initial approach to fix incorrect product data displayed in Product C…"
+last_published: "2024-01-26 16:39:10 +0000"
+commit_sha: 18b8e8fcbb8b7bef7770d4f6f1baccc4a96b3945
+commit_message: "Remove the BlockCOntextProvider"
 branch_name: 43991-product-collection-displays-content-from-single-product-block-when-used-in-single-product-block
 passed: true
 ---
