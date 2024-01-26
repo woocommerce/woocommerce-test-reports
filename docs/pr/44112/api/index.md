@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44112/api/i
 pr_number: 44112
 pr_title_encoded: "%5Be2e+tests%5D+Add+downloadable+product+test"
 pr_test_type: api
-last_published: "2024-01-26 12:09:11 +0000"
-commit_sha: d3cfff1972c760d3af06b21f1f450014b6759f68
-commit_message: "Add changelog"
+last_published: "2024-01-26 15:28:02 +0000"
+commit_sha: 0174f1ca472797bbb69603951c6d86f3052d2880
+commit_message: "Merged create product tests into a single parametrized one"
 branch_name: e2e/add/downloadable-product-test
 passed: true
 ---
