@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43981/e2e/i
 pr_number: 43981
 pr_title_encoded: "%5BProduct+Editor%5D+Support+for+variable+product+and+variations+in+product+templates"
 pr_test_type: e2e
-last_published: "2024-01-26 16:34:28 +0000"
-commit_sha: 179896710b3517dc719f4492af9730d58a3b384d
-commit_message: "Pass post type to is_product_type_supported (hardcoded, need to update)"
+last_published: "2024-01-26 20:46:00 +0000"
+commit_sha: 11d3c16a58c24e6ba1ab7a655128bf96eb3ce400
+commit_message: "Unit tests for is_product_type_supported()"
 branch_name: update/product-templates-for-variable-and-variation
 passed: true
 ---
