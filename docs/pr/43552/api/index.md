@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43552/api/i
 pr_number: 43552
 pr_title_encoded: "%5Be2e+tests%5D+README.md+-+Add+link+to+WooCommerce+Monorepo+prerequisites"
 pr_test_type: api
-last_published: "2024-01-29 10:05:18 +0000"
-commit_sha: fee15c383d6f43ace385cd703dcea2db60881308
-commit_message: "Merge branch 'trunk' into README.md]-Add-link-to-WC-Monorepo-prerequi…"
+last_published: "2024-01-29 11:31:34 +0000"
+commit_sha: 612fa8e9e6d14646a2223504537485e19ba14d94
+commit_message: "Remove duplicated lines"
 branch_name: README.md]-Add-link-to-WC-Monorepo-prerequisites
 passed: true
 ---
