@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44108/api/i
 pr_number: 44108
 pr_title_encoded: "Migrate+coupon-+and+shipping-related+tests+to+Playwright"
 pr_test_type: api
-last_published: "2024-01-30 08:23:53 +0000"
+last_published: "2024-01-30 08:51:08 +0000"
 commit_sha: e1ab30e60c3bb4f55d0135b6fd6e49abf58b16cd
 commit_message: "Fix broken tests"
 branch_name: update/44030-migrate-checkout-related-tests-to-Playwright
