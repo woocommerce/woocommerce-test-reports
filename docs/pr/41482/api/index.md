@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41482/api/i
 pr_number: 41482
 pr_title_encoded: "Apply+Rector+suggestions+for+PHP+8.1"
 pr_test_type: api
-last_published: "2024-01-30 22:20:48 +0000"
-commit_sha: 3419c5bd2866177fc0cfbacf04569e9e1974f2bd
+last_published: "2024-01-30 23:06:00 +0000"
+commit_sha: ad4e25cfdbd83eca4b9f9aa98abb0a7e5b27a27f
 commit_message: "Use self for consistency"
 branch_name: as-update-to-php-81-2
 passed: true
