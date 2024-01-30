@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44181/api/i
 pr_number: 44181
 pr_title_encoded: "%5BExperiment%5D+Handle+customer+session+meta+data"
 pr_test_type: api
-last_published: "2024-01-30 14:32:48 +0000"
-commit_sha: 13fd93d2d64820504fc85334f9308b4f24154dba
-commit_message: "Organise keys and remove duplicates"
+last_published: "2024-01-30 15:49:01 +0000"
+commit_sha: 000b18db962805143d5ede9612cbeaa44c16336b
+commit_message: "Correctly save fields to account"
 branch_name: experiment/customer-session-meta-data
 passed: true
 ---
