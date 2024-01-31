@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41601/e2e/i
 pr_number: 41601
 pr_title_encoded: "Create+a+new+Playwright+project+for+new+product+experience"
 pr_test_type: e2e
-last_published: "2024-01-31 12:56:13 +0000"
-commit_sha: 65d6e8fb7bbe2382fb2e00a7c590f1a1c6a129b6
-commit_message: "Create Playwright projects"
+last_published: "2024-01-31 20:39:07 +0000"
+commit_sha: 008e63912362dc674d65df9c4b9cbd8c9604639b
+commit_message: "Remove chrome-legacy-editor project"
 branch_name: dev/40009_create_new_playwright_project_for_new_experience
 passed: true
 ---
