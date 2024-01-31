@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43502/api/i
 pr_number: 43502
 pr_title_encoded: "Add+the+Receipts+Rendering+Engine"
 pr_test_type: api
-last_published: "2024-01-30 08:31:58 +0000"
-commit_sha: cdb08aa2456a0b22e36f7a41f910d5e3850fcbcf
-commit_message: "Fix: get_existing_receipt will no longer return expired files"
+last_published: "2024-01-31 08:12:55 +0000"
+commit_sha: 68737859bcaab282c45e2c75f96a74c25094e46d
+commit_message: "Merge branch 'trunk' into add-receipt-rendering-engine"
 branch_name: add-receipt-rendering-engine
 passed: true
 ---
