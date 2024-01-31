@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44192/e2e/i
 pr_number: 44192
 pr_title_encoded: "%5BExperimental%5D+Add+e2e+tests+for+the+rating+filter+block"
 pr_test_type: e2e
-last_published: "2024-01-31 05:08:27 +0000"
-commit_sha: 2a35957484082a5172e50717512d92aae84697e9
-commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
+last_published: "2024-01-31 05:30:36 +0000"
+commit_sha: 53b2b82c2dff70f51c096f54954958beca79e160
+commit_message: "Remove redundant scroll."
 branch_name: dev/e2e-test-rating-filter
 passed: true
 ---
