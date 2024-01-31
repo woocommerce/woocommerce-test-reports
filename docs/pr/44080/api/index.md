@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44080/api/i
 pr_number: 44080
 pr_title_encoded: "Build+path+info+directly+instead+of+loading+REST+API."
 pr_test_type: api
-last_published: "2024-01-31 12:33:58 +0000"
-commit_sha: b35ee3dba47e4618bf55884953cc7b93b7505e27
-commit_message: "Short hydration logic to use controller directly."
+last_published: "2024-01-31 12:55:14 +0000"
+commit_sha: baf42e09ea070a4c28d4c54ec0d77743747f1a38
+commit_message: "Rename _get_path to get_path_regex for accuracy and lint."
 branch_name: fix/43879
-passed: false
+passed: true
 ---
