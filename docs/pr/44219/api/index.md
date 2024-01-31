@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44219/api/i
 pr_number: 44219
 pr_title_encoded: "Order+attribution+-+avoid+attributing+AJAX-checkouts+to+Web+Admin"
 pr_test_type: api
-last_published: "2024-01-31 12:13:44 +0000"
-commit_sha: 6764918d3c64ea001cc260ad959664150b27a115
-commit_message: "Ensure is_admin AND ! wp_doing_ajax for setting Web admin source"
+last_published: "2024-01-31 15:22:58 +0000"
+commit_sha: 7221821da02133a24261e834adee2738c1ca550b
+commit_message: "Better control to permit possible wp-admin ajax order creation"
 branch_name: fix/better-order-attribution-web-adming-attribution
 passed: true
 ---
