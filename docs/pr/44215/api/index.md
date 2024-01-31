@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44215/api/i
 pr_number: 44215
 pr_title_encoded: "Package+Release%3A+Update+usage+of+NPM+auth+token"
 pr_test_type: api
-last_published: "2024-01-31 20:59:38 +0000"
-commit_sha: aa4e324017903038a0a414f2c282c203f0205e9d
-commit_message: "try in tool"
+last_published: "2024-01-31 21:14:46 +0000"
+commit_sha: fa50fa6792b2fea63f099a2eb7b94f7fbce0c443
+commit_message: "try adding line"
 branch_name: fix/npm-auth-token-use
 passed: true
 ---
