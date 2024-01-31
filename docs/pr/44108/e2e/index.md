@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44108/e2e/i
 pr_number: 44108
 pr_title_encoded: "Migrate+coupon-+and+shipping-related+tests+to+Playwright"
 pr_test_type: e2e
-last_published: "2024-01-30 10:32:59 +0000"
-commit_sha: fa08e2ced0497e8335cc753bf2bf4d7e4f9a079b
+last_published: "2024-01-31 07:13:30 +0000"
+commit_sha: 9b857445c15388c6374a21a32b87e85eb005499d
 commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
 branch_name: update/44030-migrate-checkout-related-tests-to-Playwright
-passed: false
+passed: true
 ---
