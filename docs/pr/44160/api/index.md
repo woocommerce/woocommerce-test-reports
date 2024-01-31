@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44160/api/i
 pr_number: 44160
 pr_title_encoded: "Adjust+spacing+in%2Fbetween+elements+on+Cart+and+Checkout"
 pr_test_type: api
-last_published: "2024-01-31 10:18:13 +0000"
-commit_sha: 3baeba4c58ce4e5d29aaff6ae0681f16d9f0dae8
-commit_message: "Update styles for order summary and cross-sells products"
+last_published: "2024-01-31 10:34:15 +0000"
+commit_sha: 6b47157106b0ef97289232d47d6a4f72712f046d
+commit_message: "Remove unnecessary CSS styles from cart line items table and cart block"
 branch_name: update/42108-adjust-cart-checkout-spacing
-passed: false
+passed: true
 ---
