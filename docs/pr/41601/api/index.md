@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41601/api/i
 pr_number: 41601
 pr_title_encoded: "Create+a+new+Playwright+project+for+new+product+experience"
 pr_test_type: api
-last_published: "2024-01-31 23:04:27 +0000"
-commit_sha: 97428dad173e3f04b2f38c8546bf07aebeeee6d3
-commit_message: "Change test id"
+last_published: "2024-02-01 12:04:44 +0000"
+commit_sha: 51b271db878b351b9ad94f1110c6473007997996
+commit_message: "Rename main project"
 branch_name: dev/40009_create_new_playwright_project_for_new_experience
 passed: true
 ---
