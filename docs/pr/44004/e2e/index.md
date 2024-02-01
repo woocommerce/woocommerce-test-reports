@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44004/e2e/i
 pr_number: 44004
 pr_title_encoded: "%5BWIP%5D+CYS+-+Core%3A+add+integration+with+the+font+library"
 pr_test_type: e2e
-last_published: "2024-01-29 18:36:32 +0000"
-commit_sha: b8e48fa1a8a38df715b0944a6dfd984bc0439e04
-commit_message: "use promise.all into the map"
+last_published: "2024-02-01 10:05:16 +0000"
+commit_sha: 10cb26e175e7e386a83a2126999718fa262d5179
+commit_message: "improve performance"
 branch_name: 41924-cys-ensure-the-fonts-selected-in-the-assembler-are-displayed-on-the-frontend
-passed: false
+passed: true
 ---
