@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44263/e2e/i
 pr_number: 44263
 pr_title_encoded: "Update+notice+templates+display+logic+to+show+updated+templates+in+block+themes+only"
 pr_test_type: e2e
-last_published: "2024-02-01 15:09:34 +0000"
-commit_sha: b7d560879c950d30dd65f36b15c3eafab3cb81ae
-commit_message: "Bump template versions"
+last_published: "2024-02-01 15:37:17 +0000"
+commit_sha: 98b103661605d85eae197c9a36820267b0261adc
+commit_message: "Remove child themes - they will be installed from the zip"
 branch_name: update/44064-notice-templates-display-logic
 passed: false
 ---
