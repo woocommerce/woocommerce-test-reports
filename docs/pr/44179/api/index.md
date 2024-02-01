@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44179/api/i
 pr_number: 44179
 pr_title_encoded: "%5BCYS%5D+Avoid+duplicating+requests+during+the+CYS+flow"
 pr_test_type: api
-last_published: "2024-01-30 15:19:04 +0000"
-commit_sha: e7da5e42d28c2e262bafebfb3dd068c117d1741f
-commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
+last_published: "2024-02-01 12:46:48 +0000"
+commit_sha: 139dd15fc21408f07d3d3510a2f361582787edea
+commit_message: "Merge branch 'trunk' into 43856-avoid-duplicating-requests"
 branch_name: 43856-avoid-duplicating-requests
 passed: true
 ---
