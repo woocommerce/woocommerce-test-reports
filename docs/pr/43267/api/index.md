@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43267/api/i
 pr_number: 43267
 pr_title_encoded: "Block+Hooks+API%3A+Add+CustomerAccount+block+to+header"
 pr_test_type: api
-last_published: "2024-01-25 10:03:12 +0000"
-commit_sha: 39dbaa5788be7a233a019e5dbab7564f784d2039
+last_published: "2024-02-01 10:39:32 +0000"
+commit_sha: 4ba1c6ea02dea7c21f10ccc0696f368fc040227f
 commit_message: "Merge branch 'trunk' into add/auto-insert-customer-block"
 branch_name: add/auto-insert-customer-block
 passed: true
