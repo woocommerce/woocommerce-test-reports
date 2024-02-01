@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44113/e2e/i
 pr_number: 44113
 pr_title_encoded: "Simplify+the+applied+coupon+data+that+gets+stored+as+line+item+meta"
 pr_test_type: e2e
-last_published: "2024-01-31 11:36:47 +0000"
-commit_sha: 888d5ff18ad0fbde0bb6af4b98e4f666d46e99e0
-commit_message: "Expand OrderCouponDataMigrator to show the tool that enqueues"
+last_published: "2024-02-01 16:08:34 +0000"
+commit_sha: 9f8ed2ac74a352e4a37d7f71eed753ea85719b24
+commit_message: "Rename 'coupon_reapply_info' to just 'coupon_info'"
 branch_name: simplify-order-coupon-storage
 passed: true
 ---
