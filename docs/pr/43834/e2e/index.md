@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43834/e2e/i
 pr_number: 43834
 pr_title_encoded: "Move+the+guest+should+verify+email+logic+to+the+order+class"
 pr_test_type: e2e
-last_published: "2024-02-02 02:36:25 +0000"
-commit_sha: 4ee657246be3d14ffc04068b5b99fa5d83003330
-commit_message: "Use global WC_DateTime and WC_Session classes"
+last_published: "2024-02-02 22:18:38 +0000"
+commit_sha: 1fce2d1f1609afc8b8712435ee22bc23c1300008
+commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
 branch_name: update/move-guest-should-verify-email-logic-to-order-class
-passed: false
+passed: true
 ---
