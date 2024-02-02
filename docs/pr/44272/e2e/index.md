@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44272/e2e/i
 pr_number: 44272
 pr_title_encoded: "%5Be2e+tests%5D+New+tests+for+product+edit+in+block+editor"
 pr_test_type: e2e
-last_published: "2024-02-02 16:28:07 +0000"
-commit_sha: 02e9b6321e8ebde3e1dc0919ce7a54a78a8fd86c
+last_published: "2024-02-02 16:48:04 +0000"
+commit_sha: fe6733267419c7e3580cad249edc55cc21b4d7cc
 commit_message: "Merge branch 'trunk' into e2e/add/new-product-edit"
 branch_name: e2e/add/new-product-edit
 passed: true
