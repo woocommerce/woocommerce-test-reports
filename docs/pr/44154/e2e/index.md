@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44154/e2e/i
 pr_number: 44154
 pr_title_encoded: "%5Be2e+tests%5D+Add+new+tests+for+up-sells+and+cross-sells"
 pr_test_type: e2e
-last_published: "2024-01-30 21:18:23 +0000"
-commit_sha: dad54ed092f90f5fd5c716c4a7515bf367dddd8a
+last_published: "2024-02-02 13:38:31 +0000"
+commit_sha: 36835cc6b0965f51786e5c9378a908884b55c001
 commit_message: "Merge branch 'trunk' into e2e/add/related-products"
 branch_name: e2e/add/related-products
-passed: true
+passed: false
 ---
