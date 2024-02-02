@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44308/api/i
 pr_number: 44308
 pr_title_encoded: "Fix+e2e+tests+required+job+being+skipped+on+failures"
 pr_test_type: api
-last_published: "2024-02-02 13:59:53 +0000"
-commit_sha: c07998ac9dfba94e83602e37ef001b90aba1a366
-commit_message: "Always run e2e-tests-success"
+last_published: "2024-02-02 14:39:25 +0000"
+commit_sha: aedd744c3ba87e9f2af42f221dcb605f19c4ac09
+commit_message: "Evaluate e2e results"
 branch_name: e2e/fix-ci-e2e-status
 passed: true
 ---
