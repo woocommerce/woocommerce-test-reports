@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43772/api/i
 pr_number: 43772
 pr_title_encoded: "Refactor%3A+replace+QueryFilters+by+ProductQueryFiltersServiceProvider"
 pr_test_type: api
-last_published: "2024-02-02 09:16:42 +0000"
+last_published: "2024-02-02 09:59:34 +0000"
 commit_sha: d55faf5cccc3680ea037fd125989846e3061fa8b
 commit_message: "chore: phpcs"
 branch_name: fix/43493-move-queryfilters-to-core
