@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43999/api/i
 pr_number: 43999
 pr_title_encoded: "%5BExperimental%5D+Prevent+string-based+sanitization+on+non-string+field+types+in+additional+checkout+fields"
 pr_test_type: api
-last_published: "2024-02-01 12:51:06 +0000"
-commit_sha: eeabf040dac33de312ba7203f39cbcc93e21d38d
-commit_message: "Save schema to variable instead of getting every loop"
+last_published: "2024-02-02 11:26:15 +0000"
+commit_sha: 6bfb14a8bb00c4426e9f7d51b89c6f75bd616ea9
+commit_message: "Add spaces around array key"
 branch_name: fix/additional-field-optional-checkboxes
 passed: true
 ---
