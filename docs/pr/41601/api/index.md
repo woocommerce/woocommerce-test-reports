@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/41601/api/i
 pr_number: 41601
 pr_title_encoded: "Create+a+new+Playwright+project+for+new+product+experience"
 pr_test_type: api
-last_published: "2024-02-04 16:00:01 +0000"
+last_published: "2024-02-04 20:29:02 +0000"
 commit_sha: 4d49082b3bb29ad7f72b7814ffdf00cafd2fa385
 commit_message: "Fix job name"
 branch_name: dev/40009_create_new_playwright_project_for_new_experience
