@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44113/e2e/i
 pr_number: 44113
 pr_title_encoded: "Simplify+the+applied+coupon+data+that+gets+stored+as+line+item+meta"
 pr_test_type: e2e
-last_published: "2024-02-05 08:54:18 +0000"
-commit_sha: 10367fbd28b977cab76327859fdb7d807a41828f
-commit_message: "Fix coupons API test"
+last_published: "2024-02-05 09:01:41 +0000"
+commit_sha: 83ff0f68f68e147589ee22417ccd781ba0283634
+commit_message: ""
 branch_name: simplify-order-coupon-storage
 passed: true
 ---
