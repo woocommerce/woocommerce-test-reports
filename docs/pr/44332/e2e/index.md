@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44332/e2e/i
 pr_number: 44332
 pr_title_encoded: "Product+Gallery+block%3A+Announce+Pop-Up+Opening+with+Voiceovers"
 pr_test_type: e2e
-last_published: "2024-02-05 21:36:06 +0000"
-commit_sha: a13097f29cb1a4c7de0742a260edba1224826c83
-commit_message: "Announce Dialog opening with VoiceOver"
+last_published: "2024-02-05 22:05:48 +0000"
+commit_sha: 8e3cb9f99448dff1d8f14f1b7ffbfcb50fe8ee97
+commit_message: "fix php cs lint error"
 branch_name: fix/43760-announce-pop-up-opening-with-voiceovers
 passed: true
 ---
