@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44080/api/i
 pr_number: 44080
 pr_title_encoded: "Build+path+info+directly+instead+of+loading+REST+API."
 pr_test_type: api
-last_published: "2024-02-06 09:53:14 +0000"
-commit_sha: 8e626a6f4d602e555249445ad97eb9533dde1282
-commit_message: "Restore cache notice check to allow controllers to start from clean s…"
+last_published: "2024-02-06 10:12:10 +0000"
+commit_sha: bc5d51b0208f8609f2a180fa82b63f1b15ac3b56
+commit_message: "Update since tag."
 branch_name: fix/43879
 passed: true
 ---
