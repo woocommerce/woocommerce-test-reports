@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44318/api/i
 pr_number: 44318
 pr_title_encoded: "Simplify+Customer+history+calculation"
 pr_test_type: api
-last_published: "2024-02-06 01:10:40 +0000"
-commit_sha: aef98394b6c9c3e33ba8a90ab9e1a03ae14263e1
-commit_message: "Merge branch 'trunk' into update/8.5.3/order-customer-history"
+last_published: "2024-02-06 01:46:40 +0000"
+commit_sha: 3e12d28d9fdc0edd4faedef45eb76df9d1d52f86
+commit_message: "Use Customers Query directly to get customer history data"
 branch_name: update/8.5.3/order-customer-history
-passed: true
+passed: false
 ---
