@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/43502/api/i
 pr_number: 43502
 pr_title_encoded: "Add+the+Receipts+Rendering+Engine"
 pr_test_type: api
-last_published: "2024-02-06 11:22:34 +0000"
-commit_sha: e2d52d208ed44804ea15a992faed4c28dc178914
-commit_message: "Add forcing flush of rewrite rules at install time"
+last_published: "2024-02-07 10:19:41 +0000"
+commit_sha: 164b09f112654cc432794aa54f531dd2ce6de6c6
+commit_message: "Add .htaccess and emtpy index.html to default transient files directory"
 branch_name: add-receipt-rendering-engine
 passed: true
 ---
