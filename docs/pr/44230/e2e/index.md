@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44230/e2e/i
 pr_number: 44230
 pr_title_encoded: "Ensure+proper+handling+of+product-related+taxonomies+in+filtering+logic"
 pr_test_type: e2e
-last_published: "2024-02-06 13:18:35 +0000"
-commit_sha: f6ebd0d0ee098e657376a4e6925b3e5261b94cca
-commit_message: "Changelog"
+last_published: "2024-02-07 10:02:31 +0000"
+commit_sha: 5cbfc3174d6ce03a26b5e304b9ed43f8f7b9771b
+commit_message: "Merge branch 'trunk' into fix/44227-product-taxonomies"
 branch_name: fix/44227-product-taxonomies
-passed: false
+passed: true
 ---
