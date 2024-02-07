@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44384/api/i
 pr_number: 44384
 pr_title_encoded: "Store+default+specs+into+transient+when+spec+rules+fail"
 pr_test_type: api
-last_published: "2024-02-07 01:54:29 +0000"
-commit_sha: 96e27d3897fa05acbb23bc4301d96b63167a84ff
-commit_message: "Update plugins/woocommerce/src/Admin/DataSourcePoller.php"
+last_published: "2024-02-07 09:02:09 +0000"
+commit_sha: 1d3fa5cf18f57e9bfec74e670d95f9f9349a98ac
+commit_message: "Add unit tests"
 branch_name: update/store-default-specs-when-fails
 passed: true
 ---
