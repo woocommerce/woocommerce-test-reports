@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44316/e2e/i
 pr_number: 44316
 pr_title_encoded: "Skip+e2e+tests+if+only+docs+are+updated"
 pr_test_type: e2e
-last_published: "2024-02-07 13:15:59 +0000"
-commit_sha: 8bd3417d60b778a792521c377a90cfbd34758d72
-commit_message: "Merge branch 'trunk' of github.com:woocommerce/woocommerce into e2e/s…"
+last_published: "2024-02-07 13:35:14 +0000"
+commit_sha: 7ab4a60eac13e82b90d532a4f14d65c6962fc9f8
+commit_message: "Include docs/** in the ignore paths"
 branch_name: e2e/skip-e2e-when-only-docs-are-updated
-passed: false
+passed: true
 ---
