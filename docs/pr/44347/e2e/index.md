@@ -2,11 +2,11 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44347/e2e/index.html
 pr_number: 44347
-pr_title_encoded: "Prevent+billing+address+prefilled+with+the+shipping+address+"
+pr_title_encoded: "Prevent+prefilling+of+the+billing+address+with+the+shipping+address+in+the+Checkout+block"
 pr_test_type: e2e
-last_published: "2024-02-05 11:02:03 +0000"
-commit_sha: f4364ecdd4d8fb0995319760cac6e7201438a813
-commit_message: "Add billing address sync with server"
+last_published: "2024-02-08 09:07:47 +0000"
+commit_sha: 7bc3312ab775e689d94e46aecf5014b8f13d2f06
+commit_message: "Add useRef hook to store previous billing address and update sync fun…"
 branch_name: fix/42140-prevent-prefilled-billing-address
 passed: false
 ---
