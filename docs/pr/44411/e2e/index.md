@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44411/e2e/i
 pr_number: 44411
 pr_title_encoded: "%5Be2e%5D+Can+Edit+and+Delete+Product+Review"
 pr_test_type: e2e
-last_published: "2024-02-06 18:18:03 +0000"
-commit_sha: 22f8df17226affc46ba8d024fa9137fcb3fc39d1
-commit_message: "Update product-review"
+last_published: "2024-02-08 13:17:19 +0000"
+commit_sha: 286c760cc9a860a8c6457a20f6a6b2c7fe1ac675
+commit_message: "Added test data in fixture and changelog extra line"
 branch_name: e2e-can-edit-product-review
-passed: true
+passed: false
 ---
