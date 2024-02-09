@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44470/e2e/i
 pr_number: 44470
 pr_title_encoded: "%5Be2e+tests%5D+Add+tests+for+managing+product+images+in+block+editor"
 pr_test_type: e2e
-last_published: "2024-02-08 17:59:32 +0000"
-commit_sha: e5859548ecf5e2e8d366cdf52b7d7304b093e128
-commit_message: "Allow 404 http code"
+last_published: "2024-02-09 17:50:08 +0000"
+commit_sha: 03c00c7938cccff0044141ff268477caa25c7cc1
+commit_message: "Add tests `can replace an image`"
 branch_name: e2e/add/manage-product-images-block-editor
 passed: true
 ---
