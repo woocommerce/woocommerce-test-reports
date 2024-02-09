@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44494/api/i
 pr_number: 44494
 pr_title_encoded: "Update+marketplace+suggestion+wording."
 pr_test_type: api
-last_published: "2024-02-09 13:45:18 +0000"
-commit_sha: 0b6f95b366f3f53f9275e83f8bc54d3c79ca4394
-commit_message: "Add changelog file."
+last_published: "2024-02-09 14:48:38 +0000"
+commit_sha: b0ee21f9d5417439a85bf569f7ab54c43e9990dc
+commit_message: "Update tests."
 branch_name: update/clarify-marketplace-suggestion-wording
-passed: false
+passed: true
 ---
