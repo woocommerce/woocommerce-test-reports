@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44532/e2e/i
 pr_number: 44532
 pr_title_encoded: "%5BCYS+on+Core%5D+Conditionally+change+the+default+fonts+available+based+on+user+consent"
 pr_test_type: e2e
-last_published: "2024-02-11 20:51:51 +0000"
-commit_sha: af41875fe69e5600d00be4dcee32d1beb4f12ad1
-commit_message: "Add styles for the woocommerce-customize-store_sidebar-typography-upg…"
+last_published: "2024-02-11 21:08:11 +0000"
+commit_sha: 998d4dd90624d82fe3e343f4bcdce6575abdcd80
+commit_message: "Update the upgrade conditionals."
 branch_name: 44187-cys-on-core-conditionally-change-the-default-fonts-available-based-on-user-consent
 passed: true
 ---
