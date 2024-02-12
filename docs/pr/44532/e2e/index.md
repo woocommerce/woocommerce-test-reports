@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44532/e2e/i
 pr_number: 44532
 pr_title_encoded: "%5BCYS+on+Core%5D+Conditionally+change+the+default+fonts+available+based+on+user+consent"
 pr_test_type: e2e
-last_published: "2024-02-11 22:33:05 +0000"
-commit_sha: 6f5ca9da42b31c05c273670492f2f3e93e5b8b53
-commit_message: "Add the CSS for the woocommerce-customize-store__opt-in-usage-trackin…"
+last_published: "2024-02-12 12:45:39 +0000"
+commit_sha: b64d3d9b0b3d0f3c3862a216107bb12583018425
+commit_message: "Fix typo."
 branch_name: 44187-cys-on-core-conditionally-change-the-default-fonts-available-based-on-user-consent
 passed: true
 ---
