@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44496/api/i
 pr_number: 44496
 pr_title_encoded: "Fix+for+the+dependency+injection+container+resolution+by+tag"
 pr_test_type: api
-last_published: "2024-02-09 12:34:28 +0000"
-commit_sha: 700d8154317f450ff9623fdd7a3b6fe1377c67ff
-commit_message: "Add changelog file"
+last_published: "2024-02-12 08:31:45 +0000"
+commit_sha: dbd80fffbd1c99afe7fae7d6747a8e6cf845c94b
+commit_message: "Add a unit test for the fix"
 branch_name: fix-container-resolution-by-tag-after-resolution-by-id
 passed: true
 ---
