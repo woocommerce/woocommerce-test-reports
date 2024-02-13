@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44440/api/i
 pr_number: 44440
 pr_title_encoded: "Add+sharding+to+Blocks+e2e+tests"
 pr_test_type: api
-last_published: "2024-02-09 18:31:34 +0000"
-commit_sha: 50c7180e0854879dc578d752e7c3fcc70d95c1ba
+last_published: "2024-02-13 16:59:06 +0000"
+commit_sha: 52a93857a40382e68a4080a65d302a170ec324a3
 commit_message: "Merge branch 'trunk' of github.com:woocommerce/woocommerce into dev/t…"
 branch_name: dev/try-sharding-blocks-tests
-passed: true
+passed: false
 ---
