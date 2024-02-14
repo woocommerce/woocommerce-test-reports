@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44593/api/i
 pr_number: 44593
 pr_title_encoded: "%5BWIP%5D+use+wordpress+6.5+for+the+test+env"
 pr_test_type: api
-last_published: "2024-02-14 12:30:26 +0000"
-commit_sha: 6357320a2d3fbd1aef0ee33ce44f551b16ab9d69
-commit_message: "fix Mini Cart Block E2E test"
+last_published: "2024-02-14 13:38:13 +0000"
+commit_sha: 3239d213238ce5b83169753b0e5c5d11d52b9b1d
+commit_message: "add editor dependency"
 branch_name: add/wp-env-6.5
 passed: true
 ---
