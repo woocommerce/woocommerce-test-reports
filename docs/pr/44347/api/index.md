@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44347/api/i
 pr_number: 44347
 pr_title_encoded: "Prevent+prefilling+of+the+billing+address+with+the+shipping+address+in+the+Checkout+block+for+the+Guest+Shopper"
 pr_test_type: api
-last_published: "2024-02-13 17:40:16 +0000"
-commit_sha: ecae6df49cc7e6241463843e4fa9decd9c31b80d
-commit_message: "Merge branch 'trunk' into fix/42140-prevent-prefilled-billing-address"
+last_published: "2024-02-14 12:14:38 +0000"
+commit_sha: a2a13150ea43dfe899c1be438ea03d026d7bcd8e
+commit_message: "Include company field in the E2E test"
 branch_name: fix/42140-prevent-prefilled-billing-address
 passed: true
 ---
