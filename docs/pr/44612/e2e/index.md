@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44612/e2e/i
 pr_number: 44612
 pr_title_encoded: "Add+e2e+tests+for+notice+templates"
 pr_test_type: e2e
-last_published: "2024-02-14 14:12:43 +0000"
-commit_sha: f49d90d70ecfbc4cf34c309fc98eaf61d39fbc85
-commit_message: ""
+last_published: "2024-02-14 14:29:38 +0000"
+commit_sha: 1b6176a8d158e81a31bb28a52330a9c083a7d05f
+commit_message: "Add changelog entry"
 branch_name: add/44303-e2e-tests-for-notice-templates
-passed: false
+passed: true
 ---
