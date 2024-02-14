@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44593/api/i
 pr_number: 44593
 pr_title_encoded: "%5BWIP%5D+Use+wordpress+6.5+for+the+test+env"
 pr_test_type: api
-last_published: "2024-02-14 18:50:44 +0000"
-commit_sha: 0e779733e2f13bb3a6ba616b7a94284a742962b1
-commit_message: "try now"
+last_published: "2024-02-14 19:24:00 +0000"
+commit_sha: 0520716da1ee51b5c816e8e854e2ff1960625324
+commit_message: "fix E2E test"
 branch_name: add/wp-env-6.5
 passed: true
 ---
