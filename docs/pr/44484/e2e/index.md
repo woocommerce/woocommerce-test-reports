@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44484/e2e/i
 pr_number: 44484
 pr_title_encoded: "Add+JSON+schema+files+for+remote+spec+validation"
 pr_test_type: e2e
-last_published: "2024-02-15 20:53:27 +0000"
-commit_sha: 8e34a7f3ced7824f93a8eb971844a35ae1bd0a08
-commit_message: "Revert package.json"
+last_published: "2024-02-15 21:19:48 +0000"
+commit_sha: 7b89b96d1a04137fc59327dc0c9b873c8ce6e572
+commit_message: "Update composer"
 branch_name: add/remote-spec-json-schema
-passed: true
+passed: false
 ---
