@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44620/api/i
 pr_number: 44620
 pr_title_encoded: "Introduce+%60%3CNotice%3E%60+component+for+WooCommerce+Admin"
 pr_test_type: api
-last_published: "2024-02-15 10:26:39 +0000"
-commit_sha: 7b9595a9689993f421aa6a09d74ef63855bcd0d5
-commit_message: "add changelog entry"
+last_published: "2024-02-15 10:42:34 +0000"
+commit_sha: 637cfc3e3cdea479e8c274e20a716c46ded9e89c
+commit_message: "fix CSS lints"
 branch_name: add/19573-notice-component
 passed: false
 ---
