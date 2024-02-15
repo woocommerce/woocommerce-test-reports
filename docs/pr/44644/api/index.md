@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44644/api/i
 pr_number: 44644
 pr_title_encoded: "%5Be2e+tests%5D+Update+product+review+tests+to+work+with+more+reviews"
 pr_test_type: api
-last_published: "2024-02-15 14:35:58 +0000"
-commit_sha: fb3a13a7acbbd7944360a7408573c127efd0565d
-commit_message: "Add changelog"
+last_published: "2024-02-15 14:51:04 +0000"
+commit_sha: a9e7ba1087eb7fed7830d75004792600251c4c88
+commit_message: "Fix lint errors and warnings"
 branch_name: e2e/test-product-reviews-list
 passed: false
 ---
