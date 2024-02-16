@@ -2,11 +2,11 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44655/e2e/index.html
 pr_number: 44655
-pr_title_encoded: "Added+%60get_marketplace_promotions%60+method%2C+which+fetches+data+from+%60h%E2%80%A6%60"
+pr_title_encoded: "Fetch+promotions+from+Woo.com+and+show+bubble+on+Extensions+menu+item%2C+if+required"
 pr_test_type: e2e
-last_published: "2024-02-15 18:53:40 +0000"
-commit_sha: 4d9735c9fdbfcec19da49cce84e8068cf2ababa8
-commit_message: "- Moved logic to `WC_Admin_Marketplace_Promotions` to make things tid…"
+last_published: "2024-02-16 12:52:03 +0000"
+commit_sha: c8fc24668b79740d10263a092edef91da68c3dbf
+commit_message: ""
 branch_name: add/marketplace-promotions
 passed: true
 ---
