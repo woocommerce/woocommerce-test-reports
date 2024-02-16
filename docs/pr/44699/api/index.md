@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44699/api/i
 pr_number: 44699
 pr_title_encoded: "%5Be2e+tests%5D+Add+tests+for+product+inventory+in+product+block+editor"
 pr_test_type: api
-last_published: "2024-02-16 14:30:41 +0000"
-commit_sha: 662c59c1901660c7c9bc84ab0126a6bdb549da67
-commit_message: "Add test 'can limit purchases'"
+last_published: "2024-02-16 14:58:20 +0000"
+commit_sha: 22216e80e05a24976ae6efec07e9e96a3016f0b0
+commit_message: "Merge branch 'trunk' of github.com:woocommerce/woocommerce into e2e/p…"
 branch_name: e2e/product-inventory-block-editor
 passed: true
 ---
