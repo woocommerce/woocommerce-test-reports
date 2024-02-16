@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44680/api/i
 pr_number: 44680
 pr_title_encoded: "Dont+render+attribution+metabox+for+non-supported+order+types."
 pr_test_type: api
-last_published: "2024-02-16 06:31:03 +0000"
-commit_sha: f8431a7987c19ddf493ad5166ae66cf635f44e10
-commit_message: "Use a screen check instead of order type check for better compat."
+last_published: "2024-02-16 06:58:04 +0000"
+commit_sha: 25ee0273f63cda867ed977776c46db7adbbbe65c
+commit_message: "Remove unnecessary call."
 branch_name: fix/44677
-passed: false
+passed: true
 ---
