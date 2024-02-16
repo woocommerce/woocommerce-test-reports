@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44571/api/i
 pr_number: 44571
 pr_title_encoded: "Product+Collection%3A+Add+loading+indicator+for+client-side+pagination"
 pr_test_type: api
-last_published: "2024-02-16 07:20:30 +0000"
-commit_sha: ffa2b2af39900f8ef328bf5060f28b1082f4cf79
-commit_message: "Merge branch 'add/44393-product-collection-implement-animation-for-pa…"
+last_published: "2024-02-16 09:44:29 +0000"
+commit_sha: 55fa0cd0d2ff8dea6d1713e9456b509fd38ed732
+commit_message: "Fix linting errors in SCSS file"
 branch_name: add/44393-product-collection-implement-animation-for-page-changes
 passed: true
 ---
