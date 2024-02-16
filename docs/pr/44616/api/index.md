@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44616/api/i
 pr_number: 44616
 pr_title_encoded: "%5BCYS+on+Core%5D+Update+homepage+templates+intro+patterns"
 pr_test_type: api
-last_published: "2024-02-16 08:34:18 +0000"
-commit_sha: e06d7c3095ed0ef0d911b011a92636e06bcda4da
-commit_message: "Update the default intro to be hero product split"
+last_published: "2024-02-16 12:05:10 +0000"
+commit_sha: 9b46a034f7b8e6439e58fcfa80d978f6f0fef53c
+commit_message: "Merge branch 'trunk' into 44614-update-homepage-templates"
 branch_name: 44614-update-homepage-templates
-passed: false
+passed: true
 ---
