@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44223/e2e/i
 pr_number: 44223
 pr_title_encoded: "Support+testing+many+variants+of+a+block+at+runtime+via+dynamically+generated+templates"
 pr_test_type: e2e
-last_published: "2024-02-06 10:53:32 +0000"
-commit_sha: 42c695dac82ac443706a9968f03df9a2f72c3739
-commit_message: "Use haveCount in one more place over count()."
+last_published: "2024-02-16 03:19:56 +0000"
+commit_sha: 8b5623980567c72a2254cd7712c568a6fe026ce7
+commit_message: "Merge remote-tracking branch 'origin/trunk' into dev/dynamic-e2e-bloc…"
 branch_name: dev/dynamic-e2e-block-testing
-passed: false
+passed: true
 ---
