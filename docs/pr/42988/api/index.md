@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/42988/api/i
 pr_number: 42988
 pr_title_encoded: "Fix+-+Express+payments+that+have+errors+cause+the+whole+block+to+stop+working"
 pr_test_type: api
-last_published: "2024-02-16 19:31:59 +0000"
-commit_sha: 287e321356d6ddad2fcc42afaccb66f2b175f13c
-commit_message: "Remove margin top from error notices in express payment block"
+last_published: "2024-02-16 19:57:05 +0000"
+commit_sha: 9507d2e0f4febde12314a3e70bd159801d83c0b1
+commit_message: "Fix lint for css"
 branch_name: fix/42256-express-payment-button-error
 passed: true
 ---
