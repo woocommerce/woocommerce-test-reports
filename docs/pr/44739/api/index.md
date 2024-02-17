@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44739/api/i
 pr_number: 44739
 pr_title_encoded: "Add+custom+order+fields+drop-down+to+custom+fields+metabox+under+HPOS"
 pr_test_type: api
-last_published: "2024-02-17 05:54:40 +0000"
-commit_sha: ebb80ce3d5f9f6381a498211775a691d418e2b7a
-commit_message: ""
+last_published: "2024-02-17 06:08:32 +0000"
+commit_sha: 509ab0fa9002a3f974f9fcb98229464eb5a862f4
+commit_message: "PHPCS fixes"
 branch_name: fix/44029
 passed: true
 ---
