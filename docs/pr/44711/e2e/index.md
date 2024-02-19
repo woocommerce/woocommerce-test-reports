@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44711/e2e/i
 pr_number: 44711
 pr_title_encoded: "Modify+product+header"
 pr_test_type: e2e
-last_published: "2024-02-16 21:04:46 +0000"
-commit_sha: 760e66da8f3cf7d25b48ec9a0345f91cad58bd80
-commit_message: "Visibility for variations"
+last_published: "2024-02-19 14:11:35 +0000"
+commit_sha: e40599e2e00be404059b74212132231780b089f8
+commit_message: "Modify variation title"
 branch_name: dev/44656_create_title_bar
-passed: false
+passed: true
 ---
