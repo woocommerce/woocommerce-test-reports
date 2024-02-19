@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44762/api/i
 pr_number: 44762
 pr_title_encoded: "%5BCYS%5D+Update+sidebar+links+copy"
 pr_test_type: api
-last_published: "2024-02-19 09:35:12 +0000"
-commit_sha: acd403dbd491b1abd64f7c765cf01c7905fd4514
-commit_message: "Update the sidebar section title depending on the flow"
+last_published: "2024-02-19 09:59:18 +0000"
+commit_sha: f610838fbda5bf8b545f513c25dfc481bd0d0dee
+commit_message: "Revert unnecessary changes"
 branch_name: 44700-cys-update-sidebar-links
-passed: false
+passed: true
 ---
