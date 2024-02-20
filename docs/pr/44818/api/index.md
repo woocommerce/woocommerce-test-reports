@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44818/api/i
 pr_number: 44818
 pr_title_encoded: "Add+tests+for+variable+product"
 pr_test_type: api
-last_published: "2024-02-20 19:04:02 +0000"
-commit_sha: 7545350dabbbddf1d33107c3a8ede27060ff6900
-commit_message: "Add tests for variable product"
+last_published: "2024-02-20 19:24:39 +0000"
+commit_sha: 13704edfaaafd4ff18ed3cb4402b68dc02057571
+commit_message: "Add changelog"
 branch_name: add/39886_e2e_test_create_variations
 passed: true
 ---
