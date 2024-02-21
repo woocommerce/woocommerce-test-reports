@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44840/api/i
 pr_number: 44840
 pr_title_encoded: "Fetch+%26+display+marketplace+promotions"
 pr_test_type: api
-last_published: "2024-02-21 12:41:20 +0000"
-commit_sha: 52dc44fb05e7864617d31829f9f65231024627bd
-commit_message: "add changelog entry"
+last_published: "2024-02-21 13:35:46 +0000"
+commit_sha: d1804e65d04bf107c39458da3d47e1ee88535e0c
+commit_message: "Pass promos via inline JS, demove unused JS file, rely on transient only"
 branch_name: add/marketplace-promotions-display
 passed: false
 ---
