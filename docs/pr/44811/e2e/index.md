@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44811/e2e/i
 pr_number: 44811
 pr_title_encoded: "Update+blocks+build+message"
 pr_test_type: e2e
-last_published: "2024-02-20 16:42:32 +0000"
-commit_sha: ce321ac0b3b5b1e6b629e6b65c625168dc02f879
-commit_message: "Update blocks build message"
+last_published: "2024-02-21 21:16:57 +0000"
+commit_sha: 90ae6e25b080fff94b8387ab7c80882bcafec23a
+commit_message: "Merge branch 'trunk' into update/blocks-build-message"
 branch_name: update/blocks-build-message
-passed: true
+passed: false
 ---
