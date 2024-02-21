@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44840/e2e/i
 pr_number: 44840
 pr_title_encoded: "Fetch+%26+display+marketplace+promotions"
 pr_test_type: e2e
-last_published: "2024-02-21 12:28:21 +0000"
-commit_sha: fa95de34464fe0444e0ee77e80dee50a17df32d0
-commit_message: "Fetch & display marketplace promotions"
+last_published: "2024-02-21 12:41:20 +0000"
+commit_sha: 52dc44fb05e7864617d31829f9f65231024627bd
+commit_message: "add changelog entry"
 branch_name: add/marketplace-promotions-display
 passed: false
 ---
