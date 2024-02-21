@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44807/api/i
 pr_number: 44807
 pr_title_encoded: "Update+footer+large+Twitter+icons+to+X"
 pr_test_type: api
-last_published: "2024-02-21 10:26:52 +0000"
-commit_sha: ab8fc64e84f0f75afa754144ad8029ce8a09b535
-commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
+last_published: "2024-02-21 15:22:06 +0000"
+commit_sha: 7bb924a5c53b33a2cb20f9f507e7f3e4bf03c480
+commit_message: "Merge branch 'trunk' into update-twitter-icon-large-footer"
 branch_name: update-twitter-icon-large-footer
-passed: false
+passed: true
 ---
