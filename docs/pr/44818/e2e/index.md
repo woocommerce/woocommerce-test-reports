@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44818/e2e/i
 pr_number: 44818
 pr_title_encoded: "Add+tests+for+variable+product"
 pr_test_type: e2e
-last_published: "2024-02-22 19:17:43 +0000"
-commit_sha: 5b731d202d3ceeaab6e1e62352f05d25f94c1ed0
-commit_message: "Fix e2e tests"
+last_published: "2024-02-22 19:35:02 +0000"
+commit_sha: 7f54fcfc8aeba517cf763df99c2907b2afe21cb3
+commit_message: "Use has-text"
 branch_name: add/39886_e2e_test_create_variations
 passed: false
 ---
