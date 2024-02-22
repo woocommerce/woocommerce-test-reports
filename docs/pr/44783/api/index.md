@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44783/api/i
 pr_number: 44783
 pr_title_encoded: "Add+menu+item+to+publish+button+to+schedule+product+updates"
 pr_test_type: api
-last_published: "2024-02-22 17:35:48 +0000"
-commit_sha: 3a0746529e285462202d31c2f58ba7d188769d57
-commit_message: "Hide the scheduling messages behind the product-pre-publish-modal fea…"
+last_published: "2024-02-22 21:21:45 +0000"
+commit_sha: a23be590d0dda618c3925e08138f4265947c8a26
+commit_message: "Fix schedule section publish error"
 branch_name: add/40376
 passed: true
 ---
