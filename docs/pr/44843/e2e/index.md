@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44843/e2e/i
 pr_number: 44843
 pr_title_encoded: "%5BE2E%5D+Tweak+the+global+setup"
 pr_test_type: e2e
-last_published: "2024-02-22 11:49:00 +0000"
-commit_sha: 054beeef2aa4614649d9d41af08f7625b1b8c7e7
-commit_message: ""
+last_published: "2024-02-22 12:14:46 +0000"
+commit_sha: ebac8ae6f0c7e9ea1a75b1e0d1c62325a905cdb7
+commit_message: "Move the product attributes regeneration to attributes.sh"
 branch_name: tweak/e2e-global-setup
 passed: true
 ---
