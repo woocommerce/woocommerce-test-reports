@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44777/api/i
 pr_number: 44777
 pr_title_encoded: "%5Be2e+tests%5D+Tests+for+product+attributes+in+product+blocks+editor"
 pr_test_type: api
-last_published: "2024-02-22 17:27:44 +0000"
-commit_sha: bc05c833e62aa8108ed0d415c045379d082bc19e
-commit_message: "Merge branch 'trunk' of github.com:woocommerce/woocommerce into e2e/p…"
+last_published: "2024-02-22 17:58:06 +0000"
+commit_sha: 9ab7a4b44d0f4e873cd2658e5ccc003dc188e7d8
+commit_message: "Fix missed fixtures imports"
 branch_name: e2e/product-attributes-block-editor
 passed: true
 ---
