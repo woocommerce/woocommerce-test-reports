@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44537/e2e/i
 pr_number: 44537
 pr_title_encoded: "Refactor+BlockTemplatesController"
 pr_test_type: e2e
-last_published: "2024-02-22 09:40:33 +0000"
-commit_sha: 8f14e3aa98b325bf68635d60cde7ed470d766bdf
+last_published: "2024-02-22 11:36:10 +0000"
+commit_sha: 5a464fc05230bf8a9951610e82e6f917a79bed4c
 commit_message: "Cleanup"
 branch_name: update/BlockTemplatesController-refactor
-passed: false
+passed: true
 ---
