@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44870/api/i
 pr_number: 44870
 pr_title_encoded: "Update+build+first+extension+doc"
 pr_test_type: api
-last_published: "2024-02-23 01:02:51 +0000"
-commit_sha: cd080ad816b7bfbadfd5e0e16289fc70138a6064
-commit_message: ""
+last_published: "2024-02-23 01:18:06 +0000"
+commit_sha: bb91426513db7d1ea01631bda99e23518b4ac762
+commit_message: "Fixes linting issues"
 branch_name: update-build-first-extension-doc
-passed: false
+passed: true
 ---
