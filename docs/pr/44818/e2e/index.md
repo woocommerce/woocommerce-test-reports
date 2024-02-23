@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44818/e2e/i
 pr_number: 44818
 pr_title_encoded: "Add+tests+for+variable+product"
 pr_test_type: e2e
-last_published: "2024-02-23 11:56:11 +0000"
-commit_sha: e6b7437a4e6d2d6aa17458497474c91288807fd1
-commit_message: "Change locator"
+last_published: "2024-02-23 12:13:56 +0000"
+commit_sha: 3407c4cf0cb81d0c25793ee26eeb9555ec93a3be
+commit_message: "Add input"
 branch_name: add/39886_e2e_test_create_variations
 passed: false
 ---
