@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44821/api/i
 pr_number: 44821
 pr_title_encoded: "%5BCYS+on+Core%5D+Display+a+new+modal+informing+the+theme+switch+whenever+the+user+clicks+on+the+%22Start+designing%22+button"
 pr_test_type: api
-last_published: "2024-02-23 09:37:57 +0000"
-commit_sha: abcf803692a10d0bc8ea15792be17372954896cb
+last_published: "2024-02-25 19:30:17 +0000"
+commit_sha: cc15a9539283c560f87ed94b248db9148303cb08
 commit_message: "Merge branch 'trunk' into 44820-cys-on-core-display-a-new-modal-infor…"
 branch_name: 44820-cys-on-core-display-a-new-modal-informing-the-theme-switch-whenever-the-user-clicks-on-the-start-designing-button
 passed: true
