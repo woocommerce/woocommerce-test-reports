@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44537/api/i
 pr_number: 44537
 pr_title_encoded: "Refactor+BlockTemplatesController"
 pr_test_type: api
-last_published: "2024-02-23 15:41:44 +0000"
-commit_sha: d77476e0fa9d53a4c23f01f1a397273398e39536
-commit_message: "Make init functions protected in template classes"
+last_published: "2024-02-26 09:02:49 +0000"
+commit_sha: 2065a9ffcca5a21642f6728f7ed2c52e153b76ff
+commit_message: "Avoid using static constants and methods in block template classes"
 branch_name: update/BlockTemplatesController-refactor
 passed: true
 ---
