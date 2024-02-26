@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44902/api/i
 pr_number: 44902
 pr_title_encoded: "pin+simple-git+in+syncpack"
 pr_test_type: api
-last_published: "2024-02-26 16:32:00 +0000"
-commit_sha: dc0dd72870f403eb3799c62e7d93982fd5121440
-commit_message: "Merge branch 'trunk' into dev/pin-simple-git"
+last_published: "2024-02-26 17:14:02 +0000"
+commit_sha: fec2f252cc3088646de04bfffe02d577bc424aa3
+commit_message: "add changelog for json linting"
 branch_name: dev/pin-simple-git
 passed: true
 ---
