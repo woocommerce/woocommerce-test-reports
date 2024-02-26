@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44532/api/i
 pr_number: 44532
 pr_title_encoded: "%5BCYS+on+Core%5D+Conditionally+change+the+default+fonts+available+based+on+user+consent"
 pr_test_type: api
-last_published: "2024-02-25 22:36:52 +0000"
-commit_sha: f10229b2b5da62abd104372b14f5f0f3bac98d74
-commit_message: "Merge branch 'trunk' into 44187-cys-on-core-conditionally-change-the-…"
+last_published: "2024-02-26 10:37:47 +0000"
+commit_sha: d14a3fecdbb74f446f59fa82f2aa4ce5e62e9fc0
+commit_message: "Fix lint error"
 branch_name: 44187-cys-on-core-conditionally-change-the-default-fonts-available-based-on-user-consent
 passed: true
 ---
