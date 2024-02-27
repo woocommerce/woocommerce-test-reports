@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44537/e2e/i
 pr_number: 44537
 pr_title_encoded: "Refactor+BlockTemplatesController"
 pr_test_type: e2e
-last_published: "2024-02-26 15:16:25 +0000"
-commit_sha: 845e75119fedc4e8099ddd72ee925d0f3e0f08e5
-commit_message: "Get BlockTemplatesRegistry directly from BlockTemplateUtils to simpli…"
+last_published: "2024-02-27 11:42:41 +0000"
+commit_sha: 0b5e0d6b163bea818d8547cfba9e497bc27803b0
+commit_message: "Init template classes from BlockTemplatesRegistry"
 branch_name: update/BlockTemplatesController-refactor
 passed: true
 ---
