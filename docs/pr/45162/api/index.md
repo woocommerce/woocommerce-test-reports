@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45162/api/i
 pr_number: 45162
 pr_title_encoded: "%5BDO+NOT+MERGE%5D+Tests+PR+45141"
 pr_test_type: api
-last_published: "2024-02-27 13:05:20 +0000"
-commit_sha: 1a8aac78056d62685c2fbb044c68aa1f0d9cb6ae
-commit_message: "Update readme"
+last_published: "2024-02-27 13:24:51 +0000"
+commit_sha: 93bcbe19d708270022ae6f4f09e24c69e828053a
+commit_message: "Merge branch 'ci/skip-metrics-workflow-for-non-relevant-updates' into…"
 branch_name: test/tests-pr-45141
-passed: false
+passed: true
 ---
