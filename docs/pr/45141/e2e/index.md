@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45141/e2e/i
 pr_number: 45141
 pr_title_encoded: "Skip+metrics+workflow+for+unrelevant+changes"
 pr_test_type: e2e
-last_published: "2024-02-26 16:43:28 +0000"
-commit_sha: 3555aff1ceb6b3222ade57b690d9542da8d21709
-commit_message: "Add paths-ignore for metrics.yml"
+last_published: "2024-02-27 11:49:15 +0000"
+commit_sha: 99700fe08275e5da07fac6b9fbba51e76ad00e22
+commit_message: "Merge branch 'trunk' into ci/skip-metrics-workflow-for-non-relevant-u…"
 branch_name: ci/skip-metrics-workflow-for-non-relevant-updates
 passed: true
 ---
