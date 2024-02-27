@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45127/e2e/i
 pr_number: 45127
 pr_title_encoded: "Update+woo+connect+plugin+installation+URL"
 pr_test_type: e2e
-last_published: "2024-02-27 16:42:41 +0000"
-commit_sha: fd1d10c6da955ae920104db2d38c099dffe7c1e3
-commit_message: "Show woo update manager installation notice on WC admin pages and mak…"
+last_published: "2024-02-27 17:22:26 +0000"
+commit_sha: 42a235f98254c6cef37557e8f2d48e1d41b3202a
+commit_message: "Fix the margin below the Woo Update plugin install notice."
 branch_name: update/woo-connect-plugin-installtion-url
 passed: true
 ---
