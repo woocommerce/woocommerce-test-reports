@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44588/e2e/i
 pr_number: 44588
 pr_title_encoded: "Remove+test%2Fdebug+comment."
 pr_test_type: e2e
-last_published: "2024-02-27 00:36:56 +0000"
-commit_sha: 969214a0b13a347b6a772ec8159f45824fc8b088
-commit_message: "Changelog."
+last_published: "2024-02-27 16:10:58 +0000"
+commit_sha: 9002aa39aa4d002d44b5b0413e5b7eb3fc7109f8
+commit_message: "Remove extra changelog (deconflict with CI changelog tool)."
 branch_name: fix/remove-test-comment
 passed: true
 ---
