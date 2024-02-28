@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44279/e2e/i
 pr_number: 44279
 pr_title_encoded: "Remove+the+ability+to+update+Woo.com+extension+not+available+in+WP.org+plugin+directory"
 pr_test_type: e2e
-last_published: "2024-02-28 19:48:12 +0000"
-commit_sha: 7a644705e989d39ceae751cfd4335d228dfafa39
-commit_message: "Extract and reuse the logic for creating the signature."
+last_published: "2024-02-28 20:11:36 +0000"
+commit_sha: c57dddb42e6424d3be092494ab450c8ec843d3aa
+commit_message: "Use WC built-in method to check if the current page is a WC page."
 branch_name: remove/updates-for-woo.com-extensions
 passed: true
 ---
