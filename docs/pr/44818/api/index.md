@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44818/api/i
 pr_number: 44818
 pr_title_encoded: "Add+tests+for+variable+product"
 pr_test_type: api
-last_published: "2024-02-27 03:23:41 +0000"
-commit_sha: 6bc55731785292887263396a2c6e9dd1e2a98a0d
-commit_message: "add test.use"
+last_published: "2024-02-28 02:31:27 +0000"
+commit_sha: 50b730109def1642f8a79ee895fafdad3fad2f87
+commit_message: "Add toggleProductVariationTour"
 branch_name: add/39886_e2e_test_create_variations
 passed: true
 ---
