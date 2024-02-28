@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45099/e2e/i
 pr_number: 45099
 pr_title_encoded: "Add+remote+spec+rule+validator+UI"
 pr_test_type: e2e
-last_published: "2024-02-27 22:44:27 +0000"
-commit_sha: 2a32bc1fd7a41f2f1f84906c64f0f297270095cd
-commit_message: "Update lock file"
+last_published: "2024-02-28 23:52:43 +0000"
+commit_sha: 6ff92950962870b37266512ecb5dcd81125d6ac7
+commit_message: "Remove remote spec validation"
 branch_name: update/add-rule-evaluator-ui
-passed: true
+passed: false
 ---
