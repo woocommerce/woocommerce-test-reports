@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44892/e2e/i
 pr_number: 44892
 pr_title_encoded: "%5BDRAFT%5D+Allow+extensions+in+Add+Products+task"
 pr_test_type: e2e
-last_published: "2024-02-28 16:15:25 +0000"
-commit_sha: d75f671367f44e3c1a9056d24f6970fddf7c6e12
-commit_message: "Is Enhancement"
+last_published: "2024-02-28 16:34:30 +0000"
+commit_sha: 5361865b528908469ebdfe98aa89c2a713a8bcbd
+commit_message: "Delete plugins/woocommerce/changelog/extend-product-task"
 branch_name: dakota/product-types-extensibility
-passed: false
+passed: true
 ---
