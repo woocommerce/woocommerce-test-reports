@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45190/api/i
 pr_number: 45190
 pr_title_encoded: "Include+e2e+tests+in+ci.yml"
 pr_test_type: api
-last_published: "2024-02-29 12:33:50 +0000"
-commit_sha: d3798b23862a2a07f1382653a9e4e9f3f046376f
-commit_message: "Update report paths and fail if report generation fails"
+last_published: "2024-02-29 15:55:21 +0000"
+commit_sha: 8e1f93eea8c05401f2600bfa3a0126e31616591d
+commit_message: "Add API tests in CI"
 branch_name: tools/add-e2e-tests-in-ci-jobs
-passed: true
+passed: false
 ---
