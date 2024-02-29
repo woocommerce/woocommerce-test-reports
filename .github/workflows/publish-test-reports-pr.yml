@@ -20,7 +20,7 @@ on:
           - public
           - test
 concurrency:
-  group: ${{ github.ref_name }}-pr-${{ github.event.inputs.pr_number }}
+  group: ${{ github.ref_name }}-pr-${{ github.event.inputs.pr_number }}-${{ github.event.inputs.api_artifact }}-${{ github.event.inputs.e2e_artifact }}
   cancel-in-progress: true
 
 jobs:
