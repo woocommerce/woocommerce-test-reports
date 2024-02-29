@@ -211,7 +211,7 @@ jobs:
         run: |
           aws s3 sync output/api $API_DESTINATION --delete
 
-      - name: Upload E@E test reports to S3 bucket
+      - name: Upload E2E test reports to S3 bucket
         if: ${{ env.E2E_ARTIFACT }}
         env:
           E2E_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_ROOT }}/pr/${{ env.PR_NUMBER }}/e2e
