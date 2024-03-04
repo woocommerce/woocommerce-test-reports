@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44870/api/i
 pr_number: 44870
 pr_title_encoded: "Update+build+first+extension+doc"
 pr_test_type: api
-last_published: "2024-02-23 18:50:42 +0000"
-commit_sha: 2f8685e20aa062b6792355e1f3ca27c070a0585d
-commit_message: "Adds manifest.json"
+last_published: "2024-03-04 17:41:20 +0000"
+commit_sha: 70ca00cacd4071946480ea9c6fa8ca4fb51caec9
+commit_message: "Updated manifest using command in this branch"
 branch_name: update-build-first-extension-doc
 passed: true
 ---
