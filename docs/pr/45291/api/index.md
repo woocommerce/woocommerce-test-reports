@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45291/api/i
 pr_number: 45291
 pr_title_encoded: "Custom+Fields+for+New+Product+Editor"
 pr_test_type: api
-last_published: "2024-03-04 18:13:20 +0000"
-commit_sha: 058fdcd972f450d055c486c9f311c71b5d905846
-commit_message: "Register woocommerce/product-custom-fields-toggle-field block"
+last_published: "2024-03-05 15:53:35 +0000"
+commit_sha: 81fc02b69c3807cda48cbcf86c1b8dcc494d2ae4
+commit_message: "Hide custom fields behind the product-custom-fields feature flag"
 branch_name: add/44169
 passed: true
 ---
