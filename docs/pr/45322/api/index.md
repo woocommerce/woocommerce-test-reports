@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45322/api/i
 pr_number: 45322
 pr_title_encoded: "UX+improvements+for+HPOS+CLI+cleanup+tool"
 pr_test_type: api
-last_published: "2024-03-05 16:41:36 +0000"
-commit_sha: 19cfa3c114bbcd31e4cb4b8e9c43acac9e640058
-commit_message: "Add changelog"
+last_published: "2024-03-05 17:50:28 +0000"
+commit_sha: fb37b4235aab2722a423be7aaa9172f4185d5619
+commit_message: "Fix PHPCS violations"
 branch_name: fix/44002
 passed: true
 ---
