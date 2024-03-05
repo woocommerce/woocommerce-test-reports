@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45314/api/i
 pr_number: 45314
 pr_title_encoded: "E2E%3A+Fix+side+effects+tests"
 pr_test_type: api
-last_published: "2024-03-05 17:17:41 +0000"
-commit_sha: 8c9162d8cfef89ada5d101c35657a61c7a5cba24
-commit_message: "Replace the buggy waitForURL"
+last_published: "2024-03-05 17:50:02 +0000"
+commit_sha: b2dc57a968a32d991d05ffc4b7bbe3786e902ee9
+commit_message: "Rearrange the add-to-cart click follow-up"
 branch_name: fix/side-effects-e2e
 passed: true
 ---
