@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44279/api/i
 pr_number: 44279
 pr_title_encoded: "Remove+the+ability+to+update+Woo.com+extension+not+available+in+WP.org+plugin+directory"
 pr_test_type: api
-last_published: "2024-03-06 18:08:45 +0000"
-commit_sha: a8bd90dc41831ced8f0fca1745b9988a03ef094d
-commit_message: "Update download url for WUM."
+last_published: "2024-03-06 19:32:12 +0000"
+commit_sha: b9da926150b169e3621935873a35f7a026c9f3a5
+commit_message: "Remove WUM from available to install list of extensions on my-subscri…"
 branch_name: remove/updates-for-woo.com-extensions
 passed: true
 ---
