@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44145/e2e/i
 pr_number: 44145
 pr_title_encoded: "Product+Collection%3A+Parse+front-end+context"
 pr_test_type: e2e
-last_published: "2024-03-06 02:31:48 +0000"
-commit_sha: 7c15f4ed5996d06eaa4447af63100cc5bf78c266
-commit_message: "Fix linters"
+last_published: "2024-03-06 09:59:07 +0000"
+commit_sha: d94c2c238f3c5eed0875b204b7ffcb26668b12be
+commit_message: "Rename the provider method"
 branch_name: add/44144-front-end-context
 passed: true
 ---
