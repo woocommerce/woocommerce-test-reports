@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44864/e2e/i
 pr_number: 44864
 pr_title_encoded: "Add+message+after+publishing+a+product+to+pre-publish+panel"
 pr_test_type: e2e
-last_published: "2024-03-06 16:45:10 +0000"
-commit_sha: 5ef106dd966a7bebd06c63516705b3e1b80dfeb7
-commit_message: "Fix productStatus"
+last_published: "2024-03-06 18:18:09 +0000"
+commit_sha: 547640728f22c6fc032e9dcad20a885cdfb093b6
+commit_message: "Rename isPublished"
 branch_name: add/44474_post_publishing_message
 passed: true
 ---
