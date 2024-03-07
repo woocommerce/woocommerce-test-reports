@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45360/api/i
 pr_number: 45360
 pr_title_encoded: "List+Custom+Fields+for+New+Product+Editor"
 pr_test_type: api
-last_published: "2024-03-07 13:42:22 +0000"
-commit_sha: 8272fd9c2013b406eb4588b75349ec882e9fa746
-commit_message: "Remove non list features"
+last_published: "2024-03-07 14:39:23 +0000"
+commit_sha: 10252ff8dfabd2814721ff6cfecdc6a70a47af46
+commit_message: "Fix empty state styles"
 branch_name: add/44169-list
-passed: false
+passed: true
 ---
