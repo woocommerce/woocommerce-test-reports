@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45395/e2e/i
 pr_number: 45395
 pr_title_encoded: "Switch+from+%22invoice%22+to+%22order+details%22+in+our+emails."
 pr_test_type: e2e
-last_published: "2024-03-07 18:34:34 +0000"
-commit_sha: 1d42f724a48d5700d7ad06950aa4bd4c645e585b
-commit_message: "Bring E2E check up-to-date with latest text revision."
+last_published: "2024-03-07 19:29:03 +0000"
+commit_sha: a061a77a68e1f1a5446bc42ff2f00683d27bae89
+commit_message: "Update API tests to match order detail email changes."
 branch_name: fix/26692-order-invoice-nomenclature
 passed: true
 ---
