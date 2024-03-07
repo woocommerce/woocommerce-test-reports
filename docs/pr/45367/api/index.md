@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45367/api/i
 pr_number: 45367
 pr_title_encoded: "Tax+task+-+Make+postcode+optional+for+countries+without+postcodes"
 pr_test_type: api
-last_published: "2024-03-06 23:18:36 +0000"
-commit_sha: d81f4bf86dfc6ab44a00b047e3c59951a93513d6
-commit_message: "Validate post code only when it is actually required"
+last_published: "2024-03-07 00:06:12 +0000"
+commit_sha: 8500c51e1e7da7e526bf700783eb414f237fdb65
+commit_message: "Remove unused import"
 branch_name: fix/44805-cannot-configure-tax-rate
 passed: true
 ---
