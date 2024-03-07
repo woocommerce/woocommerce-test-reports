@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45291/e2e/i
 pr_number: 45291
 pr_title_encoded: "Custom+Fields+for+New+Product+Editor"
 pr_test_type: e2e
-last_published: "2024-03-05 16:13:30 +0000"
-commit_sha: 4645dce8f0d4e952042c150d78aceb11c197bbde
-commit_message: "Add changelog files"
+last_published: "2024-03-07 20:01:40 +0000"
+commit_sha: 68dfe481056bc18ca521af2c1fdb7200550ac1a8
+commit_message: "Get default postcustom user meta value when the metaboxhidden_product…"
 branch_name: add/44169
 passed: true
 ---
