@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45400/e2e/i
 pr_number: 45400
 pr_title_encoded: "Blocks+E2E%3A+Create+workflow+template"
 pr_test_type: e2e
-last_published: "2024-03-07 19:54:18 +0000"
-commit_sha: f2e55668afdef468e70d15c5dbd4f1c81c8ffa97
-commit_message: "Create Blocks E2E tests template"
+last_published: "2024-03-07 20:02:37 +0000"
+commit_sha: fb80749a0aa1efa62997cf527853ee955b693609
+commit_message: "Fix path"
 branch_name: tweak/blocks-e2e-matrix
 passed: false
 ---
