@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/39635/e2e/i
 pr_number: 39635
 pr_title_encoded: "Update%2Fdefault+payments+gateways+recommendations"
 pr_test_type: e2e
-last_published: "2024-03-07 13:50:46 +0000"
-commit_sha: ef5deb1fe80b8120bafae669c219b901a9c3cfc6
-commit_message: "Merge from trunk"
+last_published: "2024-03-07 14:33:04 +0000"
+commit_sha: 3524a15539f3f57625168f2ee5bb55d3e3f8d414
+commit_message: "Add Airwallex where missing"
 branch_name: update/default-payments-gateways-recommendations
 passed: true
 ---
