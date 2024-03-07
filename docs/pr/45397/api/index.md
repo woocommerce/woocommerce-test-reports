@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45397/api/i
 pr_number: 45397
 pr_title_encoded: "Close+prepublish+panel+before+creating+new+product"
 pr_test_type: api
-last_published: "2024-03-07 17:10:43 +0000"
-commit_sha: bf3c6f128a40f2fa4e49eeacd27e57673b801cc0
-commit_message: "Add changelog"
+last_published: "2024-03-07 20:27:31 +0000"
+commit_sha: 51ad20d0fe540e8151ba7a67d87c5965b0ef9bac
+commit_message: "Close panel after clicking outside"
 branch_name: fix/45388_close_prepublish_panel_before_create_new
 passed: true
 ---
