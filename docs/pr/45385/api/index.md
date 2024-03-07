@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45385/api/i
 pr_number: 45385
 pr_title_encoded: "%5BCYS%5D+Improve+logic+to+ensure+that+the+font+is+active"
 pr_test_type: api
-last_published: "2024-03-07 14:21:46 +0000"
-commit_sha: 176b63fdd785570fad70a3837c62864f4e363db5
-commit_message: "improve logic to ensure that the font is active"
+last_published: "2024-03-07 14:41:34 +0000"
+commit_sha: fe5b5f13283c518dd272bb14c3d8575b7660421c
+commit_message: "Merge branch '45380-cys-on-core-whenever-the-rubikinter-font-pairing-…"
 branch_name: 45380-cys-on-core-whenever-the-rubikinter-font-pairing-is-selected-it-also-highlights-interinter
 passed: true
 ---
