@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45402/api/i
 pr_number: 45402
 pr_title_encoded: "Add+Launch+Your+Store+settings+section"
 pr_test_type: api
-last_published: "2024-03-08 02:04:21 +0000"
-commit_sha: e4efc17a3994735914374f9e8058b1f4646832b3
-commit_message: "Move Site Visibility header to component"
+last_published: "2024-03-08 02:33:11 +0000"
+commit_sha: bc20d5681ad7f4b082dd2be09b7e197d380bf98f
+commit_message: "Lint fixes"
 branch_name: add/45107-lys-settings-screen-page
 passed: true
 ---
