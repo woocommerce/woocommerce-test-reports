@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45313/e2e/i
 pr_number: 45313
 pr_title_encoded: "Generate+a+signed+auto-install+URL+for+woo+hosted+plugins+without+helper+API"
 pr_test_type: e2e
-last_published: "2024-03-05 14:06:22 +0000"
-commit_sha: c041ae30120588686fdf353e9bd8f085f0346d4c
-commit_message: "Generate a signed auto-install URL for woo hosted plugins without hel…"
+last_published: "2024-03-08 12:46:35 +0000"
+commit_sha: 74b16a9cc67c77e9e73bf2603c00f7170293c2a1
+commit_message: "Merge branch 'remove/updates-for-woo.com-extensions' into update/inst…"
 branch_name: update/install-url-generation
 passed: true
 ---
