@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45449/e2e/i
 pr_number: 45449
 pr_title_encoded: "Add+E2E+test+for+Merchant+Checkout+Block+flow"
 pr_test_type: e2e
-last_published: "2024-03-08 19:59:26 +0000"
-commit_sha: fcb4a668b6d42b9b1bc366725ad3457241f83168
-commit_message: "Revert checkout block test"
+last_published: "2024-03-08 20:16:53 +0000"
+commit_sha: b7d8c4dccf597e9fb62b5d0847c4fdfab9f2b224
+commit_message: "Add e2e test merchant create checkout block"
 branch_name: e2e/add/merchant-checkout-block
 passed: true
 ---
