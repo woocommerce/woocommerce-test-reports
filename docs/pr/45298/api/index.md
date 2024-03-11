@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45298/api/i
 pr_number: 45298
 pr_title_encoded: "Remote+Specs%3A+Update+endpoints+to+2.0"
 pr_test_type: api
-last_published: "2024-03-11 00:02:43 +0000"
-commit_sha: 6612bfbc34fbfdd18bbaa6c5546b07397b4e5c72
-commit_message: "Merge branch 'update/remote-endpoints-2.0' of github.com:woocommerce/…"
+last_published: "2024-03-11 22:42:18 +0000"
+commit_sha: 5956a68b99a6fe533d4d1a287344a6b49f8519cb
+commit_message: "update free extensions too"
 branch_name: update/remote-endpoints-2.0
 passed: true
 ---
