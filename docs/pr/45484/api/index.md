@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45484/api/i
 pr_number: 45484
 pr_title_encoded: "Add+Custom+Fields+for+New+Product+Editor"
 pr_test_type: api
-last_published: "2024-03-11 18:18:09 +0000"
-commit_sha: 2434aeff7f94685aa50ffbfc1142eeac99870949
-commit_message: "Fix linter error"
+last_published: "2024-03-11 19:21:39 +0000"
+commit_sha: 6425ef3deb9a48d59920a9ffa66c176649c823e6
+commit_message: "Add changelog file"
 branch_name: add/44169-create
 passed: true
 ---
