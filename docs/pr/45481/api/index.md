@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45481/api/i
 pr_number: 45481
 pr_title_encoded: "Show+the+%22Design+your+own%22+banner+when+editing+a+theme+which+is+not+TT4"
 pr_test_type: api
-last_published: "2024-03-11 13:45:26 +0000"
-commit_sha: be6412f37243e877b26b829401588a0b9d9ee123
-commit_message: "Show the "Design your own" banner when editing a theme which is not TT4"
+last_published: "2024-03-11 15:00:36 +0000"
+commit_sha: 57ffddafa2bbbd01e6d4dbd8216c797df24769fb
+commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
 branch_name: 44725-add-customize-button-modal-2
 passed: true
 ---
