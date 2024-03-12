@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45534/e2e/i
 pr_number: 45534
 pr_title_encoded: "Fix%2Frelease+testing+workflow"
 pr_test_type: e2e
-last_published: "2024-03-12 20:55:07 +0000"
-commit_sha: a93d96cb78eb76bcd16cff24c5b7300b810f5965
-commit_message: "Fix Slack block on latest-1"
+last_published: "2024-03-12 21:10:00 +0000"
+commit_sha: a584535125267e48587b0ec25aeb6ef3a5113c19
+commit_message: "Fix syntax errors"
 branch_name: fix/release-testing-workflow
 passed: true
 ---
