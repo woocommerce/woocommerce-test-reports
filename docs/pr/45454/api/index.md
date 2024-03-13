@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45454/api/i
 pr_number: 45454
 pr_title_encoded: "Match+template+based+on+different+attributes+besides+product+types"
 pr_test_type: api
-last_published: "2024-03-08 18:08:19 +0000"
-commit_sha: 1f6e43b761ec2d637db0d26c7e45b6b757d0995c
-commit_message: "Do not hard-code postType"
+last_published: "2024-03-13 16:54:26 +0000"
+commit_sha: a9c4defba33b4d3f8d2406bfe45c7b18fb7a9728
+commit_message: "Refactor code"
 branch_name: update/template-matching
 passed: true
 ---
