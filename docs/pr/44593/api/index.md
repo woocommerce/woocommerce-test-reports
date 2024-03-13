@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44593/api/i
 pr_number: 44593
 pr_title_encoded: "Fix+E2E+tests+for+WordPress+6.5"
 pr_test_type: api
-last_published: "2024-03-13 17:28:03 +0000"
-commit_sha: 0faffc48ab79339f139b8ab96f71301eeba19e42
-commit_message: "fix E2E test"
+last_published: "2024-03-13 17:59:07 +0000"
+commit_sha: 780c022d0585ed9e1add1bc775817817e12a0e69
+commit_message: "fix E2E tests"
 branch_name: add/wp-env-6.5
-passed: false
+passed: true
 ---
