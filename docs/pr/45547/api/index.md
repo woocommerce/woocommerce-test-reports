@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45547/api/i
 pr_number: 45547
 pr_title_encoded: "Refactor+remote+specs+structure+and+naming"
 pr_test_type: api
-last_published: "2024-03-14 13:33:28 +0000"
-commit_sha: b71991af70777a101ffc26e8c85909fbbfc6f135
-commit_message: "Delete unused file and more lint"
+last_published: "2024-03-14 13:52:13 +0000"
+commit_sha: 6408138ea2a47e3fa2058b98b32ef220f2369796
+commit_message: "More lint"
 branch_name: dev/44451-refactor-remote-specs-structure-and-naming
 passed: true
 ---
