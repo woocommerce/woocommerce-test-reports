@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45546/api/i
 pr_number: 45546
 pr_title_encoded: "%5BCYS+on+core%5D+Introduce+the+Transitional+page%2C+i2"
 pr_test_type: api
-last_published: "2024-03-13 23:52:31 +0000"
-commit_sha: 783f7762a15608b29a269f8cf30c662835172e17
-commit_message: "Additional layout changes"
+last_published: "2024-03-14 00:10:25 +0000"
+commit_sha: 9c3c34094ba6dd8afb1311971901350a1cfa3c21
+commit_message: "Streamline the classes for the icons"
 branch_name: 45539-cys-on-core-transitional-page-i2
-passed: false
+passed: true
 ---
