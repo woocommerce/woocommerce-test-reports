@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44593/e2e/i
 pr_number: 44593
 pr_title_encoded: "Fix+E2E+tests+for+WordPress+6.5"
 pr_test_type: e2e
-last_published: "2024-03-14 14:53:56 +0000"
-commit_sha: 2c58cf100c249f0cd952ea583caa791daf2ed932
+last_published: "2024-03-14 18:34:36 +0000"
+commit_sha: b7255629d5e8cfe065b704ad3be20f3fa6157d08
 commit_message: "Merge branch 'trunk' of github.com:woocommerce/woocommerce into add/w…"
 branch_name: add/wp-env-6.5
-passed: false
+passed: true
 ---
