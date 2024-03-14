@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45547/api/i
 pr_number: 45547
 pr_title_encoded: "Refactor+remote+specs+structure+and+naming"
 pr_test_type: api
-last_published: "2024-03-13 16:48:37 +0000"
-commit_sha: 5ab381c72719cffaab51967ba9d5f7ca749bb0ac
-commit_message: "Changelog"
+last_published: "2024-03-14 09:44:24 +0000"
+commit_sha: 4dd81fb0b551784c38cb1a59dafbc772f8f35149
+commit_message: "Update all dependency uses, move TransformerService and TransformerIn…"
 branch_name: dev/44451-refactor-remote-specs-structure-and-naming
 passed: true
 ---
