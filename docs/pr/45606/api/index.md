@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45606/api/i
 pr_number: 45606
 pr_title_encoded: "Launch+Your+Store%3A++Add+status+dropdown+functionality"
 pr_test_type: api
-last_published: "2024-03-14 23:44:41 +0000"
-commit_sha: 39446d32e3082808d1a4c309e4379b6ef7d22aab
-commit_message: "update store page only text"
+last_published: "2024-03-14 23:58:05 +0000"
+commit_sha: 6cdc27db8b01b2a3ede58ad1d5a8e5237730ec18
+commit_message: "remove private repo link from comment"
 branch_name: add/lys-status-dropdown
-passed: true
+passed: false
 ---
