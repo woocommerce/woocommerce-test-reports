@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45558/api/i
 pr_number: 45558
 pr_title_encoded: "Product+Filter%3A+Attribute+%28Beta%29+block+-+Fix+block+preview"
 pr_test_type: api
-last_published: "2024-03-13 21:25:00 +0000"
-commit_sha: f79b2ea60acd584a1ac46a88b43a5f09dda1929b
-commit_message: "Add logic to render preview block when in Preview mode"
+last_published: "2024-03-14 18:22:51 +0000"
+commit_sha: 1a7acedfaedb1a0f77c28aebe270168d5910ed7a
+commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
 branch_name: fix/45491-incorrect-product-filter-attribute-block-preview
 passed: true
 ---
