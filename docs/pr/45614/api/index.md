@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45614/api/i
 pr_number: 45614
 pr_title_encoded: "Improve+local+pickup+flow"
 pr_test_type: api
-last_published: "2024-03-15 10:46:44 +0000"
-commit_sha: fa0f10ecdba516e0724c5b238924cf6f6f9ab0d1
+last_published: "2024-03-15 11:22:05 +0000"
+commit_sha: ee9ed3329994ebffedea8ab3d2f90ec72af8e275
 commit_message: "Fix PHPCS errors"
 branch_name: update/41534-improve-local-pickup-flow
 passed: true
