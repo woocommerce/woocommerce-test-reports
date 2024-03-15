@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45613/api/i
 pr_number: 45613
 pr_title_encoded: "Update%2Finstall+wum+after+connection"
 pr_test_type: api
-last_published: "2024-03-15 09:46:40 +0000"
-commit_sha: f82cc7e270a7625e91d69ff3a08c243406ad97d2
-commit_message: "Merge branch 'remove/updates-for-woo.com-extensions' into update/inst…"
+last_published: "2024-03-15 11:20:46 +0000"
+commit_sha: 610d87cbb11638bdd02873eaba2fe803c864e284
+commit_message: "Add WUM installation support to old My subscriptions page"
 branch_name: update/install-wum-after-connection
 passed: true
 ---
