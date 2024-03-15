@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44818/e2e/i
 pr_number: 44818
 pr_title_encoded: "Add+tests+for+variable+product"
 pr_test_type: e2e
-last_published: "2024-03-14 13:05:17 +0000"
-commit_sha: 65df83ce559f281c575ae7b014eaf9f9484125b8
-commit_message: "* Add function to disable the variable product block tour"
+last_published: "2024-03-15 21:15:24 +0000"
+commit_sha: ead0b427687487ea7ff2d91abc86680e8846fe98
+commit_message: "Isolate variation tests"
 branch_name: add/39886_e2e_test_create_variations
-passed: true
+passed: false
 ---
