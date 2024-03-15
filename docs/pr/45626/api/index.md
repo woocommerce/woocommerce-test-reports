@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45626/api/i
 pr_number: 45626
 pr_title_encoded: "%5BCYS+on+Core%5D+Align+the+badge+component+in+the+themes+intro+screen"
 pr_test_type: api
-last_published: "2024-03-15 12:56:06 +0000"
-commit_sha: 2e2cdab2d98113a469d12674712cc66a94f5023c
-commit_message: "Use theme color to style the theme badge component"
+last_published: "2024-03-15 13:08:54 +0000"
+commit_sha: 70c0595fc3392a22648c705f5eecd037a0a4f1a5
+commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
 branch_name: 45282-fix-active-badge-color
-passed: false
+passed: true
 ---
