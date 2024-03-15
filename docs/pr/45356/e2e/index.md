@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45356/e2e/i
 pr_number: 45356
 pr_title_encoded: "%5BCYS+-+Core%5D+E2E+tests%3A+add+coverage+for+the+Intro+page"
 pr_test_type: e2e
-last_published: "2024-03-06 16:22:37 +0000"
-commit_sha: b37bb13f6dbaa8a45fc01c312fe3735cf61ceef6
-commit_message: "Add test for the offline intro banner"
+last_published: "2024-03-15 15:00:17 +0000"
+commit_sha: 2f81ffdced7f9f30d0bb46ccf37900fa1aa77324
+commit_message: "Merge branch 'trunk' into 45341-add-intro-e2e-tests"
 branch_name: 45341-add-intro-e2e-tests
 passed: false
 ---
