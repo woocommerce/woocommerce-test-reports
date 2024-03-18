@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45692/api/i
 pr_number: 45692
 pr_title_encoded: "Fix+organization+tab+e2e+tests"
 pr_test_type: api
-last_published: "2024-03-18 21:06:31 +0000"
-commit_sha: b23f315421fea125e13b3c68a059bbaeec5ee96e
-commit_message: "Fix organization tab e2e tests"
+last_published: "2024-03-18 21:27:49 +0000"
+commit_sha: c2e3281014dbcb88777ee2b3cefe6e1e1b946de7
+commit_message: "Add changelog"
 branch_name: fix/e2e-test-organization-tab-selector
-passed: false
+passed: true
 ---
