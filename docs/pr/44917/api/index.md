@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44917/api/i
 pr_number: 44917
 pr_title_encoded: "Add+formatting+for+Cost+and+Sales+numbers+in+Campaigns+card+in+Marketing+page"
 pr_test_type: api
-last_published: "2024-03-15 11:20:56 +0000"
-commit_sha: aa5679d32d50838acf51ebe17e683b97cfc93b9f
-commit_message: "Get currency info based on user locale or default locale."
+last_published: "2024-03-18 14:20:49 +0000"
+commit_sha: 9f1d749df5f7292aea1dc99ae0eb12b86fdafb62
+commit_message: "Use locales in locale-info.php instead of currency-info.php."
 branch_name: update/marketing-number-formatting
-passed: true
+passed: false
 ---
