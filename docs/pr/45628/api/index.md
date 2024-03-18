@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45628/api/i
 pr_number: 45628
 pr_title_encoded: "Use+WC+built-in+Action+Scheduler+to+fetch+in-app+promotions"
 pr_test_type: api
-last_published: "2024-03-15 15:24:51 +0000"
-commit_sha: 7066cd54681eaa9c9519f2f971f9d520eee14192
-commit_message: "Use WC built-in ActionScheduler"
+last_published: "2024-03-18 12:33:58 +0000"
+commit_sha: 3e6b65153877ff42cca1938f23994914c0822297
+commit_message: ""
 branch_name: fix/19763-marketplace-promotions
 passed: true
 ---
