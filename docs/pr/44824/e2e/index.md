@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44824/e2e/i
 pr_number: 44824
 pr_title_encoded: "%5BCYS+on+Core%5D+Remove+the+Feature+Flag+from+the+Customize+Your+Store+flow+on+Core"
 pr_test_type: e2e
-last_published: "2024-03-18 22:33:43 +0000"
+last_published: "2024-03-18 22:52:04 +0000"
 commit_sha: d388fce2123d86676a8ca26959091c0578b1a025
 commit_message: "Fix unrelated failing e2e test for the 'Get paid' page"
 branch_name: 44823-cys-on-core-remove-the-feature-flag-from-the-customize-your-store-flow-on-core
