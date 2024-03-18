@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45688/api/i
 pr_number: 45688
 pr_title_encoded: "Launch+your+store%3A+Address+status+issues+and+filesystem"
 pr_test_type: api
-last_published: "2024-03-18 19:33:48 +0000"
-commit_sha: b198bfb5d1a21ee65cc11e55255d6b1f74342360
-commit_message: "remove unused function"
+last_published: "2024-03-18 21:57:06 +0000"
+commit_sha: fff1412211d87b02ed4fc04191b49fa2a6b5b72e
+commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
 branch_name: fix/lys-status-issues
 passed: true
 ---
