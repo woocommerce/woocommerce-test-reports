@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44480/api/i
 pr_number: 44480
 pr_title_encoded: "Remove+unused+follow-redirects+dev+dependency"
 pr_test_type: api
-last_published: "2024-03-18 18:04:39 +0000"
-commit_sha: 3aa26e7cde4e1c1ac37de71266fc2775c1d29fa7
+last_published: "2024-03-18 20:33:08 +0000"
+commit_sha: 5501dd9f28af5d29846b366d33d23de981019288
 commit_message: "Merge branch 'trunk' into dependabot/npm_and_yarn/follow-redirects-1.…"
 branch_name: dependabot/npm_and_yarn/follow-redirects-1.15.4
 passed: true
