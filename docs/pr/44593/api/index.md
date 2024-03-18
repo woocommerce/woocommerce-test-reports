@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44593/api/i
 pr_number: 44593
 pr_title_encoded: "Fix+E2E+tests+for+WordPress+6.5"
 pr_test_type: api
-last_published: "2024-03-18 11:22:14 +0000"
-commit_sha: b1f02a62a7b7cd23f248eb06df86182dad68a24d
-commit_message: "Fix flaky locator assertions"
+last_published: "2024-03-18 14:09:22 +0000"
+commit_sha: c79b96eafd517051a5f148bda12cdc2bb293edb5
+commit_message: "Apply correct use of waitForRequest/Response and remove where unneces…"
 branch_name: add/wp-env-6.5
 passed: true
 ---
