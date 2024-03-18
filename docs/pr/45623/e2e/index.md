@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45623/e2e/i
 pr_number: 45623
 pr_title_encoded: "Product+Collection%3A+add+e2e+tests+with+all+product+elements+included"
 pr_test_type: e2e
-last_published: "2024-03-15 17:49:46 +0000"
-commit_sha: 017b0aa6e6017c8519f5567ca9b327f961c768bf
-commit_message: "Remove unnecessary check"
+last_published: "2024-03-18 11:58:12 +0000"
+commit_sha: 2462eeff721c7b08045cd15935760561fcbe4e6f
+commit_message: "Change the verify happening in a wrong place"
 branch_name: 45214-product-collection-add-e2e-tests-with-all-product-elements-included
 passed: true
 ---
