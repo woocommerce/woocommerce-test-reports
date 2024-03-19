@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45694/api/i
 pr_number: 45694
 pr_title_encoded: "Payment+Gateways%3A+Update+Airwallex+png"
 pr_test_type: api
-last_published: "2024-03-19 01:09:53 +0000"
-commit_sha: 2aff992cdb32f972f9a094c1ad7be52aebb385f2
-commit_message: "144px"
+last_published: "2024-03-19 02:38:56 +0000"
+commit_sha: 7fceb146becd3a6aed16e28561a5e32f03f85aa2
+commit_message: "remove old"
 branch_name: update/airwallex-gateway-png
 passed: true
 ---
