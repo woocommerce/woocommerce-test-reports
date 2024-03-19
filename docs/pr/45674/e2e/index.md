@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45674/e2e/i
 pr_number: 45674
 pr_title_encoded: "Rating+filter%3A+fix+misaligned+count"
 pr_test_type: e2e
-last_published: "2024-03-18 17:30:59 +0000"
-commit_sha: 38c4cbc3695625a550c922a4266a50f77626e481
-commit_message: "Rating filter: fix misaligned count"
+last_published: "2024-03-19 15:51:01 +0000"
+commit_sha: 42bfd9dd72bf9e4ce0713a6d76576d5423dda210
+commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
 branch_name: rating-filter/count-alignment
-passed: false
+passed: true
 ---
