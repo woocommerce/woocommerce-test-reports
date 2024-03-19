@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45684/e2e/i
 pr_number: 45684
 pr_title_encoded: "Add+styling+to+marketplace+to+identify+sponsored+products"
 pr_test_type: e2e
-last_published: "2024-03-18 18:18:32 +0000"
-commit_sha: a651eb0fbfdb54a03522cc00fac5cd83f916d886
-commit_message: "Fix indentation bug"
+last_published: "2024-03-19 16:01:02 +0000"
+commit_sha: 197fafdad9dd6f2ef89e392c6b4b4b18dc421216
+commit_message: "Update plugins/woocommerce-admin/client/marketplace/stylesheets/_vari…"
 branch_name: add/woocom19612-identify-sponsored-products
-passed: false
+passed: true
 ---
