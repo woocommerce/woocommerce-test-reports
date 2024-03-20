@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45570/e2e/i
 pr_number: 45570
 pr_title_encoded: "Install+the+Legacy+REST+API+plugin+on+WooCommerce+upgrade+if+needed"
 pr_test_type: e2e
-last_published: "2024-03-19 22:27:36 +0000"
-commit_sha: 5981e7ea3f472e8ae8b964cfc2cbb80c0165bc7f
-commit_message: "Changes in PluginInstaller class:"
+last_published: "2024-03-20 07:50:25 +0000"
+commit_sha: 28a58f3975821c6c5d8413cebc9a9f504b0688b7
+commit_message: "Use the "latest-stable" URL for plugin install"
 branch_name: auto_install_legacy_api_plugin
-passed: false
+passed: true
 ---
