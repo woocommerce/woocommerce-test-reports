@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45598/api/i
 pr_number: 45598
 pr_title_encoded: "Add+index+to+zone_id+column+for+woocommerce_shipping_zone_locations"
 pr_test_type: api
-last_published: "2024-03-14 18:19:11 +0000"
-commit_sha: e2891cf04c75c243b669a1dcac9196adb0492d6c
-commit_message: "Add index to zone_id column for woocommerce_shipping_zone_locations"
+last_published: "2024-03-20 17:46:44 +0000"
+commit_sha: 87b4ca0d7e89ab81440b440247d6af0780ea1968
+commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
 branch_name: add/zone_id-index-to-shipping-zone-locations
 passed: true
 ---
