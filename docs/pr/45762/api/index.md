@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45762/api/i
 pr_number: 45762
 pr_title_encoded: "CYS+-+Core%3A+fix%3A+not+mark+Customize+your+store+step+as+completed+when+the+user+switches+theme"
 pr_test_type: api
-last_published: "2024-03-20 17:49:18 +0000"
+last_published: "2024-03-20 18:13:18 +0000"
 commit_sha: ac6c1b8d39bb2899640706e1db6130d69fce5d07
 commit_message: "Merge branch 'fix/theme-mark-woo-express' of github.com:woocommerce/w…"
 branch_name: fix/theme-mark-woo-express
