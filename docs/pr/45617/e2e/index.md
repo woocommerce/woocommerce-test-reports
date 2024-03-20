@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45617/e2e/i
 pr_number: 45617
 pr_title_encoded: "Proof+of+Concept+for+allowing+product+tour+to+be+extensible"
 pr_test_type: e2e
-last_published: "2024-03-19 16:36:41 +0000"
-commit_sha: d8f3725bb2dfa001085d9dda4ac47561ccba9cf3
-commit_message: "Add data validation"
+last_published: "2024-03-20 08:31:08 +0000"
+commit_sha: d0967ad7754e4ecd96d90e9a0cae745775cbfddf
+commit_message: "Correct import order"
 branch_name: dakota/product-tour-extensibility
 passed: true
 ---
