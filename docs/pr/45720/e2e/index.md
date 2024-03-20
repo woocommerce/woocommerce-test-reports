@@ -2,11 +2,11 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45720/e2e/index.html
 pr_number: 45720
-pr_title_encoded: "Update%2Flocal+pickup+title"
+pr_title_encoded: "Sync+Local+Pickup+title+between+Checkout+block+and+shipping+settings+UI+and+vice%2Fversa"
 pr_test_type: e2e
-last_published: "2024-03-19 18:12:30 +0000"
-commit_sha: b5f7fb90958717e64e3ff06269978699eb8ffc68
-commit_message: "Update localPickupText attribute from wcSettings in editor"
+last_published: "2024-03-20 16:37:15 +0000"
+commit_sha: 49463f6b49630b5ead1d27d006037d4a957d0ebc
+commit_message: "Add changelog"
 branch_name: update/local-pickup-title
-passed: true
+passed: false
 ---
