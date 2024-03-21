@@ -5,5 +5,5 @@ test_type: api
 release_tag: 8.7.0
 env_description: "php-8.1"
 created_at: "2024-03-18T16:35:32Z"
-passed: false
+passed: true
 ---
