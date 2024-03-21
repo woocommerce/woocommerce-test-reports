@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45693/api/i
 pr_number: 45693
 pr_title_encoded: "Reset+Product+Collection+Pagination+When+Filtering"
 pr_test_type: api
-last_published: "2024-03-20 18:22:28 +0000"
-commit_sha: 8be859b66ab85539e658da3e714f98e6f09e3531
-commit_message: "Applied Pagination Change To Legacy Filters"
+last_published: "2024-03-21 20:48:35 +0000"
+commit_sha: 85f3dcdd615dd6279ab50e149d2a91081454eddd
+commit_message: "Merge branch 'trunk' into fix/45644-filter-page-reset"
 branch_name: fix/45644-filter-page-reset
 passed: true
 ---
