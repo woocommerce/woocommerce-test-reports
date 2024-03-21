@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45805/api/i
 pr_number: 45805
 pr_title_encoded: "%5BCYS+on+Core%5D+Update+the+copy+for+the+fonts+opt-in+modal"
 pr_test_type: api
-last_published: "2024-03-21 17:35:46 +0000"
-commit_sha: 39908b07375c971256ba0777176f468ff1b39a16
-commit_message: "Update the copy for the fonts opt-in modal"
+last_published: "2024-03-21 18:29:03 +0000"
+commit_sha: 9ff2b5ee9052fae56a07a6bdbf74b3d77132554c
+commit_message: "Merge branch 'trunk' into update/copy-cys-opt-in-modal"
 branch_name: update/copy-cys-opt-in-modal
 passed: true
 ---
