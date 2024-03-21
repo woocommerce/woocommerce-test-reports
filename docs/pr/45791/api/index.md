@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45791/api/i
 pr_number: 45791
 pr_title_encoded: "Add+a+filter+for+the+items+to+apply+coupons+array."
 pr_test_type: api
-last_published: "2024-03-21 12:41:24 +0000"
-commit_sha: a2edd6893be2c8bee30165cba45d2e7751317931
-commit_message: "Add a filter for the items to apply coupons array."
+last_published: "2024-03-21 15:26:32 +0000"
+commit_sha: eb6356237d2fa927ef4d029d743a65efd92c38bf
+commit_message: "Merge branch 'tweak/45790' of github.com:woocommerce/woocommerce into…"
 branch_name: tweak/45790
 passed: true
 ---
