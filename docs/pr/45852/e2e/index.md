@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45852/e2e/i
 pr_number: 45852
 pr_title_encoded: "Use+state+name+in+address+card"
 pr_test_type: e2e
-last_published: "2024-03-22 19:20:55 +0000"
-commit_sha: b4dd6ed9397530ae7e3c6332df83a82def3696c6
-commit_message: "Add changelog"
+last_published: "2024-03-22 20:35:53 +0000"
+commit_sha: 8e2f76192461113123f04c574cc00788648cb2a6
+commit_message: "Remove unused vars"
 branch_name: fix/address-format-card
-passed: false
+passed: true
 ---
