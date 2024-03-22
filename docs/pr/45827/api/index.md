@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45827/api/i
 pr_number: 45827
 pr_title_encoded: "Product+Collection%3A+telemetry+choosing+collection"
 pr_test_type: api
-last_published: "2024-03-22 14:03:00 +0000"
-commit_sha: 208df701cf9942418702bddcd1a1ae8e4446df8d
-commit_message: "Cover cases with specific Product or Specific Taxonomy"
+last_published: "2024-03-22 14:45:56 +0000"
+commit_sha: c3373a1eb0565a27a22fc1191f7a4067702116b5
+commit_message: "Update event name"
 branch_name: 45187-product-collection-telemetry-choosing-collection
 passed: true
 ---
