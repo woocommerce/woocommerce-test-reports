@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44522/api/i
 pr_number: 44522
 pr_title_encoded: "Ensure+Product+Collection+Block%27s+%60queryId%60+Uniqueness"
 pr_test_type: api
-last_published: "2024-03-21 21:57:51 +0000"
-commit_sha: 45b049d9fd08714080224c024a1364a300a97e0e
-commit_message: "Fixed Linting"
+last_published: "2024-03-22 07:59:17 +0000"
+commit_sha: 59f5bc50c4ae317d769a9f6dc2622b8a47e564fd
+commit_message: "Prevent collection different than Produyct Catalog from being filtered"
 branch_name: fix/43311-fix-query-id-persistence
-passed: true
+passed: false
 ---
