@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45781/e2e/i
 pr_number: 45781
 pr_title_encoded: "Product+Collection%3A+Don%27t+show+publicly+non-queryable+taxonomies"
 pr_test_type: e2e
-last_published: "2024-03-22 05:40:00 +0000"
-commit_sha: 412a1e4d79d64a36c6601f895846393784cb59bf
-commit_message: "Don't show publicly non-queryable taxonomies"
+last_published: "2024-03-22 06:43:49 +0000"
+commit_sha: 2602cf678dbb64b985635acc876e6d93a3cafd7f
+commit_message: "Merge branch 'trunk' of https://github.com/woocommerce/woocommerce in…"
 branch_name: fix/query-non-public-tax
 passed: true
 ---
