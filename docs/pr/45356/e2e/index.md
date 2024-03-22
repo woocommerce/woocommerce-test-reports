@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45356/e2e/i
 pr_number: 45356
 pr_title_encoded: "%5BCYS+-+Core%5D+E2E+tests%3A+add+coverage+for+the+Intro+page"
 pr_test_type: e2e
-last_published: "2024-03-22 08:53:50 +0000"
-commit_sha: 44afe382ea1eb02d52a83cd83f725c097d143844
-commit_message: "Remove console"
+last_published: "2024-03-22 09:03:27 +0000"
+commit_sha: 79b88433937414d7cccbe4ec270ffe94d2ebda5a
+commit_message: "Update strings"
 branch_name: 45341-add-intro-e2e-tests
 passed: false
 ---
