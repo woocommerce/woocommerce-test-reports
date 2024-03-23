@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45852/api/i
 pr_number: 45852
 pr_title_encoded: "Use+address+format+from+server+in+address+card"
 pr_test_type: api
-last_published: "2024-03-22 22:57:49 +0000"
-commit_sha: b2e3fa147c6a58440967c4cdf714df2049b5fbeb
+last_published: "2024-03-23 12:17:46 +0000"
+commit_sha: 27ed6bce429f74a5f38cf257565c96136759042a
 commit_message: "Address lint issues"
 branch_name: fix/address-format-card
 passed: true
