@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45884/api/i
 pr_number: 45884
 pr_title_encoded: "%5Be2e+tests%5D+Fix+can+create+a+simple+product+tests"
 pr_test_type: api
-last_published: "2024-03-25 10:52:34 +0000"
-commit_sha: 04fb5f02920d15bdc65741475884a33b7638e1c0
-commit_message: "Removed describe block"
+last_published: "2024-03-25 11:50:18 +0000"
+commit_sha: 3324794250a5b80a787b549ec46ae86820017af8
+commit_message: "Test with single shard"
 branch_name: e2e/fix/create-simple-product-fix
 passed: true
 ---
