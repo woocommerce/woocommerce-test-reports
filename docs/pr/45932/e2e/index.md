@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45932/e2e/i
 pr_number: 45932
 pr_title_encoded: "Update+Launch+Your+Store+task+action+URL"
 pr_test_type: e2e
-last_published: "2024-03-26 10:58:46 +0000"
-commit_sha: 5179704039c9eaab0fcff02f949f565d94434ffd
-commit_message: "Add get_action_url method to LaunchYourStore task"
+last_published: "2024-03-26 11:38:12 +0000"
+commit_sha: 00742e4a77e893bf7fab093d55362cc6a89595e7
+commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
 branch_name: update/lys-task-action-url
 passed: true
 ---
