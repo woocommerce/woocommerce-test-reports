@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45926/api/i
 pr_number: 45926
 pr_title_encoded: "CYS+-+E2E+tests%3A+Add+color+picker+E2E+tests"
 pr_test_type: api
-last_published: "2024-03-26 11:03:33 +0000"
-commit_sha: d5f78bdca00c019dfff8e08e91d66f8f316426a0
-commit_message: "fix E2E tests"
+last_published: "2024-03-26 11:33:28 +0000"
+commit_sha: 06f73b43532c6f9c183338565f8dc63bef87a5a6
+commit_message: "re-add beforeEach"
 branch_name: add/e2e-color-picker
 passed: true
 ---
