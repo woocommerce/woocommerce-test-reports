@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45984/e2e/i
 pr_number: 45984
 pr_title_encoded: "CYS+-+E2E+tests%3A+Add+footer+section+e2e+tests"
 pr_test_type: e2e
-last_published: "2024-03-27 11:51:26 +0000"
-commit_sha: bf5e049d5e998be1b43d5fba19c7da805955c0f0
-commit_message: "Add e2e tests for the assembler footer section"
+last_published: "2024-03-27 12:17:50 +0000"
+commit_sha: ce492390a8df210c725b3ce4afdb7913fe96e28e
+commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
 branch_name: 45344-e2e-tests-cys-footer
 passed: false
 ---
