@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/40243/api/i
 pr_number: 40243
 pr_title_encoded: "Replace+pink+with+WooCommerce+purple+in+reports+and+ratings"
 pr_test_type: api
-last_published: "2024-03-21 06:52:17 +0000"
-commit_sha: 2eefc583427d111a6b920d957c1f8fe8a486fab0
+last_published: "2024-03-27 10:07:04 +0000"
+commit_sha: 6a710bc5be7c78ae27876b4cd0261a4a63503f8a
 commit_message: "Merge branch 'trunk' into tweak/color-in-reports-and-ratings"
 branch_name: tweak/color-in-reports-and-ratings
 passed: true
