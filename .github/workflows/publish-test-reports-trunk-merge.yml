@@ -69,7 +69,7 @@ jobs:
 
       - name: Upload test reports to S3 bucket
         env:
-          SOURCE: artifact/allure-report
+          SOURCE: ${{ github.workspace }}/artifact/${{ inputs.test_type }}/allure-report
           DESTINATION: ${{ secrets.S3_BUCKET_URL }}/public/trunk/${{ inputs.run_id }}/${{ inputs.test_type }}
         run: aws s3 sync $SOURCE $DESTINATION --delete
 
