@@ -6,6 +6,8 @@ on:
         required: true
       artifact:
         required: true
+      pr_number:
+        required: false
       test_type:
         description: e2e or api
         required: true
