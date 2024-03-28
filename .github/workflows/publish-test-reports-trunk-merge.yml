@@ -6,8 +6,6 @@ on:
         required: true
       artifact:
         required: true
-      pr_number:
-        required: true
       test_type:
         description: e2e or api
         required: true
@@ -16,7 +14,7 @@ on:
           - api
           - e2e
 concurrency:
-  group: ${{ github.workflow }}-${{ inputs.pr_number }}
+  group: ${{ github.workflow }}-${{ inputs.run_id }}
   cancel-in-progress: true
 permissions: {}
 
@@ -57,7 +55,7 @@ jobs:
       - name: Set report title
         working-directory: repo/.github/workflows/scripts
         env:
-          REPORT_TITLE: ${{ inputs.test_type }} Tests on trunk after merging PR ${{ inputs.pr_number }}
+          REPORT_TITLE: ${{ inputs.test_type }} Tests on trunk
           INDEX_HTML_PATH: ${{ github.workspace }}/artifact/allure-report/index.html
           SUMMARY_JSON_PATH: ${{ github.workspace }}/artifact/allure-report/widgets/summary.json
         run: node change-report-title.js
@@ -65,18 +63,18 @@ jobs:
       - name: Upload test reports to S3 bucket
         env:
           SOURCE: artifact/allure-report
-          DESTINATION: ${{ secrets.S3_BUCKET_URL }}/public/pr-merge/${{ inputs.pr_number }}/${{ inputs.test_type }}
+          DESTINATION: ${{ secrets.S3_BUCKET_URL }}/public/trunk/${{ inputs.test_type }}
         run: aws s3 sync $SOURCE $DESTINATION --delete
 
       - name: Add index.md file
         working-directory: repo
         env:
-          INDEX_MD_DIR: docs/pr-merge/${{ inputs.pr_number }}/${{ inputs.test_type }}
+          INDEX_MD_DIR: docs/trunk/${{ inputs.test_type }}
         run: |
           mkdir -p $INDEX_MD_DIR
           echo "---" > $INDEX_MD_DIR/index.md
           echo "layout: redirect" >> $INDEX_MD_DIR/index.md
-          echo "redirect_to: ${{ secrets.S3_WEB_ENDPOINT }}/public/pr-merge/${{ inputs.pr_number }}/${{ inputs.test_type }}/index.html" >> $INDEX_MD_DIR/index.md
+          echo "redirect_to: ${{ secrets.S3_WEB_ENDPOINT }}/public/trunk/${{ inputs.test_type }}/index.html" >> $INDEX_MD_DIR/index.md
           echo "---" >> $INDEX_MD_DIR/index.md
 
       - name: Create PR and merge
@@ -85,8 +83,8 @@ jobs:
           GITHUB_USER: ${{ secrets.REPORTS_USER }}
           GITHUB_EMAIL: ${{ secrets.REPORTS_EMAIL }}
           GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
-          BOT_COMMIT_MESSAGE: 'Add: ${{ inputs.test_type }} test against trunk after merging PR ${{ inputs.pr_number }}'
-          BRANCH_NAME: 'add/${{ inputs.test_type }}-report-on-pr-merge-${{ inputs.pr_number }}-runid-${{ inputs.run_id }}'
+          BOT_COMMIT_MESSAGE: 'Add: ${{ inputs.test_type }} test against trunk'
+          BRANCH_NAME: 'add/${{ inputs.test_type }}-report-on-trunk-runid-${{ inputs.run_id }}'
           RUN_ID: ${{ inputs.run_id }}
         run: bash merge-changes-to-trunk.sh
 
