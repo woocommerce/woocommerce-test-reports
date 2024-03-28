@@ -48,11 +48,13 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-      - name: Download artifact
+      - name: Download report artifact
         env:
-          SOURCE: ${{ secrets.S3_BUCKET_URL }}/artifacts/${{ inputs.run_id }}/${{ inputs.artifact }}
-          DESTINATION: artifact
-        run: aws s3 cp $SOURCE $DESTINATION --recursive
+          RUN_ID: ${{ inputs.run_id }}
+          ARTIFACT_NAME: ${{ inputs.artifact }}
+          DOWNLOAD_PATH: ${{ github.workspace }}/artifacts/${{ inputs.test_type }}
+        working-directory: repo/.github/workflows/scripts
+        run: bash download-report.sh
 
       - name: Set report title
         working-directory: repo/.github/workflows/scripts
