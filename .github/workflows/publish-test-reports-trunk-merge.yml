@@ -63,25 +63,25 @@ jobs:
         working-directory: repo/.github/workflows/scripts
         env:
           REPORT_TITLE: ${{ inputs.test_type }} Tests on trunk
-          INDEX_HTML_PATH: ${{ github.workspace }}/artifact/allure-report/index.html
-          SUMMARY_JSON_PATH: ${{ github.workspace }}/artifact/allure-report/widgets/summary.json
+          INDEX_HTML_PATH: ${{ github.workspace }}/artifact/${{ inputs.test_type }}/allure-report/index.html
+          SUMMARY_JSON_PATH: ${{ github.workspace }}/artifact/${{ inputs.test_type }}/allure-report/widgets/summary.json
         run: node change-report-title.js
 
       - name: Upload test reports to S3 bucket
         env:
           SOURCE: artifact/allure-report
-          DESTINATION: ${{ secrets.S3_BUCKET_URL }}/public/trunk/${{ inputs.test_type }}
+          DESTINATION: ${{ secrets.S3_BUCKET_URL }}/public/trunk/${{ inputs.run_id }}/${{ inputs.test_type }}
         run: aws s3 sync $SOURCE $DESTINATION --delete
 
       - name: Add index.md file
         working-directory: repo
         env:
-          INDEX_MD_DIR: docs/trunk/${{ inputs.test_type }}
+          INDEX_MD_DIR: docs/trunk/${{ inputs.run_id }}/${{ inputs.test_type }}
         run: |
           mkdir -p $INDEX_MD_DIR
           echo "---" > $INDEX_MD_DIR/index.md
           echo "layout: redirect" >> $INDEX_MD_DIR/index.md
-          echo "redirect_to: ${{ secrets.S3_WEB_ENDPOINT }}/public/trunk/${{ inputs.test_type }}/index.html" >> $INDEX_MD_DIR/index.md
+          echo "redirect_to: ${{ secrets.S3_WEB_ENDPOINT }}/public/trunk/${{ inputs.run_id }}/${{ inputs.test_type }}/index.html" >> $INDEX_MD_DIR/index.md
           echo "---" >> $INDEX_MD_DIR/index.md
 
       - name: Create PR and merge
@@ -94,6 +94,3 @@ jobs:
           BRANCH_NAME: 'add/${{ inputs.test_type }}-report-on-trunk-runid-${{ inputs.run_id }}'
           RUN_ID: ${{ inputs.run_id }}
         run: bash merge-changes-to-trunk.sh
-
-      - name: Delete artifact from bucket
-        run: aws s3 rm ${{ secrets.S3_BUCKET_URL }}/artifacts/${{ inputs.run_id }}/${{ inputs.artifact }} --recursive
