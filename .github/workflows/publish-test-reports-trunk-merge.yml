@@ -52,7 +52,7 @@ jobs:
         env:
           RUN_ID: ${{ inputs.run_id }}
           ARTIFACT_NAME: ${{ inputs.artifact }}
-          DOWNLOAD_PATH: ${{ github.workspace }}/artifacts/${{ inputs.test_type }}
+          DOWNLOAD_PATH: ${{ github.workspace }}/artifact/${{ inputs.test_type }}
           GH_TOKEN: ${{ github.token }}
         working-directory: repo/.github/workflows/scripts
         run: | 
