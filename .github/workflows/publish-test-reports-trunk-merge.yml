@@ -8,6 +8,8 @@ on:
         required: true
       pr_number:
         required: false
+      commit_sha:
+        required: false
       test_type:
         description: e2e or api
         required: true
