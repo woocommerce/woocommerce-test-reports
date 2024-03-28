@@ -54,7 +54,9 @@ jobs:
           ARTIFACT_NAME: ${{ inputs.artifact }}
           DOWNLOAD_PATH: ${{ github.workspace }}/artifacts/${{ inputs.test_type }}
         working-directory: repo/.github/workflows/scripts
-        run: bash download-report.sh
+        run: | 
+          echo "$ARTIFACT_NAME"
+          bash download-report.sh
 
       - name: Set report title
         working-directory: repo/.github/workflows/scripts
