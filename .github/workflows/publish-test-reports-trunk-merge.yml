@@ -62,7 +62,7 @@ jobs:
       - name: Set report title
         working-directory: repo/.github/workflows/scripts
         env:
-          REPORT_TITLE: ${{ inputs.test_type }} Tests on trunk
+          REPORT_TITLE: ${{ inputs.test_type }} Tests on trunk for run ${{ inputs.run_id }}
           INDEX_HTML_PATH: ${{ github.workspace }}/artifact/${{ inputs.test_type }}/allure-report/index.html
           SUMMARY_JSON_PATH: ${{ github.workspace }}/artifact/${{ inputs.test_type }}/allure-report/widgets/summary.json
         run: node change-report-title.js
