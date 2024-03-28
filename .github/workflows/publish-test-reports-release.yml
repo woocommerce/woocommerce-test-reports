@@ -33,6 +33,7 @@ on:
           - wp-latest
           - wp-latest-1
           - wp-latest-2
+          - wp-latest-beta-rc
           - php-7.4
           - php-8.0
           - php-8.1
@@ -148,8 +149,8 @@ jobs:
           GITHUB_USER: ${{ secrets.REPORTS_USER }}
           GITHUB_EMAIL: ${{ secrets.REPORTS_EMAIL }}
           GITHUB_TOKEN: ${{ secrets.REPORTS_TOKEN }}
-          BOT_COMMIT_MESSAGE: 'Add: Release ${{ env.RELEASE_TAG }} ${{ env.TEST_TYPE }} test with ${{ env.ENV_DESCRIPTION }}'
-          BRANCH_NAME: 'add/${{ env.TEST_TYPE }}-report-on-release-${{ env.RELEASE_TAG }}-${{ github.run_id }}-run${{ github.run_number }}'
+          BOT_COMMIT_MESSAGE: "Add: Release ${{ env.RELEASE_TAG }} ${{ env.TEST_TYPE }} test with ${{ env.ENV_DESCRIPTION }}"
+          BRANCH_NAME: "add/${{ env.TEST_TYPE }}-report-on-release-${{ env.RELEASE_TAG }}-${{ github.run_id }}-run${{ github.run_number }}"
         run: bash merge-changes-to-trunk.sh
 
       - name: Delete artifact from bucket
