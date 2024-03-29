@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45954/api/i
 pr_number: 45954
 pr_title_encoded: "Add+filters+for+HPOS+order+search+to+support+custom+filters"
 pr_test_type: api
-last_published: "2024-03-29 11:14:50 +0000"
-commit_sha: 517648a9ce0c942620edfdada21f843527552acc
-commit_message: "Use WP get_user_setting() instead of custom cookie for simplicity."
+last_published: "2024-03-29 16:52:12 +0000"
+commit_sha: 37bb095d3c67e6a056abea05d8cdaab626284131
+commit_message: "Delete plugins/woocommerce/changelog/perf-hpos-search2"
 branch_name: perf/hpos-search
 passed: true
 ---
