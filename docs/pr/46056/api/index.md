@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46056/api/i
 pr_number: 46056
 pr_title_encoded: "add%2Flys+hub+sidebar"
 pr_test_type: api
-last_published: "2024-04-01 14:21:52 +0000"
-commit_sha: bc2017128a320b47a5d5eaf0325b3718969193ee
-commit_message: "fixed sidebar title back button"
+last_published: "2024-04-01 14:45:42 +0000"
+commit_sha: 1fb17c00bbc63f0cdc9ef6fefa5e28ba25065034
+commit_message: "missed i18n"
 branch_name: add/lys-hub-sidebar
 passed: true
 ---
