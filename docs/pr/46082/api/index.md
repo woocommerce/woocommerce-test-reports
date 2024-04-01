@@ -1,0 +1,12 @@
+---
+layout: redirect
+redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46082/api/index.html
+pr_number: 46082
+pr_title_encoded: "Show+notice+to+connect+to+woo.com+in+plugin+update+message+for+unconnected+stores"
+pr_test_type: api
+last_published: "2024-04-01 02:47:25 +0000"
+commit_sha: 333f99754324caf742608ebd76ea97bc219230de
+commit_message: "woo plugins use public endpoint for unconnected stores, show message …"
+branch_name: add/plugin-check-use-public-api
+passed: true
+---
