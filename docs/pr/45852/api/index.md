@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45852/api/i
 pr_number: 45852
 pr_title_encoded: "Use+address+format+from+server+in+address+card"
 pr_test_type: api
-last_published: "2024-04-01 17:29:03 +0000"
-commit_sha: 18d759d72341fde03c112f660eae263eaf9d3799
-commit_message: "Fix undefined variable"
+last_published: "2024-04-01 18:09:16 +0000"
+commit_sha: 84b9fcc4a792e5994ed36ade107074f45e33f5fa
+commit_message: "Add formats to jest global mock"
 branch_name: fix/address-format-card
 passed: true
 ---
