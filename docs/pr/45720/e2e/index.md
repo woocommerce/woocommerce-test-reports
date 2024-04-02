@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45720/e2e/i
 pr_number: 45720
 pr_title_encoded: "Sync+Local+Pickup+title+between+Checkout+block+and+shipping+settings+UI+and+vice%2Fversa"
 pr_test_type: e2e
-last_published: "2024-04-01 14:22:43 +0000"
-commit_sha: 74bd384f2daf42d22ddfdf6b0435f8dab986d21a
-commit_message: "Fix further lint errors"
+last_published: "2024-04-02 11:00:33 +0000"
+commit_sha: f26892a64601125c8f7ec5d45250411df1946c53
+commit_message: "Wait for notice text to be visible instead of checking data store"
 branch_name: update/local-pickup-title
 passed: true
 ---
