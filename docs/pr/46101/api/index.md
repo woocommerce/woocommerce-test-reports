@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46101/api/i
 pr_number: 46101
 pr_title_encoded: "%5BLaunch+Your+Store%5D+Dynamically+create+Coming+Soon+page+content"
 pr_test_type: api
-last_published: "2024-04-02 04:16:09 +0000"
-commit_sha: 0ec5ab2bbd800d337b8e1e0b9d1d6dbcbe5dca17
-commit_message: "Add changefile(s) from automation for the following project(s): wooco…"
+last_published: "2024-04-02 04:29:59 +0000"
+commit_sha: 075bad0add62e0112be2b34edf2f588e2da96763
+commit_message: "Merge branch 'add/lys-coming-soon-templates' of github.com:woocommerc…"
 branch_name: add/lys-coming-soon-templates
 passed: true
 ---
