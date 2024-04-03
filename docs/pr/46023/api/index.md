@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46023/api/i
 pr_number: 46023
 pr_title_encoded: "Adding+OrderTableDatastore+and+Meta+caching+integration"
 pr_test_type: api
-last_published: "2024-04-02 18:06:51 +0000"
-commit_sha: 454e792bf54f5b37d232af8ba82e7401a8275f16
+last_published: "2024-04-03 01:10:16 +0000"
+commit_sha: 7564f60c876c8d70879e8cd7374e55706dbd5ded
 commit_message: ""
 branch_name: fix/45550-cache-orders-at-datastore-layer
 passed: true
