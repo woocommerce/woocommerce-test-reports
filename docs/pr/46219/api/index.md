@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46219/api/i
 pr_number: 46219
 pr_title_encoded: "Remove+the+base+tabs+component+from+blocks.+It+is+no+longer+used."
 pr_test_type: api
-last_published: "2024-04-04 12:39:11 +0000"
-commit_sha: 927b584c1e655579fa3ca27adc6e3bb6217fcc10
+last_published: "2024-04-04 15:30:23 +0000"
+commit_sha: b4dcaf2b6aa487626c78889f8070092f52a0648b
 commit_message: ""
 branch_name: dev/delete-base-tabs-component
 passed: true
