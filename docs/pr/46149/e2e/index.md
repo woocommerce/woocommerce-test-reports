@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46149/e2e/i
 pr_number: 46149
 pr_title_encoded: "Add+dismiss+button+to+coming+soon+banner"
 pr_test_type: e2e
-last_published: "2024-04-03 19:44:09 +0000"
-commit_sha: a4085a69dfac546fdab9add7188cf1852a8a08f6
+last_published: "2024-04-04 21:33:23 +0000"
+commit_sha: 0c8902857f958f3802a4c60e3307728a034f05bc
 commit_message: ""
 branch_name: update/add-dismiss-button-for-coming-soon-banner
 passed: true
