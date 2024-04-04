@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45974/api/i
 pr_number: 45974
 pr_title_encoded: "Replace+%40wordpress%2Fcomponents+Button+with+Ariakit+Button+in+blocks+f%2Fe+components"
 pr_test_type: api
-last_published: "2024-03-27 09:47:53 +0000"
-commit_sha: 31339b635eb2becd1a133d12cca4e1c4c8edfcd7
-commit_message: "Revert redundant changes to place order button."
+last_published: "2024-04-04 02:50:51 +0000"
+commit_sha: 255cbf320fd555b17bcdc40919333bb32fa7837e
+commit_message: ""
 branch_name: dev/introduce-ariakit-button
-passed: false
+passed: true
 ---
