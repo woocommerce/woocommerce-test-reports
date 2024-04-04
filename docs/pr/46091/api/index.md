@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46091/api/i
 pr_number: 46091
 pr_title_encoded: "Use+individual+meta+keys+for+Additional+fields."
 pr_test_type: api
-last_published: "2024-04-03 18:57:35 +0000"
-commit_sha: 18245917db04793fc0dbb978c897ff00b7ebf098
+last_published: "2024-04-04 10:52:58 +0000"
+commit_sha: 5a17b835c046670bd8b75a2384fb61ff880ad9d6
 commit_message: ""
 branch_name: add/move-custom-fields-to-individual-fields
 passed: true
