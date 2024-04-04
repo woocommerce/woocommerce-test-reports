@@ -5,5 +5,5 @@ test_type: e2e
 release_tag: 8.8.0-rc.1
 env_description: "php-8.1"
 created_at: "2024-04-02T17:33:18Z"
-passed: false
+passed: true
 ---
