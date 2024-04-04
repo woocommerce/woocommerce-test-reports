@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46170/api/i
 pr_number: 46170
 pr_title_encoded: "Fix+the+overlay+color+of+the+%22Featured+Category+Triple%22+pattern"
 pr_test_type: api
-last_published: "2024-04-03 13:13:30 +0000"
-commit_sha: 17779a03b35cee8fdc9fbfea2efb903752163d73
+last_published: "2024-04-04 06:50:37 +0000"
+commit_sha: d22a8c8aa43e77bd9746b0b8f3c60f3e947a4de3
 commit_message: ""
 branch_name: fix-featured-category-triple-overlay
-passed: false
+passed: true
 ---
