@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46220/e2e/i
 pr_number: 46220
 pr_title_encoded: "Remove+all+references+to+the+product+add+to+cart+block."
 pr_test_type: e2e
-last_published: "2024-04-04 16:06:46 +0000"
-commit_sha: 33440434f35802a9b5831fe8d80cc0b60622da40
+last_published: "2024-04-05 01:27:44 +0000"
+commit_sha: 4a2d266aadfcfd56ef4c6825195dbb4150c82616
 commit_message: ""
 branch_name: dev/remove-product-add-to-cart-block
-passed: false
+passed: true
 ---
