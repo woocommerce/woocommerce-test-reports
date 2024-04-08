@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46259/e2e/i
 pr_number: 46259
 pr_title_encoded: "Update+Woo.com+references+to+WooCommerce.com"
 pr_test_type: e2e
-last_published: "2024-04-08 10:02:45 +0000"
-commit_sha: 33f16a0e158d10d8fa8a8f8c5d18120895b27b92
+last_published: "2024-04-08 14:57:12 +0000"
+commit_sha: c0c8c7919ddcb9d5985f15afde9d47ef781b1707
 commit_message: ""
 branch_name: update/woo-com-to-woocommerce-com
 passed: true
