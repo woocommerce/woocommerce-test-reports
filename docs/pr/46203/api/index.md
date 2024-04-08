@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46203/api/i
 pr_number: 46203
 pr_title_encoded: "Add+launch+your+store+homescreen+status+tour"
 pr_test_type: api
-last_published: "2024-04-08 04:33:54 +0000"
-commit_sha: 733be4d4e52b4b56e5422fe84693aff147c0d2ad
+last_published: "2024-04-08 04:46:47 +0000"
+commit_sha: 4d2c094fdf698547341d71aa80be7824c28372da
 commit_message: ""
 branch_name: update/46070-lys-tour
 passed: true
