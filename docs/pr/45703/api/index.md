@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/45703/api/i
 pr_number: 45703
 pr_title_encoded: "%5BProduct+Collection%5D+POC%3A+Preview+Mode+using+HOC"
 pr_test_type: api
-last_published: "2024-04-03 11:10:32 +0000"
-commit_sha: 1e22a4e0507f156231301bf08c792524b425c230
+last_published: "2024-04-08 09:44:12 +0000"
+commit_sha: c1b0f3f8d5b46e5510e0c2e5f6e0e8cad7197467
 commit_message: ""
 branch_name: try/product-collection-is-preview-POC
 passed: true
