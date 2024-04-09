@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46360/e2e/i
 pr_number: 46360
 pr_title_encoded: "%5Btest+reporting%5D+Include+list+of+failed+tests+in+Slack+notifications"
 pr_test_type: e2e
-last_published: "2024-04-09 11:07:31 +0000"
-commit_sha: da1ca612c75137142673e73c98c7771f7aab9e20
+last_published: "2024-04-09 11:25:05 +0000"
+commit_sha: dc3f3e60c0e5797dc0604a5fb12304aca0660029
 commit_message: ""
 branch_name: ci/add-failed-tests-in-slack-notification
 passed: false
