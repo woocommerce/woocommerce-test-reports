@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46223/api/i
 pr_number: 46223
 pr_title_encoded: "Display+the+coming+soon+page+on+front-end+requests"
 pr_test_type: api
-last_published: "2024-04-05 13:04:40 +0000"
-commit_sha: 27dbee73cae70e1eeabf225ee31e7756dc918826
+last_published: "2024-04-09 14:11:13 +0000"
+commit_sha: 03fcbe6d4a933a28cd44d890429b990580013318
 commit_message: ""
 branch_name: add/coming-soon-routing
 passed: true
