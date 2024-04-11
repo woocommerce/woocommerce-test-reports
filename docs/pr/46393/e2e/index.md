@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46393/e2e/i
 pr_number: 46393
 pr_title_encoded: "Fix%2F46128+check+cached+order+id+before+get+order+return"
 pr_test_type: e2e
-last_published: "2024-04-09 19:21:53 +0000"
-commit_sha: 36024f0d9c8230997bb9f36be95fedd297f40fe7
+last_published: "2024-04-11 11:05:12 +0000"
+commit_sha: 12a2f18744b5b03a8b8bfd87df0453bdbc147b0d
 commit_message: ""
 branch_name: fix/46128-check-cached-order-id-before-get_order-return
-passed: false
+passed: true
 ---
