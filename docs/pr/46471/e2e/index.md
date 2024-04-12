@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46471/e2e/i
 pr_number: 46471
 pr_title_encoded: "%5Btest+workflows%5D+Move+metrics+job+to+ci.yml"
 pr_test_type: e2e
-last_published: "2024-04-11 15:13:24 +0000"
-commit_sha: 519f72c9f47b2ba289a493a554b768768f122130
+last_published: "2024-04-12 06:08:04 +0000"
+commit_sha: 9040b8a7ed6c4be1f9981dc5e42af8ed0731f41d
 commit_message: ""
 branch_name: test/move-metrics-tests-to-ci
 passed: true
