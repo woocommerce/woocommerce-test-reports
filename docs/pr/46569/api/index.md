@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46569/api/i
 pr_number: 46569
 pr_title_encoded: "%5BLYS%5D+Allow+login+pages+to+work+in+Coming+soon+mode"
 pr_test_type: api
-last_published: "2024-04-15 03:47:20 +0000"
-commit_sha: 1f9ac9ad704a466b48400cbc283dd972e1bff558
+last_published: "2024-04-15 08:13:10 +0000"
+commit_sha: 0d6f83e0d54ff6708e63d5d4947c6c65b2563f04
 commit_message: ""
 branch_name: fix/my-account-access-LYS
 passed: true
