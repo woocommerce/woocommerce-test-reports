@@ -2,10 +2,10 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46082/api/index.html
 pr_number: 46082
-pr_title_encoded: "Show+notice+to+connect+to+woo.com+in+plugin+update+message+for+unconnected+stores"
+pr_title_encoded: "Show+notice+to+connect+to+woocommerce.com+in+plugin+update+message+for+unconnected+stores"
 pr_test_type: api
-last_published: "2024-04-04 02:49:59 +0000"
-commit_sha: 57217c94fb52da990a587c8d7f33f8953e3c103e
+last_published: "2024-04-15 04:54:36 +0000"
+commit_sha: ea48a93107070e8f7e9c10bc9df726ae63bd818d
 commit_message: ""
 branch_name: add/plugin-check-use-public-api
 passed: true
