@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46387/api/i
 pr_number: 46387
 pr_title_encoded: "Update+%40woo.com+email+addresses+to+%40woocommerce.com"
 pr_test_type: api
-last_published: "2024-04-09 16:55:57 +0000"
-commit_sha: 7b5c00e837974357ac4a6bd6f9e76b78489a170a
+last_published: "2024-04-15 12:55:48 +0000"
+commit_sha: 3f70eab268460468051befe57f620d5c00b9d963
 commit_message: ""
 branch_name: update/woo-com-email-addresses
 passed: true
