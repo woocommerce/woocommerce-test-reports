@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46479/api/i
 pr_number: 46479
 pr_title_encoded: "Add+autogeneration+of+block+list+reference+documentation"
 pr_test_type: api
-last_published: "2024-04-18 07:10:19 +0000"
-commit_sha: 3c0268e874ed24679ebeb72e594fd860dd96d4a1
+last_published: "2024-04-18 07:34:23 +0000"
+commit_sha: fa20c9b253cf76e522ca3b08c2e5ee831147fb89
 commit_message: ""
 branch_name: blocks/reference-documentation
 passed: true
