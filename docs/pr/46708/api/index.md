@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46708/api/i
 pr_number: 46708
 pr_title_encoded: "Move+LYS+coming+soon+initialization+to+core+profiler+flow"
 pr_test_type: api
-last_published: "2024-04-18 05:01:30 +0000"
-commit_sha: fe22576f3d9d15f942d7a0aae53ab6ed6cfae580
+last_published: "2024-04-18 05:13:42 +0000"
+commit_sha: a3f96127ca93c5475ec4e168108927432039ae4a
 commit_message: ""
 branch_name: add/core-profiler-completion
 passed: true
