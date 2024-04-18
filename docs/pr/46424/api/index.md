@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46424/api/i
 pr_number: 46424
 pr_title_encoded: "Display+%22Origin%22+column+in+Orders+table+in+Orders+Analytics"
 pr_test_type: api
-last_published: "2024-04-18 13:50:13 +0000"
-commit_sha: c202265cabb4efcc5dc6fec48f235545da54abd4
+last_published: "2024-04-18 16:06:20 +0000"
+commit_sha: 7a953cae29ce3490b7641f735981c64c35fcf892
 commit_message: ""
 branch_name: add/orders-analytics-channel-column
 passed: true
