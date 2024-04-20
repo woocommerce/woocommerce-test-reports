@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46125/e2e/i
 pr_number: 46125
 pr_title_encoded: "Block+E2E%3A+Eliminate+side+effects+through+improved+test+isolation"
 pr_test_type: e2e
-last_published: "2024-04-17 19:42:01 +0000"
-commit_sha: 7766498eeca74e01ca74028a9cc6703a6321fd40
+last_published: "2024-04-20 14:15:59 +0000"
+commit_sha: 28c0ab90f62f0d8ea7103b1dec304f8ecadfb53c
 commit_message: ""
 branch_name: try/e2e-db-reset
-passed: true
+passed: false
 ---
