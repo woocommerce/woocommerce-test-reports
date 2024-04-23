@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46832/e2e/i
 pr_number: 46832
 pr_title_encoded: "Enable+%22Custom+Fields%22+feature+flag+for+by+default"
 pr_test_type: e2e
-last_published: "2024-04-23 14:53:38 +0000"
-commit_sha: 9a777f784f7c67162938ec83f97fd996c0e06c6e
+last_published: "2024-04-23 15:17:47 +0000"
+commit_sha: a5f061e7fdcb7ab5e155bf0815d4f01031a86fbc
 commit_message: ""
 branch_name: dev/46829_remove_custom_fields_feature_flag
 passed: true
