@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46854/e2e/i
 pr_number: 46854
 pr_title_encoded: "%5BLYS%5D+Comin+soon+block+-+Refactor+and+hide+Styles+block+on+Store+Only"
 pr_test_type: e2e
-last_published: "2024-04-24 01:34:01 +0000"
-commit_sha: d8ccc817943ea1ae67315f2729bdb8800f7871af
+last_published: "2024-04-24 02:53:17 +0000"
+commit_sha: c5496afb44ccef8a72f41411256091673781c093
 commit_message: ""
 branch_name: update/LYS-coming-soon-block-cleanup
 passed: true
