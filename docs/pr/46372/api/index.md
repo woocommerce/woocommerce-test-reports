@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46372/api/i
 pr_number: 46372
 pr_title_encoded: "Make+templates+fallback+methods+template-agnostic"
 pr_test_type: api
-last_published: "2024-04-24 14:11:38 +0000"
-commit_sha: 7e43366da9afaea2448b205dc038524460d175f5
+last_published: "2024-04-25 07:49:03 +0000"
+commit_sha: 3c9dac85d34c98a565fe82b02b3f4dca91d0c5c8
 commit_message: ""
 branch_name: fix/agnostic-fallback-methods
 passed: true
