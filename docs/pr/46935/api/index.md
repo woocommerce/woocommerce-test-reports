@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46935/api/i
 pr_number: 46935
 pr_title_encoded: "Block+Hooks%3A+Revert+opening+up+hooked+blocks+to+all+block+themes"
 pr_test_type: api
-last_published: "2024-04-25 18:36:10 +0000"
-commit_sha: af1426cc954e77834fa405726c12c28712ee700f
+last_published: "2024-04-25 21:13:28 +0000"
+commit_sha: 2a1b5eb81ff088b347ae6e7ecc9628c1b92f02c5
 commit_message: ""
 branch_name: revert/hooked_blocks_on_all_block_themes
 passed: true
