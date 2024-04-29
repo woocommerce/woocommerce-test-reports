@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47003/api/i
 pr_number: 47003
 pr_title_encoded: "Tracks+event+for+WooCommerce.com+connect+notice"
 pr_test_type: api
-last_published: "2024-04-28 08:54:21 +0000"
-commit_sha: 239ce7ff34c2d7f9c1132f4abb0c7a4b352e6e46
+last_published: "2024-04-29 04:04:01 +0000"
+commit_sha: dc2c0e390a08bea5eb049ba89466a27489e06043
 commit_message: ""
 branch_name: add/tracks-woo-connect-notice
 passed: true
