@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46083/e2e/i
 pr_number: 46083
 pr_title_encoded: "Block-based+checkout+-+Shipping+section+changes"
 pr_test_type: e2e
-last_published: "2024-04-29 07:55:07 +0000"
-commit_sha: 81b99b97514d8e108178ec41520d68c0a85810d0
+last_published: "2024-04-29 10:02:45 +0000"
+commit_sha: a684548e09446e6c3b5368439dcbce2372d34b68
 commit_message: ""
 branch_name: update/46013-shipping-section-changes
 passed: true
