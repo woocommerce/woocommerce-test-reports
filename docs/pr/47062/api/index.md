@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47062/api/i
 pr_number: 47062
 pr_title_encoded: "Add+phone+number+to+my+account+shipping+address."
 pr_test_type: api
-last_published: "2024-04-30 16:28:00 +0000"
-commit_sha: 3e4458490069d607f708e5de76913c4081dcd844
+last_published: "2024-05-01 14:46:23 +0000"
+commit_sha: c91f5f35b29ec7cf7197384068990fc72e31f9aa
 commit_message: ""
 branch_name: add/phone-number-to-my-account-shipping-address
 passed: true
