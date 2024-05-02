@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46938/api/i
 pr_number: 46938
 pr_title_encoded: "Add+%27placeholder%27+attribute+to+taxonomy+block+and+add+%27placeholder%27+a%E2%80%A6"
 pr_test_type: api
-last_published: "2024-04-25 19:34:29 +0000"
-commit_sha: 36bb436ef905fc9b268c89241ef251148b9d15f9
+last_published: "2024-05-02 18:53:11 +0000"
+commit_sha: 4cbccbcb2cec5d576a8ab24e135c2154d7ff6d55
 commit_message: ""
 branch_name: add/placeholder-taxonomy
 passed: true
