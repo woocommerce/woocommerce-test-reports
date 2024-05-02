@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46831/e2e/i
 pr_number: 46831
 pr_title_encoded: "Attach+WooCommerce+templates+to+the+theme"
 pr_test_type: e2e
-last_published: "2024-04-25 15:38:50 +0000"
-commit_sha: 7155a5a8ef4f28b3353a5b21697b8464bf8aef45
+last_published: "2024-05-02 10:22:57 +0000"
+commit_sha: b68f85834fc519b6e89097fa730b9ef2bbb648db
 commit_message: ""
 branch_name: fix/42181-attach-woocommerce-templates-to-theme
 passed: false
