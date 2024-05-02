@@ -1,0 +1,12 @@
+---
+layout: redirect
+redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47105/e2e/index.html
+pr_number: 47105
+pr_title_encoded: "Update+cart%2Fcheckout+usage+of+the+%40wordpress%2Fcomponents+Slot+Fill"
+pr_test_type: e2e
+last_published: "2024-05-02 10:00:17 +0000"
+commit_sha: db6d13bf0d197b31623cef35e4cf078249a37378
+commit_message: ""
+branch_name: dev/update-slotfill
+passed: false
+---
