@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47111/e2e/i
 pr_number: 47111
 pr_title_encoded: "Try%3A+Register+variants+of+generic+product+editor+blocks."
 pr_test_type: e2e
-last_published: "2024-05-02 12:45:36 +0000"
-commit_sha: eb5b54a89a73f51de175400be9a4d92626edf598
+last_published: "2024-05-02 13:14:43 +0000"
+commit_sha: e7ea13957aa62ca820ea882b358bda03b9ac4635
 commit_message: ""
 branch_name: try/registering-variant-product-editor-blocks
 passed: false
