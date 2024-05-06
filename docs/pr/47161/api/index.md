@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47161/api/i
 pr_number: 47161
 pr_title_encoded: "%5Bwip%5D+Use+syncpack+to+update+pnpm+to+version+9"
 pr_test_type: api
-last_published: "2024-05-06 04:22:50 +0000"
-commit_sha: f4a6af06e29d01233d1972f73b1b76678ba85775
+last_published: "2024-05-06 09:10:07 +0000"
+commit_sha: bd4c87e3e5143a3e8e76aa055c3fa615d77d107e
 commit_message: ""
 branch_name: dev/update-pnpm-9
 passed: false
