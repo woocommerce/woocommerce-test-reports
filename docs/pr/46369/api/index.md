@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46369/api/i
 pr_number: 46369
 pr_title_encoded: "Product+Collection%3A+Implement+Preview+Mode"
 pr_test_type: api
-last_published: "2024-05-07 11:57:03 +0000"
-commit_sha: 96242f73261825c73fb5f5585f1c09e1f3ee0747
+last_published: "2024-05-07 13:59:26 +0000"
+commit_sha: f1491508aa0a410de4ab882607c80ec9aea51fe5
 commit_message: ""
 branch_name: add/46368-product-collection-productionize-the-preview-mode-poc
 passed: true
