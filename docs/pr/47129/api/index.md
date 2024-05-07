@@ -2,11 +2,11 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47129/api/index.html
 pr_number: 47129
-pr_title_encoded: "Use+%40automattic%2Ftour-kit%401.1.3"
+pr_title_encoded: "Update+%40automattic%2Ftour-kit+to+1.1.3+and+%40automattic%2Fcomponents+to+2.1.1"
 pr_test_type: api
-last_published: "2024-05-07 03:08:04 +0000"
-commit_sha: 647df19fdfaca1508e24c273b8a25c26692f8ee9
+last_published: "2024-05-07 03:58:10 +0000"
+commit_sha: 9e151a219eb12abf7f65fa325fd2f0d4dfdd165a
 commit_message: ""
 branch_name: update/bump-a8c-tour-kit-version
-passed: false
+passed: true
 ---
