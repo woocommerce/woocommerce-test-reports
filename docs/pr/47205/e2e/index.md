@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47205/e2e/i
 pr_number: 47205
 pr_title_encoded: "Update+when+PayPal+Standard+is+loaded+to+further+reduce+new+store+using+this+legacy+payment+method"
 pr_test_type: e2e
-last_published: "2024-05-07 06:37:00 +0000"
-commit_sha: 4deb3f0af509cd79949b4ac4dda9b871d44e5fdb
+last_published: "2024-05-07 07:35:18 +0000"
+commit_sha: 3fc4a70d3fe1cd1c9bf1abdaa0f42e9e6a7411a2
 commit_message: ""
 branch_name: restrict_paypal_standard
 passed: true
