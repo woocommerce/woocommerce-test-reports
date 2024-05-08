@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47276/e2e/i
 pr_number: 47276
 pr_title_encoded: "Remove+old+in-app+marketplace+pages+and+redirect+to+new+in-app+section"
 pr_test_type: e2e
-last_published: "2024-05-08 14:40:44 +0000"
-commit_sha: aa1d60feaa970920853f2193fad8bbe286ded680
+last_published: "2024-05-08 15:30:55 +0000"
+commit_sha: 870cfb28d65f592788472c72c3b8c9f010dcbd79
 commit_message: ""
 branch_name: update/19871-redirect-old-marketplace-connect-url
-passed: false
+passed: true
 ---
