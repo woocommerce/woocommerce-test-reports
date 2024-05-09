@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47235/e2e/i
 pr_number: 47235
 pr_title_encoded: "Use+wp_plugin_dependencies_slug+in+PluginVersionRuleProcessor"
 pr_test_type: e2e
-last_published: "2024-05-08 18:48:54 +0000"
-commit_sha: babc511f7bafa006f6e1acd8b33c55e818f83007
+last_published: "2024-05-09 21:23:43 +0000"
+commit_sha: 15cbe715dc7b65e33d50874ad0f563d636265a8c
 commit_message: ""
 branch_name: update/47187-use-wp_plugin_dependencies_slug
 passed: true
