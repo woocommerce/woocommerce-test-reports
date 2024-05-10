@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47288/api/i
 pr_number: 47288
 pr_title_encoded: "Product+Block+Editor%3A+use+FormTokenField+component+for+the+attribute+terms"
 pr_test_type: api
-last_published: "2024-05-10 12:47:00 +0000"
-commit_sha: 40b1af24ac52d0810aa2272c8f7300a9f270fe6a
+last_published: "2024-05-10 14:13:00 +0000"
+commit_sha: da4b6ff5cb0a7989df8719fb1f722b6b98f31208
 commit_message: ""
 branch_name: update/product-editor-use-token-field-for-terms
 passed: true
