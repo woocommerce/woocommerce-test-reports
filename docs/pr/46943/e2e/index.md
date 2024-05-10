@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46943/e2e/i
 pr_number: 46943
 pr_title_encoded: "Replace+%60%40wordpress%2Fcomponents%60+Combobox+with+Ariakit+in+Blocks+components"
 pr_test_type: e2e
-last_published: "2024-05-10 09:45:27 +0000"
-commit_sha: 769384c78352ae88283eafd95920971aaedfc280
+last_published: "2024-05-10 11:22:20 +0000"
+commit_sha: 0e3626e7979638d22a8486eff5b2ef492e419338
 commit_message: ""
 branch_name: dev/introduce-ariakit-combobox
 passed: false
