@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46672/api/i
 pr_number: 46672
 pr_title_encoded: "Blocks%3A+Delete+Jest-Puppeteer+infrastructure"
 pr_test_type: api
-last_published: "2024-04-17 09:24:59 +0000"
-commit_sha: bf463f879c858223a8052fae8151320afa3efbff
+last_published: "2024-05-10 13:37:36 +0000"
+commit_sha: 0874e38ec65315a5c5b00ead21af6ac542e58548
 commit_message: ""
 branch_name: fix/delete-jest-infrastructure
 passed: true
