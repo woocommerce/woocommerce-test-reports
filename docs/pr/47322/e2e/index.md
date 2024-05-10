@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47322/e2e/i
 pr_number: 47322
 pr_title_encoded: "CYS%3A+allow+to+the+user+to+move+the+pattern"
 pr_test_type: e2e
-last_published: "2024-05-09 14:47:59 +0000"
-commit_sha: a7be0bc27513c6cf8ec318dfbc1114315d6c57d8
+last_published: "2024-05-10 09:52:02 +0000"
+commit_sha: 44ab0022da08a1be21cbdaf2cc2008a92c62bc15
 commit_message: ""
 branch_name: poc/move-patterns
 passed: true
