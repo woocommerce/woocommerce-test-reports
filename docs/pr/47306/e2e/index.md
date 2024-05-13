@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47306/e2e/i
 pr_number: 47306
 pr_title_encoded: "Add+patterns+from+ptk"
 pr_test_type: e2e
-last_published: "2024-05-10 15:30:47 +0000"
-commit_sha: dacba3cd878c59dce1b5be0d75f57ae211ba1456
+last_published: "2024-05-13 15:01:27 +0000"
+commit_sha: 7a6e5cc689f3c624af6cd9356163861152921911
 commit_message: ""
 branch_name: add-patterns-from-ptk
-passed: false
+passed: true
 ---
