@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47228/api/i
 pr_number: 47228
 pr_title_encoded: "Blocks+E2E%3A+Align+linter+rules+with+Gutenberg"
 pr_test_type: api
-last_published: "2024-05-13 11:05:46 +0000"
-commit_sha: 18f5d26f244da4dce91d590c8db76be6d505c6b1
+last_published: "2024-05-13 13:18:15 +0000"
+commit_sha: 51c1d818c5e87a4d5ad68ec319cccebca6381611
 commit_message: ""
 branch_name: align-e2e-eslint-config-with-gutenberg
 passed: true
