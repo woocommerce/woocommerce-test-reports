@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47369/api/i
 pr_number: 47369
 pr_title_encoded: "reset+state+and+postcode+if+it%27s+not+valid+for+the+current+country"
 pr_test_type: api
-last_published: "2024-05-13 13:47:17 +0000"
-commit_sha: fb0cf394a9a8475ddc2467e4fdbae90f2d4b1895
+last_published: "2024-05-13 14:34:27 +0000"
+commit_sha: 6996b6b7f70aa0926bc613756228644feeceeb39
 commit_message: ""
 branch_name: fix/state-flickring-when-switching-countries
 passed: true
