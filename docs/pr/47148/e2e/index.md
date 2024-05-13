@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47148/e2e/i
 pr_number: 47148
 pr_title_encoded: "Try%3A+Validate+product+data+with+JSON+schema+document"
 pr_test_type: e2e
-last_published: "2024-05-03 15:54:24 +0000"
-commit_sha: cd70fa611ccabbd23826e4ccd140f233e7e82f6d
+last_published: "2024-05-13 15:20:08 +0000"
+commit_sha: 2df9628a052b39e39eecab46c8fc2867d1794589
 commit_message: ""
 branch_name: try/json-schema-validation
 passed: false
