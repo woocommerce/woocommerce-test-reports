@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47306/e2e/i
 pr_number: 47306
 pr_title_encoded: "%5BCYS%5D+Patterns+Migration%3A+Update+the+registration+of+patterns+within+WooCommerce%2C+ensuring+they+are+fetched+from+the+relevant+PTK+categories"
 pr_test_type: e2e
-last_published: "2024-05-14 12:37:28 +0000"
-commit_sha: 915f9ededf9426ac4a9b50d10d2c802031d167d3
+last_published: "2024-05-14 13:10:12 +0000"
+commit_sha: 00ffb743b8f2a4567f5b627a71af83dada862b4e
 commit_message: ""
 branch_name: add-patterns-from-ptk
-passed: true
+passed: false
 ---
