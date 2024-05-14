@@ -2,10 +2,10 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47383/api/index.html
 pr_number: 47383
-pr_title_encoded: "%5BWIP%5D+Update+blocks+JS+tests+to+React+18"
+pr_title_encoded: "Update+blocks+JS+tests+to+React+18"
 pr_test_type: api
-last_published: "2024-05-14 05:05:52 +0000"
-commit_sha: 9ce3f6d24108870e3fc7b2cb99bca69a9e3aa12d
+last_published: "2024-05-14 07:43:57 +0000"
+commit_sha: 15779bcc47ec499faca6f2674fc639eef29bfd47
 commit_message: ""
 branch_name: dev/update-react-18-tests
 passed: true
