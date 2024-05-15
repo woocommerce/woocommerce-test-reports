@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47475/e2e/i
 pr_number: 47475
 pr_title_encoded: "remove+the+generic+incompatible+notice+from+Checkout+block."
 pr_test_type: e2e
-last_published: "2024-05-14 16:10:01 +0000"
-commit_sha: c4e6f99f56c097b418c1a7a1c6d6f955ff31d1e6
+last_published: "2024-05-15 11:11:09 +0000"
+commit_sha: 00244a22e7a0b53cf1e424151a3c2cda17970453
 commit_message: ""
 branch_name: remove/incompatible-notice-checkout
 passed: true
