@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47377/api/i
 pr_number: 47377
 pr_title_encoded: "REST+API%3A+Add+variation+product+type+to+response"
 pr_test_type: api
-last_published: "2024-05-13 15:29:39 +0000"
-commit_sha: b1a9df1ecac7805d9332d106d35a1dca83796212
+last_published: "2024-05-15 20:51:54 +0000"
+commit_sha: c198d1ce87ff8917f4a31c24209e95c6e3daab43
 commit_message: ""
 branch_name: try/rest-api-product-variation-type
 passed: true
