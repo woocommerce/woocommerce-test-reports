@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47518/api/i
 pr_number: 47518
 pr_title_encoded: "Product+Block+Editor%3A+improve+the+process+when+creating+a+new+attribute"
 pr_test_type: api
-last_published: "2024-05-16 07:46:29 +0000"
-commit_sha: a2a23e74c141b2db163dbaba4e9994320e6077d7
+last_published: "2024-05-16 07:56:43 +0000"
+commit_sha: a220aa4bcfa89e6d7107c38a3faef0ba38242f09
 commit_message: ""
 branch_name: update/product-editor-add-new-attribute-iteration
 passed: true
