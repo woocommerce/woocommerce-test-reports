@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47425/api/i
 pr_number: 47425
 pr_title_encoded: "Enhancement+editor+loading+speed"
 pr_test_type: api
-last_published: "2024-05-16 12:42:12 +0000"
-commit_sha: cf5e495ab07498a1086cec0da07d33d139e5e60e
+last_published: "2024-05-16 16:03:12 +0000"
+commit_sha: 753b83cc6e504c5871220333058f948e664b2af6
 commit_message: ""
 branch_name: enhancement/46491
 passed: true
