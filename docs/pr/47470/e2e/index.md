@@ -4,7 +4,7 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47470/e2e/i
 pr_number: 47470
 pr_title_encoded: "Fix+a11y+issues+in+Cart%2FCheckout"
 pr_test_type: e2e
-last_published: "2024-05-14 16:48:22 +0000"
+last_published: "2024-05-16 09:36:40 +0000"
 commit_sha: 6c3b253f7b26e9a97105f69a6771e8ac42fdeb07
 commit_message: ""
 branch_name: add/coupon-form-use-button
