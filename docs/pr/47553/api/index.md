@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47553/api/i
 pr_number: 47553
 pr_title_encoded: "Make+shipping+total+in+Cart%2FCheckout+block+order+summaries+show+FREE+if+shipping+price+is+0"
 pr_test_type: api
-last_published: "2024-05-16 15:28:14 +0000"
-commit_sha: d77325b09c78eb039ddb8d6a381ea91f4046f049
+last_published: "2024-05-16 16:17:45 +0000"
+commit_sha: fd91fc6261f8e1014b30d6ae7e2c9fc2a261b974
 commit_message: ""
 branch_name: update/free-shipping-sidebar
 passed: true
