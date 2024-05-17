@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47529/api/i
 pr_number: 47529
 pr_title_encoded: "Remove+title+from+checkout+page"
 pr_test_type: api
-last_published: "2024-05-17 07:07:34 +0000"
-commit_sha: be003f8158a0eec1a7efb654459471bb8b0d0847
+last_published: "2024-05-17 08:00:26 +0000"
+commit_sha: d8ade1d987c69900f42e7b7643ededcc6e482c9d
 commit_message: ""
 branch_name: update/47509-remove-checkout-page-title
 passed: true
