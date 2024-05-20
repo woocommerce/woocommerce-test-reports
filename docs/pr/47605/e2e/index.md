@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47605/e2e/i
 pr_number: 47605
 pr_title_encoded: "Update+Core+Profiler+Industries"
 pr_test_type: e2e
-last_published: "2024-05-20 06:42:41 +0000"
-commit_sha: 0f013076e9ed25c4a9c44110f28da0d40d72301c
+last_published: "2024-05-20 08:21:16 +0000"
+commit_sha: b3a37022d962a285b5fb133271830aa3f9221a51
 commit_message: ""
 branch_name: update/core-profiler-industries
 passed: true
