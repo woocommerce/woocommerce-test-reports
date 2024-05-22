@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46466/api/i
 pr_number: 46466
 pr_title_encoded: "%5BProduct+Collection%5D+Track+block+instances+and+feature+usage"
 pr_test_type: api
-last_published: "2024-05-21 20:44:48 +0000"
-commit_sha: e661494b250984daebe32de3529148443af5a8cd
+last_published: "2024-05-22 15:50:12 +0000"
+commit_sha: cbefe769caea9d7c5992cfbf09e1fe7c25ebadb7
 commit_message: ""
 branch_name: add/collection-instances-telemetry
 passed: true
