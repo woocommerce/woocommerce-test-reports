@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47683/e2e/i
 pr_number: 47683
 pr_title_encoded: "Correctly+attribute+focus+back+when+opening+the+mini+cart+several+times"
 pr_test_type: e2e
-last_published: "2024-05-21 19:05:23 +0000"
-commit_sha: d38e699b5e5a19893d6568116cc33f1519a46f35
+last_published: "2024-05-22 10:29:03 +0000"
+commit_sha: 54df256b6776c51c6ed79675be39afc5eff1654e
 commit_message: ""
 branch_name: fix/focus-on-mini-cart-stuck
 passed: true
