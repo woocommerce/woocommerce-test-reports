@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47680/api/i
 pr_number: 47680
 pr_title_encoded: "only+make+order+summary+sticky+when+it%27s+not+longer+than+view"
 pr_test_type: api
-last_published: "2024-05-22 16:08:37 +0000"
-commit_sha: 54b6e1e956d46f1d615a51f9c254c95d6e4164de
+last_published: "2024-05-22 20:19:57 +0000"
+commit_sha: 032e400fad09cee23fa09227092e7b17018f0d15
 commit_message: ""
 branch_name: fix/only-sticky-summary-if-smaller-than-screen
 passed: true
