@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/44931/api/i
 pr_number: 44931
 pr_title_encoded: "Rename+classic+template+blocks+to+avoid+confusion"
 pr_test_type: api
-last_published: "2024-05-21 06:40:46 +0000"
-commit_sha: 95c490f20af05e89677032bd7aea807767ec4dc5
+last_published: "2024-05-22 07:31:40 +0000"
+commit_sha: 1dadfcbcdb9f2268c15aad2e569be877085d58f4
 commit_message: ""
 branch_name: add/rename-classic-template-blocks
 passed: true
