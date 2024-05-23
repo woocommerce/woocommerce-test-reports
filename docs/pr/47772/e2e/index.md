@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47772/e2e/i
 pr_number: 47772
 pr_title_encoded: "Un-skip+store+search+and+core+profiler+tests"
 pr_test_type: e2e
-last_published: "2024-05-23 17:15:49 +0000"
-commit_sha: 8af49ed80b9b6c59cf09ae6f41baadde2609c64f
+last_published: "2024-05-23 18:38:38 +0000"
+commit_sha: ff3f79dfe4cfd2c8c243c4061e92f202d2a18d18
 commit_message: ""
 branch_name: e2e/fix/unskip-failing-tests
-passed: false
+passed: true
 ---
