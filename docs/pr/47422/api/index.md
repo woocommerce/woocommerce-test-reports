@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47422/api/i
 pr_number: 47422
 pr_title_encoded: "Prevent+%22woocommerce_new_order%22+from+being+triggered+on+orders+with+%22checkout-draft%22+status"
 pr_test_type: api
-last_published: "2024-05-17 17:47:24 +0000"
-commit_sha: 3496d71dc093700d6d6b6e0b2a8121537374bffc
+last_published: "2024-05-23 11:31:13 +0000"
+commit_sha: 107c4c8ff43da2af4f2d62d3130efdba49e4a5b5
 commit_message: ""
 branch_name: 45145-woocommerce_new_order-triggers-on-checkout-visiting
 passed: true
