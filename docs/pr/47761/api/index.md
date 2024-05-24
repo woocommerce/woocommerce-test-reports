@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47761/api/i
 pr_number: 47761
 pr_title_encoded: "Fix+two+products+being+added+to+cart+when+Geolocate+%28with+page+caching+support%29+was+enabled+and+AJAX+add+to+cart+buttons+disabled"
 pr_test_type: api
-last_published: "2024-05-23 16:24:16 +0000"
-commit_sha: 8410ee17a1aa0ac53d36270eb0961735b00b6388
+last_published: "2024-05-24 08:03:14 +0000"
+commit_sha: e1e28ecf0cec8658d79cddeb97fdfd4bb0dd7826
 commit_message: ""
 branch_name: fix/33077-fix-2-products-added-to-cart-geolocate-with-caching
 passed: true
