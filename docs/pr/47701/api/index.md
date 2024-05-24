@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47701/api/i
 pr_number: 47701
 pr_title_encoded: "Allow+experimental+blocks+to+be+enabled+via+the+FeaturesController+as+part+of+removing+WC_BLOCKS_PHASE"
 pr_test_type: api
-last_published: "2024-05-24 02:42:05 +0000"
-commit_sha: e281b3f454e4768b2c11874b9251accb2eeccf19
+last_published: "2024-05-24 05:49:03 +0000"
+commit_sha: 09d513868c27d921968674a419cf983bad07f91f
 commit_message: ""
 branch_name: dev/remove-block-phase-experimental
 passed: true
