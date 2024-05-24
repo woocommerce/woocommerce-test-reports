@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47814/api/i
 pr_number: 47814
 pr_title_encoded: "Remove+the+new+old+experience"
 pr_test_type: api
-last_published: "2024-05-24 14:54:18 +0000"
-commit_sha: bdfebae0ff1a47ca70f282a130b3e99c166611ff
+last_published: "2024-05-24 15:48:51 +0000"
+commit_sha: 0b8412d44f0472f865026f15fd70b7c1c7d9544d
 commit_message: ""
 branch_name: enhancement/47804
 passed: true
