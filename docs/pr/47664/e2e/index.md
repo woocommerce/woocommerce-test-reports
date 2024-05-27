@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47664/e2e/i
 pr_number: 47664
 pr_title_encoded: "Add+To+Cart+Form%3A+Improve+the+default+style+and+add+the+%60Stepper%60+style"
 pr_test_type: e2e
-last_published: "2024-05-27 07:49:05 +0000"
-commit_sha: bf86c49e905120b922b377fc06285768e88e1361
+last_published: "2024-05-27 13:25:58 +0000"
+commit_sha: cfdf847f22518e1232bce879db74739f30ac44ff
 commit_message: ""
 branch_name: 42299-improve-styling-for-quantity-selector-and-variation-single-product-template
 passed: true
