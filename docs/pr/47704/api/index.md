@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47704/api/i
 pr_number: 47704
 pr_title_encoded: "Load+controllers+only+when+needed+for+performance."
 pr_test_type: api
-last_published: "2024-05-27 10:53:18 +0000"
-commit_sha: d416f8faccb9cddbc71e486a3f084c30eaca22d1
+last_published: "2024-05-28 09:44:47 +0000"
+commit_sha: 7e4176f187bdc6f241af31ae17c424783a33c357
 commit_message: ""
 branch_name: fix/44359
 passed: true
