@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47880/api/i
 pr_number: 47880
 pr_title_encoded: "%5BWIP%5D+Introduce+asset+size+check+action+to+CI"
 pr_test_type: api
-last_published: "2024-05-28 14:32:11 +0000"
-commit_sha: e88abd6d23ad5baa55c0011ab20726b8f7e54976
+last_published: "2024-05-28 14:43:49 +0000"
+commit_sha: 332ea66d12b1ceefdc21d925f7583b0b7ff74182
 commit_message: ""
 branch_name: dev/introduce-bundle-size-check
 passed: true
