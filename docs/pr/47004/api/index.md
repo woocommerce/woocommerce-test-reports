@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47004/api/i
 pr_number: 47004
 pr_title_encoded: "Show+notice+for+expired+and+expiring+subscriptions+in+settings+and+in-app+extensions+page"
 pr_test_type: api
-last_published: "2024-05-27 07:27:55 +0000"
-commit_sha: 96e93dc4394cf9811f599a05ae6e91b567bf1066
+last_published: "2024-05-28 05:07:05 +0000"
+commit_sha: 211d2b06dca2e0cb50db3bf3d41195c3cb8ee71b
 commit_message: ""
 branch_name: add-woo-admin-notice-for-expire-sub
 passed: true
