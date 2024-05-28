@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47912/api/i
 pr_number: 47912
 pr_title_encoded: "Do+not+update+the+%60last_access%60+field+unnecessarily."
 pr_test_type: api
-last_published: "2024-05-28 20:10:52 +0000"
-commit_sha: 9e7372c9aee42301155574844f12a2d72972e3b7
+last_published: "2024-05-28 20:44:55 +0000"
+commit_sha: 0fe2336baaa5e70ba1b47094348fec2517467281
 commit_message: ""
 branch_name: fix/31511-rest-api-last-access
 passed: true
