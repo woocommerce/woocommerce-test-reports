@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47832/e2e/i
 pr_number: 47832
 pr_title_encoded: "LYS+-+Delete+WooPay+test+orders+on+launch+"
 pr_test_type: e2e
-last_published: "2024-05-27 23:58:42 +0000"
-commit_sha: 3c1e60864a5673875b9a4d3bca23ef6cf70d124d
+last_published: "2024-05-28 00:29:58 +0000"
+commit_sha: 1ff418958eede22f1d66ce9e1c8256f49e509058
 commit_message: ""
 branch_name: add/47769-delete-test-orders-in-lys
-passed: false
+passed: true
 ---
