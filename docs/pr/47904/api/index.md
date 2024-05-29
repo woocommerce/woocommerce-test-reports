@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47904/api/i
 pr_number: 47904
 pr_title_encoded: "Blocks+E2E%3A+Use+layout-based+selectors+in+Thumbnails+block+tests"
 pr_test_type: api
-last_published: "2024-05-29 10:11:49 +0000"
-commit_sha: b82924b22c0d716dfe4f5645775ca2a230a9ff64
+last_published: "2024-05-29 10:22:02 +0000"
+commit_sha: 7c1b1231717e293cc5dae1e767207ce23ab78c0b
 commit_message: ""
 branch_name: refactor/e2e-thumbnails-block-tests
 passed: true
