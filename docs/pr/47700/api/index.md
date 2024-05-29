@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47700/api/i
 pr_number: 47700
 pr_title_encoded: "Optimize+the+regeneration+of+the+product+attributes+lookup+table"
 pr_test_type: api
-last_published: "2024-05-28 14:30:14 +0000"
-commit_sha: aa008ce79b0bd05b1128672d5742a556380df8a0
+last_published: "2024-05-29 15:18:37 +0000"
+commit_sha: de3d102fde4c011b3803413e67e2aafd9640ffbc
 commit_message: ""
 branch_name: optimize-regeneration-of-product-attributes-lookup-table
 passed: false
