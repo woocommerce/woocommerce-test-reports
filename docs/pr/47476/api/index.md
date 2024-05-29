@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47476/api/i
 pr_number: 47476
 pr_title_encoded: "Ensuring+only+single+product+creation+with+unique+SKU+for+concurrent+requests"
 pr_test_type: api
-last_published: "2024-05-29 12:07:43 +0000"
-commit_sha: 7c3cba6b6a197b96e1383dc11220cdfcaa2be2d4
+last_published: "2024-05-29 13:09:22 +0000"
+commit_sha: f5d8c0ee322281c29632ccd40db67158e60b8840
 commit_message: ""
 branch_name: sku-check-before-product-creation
 passed: true
