@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47551/e2e/i
 pr_number: 47551
 pr_title_encoded: "%5BCYS%5D+Patterns+Migration%3A+Performance+-+ensure+the+initial+request+to+fetch+patterns+from+the+PTK+is+async"
 pr_test_type: e2e
-last_published: "2024-05-28 13:55:33 +0000"
-commit_sha: c92642db692ed1dd51451efae92e01758393a26a
+last_published: "2024-05-29 09:18:21 +0000"
+commit_sha: cf3a0b60160df893793c60b36b3f29227fbe444b
 commit_message: ""
 branch_name: 47403-async-ptk-request
-passed: true
+passed: false
 ---
