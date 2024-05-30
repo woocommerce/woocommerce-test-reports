@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47994/api/i
 pr_number: 47994
 pr_title_encoded: "Fix%3A+%22On+Sale%22+collection+isn%27t+displaying+on+Editor+side"
 pr_test_type: api
-last_published: "2024-05-30 13:12:15 +0000"
-commit_sha: 8373d0404335b7c80cc76c1f02a92e841f7999ab
+last_published: "2024-05-30 14:28:26 +0000"
+commit_sha: 502364d84bf53df2c100e9b8e391b58b4c4c792b
 commit_message: ""
 branch_name: fix/47868-product-collection-block-does-not-display-properly-when-editing-template-2
 passed: true
