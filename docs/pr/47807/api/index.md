@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47807/api/i
 pr_number: 47807
 pr_title_encoded: "%5BWIP%5D+Remove+all+usage+of+WOOCOMMERCE_BLOCKS_PHASE+and+introduce+BUNDLE_EXPERIMENTAL_BLOCKS"
 pr_test_type: api
-last_published: "2024-05-30 10:16:26 +0000"
-commit_sha: d5771a2138658e28ffc178a2c676e2c5211f003a
+last_published: "2024-05-30 11:52:09 +0000"
+commit_sha: 97dda22d41d74e141527dc9a73ccb17923677e5c
 commit_message: ""
 branch_name: dev/remove-wc-blocks-phase-env
 passed: true
