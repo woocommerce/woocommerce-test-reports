@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47953/api/i
 pr_number: 47953
 pr_title_encoded: "%5BEnhancement%5D%3A+Optimise+flow+when+using+the+Cart+block+and+shipping+calculations+are+enabled+"
 pr_test_type: api
-last_published: "2024-05-29 22:28:38 +0000"
-commit_sha: e209744d4dce5c1e1e7d22e8edf72de4d1131bf2
+last_published: "2024-05-31 17:16:51 +0000"
+commit_sha: 249ff39325488bc85fdae23a6f80bc3aab5ba592
 commit_message: ""
 branch_name: update/46949-cart-block-with-shipping-calculations-enabled
 passed: true
