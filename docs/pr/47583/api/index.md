@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47583/api/i
 pr_number: 47583
 pr_title_encoded: "%5BCYS+-+Full+Composability%5D%3A+Add+tooltip+hovered+pattern"
 pr_test_type: api
-last_published: "2024-05-31 10:28:48 +0000"
-commit_sha: aea4f694522ed1a3557f65c87b72db5a3d098eaa
+last_published: "2024-05-31 10:56:33 +0000"
+commit_sha: 0751cecdf9766d4c49380187fe42fb8c1336a787
 commit_message: ""
 branch_name: 47455-cys-full-composability-add-tooltip-on-the-hovered-pattern
 passed: true
