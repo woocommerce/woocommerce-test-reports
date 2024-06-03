@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/48107/e2e/i
 pr_number: 48107
 pr_title_encoded: "Minor+improvements+to+BlockTemplatesController+instantiation"
 pr_test_type: e2e
-last_published: "2024-06-03 13:51:34 +0000"
-commit_sha: cea80f6ce54b9ee010b0bdf75620c704f86a32de
+last_published: "2024-06-03 14:48:35 +0000"
+commit_sha: 2133abf16a357a970f3f69b9eb9b92de887843ee
 commit_message: ""
 branch_name: fix/blocktemplatescontroller-bootstrap
 passed: true
