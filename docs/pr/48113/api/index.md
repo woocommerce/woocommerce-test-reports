@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/48113/api/i
 pr_number: 48113
 pr_title_encoded: "%5Btesting+workflows%5D+Migrate+release+checks+to+ci.yml"
 pr_test_type: api
-last_published: "2024-06-03 16:10:14 +0000"
-commit_sha: 9d9bb0923078947aa76a2168bcb12724ee3aec67
+last_published: "2024-06-03 16:19:09 +0000"
+commit_sha: 4a34225548c57004e70df41dedfaa65ec5af916d
 commit_message: ""
 branch_name: e2e/migrate-release-checks-to-ci
 passed: true
