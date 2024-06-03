@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47565/e2e/i
 pr_number: 47565
 pr_title_encoded: "Apply+spacing+improvements+to+the+Checkout+block"
 pr_test_type: e2e
-last_published: "2024-06-03 17:24:30 +0000"
-commit_sha: 76743ce171b2fca0b50d69ca7a3bf7ae22ad99b3
+last_published: "2024-06-03 17:50:29 +0000"
+commit_sha: f10d01d93bc9279e5d33ea7b84beeeb2d577f456
 commit_message: ""
 branch_name: update/checkout-section-spacing
-passed: false
+passed: true
 ---
