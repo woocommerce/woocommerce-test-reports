@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47850/e2e/i
 pr_number: 47850
 pr_title_encoded: "Cleanup+wcBlocksConfig"
 pr_test_type: e2e
-last_published: "2024-05-27 15:49:55 +0000"
-commit_sha: e3006c928f47fc2d7a98bd2f33dbbb06789aabdf
+last_published: "2024-06-03 15:08:41 +0000"
+commit_sha: b96b49ee2dea7231e650e1659415ddc70ed547ab
 commit_message: ""
 branch_name: update/46990-wcBlocksConfig-cleanup
 passed: true
