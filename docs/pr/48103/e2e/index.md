@@ -4,9 +4,9 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/48103/e2e/i
 pr_number: 48103
 pr_title_encoded: "Display+return+to+cart+link+on+mobile+devices"
 pr_test_type: e2e
-last_published: "2024-06-03 12:25:31 +0000"
-commit_sha: ea92de02a2103f67cf64681270a70c76e9511187
+last_published: "2024-06-04 04:11:22 +0000"
+commit_sha: 8fdcc9270ba069bd89be8a72efcd1452d3abb9c0
 commit_message: ""
 branch_name: update/43640-add-return-to-cart-link-on-mobile
-passed: true
+passed: false
 ---
