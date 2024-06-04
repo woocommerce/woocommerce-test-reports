@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/48010/api/i
 pr_number: 48010
 pr_title_encoded: "%5BWIP%5D+Create+a+separate+bundle+for+cart+and+checkout"
 pr_test_type: api
-last_published: "2024-06-03 15:17:36 +0000"
-commit_sha: 1e2a741e2fce4f94c8aa44e148ff24a4a6b268a9
+last_published: "2024-06-04 01:47:45 +0000"
+commit_sha: c335ba65e6f594e2863e826a605e70574ef37648
 commit_message: ""
 branch_name: dev/cart-checkout-bundle
 passed: true
