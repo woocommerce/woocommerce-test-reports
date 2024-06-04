@@ -2,10 +2,10 @@
 layout: redirect
 redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/46929/api/index.html
 pr_number: 46929
-pr_title_encoded: "Don%27t+display+WCS%26T%27s+shipping+banner+with+Woo+Shipping+or+Woo+Tax+present"
+pr_title_encoded: "Don%27t+recommend+WCS%26T+if+Woo+Shipping+or+Woo+Tax+is+active"
 pr_test_type: api
-last_published: "2024-05-23 14:10:25 +0000"
-commit_sha: 35a1133cff4d2b20a4fef8071915d15e5e2695fd
+last_published: "2024-06-04 21:37:10 +0000"
+commit_sha: cb3dfdfbc6d8a2184006f7deac939663ae142848
 commit_message: ""
 branch_name: tweak/no-wcservices-banner-with-woo-shipping-or-tax-present
 passed: true
