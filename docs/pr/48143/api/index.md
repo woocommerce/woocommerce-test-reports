@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/48143/api/i
 pr_number: 48143
 pr_title_encoded: "CYS%3A+Add+the+Delete+button+to+the+Block+Toolbar"
 pr_test_type: api
-last_published: "2024-06-05 08:24:34 +0000"
-commit_sha: 297003d622bea87363c3103b44e970082d9800ac
+last_published: "2024-06-05 12:44:51 +0000"
+commit_sha: db158e7982357c79b8a0cd3122881e2749f69692
 commit_message: ""
 branch_name: 47521-cys-full-composability-add-the-delete-button-to-the-block-toolbar
 passed: true
