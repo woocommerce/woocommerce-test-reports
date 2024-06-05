@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47762/api/i
 pr_number: 47762
 pr_title_encoded: "Determine+_product_template_id+from+%27woocommerce_product_editor_determine_product_template%27+filter"
 pr_test_type: api
-last_published: "2024-06-04 21:06:31 +0000"
-commit_sha: de59538efdd33a38ffe6b26b0f85106e70cf61b8
+last_published: "2024-06-05 18:02:58 +0000"
+commit_sha: be746de8a311f66624348a14171f789837894137
 commit_message: ""
 branch_name: add/backend-template-match
 passed: true
