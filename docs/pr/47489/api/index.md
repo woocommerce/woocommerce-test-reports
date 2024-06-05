@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47489/api/i
 pr_number: 47489
 pr_title_encoded: "Add+error+class+to+checkout+endpoint+response"
 pr_test_type: api
-last_published: "2024-06-05 18:07:43 +0000"
-commit_sha: 9c1a06feecb409c46de329f74626f04bfb9f7768
+last_published: "2024-06-05 21:04:31 +0000"
+commit_sha: e1947cb3ce8a47a20791de17686da718e48d6268
 commit_message: ""
 branch_name: add/error-class-to-checkout-endpoint-response
 passed: true
