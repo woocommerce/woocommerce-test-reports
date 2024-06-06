@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/48169/api/i
 pr_number: 48169
 pr_title_encoded: "Improvements+in+the+handling+of+feature+compatibility+for+plugins"
 pr_test_type: api
-last_published: "2024-06-06 08:41:56 +0000"
-commit_sha: ce042e96e4e754fe456f965c2677803f2922b6c6
+last_published: "2024-06-06 08:51:38 +0000"
+commit_sha: 6378f8da558bcff96fcabb615222964c4c26c8c3
 commit_message: ""
 branch_name: improve-feature-compatibility-handling
 passed: true
