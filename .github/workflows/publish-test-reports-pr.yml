@@ -247,6 +247,31 @@ jobs:
           BOT_COMMIT_MESSAGE: "Add test report - PR #${{ env.PR_NUMBER }} - ${{ env.COMMIT_MESSAGE }}"
         run: bash push-changes-to-repo.sh
 
+      - name: Use JSON key file
+        if: ${{ github.ref_name == 'trunk' }}
+        working-directory: repo/.github/workflows/scripts
+        env:
+          SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+        run: |
+          pwd
+          echo "$SERVICE_ACCOUNT_KEY" > key.json
+
+      - name: Update API test suite stats
+        if: ${{ github.ref_name == 'trunk' }}
+        working-directory: repo/
+        run: |
+          npm install
+          API_SUMMARY_JSON=${{ github.workspace }}/output/api/widgets/summary.json \
+          node .github/workflows/scripts/update-api-stats.js
+
+      - name: Update e2e test suite stats
+        if: ${{ github.ref_name == 'trunk' }}
+        working-directory: repo/
+        run: |
+          npm install
+          E2E_SUMMARY_JSON=${{ github.workspace }}/output/e2e/widgets/summary.json \
+          node .github/workflows/scripts/update-e2e-stats.js
+
       - name: Create issues for failed E2E tests
         if: ${{ env.E2E_ARTIFACT }}
         working-directory: repo/

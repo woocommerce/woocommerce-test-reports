@@ -1,0 +1,4 @@
+---
+layout: redirect
+redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/trunk/9037417068/api/index.html
+---
