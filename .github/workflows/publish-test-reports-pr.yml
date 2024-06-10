@@ -22,10 +22,12 @@ on:
 concurrency:
   group: ${{ github.ref_name }}-pr-${{ github.event.inputs.pr_number }}-${{ github.event.inputs.api_artifact }}-${{ github.event.inputs.e2e_artifact }}
   cancel-in-progress: true
+env:
+  RUN_ID: ${{ github.event.inputs.run_id }}
 
 jobs:
   publish_pr_test_reports:
-    name: Publish PR test reports
+    name: Publish PR test reports - ${{ env.RUN_ID }}
     runs-on: ubuntu-20.04
     env:
       RUN_ID: ${{ github.event.inputs.run_id }}
