@@ -256,7 +256,7 @@ jobs:
           echo "$SERVICE_ACCOUNT_KEY" > key.json
 
       - name: Update API test suite stats
-        if: ${{ github.ref_name == 'trunk' && env.API_ARTIFACT }}
+        if: ${{ env.API_ARTIFACT }}
         working-directory: repo/
         run: |
           npm install
@@ -264,7 +264,7 @@ jobs:
           node .github/workflows/scripts/update-api-stats.js
 
       - name: Update e2e test suite stats
-        if: ${{ github.ref_name == 'trunk' && env.API_ARTIFACT }}
+        if: ${{ env.E2E_ARTIFACT }}
         working-directory: repo/
         run: |
           npm install
