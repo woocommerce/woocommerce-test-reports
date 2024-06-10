@@ -300,7 +300,8 @@ layout: common
     }
     var dataTable = response.getDataTable();
     var { labels, data } = extractData(dataTable);
-    renderBarChart("sizeOfSuite", labels, data);
+    var averagedData = averageDataByDay(labels, data);
+    renderBarChart("sizeOfSuite", averagedData.labels, averagedData.data);
   }
 
   // Function to handle the query response for execution time
@@ -311,8 +312,9 @@ layout: common
     }
     var dataTable = response.getDataTable();
     var { labels, data } = extractData(dataTable);
+    var averagedData = averageDataByDay(labels, data);
     var goalLine = Array(30).fill(900);
-    renderLineChart("executionTime", labels, data);
+    renderLineChart("executionTime", averagedData.labels, averagedData.data);
   }
 
   // Function to handle the query response for number of failures
@@ -323,7 +325,8 @@ layout: common
     }
     var dataTable = response.getDataTable();
     var { labels, data } = extractData(dataTable);
-    renderBarChart("numberOfFailures", labels, data);
+    var averagedData = averageDataByDay(labels, data);
+    renderBarChart("numberOfFailures", averagedData.labels, averagedData.data);
   }
 
   // Function to handle the query response for number of skipped
@@ -334,7 +337,8 @@ layout: common
     }
     var dataTable = response.getDataTable();
     var { labels, data } = extractData(dataTable);
-    renderBarChart("numberOfSkipped", labels, data);
+    var averagedData = averageDataByDay(labels, data);
+    renderBarChart("numberOfSkipped", averagedData.labels, averagedData.data);
   }
 
   // Function to handle the query response for number of broken
@@ -345,7 +349,8 @@ layout: common
     }
     var dataTable = response.getDataTable();
     var { labels, data } = extractData(dataTable);
-    renderBarChart("numberOfBroken", labels, data);
+    var averagedData = averageDataByDay(labels, data);
+    renderBarChart("numberOfBroken", averagedData.labels, averagedData.data);
   }
 
   // Function to handle the query response for number of API tests
@@ -356,7 +361,8 @@ layout: common
     }
     var dataTable = response.getDataTable();
     var { labels, data } = extractData(dataTable);
-    renderBarChart("sizeOfAPISuite", labels, data);
+    var averagedData = averageDataByDay(labels, data);
+    renderBarChart("sizeOfAPISuite", averagedData.labels, averagedData.data);
   }
 
   // Function to handle the query response for API execution time
@@ -367,7 +373,8 @@ layout: common
     }
     var dataTable = response.getDataTable();
     var { labels, data } = extractData(dataTable);
-    renderLineChart("apiExecutionTime", labels, data);
+    var averagedData = averageDataByDay(labels, data);
+    renderLineChart("apiExecutionTime", averagedData.labels, averagedData.data);
   }
 
   // Function to handle the query response for number of API failures
@@ -378,7 +385,12 @@ layout: common
     }
     var dataTable = response.getDataTable();
     var { labels, data } = extractData(dataTable);
-    renderBarChart("numberOfApiFailures", labels, data);
+    var averagedData = averageDataByDay(labels, data);
+    renderBarChart(
+      "numberOfApiFailures",
+      averagedData.labels,
+      averagedData.data
+    );
   }
 
   // Function to handle the query response for number of API skipped
@@ -389,7 +401,12 @@ layout: common
     }
     var dataTable = response.getDataTable();
     var { labels, data } = extractData(dataTable);
-    renderBarChart("numberOfApiSkipped", labels, data);
+    var averagedData = averageDataByDay(labels, data);
+    renderBarChart(
+      "numberOfApiSkipped",
+      averagedData.labels,
+      averagedData.data
+    );
   }
 
   // Function to handle the query response for number of API broken
@@ -400,7 +417,8 @@ layout: common
     }
     var dataTable = response.getDataTable();
     var { labels, data } = extractData(dataTable);
-    renderBarChart("numberOfApiBroken", labels, data);
+    var averagedData = averageDataByDay(labels, data);
+    renderBarChart("numberOfApiBroken", averagedData.labels, averagedData.data);
   }
 
   // Function to perform the charting
