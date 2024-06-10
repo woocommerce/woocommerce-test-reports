@@ -194,7 +194,7 @@ layout: common
     // Render the chart using Chart.js
     var ctx = document.getElementById("sizeOfSuite").getContext("2d");
     new Chart(ctx, {
-      type: "bar",
+      type: "line",
       data: {
         labels: labels,
         datasets: [
@@ -360,7 +360,7 @@ layout: common
     // Render the chart using Chart.js
     var ctx = document.getElementById("numberOfFailures").getContext("2d");
     new Chart(ctx, {
-      type: "bar",
+      type: "line",
       data: {
         labels: labels,
         datasets: [
@@ -450,7 +450,7 @@ layout: common
     // Render the chart using Chart.js
     var ctx = document.getElementById("numberOfSkipped").getContext("2d");
     new Chart(ctx, {
-      type: "bar",
+      type: "line",
       data: {
         labels: labels,
         datasets: [
@@ -533,7 +533,7 @@ layout: common
     // Render the chart using Chart.js
     var ctx = document.getElementById("numberOfBroken").getContext("2d");
     new Chart(ctx, {
-      type: "bar",
+      type: "line",
       data: {
         labels: labels,
         datasets: [
