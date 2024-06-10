@@ -302,8 +302,8 @@ layout: common
           x: {
             ticks: {
               callback: function (value, index, values) {
-                // Display every 10th label
-                return index % 10 === 0 ? this.getLabelForValue(value) : "";
+                // Display every 5th label
+                return index % 5 === 0 ? this.getLabelForValue(value) : "";
               },
             },
           },
@@ -393,8 +393,8 @@ layout: common
           x: {
             ticks: {
               callback: function (value, index, values) {
-                // Display every 10th label
-                return index % 10 === 0 ? this.getLabelForValue(value) : "";
+                // Display every 5th label
+                return index % 5 === 0 ? this.getLabelForValue(value) : "";
               },
             },
           },
@@ -491,8 +491,8 @@ layout: common
           x: {
             ticks: {
               callback: function (value, index, values) {
-                // Display every 10th label
-                return index % 10 === 0 ? this.getLabelForValue(value) : "";
+                // Display every 5th label
+                return index % 5 === 0 ? this.getLabelForValue(value) : "";
               },
             },
           },
@@ -582,8 +582,8 @@ layout: common
           x: {
             ticks: {
               callback: function (value, index, values) {
-                // Display every 10th label
-                return index % 10 === 0 ? this.getLabelForValue(value) : "";
+                // Display every 5th label
+                return index % 5 === 0 ? this.getLabelForValue(value) : "";
               },
             },
           },
@@ -764,6 +764,14 @@ layout: common
       options: {
         responsive: true,
         scales: {
+          x: {
+            ticks: {
+              callback: function (value, index, values) {
+                // Display every 5th label
+                return index % 5 === 0 ? this.getLabelForValue(value) : "";
+              },
+            },
+          },
           y: {
             beginAtZero: true,
           },
@@ -846,6 +854,14 @@ layout: common
       options: {
         responsive: true,
         scales: {
+          x: {
+            ticks: {
+              callback: function (value, index, values) {
+                // Display every 5th label
+                return index % 5 === 0 ? this.getLabelForValue(value) : "";
+              },
+            },
+          },
           y: {
             min: 0,
             beginAtZero: true,
@@ -936,6 +952,14 @@ layout: common
       options: {
         responsive: true,
         scales: {
+          x: {
+            ticks: {
+              callback: function (value, index, values) {
+                // Display every 5th label
+                return index % 5 === 0 ? this.getLabelForValue(value) : "";
+              },
+            },
+          },
           y: {
             min: 0,
             beginAtZero: true,
@@ -1026,6 +1050,14 @@ layout: common
       options: {
         responsive: true,
         scales: {
+          x: {
+            ticks: {
+              callback: function (value, index, values) {
+                // Display every 5th label
+                return index % 5 === 0 ? this.getLabelForValue(value) : "";
+              },
+            },
+          },
           y: {
             min: 0,
             beginAtZero: true,
