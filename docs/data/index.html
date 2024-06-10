@@ -152,7 +152,16 @@ layout: common
   // Function to fetch data from Google Sheets API and handle the response
   function fetchData(queryUrl, chartCallback) {
     var query = new google.visualization.Query(queryUrl);
-    query.send(chartCallback);
+    query.send(function (response) {
+      if (response.isError()) {
+        console.error("Error in query: " + response.getMessage());
+        return;
+      }
+      var dataTable = response.getDataTable();
+      var { labels, data } = extractData(dataTable);
+      var averagedData = averageDataByDay(labels, data);
+      chartCallback(averagedData.labels, averagedData.data);
+    });
   }
 
   // Function to extract labels and data from the DataTable
@@ -166,6 +175,35 @@ layout: common
       data.push(dataTable.getFormattedValue(i, 1));
     }
     return { labels: labels, data: data };
+  }
+
+  // Function to average data by day
+  function averageDataByDay(labels, data) {
+    var averagedLabels = [];
+    var averagedData = [];
+    var currentDay = null;
+    var sum = 0;
+    var count = 0;
+    for (var i = 0; i < labels.length; i++) {
+      var label = labels[i];
+      var value = parseFloat(data[i]);
+      var day = label.split(" ")[0];
+      if (currentDay === null) {
+        currentDay = day;
+      }
+      if (day !== currentDay) {
+        averagedLabels.push(currentDay);
+        averagedData.push(sum / count);
+        currentDay = day;
+        sum = 0;
+        count = 0;
+      }
+      sum += value;
+      count++;
+    }
+    averagedLabels.push(currentDay);
+    averagedData.push(sum / count);
+    return { labels: averagedLabels, data: averagedData };
   }
 
   // Function to render a bar chart
