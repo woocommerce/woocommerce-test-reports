@@ -29,7 +29,7 @@ layout: common
     <div class="card" style="width: 100%">
       <canvas id="executionTime" class="card-img-top"></canvas>
       <div class="card-body">
-        <h5 class="card-title">Execution Time (last 30 days)</h5>
+        <h5 class="card-title">Execution Time</h5>
         <p class="card-text">
           The amount of time it takes for the test suite to complete (seconds).
         </p>
@@ -45,7 +45,7 @@ layout: common
     <div class="card" style="width: 100%">
       <canvas id="numberOfFailures" class="card-img-top"></canvas>
       <div class="card-body">
-        <h5 class="card-title">Number of Failures (last 30 days)</h5>
+        <h5 class="card-title">Number of Failures</h5>
         <p class="card-text">The number of tests marked as failing each run.</p>
       </div>
     </div>
@@ -55,7 +55,7 @@ layout: common
     <div class="card" style="width: 100%">
       <canvas id="numberOfSkipped" class="card-img-top"></canvas>
       <div class="card-body">
-        <h5 class="card-title">Number of Skipped Tests (last 30 days)</h5>
+        <h5 class="card-title">Number of Skipped Tests</h5>
         <p class="card-text">The number of tests we skip each run.</p>
       </div>
     </div>
@@ -69,7 +69,7 @@ layout: common
     <div class="card" style="width: 100%">
       <canvas id="numberOfBroken" class="card-img-top"></canvas>
       <div class="card-body">
-        <h5 class="card-title">Number of Broken Tests (last 30 days)</h5>
+        <h5 class="card-title">Number of Broken Tests</h5>
         <p class="card-text">The number of tests marked as broken each run.</p>
       </div>
     </div>
@@ -97,7 +97,7 @@ layout: common
     <div class="card" style="width: 100%">
       <canvas id="apiExecutionTime" class="card-img-top"></canvas>
       <div class="card-body">
-        <h5 class="card-title">Execution Time (last 30 days)</h5>
+        <h5 class="card-title">Execution Time</h5>
         <p class="card-text">
           The amount of time it takes for the test suite to complete (seconds).
         </p>
@@ -113,7 +113,7 @@ layout: common
     <div class="card" style="width: 100%">
       <canvas id="numberOfApiFailures" class="card-img-top"></canvas>
       <div class="card-body">
-        <h5 class="card-title">Number of Failures (last 30 days)</h5>
+        <h5 class="card-title">Number of Failures</h5>
         <p class="card-text">The number of tests marked as failing each run.</p>
       </div>
     </div>
@@ -123,7 +123,7 @@ layout: common
     <div class="card" style="width: 100%">
       <canvas id="numberOfApiSkipped" class="card-img-top"></canvas>
       <div class="card-body">
-        <h5 class="card-title">Number of Skipped Tests (last 30 days)</h5>
+        <h5 class="card-title">Number of Skipped Tests</h5>
         <p class="card-text">The number of tests we skip each run.</p>
       </div>
     </div>
@@ -137,7 +137,7 @@ layout: common
     <div class="card" style="width: 100%">
       <canvas id="numberOfApiBroken" class="card-img-top"></canvas>
       <div class="card-body">
-        <h5 class="card-title">Number of Broken Tests (last 30 days)</h5>
+        <h5 class="card-title">Number of Broken Tests</h5>
         <p class="card-text">The number of tests marked as broken each run.</p>
       </div>
     </div>
@@ -535,13 +535,28 @@ layout: common
     }
     // Get the data table from the query response
     var dataTable = response.getDataTable();
-    // Extract the labels and data from the DataTable
-    var labels = [];
-    var data = [];
+    // Use a dictionary to accumulate sums and counts
+    var dataDict = {};
     var numRows = dataTable.getNumberOfRows();
     for (var i = 0; i < numRows; i++) {
-      labels.push(dataTable.getFormattedValue(i, 0));
-      data.push(dataTable.getFormattedValue(i, 1));
+      var date = dataTable.getFormattedValue(i, 0);
+      var numTests = parseFloat(dataTable.getFormattedValue(i, 1));
+
+      if (!dataDict[date]) {
+        dataDict[date] = { sum: 0, count: 0 };
+      }
+      dataDict[date].sum += numTests;
+      dataDict[date].count += 1;
+    }
+
+    // Calculate averages
+    var labels = [];
+    var data = [];
+    for (var date in dataDict) {
+      if (dataDict.hasOwnProperty(date)) {
+        labels.push(date);
+        data.push(dataDict[date].sum / dataDict[date].count);
+      }
     }
     // Render the chart using Chart.js
     var ctx = document.getElementById("sizeOfAPISuite").getContext("2d");
@@ -690,14 +705,28 @@ layout: common
 
     // Get the data table from the query response
     var dataTable = response.getDataTable();
-    // Extract the labels and data from the DataTable
+    // Use a dictionary to accumulate sums and counts
+    var dataDict = {};
+    var numRows = dataTable.getNumberOfRows();
+    for (var i = 0; i < numRows; i++) {
+      var date = dataTable.getFormattedValue(i, 0);
+      var numTests = parseFloat(dataTable.getFormattedValue(i, 1));
+
+      if (!dataDict[date]) {
+        dataDict[date] = { sum: 0, count: 0 };
+      }
+      dataDict[date].sum += numTests;
+      dataDict[date].count += 1;
+    }
+
+    // Calculate averages
     var labels = [];
     var data = [];
-    var numRows = dataTable.getNumberOfRows();
-    var startIndex = Math.max(0, numRows - 30);
-    for (var i = startIndex; i < numRows; i++) {
-      labels.push(dataTable.getFormattedValue(i, 0));
-      data.push(dataTable.getFormattedValue(i, 1));
+    for (var date in dataDict) {
+      if (dataDict.hasOwnProperty(date)) {
+        labels.push(date);
+        data.push(dataDict[date].sum / dataDict[date].count);
+      }
     }
 
     // Render the chart using Chart.js
@@ -766,14 +795,28 @@ layout: common
 
     // Get the data table from the query response
     var dataTable = response.getDataTable();
-    // Extract the labels and data from the DataTable
+    // Use a dictionary to accumulate sums and counts
+    var dataDict = {};
+    var numRows = dataTable.getNumberOfRows();
+    for (var i = 0; i < numRows; i++) {
+      var date = dataTable.getFormattedValue(i, 0);
+      var numTests = parseFloat(dataTable.getFormattedValue(i, 1));
+
+      if (!dataDict[date]) {
+        dataDict[date] = { sum: 0, count: 0 };
+      }
+      dataDict[date].sum += numTests;
+      dataDict[date].count += 1;
+    }
+
+    // Calculate averages
     var labels = [];
     var data = [];
-    var numRows = dataTable.getNumberOfRows();
-    var startIndex = Math.max(0, numRows - 30);
-    for (var i = startIndex; i < numRows; i++) {
-      labels.push(dataTable.getFormattedValue(i, 0));
-      data.push(dataTable.getFormattedValue(i, 1));
+    for (var date in dataDict) {
+      if (dataDict.hasOwnProperty(date)) {
+        labels.push(date);
+        data.push(dataDict[date].sum / dataDict[date].count);
+      }
     }
 
     // Render the chart using Chart.js
@@ -842,14 +885,28 @@ layout: common
 
     // Get the data table from the query response
     var dataTable = response.getDataTable();
-    // Extract the labels and data from the DataTable
+    // Use a dictionary to accumulate sums and counts
+    var dataDict = {};
+    var numRows = dataTable.getNumberOfRows();
+    for (var i = 0; i < numRows; i++) {
+      var date = dataTable.getFormattedValue(i, 0);
+      var numTests = parseFloat(dataTable.getFormattedValue(i, 1));
+
+      if (!dataDict[date]) {
+        dataDict[date] = { sum: 0, count: 0 };
+      }
+      dataDict[date].sum += numTests;
+      dataDict[date].count += 1;
+    }
+
+    // Calculate averages
     var labels = [];
     var data = [];
-    var numRows = dataTable.getNumberOfRows();
-    var startIndex = Math.max(0, numRows - 30);
-    for (var i = startIndex; i < numRows; i++) {
-      labels.push(dataTable.getFormattedValue(i, 0));
-      data.push(dataTable.getFormattedValue(i, 1));
+    for (var date in dataDict) {
+      if (dataDict.hasOwnProperty(date)) {
+        labels.push(date);
+        data.push(dataDict[date].sum / dataDict[date].count);
+      }
     }
 
     // Render the chart using Chart.js
