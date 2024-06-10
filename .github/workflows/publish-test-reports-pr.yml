@@ -1,4 +1,5 @@
 name: Publish PR test reports
+run-name: Report for PR ${{ inputs.pr_number }} - run ${{ inputs.run_id }}
 on:
   workflow_dispatch:
     inputs:
