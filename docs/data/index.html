@@ -299,6 +299,14 @@ layout: common
       options: {
         responsive: true,
         scales: {
+          x: {
+            ticks: {
+              callback: function (value, index, values) {
+                // Display every 10th label
+                return index % 10 === 0 ? this.getLabelForValue(value) : "";
+              },
+            },
+          },
           y: {
             min: 0,
             beginAtZero: true,
@@ -382,6 +390,14 @@ layout: common
       options: {
         responsive: true,
         scales: {
+          x: {
+            ticks: {
+              callback: function (value, index, values) {
+                // Display every 10th label
+                return index % 10 === 0 ? this.getLabelForValue(value) : "";
+              },
+            },
+          },
           y: {
             min: 0,
             beginAtZero: true,
@@ -472,6 +488,14 @@ layout: common
       options: {
         responsive: true,
         scales: {
+          x: {
+            ticks: {
+              callback: function (value, index, values) {
+                // Display every 10th label
+                return index % 10 === 0 ? this.getLabelForValue(value) : "";
+              },
+            },
+          },
           y: {
             min: 0,
             beginAtZero: true,
@@ -555,6 +579,14 @@ layout: common
       options: {
         responsive: true,
         scales: {
+          x: {
+            ticks: {
+              callback: function (value, index, values) {
+                // Display every 10th label
+                return index % 10 === 0 ? this.getLabelForValue(value) : "";
+              },
+            },
+          },
           y: {
             min: 0,
             beginAtZero: true,
