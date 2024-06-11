@@ -1,5 +1,5 @@
 name: Report
-run-name: Report for run id ${{ inputs.run_id }}, ${{ inputs.event }} ${{ inputs.pr_number || inputs.ref_name }}
+run-name: ${{ inputs.suite }} on ${{ inputs.event }} - ${{ inputs.run_id }} ${{ inputs.pr_number || inputs.ref_name }}
 
 on:
   workflow_dispatch:
