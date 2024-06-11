@@ -2,16 +2,6 @@
 
 set -eo pipefail
 
-export ARTIFACT_NAME='core-e2e-tests'
-export REPOSITORY='woocommerce/woocommerce'
-export RUN_ID='9470404608'
-export EVENT_NAME='daily-checks'
-#export PR_NUMBER='20222'
-export COMMIT_SHA='80f8sa'
-export SUITE_NAME='Core e2e tests'
-export REF_NAME='v9.0.0 beta/22'
-export REPORT_TITLE='#Core e2e /=+!*tests'
-
 if [[ -z "$ARTIFACT_NAME" ]]; then
      echo "::error:: missing ARTIFACT_NAME environment variable"
      exit 1
