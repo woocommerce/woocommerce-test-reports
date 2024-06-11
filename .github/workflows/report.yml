@@ -96,6 +96,7 @@ jobs:
           run_id: ${{ env.RUN_ID }}
           path: ${{ env.DOWNLOAD_PATH }}
           name: ${{ env.ARTIFACT_NAME }}
+          skip_unpack: true
 
 #      - name: Download artifacts
 #        uses: actions/download-artifact@v4
