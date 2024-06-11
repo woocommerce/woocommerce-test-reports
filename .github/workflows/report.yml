@@ -98,8 +98,13 @@ jobs:
           name: ${{ env.ARTIFACT_NAME }}
           skip_unpack: true
 
-      - name: List downloaded files
-        run: ls -la downloads
+      - name: Unzip artifacts
+        run: |
+          # Check artifacts
+          ls -la downloads
+          
+          # Unzip artifacts
+          unzip -q downloads/${{ env.ARTIFACT_NAME }}.zip -d downloads
 
 #      - name: Download artifacts
 #        uses: actions/download-artifact@v4
