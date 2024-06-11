@@ -49,12 +49,14 @@ async function updateReportData( reportPath ) {
 
 	// Get the metadata
 	const metadata = readJson( path.join( reportPath, 'metadata.json' ) ) || {
-		branch: '',
-		pr_number: '',
-		pr_title: '',
-		run_id: '',
-		run_number: '',
-		updated_on: '',
+		"suite": "",
+        "ref_name": "",
+        "run_id": "",
+        "event_name": "",
+        "report_title": "",
+        "pr_number": "",
+        "sha": "",
+        "updated_on": ""
 	};
 
 	// Create the report entry
@@ -68,7 +70,7 @@ async function updateReportData( reportPath ) {
 	};
 
 	console.log( report );
-	const reportIndex = json.reports.findIndex( r => r.name === reportId );
+	const reportIndex = json.reports.findIndex( r => r.id === reportId );
 
 	if ( reportIndex !== -1 ) {
 		// Update the report entry in the reports list
