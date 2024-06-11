@@ -7,30 +7,38 @@ on:
       run_id:
         description: 'The run ID of the calling workflow.'
         required: true
+        default: '9471194517'
       artifact:
         description: 'The name of the artifact to download.'
         required: true
+        default: 'core-e2e-report'
       event:
         description: 'The event that triggered the tests. E.g. pull_request, daily-checks, release-checks, etc.'
         required: true
+        default: 'pull_request'
       report_title:
         description: 'The title of the report to generate. It can be the PR title, a commit message or any other identifier.'
         required: true
+        default: 'Update Playwright to 1.44.1 from 1.41.1'
       pr_number:
         description: 'The PR number if the report if for a pull request.'
         required: false
+        default: '48291'
       ref_name:
         description: 'The branch or tag name.'
         required: false
+        default: 'dev/update-playwright-1_44_1'
       commit_sha:
         description: 'The commit SHA.'
         required: false
       repository:
         description: 'The repository name in the format owner/repo.'
         required: true
+        default: 'woocommerce/woocommerce'
       suite:
         description: 'The suite name. E.g. core API, core e2e, blocks e2e, etc.'
         required: true
+        default: 'Core e2e tests'
 
 jobs:
   report:
