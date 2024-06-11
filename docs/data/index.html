@@ -653,7 +653,7 @@ layout: common
     // Render the chart using Chart.js
     var ctx = document.getElementById("sizeOfAPISuite").getContext("2d");
     new Chart(ctx, {
-      type: "bar",
+      type: "line",
       data: {
         labels: labels,
         datasets: [
@@ -832,7 +832,7 @@ layout: common
     // Render the chart using Chart.js
     var ctx = document.getElementById("numberOfApiFailures").getContext("2d");
     new Chart(ctx, {
-      type: "bar",
+      type: "line",
       data: {
         labels: labels,
         datasets: [
@@ -930,7 +930,7 @@ layout: common
     // Render the chart using Chart.js
     var ctx = document.getElementById("numberOfApiSkipped").getContext("2d");
     new Chart(ctx, {
-      type: "bar",
+      type: "line",
       data: {
         labels: labels,
         datasets: [
@@ -1028,7 +1028,7 @@ layout: common
     // Render the chart using Chart.js
     var ctx = document.getElementById("numberOfApiBroken").getContext("2d");
     new Chart(ctx, {
-      type: "bar",
+      type: "line",
       data: {
         labels: labels,
         datasets: [
