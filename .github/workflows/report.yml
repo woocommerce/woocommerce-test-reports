@@ -1,0 +1,110 @@
+name: Report
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: 'The run ID of the calling workflow.'
+        required: true
+      artifact:
+        description: 'The name of the artifact to download.'
+        required: true
+      event:
+        description: 'The event that triggered the tests. E.g. pull_request, daily-checks, release-checks, etc.'
+        required: true
+      report_title:
+        description: 'The title of the report to generate. It can be the PR title, a commit message or any other identifier.'
+        required: true
+      pr_number:
+        description: 'The PR number if the report if for a pull request.'
+        required: false
+      ref_name:
+        description: 'The branch or tag name.'
+        required: false
+      commit_sha:
+        description: 'The commit SHA.'
+        required: false
+      repository:
+        description: 'The repository name in the format owner/repo.'
+        required: true
+      suite:
+        description: 'The suite name. E.g. core API, core e2e, blocks e2e, etc.'
+        required: true
+
+jobs:
+  report:
+    name: "Create test report"
+    runs-on: ubuntu-latest
+    env:
+      RUN_ID: ${{ inputs.run_id }}
+      ARTIFACT_NAME: ${{ inputs.artifact }}
+      EVENT_NAME: ${{ inputs.event }}
+      REPORT_TITLE: ${{ inputs.report_title }}
+      PR_NUMBER: ${{ inputs.pr_number }}
+      REF_NAME: ${{ inputs.ref_name }}
+      COMMIT_SHA: ${{ inputs.commit_sha }}
+      REPOSITORY: ${{ inputs.repository }}
+      SUITE_NAME: ${{ inputs.suite }}
+      LOCAL_REPORTS_PATH: reports
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set report information
+        run: ./bin/set-report-data.sh
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install
+        run: npm i
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ secrets.AWS_REGION }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Wait for artifacts to be available
+        run: ./bin/wait-for-artifacts.sh
+
+#      - name: Download artifacts
+#        uses: dawidd6/action-download-artifact@v2
+#        with:
+#          repo: Automattic/jetpack
+#          workflow: e2e-tests.yml
+#          workflow_conclusion: "completed"
+#          run_id: ${{ env.RUN_ID }}
+#          path: ../downloads
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          repository: ${{ env.REPOSITORY }}
+          run-id: ${{ env.RUN_ID }}
+          name: ${{ env.ARTIFACT_NAME }}
+          path: ../downloads
+
+      - name: Install Allure commandline
+        run: npm install -g allure-commandline@^2.29.0
+
+      - name: Generate test report
+        env:
+          RESULTS_PATH: ../downloads
+          LOCAL_REPORTS_PATH: reports
+        run: ./bin/generate-report-s3.sh
+
+      - name: Update dashboard data
+        run: |
+          echo "::group::Update reports list"
+          node ./bin/update-reports-list.js
+          echo "::endgroup::"
