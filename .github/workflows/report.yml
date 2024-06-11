@@ -89,22 +89,21 @@ jobs:
       - name: Wait for artifacts to be available
         run: ./bin/wait-for-artifacts.sh
 
-#      - name: Download artifacts
-#        uses: dawidd6/action-download-artifact@v2
-#        with:
-#          repo: Automattic/jetpack
-#          workflow: e2e-tests.yml
-#          workflow_conclusion: "completed"
-#          run_id: ${{ env.RUN_ID }}
-#          path: ../downloads
-
       - name: Download artifacts
-        uses: actions/download-artifact@v4
+        uses: dawidd6/action-download-artifact@v5
         with:
-          repository: ${{ env.REPOSITORY }}
-          run-id: ${{ env.RUN_ID }}
+          repo: ${{ env.REPOSITORY }}
+          run_id: ${{ env.RUN_ID }}
+          path: ${{ env.DOWNLOAD_PATH }}
           name: ${{ env.ARTIFACT_NAME }}
-          path: downloads
+
+#      - name: Download artifacts
+#        uses: actions/download-artifact@v4
+#        with:
+#          repository: ${{ env.REPOSITORY }}
+#          run-id: ${{ env.RUN_ID }}
+#          name: ${{ env.ARTIFACT_NAME }}
+#          path: downloads
 
       - name: Install Allure commandline
         run: npm install -g allure-commandline@^2.29.0
