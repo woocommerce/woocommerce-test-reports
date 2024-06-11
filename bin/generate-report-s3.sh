@@ -3,6 +3,7 @@
 # This script generates a report from the Allure results in the RESULTS_PATH directory and uploads it to S3.
 # Required:
 # - RESULTS_PATH: Path to the test results directory
+# - REPORT_PATH: The path where the report will be generated
 
 set -eo pipefail
 
@@ -21,7 +22,6 @@ if [[ -z "$RESULTS_PATH" ]]; then
   exit 1
 fi
 
-REPORT_PATH="$RESULTS_PATH/_report"
 ALLURE_RESULTS_PATH=$(realpath "$RESULTS_PATH"/allure-results)
 
 if [[ ! -d "$ALLURE_RESULTS_PATH" ]]; then
@@ -81,11 +81,17 @@ if [[ ! -f "$REPORT_PATH/metadata.json" ]]; then
     touch "$REPORT_PATH/metadata.json"
 fi
 
-if [ "$CLIENT_PAYLOAD" == "" ]; then
-CLIENT_PAYLOAD={}
-fi
+METADATA="{
+  \"suite\": \"$SUITE_NAME\",
+  \"ref_name\": \"$REF_NAME\",
+  \"run_id\": \"$RUN_ID\",
+  \"event_name\": \"$EVENT_NAME\",
+  \"report_title\": \"$REPORT_TITLE\",
+  \"pr_number\": \"$PR_NUMBER\",
+  \"sha\": \"$COMMIT_SHA\"
+}"
 
-echo "$CLIENT_PAYLOAD" | jq --arg updateDate "$(date +"%Y-%m-%dT%H:%M:%S%z")" '. + {"updated_on":$updateDate}' >"$REPORT_PATH/metadata.json"
+echo "$METADATA" | jq --arg updateDate "$(date +"%Y-%m-%dT%H:%M:%S%z")" '. + {"updated_on":$updateDate}' >"$REPORT_PATH/metadata.json"
 cat "$REPORT_PATH/metadata.json"
 
 echo "Minifying JSON files"

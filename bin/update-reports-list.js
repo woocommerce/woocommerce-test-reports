@@ -4,23 +4,27 @@
  * It will read data from $reportID/report/widgets/summary.json, $reportID/metadata.json
  */
 
-const { readS3Object, readJson, getLocalReportsPaths } = require( './utils' );
+const { readS3Object, readJson } = require( './utils' );
 const path = require( 'path' );
 const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
 const { s3Params, s3client } = require( './s3-client' );
 
-const reports = getLocalReportsPaths();
+
+const reportPath = process.env.REPORT_PATH;
+
+if ( ! reportPath ) {
+	throw 'REPORT_PATH env variable is not set';
+}
+
 let json = { reports: [] };
 
 ( async () => {
 	// Get the existing reports list
-	json = JSON.parse( ( await readS3Object( 'data/reports.json' ) ).toString() );
+	const reportsData = ( await readS3Object( 'data/reports.json' ) ).toString() || '{"reports":[]}';
+	json = JSON.parse( reportsData );
+	await updateReportData(reportPath);
 
-	for ( const reportPath of reports ) {
-		await updateReportData(reportPath);
-	}
-
-	// Write the updated errors list locally
+	// Write the updated reports list locally
 	// writeJson( json, path.join( "", 'reports.json' ) );
 
 	// Upload the report to S3
@@ -34,10 +38,14 @@ let json = { reports: [] };
 } )();
 
 async function updateReportData( reportPath ) {
-	const reportId = path.basename( reportPath );
+	const reportId = process.env.REPORT_ID
+
+	if ( ! reportId ) {
+	throw 'REPORT_ID env variable is not set';
+}
 
 	// Get the report statistics from report/widgets/summary.json
-	const statistic = readJson( path.join( reportPath, 'report/widgets/summary.json' ) ).statistic;
+	const statistic = readJson( path.join( reportPath, 'widgets/summary.json' ) ).statistic;
 
 	// Get the metadata
 	const metadata = readJson( path.join( reportPath, 'metadata.json' ) ) || {
@@ -52,7 +60,7 @@ async function updateReportData( reportPath ) {
 	// Create the report entry
 	const isFailed = statistic.total !== statistic.passed + statistic.skipped;
 	const report = {
-		name: reportId,
+		id: reportId,
 		lastUpdate: metadata.updated_on ? metadata.updated_on : '1970-01-01',
 		statistic,
 		metadata,
