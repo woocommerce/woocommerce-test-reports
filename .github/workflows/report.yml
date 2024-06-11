@@ -11,15 +11,15 @@ on:
       artifact:
         description: 'The name of the artifact to download.'
         required: true
-        default: 'core-e2e-report'
+        default: ''
       event:
         description: 'The event that triggered the tests. E.g. pull_request, daily-checks, release-checks, etc.'
         required: true
-        default: 'pull_request'
+        default: ''
       report_title:
         description: 'The title of the report to generate. It can be the PR title, a commit message or any other identifier.'
         required: true
-        default: 'Update Playwright to 1.44.1 from 1.41.1'
+        default: ''
       pr_number:
         description: 'The PR number if the report if for a pull request.'
         required: false
@@ -27,7 +27,7 @@ on:
       ref_name:
         description: 'The branch or tag name.'
         required: false
-        default: 'trunk'
+        default: ''
       commit_sha:
         description: 'The commit SHA.'
         required: false
@@ -38,7 +38,7 @@ on:
       suite:
         description: 'The suite name. E.g. core API, core e2e, blocks e2e, etc.'
         required: true
-        default: 'Core e2e tests'
+        default: ''
 
 jobs:
   report:
