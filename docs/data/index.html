@@ -171,7 +171,6 @@ layout: common
     // Use a dictionary to accumulate sums and counts
     var dataDict = {};
     var numRows = dataTable.getNumberOfRows();
-    var goalLine = [];
     for (var i = 0; i < numRows; i++) {
       var date = dataTable.getFormattedValue(i, 0);
       var numTests = parseFloat(dataTable.getFormattedValue(i, 1));
@@ -187,7 +186,6 @@ layout: common
     var labels = [];
     var data = [];
     for (var date in dataDict) {
-      goalLine.push(900);
       if (dataDict.hasOwnProperty(date)) {
         labels.push(date);
         data.push(dataDict[date].sum / dataDict[date].count);
@@ -255,7 +253,9 @@ layout: common
     // Use a dictionary to accumulate sums and counts
     var dataDict = {};
     var numRows = dataTable.getNumberOfRows();
+    var goalLine = [];
     for (var i = 0; i < numRows; i++) {
+      goalLine.push(900);
       var date = dataTable.getFormattedValue(i, 0);
       var numTests = parseFloat(dataTable.getFormattedValue(i, 1));
 
