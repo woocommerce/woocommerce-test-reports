@@ -1,0 +1,12 @@
+---
+layout: redirect
+redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/48399/e2e/index.html
+pr_number: 48399
+pr_title_encoded: "Product+Editor%3A+Respect+system+setting+for+maximum+image+upload+file+size+when+dropping+images+on+Images"
+pr_test_type: e2e
+last_published: "2024-06-11 21:52:07 +0000"
+commit_sha: 6f4d52122d26c41e3be69402b4129c75713edec8
+commit_message: ""
+branch_name: fix/product-editor-max-upload-size
+passed: true
+---
