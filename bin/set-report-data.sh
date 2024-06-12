@@ -86,6 +86,9 @@ fi
 
 REPORT_ID=$(echo "$S3_REPORT_PATH" | tr ' /. ' '-')
 
+S3_REPORT_PATH=$(echo "$S3_REPORT_PATH" | tr '[:upper:]' '[:lower:]')
+REPORT_ID=$(echo "$REPORT_ID" | tr '[:upper:]' '[:lower:]')
+
 echo "Set REPORT_ID to $REPORT_ID"
 echo "Set REPORT_TITLE to $REPORT_TITLE"
 echo "Set S3_REPORT_PATH to $S3_REPORT_PATH"
