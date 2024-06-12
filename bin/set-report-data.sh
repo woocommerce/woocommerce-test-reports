@@ -35,7 +35,7 @@ for var in SUITE_NAME REF_NAME REPORT_TITLE; do
 done
 
 
-if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "nightly-checks" ]]; then
+if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "daily-e2e" ]] || [[ "$EVENT_NAME" == "nightly-checks" ]]; then
     REPORT_GROUP=$(date +%Y%m%d)
     echo "Set REPORT_GROUP to $REPORT_GROUP"
 
@@ -72,7 +72,7 @@ if [[ -z "$PR_NUMBER" ]]; then
 
 SUITE_NAME=$(echo "$SUITE_NAME" | tr ' /. ' '_')
 
-if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "nightly-checks" ]]; then
+if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "daily-e2e" ]] || [[ "$EVENT_NAME" == "nightly-checks" ]]; then
     S3_REPORT_PATH="$REPORT_GROUP/$SUITE_NAME"
     REPORT_ID=$(echo "$SUITE_NAME" | tr ' /. ' '-')
 elif [[ "$EVENT_NAME" == "pull_request" ]] || [[ "$EVENT_NAME" == "pr" ]]; then
@@ -83,6 +83,8 @@ elif [[ "$EVENT_NAME" == "push" ]]; then
 else
   S3_REPORT_PATH="$EVENT_NAME/$REPORT_GROUP/$SUITE_NAME/$REPORT_NAME"
 fi
+
+#541ab7c
 
 REPORT_ID=$(echo "$S3_REPORT_PATH" | tr ' /. ' '-')
 
