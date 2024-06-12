@@ -3,8 +3,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import Reports from './components/Reports';
 import { HashRouter, Route, Routes } from 'react-router-dom';
+import PRReports from "./components/PRReports";
+import RefNameReports from "./components/RefNameReports";
 
 function App() {
 	const basename = '/woocommerce-test-reports';
@@ -18,15 +19,17 @@ function App() {
 						<Navbar.Toggle aria-controls="basic-navbar-nav" />
 						<Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
 							<Nav activeKey={ location.pathname } className="ml-auto">
-								<Nav.Link href={ `${ basename }/#/reports` }>Reports</Nav.Link>
+								<Nav.Link href={ `${ basename }/#/pr` }>By Pull requests</Nav.Link>
+								<Nav.Link href={ `${ basename }/#/ref` }>By Ref</Nav.Link>
 							</Nav>
 						</Navbar.Collapse>
 					</Container>
 				</Navbar>
 				<HashRouter>
 					<Routes>
-						<Route exact path="/" element={ <Reports /> } />
-						<Route exact path="/reports" element={ <Reports /> } />
+						<Route exact path="/" element={ <PRReports /> } />
+						<Route exact path="/pr" element={ <PRReports /> } />
+						<Route exact path="/ref" element={ <RefNameReports /> } />
 					</Routes>
 				</HashRouter>
 			</div>
