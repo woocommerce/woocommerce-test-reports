@@ -87,6 +87,7 @@ fi
 
 METADATA="{
   \"suite\": \"$SUITE_NAME\",
+  \"group\": \"$REPORT_GROUP\",
   \"ref_name\": \"$REF_NAME\",
   \"run_id\": \"$RUN_ID\",
   \"event_name\": \"$EVENT_NAME\",
