@@ -59,7 +59,7 @@ echo "----------------------------------------"
 echo "Creating report '$REPORT_ID'"
 
 echo "Getting history from existing report in S3"
-aws s3 cp --only-show-errors --recursive "$s3_reports_path/$REPORT_ID/report/history" "$ALLURE_RESULTS_PATH/history" || true
+aws s3 cp --only-show-errors --recursive "$s3_reports_path/$S3_REPORT_PATH/report/history" "$ALLURE_RESULTS_PATH/history" || true
 
 echo "Creating executor.json"
 jq -n --arg url "$REPORTS_BASE_URL" \
