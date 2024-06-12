@@ -1,5 +1,5 @@
 :root {
-	--default-background: #343a40;
+	--default-background: #212529;
 	--accent-color: #1a1b1f;
 	--borders-color: #454c54;
 	--default-font-color: #cccccc;
@@ -10,11 +10,12 @@
 	--color-skipped: rgba( 170, 170, 170, 0.73 );
 	--color-total: rgba( 0, 123, 255, 0.73 );
 	--color-neutral: rgba( 170, 170, 170, 0.73 );
+	--woo-color: #96588a;
 	font-size: 16px;
 }
 
 .App {
-	background-color: var( --default-background );
+	background-color: var(--default-background);
 	color: var( --default-font-color );
 	display: flex;
 	flex-direction: column;
@@ -147,8 +148,6 @@ a {
 
 .reportsTable {
 	color: var( --default-font-color );
-	background-color: var( --default-background );
-	border: 0;
 }
 
 .reportsTable > thead {

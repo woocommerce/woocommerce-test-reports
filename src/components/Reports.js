@@ -62,18 +62,10 @@ export default class Reports extends React.Component {
 	}
 
 	getReportLinkCell( report, metadata, isFailed, totalTests ) {
-		const linkUrl = `${ configData.dataSourceURL }/reports/${ report.metadata.path }/index.html`;
-
-		const reportKey = report.id;
-		let reportTitle = report.id;
-
-		if ( metadata.pr_title ) {
-			const prNumber = `(#${ metadata.pr_number })`;
-			reportTitle = `${ metadata.pr_title } ${ prNumber }`;
-		}
-
-		const branchUrl = `https://github.com/${ metadata.repository }/tree/${ metadata.branch }`;
-		const prUrl = `https://github.com/${ metadata.repository }/pull/${ metadata.pr_number }`;
+		const linkUrl = `${ configData.dataSourceURL }/reports/${ metadata.path }/index.html`;
+		const repo = metadata.repository ? metadata.repository : 'woocommerce/woocommerce';
+		const branchUrl = `https://github.com/${ repo }/tree/${ metadata.ref_name }`;
+		const prUrl = `https://github.com/${ repo }/pull/${ metadata.pr_number }`;
 
 		let statusIcon = faQuestion;
 		let statusClassName = 'warning';
@@ -93,16 +85,15 @@ export default class Reports extends React.Component {
 						target="_blank"
 						rel="noreferrer"
 					>
-						{ reportTitle }
+						{ metadata.report_title }
 						<br />
 					</a>
 				</li>
 				<li>
 					<small>
-						#{ reportKey } { ' • ' }
 						<FontAwesomeIcon icon={ faCodeBranch } />{ ' ' }
 						<a href={ branchUrl } target={ '_blank' } className={ 'report-link' } rel="noreferrer">
-							{ metadata.branch }
+							{ metadata.ref_name }
 						</a>
 						{ metadata.pr_number ? ' • ' : '' }
 						{ metadata.pr_number && (
@@ -122,7 +113,7 @@ export default class Reports extends React.Component {
 	}
 
 	getTestResultsCell( statistic ) {
-		const counts = [ 'failed', 'passed', 'total' ].map( ( label, id ) => {
+		const counts = [ 'failed', 'passed', 'skipped', 'total' ].map( ( label, id ) => {
 			const count = label === 'failed' ? statistic[ label ] + statistic.broken : statistic[ label ];
 			return (
 				<span key={ id } className={ `label label-status-${ label }` }>
@@ -143,7 +134,8 @@ export default class Reports extends React.Component {
 	}
 
 	getMetadataCell( report ) {
-		const runUrl = `https://github.com/Automattic/jetpack/actions/runs/${ report.metadata.run_id }`;
+		const repo = report.metadata.repository ? report.metadata.repository : 'woocommerce/woocommerce';
+		const runUrl = `https://github.com/${repo}/actions/runs/${ report.metadata.run_id }`;
 		return (
 			<ul className={ 'list-unstyled' }>
 				<li>
@@ -166,7 +158,7 @@ export default class Reports extends React.Component {
 			return null;
 		}
 		return (
-			<Table size="sm" responsive="sm" borderless className="reportsTable">
+			<Table hover size="sm" variant="dark" responsive className={'reportsTable'}>
 				<thead>
 				<tr className={'headerRow'}>
 					<td colSpan="3" className={'sort-buttons'}>
