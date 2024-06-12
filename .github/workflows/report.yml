@@ -105,6 +105,9 @@ jobs:
           
           # Unzip artifacts
           unzip -q downloads/${{ env.ARTIFACT_NAME }}.zip -d downloads
+          
+          # Check artifacts
+          ls -la downloads
 
       - name: Install Allure commandline
         run: npm install -g allure-commandline@^2.29.0
