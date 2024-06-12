@@ -34,6 +34,8 @@ for var in SUITE_NAME REF_NAME REPORT_TITLE; do
     declare "$var=$val"
 done
 
+# Use short commit sha
+COMMIT_SHA=$(echo "$COMMIT_SHA" | cut -c 1-7)
 
 if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "daily-e2e" ]] || [[ "$EVENT_NAME" == "nightly-checks" ]]; then
     REPORT_GROUP=$(date +%Y%m%d)
