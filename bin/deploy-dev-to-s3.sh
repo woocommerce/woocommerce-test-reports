@@ -5,4 +5,4 @@ SCRIPT_PATH=$(
   pwd -P
 )
 
-aws s3 sync "$SCRIPT_PATH/../build" s3://a8c-woo-test-reports/dashboard --delete
+aws s3 sync "$SCRIPT_PATH/../build" s3://a8c-woo-test-reports/woocommerce-test-reports --delete

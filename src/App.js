@@ -6,6 +6,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import PRReports from "./components/PRReports";
 import RefNameReports from "./components/RefNameReports";
+import DailyReports from "./components/DailyNameReports";
 
 function App() {
 	const basename = '/woocommerce-test-reports';
@@ -21,6 +22,7 @@ function App() {
 							<Nav activeKey={ location.pathname } className="ml-auto">
 								<Nav.Link href={ `${ basename }/#/pr` }>By Pull requests</Nav.Link>
 								<Nav.Link href={ `${ basename }/#/ref` }>By Ref</Nav.Link>
+								<Nav.Link href={ `${ basename }/#/daily` }>Daily</Nav.Link>
 							</Nav>
 						</Navbar.Collapse>
 					</Container>
@@ -30,6 +32,7 @@ function App() {
 						<Route exact path="/" element={ <PRReports /> } />
 						<Route exact path="/pr" element={ <PRReports /> } />
 						<Route exact path="/ref" element={ <RefNameReports /> } />
+						<Route exact path="/daily" element={ <DailyReports /> } />
 					</Routes>
 				</HashRouter>
 			</div>
