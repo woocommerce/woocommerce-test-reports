@@ -26,7 +26,8 @@ export default class Reports extends React.Component {
 		} )
 			.then( response => response.json() )
 			.then( jsonData => {
-				const reports =  jsonData.reports.filter( report => report.metadata.event_name === this.state.event );
+				const events = this.props.event.split( ',' );
+				const reports =  jsonData.reports.filter( report => events.includes( report.metadata.event_name ) );
 
 				this.setState( {
 					reports,
