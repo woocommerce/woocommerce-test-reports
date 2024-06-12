@@ -92,7 +92,7 @@ METADATA="{
   \"event_name\": \"$EVENT_NAME\",
   \"report_title\": \"$REPORT_TITLE\",
   \"pr_number\": \"$PR_NUMBER\",
-  \"sha\": \"$COMMIT_SHA\"
+  \"sha\": \"$COMMIT_SHA\",
   \"path\": \"$S3_REPORT_PATH\"
 }"
 
