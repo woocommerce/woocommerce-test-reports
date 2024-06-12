@@ -41,6 +41,9 @@ if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "daily-e2e" ]] |
     REPORT_GROUP=$(date +%Y%m%d)
     echo "Set REPORT_GROUP to $REPORT_GROUP"
 
+    REPORT_TITLE="Daily checks $(date +%Y-%m-%d)"
+    echo "Set REPORT_TITLE to $REPORT_TITLE"
+
     REPORT_NAME='latest'
     echo "Set REPORT_NAME to $REPORT_NAME"
 fi
