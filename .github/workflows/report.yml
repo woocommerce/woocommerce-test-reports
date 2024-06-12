@@ -55,7 +55,7 @@ jobs:
       REPOSITORY: ${{ inputs.repository }}
       SUITE_NAME: ${{ inputs.suite }}
       DOWNLOAD_PATH: downloads
-      REPORT_PATH: downloads/reports
+      REPORT_PATH: downloads/_report
 
     steps:
       - name: Checkout
