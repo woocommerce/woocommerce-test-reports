@@ -73,12 +73,26 @@ if [[ -z "$PR_NUMBER" ]]; then
 SUITE_NAME=$(echo "$SUITE_NAME" | tr ' /. ' '_')
 
 REPORT_ID="$EVENT_NAME-$REPORT_GROUP-$SUITE_NAME-$REPORT_NAME"
+
+if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "nightly-checks" ]]; then
+    S3_REPORT_PATH="$REPORT_GROUP/$SUITE_NAME/$REPORT_NAME"
+elif [[ "$EVENT_NAME" == "pull_request" ]] || [[ "$EVENT_NAME" == "pr" ]]; then
+    S3_REPORT_PATH="pr/$REPORT_GROUP/$SUITE_NAME/$REPORT_NAME"
+elif [[ "$EVENT_NAME" == "push" ]]; then
+    S3_REPORT_PATH="$REPORT_GROUP/$SUITE_NAME/$REPORT_NAME"
+else
+  S3_REPORT_PATH="$EVENT_NAME/$REPORT_GROUP/$SUITE_NAME/$REPORT_NAME"
+fi
+
 echo "Set REPORT_ID to $REPORT_ID"
 echo "Set REPORT_TITLE to $REPORT_TITLE"
+echo "Set S3_REPORT_PATH to $S3_REPORT_PATH"
+
 echo "REPORT_ID=$REPORT_ID" >> "$GITHUB_ENV"
 echo "REPORT_GROUP=$REPORT_GROUP" >> "$GITHUB_ENV"
 echo "REPORT_NAME=$REPORT_NAME" >> "$GITHUB_ENV"
 echo "REPORT_TITLE=$REPORT_TITLE" >> "$GITHUB_ENV"
+echo "S3_REPORT_PATH=$S3_REPORT_PATH" >> "$GITHUB_ENV"
 
 
 

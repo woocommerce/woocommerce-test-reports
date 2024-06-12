@@ -46,6 +46,11 @@ if [[ -z "$REPORT_NAME" ]]; then
      exit 1
 fi
 
+if [[ -z "$S3_REPORT_PATH" ]]; then
+     echo "::error:: missing S3_REPORT_PATH environment variable"
+     exit 1
+fi
+
 s3_reports_path="s3://a8c-woo-test-reports/reports"
 REPORTS_BASE_URL=$(jq -r '.reportDeepUrl' "$SCRIPT_PATH/../src/config.json")
 
@@ -56,7 +61,6 @@ echo "Creating report '$REPORT_ID'"
 echo "Getting history from existing report in S3"
 aws s3 cp --only-show-errors --recursive "$s3_reports_path/$REPORT_ID/report/history" "$ALLURE_RESULTS_PATH/history" || true
 
-S3_REPORT_PATH="$EVENT_NAME/$REPORT_GROUP/$REPORT_NAME"
 echo "Creating executor.json"
 jq -n --arg url "$REPORTS_BASE_URL" \
   --arg reportUrl "$REPORTS_BASE_URL/$S3_REPORT_PATH" \
@@ -89,6 +93,7 @@ METADATA="{
   \"report_title\": \"$REPORT_TITLE\",
   \"pr_number\": \"$PR_NUMBER\",
   \"sha\": \"$COMMIT_SHA\"
+  \"path\": \"$S3_REPORT_PATH\"
 }"
 
 echo "$METADATA" | jq --arg updateDate "$(date +"%Y-%m-%dT%H:%M:%S%z")" '. + {"updated_on":$updateDate}' >"$REPORT_PATH/metadata.json"
