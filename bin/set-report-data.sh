@@ -75,9 +75,9 @@ SUITE_NAME=$(echo "$SUITE_NAME" | tr ' /. ' '_')
 REPORT_ID="$EVENT_NAME-$REPORT_GROUP-$SUITE_NAME-$REPORT_NAME"
 
 if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "nightly-checks" ]]; then
-    S3_REPORT_PATH="$REPORT_GROUP/$SUITE_NAME/$REPORT_NAME"
+    S3_REPORT_PATH="$REPORT_GROUP/$SUITE_NAME"
 elif [[ "$EVENT_NAME" == "pull_request" ]] || [[ "$EVENT_NAME" == "pr" ]]; then
-    S3_REPORT_PATH="pr/$REPORT_GROUP/$SUITE_NAME/$REPORT_NAME"
+    S3_REPORT_PATH="pr/$REPORT_GROUP/$SUITE_NAME"
 elif [[ "$EVENT_NAME" == "push" ]]; then
     S3_REPORT_PATH="$REPORT_GROUP/$SUITE_NAME/$REPORT_NAME"
 else
