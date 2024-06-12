@@ -72,17 +72,19 @@ if [[ -z "$PR_NUMBER" ]]; then
 
 SUITE_NAME=$(echo "$SUITE_NAME" | tr ' /. ' '_')
 
-REPORT_ID="$EVENT_NAME-$REPORT_GROUP-$SUITE_NAME-$REPORT_NAME"
-
 if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "nightly-checks" ]]; then
     S3_REPORT_PATH="$REPORT_GROUP/$SUITE_NAME"
+    REPORT_ID=$(echo "$SUITE_NAME" | tr ' /. ' '-')
 elif [[ "$EVENT_NAME" == "pull_request" ]] || [[ "$EVENT_NAME" == "pr" ]]; then
     S3_REPORT_PATH="pr/$REPORT_GROUP/$SUITE_NAME"
+    REPORT_ID="$REPORT_GROUP-$SUITE_NAME"
 elif [[ "$EVENT_NAME" == "push" ]]; then
     S3_REPORT_PATH="$REPORT_GROUP/$SUITE_NAME/$REPORT_NAME"
 else
   S3_REPORT_PATH="$EVENT_NAME/$REPORT_GROUP/$SUITE_NAME/$REPORT_NAME"
 fi
+
+REPORT_ID=$(echo "$S3_REPORT_PATH" | tr ' /. ' '-')
 
 echo "Set REPORT_ID to $REPORT_ID"
 echo "Set REPORT_TITLE to $REPORT_TITLE"
