@@ -1,10 +1,57 @@
 {
+  "name": "woocommerce-test-reports",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woocommerce/woocommerce-test-reports.git"
+  },
+  "bugs": {
+    "url": "https://github.com/woocommerce/woocommerce-test-reports/issues"
+  },
+  "homepage": "https://woocommerce.github.io/woocommerce-test-reports/",
   "dependencies": {
-    "axios": "^1.6.2",
-    "googleapis": "^118.0.0",
-    "papaparse": "^5.4.1"
+    "@fortawesome/fontawesome-svg-core": "6.1.1",
+    "@fortawesome/free-solid-svg-icons": "6.1.1",
+    "@fortawesome/react-fontawesome": "0.1.18",
+    "bootstrap": "5.3.3",
+    "moment": "2.29.4",
+    "react": "16.14.0",
+    "react-bootstrap": "2.4.0",
+    "react-dom": "16.14.0",
+    "react-router-dom": "6.3.0",
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {
-    "@aws-sdk/client-s3": "^3.81.0"
+    "@aws-sdk/client-s3": "^3.81.0",
+    "@babel/preset-react": "^7.16.0",
+    "@octokit/rest": "^18.12.0",
+    "@wordpress/eslint-plugin": "^19.0.0",
+    "eslint": "^8.57.0",
+    "gh-pages": "^4.0.0",
+    "prettier": "npm:wp-prettier@^3.0.3"
+  },
+  "scripts": {
+    "start": "PORT=3000 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -m 'Pushing to gh-pages'",
+    "lint": "eslint --ext .js,.jsx,.cjs,.mjs,.ts,.tsx .",
+    "prettier": "prettier --write '**/*.{js,jsx,ts,tsx}'"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
