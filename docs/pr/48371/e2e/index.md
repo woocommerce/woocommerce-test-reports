@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/48371/e2e/i
 pr_number: 48371
 pr_title_encoded: "feat%3A+add+%60aria-required%60+attributes+to+WC+form+fields"
 pr_test_type: e2e
-last_published: "2024-06-13 12:58:46 +0000"
-commit_sha: 82ab573c10aa809cc16dde31a4e3c29e3cdd8eca
+last_published: "2024-06-13 13:40:03 +0000"
+commit_sha: c18d9b790ea0e573a7c264cf681c0e5812cf20d6
 commit_message: ""
 branch_name: frosso-patch-1
 passed: true
