@@ -1,9 +1,13 @@
 import React from 'react';
 import configData from '../config.json';
 import {Table} from "react-bootstrap";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faCodeBranch, faQuestion, faTimes } from '@fortawesome/free-solid-svg-icons';
 import moment from 'moment';
+import branchSVG from '../assets/branch.svg';
+import commitSVG from '../assets/commit.svg';
+import prSVG from '../assets/pr.svg';
+import passedSVG from '../assets/passed.svg';
+import failedSVG from '../assets/failed.svg';
+import unknownSVG from '../assets/unknown.svg';
 
 export default class Reports extends React.Component {
 	constructor( props ) {
@@ -74,10 +78,11 @@ export default class Reports extends React.Component {
 				<tr>
 					<th colSpan={3}>
 						<ul className={'list-unstyled'}>
-							<li>{report_title}</li>
+							<li className={'groupTitle'}>{report_title}</li>
 							<li>
 								<small>
-									<FontAwesomeIcon icon={faCodeBranch}/>{' '}
+									<img src={ branchSVG } alt={'branch'} width={16} height={16} />
+									{' '}
 									<a
 										href={branchUrl}
 										target={'_blank'}
@@ -87,24 +92,24 @@ export default class Reports extends React.Component {
 										{ ref_name.length > 50 ? ref_name.substring(0, 50) + '...' : ref_name }
 									</a>
 									{pr_number && (
-										<a
+										<span>&nbsp;&nbsp;&nbsp;&nbsp;<a
 											href={prUrl}
 											target={'_blank'}
 											className={'report-link'}
 											rel={'noreferrer'}
 										>
-											&nbsp; • PR { pr_number }
-										</a>
+											<img src={ prSVG } alt={'branch'} width={16} height={16}  />  PR {pr_number}
+										</a></span>
 									)}
 									{!pr_number && (
-										<a
+										<span>&nbsp;&nbsp;&nbsp;&nbsp;<a
 											href={shaUrl}
 											target={'_blank'}
 											className={'report-link'}
 											rel={'noreferrer'}
 										>
-											&nbsp; • commit { sha.substring(0, 6) }
-										</a>
+											<img src={ commitSVG } alt={'branch'} width={16} height={16} /> commit {sha.substring(0, 6)}
+										</a></span>
 									)}
 								</small>
 							</li>
@@ -141,18 +146,17 @@ export default class Reports extends React.Component {
 		const { results, path, suite } = report;
 		const isFailed = results.total !== results.passed + results.skipped;
 		const linkUrl = `${ configData.dataSourceURL }/reports/${ path }/index.html`;
-		let statusIcon = faQuestion;
-		let statusClassName = 'warning';
+		let statusIcon = <img src={ unknownSVG } alt={'status icon'} width={16} height={16} />;
 		if ( results.total > 0 ) {
-			statusIcon = isFailed ? faTimes : faCheck;
-			statusClassName = isFailed ? 'failed' : 'passed';
+			statusIcon = isFailed ? <img src={failedSVG} alt={'status icon'} width={16} height={16}/> :
+				<img src={passedSVG} alt={'status icon'} width={16} height={16}/>;
 		}
 
 		return (
 			<ul className={ 'list-unstyled' }>
 				<li>
-					<FontAwesomeIcon className={ statusClassName } icon={ statusIcon } />
-					&nbsp;
+					{statusIcon}
+					&nbsp;&nbsp;
 					<a
 						href={ linkUrl }
 						className="report-link"
@@ -214,12 +218,13 @@ export default class Reports extends React.Component {
 		}
 		return (
 			<div>
-				<small>{Object.keys(this.state.groups).length} {this.state.event === 'pull_request' ? 'pull requests' : 'runs'}</small>
-				{Object.keys(this.state.groups).map((k, idx) => {
+				<p>
+					<small>{Object.keys(this.state.groups).length} {this.state.event === 'pull_request' ? 'pull requests' : 'runs'}</small></p>
+					{Object.keys(this.state.groups).map((k, idx) => {
 					return this.getGroupTable(k, idx);
 				})
 				}
-				<small>Total reports for all events: {this.state.reportsCount}</small>
+				<p><small>Total reports for all events: {this.state.reportsCount}</small></p>
 			</div>
 		);
 	}

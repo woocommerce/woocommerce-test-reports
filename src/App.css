@@ -41,7 +41,6 @@
 .App-content {
 	width: 95vw;
 	min-height: 90vh;
-	color: var( --default-font-color );
 	padding: 5px 5px 5px 5px;
 	justify-content: space-between;
 }
@@ -53,7 +52,6 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	color: var( --default-font-color );
 	border-top: 1px solid #4d4d4d;
 }
 
@@ -176,79 +174,9 @@ a {
 	padding: 10px 10px 10px 10px;
 }
 
-svg.passed {
-	color: var( --color-passed );
-}
-
-svg.failed {
-	color: var( --color-failed );
-}
-
-svg.warning {
-	color: var( --color-broken );
-}
-
-.sort-by-asc {
-	left: 3px;
-	display: inline-block;
-	width: 0;
-	height: 0;
-	border: solid 6px transparent;
-	margin: 6px 6px 1px 5px;
-	background: transparent;
-	border-bottom: solid 10px var( --default-font-color );
-	border-top-width: 0;
-}
-
-.sort-by-desc {
-	left: 3px;
-	display: inline-block;
-	width: 0;
-	height: 0;
-	border: solid 6px transparent;
-	margin: 6px 6px 1px 5px;
-	background: transparent;
-	border-top: solid 10px var( --default-font-color );
-	border-bottom-width: 0;
-}
-
-.sort-buttons {
-	text-align: right;
-}
-
-.sort-buttons button {
-	margin-left: 15px;
-}
-
-.filters {
-	text-align: left;
-	margin-bottom: 2vh;
-}
-
-.filter-btn svg {
-	margin-right: 7px;
-}
-
-.filter-btn {
-	font-size: 0.8rem;
-	text-transform: uppercase;
-	background-color: var( --default-background );
-	border: 0;
-}
-
-.filter-btn:hover {
-	background-color: var( --accent-color );
-}
-
-.btn-dark:focus {
-	outline: none;
-	box-shadow: none;
-}
-
-#startDate,
-#endDate {
-	font-size: 0.8rem;
-	flex: 0 1 120px;
+.groupTitle {
+	font-size: 1.2rem;
+	color: var( --default-font-color );
 }
 
 .headerRow {
@@ -349,32 +277,8 @@ hr {
 	visibility: visible;
 }
 
-.perf-button {
-	/* min-height: 100px; */
-	border: 2px solid var( --borders-color );
-	/* border: solid 6px transparent; */
-
-	/* background-color: var(--borders-color); */
-	border-radius: 6px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding: 20px;
-	padding-left: 30px;
-	padding-right: 30px;
-}
-
-.perf-button:hover {
-	background-color: rgba( 255, 255, 255, 0.075 );
-}
-
 .inner-title {
 	font-size: 20px;
 	color: var( --default-font-color );
 	font-weight: bold;
-}
-
-.metaText {
-	text-transform: lowercase;
-	font-size: 0.8rem;
-	color: var( --meta-color );
 }
