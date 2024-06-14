@@ -4,7 +4,7 @@
  * It will read data from $reportID/report/widgets/summary.json, $reportID/metadata.json
  */
 
-const { readS3Object, readJson, writeJson} = require( './utils' );
+const { readS3Object, readJson } = require( './utils' );
 const path = require( 'path' );
 const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
 const { s3Params, s3client } = require( './s3-client' );
@@ -23,7 +23,7 @@ if ( ! localReportPath ) {
 	const updatedJson = await updateReportData(localReportPath, json);
 
 	// Write the updated reports list locally
-	writeJson( updatedJson, path.join( "", 'reports.json' ) );
+	// writeJson( updatedJson, path.join( "", 'reports.json' ) );
 
 	// Upload the report to S3
 	const cmd = new PutObjectCommand( {
@@ -32,7 +32,7 @@ if ( ! localReportPath ) {
 		Body: JSON.stringify( updatedJson, null, 2 ),
 		ContentType: 'application/json',
 	} );
-	// await s3client.send( cmd );
+	await s3client.send( cmd );
 } )();
 
 async function updateReportData( reportPath, json ) {
