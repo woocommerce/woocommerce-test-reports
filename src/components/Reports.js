@@ -179,7 +179,7 @@ export default class Reports extends React.Component {
 		return (
 			<ul className={ 'list-unstyled' }>
 				<li>
-					<small>last update: { moment( report.lastUpdate ).fromNow() }</small>
+					<small>last update: { moment( report.updated_on ).fromNow() }</small>
 				</li>
 				<li>
 					<small>
