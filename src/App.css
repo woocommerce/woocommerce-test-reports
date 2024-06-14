@@ -97,7 +97,7 @@
 	padding: 3px 6px 3px 6px;
 	border-radius: 3px;
 	margin: 3px;
-	font-size: 0.8rem;
+	font-size: 0.7rem;
 	font-weight: bold;
 }
 
@@ -134,7 +134,7 @@
 }
 
 .reportNameCell {
-	width: 50%;
+	width: 33%;
 }
 
 a {
@@ -153,14 +153,17 @@ a {
 
 .reportsTable {
 	color: var( --default-font-color );
+	margin-top: 1vw;
+	border-top: 1px solid var( --borders-color );
 }
 
 .reportsTable > thead {
-	border-bottom: 1px solid var( --borders-color );
+	border-bottom: 0;
 }
 
 .reportsTable > tbody > tr {
-	border-bottom: 1px solid var( --borders-color );
+	border-bottom: 0;
+	font-size: 0.9rem;
 }
 
 .reportsTable td {

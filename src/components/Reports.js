@@ -68,7 +68,7 @@ export default class Reports extends React.Component {
 		const prUrl = `https://github.com/${ repo }/pull/${ pr_number }`;
 
 		return (
-			<Table id={id} size="sm" variant="dark" responsive className={'reportsTable'}>
+			<Table id={id} responsive="sm" variant="dark" borderless hover className={'reportsTable'}>
 				<thead>
 				<tr>
 					<th colSpan={3}>
