@@ -62,10 +62,6 @@ export default class Reports extends React.Component {
 
 	getGroupTable( group, id ) {
 		//       "lastUpdate": "2024-06-14T11:36:44.433Z",
-		//       "pr_number": "46466",
-		//       "report_title": "Product Collection Track block instances and feature usage",
-		//       "ref_name": "add/collection-instances-telemetry",
-		//       "sha": "d0362a2e48109f208df49d9b29ea9acc4fdae92d",
 		const { pr_number, report_title, ref_name, repository, sha } = this.state.groups[group];
 		const repo = repository ? repository : 'woocommerce/woocommerce';
 		const branchUrl = `https://github.com/${ repo }/tree/${ ref_name }`;
@@ -219,12 +215,14 @@ export default class Reports extends React.Component {
 		return (
 			<div>
 				<p>
-					<small>{Object.keys(this.state.groups).length} {this.state.event === 'pull_request' ? 'pull requests' : 'runs'}</small></p>
-					{Object.keys(this.state.groups).map((k, idx) => {
+					<small>{Object.keys(this.state.groups).length} {this.state.event === 'pull_request' ? 'pull requests' : 'runs'}</small>
+					, {' '}
+					<small>{Object.values(this.state.groups).reduce((total, group) => total + group.reports.length, 0)} reports</small>
+				</p>
+				{Object.keys(this.state.groups).map((k, idx) => {
 					return this.getGroupTable(k, idx);
 				})
 				}
-				<p><small>Total reports for all events: {this.state.reportsCount}</small></p>
 			</div>
 		);
 	}
