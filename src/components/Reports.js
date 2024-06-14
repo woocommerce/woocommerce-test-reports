@@ -11,7 +11,7 @@ export default class Reports extends React.Component {
 		this.state = {
 			event: this.props.event,
 			groupKey: this.props.groupKey,
-			reports: [],
+			groups: [],
 			reportsCount: undefined,
 			isDataFetched: false,
 		};
@@ -27,10 +27,18 @@ export default class Reports extends React.Component {
 			.then( response => response.json() )
 			.then( jsonData => {
 				const events = this.props.event.split( ',' );
-				const reports =  jsonData.reports.filter( report => events.includes( report.metadata.event_name ) );
+				let groups = {};
+
+				for ( const event of events ) {
+					groups = {
+						...jsonData[ event ]
+					}
+				}
+
+				console.log(groups);
 
 				this.setState( {
-					reports,
+					groups,
 					reportsCount: jsonData.reportsCount,
 					isDataFetched: true,
 				} );
@@ -40,7 +48,7 @@ export default class Reports extends React.Component {
 	}
 
 	sortByDate( isSortAsc ) {
-		return this.state.reports.sort( ( r1, r2 ) => {
+		return this.state.groups.sort( ( r1, r2 ) => {
 			if ( isSortAsc ) {
 				return Date.parse( r1.lastUpdate ) - Date.parse( r2.lastUpdate );
 			}
@@ -48,29 +56,79 @@ export default class Reports extends React.Component {
 		} );
 	}
 
+	getGroupTable( group, id ) {
+		//       "lastUpdate": "2024-06-14T11:36:44.433Z",
+		//       "pr_number": "46466",
+		//       "report_title": "Product Collection Track block instances and feature usage",
+		//       "ref_name": "add/collection-instances-telemetry",
+		//       "sha": "d0362a2e48109f208df49d9b29ea9acc4fdae92d",
+		const { pr_number, report_title, ref_name, repository } = this.state.groups[group];
+		const repo = repository ? repository : 'woocommerce/woocommerce';
+		const branchUrl = `https://github.com/${ repo }/tree/${ ref_name }`;
+		const prUrl = `https://github.com/${ repo }/pull/${ pr_number }`;
+
+		return (
+			<Table id={id} size="sm" variant="dark" responsive className={'reportsTable'}>
+				<thead>
+				<tr>
+					<th colSpan={3}>
+						<ul className={'list-unstyled'}>
+							<li>{report_title}</li>
+							<li>
+								<small>
+									<FontAwesomeIcon icon={faCodeBranch}/>{' '}
+									<a href={branchUrl} target={'_blank'} className={'report-link'} rel="noreferrer">
+										{ref_name}
+									</a>
+									{pr_number ? ' • ' : ''}
+									{pr_number && (
+										<a
+											href={prUrl}
+											target={'_blank'}
+											className={'report-link'}
+											rel={'noreferrer'}
+										>
+											PR {pr_number}
+										</a>
+									)}
+								</small>
+							</li>
+						</ul>
+					</th>
+				</tr>
+				</thead>
+					<tbody>
+						{ this.state.groups[group].reports.map( ( report, idx ) => {
+								return this.getReportRow( report, idx );
+						} ) }
+					</tbody>
+			</Table>
+		);
+	}
+
 	getReportRow( report, id ) {
-		const { statistic, metadata, history } = report;
-		const isFailed = statistic.total !== statistic.passed + statistic.skipped;
 		return (
 			<tr key={ id }>
 				<td className={ 'reportNameCell' }>
-					{ this.getReportLinkCell( report, metadata, isFailed, statistic.total ) }
+					{ this.getReportLinkCell( report ) }
 				</td>
-				<td>{ this.getTestResultsCell( statistic ) } { this.getTestResultsHistoryCell( history ) }</td>
-				<td>{ this.getMetadataCell( report ) }</td>
+				<td>
+					{ this.getTestResultsCell( report.results ) } { this.getTestResultsHistoryCell( report.history ) }
+				</td>
+				<td>
+					{ this.getMetadataCell( report ) }
+				</td>
 			</tr>
 		);
 	}
 
-	getReportLinkCell( report, metadata, isFailed, totalTests ) {
-		const linkUrl = `${ configData.dataSourceURL }/reports/${ metadata.path }/index.html`;
-		const repo = metadata.repository ? metadata.repository : 'woocommerce/woocommerce';
-		const branchUrl = `https://github.com/${ repo }/tree/${ metadata.ref_name }`;
-		const prUrl = `https://github.com/${ repo }/pull/${ metadata.pr_number }`;
-
+	getReportLinkCell( report ) {
+		const { results, path, suite } = report;
+		const isFailed = results.total !== results.passed + results.skipped;
+		const linkUrl = `${ configData.dataSourceURL }/reports/${ path }/index.html`;
 		let statusIcon = faQuestion;
 		let statusClassName = 'warning';
-		if ( totalTests > 0 ) {
+		if ( results.total > 0 ) {
 			statusIcon = isFailed ? faTimes : faCheck;
 			statusClassName = isFailed ? 'failed' : 'passed';
 		}
@@ -86,36 +144,17 @@ export default class Reports extends React.Component {
 						target="_blank"
 						rel="noreferrer"
 					>
-						{ metadata.report_title }
+						{ suite }
 						<br />
 					</a>
-				</li>
-				<li>
-					<small>
-						<FontAwesomeIcon icon={ faCodeBranch } />{ ' ' }
-						<a href={ branchUrl } target={ '_blank' } className={ 'report-link' } rel="noreferrer">
-							{ metadata.ref_name }
-						</a>
-						{ metadata.pr_number ? ' • ' : '' }
-						{ metadata.pr_number && (
-							<a
-								href={ prUrl }
-								target={ '_blank' }
-								className={ 'report-link' }
-								rel={ 'noreferrer' }
-							>
-								PR { metadata.pr_number }
-							</a>
-						) }
-					</small>
 				</li>
 			</ul>
 		);
 	}
 
-	getTestResultsCell( statistic ) {
+	getTestResultsCell( results ) {
 		const counts = [ 'failed', 'passed', 'skipped', 'total' ].map( ( label, id ) => {
-			const count = label === 'failed' ? statistic[ label ] + statistic.broken : statistic[ label ];
+			const count = results[ label ];
 			return (
 				<span key={ id } className={ `label label-status-${ label }` }>
 					{ label } { count }
@@ -135,8 +174,8 @@ export default class Reports extends React.Component {
 	}
 
 	getMetadataCell( report ) {
-		const repo = report.metadata.repository ? report.metadata.repository : 'woocommerce/woocommerce';
-		const runUrl = `https://github.com/${repo}/actions/runs/${ report.metadata.run_id }`;
+		const repo = report.repository ? report.repository : 'woocommerce/woocommerce';
+		const runUrl = `https://github.com/${repo}/actions/runs/${ report.run_id }`;
 		return (
 			<ul className={ 'list-unstyled' }>
 				<li>
@@ -146,7 +185,7 @@ export default class Reports extends React.Component {
 					<small>
 						last run id:{ ' ' }
 						<a href={ runUrl } target={ '_blank' } className={ 'report-link' } rel="noreferrer">
-							{ report.metadata.run_id }
+							{ report.run_id }
 						</a>
 					</small>
 				</li>
@@ -159,25 +198,14 @@ export default class Reports extends React.Component {
 			return null;
 		}
 		return (
-			<Table hover size="sm" variant="dark" responsive className={'reportsTable'}>
-				<thead>
-				<tr className={'headerRow'}>
-					<td colSpan="3" className={'sort-buttons'}>
-						<div className={'d-flex justify-content-between'}>
-							<div>{this.state.reports.length} reports</div>
-						</div>
-					</td>
-				</tr>
-				</thead>
-				<tbody>
-				{this.state.reports.map((report, id) => this.getReportRow(report, id))}
-				</tbody>
-				<tfoot>
-				<tr>
-					<td colSpan={3}>Total reports: {this.state.reportsCount}</td>
-				</tr>
-				</tfoot>
-			</Table>
+			<div>
+				<small>{Object.keys(this.state.groups).length} report groups</small>
+				{Object.keys(this.state.groups).map((k, idx) => {
+					return this.getGroupTable(k, idx);
+				})
+				}
+				<small>Total reports for all events: {this.state.reportsCount}</small>
+			</div>
 		);
 	}
 }

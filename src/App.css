@@ -3,6 +3,7 @@
 	--accent-color: #1a1b1f;
 	--borders-color: #454c54;
 	--default-font-color: #cccccc;
+	--meta-color: #b9bbbd;
 	--default-link-color: #539bf5;
 	--color-passed: rgba( 115, 151, 75, 0.73 );
 	--color-failed: rgba( 253, 90, 62, 0.71 );
@@ -367,4 +368,10 @@ hr {
 	font-size: 20px;
 	color: var( --default-font-color );
 	font-weight: bold;
+}
+
+.metaText {
+	text-transform: lowercase;
+	font-size: 0.8rem;
+	color: var( --meta-color );
 }
