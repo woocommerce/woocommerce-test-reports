@@ -12,10 +12,10 @@ function App() {
 	const basename = '/woocommerce-test-reports';
 
 	const reportRoutes = [
-		{ path: '/pr', name: 'pull requests', event: 'pull_request', groupKey: 'pr_number' },
-		{ path: '/trunk', name: 'trunk', event: 'push', groupKey: 'sha' },
-		{ path: '/daily', name: 'daily', event: 'daily-e2e, daily-checks, nightly-checks', groupKey: 'group' },
-		{ path: '/releases', name: 'releases', event: 'release-checks', groupKey: 'ref_name' },
+		{ path: '/pr', name: 'pull requests', event: 'pull_request' },
+		{ path: '/trunk', name: 'trunk', event: 'push' },
+		{ path: '/daily', name: 'daily', event: 'daily-checks,daily-e2e,nightly-checks' },
+		{ path: '/releases', name: 'releases', event: 'release-checks' },
 	]
 
 	return (

@@ -34,12 +34,12 @@ export default class Reports extends React.Component {
 				let groups = {};
 
 				for ( const event of events ) {
-					groups = {
-						...jsonData[ event ]
+					if(jsonData[ event ]) {
+						groups = {
+							...jsonData[event]
+						}
 					}
 				}
-
-				console.log(groups);
 
 				this.setState( {
 					groups,
