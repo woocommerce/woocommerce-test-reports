@@ -58,10 +58,10 @@ async function updateReportData( metadata, summary, runsDataPath ) {
 	if ( ! json[run_id]['attempts'][run_attempt] ) {
 		// Add the properties that should belong to the group -
 		// all the reports in this group should have the same values
-		json[run_id]['attempts'][run_attempt] = {
-			report_id: { passed, failed, skipped, total }
-		};
+		json[run_id]['attempts'][run_attempt] = {};
 	}
+
+	json[run_id]['attempts'][run_attempt][report_id] = { passed, failed, skipped, total };
 
 	console.log( json[run_id] );
 
