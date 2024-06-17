@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, FormControl, InputGroup } from 'react-bootstrap';
-import { faCheckSquare, faSquare } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import checkSquare from '../assets/check-square.svg';
+import square from '../assets/square.svg';
 import moment from 'moment';
 
 export default class BaseComponent extends React.Component {
@@ -26,22 +26,22 @@ export default class BaseComponent extends React.Component {
 	}
 
 	getTrunkOnlyFilterButton() {
-		const icon = this.state.filters.isTrunkOnly ? faCheckSquare : faSquare;
+		const icon = this.state.filters.isTrunkOnly ? checkSquare : square;
 
 		return (
 			<Button
 				variant="dark"
 				className="filter-btn"
-				onClick={ () => {
-					this.setState( prevState => ( {
+				onClick={() => {
+					this.setState(prevState => ({
 						filters: {
 							...prevState.filters,
-							isTrunkOnly: ! this.state.filters.isTrunkOnly,
+							isTrunkOnly: !this.state.filters.isTrunkOnly,
 						},
-					} ) );
-				} }
+					}));
+				}}
 			>
-				<FontAwesomeIcon icon={ icon } /> trunk only
+				<img src={ icon } width={16} height={16} alt={'checkbox'}/> trunk only
 			</Button>
 		);
 	}

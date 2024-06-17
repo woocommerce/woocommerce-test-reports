@@ -32,6 +32,7 @@ function App() {
 						<Navbar.Toggle aria-controls="basic-navbar-nav" />
 						<Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
 							<Nav activeKey={ location.pathname } className="ml-auto">
+								<Nav.Link href={`${basename}/#/`}>Summary</Nav.Link>
 								  {reportRoutes.map((route, index) => (
 									<Nav.Link key={index} href={`${basename}/#${route.path}`}>{route.name}</Nav.Link>
 								  ))}
