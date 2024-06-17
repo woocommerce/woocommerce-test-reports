@@ -8,6 +8,10 @@ on:
         description: 'The run ID of the calling workflow.'
         required: true
         default: ''
+      run_attempt:
+        description: 'The run attempt of the calling workflow.'
+        required: false
+        default: '1'
       artifact:
         description: 'The name of the artifact to download.'
         required: true
@@ -46,6 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       RUN_ID: ${{ inputs.run_id }}
+      RUN_ATTEMPT: ${{ inputs.run_attempt }}
       ARTIFACT_NAME: ${{ inputs.artifact }}
       EVENT_NAME: ${{ inputs.event }}
       REPORT_TITLE: ${{ inputs.report_title }}
@@ -119,6 +124,10 @@ jobs:
 
       - name: Update dashboard data
         run: |
-          echo "::group::Update reports list"
+          echo "::group::Update reports"
           node ./bin/update-reports-list.js
+          echo "::endgroup::"
+          
+          echo "::group::Update runs"
+          node ./bin/update-runs-data.js
           echo "::endgroup::"

@@ -3,7 +3,6 @@
 # This script generates a report from the Allure results in the RESULTS_PATH directory and uploads it to S3.
 # Required:
 # - RESULTS_PATH: Path to the test results directory
-# - REPORT_PATH: The path where the report will be generated
 
 set -eo pipefail
 
@@ -38,11 +37,6 @@ fi
 
 if [[ -z "$REPORT_GROUP" ]]; then
      echo "::error:: missing REPORT_GROUP environment variable"
-     exit 1
-fi
-
-if [[ -z "$REPORT_NAME" ]]; then
-     echo "::error:: missing REPORT_NAME environment variable"
      exit 1
 fi
 
@@ -86,9 +80,12 @@ if [[ ! -f "$REPORT_PATH/metadata.json" ]]; then
 fi
 
 METADATA="{
+  \"report_id\": \"$REPORT_ID\",
   \"suite\": \"$SUITE_NAME\",
+  \"group\": \"$REPORT_GROUP\",
   \"ref_name\": \"$REF_NAME\",
   \"run_id\": \"$RUN_ID\",
+  \"run_attempt\": \"$RUN_ATTEMPT\",
   \"event_name\": \"$EVENT_NAME\",
   \"report_title\": \"$REPORT_TITLE\",
   \"pr_number\": \"$PR_NUMBER\",

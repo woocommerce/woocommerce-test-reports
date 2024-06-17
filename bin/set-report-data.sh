@@ -34,68 +34,46 @@ for var in SUITE_NAME REF_NAME REPORT_TITLE; do
     declare "$var=$val"
 done
 
+# Use short commit sha
+COMMIT_SHA=$(echo "$COMMIT_SHA" | cut -c 1-7)
 
-if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "nightly-checks" ]]; then
-    REPORT_GROUP=$(date +%Y%m%d)
-    echo "Set REPORT_GROUP to $REPORT_GROUP"
-
-    REPORT_NAME='latest'
-    echo "Set REPORT_NAME to $REPORT_NAME"
-fi
-
-if [[ -z "$PR_NUMBER" ]]; then
-   echo "PR_NUMBER is not defined"
-
-   if [[ -z "$REF_NAME" ]]; then
-     echo "::error:: PR_NUMBER or REF_NAME need to be defined"
-     exit 1
-   else
-     echo "Setting REPORT_GROUP to $REF_NAME"
-     REPORT_GROUP=$(echo "$REF_NAME" | tr ' /. ' '_')
-   fi
-
-   if [[ -z "$COMMIT_SHA" ]]; then
-     echo "::error:: PR_NUMBER or COMMIT_SHA need to be defined"
-     exit 1
-   else
-     echo "Setting REPORT_NAME to $COMMIT_SHA"
-     REPORT_NAME=$COMMIT_SHA
-   fi
- else
-   echo "Setting REPORT_GROUP to $PR_NUMBER"
-   REPORT_GROUP=$PR_NUMBER
-
-   REPORT_NAME='latest'
-   echo "Set REPORT_NAME to $REPORT_NAME"
- fi
-
-
-SUITE_NAME=$(echo "$SUITE_NAME" | tr ' /. ' '_')
-
-if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "nightly-checks" ]]; then
+if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "daily-e2e" ]] || [[ "$EVENT_NAME" == "nightly-checks" ]]; then
+    REPORT_GROUP="$(date +%Y%m%d)-$REF_NAME"
+    REPORT_TITLE="Daily checks $(date +%Y-%m-%d)"
     S3_REPORT_PATH="$REPORT_GROUP/$SUITE_NAME"
     REPORT_ID=$(echo "$SUITE_NAME" | tr ' /. ' '-')
+
+elif [[ "$EVENT_NAME" == "push" ]] ; then
+    REPORT_GROUP="$REF_NAME-$COMMIT_SHA"
+    REPORT_GROUP=$(echo "$REPORT_GROUP" | tr ' /. ' '_')
+    S3_REPORT_PATH="$REPORT_GROUP/$SUITE_NAME"
 elif [[ "$EVENT_NAME" == "pull_request" ]] || [[ "$EVENT_NAME" == "pr" ]]; then
+    if [[ -z "$PR_NUMBER" ]]; then
+        echo "::error:: PR_NUMBER is not defined"
+        exit 1
+    fi
+
+    REPORT_GROUP=$PR_NUMBER
     S3_REPORT_PATH="pr/$REPORT_GROUP/$SUITE_NAME"
     REPORT_ID="$REPORT_GROUP-$SUITE_NAME"
-elif [[ "$EVENT_NAME" == "push" ]]; then
-    S3_REPORT_PATH="$REPORT_GROUP/$SUITE_NAME/$REPORT_NAME"
 else
-  S3_REPORT_PATH="$EVENT_NAME/$REPORT_GROUP/$SUITE_NAME/$REPORT_NAME"
+  echo "Unknown event name: $EVENT_NAME"
+  S3_REPORT_PATH="$EVENT_NAME/$REPORT_GROUP/$SUITE_NAME"
 fi
 
 REPORT_ID=$(echo "$S3_REPORT_PATH" | tr ' /. ' '-')
 
+S3_REPORT_PATH=$(echo "$S3_REPORT_PATH" | tr ' ' '-')
 S3_REPORT_PATH=$(echo "$S3_REPORT_PATH" | tr '[:upper:]' '[:lower:]')
 REPORT_ID=$(echo "$REPORT_ID" | tr '[:upper:]' '[:lower:]')
 
 echo "Set REPORT_ID to $REPORT_ID"
 echo "Set REPORT_TITLE to $REPORT_TITLE"
+echo "Set REPORT_GROUP to $REPORT_GROUP"
 echo "Set S3_REPORT_PATH to $S3_REPORT_PATH"
 
 echo "REPORT_ID=$REPORT_ID" >> "$GITHUB_ENV"
 echo "REPORT_GROUP=$REPORT_GROUP" >> "$GITHUB_ENV"
-echo "REPORT_NAME=$REPORT_NAME" >> "$GITHUB_ENV"
 echo "REPORT_TITLE=$REPORT_TITLE" >> "$GITHUB_ENV"
 echo "S3_REPORT_PATH=$S3_REPORT_PATH" >> "$GITHUB_ENV"
 
