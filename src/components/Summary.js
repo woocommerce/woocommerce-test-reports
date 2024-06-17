@@ -201,6 +201,10 @@ export default class Summary extends BaseComponent {
 		return summaryData;
 	}
 
+	getDefaultCartesianGrid() {
+		return <CartesianGrid stroke="#454c54" strokeDasharray="2 2" />;
+	}
+
 	render() {
 		if ( ! this.state.isDataReady ) {
 			return null;
@@ -215,7 +219,8 @@ export default class Summary extends BaseComponent {
 					<div className="col-sm">
 						<span className="inner-title">Tests</span>
 						<br/>
-						<span className={'caption'}>updated {moment(this.state.rawData.summaryData.lastUpdate).fromNow()}</span>
+						<span
+							className={'caption'}>updated {moment(this.state.rawData.summaryData.lastUpdate).fromNow()}</span>
 					</div>
 				</div>
 				<div className="row text-center">
@@ -274,34 +279,37 @@ export default class Summary extends BaseComponent {
 				</div>
 				<div className={'chartContainer'}>
 					<ResponsiveContainer width="100%" height="100%">
-					<ComposedChart
-					  width={500}
-					  height={400}
-					  data={this.state.days}
-					  margin={{
-						top: 20,
-						right: 20,
-						bottom: 20,
-						left: 20,
-					  }}
-					>
-					  <CartesianGrid stroke="#454c54" strokeDasharray="2 2" />
-					  <XAxis dataKey="date" type="number" angle={-45} interval="preserveStartEnd" scale="utc" />
-					  <YAxis />
-					  <Tooltip />
-					  <Legend />
-					  <Bar dataKey="testsPassed"  barSize={20}  fill="rgba( 115, 151, 75, 0.73 )" stackId="a" />
-					  <Bar dataKey="testsFailed" fill="rgba( 253, 90, 62, 0.71 )" stackId="a" />
-					  <Bar dataKey="testsSkipped" fill="rgba( 170, 170, 170, 0.73 )" stackId="a" />
-					  <Line type="monotone" dataKey="failedRate" stroke="rgba(186, 110, 98, 0.71)" />
-					</ComposedChart>
-				</ResponsiveContainer>
+						<ComposedChart
+							width={500}
+							height={400}
+							data={this.state.days}
+							margin={{
+								top: 20,
+								right: 20,
+								bottom: 20,
+								left: 20,
+							}}
+						>
+							{this.getDefaultCartesianGrid()}
+							<XAxis dataKey="date" axisLine={false} type="number" interval="preserveStartEnd"
+								   scale="band"/>
+							<YAxis type="number" axisLine={false}/>
+							<Tooltip/>
+							<Legend verticalAlign="top" align="right"/>
+							<Bar dataKey="testsPassed" fill="rgba( 115, 151, 75, 0.73 )" stackId="a"/>
+							<Bar dataKey="testsFailed" fill="rgba( 253, 90, 62, 0.71 )" stackId="a"/>
+							<Bar dataKey="testsSkipped" fill="rgba( 170, 170, 170, 0.73 )" stackId="a"/>
+							<Line type="monotone" dataKey="failedRate" stroke="rgba(186, 110, 98, 0.71)"/>
+						</ComposedChart>
+					</ResponsiveContainer>
 				</div>
+				<hr/>
 				<div className="row title-row">
 					<div className="col-sm">
 						<span className="inner-title">Test runs</span>
 						<br/>
-						<span className={'caption'}>updated {moment(this.state.rawData.summaryData.lastUpdate).fromNow()}</span>
+						<span
+							className={'caption'}>updated {moment(this.state.rawData.summaryData.lastUpdate).fromNow()}</span>
 					</div>
 				</div>
 				<div className="row text-center">
@@ -358,15 +366,32 @@ export default class Summary extends BaseComponent {
 						</div>
 					</div>
 				</div>
+				<div className={'chartContainer'}>
+					<ResponsiveContainer width="100%" height="100%">
+						<ComposedChart
+							width={500}
+							height={400}
+							data={this.state.days}
+							margin={{
+								top: 20,
+								right: 20,
+								bottom: 20,
+								left: 20,
+							}}
+						>
+							{this.getDefaultCartesianGrid()}
+							<XAxis dataKey="date" axisLine={false} type="number" interval="preserveStartEnd"
+								   scale="band"/>
+							<YAxis type="number" axisLine={false}/>
+							<Tooltip/>
+							<Legend verticalAlign="top" align="right"/>
+							<Bar dataKey="attempts" fill="rgba( 115, 151, 75, 0.73 )" />
+							<Line type="monotone" dataKey="reRunRate" stroke="rgba(186, 110, 98, 0.71)"/>
+						</ComposedChart>
+					</ResponsiveContainer>
+				</div>
 				<hr/>
-				{/*<ReactEcharts option={ this.dailyChartOptions() } />*/}
-				<hr/>
-				{/*<ReactEcharts option={ this.dailyHeatMapOptions() } />*/}
-				<hr/>
-				{/*<ReactEcharts option={ this.weeklyChartOptions() } />*/}
-				<hr/>
-				{/*<ReactEcharts option={ this.monthlyChartOptions() } />*/}
-				<hr/>
+
 			</div>
 		);
 	}
