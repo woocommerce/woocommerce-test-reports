@@ -8,10 +8,6 @@ on:
         description: 'The run ID of the calling workflow.'
         required: true
         default: ''
-      run_number:
-        description: 'The run number of the calling workflow.'
-        required: false
-        default: ''
       run_attempt:
         description: 'The run attempt of the calling workflow.'
         required: false
@@ -54,7 +50,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       RUN_ID: ${{ inputs.run_id }}
-      RUN_NUMBER: ${{ inputs.run_number }}
       RUN_ATTEMPT: ${{ inputs.run_attempt }}
       ARTIFACT_NAME: ${{ inputs.artifact }}
       EVENT_NAME: ${{ inputs.event }}
