@@ -85,7 +85,6 @@ METADATA="{
   \"group\": \"$REPORT_GROUP\",
   \"ref_name\": \"$REF_NAME\",
   \"run_id\": \"$RUN_ID\",
-  \"run_number\": \"$RUN_NUMBER\",
   \"run_attempt\": \"$RUN_ATTEMPT\",
   \"event_name\": \"$EVENT_NAME\",
   \"report_title\": \"$REPORT_TITLE\",
