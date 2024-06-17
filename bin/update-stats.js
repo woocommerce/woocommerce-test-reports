@@ -117,7 +117,6 @@ function updateSummaryEntry( entry, run ) {
 }
 
 function pushRunData( data, date, run ) {
-	console.log( `Pushing data for run ${ run.updated_on } to ${ date }`);
 	// Get the entry for the date
 	let entry = data.filter( k => k.date === date );
 
