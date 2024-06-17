@@ -15,7 +15,7 @@ export default class Reports extends React.Component {
 		this.state = {
 			event: this.props.event,
 			groupKey: this.props.groupKey,
-			groups: [],
+			groups: {},
 			reportsCount: undefined,
 			isDataFetched: false,
 		};
@@ -48,16 +48,38 @@ export default class Reports extends React.Component {
 				} );
 			} )
 			.catch( console.log );
-		this.sortByDate( false );
+
+		this.sortByDate();
 	}
 
-	sortByDate( isSortAsc ) {
-		return this.state.groups.sort( ( r1, r2 ) => {
-			if ( isSortAsc ) {
-				return Date.parse( r1.lastUpdate ) - Date.parse( r2.lastUpdate );
-			}
-			return Date.parse( r2.lastUpdate ) - Date.parse( r1.lastUpdate );
-		} );
+	sortByDate() {
+		// return this.state.groups.sort( ( r1, r2 ) => {
+		// 	if ( isSortAsc ) {
+		// 		return Date.parse( r1.lastUpdate ) - Date.parse( r2.lastUpdate );
+		// 	}
+		// 	return Date.parse( r2.lastUpdate ) - Date.parse( r1.lastUpdate );
+		// } );
+
+		// Get the keys of the groups object
+		const keys = Object.keys(this.state.groups);
+
+		// Sort the keys array
+		keys.sort((a, b) => {
+		  // Get the lastUpdate values of the corresponding items in the groups object
+		  // Convert them into date timestamps and subtract them to determine the order
+		  return Date.parse(this.state.groups[b].lastUpdate) - Date.parse(this.state.groups[a].lastUpdate);
+		});
+
+		// Create a new object
+		const sortedGroups = {};
+
+		// Add the items from the groups object to the new object in the order of the sorted keys
+		for (const key of keys) {
+		  sortedGroups[`${key}_`] = this.state.groups[key];
+		}
+
+		// Update the state with the sorted groups object
+		this.setState({ groups: sortedGroups });
 	}
 
 	getGroupTable( group, id ) {
