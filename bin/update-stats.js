@@ -9,7 +9,7 @@ const moment = require( 'moment' );
 const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
 const { s3Params, s3client } = require( './s3-client' );
 const trunkReports = require( '../src/config.json' ).trunkRuns;
-const entryTemplate = '{ "runs": 0, "attempts": 0, "reRuns": 0, "testsPassed": 0, "testsFailed": 0, "testsSkipped": 0, "testsTotal": 0 }';
+const entryTemplate = '{ "runs": 0, "attempts": 0, "reRuns": 0, "reRunsRate": 0, "testsPassed": 0, "testsFailed": 0, "testsSkipped": 0, "testsTotal": 0, "testsFailedRate": 0 }';
 
 ( async () => {
 	let runs = [];
@@ -138,15 +138,17 @@ function pushRunData( data, date, run ) {
 	entry[ 0 ].total = updateEntry( entry[ 0 ].total, run );
 }
 
-function updateEntry( entry, run ) {
-	entry.runs++
-	entry.attempts+=Object.keys(run.attempts).length
-	entry.reRuns+=(Object.keys(run.attempts).length - 1)
-	entry.testsPassed+=getTestResult('passed', run)
-	entry.testsFailed+=getTestResult('failed', run)
-	entry.testsSkipped+=getTestResult('skipped', run)
-	entry.testsTotal+=getTestResult('total', run)
-	return entry;
+function updateEntry( e, run ) {
+	e.runs++
+	e.attempts+=Object.keys(run.attempts).length
+	e.reRuns+=(Object.keys(run.attempts).length - 1)
+	e.reRunsRate=parseFloat(((e.reRuns / e.attempts) * 100).toFixed(1))
+	e.testsPassed+=getTestResult('passed', run)
+	e.testsFailed+=getTestResult('failed', run)
+	e.testsSkipped+=getTestResult('skipped', run)
+	e.testsTotal+=getTestResult('total', run)
+	e.testsFailedRate=parseFloat(((e.testsFailed / e.testsTotal) * 100).toFixed(1))
+	return e;
 }
 
 function getTestResult(status, run) {
