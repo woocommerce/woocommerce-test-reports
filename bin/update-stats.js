@@ -8,7 +8,6 @@ const { sort, readS3Object, writeJson} = require( './utils' );
 const moment = require( 'moment' );
 const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
 const { s3Params, s3client } = require( './s3-client' );
-const {join} = require("node:path");
 const trunkReports = require( '../src/config.json' ).trunkRuns;
 const entryTemplate = '{ "runs": 0, "attempts": 0, "reRuns": 0, "testsPassed": 0, "testsFailed": 0, "testsSkipped": 0, "testsTotal": 0 }';
 
@@ -98,7 +97,7 @@ async function uploadData( dataFile, jsonData ) {
 	console.log( `Updating file ${ dataFile }` );
 
 	// Write the updated data list locally
-	writeJson( jsonData, join( "", `public/${dataFile}` ) );
+	// writeJson( jsonData, join( "", `public/${dataFile}` ) );
 
 	const cmd = new PutObjectCommand( {
 		Bucket: s3Params.Bucket,
@@ -106,7 +105,7 @@ async function uploadData( dataFile, jsonData ) {
 		Body: JSON.stringify( jsonData ),
 		ContentType: 'application/json',
 	} );
-	// await s3client.send( cmd );
+	await s3client.send( cmd );
 }
 
 function updateSummaryEntry( entry, run ) {
