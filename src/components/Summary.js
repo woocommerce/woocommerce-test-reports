@@ -100,15 +100,6 @@ export default class Summary extends BaseComponent {
 			} )
 			.catch( console.error );
 
-		// this.setState( {
-		// 	rawData: {
-		// 		summaryData: await fetchJsonData( `${ config.dataSourceURL }/data/summary.json` ),
-		// 		dailyData: await fetchJsonData( `${ config.dataSourceURL }/data/runs-daily.json` ),
-		// 		weeklyData: await fetchJsonData( `${ config.dataSourceURL }/data/runs-weekly.json` ),
-		// 		monthlyData: await fetchJsonData( `${ config.dataSourceURL }/data/runs-monthly.json` ),
-		// 	},
-		// } );
-
 		this.filterData();
 
 		this.setState( {
@@ -130,16 +121,10 @@ export default class Summary extends BaseComponent {
 	}
 
 	filterDataSet( rawData ) {
-		// make a copy of raw data object
-		// we don't modify the original data
-		// let entries = JSON.parse( JSON.stringify( rawData ) );
 		let filteredEntries = [];
 
-		console.log(`rawData: ${JSON.stringify( rawData )}`)
-		console.log(`isTrunkOnly: ${this.state.filters.isTrunkOnly}`);
 		if ( this.state.filters.isTrunkOnly ) {
 			filteredEntries = rawData.map( entry => {
-				console.log(`trunk entry ${JSON.stringify(entry.trunk)}`);
 				return {
 					...entry.trunk,
 					date: entry.date,
@@ -147,7 +132,6 @@ export default class Summary extends BaseComponent {
 			} );
 		} else {
 			filteredEntries = rawData.map( entry => {
-				console.log(`total entry ${JSON.stringify(entry.total)}`);
 				return {
 					...entry.total,
 					date: entry.date,
@@ -155,17 +139,7 @@ export default class Summary extends BaseComponent {
 			} );
 		}
 
-		console.log(`filtered entries: ${JSON.stringify( filteredEntries )}`)
-
-		filteredEntries.forEach( date => {
-			date.failedRate = ( ( date.testsFailed / date.testsTotal ) * 100 ).toFixed( 1 );
-		} );
-
 		sortArray( filteredEntries, 'date', false );
-
-		console.log(`final filtered entries: ${JSON.stringify( filteredEntries )}`)
-
-		console.log(filteredEntries)
 		return filteredEntries;
 	}
 
@@ -184,25 +158,15 @@ export default class Summary extends BaseComponent {
 			} );
 		}
 
-		Object.keys( summaryData ).forEach( key => {
-			summaryData[ key ].failureRate = (
-				( summaryData[ key ].testsFailed / summaryData[ key ].testsTotal ) *
-				100
-			).toFixed( 1 );
-		} );
-
-		Object.keys( summaryData ).forEach( key => {
-			summaryData[ key ].reRunRate = (
-				( summaryData[ key ].reRuns / summaryData[ key ].attempts ) *
-				100
-			).toFixed( 1 );
-		} );
-
 		return summaryData;
 	}
 
 	getDefaultCartesianGrid() {
 		return <CartesianGrid stroke="#454c54" strokeDasharray="2 2" />;
+	}
+
+	getDefaultLegend(){
+		return <Legend verticalAlign="top" align="right" height={40}  />;
 	}
 
 	render() {
@@ -231,7 +195,7 @@ export default class Summary extends BaseComponent {
 							</span>
 							<br/>
 							<span className="stat-number-sub">
-								<small>{this.state.summary['24h'].failureRate}% failed</small>
+								<small>{this.state.summary['24h'].testsFailedRate}% failed</small>
 							</span>
 							<br/>
 							<span className="stat-description">24h</span>
@@ -244,7 +208,7 @@ export default class Summary extends BaseComponent {
 							</span>
 							<br/>
 							<span className="stat-number-sub">
-								<small>{this.state.summary['7d'].failureRate}% failed</small>
+								<small>{this.state.summary['7d'].testsFailedRate}% failed</small>
 							</span>
 							<br/>
 							<span className="stat-description">7d</span>
@@ -257,7 +221,7 @@ export default class Summary extends BaseComponent {
 							</span>
 							<br/>
 							<span className="stat-number-sub">
-								<small>{this.state.summary['14d'].failureRate}% failed</small>
+								<small>{this.state.summary['14d'].testsFailedRate}% failed</small>
 							</span>
 							<br/>
 							<span className="stat-description">14d</span>
@@ -270,7 +234,7 @@ export default class Summary extends BaseComponent {
 							</span>
 							<br/>
 							<span className="stat-number-sub">
-								<small>{this.state.summary['30d'].failureRate}% failed</small>
+								<small>{this.state.summary['30d'].testsFailedRate}% failed</small>
 							</span>
 							<br/>
 							<span className="stat-description">30d</span>
@@ -279,27 +243,18 @@ export default class Summary extends BaseComponent {
 				</div>
 				<div className={'chartContainer'}>
 					<ResponsiveContainer width="100%" height="100%">
-						<ComposedChart
-							width={500}
-							height={400}
-							data={this.state.days}
-							margin={{
-								top: 20,
-								right: 20,
-								bottom: 20,
-								left: 20,
-							}}
-						>
+						<ComposedChart data={this.state.days}>
 							{this.getDefaultCartesianGrid()}
 							<XAxis dataKey="date" axisLine={false} type="number" interval="preserveStartEnd"
 								   scale="band"/>
-							<YAxis type="number" axisLine={false}/>
+							<YAxis yAxisId="testCount" type="number" axisLine={false}/>
+							<YAxis yAxisId="failureRate" orientation="right" axisLine={false}/>
 							<Tooltip/>
-							<Legend verticalAlign="top" align="right"/>
-							<Bar dataKey="testsPassed" fill="rgba( 115, 151, 75, 0.73 )" stackId="a"/>
-							<Bar dataKey="testsFailed" fill="rgba( 253, 90, 62, 0.71 )" stackId="a"/>
-							<Bar dataKey="testsSkipped" fill="rgba( 170, 170, 170, 0.73 )" stackId="a"/>
-							<Line type="monotone" dataKey="failedRate" stroke="rgba(186, 110, 98, 0.71)"/>
+							{this.getDefaultLegend()}
+							<Bar unit=" tests" dataKey="testsPassed" name="passed" yAxisId="testCount" fill="rgba( 115, 151, 75, 0.73 )" stackId="a" legendType="circle" maxBarSize={20}/>
+							<Bar unit=" tests" dataKey="testsFailed" name="failed" yAxisId="testCount" fill="rgba( 253, 90, 62, 0.71 )" stackId="a" legendType="circle" maxBarSize={20}/>
+							<Bar unit=" tests" dataKey="testsSkipped" name="skipped" yAxisId="testCount" fill="rgba( 170, 170, 170, 0.73 )" stackId="a" legendType="circle" maxBarSize={20}/>
+							<Line unit="%" type="monotone" name="failure rate" yAxisId="failureRate" dataKey="testsFailedRate" stroke="rgba(186, 110, 98, 0.71)" legendType="cross"/>
 						</ComposedChart>
 					</ResponsiveContainer>
 				</div>
@@ -320,7 +275,7 @@ export default class Summary extends BaseComponent {
 							</span>
 							<br/>
 							<span className="stat-number-sub">
-								<small>{this.state.summary['24h'].reRunRate}% reruns</small>
+								<small>{this.state.summary['24h'].reRunsRate}% reruns</small>
 							</span>
 							<br/>
 							<span className="stat-description">24h</span>
@@ -329,11 +284,11 @@ export default class Summary extends BaseComponent {
 					<div className="col-sm">
 						<div className="stat-box">
 							<span className="stat-number">
-								{this.state.summary['7d'].runs}
+								{this.state.summary['7d'].attempts}
 							</span>
 							<br/>
 							<span className="stat-number-sub">
-								<small>{this.state.summary['7d'].reRunRate}% reruns</small>
+								<small>{this.state.summary['7d'].reRunsRate}% reruns</small>
 							</span>
 							<br/>
 							<span className="stat-description">7d</span>
@@ -342,11 +297,11 @@ export default class Summary extends BaseComponent {
 					<div className="col-sm">
 						<div className="stat-box">
 							<span className="stat-number">
-								{this.state.summary['14d'].runs}
+								{this.state.summary['14d'].attempts}
 							</span>
 							<br/>
 							<span className="stat-number-sub">
-								<small>{this.state.summary['14d'].reRunRate}% reruns</small>
+								<small>{this.state.summary['14d'].reRunsRate}% reruns</small>
 							</span>
 							<br/>
 							<span className="stat-description">14d</span>
@@ -355,11 +310,11 @@ export default class Summary extends BaseComponent {
 					<div className="col-sm">
 						<div className="stat-box">
 							<span className="stat-number">
-								{this.state.summary['30d'].runs}
+								{this.state.summary['30d'].attempts}
 							</span>
 							<br/>
 							<span className="stat-number-sub">
-								<small>{this.state.summary['30d'].reRunRate}% reruns</small>
+								<small>{this.state.summary['30d'].reRunsRate}% reruns</small>
 							</span>
 							<br/>
 							<span className="stat-description">30d</span>
@@ -368,30 +323,20 @@ export default class Summary extends BaseComponent {
 				</div>
 				<div className={'chartContainer'}>
 					<ResponsiveContainer width="100%" height="100%">
-						<ComposedChart
-							width={500}
-							height={400}
-							data={this.state.days}
-							margin={{
-								top: 20,
-								right: 20,
-								bottom: 20,
-								left: 20,
-							}}
-						>
+						<ComposedChart data={this.state.days}>
 							{this.getDefaultCartesianGrid()}
 							<XAxis dataKey="date" axisLine={false} type="number" interval="preserveStartEnd"
 								   scale="band"/>
 							<YAxis type="number" axisLine={false}/>
+							<YAxis yAxisId="reRunsRate" orientation="right" axisLine={false} />
 							<Tooltip/>
-							<Legend verticalAlign="top" align="right"/>
-							<Bar dataKey="attempts" fill="rgba( 115, 151, 75, 0.73 )" />
-							<Line type="monotone" dataKey="reRunRate" stroke="rgba(186, 110, 98, 0.71)"/>
+							{this.getDefaultLegend()}
+							<Bar unit=" runs" dataKey="attempts" name="total" fill="rgba( 115, 151, 75, 0.73 )" legendType="circle"  maxBarSize={20} />
+							<Line unit="%" type="monotone" name="re-runs rate" yAxisId="reRunsRate" dataKey="reRunsRate" stroke="rgba(186, 110, 98, 0.71)" legendType="cross" />
 						</ComposedChart>
 					</ResponsiveContainer>
 				</div>
 				<hr/>
-
 			</div>
 		);
 	}
