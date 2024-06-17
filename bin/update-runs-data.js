@@ -22,12 +22,15 @@ if ( ! localReportPath ) {
 
 	await updateReportData(metadata, summary, 'data/runs.json');
 	await updateReportData(metadata, summary, `data/runs-${ month }.json` );
+
+	await cleanupOldRuns( 'data/runs.json', 30 );
 } )();
 
 async function updateReportData( metadata, summary, runsDataPath ) {
-	// Get the existing reports list
-	const reportsData = ( await readS3Object( runsDataPath ) ).toString() || '{}';
-	const json = JSON.parse( reportsData );
+	console.group( '\n', `Updating runs data in ${ runsDataPath }` );
+	// Get the existing data
+	const fileContent = ( await readS3Object( runsDataPath ) ).toString() || '{}';
+	const json = JSON.parse( fileContent );
 
 	const  { run_id, report_id, run_attempt, updated_on, ref_name } = metadata;
 	const { total, passed, failed, skipped, broken, unknown } = summary.statistic;
@@ -62,18 +65,47 @@ async function updateReportData( metadata, summary, runsDataPath ) {
 
 	console.log( json[run_id] );
 
-	json.lastUpdate = new Date().toISOString();
-
 	// Write the updated data list locally
 	// writeJson( json, path.join( "", `public/${runsDataPath}` ) );
 
-	// Upload the report to S3
+	// Upload the file to S3
 	const cmd = new PutObjectCommand( {
 		Bucket: s3Params.Bucket,
 		Key: runsDataPath,
 		Body: JSON.stringify( json, null, 2 ),
 		ContentType: 'application/json',
 	} );
-
 	await s3client.send( cmd );
+
+	console.groupEnd();
+}
+
+async function cleanupOldRuns( runsDataPath, daysThreshold ) {
+	console.group( '\n',`Cleaning up old runs from ${runsDataPath}` );
+
+	const fileContent = ( await readS3Object( runsDataPath ) ).toString() || '{}';
+	const runs = JSON.parse( fileContent );
+
+	// Filter out the runs that are older than the threshold
+	const filteredRuns = Object.fromEntries(
+		Object.entries( runs ).filter(
+			([runId, run]) => moment.duration( moment.utc().diff( moment.utc( run.updated_on ) ) ).as( 'days' ) <
+					daysThreshold
+	));
+
+	console.log( `Removed ${ Object.keys(runs).length - Object.keys(filteredRuns).length } runs` );
+
+	// Write the updated data list locally
+	// writeJson( filteredRuns, path.join( "", `public/${runsDataPath}` ) );
+
+	// Upload to S3
+	const cmd = new PutObjectCommand( {
+		Bucket: s3Params.Bucket,
+		Key: runsDataPath,
+		Body: JSON.stringify( filteredRuns, null, 2 ),
+		ContentType: 'application/json',
+	} );
+	await s3client.send( cmd );
+
+	console.groupEnd();
 }
