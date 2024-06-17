@@ -9,6 +9,6 @@ module.exports = {
 	rules: {
 		'arrow-parens': [ 0, 'as-needed' ],
 		'no-console': 0,
-		'camelcase': 0,
+		camelcase: 0,
 	},
 };

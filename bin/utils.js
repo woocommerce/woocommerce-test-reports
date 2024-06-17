@@ -46,14 +46,8 @@ function cleanTrace( trace ) {
 			/waiting for selector "#block-.* a\[href\*=\'calypso-marketing-connections\'\]" to be visible/g,
 			'waiting for selector "#block-... a[href*=\'calypso-marketing-connections\']" to be visible'
 		)
-		.replace(
-			/partner_id=\S+/g,
-			'partner_id=***'
-		)
-		.replace(
-			/partner_secret=\S+/g,
-			'partner_secret=***'
-		)
+		.replace( /partner_id=\S+/g, 'partner_id=***' )
+		.replace( /partner_secret=\S+/g, 'partner_secret=***' )
 		.replace(
 			/ms exceeded\.\n.*at SearchHomepage.waitForLoadState/gs,
 			'ms exceeded.\n    at SearchHomepage.waitForLoadState'
@@ -153,7 +147,7 @@ async function listS3Objects( prefix, delimiter = '' ) {
 
 	while ( truncated && page < 10 ) {
 		try {
-			console.log(`Listing objects with prefix ${ prefix } and marker ${ pageMarker }` );
+			console.log( `Listing objects with prefix ${ prefix } and marker ${ pageMarker }` );
 			const data = await s3client.send( new ListObjectsCommand( bucketParams ) );
 			objects.push( ...data.Contents.map( item => item.Key ) );
 
@@ -196,11 +190,11 @@ async function removeS3Folder( prefix ) {
 		);
 
 		for ( const { Key } of objectsInFolder.Contents ) {
-			await s3client.send(new DeleteObjectCommand({Bucket: s3Params.Bucket, Key}));
+			await s3client.send( new DeleteObjectCommand( { Bucket: s3Params.Bucket, Key } ) );
 		}
 
 		if ( objectsInFolder.IsTruncated ) {
-		await removeS3Folder( prefix );
+			await removeS3Folder( prefix );
 		}
 	} catch ( err ) {
 		console.log( 'Error', err );

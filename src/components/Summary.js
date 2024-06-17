@@ -12,8 +12,8 @@ import {
 	ResponsiveContainer,
 	Tooltip,
 	XAxis,
-	YAxis
-} from "recharts";
+	YAxis,
+} from 'recharts';
 
 export default class Summary extends BaseComponent {
 	state = {
@@ -44,8 +44,8 @@ export default class Summary extends BaseComponent {
 					rawData: {
 						...this.state.rawData,
 						summaryData: jsonData,
-					}
-				})
+					},
+				} );
 			} )
 			.catch( console.error );
 
@@ -61,8 +61,8 @@ export default class Summary extends BaseComponent {
 					rawData: {
 						...this.state.rawData,
 						dailyData: jsonData,
-					}
-				})
+					},
+				} );
 			} )
 			.catch( console.error );
 
@@ -78,8 +78,8 @@ export default class Summary extends BaseComponent {
 					rawData: {
 						...this.state.rawData,
 						weeklyData: jsonData,
-					}
-				})
+					},
+				} );
 			} )
 			.catch( console.error );
 
@@ -95,8 +95,8 @@ export default class Summary extends BaseComponent {
 					rawData: {
 						...this.state.rawData,
 						monthlyData: jsonData,
-					}
-				})
+					},
+				} );
 			} )
 			.catch( console.error );
 
@@ -165,8 +165,8 @@ export default class Summary extends BaseComponent {
 		return <CartesianGrid stroke="#454c54" strokeDasharray="2 2" />;
 	}
 
-	getDefaultLegend(){
-		return <Legend verticalAlign="top" align="right" height={40}  />;
+	getDefaultLegend() {
+		return <Legend verticalAlign="top" align="right" height={ 40 } />;
 	}
 
 	render() {
@@ -177,166 +177,212 @@ export default class Summary extends BaseComponent {
 		return (
 			<div>
 				<div className="row">
-					<div className="col-sm filters">{this.getTrunkOnlyFilterButton()}</div>
+					<div className="col-sm filters">{ this.getTrunkOnlyFilterButton() }</div>
 				</div>
 				<div className="row title-row">
 					<div className="col-sm">
 						<span className="inner-title">Tests</span>
-						<br/>
-						<span
-							className={'caption'}>updated {moment(this.state.rawData.summaryData.lastUpdate).fromNow()}</span>
+						<br />
+						<span className={ 'caption' }>
+							updated { moment( this.state.rawData.summaryData.lastUpdate ).fromNow() }
+						</span>
 					</div>
 				</div>
 				<div className="row text-center">
 					<div className="col-sm">
 						<div className="stat-box">
-							<span className="stat-number">
-								{this.state.summary['24h'].testsTotal}
-							</span>
-							<br/>
+							<span className="stat-number">{ this.state.summary[ '24h' ].testsTotal }</span>
+							<br />
 							<span className="stat-number-sub">
-								<small>{this.state.summary['24h'].testsFailedRate}% failed</small>
+								<small>{ this.state.summary[ '24h' ].testsFailedRate }% failed</small>
 							</span>
-							<br/>
+							<br />
 							<span className="stat-description">24h</span>
 						</div>
 					</div>
 					<div className="col-sm">
 						<div className="stat-box">
-							<span className="stat-number">
-								{this.state.summary['7d'].testsTotal}
-							</span>
-							<br/>
+							<span className="stat-number">{ this.state.summary[ '7d' ].testsTotal }</span>
+							<br />
 							<span className="stat-number-sub">
-								<small>{this.state.summary['7d'].testsFailedRate}% failed</small>
+								<small>{ this.state.summary[ '7d' ].testsFailedRate }% failed</small>
 							</span>
-							<br/>
+							<br />
 							<span className="stat-description">7d</span>
 						</div>
 					</div>
 					<div className="col-sm">
 						<div className="stat-box">
-							<span className="stat-number">
-								{this.state.summary['14d'].testsTotal}
-							</span>
-							<br/>
+							<span className="stat-number">{ this.state.summary[ '14d' ].testsTotal }</span>
+							<br />
 							<span className="stat-number-sub">
-								<small>{this.state.summary['14d'].testsFailedRate}% failed</small>
+								<small>{ this.state.summary[ '14d' ].testsFailedRate }% failed</small>
 							</span>
-							<br/>
+							<br />
 							<span className="stat-description">14d</span>
 						</div>
 					</div>
 					<div className="col-sm">
 						<div className="stat-box">
-							<span className="stat-number">
-								{this.state.summary['30d'].testsTotal}
-							</span>
-							<br/>
+							<span className="stat-number">{ this.state.summary[ '30d' ].testsTotal }</span>
+							<br />
 							<span className="stat-number-sub">
-								<small>{this.state.summary['30d'].testsFailedRate}% failed</small>
+								<small>{ this.state.summary[ '30d' ].testsFailedRate }% failed</small>
 							</span>
-							<br/>
+							<br />
 							<span className="stat-description">30d</span>
 						</div>
 					</div>
 				</div>
-				<div className={'chartContainer'}>
+				<div className={ 'chartContainer' }>
 					<ResponsiveContainer width="100%" height="100%">
-						<ComposedChart data={this.state.days}>
-							{this.getDefaultCartesianGrid()}
-							<XAxis dataKey="date" axisLine={false} type="number" interval="preserveStartEnd"
-								   scale="band"/>
-							<YAxis yAxisId="testCount" type="number" axisLine={false}/>
-							<YAxis yAxisId="failureRate" orientation="right" axisLine={false}/>
-							<Tooltip/>
-							{this.getDefaultLegend()}
-							<Bar unit=" tests" dataKey="testsPassed" name="passed" yAxisId="testCount" fill="rgba( 115, 151, 75, 0.73 )" stackId="a" legendType="circle" maxBarSize={20}/>
-							<Bar unit=" tests" dataKey="testsFailed" name="failed" yAxisId="testCount" fill="rgba( 253, 90, 62, 0.71 )" stackId="a" legendType="circle" maxBarSize={20}/>
-							<Bar unit=" tests" dataKey="testsSkipped" name="skipped" yAxisId="testCount" fill="rgba( 170, 170, 170, 0.73 )" stackId="a" legendType="circle" maxBarSize={20}/>
-							<Line unit="%" type="monotone" name="failure rate" yAxisId="failureRate" dataKey="testsFailedRate" stroke="rgba(186, 110, 98, 0.71)" legendType="cross"/>
+						<ComposedChart data={ this.state.days }>
+							{ this.getDefaultCartesianGrid() }
+							<XAxis
+								dataKey="date"
+								axisLine={ false }
+								type="number"
+								interval="preserveStartEnd"
+								scale="band"
+							/>
+							<YAxis yAxisId="testCount" type="number" axisLine={ false } />
+							<YAxis yAxisId="failureRate" orientation="right" axisLine={ false } />
+							<Tooltip />
+							{ this.getDefaultLegend() }
+							<Bar
+								unit=" tests"
+								dataKey="testsPassed"
+								name="passed"
+								yAxisId="testCount"
+								fill="rgba( 115, 151, 75, 0.73 )"
+								stackId="a"
+								legendType="circle"
+								maxBarSize={ 20 }
+							/>
+							<Bar
+								unit=" tests"
+								dataKey="testsFailed"
+								name="failed"
+								yAxisId="testCount"
+								fill="rgba( 253, 90, 62, 0.71 )"
+								stackId="a"
+								legendType="circle"
+								maxBarSize={ 20 }
+							/>
+							<Bar
+								unit=" tests"
+								dataKey="testsSkipped"
+								name="skipped"
+								yAxisId="testCount"
+								fill="rgba( 170, 170, 170, 0.73 )"
+								stackId="a"
+								legendType="circle"
+								maxBarSize={ 20 }
+							/>
+							<Line
+								unit="%"
+								type="monotone"
+								name="failure rate"
+								yAxisId="failureRate"
+								dataKey="testsFailedRate"
+								stroke="rgba(186, 110, 98, 0.71)"
+								legendType="cross"
+							/>
 						</ComposedChart>
 					</ResponsiveContainer>
 				</div>
-				<hr/>
+				<hr />
 				<div className="row title-row">
 					<div className="col-sm">
 						<span className="inner-title">Test runs</span>
-						<br/>
-						<span
-							className={'caption'}>updated {moment(this.state.rawData.summaryData.lastUpdate).fromNow()}</span>
+						<br />
+						<span className={ 'caption' }>
+							updated { moment( this.state.rawData.summaryData.lastUpdate ).fromNow() }
+						</span>
 					</div>
 				</div>
 				<div className="row text-center">
 					<div className="col-sm">
 						<div className="stat-box">
-							<span className="stat-number">
-								{this.state.summary['24h'].attempts}
-							</span>
-							<br/>
+							<span className="stat-number">{ this.state.summary[ '24h' ].attempts }</span>
+							<br />
 							<span className="stat-number-sub">
-								<small>{this.state.summary['24h'].reRunsRate}% reruns</small>
+								<small>{ this.state.summary[ '24h' ].reRunsRate }% reruns</small>
 							</span>
-							<br/>
+							<br />
 							<span className="stat-description">24h</span>
 						</div>
 					</div>
 					<div className="col-sm">
 						<div className="stat-box">
-							<span className="stat-number">
-								{this.state.summary['7d'].attempts}
-							</span>
-							<br/>
+							<span className="stat-number">{ this.state.summary[ '7d' ].attempts }</span>
+							<br />
 							<span className="stat-number-sub">
-								<small>{this.state.summary['7d'].reRunsRate}% reruns</small>
+								<small>{ this.state.summary[ '7d' ].reRunsRate }% reruns</small>
 							</span>
-							<br/>
+							<br />
 							<span className="stat-description">7d</span>
 						</div>
 					</div>
 					<div className="col-sm">
 						<div className="stat-box">
-							<span className="stat-number">
-								{this.state.summary['14d'].attempts}
-							</span>
-							<br/>
+							<span className="stat-number">{ this.state.summary[ '14d' ].attempts }</span>
+							<br />
 							<span className="stat-number-sub">
-								<small>{this.state.summary['14d'].reRunsRate}% reruns</small>
+								<small>{ this.state.summary[ '14d' ].reRunsRate }% reruns</small>
 							</span>
-							<br/>
+							<br />
 							<span className="stat-description">14d</span>
 						</div>
 					</div>
 					<div className="col-sm">
 						<div className="stat-box">
-							<span className="stat-number">
-								{this.state.summary['30d'].attempts}
-							</span>
-							<br/>
+							<span className="stat-number">{ this.state.summary[ '30d' ].attempts }</span>
+							<br />
 							<span className="stat-number-sub">
-								<small>{this.state.summary['30d'].reRunsRate}% reruns</small>
+								<small>{ this.state.summary[ '30d' ].reRunsRate }% reruns</small>
 							</span>
-							<br/>
+							<br />
 							<span className="stat-description">30d</span>
 						</div>
 					</div>
 				</div>
-				<div className={'chartContainer'}>
+				<div className={ 'chartContainer' }>
 					<ResponsiveContainer width="100%" height="100%">
-						<ComposedChart data={this.state.days}>
-							{this.getDefaultCartesianGrid()}
-							<XAxis dataKey="date" axisLine={false} type="number" interval="preserveStartEnd"
-								   scale="band"/>
-							<YAxis type="number" axisLine={false}/>
-							<YAxis yAxisId="reRunsRate" orientation="right" axisLine={false} />
-							<Tooltip/>
-							{this.getDefaultLegend()}
-							<Bar unit=" runs" dataKey="attempts" name="total" fill="rgba( 115, 151, 75, 0.73 )" legendType="circle"  maxBarSize={20} />
-							<Line unit="%" type="monotone" name="re-runs rate" yAxisId="reRunsRate" dataKey="reRunsRate" stroke="rgba(186, 110, 98, 0.71)" legendType="cross" />
+						<ComposedChart data={ this.state.days }>
+							{ this.getDefaultCartesianGrid() }
+							<XAxis
+								dataKey="date"
+								axisLine={ false }
+								type="number"
+								interval="preserveStartEnd"
+								scale="band"
+							/>
+							<YAxis type="number" axisLine={ false } />
+							<YAxis yAxisId="reRunsRate" orientation="right" axisLine={ false } />
+							<Tooltip />
+							{ this.getDefaultLegend() }
+							<Bar
+								unit=" runs"
+								dataKey="attempts"
+								name="total"
+								fill="rgba( 115, 151, 75, 0.73 )"
+								legendType="circle"
+								maxBarSize={ 20 }
+							/>
+							<Line
+								unit="%"
+								type="monotone"
+								name="re-runs rate"
+								yAxisId="reRunsRate"
+								dataKey="reRunsRate"
+								stroke="rgba(186, 110, 98, 0.71)"
+								legendType="cross"
+							/>
 						</ComposedChart>
 					</ResponsiveContainer>
 				</div>
-				<hr/>
+				<hr />
 			</div>
 		);
 	}

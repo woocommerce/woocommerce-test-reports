@@ -32,16 +32,16 @@ export default class BaseComponent extends React.Component {
 			<Button
 				variant="dark"
 				className="filter-btn"
-				onClick={() => {
-					this.setState(prevState => ({
+				onClick={ () => {
+					this.setState( prevState => ( {
 						filters: {
 							...prevState.filters,
-							isTrunkOnly: !this.state.filters.isTrunkOnly,
+							isTrunkOnly: ! this.state.filters.isTrunkOnly,
 						},
-					}));
-				}}
+					} ) );
+				} }
 			>
-				<img src={ icon } width={16} height={16} alt={'checkbox'}/> trunk only
+				<img src={ icon } width={ 16 } height={ 16 } alt={ 'checkbox' } /> trunk only
 			</Button>
 		);
 	}
