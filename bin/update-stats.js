@@ -10,7 +10,7 @@ const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
 const { s3Params, s3client } = require( './s3-client' );
 const {join} = require("node:path");
 const trunkReports = require( '../src/config.json' ).trunkRuns;
-const entryTemplate = { runs: 0, attempts: 0, reRuns: 0, testsPassed: 0, testsFailed: 0, testsSkipped: 0, testsTotal: 0 };
+const entryTemplate = '{ "runs": 0, "attempts": 0, "reRuns": 0, "testsPassed": 0, "testsFailed": 0, "testsSkipped": 0, "testsTotal": 0 }';
 
 ( async () => {
 	let runs = [];
@@ -40,10 +40,10 @@ const entryTemplate = { runs: 0, attempts: 0, reRuns: 0, testsPassed: 0, testsFa
 	const monthlyJson = [];
 	const summaryData = {
 		stats: {
-			'24h': { trunk: entryTemplate, total: entryTemplate },
-			'7d': { trunk: entryTemplate, total: entryTemplate },
-			'14d': { trunk: entryTemplate, total: entryTemplate },
-			'30d': { trunk: entryTemplate, total: entryTemplate },
+			'24h': { trunk: JSON.parse(entryTemplate), total: JSON.parse(entryTemplate) },
+			'7d': { trunk: JSON.parse(entryTemplate), total: JSON.parse(entryTemplate) },
+			'14d': { trunk: JSON.parse(entryTemplate), total: JSON.parse(entryTemplate) },
+			'30d': { trunk: JSON.parse(entryTemplate), total: JSON.parse(entryTemplate) },
 		},
 		lastUpdate: '',
 	};
@@ -53,9 +53,9 @@ const entryTemplate = { runs: 0, attempts: 0, reRuns: 0, testsPassed: 0, testsFa
 		const week = moment.utc( run.updated_on ).format( 'GGGG-[week]-WW' );
 		const month = moment.utc( run.updated_on ).format( 'YYYY-MM' );
 
-		pushData( dailyJson, day, run );
-		pushData( weeklyJson, week, run );
-		pushData( monthlyJson, month, run );
+		pushRunData( dailyJson, day, run );
+		pushRunData( weeklyJson, week, run );
+		pushRunData( monthlyJson, month, run );
 
 		const duration = moment
 				.duration( moment.utc().diff( moment.utc( run.updated_on ) ) )
@@ -117,7 +117,8 @@ function updateSummaryEntry( entry, run ) {
 	updateEntry( entry.total, run );
 }
 
-function pushData( data, date, run ) {
+function pushRunData( data, date, run ) {
+	console.log( `Pushing data for run ${ run.updated_on } to ${ date }`);
 	// Get the entry for the date
 	let entry = data.filter( k => k.date === date );
 
@@ -125,18 +126,18 @@ function pushData( data, date, run ) {
 	if ( entry.length === 0 ) {
 		data.push( {
 			date,
-			trunk: entryTemplate,
-			total: entryTemplate,
+			trunk: JSON.parse(entryTemplate),
+			total: JSON.parse(entryTemplate),
 		} );
 
 		entry = data.filter( k => k.date === date );
 	}
 
 	if ( trunkReports.includes( run.ref_name ) ) {
-		updateEntry(  entry[ 0 ].trunk, run );
+		entry[ 0 ].trunk = updateEntry(  entry[ 0 ].trunk, run );
 	}
 
-	updateEntry( entry[ 0 ].total, run );
+	entry[ 0 ].total = updateEntry( entry[ 0 ].total, run );
 }
 
 function updateEntry( entry, run ) {
@@ -147,6 +148,7 @@ function updateEntry( entry, run ) {
 	entry.testsFailed+=getTestResult('failed', run)
 	entry.testsSkipped+=getTestResult('skipped', run)
 	entry.testsTotal+=getTestResult('total', run)
+	return entry;
 }
 
 function getTestResult(status, run) {
