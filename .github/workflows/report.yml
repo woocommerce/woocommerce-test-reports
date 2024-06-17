@@ -124,6 +124,10 @@ jobs:
 
       - name: Update dashboard data
         run: |
-          echo "::group::Update reports list"
+          echo "::group::Update reports"
           node ./bin/update-reports-list.js
+          echo "::endgroup::"
+          
+          echo "::group::Update runs"
+          node ./bin/update-runs-data.js
           echo "::endgroup::"
