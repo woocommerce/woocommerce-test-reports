@@ -65,7 +65,7 @@ async function updateReportData( metadata, summary, runsDataPath ) {
 	json.lastUpdate = new Date().toISOString();
 
 	// Write the updated data list locally
-	writeJson( json, path.join( "", `public/${runsDataPath}` ) );
+	// writeJson( json, path.join( "", `public/${runsDataPath}` ) );
 
 	// Upload the report to S3
 	const cmd = new PutObjectCommand( {
@@ -75,5 +75,5 @@ async function updateReportData( metadata, summary, runsDataPath ) {
 		ContentType: 'application/json',
 	} );
 
-	// await s3client.send( cmd );
+	await s3client.send( cmd );
 }
