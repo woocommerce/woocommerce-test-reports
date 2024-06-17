@@ -54,6 +54,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       RUN_ID: ${{ inputs.run_id }}
+      RUN_NUMBER: ${{ inputs.run_nuber }}
+      RUN_ATTEMPT: ${{ inputs.run_attempt }}
       ARTIFACT_NAME: ${{ inputs.artifact }}
       EVENT_NAME: ${{ inputs.event }}
       REPORT_TITLE: ${{ inputs.report_title }}
