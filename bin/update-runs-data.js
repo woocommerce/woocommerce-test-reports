@@ -4,7 +4,7 @@
  * It will read data from report/widgets/summary.json, metadata.json
  */
 
-const { readS3Object, readJson, writeJson} = require( './utils' );
+const { readS3Object, readJson } = require( './utils' );
 const path = require( 'path' );
 const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
 const { s3Params, s3client } = require( './s3-client' );
@@ -16,12 +16,12 @@ if ( ! localReportPath ) {
 }
 
 ( async () => {
-	const metadata = readJson( path.join( localReportPath, 'metadata.json' ) )
+	const metadata = readJson( path.join( localReportPath, 'metadata.json' ) );
 	const summary = readJson( path.join( localReportPath, 'widgets/summary.json' ) );
 	const month = moment( summary.time.stop ).format( 'YYYY-MM' );
 
-	await updateReportData(metadata, summary, 'data/runs.json');
-	await updateReportData(metadata, summary, `data/runs-${ month }.json` );
+	await updateReportData( metadata, summary, 'data/runs.json' );
+	await updateReportData( metadata, summary, `data/runs-${ month }.json` );
 
 	await cleanupOldRuns( 'data/runs.json', 30 );
 } )();
@@ -32,22 +32,17 @@ async function updateReportData( metadata, summary, runsDataPath ) {
 	const fileContent = ( await readS3Object( runsDataPath ) ).toString() || '{}';
 	const json = JSON.parse( fileContent );
 
-	const  { run_id, report_id, run_attempt, updated_on, ref_name } = metadata;
+	const { run_id, report_id, run_attempt, updated_on, ref_name } = metadata;
 	const { total, passed, failed, skipped, broken, unknown } = summary.statistic;
-	const results = {
-		passed,
-		failed: failed + broken + unknown,
-		skipped,
-		total,
-	};
+	const totalFailed = failed + broken + unknown;
 
 	if ( ! report_id ) {
 		throw 'Cannot find report_id in metadata.json';
 	}
 
 	// Get the run_id node or create it if it doesn't exist
-	if ( ! json[run_id] ) {
-		json[run_id] = {
+	if ( ! json[ run_id ] ) {
+		json[ run_id ] = {
 			updated_on,
 			ref_name,
 			attempts: {},
@@ -55,15 +50,18 @@ async function updateReportData( metadata, summary, runsDataPath ) {
 	}
 
 	// Get the run_attempt node or create it if it doesn't exist
-	if ( ! json[run_id]['attempts'][run_attempt] ) {
+	//eslint-disable-next-line dot-notation
+	if ( ! json[ run_id ][ 'attempts' ][ run_attempt ] ) {
 		// Add the properties that should belong to the group -
 		// all the reports in this group should have the same values
-		json[run_id]['attempts'][run_attempt] = {};
+		//eslint-disable-next-line dot-notation
+		json[ run_id ][ 'attempts' ][ run_attempt ] = {};
 	}
 
-	json[run_id]['attempts'][run_attempt][report_id] = { passed, failed, skipped, total };
+	//eslint-disable-next-line dot-notation
+	json[ run_id ][ 'attempts' ][ run_attempt ][ report_id ] = { passed, failed: totalFailed, skipped, total };
 
-	console.log( json[run_id] );
+	console.log( json[ run_id ] );
 
 	// Write the updated data list locally
 	// writeJson( json, path.join( "", `public/${runsDataPath}` ) );
@@ -81,7 +79,7 @@ async function updateReportData( metadata, summary, runsDataPath ) {
 }
 
 async function cleanupOldRuns( runsDataPath, daysThreshold ) {
-	console.group( '\n',`Cleaning up old runs from ${runsDataPath}` );
+	console.group( '\n', `Cleaning up old runs from ${ runsDataPath }` );
 
 	const fileContent = ( await readS3Object( runsDataPath ) ).toString() || '{}';
 	const runs = JSON.parse( fileContent );
@@ -89,11 +87,15 @@ async function cleanupOldRuns( runsDataPath, daysThreshold ) {
 	// Filter out the runs that are older than the threshold
 	const filteredRuns = Object.fromEntries(
 		Object.entries( runs ).filter(
-			([runId, run]) => moment.duration( moment.utc().diff( moment.utc( run.updated_on ) ) ).as( 'days' ) <
-					daysThreshold
-	));
+			( [ runId, run ] ) =>
+				moment.duration( moment.utc().diff( moment.utc( run.updated_on ) ) ).as( 'days' ) <
+				daysThreshold
+		)
+	);
 
-	console.log( `Removed ${ Object.keys(runs).length - Object.keys(filteredRuns).length } runs` );
+	console.log(
+		`Removed ${ Object.keys( runs ).length - Object.keys( filteredRuns ).length } runs`
+	);
 
 	// Write the updated data list locally
 	// writeJson( filteredRuns, path.join( "", `public/${runsDataPath}` ) );

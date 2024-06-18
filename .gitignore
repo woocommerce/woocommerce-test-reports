@@ -1,9 +1,10 @@
-.DS_Store
-_site
-.sass-cache
-.jekyll-metadata
-
-# Liquid files
-*.liquid
+build
+logs
+*.log
+npm-debug.log*
+node_modules/
 .idea
 downloads
+test-docs
+data
+public/reports
