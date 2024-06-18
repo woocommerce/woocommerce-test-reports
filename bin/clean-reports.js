@@ -219,7 +219,7 @@ function isOld(date, threshold, timeUnit = 'days') {
 		.duration( moment.utc().diff( moment.utc( date ) ) )
 		.as( timeUnit )
 		.toFixed( 1 );
-    console.log( `Age: ${ duration } timeUnit` )
+    console.log( `Age: ${ duration } ${ timeUnit }` )
     return duration > threshold;
 }
 
