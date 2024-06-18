@@ -40,13 +40,11 @@ COMMIT_SHA=$(echo "$COMMIT_SHA" | cut -c 1-7)
 if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "daily-e2e" ]] || [[ "$EVENT_NAME" == "nightly-checks" ]]; then
     REPORT_GROUP="$(date +%Y%m%d)-$REF_NAME"
     REPORT_TITLE="Daily checks $(date +%Y-%m-%d)"
-    S3_REPORT_PATH="$REPORT_GROUP/$SUITE_NAME"
     REPORT_ID=$(echo "$SUITE_NAME" | tr ' /. ' '-')
 
 elif [[ "$EVENT_NAME" == "push" ]] ; then
     REPORT_GROUP="$REF_NAME-$COMMIT_SHA"
     REPORT_GROUP=$(echo "$REPORT_GROUP" | tr ' /. ' '_')
-    S3_REPORT_PATH="$REPORT_GROUP/$SUITE_NAME"
 elif [[ "$EVENT_NAME" == "pull_request" ]] || [[ "$EVENT_NAME" == "pr" ]]; then
     if [[ -z "$PR_NUMBER" ]]; then
         echo "::error:: PR_NUMBER is not defined"
@@ -54,17 +52,15 @@ elif [[ "$EVENT_NAME" == "pull_request" ]] || [[ "$EVENT_NAME" == "pr" ]]; then
     fi
 
     REPORT_GROUP=$PR_NUMBER
-    S3_REPORT_PATH="pr/$REPORT_GROUP/$SUITE_NAME"
     REPORT_ID="$REPORT_GROUP-$SUITE_NAME"
 else
   echo "Unknown event name: $EVENT_NAME"
-  S3_REPORT_PATH="$EVENT_NAME/$REPORT_GROUP/$SUITE_NAME"
 fi
 
-REPORT_ID=$(echo "$S3_REPORT_PATH" | tr ' /. ' '-')
-
+S3_REPORT_PATH="$EVENT_NAME/$REPORT_GROUP/$SUITE_NAME"
 S3_REPORT_PATH=$(echo "$S3_REPORT_PATH" | tr ' ' '-')
 S3_REPORT_PATH=$(echo "$S3_REPORT_PATH" | tr '[:upper:]' '[:lower:]')
+REPORT_ID=$(echo "$S3_REPORT_PATH" | tr ' /. ' '-')
 REPORT_ID=$(echo "$REPORT_ID" | tr '[:upper:]' '[:lower:]')
 
 echo "Set REPORT_ID to $REPORT_ID"
@@ -76,6 +72,3 @@ echo "REPORT_ID=$REPORT_ID" >> "$GITHUB_ENV"
 echo "REPORT_GROUP=$REPORT_GROUP" >> "$GITHUB_ENV"
 echo "REPORT_TITLE=$REPORT_TITLE" >> "$GITHUB_ENV"
 echo "S3_REPORT_PATH=$S3_REPORT_PATH" >> "$GITHUB_ENV"
-
-
-
