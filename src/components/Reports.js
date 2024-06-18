@@ -79,7 +79,7 @@ export default class Reports extends React.Component {
 		const shaUrl = `https://github.com/${ repo }/commit/${ sha }`;
 
 		return (
-			<Table id={ id } responsive="sm" variant="dark" borderless hover className={ 'reportsTable' }>
+			<Table key={ id } id={ id } responsive="sm" variant="dark" borderless hover className={ 'reportsTable' }>
 				<thead>
 					<tr>
 						<th colSpan={ 3 }>
