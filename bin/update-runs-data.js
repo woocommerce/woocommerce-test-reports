@@ -59,7 +59,12 @@ async function updateReportData( metadata, summary, runsDataPath ) {
 	}
 
 	//eslint-disable-next-line dot-notation
-	json[ run_id ][ 'attempts' ][ run_attempt ][ report_id ] = { passed, failed: totalFailed, skipped, total };
+	json[ run_id ][ 'attempts' ][ run_attempt ][ report_id ] = {
+		passed,
+		failed: totalFailed,
+		skipped,
+		total,
+	};
 
 	console.log( json[ run_id ] );
 

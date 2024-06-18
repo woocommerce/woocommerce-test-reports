@@ -5,4 +5,4 @@ SCRIPT_PATH=$(
   pwd -P
 )
 
-aws s3 sync s3://a8c-woo-test-reports/data "$SCRIPT_PATH/../public/data" --delete
+aws s3 sync s3://a8c-woo-test-reports/data "$SCRIPT_PATH/../data" --delete
