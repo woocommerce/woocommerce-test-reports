@@ -4,7 +4,7 @@
  * It will read data from report/widgets/summary.json, metadata.json
  */
 
-const { readS3Object, readJson, writeJson } = require( './utils' );
+const { readS3Object, readJson } = require( './utils' );
 const path = require( 'path' );
 const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
 const { s3Params, s3client } = require( './s3-client' );
@@ -34,12 +34,7 @@ async function updateReportData( metadata, summary, runsDataPath ) {
 
 	const { run_id, report_id, run_attempt, updated_on, ref_name } = metadata;
 	const { total, passed, failed, skipped, broken, unknown } = summary.statistic;
-	const results = {
-		passed,
-		failed: failed + broken + unknown,
-		skipped,
-		total,
-	};
+	const totalFailed = failed + broken + unknown;
 
 	if ( ! report_id ) {
 		throw 'Cannot find report_id in metadata.json';
@@ -55,13 +50,16 @@ async function updateReportData( metadata, summary, runsDataPath ) {
 	}
 
 	// Get the run_attempt node or create it if it doesn't exist
+	//eslint-disable-next-line dot-notation
 	if ( ! json[ run_id ][ 'attempts' ][ run_attempt ] ) {
 		// Add the properties that should belong to the group -
 		// all the reports in this group should have the same values
+		//eslint-disable-next-line dot-notation
 		json[ run_id ][ 'attempts' ][ run_attempt ] = {};
 	}
 
-	json[ run_id ][ 'attempts' ][ run_attempt ][ report_id ] = { passed, failed, skipped, total };
+	//eslint-disable-next-line dot-notation
+	json[ run_id ][ 'attempts' ][ run_attempt ][ report_id ] = { passed, failed: totalFailed, skipped, total };
 
 	console.log( json[ run_id ] );
 

@@ -5,7 +5,7 @@
 const { listS3Folders, removeS3Folder, getJSONFromS3 } = require( './utils' );
 const { s3Params, s3client } = require( './s3-client' );
 const { Octokit } = require( '@octokit/rest' );
-const { PutObjectCommand, DeleteObjectCommand } = require( '@aws-sdk/client-s3' );
+const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
 const config = require( '../src/config.json' );
 const moment = require( 'moment' );
 const octokit = new Octokit( {
@@ -200,7 +200,7 @@ const dryRun = process.env.DRY_RUN;
 		groupDirs = groupDirs.map( report =>
 			report.replace( `reports/${ eventDir }/`, '' ).replace( '/', '' )
 		);
-		let groupsListed = ( reports[ eventDir ] = reports[ eventDir ] || {} );
+		const groupsListed = ( reports[ eventDir ] = reports[ eventDir ] || {} );
 
 		for ( const groupDir of groupDirs ) {
 			console.log( `Checking ${ eventDir }/${ groupDir }` );

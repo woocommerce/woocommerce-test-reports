@@ -4,7 +4,7 @@
  * It reads the data from the runs-<month>.json files for the previous 12 months and the current one.
  */
 
-const { sort, readS3Object, writeJson } = require( './utils' );
+const { sort, readS3Object } = require( './utils' );
 const moment = require( 'moment' );
 const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
 const { s3Params, s3client } = require( './s3-client' );
@@ -13,8 +13,8 @@ const entryTemplate =
 	'{ "runs": 0, "attempts": 0, "reRuns": 0, "reRunsRate": 0, "testsPassed": 0, "testsFailed": 0, "testsSkipped": 0, "testsTotal": 0, "testsFailedRate": 0 }';
 
 ( async () => {
-	let runs = [];
-	let runsDataFiles = [];
+	const runs = [];
+	const runsDataFiles = [];
 
 	// Get the list of runs data files for the last 12 months plus the current month
 	for ( let i = 0; i < 13; i++ ) {
