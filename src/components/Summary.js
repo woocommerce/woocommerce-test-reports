@@ -241,9 +241,7 @@ export default class Summary extends BaseComponent {
 							<XAxis
 								dataKey="date"
 								axisLine={ false }
-								type="number"
 								interval="preserveStartEnd"
-								scale="band"
 							/>
 							<YAxis yAxisId="testCount" type="number" axisLine={ false } />
 							<YAxis yAxisId="failureRate" orientation="right" axisLine={ false } />
@@ -354,9 +352,7 @@ export default class Summary extends BaseComponent {
 							<XAxis
 								dataKey="date"
 								axisLine={ false }
-								type="number"
 								interval="preserveStartEnd"
-								scale="band"
 							/>
 							<YAxis type="number" axisLine={ false } />
 							<YAxis yAxisId="reRunsRate" orientation="right" axisLine={ false } />
