@@ -101,7 +101,6 @@ const dryRun = process.env.DRY_RUN;
 
         // PR is not in the 100 closed or the 100 open PRs, make an API call to check its status
         console.log( `Checking PR ${ rg.pr_number } status` );
-        continue;
         const pull = await octokit.rest.pulls.get( {
             owner,
 		    repo,
@@ -124,6 +123,7 @@ const dryRun = process.env.DRY_RUN;
     for (const event of [ 'push', 'daily-checks', 'release-checks' ]) {
         const eventGroups = reportsData[event] || {};
         const initialCount = Object.keys(eventGroups).length;
+        console.log();
         console.group( '\n', `Checking ${ initialCount } reports groups for ${ event } event` );
 
         // If there is no explicit threshold for the event, skip it, we don't want to delete reports by mistake.
@@ -232,6 +232,7 @@ function isPermanent( group ) {
 }
 
 function logRemovedGroupsCount(initialCount, finalCount) {
+    console.log();
     const removed = initialCount - finalCount;
     console.log( `${ done } Removed ${ removed } report groups` );
 }
