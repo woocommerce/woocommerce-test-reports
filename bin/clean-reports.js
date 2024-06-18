@@ -6,7 +6,6 @@ const {
 	readS3Object,
 	listS3Folders,
 	removeS3Folder,
-	listS3Objects,
 	getJSONFromS3, writeJson,
 } = require( './utils' );
 const { s3Params, s3client } = require( './s3-client' );
@@ -33,11 +32,11 @@ const repo = 'woocommerce';
 const dryRun = process.env.DRY_RUN;
 
 ( async () => {
-    const reportsData = JSON.parse( ( await readS3Object( 'data/reports.json' ) ).toString() );
+    const reportsData = await getJSONFromS3( 'data/reports.json' );
 
     // region clean pull_request
-    const prGroups = reportsData.pull_request || {};
-    // const prGroups = {};
+    // const prGroups = reportsData.pull_request || {};
+    const prGroups = {};
     const initialCount = Object.keys(prGroups).length;
     console.group( '\n', `Checking ${ initialCount } reports groups for pull_request event` );
 
@@ -173,15 +172,47 @@ const dryRun = process.env.DRY_RUN;
     }
     // endregion
 
-	// Remove reports from S3 storage
-	// console.group( '\n', 'Removing reports from storage' );
+	// region Remove reports from S3 storage
+	console.group( '\n', 'Removing reports from storage' );
+
+    // Getting a new list of stored reports
+	let eventDirs = await listS3Folders( 'reports/', '/' );
+    eventDirs = eventDirs.map( report => report.replace( 'reports/', '' ).replace( '/', '' ) )
+    const reports =  await getJSONFromS3( 'data/reports.json' );
+    const expectedDirs = [ 'push', 'pull_request', 'daily-checks', 'release-checks' ];
+
+    for (const eventDir of eventDirs) {
+        if( !expectedDirs.includes( eventDir ) ) {
+            console.warn( `${problem} Found unexpected event directory '${ eventDir }'. Should it be removed?` );
+            continue;
+        }
+
+        let groupDirs = await listS3Folders( `reports/${eventDir}/`, '/' );
+        groupDirs = groupDirs.map( report => report.replace( `reports/${eventDir}/`, '' ).replace( '/', '' ) )
+        let groupsListed = reports[eventDir] = reports[eventDir] || {};
+
+        for (const groupDir of groupDirs) {
+            console.log(`Checking ${eventDir}/${groupDir}`);
+            if (!groupsListed[groupDir]) {
+                console.log( `${eventDir}.${groupDir} not found in reports list. Deleting.` );
+                if (!dryRun) {
+                    await removeS3Folder( `reports/${eventDir}/${groupDir}` );
+                }
+            }  else {
+                console.log( `${eventDir}.${groupDir} found in reports list. Keeping it.` );
+            }
+        }
+    }
+
+	// storedReports = reports.map( report => report.replace( 'reports/', '' ).replace( '/', '' ) );
 	// for ( const report of reportsToDelete ) {
 	// 	console.group( '\n', `Removing report ${ report }` );
 	// 	await removeS3Folder( `reports/${ report }` );
 	// 	console.groupEnd();
 	// }
-	// console.groupEnd();
 
+    console.groupEnd();
+    // endregion
 
 } )();
 
