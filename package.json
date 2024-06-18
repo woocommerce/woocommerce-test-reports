@@ -19,8 +19,7 @@
     "react-dom": "^18.3.1",
     "react-is": "^18.3.1",
     "react-router-dom": "^6.23.1",
-    "recharts": "^2.12.7",
-    "webpack-merge": "^5.10.0"
+    "recharts": "^2.12.7"
   },
   "devDependencies": {
     "@aws-sdk/client-s3": "^3.592.0",
@@ -41,9 +40,11 @@
     "style-loader": "^4.0.0",
     "webpack": "^5.92.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+    "webpack-dev-server": "^5.0.4",
+    "webpack-merge": "^5.10.0"
   },
   "scripts": {
+    "clean": "rm -rf node_modules",
     "prestart": "webpack --config webpack.config.dev.js",
     "start": "webpack serve --open --hot --config webpack.config.dev.js",
     "prebuild": "rm -rf dist",
