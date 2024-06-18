@@ -8,6 +8,9 @@ on:
     types:
       - completed
 
+concurrency:
+  group: cleanup
+
 jobs:
   update-stats:
     name: "Clean up reports"
