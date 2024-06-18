@@ -57,11 +57,10 @@ else
   echo "Unknown event name: $EVENT_NAME"
 fi
 
-REPORT_ID=$(echo "$S3_REPORT_PATH" | tr ' /. ' '-')
-
 S3_REPORT_PATH="$EVENT_NAME/$REPORT_GROUP/$SUITE_NAME"
 S3_REPORT_PATH=$(echo "$S3_REPORT_PATH" | tr ' ' '-')
 S3_REPORT_PATH=$(echo "$S3_REPORT_PATH" | tr '[:upper:]' '[:lower:]')
+REPORT_ID=$(echo "$S3_REPORT_PATH" | tr ' /. ' '-')
 REPORT_ID=$(echo "$REPORT_ID" | tr '[:upper:]' '[:lower:]')
 
 echo "Set REPORT_ID to $REPORT_ID"
