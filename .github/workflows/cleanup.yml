@@ -3,10 +3,8 @@ name: Clean up reports
 on:
   workflow_dispatch:
 
-  workflow_run:
-    workflows: [ Report ]
-    types:
-      - completed
+  schedule:
+    - cron: '30 */4 * * *' # run every 4 hours
 
 concurrency:
   group: cleanup
