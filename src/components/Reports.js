@@ -42,24 +42,21 @@ export default class Reports extends React.Component {
 				}
 
 				this.setState( {
-					groups: this.sortByDate(groups),
+					groups: this.sortByDate( groups ),
 					reportsCount: jsonData.reportsCount,
 					isDataFetched: true,
 				} );
 
-				this.sortByDate(groups);
+				this.sortByDate( groups );
 			} )
 			.catch( console.log );
 	}
 
-	sortByDate(groups) {
+	sortByDate( groups ) {
 		const keys = Object.keys( groups );
 
 		keys.sort( ( a, b ) => {
-			return (
-				Date.parse( groups[ b ].lastUpdate ) -
-				Date.parse( groups[ a ].lastUpdate )
-			);
+			return Date.parse( groups[ b ].lastUpdate ) - Date.parse( groups[ a ].lastUpdate );
 		} );
 
 		const sortedGroups = {};
@@ -79,7 +76,15 @@ export default class Reports extends React.Component {
 		const shaUrl = `https://github.com/${ repo }/commit/${ sha }`;
 
 		return (
-			<Table key={ id } id={ id } responsive="sm" variant="dark" borderless hover className={ 'reportsTable' }>
+			<Table
+				key={ id }
+				id={ id }
+				responsive="sm"
+				variant="dark"
+				borderless
+				hover
+				className={ 'reportsTable' }
+			>
 				<thead>
 					<tr>
 						<th colSpan={ 3 }>
