@@ -24,6 +24,7 @@ permissions: {}
 
 jobs:
   publish:
+    if: ${{ vars.WORKFLOWS_VERSION == '1' }}
     name: Publish Allure report
     runs-on: ubuntu-20.04
     permissions:

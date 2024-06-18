@@ -206,21 +206,21 @@ jobs:
         run: node change-report-title.js
 
       - name: Upload API test reports to S3 bucket
-        if: ${{ env.API_ARTIFACT }}
+        if: ${{ env.API_ARTIFACT && vars.WORKFLOWS_VERSION == '1' }}
         env:
           API_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_ROOT }}/pr/${{ env.PR_NUMBER }}/api
         run: |
           aws s3 sync output/api $API_DESTINATION --delete
 
       - name: Upload E2E test reports to S3 bucket
-        if: ${{ env.E2E_ARTIFACT }}
+        if: ${{ env.E2E_ARTIFACT && vars.WORKFLOWS_VERSION == '1' }}
         env:
           E2E_DESTINATION: ${{ secrets.S3_BUCKET_URL }}/${{ env.S3_ROOT }}/pr/${{ env.PR_NUMBER }}/e2e
         run: |
           aws s3 sync output/e2e $E2E_DESTINATION --delete
 
       - name: Create or update index.md file for API test report
-        if: ${{ env.API_ARTIFACT }}
+        if: ${{ env.API_ARTIFACT && vars.WORKFLOWS_VERSION == '1' }}
         working-directory: repo/.github/workflows/scripts
         env:
           TEST_TYPE: api
@@ -229,7 +229,7 @@ jobs:
         run: bash pr-set-index-md.sh
 
       - name: Create or update index.md file for E2E test report
-        if: ${{ env.E2E_ARTIFACT }}
+        if: ${{ env.E2E_ARTIFACT && vars.WORKFLOWS_VERSION == '1' }}
         working-directory: repo/.github/workflows/scripts
         env:
           TEST_TYPE: e2e
@@ -238,6 +238,7 @@ jobs:
         run: bash pr-set-index-md.sh
 
       - name: Push changes to branch
+        if: ${{ vars.WORKFLOWS_VERSION == '1' }}
         working-directory: repo/.github/workflows/scripts
         env:
           GITHUB_USER: ${{ secrets.REPORTS_USER }}
@@ -256,7 +257,7 @@ jobs:
           echo "$SERVICE_ACCOUNT_KEY" > key.json
 
       - name: Update API test suite stats
-        if: ${{ env.API_ARTIFACT }}
+        if: ${{ env.API_ARTIFACT && vars.WORKFLOWS_VERSION == '1' }}
         working-directory: repo/
         run: |
           npm install
@@ -264,7 +265,7 @@ jobs:
           node .github/workflows/scripts/update-api-stats.js
 
       - name: Update e2e test suite stats
-        if: ${{ env.E2E_ARTIFACT }}
+        if: ${{ env.E2E_ARTIFACT && vars.WORKFLOWS_VERSION == '1' }}
         working-directory: repo/
         run: |
           npm install
