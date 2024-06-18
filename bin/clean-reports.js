@@ -12,7 +12,9 @@ const { Octokit } = require( '@octokit/rest' );
 const { PutObjectCommand, DeleteObjectCommand } = require( '@aws-sdk/client-s3' );
 const config = require( '../src/config.json' );
 const moment = require( 'moment' );
-const octokit = new Octokit();
+const octokit = new Octokit({
+  auth: process.env.GITHUB_TOKEN
+});
 
 const daysToKeepReports = {
     "pull_request": 30,
@@ -41,18 +43,22 @@ const dryRun = process.env.DRY_RUN;
     let closed = [];
     let open = [];
 
-    if(prGroups.length > 0) {
+    if( Object.keys(prGroups).length > 0 ) {
         const closedPRs = await octokit.rest.pulls.list( {
-		owner,
-		repo,
-		state: 'closed',
-		per_page: 100,
-	} );
+            owner,
+            repo,
+            state: 'closed',
+            per_page: 100,
+            sort: 'updated',
+            direction: 'desc',
+	    } );
         const openPRs = await octokit.rest.pulls.list( {
             owner,
             repo,
             state: 'open',
             per_page: 100,
+            sort: 'updated',
+            direction: 'desc',
         } );
         closed = closedPRs.data.map( pr => pr.number.toString() );
         open = openPRs.data.map( pr => pr.number.toString() );
@@ -95,6 +101,7 @@ const dryRun = process.env.DRY_RUN;
 
         // PR is not in the 100 closed or the 100 open PRs, make an API call to check its status
         console.log( `Checking PR ${ rg.pr_number } status` );
+        continue;
         const pull = await octokit.rest.pulls.get( {
             owner,
 		    repo,
