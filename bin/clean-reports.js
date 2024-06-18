@@ -36,26 +36,30 @@ const dryRun = process.env.DRY_RUN;
     const reportsData = JSON.parse( ( await readS3Object( 'data/reports.json' ) ).toString() );
 
     // region clean pull_request
-    const prGroups = reportsData.pull_request;
+    const prGroups = reportsData.pull_request || {};
+    // const prGroups = {};
     const initialCount = Object.keys(prGroups).length;
     console.group( '\n', `Checking ${ initialCount } reports groups for pull_request event` );
 
-	const closedPRs = await octokit.rest.pulls.list( {
+    let closed = [];
+    let open = [];
+
+    if(prGroups.length > 0) {
+        const closedPRs = await octokit.rest.pulls.list( {
 		owner,
 		repo,
 		state: 'closed',
 		per_page: 100,
 	} );
-
-	const openPRs = await octokit.rest.pulls.list( {
-		owner,
-		repo,
-		state: 'open',
-		per_page: 100,
-	} );
-
-	const closed = closedPRs.data.map( pr => pr.number.toString() );
-	const open = openPRs.data.map( pr => pr.number.toString() );
+        const openPRs = await octokit.rest.pulls.list( {
+            owner,
+            repo,
+            state: 'open',
+            per_page: 100,
+        } );
+        closed = closedPRs.data.map( pr => pr.number.toString() );
+        open = openPRs.data.map( pr => pr.number.toString() );
+    }
 
     for (const group of Object.keys(prGroups)) {
         console.log();
