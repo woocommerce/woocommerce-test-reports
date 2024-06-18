@@ -1,5 +1,4 @@
 import React from 'react';
-import configData from '../config.json';
 import { Table } from 'react-bootstrap';
 import moment from 'moment';
 import branchSVG from '../assets/branch.svg';
@@ -8,6 +7,7 @@ import prSVG from '../assets/pr.svg';
 import passedSVG from '../assets/passed.svg';
 import failedSVG from '../assets/failed.svg';
 import unknownSVG from '../assets/unknown.svg';
+import { getDataSourceUrl } from '../config';
 
 export default class Reports extends React.Component {
 	constructor( props ) {
@@ -22,7 +22,7 @@ export default class Reports extends React.Component {
 	}
 
 	componentDidMount() {
-		fetch( `${ configData.dataSourceURL }/data/reports.json`, {
+		fetch( `${ getDataSourceUrl() }/data/reports.json`, {
 			headers: {
 				'Content-Type': 'application/json',
 				Accept: 'application/json',
@@ -160,7 +160,7 @@ export default class Reports extends React.Component {
 	getReportLinkCell( report ) {
 		const { results, path, suite } = report;
 		const isFailed = results.total !== results.passed + results.skipped;
-		const linkUrl = `${ configData.dataSourceURL }/reports/${ path }/index.html`;
+		const linkUrl = `${ getDataSourceUrl() }/reports/${ path }/index.html`;
 		let statusIcon = <img src={ unknownSVG } alt={ 'status icon' } width={ 16 } height={ 16 } />;
 		if ( results.total > 0 ) {
 			statusIcon = isFailed ? (

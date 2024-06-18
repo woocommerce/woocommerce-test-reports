@@ -1,7 +1,6 @@
 import React from 'react';
 import { sortArray } from '../utils/sort';
 import BaseComponent from './BaseComponent';
-import config from '../config.json';
 import moment from 'moment';
 import {
 	Bar,
@@ -14,6 +13,7 @@ import {
 	XAxis,
 	YAxis,
 } from 'recharts';
+import { getDataSourceUrl } from '../config';
 
 export default class Summary extends BaseComponent {
 	state = {
@@ -32,7 +32,7 @@ export default class Summary extends BaseComponent {
 	};
 
 	async componentDidMount() {
-		await fetch( `${ config.dataSourceURL }/data/summary.json`, {
+		await fetch( `${ getDataSourceUrl() }/data/summary.json`, {
 			headers: {
 				'Content-Type': 'application/json',
 				Accept: 'application/json',
@@ -49,7 +49,7 @@ export default class Summary extends BaseComponent {
 			} )
 			.catch( console.error );
 
-		await fetch( `${ config.dataSourceURL }/data/runs-daily.json`, {
+		await fetch( `${ getDataSourceUrl() }/data/runs-daily.json`, {
 			headers: {
 				'Content-Type': 'application/json',
 				Accept: 'application/json',
@@ -66,7 +66,7 @@ export default class Summary extends BaseComponent {
 			} )
 			.catch( console.error );
 
-		await fetch( `${ config.dataSourceURL }/data/runs-weekly.json`, {
+		await fetch( `${ getDataSourceUrl() }/data/runs-weekly.json`, {
 			headers: {
 				'Content-Type': 'application/json',
 				Accept: 'application/json',
@@ -83,7 +83,7 @@ export default class Summary extends BaseComponent {
 			} )
 			.catch( console.error );
 
-		await fetch( `${ config.dataSourceURL }/data/runs-monthly.json`, {
+		await fetch( `${ getDataSourceUrl() }/data/runs-monthly.json`, {
 			headers: {
 				'Content-Type': 'application/json',
 				Accept: 'application/json',

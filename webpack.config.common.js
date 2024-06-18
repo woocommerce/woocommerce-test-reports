@@ -1,7 +1,7 @@
 const path = require( 'path' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
-const manifest = require('./manifest.json');
+const manifest = require( './manifest.json' );
 
 module.exports = {
 	entry: './src/index.js',
@@ -40,27 +40,19 @@ module.exports = {
 		],
 	},
 	plugins: [
-	  new HtmlWebpackPlugin({
-		template: './src/templates/index.html',
-		favicon: './src/assets/favicon.ico',
-		title: manifest.name,
-		meta: {
-        	description: manifest.description,
-      },
-	  }),
-	  new CopyWebpackPlugin({
-		patterns: [
-			{ from: 'data', to: 'data' },
-			{ from: 'src/static', to: '.' },
-			{ from: 'manifest.json', to: 'manifest.json' },
-		],
-	  }),
+		new HtmlWebpackPlugin( {
+			template: './src/templates/index.html',
+			favicon: './src/assets/favicon.ico',
+			title: manifest.name,
+			meta: {
+				description: manifest.description,
+			},
+		} ),
+		new CopyWebpackPlugin( {
+			patterns: [
+				{ from: 'src/static', to: '.' },
+				{ from: 'manifest.json', to: 'manifest.json' },
+			],
+		} ),
 	],
-	devServer: {
-		static: {
-			directory: path.join( __dirname, 'dist' ),
-		},
-		compress: true,
-		port: 3000,
-	},
 };
