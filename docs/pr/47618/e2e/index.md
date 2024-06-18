@@ -4,8 +4,8 @@ redirect_to: https://a8c-woo-test-reports.s3.amazonaws.com/public/pr/47618/e2e/i
 pr_number: 47618
 pr_title_encoded: "Product+Block+Editor%3A+populate+attribute+options+optimistically+"
 pr_test_type: e2e
-last_published: "2024-05-31 14:42:08 +0000"
-commit_sha: 10d7c884687ab87d6a791402b90627fce6fa55c8
+last_published: "2024-06-18 14:04:05 +0000"
+commit_sha: d20ef4e6847ce30a837a4355f29c417bd0a03009
 commit_message: ""
 branch_name: update/populate-attribute-terms-optimistically
 passed: true
