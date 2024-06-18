@@ -27,7 +27,10 @@
     "@octokit/rest": "^20.1.1",
     "@wordpress/eslint-plugin": "^19.0.0",
     "eslint": "^8.57.0",
-    "prettier": "npm:wp-prettier@^3.0.3"
+    "prettier": "npm:wp-prettier@^3.0.3",
+    "axios": "^1.6.2",
+    "googleapis": "^118.0.0",
+    "papaparse": "^5.4.1"
   },
   "scripts": {
     "start": "PORT=3000 react-scripts start",
