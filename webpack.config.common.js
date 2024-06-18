@@ -9,6 +9,7 @@ module.exports = {
 		path: path.resolve( __dirname, 'dist' ),
 		filename: 'bundle.js',
 		publicPath: '/woocommerce-test-reports/',
+		clean: true,
 	},
 	module: {
 		rules: [
@@ -47,6 +48,12 @@ module.exports = {
 			meta: {
 				description: manifest.description,
 			},
+		} ),
+		new HtmlWebpackPlugin( {
+			template: './src/templates/404.html',
+			filename: '404.html',
+			favicon: './src/assets/favicon.ico',
+			title: 'Not found - Woocommerce test reports',
 		} ),
 		new CopyWebpackPlugin( {
 			patterns: [

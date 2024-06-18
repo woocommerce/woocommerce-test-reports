@@ -46,7 +46,8 @@
   "scripts": {
     "prestart": "webpack --config webpack.config.dev.js",
     "start": "webpack serve --open --hot --config webpack.config.dev.js",
-    "build": "rm -rf dist && webpack --config webpack.config.prod.js",
+    "prebuild": "rm -rf dist",
+    "build": "webpack --config webpack.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext .js,.jsx,.cjs,.mjs,.ts,.tsx .",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx}'"
