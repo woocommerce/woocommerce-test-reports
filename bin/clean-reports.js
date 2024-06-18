@@ -5,14 +5,13 @@
 const {
 	listS3Folders,
 	removeS3Folder,
-	getJSONFromS3, writeJson,
+	getJSONFromS3,
 } = require( './utils' );
 const { s3Params, s3client } = require( './s3-client' );
 const { Octokit } = require( '@octokit/rest' );
 const { PutObjectCommand, DeleteObjectCommand } = require( '@aws-sdk/client-s3' );
 const config = require( '../src/config.json' );
 const moment = require( 'moment' );
-const {join} = require("node:path");
 const octokit = new Octokit();
 
 const daysToKeepReports = {
@@ -156,7 +155,7 @@ const dryRun = process.env.DRY_RUN;
 
     // region upload updated reports data
     // Write the updated reports list locally
-	writeJson( reportsData, join( "public", 'reports.json' ) );
+	// writeJson( reportsData, join( "public", 'reports.json' ) );
 
 	// Upload the report to S3
 	const cmd = new PutObjectCommand( {
