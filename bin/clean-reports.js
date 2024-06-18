@@ -3,7 +3,6 @@
  */
 
 const {
-	readS3Object,
 	listS3Folders,
 	removeS3Folder,
 	getJSONFromS3, writeJson,
@@ -203,13 +202,6 @@ const dryRun = process.env.DRY_RUN;
             }
         }
     }
-
-	// storedReports = reports.map( report => report.replace( 'reports/', '' ).replace( '/', '' ) );
-	// for ( const report of reportsToDelete ) {
-	// 	console.group( '\n', `Removing report ${ report }` );
-	// 	await removeS3Folder( `reports/${ report }` );
-	// 	console.groupEnd();
-	// }
 
     console.groupEnd();
     // endregion
