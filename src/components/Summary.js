@@ -238,11 +238,7 @@ export default class Summary extends BaseComponent {
 					<ResponsiveContainer width="100%" height="100%">
 						<ComposedChart data={ this.state.days }>
 							{ this.getDefaultCartesianGrid() }
-							<XAxis
-								dataKey="date"
-								axisLine={ false }
-								interval="preserveStartEnd"
-							/>
+							<XAxis dataKey="date" axisLine={ false } interval="preserveStartEnd" />
 							<YAxis yAxisId="testCount" type="number" axisLine={ false } />
 							<YAxis yAxisId="failureRate" orientation="right" axisLine={ false } />
 							<Tooltip />
@@ -349,11 +345,7 @@ export default class Summary extends BaseComponent {
 					<ResponsiveContainer width="100%" height="100%">
 						<ComposedChart data={ this.state.days }>
 							{ this.getDefaultCartesianGrid() }
-							<XAxis
-								dataKey="date"
-								axisLine={ false }
-								interval="preserveStartEnd"
-							/>
+							<XAxis dataKey="date" axisLine={ false } interval="preserveStartEnd" />
 							<YAxis type="number" axisLine={ false } />
 							<YAxis yAxisId="reRunsRate" orientation="right" axisLine={ false } />
 							<Tooltip />
