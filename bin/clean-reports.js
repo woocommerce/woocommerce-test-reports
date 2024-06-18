@@ -33,8 +33,8 @@ const dryRun = process.env.DRY_RUN;
     const reportsData = await getJSONFromS3( 'data/reports.json' );
 
     // region clean pull_request
-    // const prGroups = reportsData.pull_request || {};
-    const prGroups = {};
+    const prGroups = reportsData.pull_request || {};
+    // const prGroups = {};
     const initialCount = Object.keys(prGroups).length;
     console.group( '\n', `Checking ${ initialCount } reports groups for pull_request event` );
 
