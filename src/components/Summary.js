@@ -365,7 +365,7 @@ export default class Summary extends BaseComponent {
 								unit=" runs"
 								dataKey="attempts"
 								name="total"
-								fill="rgba( 115, 151, 75, 0.73 )"
+								fill="rgba( 170, 170, 170, 0.73 )"
 								legendType="circle"
 								maxBarSize={20}
 							/>
@@ -394,7 +394,7 @@ export default class Summary extends BaseComponent {
 							<Bar
 								dataKey="testsPerAttempt"
 								name="tests per run attempt"
-								fill="rgba( 115, 151, 75, 0.73 )"
+								fill="rgba( 170, 170, 170, 0.73 )"
 								legendType="circle"
 								maxBarSize={20}
 							/>

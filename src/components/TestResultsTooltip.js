@@ -10,7 +10,7 @@ export default class TestResultsTooltip extends React.Component {
 					className="custom-tooltip"
 					style={ { backgroundColor: '#212529', border: '1px solid #454c54', padding: '10px' } }
 				>
-					<p className="label">{ `${ moment( label ).format( 'DD MMM YYYY' ) }` }</p>
+					<p className="label">{ `${ moment( label ).format( 'DD MMMM YYYY' ) }` }</p>
 					<hr />
 					{ payload.map( ( item, index ) => (
 						<div key={ index }>
