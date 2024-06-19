@@ -6,7 +6,8 @@ import moment from 'moment';
 import {
 	Bar,
 	CartesianGrid,
-	ComposedChart, Label,
+	ComposedChart,
+	Label,
 	Legend,
 	Line,
 	ResponsiveContainer,
@@ -169,12 +170,20 @@ export default class Summary extends BaseComponent {
 	}
 
 	getDateXAxis() {
-		return  <XAxis
-			  dataKey="date"
-			  axisLine={false}
-			  interval="preserveStartEnd"
-			  tickFormatter={(tickItem) => moment(tickItem).format('DD MMM YY')}
-		><Label offset={0} position="insideBottom" formatter={(value) => moment(value).format('DD MMM YY')}  /></XAxis>
+		return (
+			<XAxis
+				dataKey="date"
+				axisLine={ false }
+				interval="preserveStartEnd"
+				tickFormatter={ tickItem => moment( tickItem ).format( 'DD MMM YY' ) }
+			>
+				<Label
+					offset={ 0 }
+					position="insideBottom"
+					formatter={ value => moment( value ).format( 'DD MMM YY' ) }
+				/>
+			</XAxis>
+		);
 	}
 
 	render() {
@@ -249,8 +258,7 @@ export default class Summary extends BaseComponent {
 							{ this.getDateXAxis() }
 							<YAxis yAxisId="testCount" type="number" axisLine={ false } />
 							<YAxis yAxisId="failureRate" orientation="right" axisLine={ false } />
-							<Tooltip content={<TestResultsTooltip/>} />;
-							{ this.getDefaultLegend() }
+							<Tooltip content={ <TestResultsTooltip /> } />;{ this.getDefaultLegend() }
 							<Bar
 								unit=" tests"
 								dataKey="testsPassed"
@@ -357,7 +365,7 @@ export default class Summary extends BaseComponent {
 							<YAxis type="number" axisLine={ false } />
 							<YAxis yAxisId="reRunsRate" orientation="right" axisLine={ false } />
 							{ this.getDefaultLegend() }
-							<Tooltip content={<TestResultsTooltip/>} />;
+							<Tooltip content={ <TestResultsTooltip /> } />;
 							<Bar
 								unit=" runs"
 								dataKey="attempts"
