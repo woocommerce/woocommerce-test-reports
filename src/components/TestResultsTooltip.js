@@ -17,7 +17,7 @@ export default class TestResultsTooltip extends React.Component {
 							<p
 								className="label"
 								style={ { color: item.color } }
-							>{ `${ item.name }: ${ item.value } ${ item.unit }` }</p>
+							>{ `${ item.name }: ${ item.value } ${ item.unit ? ` ${ item.unit }` : '' }` }</p>
 						</div>
 					) ) }
 				</div>

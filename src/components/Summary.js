@@ -7,7 +7,6 @@ import {
 	Bar,
 	CartesianGrid,
 	ComposedChart,
-	Label,
 	Legend,
 	Line,
 	ResponsiveContainer,
@@ -166,7 +165,7 @@ export default class Summary extends BaseComponent {
 	}
 
 	getDefaultLegend() {
-		return <Legend verticalAlign="top" align="right" height={ 40 } />;
+		return <Legend verticalAlign="top" align="right" height={ 40 } wrapperStyle={{right: '55px'}} />;
 	}
 
 	getDateXAxis() {
@@ -383,6 +382,26 @@ export default class Summary extends BaseComponent {
 					</ResponsiveContainer>
 				</div>
 				<p className={'caption center'}>Daily test workflow runs</p>
+				<div className={'chartContainer'}>
+					<ResponsiveContainer width="100%" height="100%">
+						<ComposedChart data={this.state.days}>
+							{this.getDefaultCartesianGrid()}
+							{this.getDateXAxis()}
+							<YAxis type="number" axisLine={false}/>
+							<YAxis yAxisId="reRunsRate" orientation="right" axisLine={false}/>
+							{this.getDefaultLegend()}
+							<Tooltip content={<TestResultsTooltip/>}/>;
+							<Bar
+								dataKey="testsPerAttempt"
+								name="tests per run attempt"
+								fill="rgba( 115, 151, 75, 0.73 )"
+								legendType="circle"
+								maxBarSize={20}
+							/>
+						</ComposedChart>
+					</ResponsiveContainer>
+				</div>
+				<p className={'caption center'}>Average tests per test workflow run attempt</p>
 				<hr/>
 			</div>
 		);
