@@ -54,12 +54,12 @@ async function updateReportData( reportPath, json ) {
 	}
 
 	json[ event_name ][ group ] = {
+		...json[ event_name ][ group ],
 		lastUpdate: new Date().toISOString(),
 		pr_number: metadata.pr_number,
 		report_title: metadata.report_title,
 		ref_name: metadata.ref_name,
 		sha: metadata.sha,
-		reports: [],
 	};
 
 	// Get the report statistics from report/widgets/summary.json
