@@ -96,6 +96,8 @@ async function updateReportData( reportPath, json ) {
 		reports.push( report );
 	}
 
+	json[ event_name ][ group ].lastUpdate = new Date().toISOString();
+
 	json.lastUpdate = new Date().toISOString();
 	return json;
 }
