@@ -26,6 +26,7 @@ concurrency:
 
 jobs:
   publish_pr_test_reports:
+    if: ${{ vars.WORKFLOWS_VERSION == '1' }}
     name: Publish PR test reports
     runs-on: ubuntu-20.04
     env:
