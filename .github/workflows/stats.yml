@@ -3,7 +3,7 @@ name: Update stats
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */12 * * *' # run every 12 hours
+    - cron: '0 */4 * * *' # run every 4 hours
 
 jobs:
   update-stats:
