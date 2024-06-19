@@ -5,6 +5,7 @@
 	--default-font-color: #cccccc;
 	--meta-color: #b9bbbd;
 	--default-link-color: #539bf5;
+	--woo-link-color: rgba(202, 171, 197, 0.72);
 	--color-passed: rgba( 115, 151, 75, 0.73 );
 	--color-failed: rgba( 253, 90, 62, 0.71 );
 	--color-failed-secondary: rgba(186, 110, 98, 0.71);
@@ -151,7 +152,7 @@ a {
 }
 
 .report-link:hover {
-	color: var( --default-link-color );
+	color: var( --woo-link-color );
 	text-decoration: none;
 }
 
