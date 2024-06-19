@@ -14,10 +14,9 @@ export default class TestResultsTooltip extends React.Component {
 					<hr />
 					{ payload.map( ( item, index ) => (
 						<div key={ index }>
-							<p
-								className="label"
-								style={ { color: item.color } }
-							>{ `${ item.name }: ${ item.value } ${ item.unit ? ` ${ item.unit }` : '' }` }</p>
+							<p className="label" style={ { color: item.color } }>{ `${ item.name }: ${
+								item.value
+							} ${ item.unit ? ` ${ item.unit }` : '' }` }</p>
 						</div>
 					) ) }
 				</div>

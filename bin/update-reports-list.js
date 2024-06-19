@@ -50,17 +50,17 @@ async function updateReportData( reportPath, json ) {
 
 	// Get the group node or create it if it doesn't exist
 	if ( ! json[ event_name ][ group ] ) {
-		// Add the properties that should belong to the group -
-		// all the reports in this group should have the same values
-		json[ event_name ][ group ] = {
-			lastUpdate: new Date().toISOString(),
-			pr_number: metadata.pr_number,
-			report_title: metadata.report_title,
-			ref_name: metadata.ref_name,
-			sha: metadata.sha,
-			reports: [],
-		};
+		json[ event_name ][ group ] = {};
 	}
+
+	json[ event_name ][ group ] = {
+		lastUpdate: new Date().toISOString(),
+		pr_number: metadata.pr_number,
+		report_title: metadata.report_title,
+		ref_name: metadata.ref_name,
+		sha: metadata.sha,
+		reports: [],
+	};
 
 	// Get the report statistics from report/widgets/summary.json
 	const statistic = readJson( path.join( reportPath, 'widgets/summary.json' ) ).statistic;
@@ -95,8 +95,6 @@ async function updateReportData( reportPath, json ) {
 		// push new report
 		reports.push( report );
 	}
-
-	json[ event_name ][ group ].lastUpdate = new Date().toISOString();
 
 	json.lastUpdate = new Date().toISOString();
 	return json;
