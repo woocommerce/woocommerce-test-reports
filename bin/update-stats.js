@@ -10,7 +10,7 @@ const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
 const { s3Params, s3client } = require( './s3-client' );
 const trunkReports = require( '../src/config.json' ).trunkRuns;
 const entryTemplate =
-	'{ "runs": 0, "attempts": 0, "reRuns": 0, "reRunsRate": 0, "testsPassed": 0, "testsFailed": 0, "testsSkipped": 0, "testsTotal": 0, "testsFailedRate": 0 }';
+	'{ "runs": 0, "attempts": 0, "reRuns": 0, "reRunsRate": 0, "testsPassed": 0, "testsFailed": 0, "testsSkipped": 0, "testsTotal": 0, "testsFailedRate": 0, "testsPerAttempt": 0 }';
 
 ( async () => {
 	const runs = [];
@@ -100,7 +100,9 @@ async function uploadData( dataFile, jsonData ) {
 	console.log( `Updating file ${ dataFile }` );
 
 	// Write the updated data list locally
-	// writeJson( jsonData, join( "", `public/${dataFile}` ) );
+	// const { writeJson} = require( './utils' );
+	// const { join} = require("node:path");
+	// writeJson( jsonData, join( "", `${dataFile}` ) );
 
 	const cmd = new PutObjectCommand( {
 		Bucket: s3Params.Bucket,
@@ -151,6 +153,7 @@ function updateEntry( e, run ) {
 	e.testsSkipped += getTestResult( 'skipped', run );
 	e.testsTotal += getTestResult( 'total', run );
 	e.testsFailedRate = parseFloat( ( ( e.testsFailed / e.testsTotal ) * 100 ).toFixed( 1 ) );
+	e.testsPerAttempt = parseFloat( ( ( e.testsTotal - e.testsSkipped ) / e.attempts ).toFixed( 0 ) );
 	return e;
 }
 
