@@ -1,11 +1,12 @@
 import React from 'react';
 import { sortArray } from '../utils/sort';
 import BaseComponent from './BaseComponent';
+import TestResultsTooltip from './TestResultsTooltip';
 import moment from 'moment';
 import {
 	Bar,
 	CartesianGrid,
-	ComposedChart,
+	ComposedChart, Label,
 	Legend,
 	Line,
 	ResponsiveContainer,
@@ -144,8 +145,6 @@ export default class Summary extends BaseComponent {
 	}
 
 	filterSummaryData() {
-		// make a copy of raw data object
-		// we don't modify the original data
 		const summaryData = {};
 
 		if ( this.state.filters.isTrunkOnly ) {
@@ -167,6 +166,15 @@ export default class Summary extends BaseComponent {
 
 	getDefaultLegend() {
 		return <Legend verticalAlign="top" align="right" height={ 40 } />;
+	}
+
+	getDateXAxis() {
+		return  <XAxis
+			  dataKey="date"
+			  axisLine={false}
+			  interval="preserveStartEnd"
+			  tickFormatter={(tickItem) => moment(tickItem).format('DD MMM YY')}
+		><Label offset={0} position="insideBottom" formatter={(value) => moment(value).format('DD MMM YY')}  /></XAxis>
 	}
 
 	render() {
@@ -238,10 +246,10 @@ export default class Summary extends BaseComponent {
 					<ResponsiveContainer width="100%" height="100%">
 						<ComposedChart data={ this.state.days }>
 							{ this.getDefaultCartesianGrid() }
-							<XAxis dataKey="date" axisLine={ false } interval="preserveStartEnd" />
+							{ this.getDateXAxis() }
 							<YAxis yAxisId="testCount" type="number" axisLine={ false } />
 							<YAxis yAxisId="failureRate" orientation="right" axisLine={ false } />
-							<Tooltip />
+							<Tooltip content={<TestResultsTooltip/>} />;
 							{ this.getDefaultLegend() }
 							<Bar
 								unit=" tests"
@@ -345,11 +353,11 @@ export default class Summary extends BaseComponent {
 					<ResponsiveContainer width="100%" height="100%">
 						<ComposedChart data={ this.state.days }>
 							{ this.getDefaultCartesianGrid() }
-							<XAxis dataKey="date" axisLine={ false } interval="preserveStartEnd" />
+							{ this.getDateXAxis() }
 							<YAxis type="number" axisLine={ false } />
 							<YAxis yAxisId="reRunsRate" orientation="right" axisLine={ false } />
-							<Tooltip />
 							{ this.getDefaultLegend() }
+							<Tooltip content={<TestResultsTooltip/>} />;
 							<Bar
 								unit=" runs"
 								dataKey="attempts"
