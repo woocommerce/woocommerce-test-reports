@@ -50,7 +50,9 @@ async function updateReportData( reportPath, json ) {
 
 	// Get the group node or create it if it doesn't exist
 	if ( ! json[ event_name ][ group ] ) {
-		json[ event_name ][ group ] = {};
+		json[ event_name ][ group ] = {
+			reports: [],
+		};
 	}
 
 	json[ event_name ][ group ] = {
