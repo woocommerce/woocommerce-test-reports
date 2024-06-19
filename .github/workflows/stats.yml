@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: '0 */4 * * *' # run every 4 hours
 
+env:
+  FORCE_COLOR: 1
+
 jobs:
   update-stats:
     name: "Update stats"

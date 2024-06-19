@@ -9,6 +9,9 @@ on:
 concurrency:
   group: cleanup
 
+env:
+  FORCE_COLOR: 1
+
 jobs:
   update-stats:
     name: "Clean up reports"
