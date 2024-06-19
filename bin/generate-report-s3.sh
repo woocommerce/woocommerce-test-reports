@@ -59,18 +59,13 @@ echo "Creating executor.json"
 jq -n --arg url "$REPORTS_BASE_URL" \
   --arg reportUrl "$REPORTS_BASE_URL/$S3_REPORT_PATH" \
   --arg buildName "run #$RUN_ID" \
-    '{"type":"github", "buildName":$buildName, "url":$url,"reportUrl":$reportUrl}' \
+  --arg reportName "$SUITE_NAME - $REPORT_TITLE" \
+    '{"type":"github", "buildName":$buildName, "url":$url,"reportUrl":$reportUrl,"reportName":$reportName}' \
   >"$ALLURE_RESULTS_PATH/executor.json"
 cat "$ALLURE_RESULTS_PATH/executor.json"
 
 echo "Generating new report"
 allure generate --clean "$ALLURE_RESULTS_PATH" --output "$REPORT_PATH"
-
-echo "Updating report title"
-# shellcheck disable=SC2002
-cat "$REPORT_PATH/widgets/summary.json" | jq --arg name "$SUITE_NAME - $REPORT_TITLE" '.reportName|=$name' >"$REPORT_PATH/widgets/summary.tmp"
-mv "$REPORT_PATH/widgets/summary.tmp" "$REPORT_PATH/widgets/summary.json"
-cat "$REPORT_PATH/widgets/summary.json"
 
 echo "Writing metadata to file"
 
