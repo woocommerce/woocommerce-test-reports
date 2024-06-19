@@ -44,10 +44,6 @@ on:
         required: true
         default: ''
 
-concurrency:
-  group: "report"
-  cancel-in-progress: false
-
 env:
   FORCE_COLOR: 1
 
