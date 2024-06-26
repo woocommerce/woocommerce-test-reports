@@ -60,6 +60,11 @@ else
   exit 1
 fi
 
+# If the event is a push to a release branch, we want to treat it as a release-checks event
+if [[ "$EVENT_NAME" == "push" && "$REF_NAME" == release* ]]; then
+    EVENT_NAME="release-checks"
+fi
+
 S3_REPORT_PATH="$EVENT_NAME/$REPORT_GROUP/$SUITE_NAME"
 S3_REPORT_PATH=$(echo "$S3_REPORT_PATH" | tr ' ' '-')
 S3_REPORT_PATH=$(echo "$S3_REPORT_PATH" | tr '[:upper:]' '[:lower:]')
