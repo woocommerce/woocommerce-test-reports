@@ -38,9 +38,11 @@ done
 COMMIT_SHA=$(echo "$COMMIT_SHA" | cut -c 1-7)
 
 if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "daily-e2e" ]] || [[ "$EVENT_NAME" == "nightly-checks" ]]; then
+    EVENT_NAME="daily-checks"
     REPORT_GROUP="$(date +%Y%m%d)-$REF_NAME"
     REPORT_TITLE="Daily checks $(date +%Y-%m-%d)"
 elif [[ "$EVENT_NAME" == "release-checks" ]] || [[ "$EVENT_NAME" == "release" ]]; then
+    EVENT_NAME="release-checks"
     REPORT_GROUP="$REF_NAME"
     REPORT_TITLE="Release checks $REF_NAME"
 elif [[ "$EVENT_NAME" == "push" ]] ; then
