@@ -40,8 +40,9 @@ COMMIT_SHA=$(echo "$COMMIT_SHA" | cut -c 1-7)
 if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "daily-e2e" ]] || [[ "$EVENT_NAME" == "nightly-checks" ]]; then
     REPORT_GROUP="$(date +%Y%m%d)-$REF_NAME"
     REPORT_TITLE="Daily checks $(date +%Y-%m-%d)"
-    REPORT_ID=$(echo "$SUITE_NAME" | tr ' /. ' '-')
-
+elif [[ "$EVENT_NAME" == "release-checks" ]] || [[ "$EVENT_NAME" == "release" ]]; then
+    REPORT_GROUP="$REF_NAME"
+    REPORT_TITLE="Release checks $REF_NAME"
 elif [[ "$EVENT_NAME" == "push" ]] ; then
     REPORT_GROUP="$REF_NAME-$COMMIT_SHA"
     REPORT_GROUP=$(echo "$REPORT_GROUP" | tr ' /. ' '_')
@@ -52,9 +53,9 @@ elif [[ "$EVENT_NAME" == "pull_request" ]] || [[ "$EVENT_NAME" == "pr" ]]; then
     fi
 
     REPORT_GROUP=$PR_NUMBER
-    REPORT_ID="$REPORT_GROUP-$SUITE_NAME"
 else
   echo "Unknown event name: $EVENT_NAME"
+  exit 1
 fi
 
 S3_REPORT_PATH="$EVENT_NAME/$REPORT_GROUP/$SUITE_NAME"
