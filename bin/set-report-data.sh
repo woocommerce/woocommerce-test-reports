@@ -66,11 +66,13 @@ S3_REPORT_PATH=$(echo "$S3_REPORT_PATH" | tr '[:upper:]' '[:lower:]')
 REPORT_ID=$(echo "$S3_REPORT_PATH" | tr ' /. ' '-')
 REPORT_ID=$(echo "$REPORT_ID" | tr '[:upper:]' '[:lower:]')
 
+echo "Set EVENT_NAME to $EVENT_NAME"
 echo "Set REPORT_ID to $REPORT_ID"
 echo "Set REPORT_TITLE to $REPORT_TITLE"
 echo "Set REPORT_GROUP to $REPORT_GROUP"
 echo "Set S3_REPORT_PATH to $S3_REPORT_PATH"
 
+echo "EVENT_NAME=$EVENT_NAME" >> "$GITHUB_ENV"
 echo "REPORT_ID=$REPORT_ID" >> "$GITHUB_ENV"
 echo "REPORT_GROUP=$REPORT_GROUP" >> "$GITHUB_ENV"
 echo "REPORT_TITLE=$REPORT_TITLE" >> "$GITHUB_ENV"
