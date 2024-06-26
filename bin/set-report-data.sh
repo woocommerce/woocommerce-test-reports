@@ -30,7 +30,7 @@ fi
 # Sanitize the input
 for var in SUITE_NAME REF_NAME REPORT_TITLE; do
     val="${!var}"
-    val=$(echo "$val" | tr -cd '[:alnum:].-_ ')
+    val=$(echo "$val" | tr -cd '[:alnum:]._- ')
     declare "$var=$val"
 done
 
