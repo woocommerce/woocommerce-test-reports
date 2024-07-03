@@ -15,6 +15,7 @@ import {
 	YAxis,
 } from 'recharts';
 import { getDataSourceUrl } from '../config';
+import { prettyNumber } from '../utils/format';
 
 export default class Summary extends BaseComponent {
 	state = {
@@ -203,7 +204,9 @@ export default class Summary extends BaseComponent {
 				<div className="row text-center">
 					<div className="col-sm">
 						<div className="stat-box">
-							<span className="stat-number">{ this.state.summary[ '24h' ].testsTotal }</span>
+							<span className="stat-number" title={ this.state.summary[ '24h' ].testsTotal }>
+								{ prettyNumber( this.state.summary[ '24h' ].testsTotal ) }
+							</span>
 							<br />
 							<span className="stat-number-sub">
 								<small>{ this.state.summary[ '24h' ].testsFailedRate }% failed</small>
@@ -214,7 +217,9 @@ export default class Summary extends BaseComponent {
 					</div>
 					<div className="col-sm">
 						<div className="stat-box">
-							<span className="stat-number">{ this.state.summary[ '7d' ].testsTotal }</span>
+							<span className="stat-number" title={ this.state.summary[ '7d' ].testsTotal }>
+								{ prettyNumber( this.state.summary[ '7d' ].testsTotal ) }
+							</span>
 							<br />
 							<span className="stat-number-sub">
 								<small>{ this.state.summary[ '7d' ].testsFailedRate }% failed</small>
@@ -225,7 +230,9 @@ export default class Summary extends BaseComponent {
 					</div>
 					<div className="col-sm">
 						<div className="stat-box">
-							<span className="stat-number">{ this.state.summary[ '14d' ].testsTotal }</span>
+							<span className="stat-number" title={ this.state.summary[ '14d' ].testsTotal }>
+								{ prettyNumber( this.state.summary[ '14d' ].testsTotal ) }
+							</span>
 							<br />
 							<span className="stat-number-sub">
 								<small>{ this.state.summary[ '14d' ].testsFailedRate }% failed</small>
@@ -236,7 +243,9 @@ export default class Summary extends BaseComponent {
 					</div>
 					<div className="col-sm">
 						<div className="stat-box">
-							<span className="stat-number">{ this.state.summary[ '30d' ].testsTotal }</span>
+							<span className="stat-number" title={ this.state.summary[ '30d' ].testsTotal }>
+								{ prettyNumber( this.state.summary[ '30d' ].testsTotal ) }
+							</span>
 							<br />
 							<span className="stat-number-sub">
 								<small>{ this.state.summary[ '30d' ].testsFailedRate }% failed</small>
@@ -310,7 +319,9 @@ export default class Summary extends BaseComponent {
 				<div className="row text-center">
 					<div className="col-sm">
 						<div className="stat-box">
-							<span className="stat-number">{ this.state.summary[ '24h' ].attempts }</span>
+							<span className="stat-number" title={ this.state.summary[ '24h' ].attempts }>
+								{ prettyNumber( this.state.summary[ '24h' ].attempts ) }
+							</span>
 							<br />
 							<span className="stat-number-sub">
 								<small>{ this.state.summary[ '24h' ].reRunsRate }% reruns</small>
@@ -321,7 +332,9 @@ export default class Summary extends BaseComponent {
 					</div>
 					<div className="col-sm">
 						<div className="stat-box">
-							<span className="stat-number">{ this.state.summary[ '7d' ].attempts }</span>
+							<span className="stat-number" title={ this.state.summary[ '7d' ].attempts }>
+								{ prettyNumber( this.state.summary[ '7d' ].attempts ) }
+							</span>
 							<br />
 							<span className="stat-number-sub">
 								<small>{ this.state.summary[ '7d' ].reRunsRate }% reruns</small>
@@ -332,7 +345,9 @@ export default class Summary extends BaseComponent {
 					</div>
 					<div className="col-sm">
 						<div className="stat-box">
-							<span className="stat-number">{ this.state.summary[ '14d' ].attempts }</span>
+							<span className="stat-number" title={ this.state.summary[ '14d' ].attempts }>
+								{ prettyNumber( this.state.summary[ '14d' ].attempts ) }
+							</span>
 							<br />
 							<span className="stat-number-sub">
 								<small>{ this.state.summary[ '14d' ].reRunsRate }% reruns</small>
@@ -343,7 +358,9 @@ export default class Summary extends BaseComponent {
 					</div>
 					<div className="col-sm">
 						<div className="stat-box">
-							<span className="stat-number">{ this.state.summary[ '30d' ].attempts }</span>
+							<span className="stat-number" title={ this.state.summary[ '30d' ].attempts }>
+								{ prettyNumber( this.state.summary[ '30d' ].attempts ) }
+							</span>
 							<br />
 							<span className="stat-number-sub">
 								<small>{ this.state.summary[ '30d' ].reRunsRate }% reruns</small>
