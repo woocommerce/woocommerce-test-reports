@@ -226,6 +226,55 @@ function printProgress( progress ) {
 	process.stdout.write( progress );
 }
 
+async function acquireLockWithRetry(fileName, maxRetries = 5, retryDelay = 5000) {
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+        try {
+            const lockAcquired = await acquireLock(fileName);
+            if (lockAcquired) {
+                console.log(`Lock acquired after ${attempt} attempt(s).`);
+                return true;
+            }
+        } catch (error) {
+            if (attempt === maxRetries) {
+                console.log(`Failed to acquire lock after ${maxRetries} attempts.`);
+                throw error;
+            }
+            console.log(`Attempt ${attempt} failed, retrying in ${retryDelay / 1000} seconds...`);
+            await new Promise(resolve => setTimeout(resolve, retryDelay));
+        }
+    }
+}
+
+async function acquireLock(fileName) {
+    try {
+        await readS3Object(`${fileName}.lock`);
+        // If the command succeeds, the lock exists; throw an error or wait
+        console.log(`${fileName} is locked. Waiting...`);
+        return false;
+    } catch (error) {
+        // If the error indicates the object doesn't exist, create the lock
+        if (error.name === "NoSuchKey") {
+            const lockContent = { timestamp: new Date().toISOString() };
+			const cmd = new PutObjectCommand( {
+				Bucket: s3Params.Bucket,
+				Key: `${fileName}.lock`,
+				Body: JSON.stringify(lockContent),
+				ContentType: 'application/json',
+			} );
+			await s3client.send( cmd );
+            console.log("Lock acquired.");
+            return true;
+        } else {
+            throw error;
+        }
+    }
+}
+
+async function releaseLock(fileName) {
+	await s3client.send( new DeleteObjectCommand( { Bucket: s3Params.Bucket, Key: fileName } ) );
+    console.log("Lock released.");
+}
+
 module.exports = {
 	getReportsDirs,
 	getFilesFromDir,
