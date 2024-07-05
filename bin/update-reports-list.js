@@ -4,12 +4,13 @@
  * It will read data from $reportID/report/widgets/summary.json, $reportID/metadata.json
  */
 
-const { readS3Object, readJson } = require( './utils' );
+const { acquireLockWithRetry, readS3Object, readJson, releaseLock } = require( './utils' );
 const path = require( 'path' );
 const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
 const { s3Params, s3client } = require( './s3-client' );
 
 const localReportPath = process.env.REPORT_PATH;
+const fileKey = 'data/reports2.json';
 
 if ( ! localReportPath ) {
 	throw 'REPORT_PATH env variable is not set';
@@ -17,7 +18,8 @@ if ( ! localReportPath ) {
 
 ( async () => {
 	// Get the existing reports list
-	const reportsData = ( await readS3Object( 'data/reports.json' ) ).toString() || '{}';
+	await acquireLockWithRetry( fileKey, true );
+	const reportsData = ( await readS3Object( fileKey ) ).toString() || '{}';
 	const json = JSON.parse( reportsData );
 	const updatedJson = await updateReportData( localReportPath, json );
 
@@ -27,11 +29,12 @@ if ( ! localReportPath ) {
 	// Upload the report to S3
 	const cmd = new PutObjectCommand( {
 		Bucket: s3Params.Bucket,
-		Key: 'data/reports.json',
+		Key: fileKey,
 		Body: JSON.stringify( updatedJson, null, 2 ),
 		ContentType: 'application/json',
 	} );
 	await s3client.send( cmd );
+	await releaseLock( fileKey );
 } )();
 
 async function updateReportData( reportPath, json ) {

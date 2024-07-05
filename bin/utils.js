@@ -5,6 +5,7 @@ const {
 	GetObjectCommand,
 	ListObjectsCommand,
 	DeleteObjectCommand,
+	PutObjectCommand,
 } = require( '@aws-sdk/client-s3' );
 
 function getReportsDirs() {
@@ -126,7 +127,7 @@ async function readS3Object( key, silent = false ) {
 		content = await streamToString( data.Body );
 	} catch ( error ) {
 		if ( ! silent ) {
-			console.error( error.message );
+			console.error( `Error reading object: ${ error.message }` );
 		}
 	}
 
@@ -226,56 +227,97 @@ function printProgress( progress ) {
 	process.stdout.write( progress );
 }
 
-async function acquireLockWithRetry(fileName, maxRetries = 5, retryDelay = 5000) {
-    for (let attempt = 1; attempt <= maxRetries; attempt++) {
-        try {
-            const lockAcquired = await acquireLock(fileName);
-            if (lockAcquired) {
-                console.log(`Lock acquired after ${attempt} attempt(s).`);
-                return true;
-            }
-        } catch (error) {
-            if (attempt === maxRetries) {
-                console.log(`Failed to acquire lock after ${maxRetries} attempts.`);
-                throw error;
-            }
-            console.log(`Attempt ${attempt} failed, retrying in ${retryDelay / 1000} seconds...`);
-            await new Promise(resolve => setTimeout(resolve, retryDelay));
-        }
-    }
+async function acquireLockWithRetry(
+	fileName,
+	proceedWithLockFound = false,
+	retries = 30,
+	retryDelay = 5000
+) {
+	console.log( `Attempting to acquire lock for ${ fileName }` );
+	let lockFound = true;
+	const lockId = new Date().toISOString();
+
+	while ( lockFound && retries-- > 0 ) {
+		console.log( `Checking lockfile` );
+		const lock = await lockedInfo( fileName );
+		console.log( `Lock status: ${ lock }` );
+
+		if ( ! lock ) {
+			// Undefined or null means there was an error checking the lock status. We'll retry
+			console.log( 'Cannot determine lock status, retrying...' );
+			continue;
+		}
+
+		if ( lock === lockId ) {
+			// Found our own lock, we can proceed
+			console.log( 'Lock acquired' );
+			return;
+		} else if ( lock === 'NoSuchKey' ) {
+			// Lock doesn't exist, we can create it
+			console.log( "Lock doesn't exist, acquiring lock..." );
+			await createLock( fileName, lockId );
+			continue;
+		} else {
+			// Found a lock form another process, we'll retry
+			console.log( `Lock found: ${ lock }` );
+		}
+
+		if ( retries > 0 ) {
+			console.log( `Retrying in ${ retryDelay }ms. ${ retries } Retries left...` );
+		}
+
+		await new Promise( resolve => setTimeout( resolve, retryDelay ) );
+	}
+
+	if ( lockFound && proceedWithLockFound ) {
+		console.warn( 'Lock still found after retries, proceeding anyway...' );
+		return;
+	}
+
+	console.log( 'Lock still found after retries, exiting...' );
+	throw new Error( 'Unable to acquire lock. Exiting...' );
 }
 
-async function acquireLock(fileName) {
-    try {
-        await readS3Object(`${fileName}.lock`);
-        // If the command succeeds, the lock exists; throw an error or wait
-        console.log(`${fileName} is locked. Waiting...`);
-        return false;
-    } catch (error) {
-        // If the error indicates the object doesn't exist, create the lock
-        if (error.name === "NoSuchKey") {
-            const lockContent = { timestamp: new Date().toISOString() };
-			const cmd = new PutObjectCommand( {
-				Bucket: s3Params.Bucket,
-				Key: `${fileName}.lock`,
-				Body: JSON.stringify(lockContent),
-				ContentType: 'application/json',
-			} );
-			await s3client.send( cmd );
-            console.log("Lock acquired.");
-            return true;
-        } else {
-            throw error;
-        }
-    }
+async function lockedInfo( fileName ) {
+	let lockInfo;
+
+	try {
+		const lockData = await s3client.send(
+			new GetObjectCommand( { Bucket: s3Params.Bucket, Key: `${ fileName }.lock` } )
+		);
+		lockInfo = await streamToString( lockData.Body );
+	} catch ( error ) {
+		lockInfo = error.name;
+	}
+
+	return lockInfo;
 }
 
-async function releaseLock(fileName) {
-	await s3client.send( new DeleteObjectCommand( { Bucket: s3Params.Bucket, Key: fileName } ) );
-    console.log("Lock released.");
+async function createLock( fileName, lockId ) {
+	try {
+		const lockContent = { timestamp: new Date().toISOString() };
+		const cmd = new PutObjectCommand( {
+			Bucket: s3Params.Bucket,
+			Key: `${ fileName }.lock`,
+			Body: lockId,
+			ContentType: 'application/json',
+		} );
+		await s3client.send( cmd );
+	} catch ( error ) {
+		console.error( `Error creating lock: ${ error.message }` );
+	}
+}
+
+async function releaseLock( fileName ) {
+	await s3client.send(
+		new DeleteObjectCommand( { Bucket: s3Params.Bucket, Key: `${ fileName }.lock` } )
+	);
+	console.log( 'Lock released.' );
 }
 
 module.exports = {
+	acquireLockWithRetry,
+	releaseLock,
 	getReportsDirs,
 	getFilesFromDir,
 	getTestInfoFromTestCaseFile,
