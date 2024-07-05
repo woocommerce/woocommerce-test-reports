@@ -16,6 +16,7 @@ function App() {
 		{ path: '/trunk', name: 'trunk', event: 'push' },
 		{ path: '/daily', name: 'daily', event: 'daily-checks,daily-e2e,nightly-checks' },
 		{ path: '/releases', name: 'releases', event: 'release-checks' },
+		{ path: '/releases/:groupKey', event: 'release-checks' },
 	];
 
 	return (
@@ -32,7 +33,7 @@ function App() {
 							<Nav activeKey={ location.pathname } className="ml-auto">
 								<Nav.Link href={ `${ basename }/#/` }>Summary</Nav.Link>
 								{ reportRoutes.map( ( route, index ) => (
-									<Nav.Link key={ index } href={ `${ basename }/#${ route.path }` }>
+									route.name && <Nav.Link key={ index } href={ `${ basename }/#${ route.path }` }>
 										{ route.name }
 									</Nav.Link>
 								) ) }

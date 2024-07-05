@@ -8,16 +8,19 @@ import passedSVG from '../assets/passed.svg';
 import failedSVG from '../assets/failed.svg';
 import unknownSVG from '../assets/unknown.svg';
 import { getDataSourceUrl } from '../config';
+import withRouter from "./withRouter";
 
-export default class Reports extends React.Component {
+class Reports extends React.Component {
 	constructor( props ) {
 		super( props );
 		this.state = {
 			event: this.props.event,
-			groupKey: this.props.groupKey,
+			groupKey: this.props.params.groupKey,
+			location: this.props.location.pathname,
 			groups: {},
 			reportsCount: undefined,
 			isDataFetched: false,
+			errorMessage: '',
 		};
 	}
 
@@ -38,6 +41,20 @@ export default class Reports extends React.Component {
 						groups = {
 							...jsonData[ event ],
 						};
+					}
+				}
+
+				if ( this.props.params.groupKey ) {
+					console.log("Filtering by group key", this.props.params.groupKey);
+
+					if(groups[ this.props.params.groupKey ]){
+						groups = {
+							[ this.props.params.groupKey ]: groups[ this.props.params.groupKey ],
+						};
+					} else {
+						this.setState( {
+							errorMessage: `Reports for key ${ this.props.params.groupKey } not found`,
+						} );
 					}
 				}
 
@@ -74,6 +91,7 @@ export default class Reports extends React.Component {
 		const branchUrl = `https://github.com/${ repo }/tree/${ ref_name }`;
 		const prUrl = `https://github.com/${ repo }/pull/${ pr_number }`;
 		const shaUrl = `https://github.com/${ repo }/commit/${ sha }`;
+		const groupReportHref = `${ this.state.location }/${ group.replace( /^_|_$/g, '' ) }`;
 
 		return (
 			<Table
@@ -89,10 +107,16 @@ export default class Reports extends React.Component {
 					<tr>
 						<th colSpan={ 3 }>
 							<ul className={ 'list-unstyled' }>
-								<li className={ 'groupTitle' }>{ report_title }</li>
+								<li className={ 'groupTitle' }>
+									<a
+											href={ this.props.params.groupKey ? '' : groupReportHref }
+											target={ '_blank' }
+											className={ 'report-link' }
+											rel="noreferrer"
+									>{report_title}</a></li>
 								<li>
 									<small>
-										<img src={ branchSVG } alt={ 'branch' } width={ 16 } height={ 16 } />{ ' ' }
+										<img src={branchSVG} alt={'branch'} width={16} height={16}/>{' '}
 										<a
 											href={ branchUrl }
 											target={ '_blank' }
@@ -252,6 +276,7 @@ export default class Reports extends React.Component {
 						reports
 					</small>
 				</p>
+				<p className={"error"}>{this.state.errorMessage}</p>
 				{ Object.keys( this.state.groups ).map( ( k, idx ) => {
 					return this.getGroupTable( k, idx );
 				} ) }
@@ -259,3 +284,5 @@ export default class Reports extends React.Component {
 		);
 	}
 }
+
+export default withRouter(Reports);
