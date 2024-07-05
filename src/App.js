@@ -17,7 +17,7 @@ function App() {
 		{ path: '/trunk', name: 'trunk', event: 'push' },
 		{ path: '/trunk/:groupKey', event: 'push' },
 		{ path: '/daily', name: 'daily', event: 'daily-checks,daily-e2e,nightly-checks' },
-		{ path: '/daily/:groupKey',event: 'daily-checks,daily-e2e,nightly-checks' },
+		{ path: '/daily/:groupKey', event: 'daily-checks,daily-e2e,nightly-checks' },
 		{ path: '/releases', name: 'releases', event: 'release-checks' },
 		{ path: '/releases/:groupKey', event: 'release-checks' },
 	];
@@ -35,11 +35,14 @@ function App() {
 						<Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
 							<Nav activeKey={ location.pathname } className="ml-auto">
 								<Nav.Link href={ `${ basename }/#/` }>Summary</Nav.Link>
-								{ reportRoutes.map( ( route, index ) => (
-									route.name && <Nav.Link key={ index } href={ `${ basename }/#${ route.path }` }>
-										{ route.name }
-									</Nav.Link>
-								) ) }
+								{ reportRoutes.map(
+									( route, index ) =>
+										route.name && (
+											<Nav.Link key={ index } href={ `${ basename }/#${ route.path }` }>
+												{ route.name }
+											</Nav.Link>
+										)
+								) }
 							</Nav>
 						</Navbar.Collapse>
 					</Container>

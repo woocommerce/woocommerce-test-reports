@@ -2,7 +2,7 @@
  * This script will clean old reports and reports for closed PRs
  */
 
-const { listS3Folders, removeS3Folder, getJSONFromS3 } = require( './utils' );
+const { acquireLockWithRetry, listS3Folders, removeS3Folder, getJSONFromS3, releaseLock} = require( './utils' );
 const { s3Params, s3client } = require( './s3-client' );
 const { Octokit } = require( '@octokit/rest' );
 const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
@@ -24,11 +24,13 @@ const done = String.fromCodePoint( 0x2714 );
 const problem = String.fromCodePoint( 0x2757 );
 const owner = 'woocommerce';
 const repo = 'woocommerce';
+const reportsFileKey = 'data/reports.json';
 
 const dryRun = process.env.DRY_RUN;
 
 ( async () => {
-	const reportsData = await getJSONFromS3( 'data/reports.json' );
+	await acquireLockWithRetry( reportsFileKey, true );
+	const reportsData = await getJSONFromS3( reportsFileKey );
 
 	// region clean pull_request
 	const prGroups = reportsData.pull_request || {};
@@ -169,7 +171,7 @@ const dryRun = process.env.DRY_RUN;
 	// Upload the report to S3
 	const cmd = new PutObjectCommand( {
 		Bucket: s3Params.Bucket,
-		Key: 'data/reports.json',
+		Key: reportsFileKey,
 		Body: JSON.stringify( reportsData, null, 2 ),
 		ContentType: 'application/json',
 	} );
@@ -177,6 +179,7 @@ const dryRun = process.env.DRY_RUN;
 	if ( ! dryRun ) {
 		await s3client.send( cmd );
 	}
+	await releaseLock( reportsFileKey );
 	// endregion
 
 	// region Remove reports from S3 storage
@@ -185,8 +188,9 @@ const dryRun = process.env.DRY_RUN;
 	// Getting a new list of stored reports
 	let eventDirs = await listS3Folders( 'reports/', '/' );
 	eventDirs = eventDirs.map( report => report.replace( 'reports/', '' ).replace( '/', '' ) );
-	const reports = await getJSONFromS3( 'data/reports.json' );
+	const reports = await getJSONFromS3( reportsFileKey );
 	const expectedDirs = [ 'push', 'pull_request', 'daily-checks', 'release-checks' ];
+	const dirsToRemove = [];
 
 	for ( const eventDir of eventDirs ) {
 		if ( ! expectedDirs.includes( eventDir ) ) {
@@ -205,13 +209,20 @@ const dryRun = process.env.DRY_RUN;
 		for ( const groupDir of groupDirs ) {
 			console.log( `Checking ${ eventDir }/${ groupDir }` );
 			if ( ! groupsListed[ groupDir ] ) {
-				console.log( `${ eventDir }.${ groupDir } not found in reports list. Deleting.` );
-				if ( ! dryRun ) {
-					await removeS3Folder( `reports/${ eventDir }/${ groupDir }` );
-				}
+				console.log( `${ eventDir }.${ groupDir } not found in reports list. Will be removed.` );
+				dirsToRemove.push( `${ eventDir }/${ groupDir }` );
 			} else {
 				console.log( `${ eventDir }.${ groupDir } found in reports list. Keeping it.` );
 			}
+		}
+	}
+
+	console.log();
+	console.log(`Removing ${ dirsToRemove.length } directories`);
+	console.log(`${ dirsToRemove.join( ', ' ) }`);
+	for ( const dir of dirsToRemove ) {
+		if ( ! dryRun ) {
+			await removeS3Folder( dir );
 		}
 	}
 

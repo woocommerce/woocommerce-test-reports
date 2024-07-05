@@ -8,7 +8,7 @@ import passedSVG from '../assets/passed.svg';
 import failedSVG from '../assets/failed.svg';
 import unknownSVG from '../assets/unknown.svg';
 import { getDataSourceUrl } from '../config';
-import withRouter from "./withRouter";
+import withRouter from './withRouter';
 
 class Reports extends React.Component {
 	constructor( props ) {
@@ -45,9 +45,9 @@ class Reports extends React.Component {
 				}
 
 				if ( this.props.params.groupKey ) {
-					console.log("Filtering by group key", this.props.params.groupKey);
+					console.log( 'Filtering by group key', this.props.params.groupKey );
 
-					if(groups[ this.props.params.groupKey ]){
+					if ( groups[ this.props.params.groupKey ] ) {
 						groups = {
 							[ this.props.params.groupKey ]: groups[ this.props.params.groupKey ],
 						};
@@ -109,13 +109,16 @@ class Reports extends React.Component {
 							<ul className={ 'list-unstyled' }>
 								<li className={ 'groupTitle' }>
 									<a
-											href={ this.props.params.groupKey ? window.location.href : groupReportHref }
-											className={ 'report-link' }
-											rel="noreferrer"
-									>{report_title}</a></li>
+										href={ this.props.params.groupKey ? window.location.href : groupReportHref }
+										className={ 'report-link' }
+										rel="noreferrer"
+									>
+										{ report_title }
+									</a>
+								</li>
 								<li>
 									<small>
-										<img src={branchSVG} alt={'branch'} width={16} height={16}/>{' '}
+										<img src={ branchSVG } alt={ 'branch' } width={ 16 } height={ 16 } />{ ' ' }
 										<a
 											href={ branchUrl }
 											target={ '_blank' }
@@ -275,7 +278,7 @@ class Reports extends React.Component {
 						reports
 					</small>
 				</p>
-				<p className={"error"}>{this.state.errorMessage}</p>
+				<p className={ 'error' }>{ this.state.errorMessage }</p>
 				{ Object.keys( this.state.groups ).map( ( k, idx ) => {
 					return this.getGroupTable( k, idx );
 				} ) }
@@ -284,4 +287,4 @@ class Reports extends React.Component {
 	}
 }
 
-export default withRouter(Reports);
+export default withRouter( Reports );
