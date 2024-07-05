@@ -210,7 +210,7 @@ const dryRun = process.env.DRY_RUN;
 			console.log( `Checking ${ eventDir }/${ groupDir }` );
 			if ( ! groupsListed[ groupDir ] ) {
 				console.log( `${ eventDir }.${ groupDir } not found in reports list. Will be removed.` );
-				dirsToRemove.push( `${ eventDir }/${ groupDir }` );
+				dirsToRemove.push( `reports/${ eventDir }/${ groupDir }` );
 			} else {
 				console.log( `${ eventDir }.${ groupDir } found in reports list. Keeping it.` );
 			}
