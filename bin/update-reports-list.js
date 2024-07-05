@@ -10,7 +10,7 @@ const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
 const { s3Params, s3client } = require( './s3-client' );
 
 const localReportPath = process.env.REPORT_PATH;
-const fileKey = 'data/reports2.json';
+const fileKey = 'data/reports.json';
 
 if ( ! localReportPath ) {
 	throw 'REPORT_PATH env variable is not set';
