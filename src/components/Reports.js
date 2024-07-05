@@ -91,7 +91,7 @@ class Reports extends React.Component {
 		const branchUrl = `https://github.com/${ repo }/tree/${ ref_name }`;
 		const prUrl = `https://github.com/${ repo }/pull/${ pr_number }`;
 		const shaUrl = `https://github.com/${ repo }/commit/${ sha }`;
-		const groupReportHref = `${ this.state.location }/${ group.replace( /^_|_$/g, '' ) }`;
+		const groupReportHref = `${ window.location.href }/${ group.replace( /^_|_$/g, '' ) }`;
 
 		return (
 			<Table
@@ -109,8 +109,7 @@ class Reports extends React.Component {
 							<ul className={ 'list-unstyled' }>
 								<li className={ 'groupTitle' }>
 									<a
-											href={ this.props.params.groupKey ? '' : groupReportHref }
-											target={ '_blank' }
+											href={ this.props.params.groupKey ? window.location.href : groupReportHref }
 											className={ 'report-link' }
 											rel="noreferrer"
 									>{report_title}</a></li>

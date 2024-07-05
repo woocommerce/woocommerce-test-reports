@@ -13,8 +13,11 @@ function App() {
 
 	const reportRoutes = [
 		{ path: '/pr', name: 'pull requests', event: 'pull_request' },
+		{ path: '/pr/:groupKey', event: 'pull_request' },
 		{ path: '/trunk', name: 'trunk', event: 'push' },
+		{ path: '/trunk/:groupKey', event: 'push' },
 		{ path: '/daily', name: 'daily', event: 'daily-checks,daily-e2e,nightly-checks' },
+		{ path: '/daily/:groupKey',event: 'daily-checks,daily-e2e,nightly-checks' },
 		{ path: '/releases', name: 'releases', event: 'release-checks' },
 		{ path: '/releases/:groupKey', event: 'release-checks' },
 	];
