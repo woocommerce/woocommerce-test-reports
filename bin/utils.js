@@ -235,7 +235,9 @@ async function acquireLockWithRetry(
 ) {
 	console.log( `Attempting to acquire lock for ${ fileName }` );
 	let lockFound = true;
-	const lockId = new Date().toISOString();
+	const rand = ( Math.floor( Math.random() * 1000 ) % 10000 ).toString().padStart( 4, '0' );
+	const lockId = `${ Date.now().toString() }_${ rand }`;
+	console.log( `Expecting Lock ID: ${ lockId }` );
 
 	while ( lockFound && retries-- > 0 ) {
 		console.log( `Checking lockfile` );
