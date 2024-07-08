@@ -261,7 +261,7 @@ export default class Summary extends BaseComponent {
 							{ this.getDefaultCartesianGrid() }
 							{ this.getDateXAxis() }
 							<YAxis yAxisId="testCount" type="number" axisLine={ false } />
-							<YAxis yAxisId="failureRate" orientation="right" axisLine={ false } />
+							<YAxis yAxisId="failureRate" orientation="right" axisLine={ false } unit={'%'} />
 							<Tooltip content={ <TestResultsTooltip /> } />;{ this.getDefaultLegend() }
 							<Bar
 								unit=" tests"
@@ -300,7 +300,10 @@ export default class Summary extends BaseComponent {
 								yAxisId="failureRate"
 								dataKey="testsFailedRate"
 								stroke="rgba(186, 110, 98, 0.71)"
+								strokeWidth={ 2 }
 								legendType="cross"
+								dot={{ fill: 'rgba(186, 110, 98, 0.71)', r: 4 }}
+								activeDot={{ stroke: 'rgba(186, 110, 98, 0.71)', r: 8 }} />
 							/>
 						</ComposedChart>
 					</ResponsiveContainer>
@@ -376,7 +379,7 @@ export default class Summary extends BaseComponent {
 							{ this.getDefaultCartesianGrid() }
 							{ this.getDateXAxis() }
 							<YAxis type="number" axisLine={ false } />
-							<YAxis yAxisId="reRunsRate" orientation="right" axisLine={ false } />
+							<YAxis yAxisId="reRunsRate" orientation="right" axisLine={ false } unit={'%'} />
 							{ this.getDefaultLegend() }
 							<Tooltip content={ <TestResultsTooltip /> } />;
 							<Bar
@@ -394,7 +397,10 @@ export default class Summary extends BaseComponent {
 								yAxisId="reRunsRate"
 								dataKey="reRunsRate"
 								stroke="rgba(186, 110, 98, 0.71)"
+								strokeWidth={ 2 }
 								legendType="cross"
+								dot={{ fill: 'rgba(186, 110, 98, 0.71)', r: 4 }}
+								activeDot={{ stroke: 'rgba(186, 110, 98, 0.71)', r: 8 }} />
 							/>
 						</ComposedChart>
 					</ResponsiveContainer>
