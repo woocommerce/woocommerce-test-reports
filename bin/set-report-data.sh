@@ -41,7 +41,7 @@ if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "daily-e2e" ]]; 
     EVENT_NAME="daily-checks"
     REPORT_GROUP="$(date +%Y%m%d)-$REF_NAME"
     REPORT_TITLE="Daily checks $(date +%Y-%m-%d)"
-if [[ "$EVENT_NAME" == "nightly-checks" ]]; then
+elif [[ "$EVENT_NAME" == "nightly-checks" ]]; then
     EVENT_NAME="daily-checks"
     REPORT_GROUP="$(date +%Y%m%d)-$REF_NAME"
     REPORT_TITLE="Nightly tag checks $(date +%Y-%m-%d)"
