@@ -213,6 +213,9 @@ class Reports extends React.Component {
 	getTestResultsCell( results ) {
 		const counts = [ 'failed', 'passed', 'skipped', 'total' ].map( ( label, id ) => {
 			const count = results[ label ];
+			if ( count === 0 ) {
+				return null;
+			}
 			return (
 				<span key={ id } className={ `label label-status-${ label }` }>
 					{ label } { count }
