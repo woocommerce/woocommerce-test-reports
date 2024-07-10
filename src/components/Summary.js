@@ -179,6 +179,7 @@ export default class Summary extends BaseComponent {
 				axisLine={ false }
 				interval="preserveStartEnd"
 				tickFormatter={ tickItem => moment( tickItem ).format( 'DD MMM YY' ) }
+				tick={{fontSize: '0.8rem'}}
 			></XAxis>
 		);
 	}
@@ -202,6 +203,8 @@ export default class Summary extends BaseComponent {
 			return null;
 		}
 
+		const axisTickStyle = { fontSize: '0.8rem'};
+
 		return (
 			<div>
 				<div className="row">
@@ -224,8 +227,9 @@ export default class Summary extends BaseComponent {
 								dataKey="date"
 								axisLine={false}
 								interval="preserveStartEnd"
+								tick={axisTickStyle}
 							></XAxis>
-							<YAxis yAxisId="failureRate" axisLine={false} unit={'%'}/>
+							<YAxis yAxisId="failureRate" axisLine={false} unit={'%'} tick={ axisTickStyle }/>
 							<Tooltip/>;
 							{/*{this.getDefaultLegend()}*/}
 							<Line
@@ -332,8 +336,8 @@ export default class Summary extends BaseComponent {
 						<ComposedChart data={this.state.days}>
 							{this.getDefaultCartesianGrid()}
 							{this.getDateXAxis()}
-							<YAxis yAxisId="testCount" type="number" axisLine={false}/>
-							<YAxis yAxisId="failureRate" orientation="right" axisLine={false} unit={'%'}/>
+							<YAxis yAxisId="testCount" type="number" axisLine={false} tick={axisTickStyle}/>
+							<YAxis yAxisId="failureRate" orientation="right" axisLine={false} unit={'%'} tick={axisTickStyle}/>
 							<Tooltip content={<TestResultsTooltip/>}/>;{this.getDefaultLegend()}
 							<Bar
 								unit=" tests"
@@ -450,8 +454,8 @@ export default class Summary extends BaseComponent {
 						<ComposedChart data={this.state.days}>
 							{this.getDefaultCartesianGrid()}
 							{this.getDateXAxis()}
-							<YAxis type="number" axisLine={false}/>
-							<YAxis yAxisId="reRunsRate" orientation="right" axisLine={false} unit={'%'}/>
+							<YAxis type="number" axisLine={false}  tick={axisTickStyle}/>
+							<YAxis yAxisId="reRunsRate" orientation="right" axisLine={false} unit={'%'} tick={axisTickStyle}/>
 							{this.getDefaultLegend()}
 							<Tooltip content={<TestResultsTooltip/>}/>;
 							<Bar
@@ -483,8 +487,8 @@ export default class Summary extends BaseComponent {
 						<ComposedChart data={this.state.days}>
 							{this.getDefaultCartesianGrid()}
 							{this.getDateXAxis()}
-							<YAxis type="number" axisLine={false}/>
-							<YAxis yAxisId="reRunsRate" orientation="right" axisLine={false}/>
+							<YAxis type="number" axisLine={false} tick={axisTickStyle}/>
+							<YAxis yAxisId="reRunsRate" orientation="right" axisLine={false} tick={axisTickStyle}/>
 							{this.getDefaultLegend()}
 							<Tooltip content={<TestResultsTooltip/>}/>;
 							<Bar
