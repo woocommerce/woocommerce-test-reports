@@ -90,10 +90,16 @@ const entryTemplate =
 
 	sort( weeklyJson, 'date', true );
 
+    let failureRates = weeklyJson.map(week => ( {
+        date: week.date, trunk: week.trunk.testsFailedRate, total: week.total.testsFailedRate
+    }));
+
+
 	await uploadData( 'data/runs-daily.json', dailyJson );
 	await uploadData( 'data/runs-weekly.json', weeklyJson );
 	await uploadData( 'data/runs-monthly.json', monthlyJson );
 	await uploadData( 'data/summary.json', summaryData );
+	await uploadData( 'data/failure-rates.json', failureRates );
 } )();
 
 async function uploadData( dataFile, jsonData ) {
