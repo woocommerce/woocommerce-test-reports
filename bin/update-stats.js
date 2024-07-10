@@ -91,7 +91,7 @@ const entryTemplate =
 	sort( weeklyJson, 'date', true );
 
     let failureRates = weeklyJson.map(week => ( {
-        date: week.date, trunk: week.trunk.testsFailedRate, total: week.total.testsFailedRate, delta: week.total.testsFailedRate - week.trunk.testsFailedRate
+        date: week.date, trunk: week.trunk.testsFailedRate.toFixed(1), total: week.total.testsFailedRate.toFixed(1), delta: (week.total.testsFailedRate - week.trunk.testsFailedRate).toFixed(1)
     }));
 
 
