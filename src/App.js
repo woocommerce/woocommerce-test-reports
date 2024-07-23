@@ -20,6 +20,7 @@ function App() {
 		{ path: '/daily/:groupKey', event: 'daily-checks,daily-e2e,nightly-checks' },
 		{ path: '/releases', name: 'releases', event: 'release-checks' },
 		{ path: '/releases/:groupKey', event: 'release-checks' },
+		{ path: '/other', name: 'other', event: 'other' },
 	];
 
 	return (
