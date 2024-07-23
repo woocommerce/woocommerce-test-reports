@@ -66,6 +66,7 @@ elif [[ "$EVENT_NAME" == "pull_request" ]] || [[ "$EVENT_NAME" == "pr" ]]; then
 
     REPORT_GROUP=$PR_NUMBER
 elif [[ "$EVENT_NAME" == "on-demand" ]] ; then
+    EVENT_NAME="other"
     REPORT_GROUP="On demand $REF_NAME-$COMMIT_SHA"
     REPORT_GROUP=$(echo "$REPORT_GROUP" | tr ' /. ' '_')
 else
