@@ -17,6 +17,7 @@ const daysToKeepReports = {
 	push: 30,
 	'daily-checks': 30,
 	'release-checks': 365,
+	other: 30,
 };
 
 const plus = String.fromCodePoint( 0x2795 );
