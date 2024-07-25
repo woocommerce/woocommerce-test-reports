@@ -75,7 +75,7 @@ async function updateReportData( metadata, summary, runsDataPath ) {
 	const cmd = new PutObjectCommand( {
 		Bucket: s3Params.Bucket,
 		Key: runsDataPath,
-		Body: JSON.stringify( json, null, 2 ),
+		Body: JSON.stringify( json ),
 		ContentType: 'application/json',
 	} );
 	await s3client.send( cmd );
