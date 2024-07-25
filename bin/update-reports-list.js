@@ -81,7 +81,13 @@ async function updateReportData( reportPath, json ) {
 	const isFailed = statistic.total !== statistic.passed + statistic.skipped;
 	const report = {
 		history: isFailed ? 'F' : 'P',
-		...metadata,
+		report_id: metadata.report_id,
+		suite: metadata.suite,
+		run_id: metadata.run_id,
+		run_attempt: metadata.run_attempt,
+		sha: metadata.sha,
+		path: metadata.path,
+		updated_on: metadata.updated_on,
 		results,
 	};
 
