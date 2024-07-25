@@ -91,7 +91,7 @@ const entryTemplate =
 	sort( weeklyJson, 'date', true );
 
     let failureRates = weeklyJson.map(week => ( {
-        date: week.date, trunk: week.trunk.testsFailedRate.toFixed(1), total: week.total.testsFailedRate.toFixed(1), delta: (week.total.testsFailedRate - week.trunk.testsFailedRate).toFixed(1)
+        date: week.date, trunk: week.trunk.testsFailedRate.toFixed(2), total: week.total.testsFailedRate.toFixed(2), delta: (week.total.testsFailedRate - week.trunk.testsFailedRate).toFixed(2)
     }));
 
 
@@ -153,12 +153,12 @@ function updateEntry( e, run ) {
 	e.runs++;
 	e.attempts += Object.keys( run.attempts ).length;
 	e.reRuns += Object.keys( run.attempts ).length - 1;
-	e.reRunsRate = parseFloat( ( ( e.reRuns / e.attempts ) * 100 ).toFixed( 1 ) );
+	e.reRunsRate = parseFloat( ( ( e.reRuns / e.attempts ) * 100 ).toFixed( 2 ) );
 	e.testsPassed += getTestResult( 'passed', run );
 	e.testsFailed += getTestResult( 'failed', run );
 	e.testsSkipped += getTestResult( 'skipped', run );
 	e.testsTotal += getTestResult( 'total', run );
-	e.testsFailedRate = parseFloat( ( ( e.testsFailed / e.testsTotal ) * 100 ).toFixed( 1 ) );
+	e.testsFailedRate = parseFloat( ( ( e.testsFailed / e.testsTotal ) * 100 ).toFixed( 2 ) );
 	e.testsPerAttempt = parseFloat( ( ( e.testsTotal - e.testsSkipped ) / e.attempts ).toFixed( 0 ) );
 	return e;
 }
