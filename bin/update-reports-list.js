@@ -30,7 +30,7 @@ if ( ! localReportPath ) {
 	const cmd = new PutObjectCommand( {
 		Bucket: s3Params.Bucket,
 		Key: fileKey,
-		Body: updatedJson,
+		Body: JSON.stringify( updatedJson ),
 		ContentType: 'application/json',
 	} );
 	await s3client.send( cmd );
