@@ -2,7 +2,13 @@
  * This script will clean old reports and reports for closed PRs
  */
 
-const { acquireLockWithRetry, listS3Folders, removeS3Folder, getJSONFromS3, releaseLock} = require( './utils' );
+const {
+	acquireLockWithRetry,
+	listS3Folders,
+	removeS3Folder,
+	getJSONFromS3,
+	releaseLock,
+} = require( './utils' );
 const { s3Params, s3client } = require( './s3-client' );
 const { Octokit } = require( '@octokit/rest' );
 const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
@@ -219,8 +225,8 @@ const dryRun = process.env.DRY_RUN;
 	}
 
 	console.log();
-	console.log(`Removing ${ dirsToRemove.length } directories`);
-	console.log(`${ dirsToRemove.join( ', ' ) }`);
+	console.log( `Removing ${ dirsToRemove.length } directories` );
+	console.log( `${ dirsToRemove.join( ', ' ) }` );
 	for ( const dir of dirsToRemove ) {
 		if ( ! dryRun ) {
 			await removeS3Folder( dir );

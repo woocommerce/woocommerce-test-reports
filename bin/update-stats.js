@@ -90,10 +90,12 @@ const entryTemplate =
 
 	sort( weeklyJson, 'date', true );
 
-    let failureRates = weeklyJson.map(week => ( {
-        date: week.date, trunk: week.trunk.testsFailedRate.toFixed(2), total: week.total.testsFailedRate.toFixed(2), delta: (week.total.testsFailedRate - week.trunk.testsFailedRate).toFixed(2)
-    }));
-
+	let failureRates = weeklyJson.map( week => ( {
+		date: week.date,
+		trunk: week.trunk.testsFailedRate.toFixed( 2 ),
+		total: week.total.testsFailedRate.toFixed( 2 ),
+		delta: ( week.total.testsFailedRate - week.trunk.testsFailedRate ).toFixed( 2 ),
+	} ) );
 
 	await uploadData( 'data/runs-daily.json', dailyJson );
 	await uploadData( 'data/runs-weekly.json', weeklyJson );
