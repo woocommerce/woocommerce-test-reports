@@ -16,7 +16,7 @@ const daysToKeepReports = {
 	pull_request: 30,
 	push: 30,
 	'daily-checks': 30,
-	'release-checks': 365,
+	'release-checks': 90,
 	other: 30,
 };
 
