@@ -19,7 +19,7 @@ const octokit = new Octokit( {
 } );
 
 const daysToKeepReports = {
-	pull_request: 30,
+	pull_request: 20,
 	push: 30,
 	'daily-checks': 30,
 	'release-checks': 90,
