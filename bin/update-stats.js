@@ -90,12 +90,13 @@ const entryTemplate =
 
 	sort( weeklyJson, 'date', true );
 
-	let failureRates = weeklyJson.map( week => ( {
-		date: week.date,
-		trunk: week.trunk.testsFailedRate.toFixed( 2 ),
-		total: week.total.testsFailedRate.toFixed( 2 ),
-		delta: ( week.total.testsFailedRate - week.trunk.testsFailedRate ).toFixed( 2 ),
-	} ) );
+	// let failureRates = weeklyJson.map( week => ( {
+	// 	date: week.date,
+	// 	trunk: week.trunk.testsFailedRate.toFixed( 2 ),
+	// 	total: week.total.testsFailedRate.toFixed( 2 ),
+	// 	delta: ( week.total.testsFailedRate - week.trunk.testsFailedRate ).toFixed( 2 ),
+	// } ) );
+	const failureRates = get7DFailureRates(dailyJson);
 
 	await uploadData( 'data/runs-daily.json', dailyJson );
 	await uploadData( 'data/runs-weekly.json', weeklyJson );
@@ -108,8 +109,8 @@ async function uploadData( dataFile, jsonData ) {
 	console.log( `Updating file ${ dataFile }` );
 
 	// Write the updated data list locally
-	// const { writeJson} = require( './utils' );
-	// const { join} = require("node:path");
+	// const { writeJson } = require( './utils' );
+	// const { join } = require("node:path");
 	// writeJson( jsonData, join( "", `${dataFile}` ) );
 
 	const cmd = new PutObjectCommand( {
@@ -174,4 +175,37 @@ function getTestResult( status, run ) {
 		} );
 	} );
 	return result;
+}
+
+function get7DFailureRates( dailyJson ) {
+	const failureRates = [];
+
+	for (const day of dailyJson) {
+		const date = day.date;
+		const days = dailyJson.filter( d => moment( d.date ).isBetween( moment( date ).subtract( 7, 'days' ), moment( date ) ) );
+		days.push( day );
+
+		if (days.length === 7) {
+			// const datesOnly = days.map( d => d.date );
+			// console.log( date, datesOnly );
+			const trunkFailureRates = days.map( d => d.trunk.testsFailedRate );
+			const trunkFailureRatesSum = trunkFailureRates.reduce( ( a, b ) => a + b );
+			const trunkFailureRatesAvg = (trunkFailureRatesSum / trunkFailureRates.length).toFixed( 2 );
+
+			const totalFailureRates = days.map( d => d.total.testsFailedRate );
+			const totalFailureRatesSum = totalFailureRates.reduce( ( a, b ) => a + b );
+			const totalFailureRatesAvg = (totalFailureRatesSum / totalFailureRates.length).toFixed( 2 );
+
+			const avgDelta = ( totalFailureRatesAvg - trunkFailureRatesAvg ).toFixed(2);
+			failureRates.push( {
+				date,
+				avgTrunk: trunkFailureRatesAvg,
+				avgTotal: totalFailureRatesAvg,
+				avgDelta
+			} );
+		}
+	}
+
+	console.log(failureRates);
+	return failureRates;
 }

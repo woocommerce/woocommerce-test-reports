@@ -223,12 +223,7 @@ export default class Summary extends BaseComponent {
 					<ResponsiveContainer width="100%" height="100%">
 						<ComposedChart data={ this.state.failureRates }>
 							{ this.getDefaultCartesianGrid() }
-							<XAxis
-								dataKey="date"
-								axisLine={ false }
-								interval="preserveStartEnd"
-								tick={ axisTickStyle }
-							></XAxis>
+							{ this.getDateXAxis() }
 							<YAxis yAxisId="failureRate" axisLine={ false } unit={ '%' } tick={ axisTickStyle } />
 							<Tooltip />;{ /*{this.getDefaultLegend()}*/ }
 							<Line
@@ -236,7 +231,7 @@ export default class Summary extends BaseComponent {
 								type="monotone"
 								name="trunk failure rate"
 								yAxisId="failureRate"
-								dataKey="trunk"
+								dataKey="avgTrunk"
 								stroke="rgba(186, 110, 98, 0.71)"
 								strokeWidth={ 0 }
 								legendType="circle"
@@ -249,7 +244,7 @@ export default class Summary extends BaseComponent {
 								type="monotone"
 								name="total failure rate"
 								yAxisId="failureRate"
-								dataKey="total"
+								dataKey="avgTotal"
 								stroke="rgba(186, 110, 98, 0.71)"
 								strokeWidth={ 0 }
 								legendType="circle"
@@ -274,14 +269,16 @@ export default class Summary extends BaseComponent {
 							<Area
 								type="monotone"
 								yAxisId="failureRate"
-								dataKey="delta"
+								dataKey="avgDelta"
+								name="delta"
+								unit="%"
 								fill="url(#splitColor)"
 								strokeWidth={ 0 }
 							/>
 						</ComposedChart>
 					</ResponsiveContainer>
 				</div>
-				<p className={ 'caption center' }>Failure rates trunk vs total</p>
+				<p className={ 'caption center' }>Average 7 days failure rates, trunk vs total</p>
 				<hr />
 				<div className="row title-row">
 					<div className="col-sm">
