@@ -118,9 +118,14 @@ const dryRun = process.env.DRY_RUN;
 			console.log( `PR ${ rg.pr_number } is closed, deleting reports in group ${ group }` );
 			delete prGroups[ group ];
 		} else {
-			console.log(
-				`${ rg.pr_number } doesn't seem to be a closed PR, will keep it (state=${ pull?.data?.state })`
-			);
+			if ( isOld( rg.lastUpdate, daysToKeepReports.pull_request, 'days' ) ) {
+				console.log(
+					`PR ${ rg.pr_number } is still open but older than ${ daysToKeepReports.pull_request } days. Deleting reports in group ${ group }`
+				);
+				delete prGroups[ group ];
+			} else {
+				console.log( `PR ${ rg.pr_number } is still open and not old enough. Keeping it.` );
+			}
 		}
 	}
 
