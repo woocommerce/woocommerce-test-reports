@@ -185,8 +185,8 @@ export default class Summary extends BaseComponent {
 	}
 
 	off = data => {
-		const dataMax = Math.max( ...data.map( i => i.delta ) );
-		const dataMin = Math.min( ...data.map( i => i.delta ) );
+		const dataMax = Math.max( ...data.map( i => i.avgDelta ) );
+		const dataMin = Math.min( ...data.map( i => i.avgDelta ) );
 
 		if ( dataMax <= 0 ) {
 			return 0;
@@ -278,7 +278,7 @@ export default class Summary extends BaseComponent {
 						</ComposedChart>
 					</ResponsiveContainer>
 				</div>
-				<p className={ 'caption center' }>Average 7 days failure rates, trunk vs total</p>
+				<p className={ 'caption center' }>Average 30 days failure rates, trunk vs total</p>
 				<hr />
 				<div className="row title-row">
 					<div className="col-sm">
