@@ -21,6 +21,7 @@ function App() {
 		{ path: '/releases', name: 'releases', event: 'release-checks' },
 		{ path: '/releases/:groupKey', event: 'release-checks' },
 		{ path: '/other', name: 'other', event: 'other' },
+		{ path: '/other/:groupKey', event: 'other' },
 	];
 
 	return (
