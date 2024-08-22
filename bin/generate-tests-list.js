@@ -18,8 +18,8 @@ const jsonFilePath = `data/${ reportFileName }.json`;
 	data.flows = getUniqueNestedTitles( fileSuites.flat() );
 
 	// Write the file locally
-	const { writeJson } = require( './utils' );
-	writeJson( data, path.join( '', jsonFilePath ) );
+	// const { writeJson } = require( './utils' );
+	// writeJson( data, path.join( '', jsonFilePath ) );
 
 	// Upload the report to S3
 	const cmd = new PutObjectCommand( {
@@ -28,7 +28,7 @@ const jsonFilePath = `data/${ reportFileName }.json`;
 		Body: JSON.stringify( data ),
 		ContentType: 'application/json',
 	} );
-	// await s3client.send( cmd );
+	await s3client.send( cmd );
 } )();
 
 function getSuitesData( jsonReportsPath, fileNamePattern ) {
