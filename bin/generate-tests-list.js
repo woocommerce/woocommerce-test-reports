@@ -8,11 +8,22 @@ const { readdirSync, readFileSync } = require( 'node:fs' );
 const path = require( 'path' );
 
 const { REF_NAME, COMMIT_SHA, RESULTS_PATH } = process.env;
+
+if ( ! RESULTS_PATH ) {
+	console.error( 'Please provide the path to the test results folder.' );
+	process.exit( 1 );
+}
+
 const reportFileName = `flows-coverage${ REF_NAME ? '-' + REF_NAME : '' }`;
 const jsonFilePath = `data/${ reportFileName }.json`;
 
 ( async () => {
-	const data = { flows: [], ref: REF_NAME ? REF_NAME : 'unknown', sha: COMMIT_SHA ? COMMIT_SHA : 'unknown', lastUpdate: new Date() };
+	const data = {
+		flows: [],
+		ref: REF_NAME ? REF_NAME : 'unknown',
+		sha: COMMIT_SHA ? COMMIT_SHA : 'unknown',
+		lastUpdate: new Date(),
+	};
 
 	const fileSuites = getSuitesData( RESULTS_PATH, /^test-results-\d+\.json$/ );
 	data.flows = getUniqueNestedTitles( fileSuites.flat() );
@@ -66,7 +77,7 @@ function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
 				file: suite.file,
 				line: suite.line,
 				skipped: spec.tests.every( test => test.expectedStatus === 'skipped' ),
-			}
+			};
 			titles.push( test );
 		} );
 
