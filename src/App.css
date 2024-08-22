@@ -313,4 +313,21 @@ hr {
 	text-align: center;
 }
 
+.flowItem {
+	padding: 7px;
+	border-bottom: 1px solid var( --borders-color );
+}
+
+.flowTitle {
+	font-size: 1.2rem;
+}
+
+.skipped-flow {
+	color: var(--color-skipped);
+}
+
+.active-flow {
+	color: var( --default-font-color );
+}
+
 

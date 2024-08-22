@@ -61,7 +61,6 @@ function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
 	if ( depth > 100 ) return [];
 
 	let titles = [];
-	let skippedTitles = [];
 
 	suites.forEach( suite => {
 		const isFileSuite = suite.title === suite.file;
