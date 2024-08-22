@@ -137,6 +137,8 @@ jobs:
 
       - name: Update flows list
         if: ${{ inputs.event == 'push' }}
+        env:
+          RESULTS_PATH: ${{ env.DOWNLOAD_PATH }}
         run: |
           echo "::group::Update flows list"
           node ./bin/generate-tests-list.js
