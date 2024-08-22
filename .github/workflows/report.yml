@@ -136,7 +136,7 @@ jobs:
           echo "::endgroup::"
 
       - name: Update flows list
-        if: ${{ inputs.event == 'push' }}
+        if: ${{ env.EVENT_NAME == 'push' && env.SUITE_NAME == 'core-e2e-report' }}
         env:
           RESULTS_PATH: ${{ env.DOWNLOAD_PATH }}
         run: |
