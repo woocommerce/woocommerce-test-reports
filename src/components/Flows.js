@@ -1,22 +1,6 @@
 import React from 'react';
-import { sortArray } from '../utils/sort';
 import BaseComponent from './BaseComponent';
-import TestResultsTooltip from './TestResultsTooltip';
-import moment from 'moment';
-import {
-	Area,
-	Bar,
-	CartesianGrid,
-	ComposedChart,
-	Legend,
-	Line,
-	ResponsiveContainer,
-	Tooltip,
-	XAxis,
-	YAxis,
-} from 'recharts';
 import { getDataSourceUrl } from '../config';
-import { prettyNumber } from '../utils/format';
 
 export default class Flows extends BaseComponent {
 	data = {};
