@@ -134,3 +134,10 @@ jobs:
           echo "::group::Update runs"
           node ./bin/update-runs-data.js
           echo "::endgroup::"
+
+      - name: Update flows list
+        if: ${{ inputs.event == 'push' }}
+        run: |
+          echo "::group::Update flows list"
+          node ./bin/generate-tests-list.js
+          echo "::endgroup::"
