@@ -7,6 +7,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import logo from './assets/logo.png';
 import Summary from './components/Summary';
 import Reports from './components/Reports';
+import Flows from "./components/Flows";
 
 function App() {
 	const basename = '/woocommerce-test-reports';
@@ -45,6 +46,7 @@ function App() {
 											</Nav.Link>
 										)
 								) }
+								<Nav.Link href={ `${ basename }/#/flows` }>Flows</Nav.Link>
 							</Nav>
 						</Navbar.Collapse>
 					</Container>
@@ -60,6 +62,7 @@ function App() {
 								element={ <Reports key={ index } event={ route.event } /> }
 							/>
 						) ) }
+						<Route exact path="/flows" element={ <Flows /> } />
 					</Routes>
 				</HashRouter>
 			</div>
