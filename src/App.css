@@ -313,30 +313,34 @@ hr {
 	text-align: center;
 }
 
-.flowItem {
-	padding: 7px;
-	border-bottom: 1px solid var( --borders-color );
+.suitesList {
+	list-style: none;
+	padding: 20px;
+	font-size: 1.2rem;
 }
 
-.flowTitle {
-	font-size: 1.2rem;
+.flowsList {
+	list-style: none;
+}
+
+.flowsList li {
+	padding: 7px;
+}
+
+.flowLink {
+	color: var( --default-font-color );
+}
+
+.flowLink:hover {
+	color: var( --woo-link-color );
+	text-decoration: none;
 }
 
 .flowMetaData {
 	color: #484f58;
 }
 
-.flowMetaData > a {
-	color: #484f58;
-}
-
 .skipped-flow {
-	color: var( --color-skipped );
 	background: var( --accent-color );
 }
-
-.active-flow {
-	color: var( --default-font-color );
-}
-
 

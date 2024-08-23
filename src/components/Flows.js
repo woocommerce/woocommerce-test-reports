@@ -50,34 +50,37 @@ export default class Flows extends BaseComponent {
 		const skippedPill = <span className={ `label label-status-skipped` }>SKIPPED</span>;
 		return (
 			<div>
-				<ul className={ 'list-unstyled' }>
-					{ Array.isArray( this.data.flows ) &&
-						this.data.flows.map( ( flow, index ) => (
-							<li
-								className={
-									flow.skipped
-										? 'groupTitle flowItem skipped-flow'
-										: 'groupTitle flowItem active-flow'
-								}
-								key={ index }
-							>
-								{ flow.suite } <br />
-								&nbsp;&nbsp;&nbsp;&nbsp;
-								<a
-									className={ 'report-link' }
-									href={ fileUrl + flow.file + '#L' + flow.line }
-									target={ '_blank' }
-									rel={ 'noreferrer' }
-								>
-									{ flow.skipped ? skippedPill : '' } { flow.title }
-								</a>
-								<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;
-								<small className={ 'flowMetaData' }>
-									{ flow.file }:{ flow.line }
-								</small>
-							</li>
-						) ) }
+				<ul className={'suitesList' }>
+					{Object.keys(this.data.flows).map((suite, suiteIndex) => (
+						<li key={suiteIndex} className={'groupTitle'}>
+							{suite}
+							<ul className={'flowsList'}>
+								{this.data.flows[suite].map((flow, flowIndex) => (
+									<li
+										className={
+											flow.skipped
+												? 'skipped-flow'
+												: ''
+										}
+										key={flowIndex}
+									>
+										<a
+											className={'flowLink'}
+											href={fileUrl + flow.file + '#L' + flow.line}
+											target={'_blank'}
+											rel={'noreferrer'}
+										>
+											{flow.skipped ? skippedPill : ''} {flow.title}
+										</a>
+										<br/>
+										<small className={'flowMetaData'}>
+											{flow.file}:{flow.line}
+										</small>
+									</li>
+								))}
+							</ul>
+						</li>
+					))}
 				</ul>
 			</div>
 		);
