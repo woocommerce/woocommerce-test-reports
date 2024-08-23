@@ -313,4 +313,44 @@ hr {
 	text-align: center;
 }
 
+.suitesList {
+	list-style: none;
+}
+
+.suiteElement {
+	margin-top: 20px;
+	padding-bottom: 20px;
+	padding-top: 10px;
+
+}
+
+.suiteTitle {
+	font-size: 1.3rem;
+	border-bottom: 1px solid var( --borders-color );
+}
+
+.flowsList {
+	list-style: none;
+}
+
+.flowsList li {
+	padding: 7px;
+}
+
+.flowLink {
+	color: var( --default-font-color );
+}
+
+.flowLink:hover {
+	color: var( --woo-link-color );
+	text-decoration: none;
+}
+
+.flowMetaData {
+	color: #484f58;
+}
+
+.skipped-flow {
+	background: var( --accent-color );
+}
 
