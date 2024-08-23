@@ -26,7 +26,9 @@ const jsonFilePath = `data/${ reportFileName }.json`;
 	};
 
 	const fileSuites = getSuitesData( RESULTS_PATH, /^test-results-\d+\.json$/ );
-	data.flows = getUniqueNestedTitles( fileSuites.flat() );
+	const flows = getUniqueNestedTitles( fileSuites.flat() );
+
+	data.flows = groupFlowsBySuite(flows);
 
 	// Write the file locally
 	// const { writeJson } = require( './utils' );
@@ -86,5 +88,18 @@ function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
 		}
 	} );
 
-	return titles.sort();
+	return titles.sort( ( a, b ) => {
+		return `${ a.suite } ${ a.title }`.localeCompare( `${ b.suite } ${ b.title }` );
+	} );
+}
+
+function groupFlowsBySuite(flows) {
+  return flows.reduce((acc, flow) => {
+    const suite = flow.suite || 'Other';
+    if (!acc[suite]) {
+      acc[suite] = [];
+    }
+    acc[suite].push(flow);
+    return acc;
+  }, {});
 }
