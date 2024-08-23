@@ -61,17 +61,18 @@ export default class Flows extends BaseComponent {
 								}
 								key={ index }
 							>
-								{ ' ' }
-								{ flow.skipped ? skippedPill : '' }{ ' ' }
+								{ flow.suite } <br />
+								&nbsp;&nbsp;&nbsp;&nbsp;
 								<a
 									className={ 'report-link' }
 									href={ fileUrl + flow.file + '#L' + flow.line }
 									target={ '_blank' }
 									rel={ 'noreferrer' }
 								>
-									{ flow.title }
+									{ flow.skipped ? skippedPill : '' } { flow.title }
 								</a>
 								<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;
 								<small className={ 'flowMetaData' }>
 									{ flow.file }:{ flow.line }
 								</small>
