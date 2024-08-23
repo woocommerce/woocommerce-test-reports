@@ -61,7 +61,6 @@ function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
 	if ( depth > 100 ) return [];
 
 	let titles = [];
-	let skippedTitles = [];
 
 	suites.forEach( suite => {
 		const isFileSuite = suite.title === suite.file;
@@ -72,13 +71,12 @@ function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
 
 		// Add specs titles
 		suite.specs.forEach( spec => {
-			const test = {
+			titles.push( {
 				title: `${ currentTitle ? currentTitle + ' --> ' : '' }${ spec.title }`,
-				file: suite.file,
-				line: suite.line,
+				file: spec.file,
+				line: spec.line,
 				skipped: spec.tests.every( test => test.expectedStatus === 'skipped' ),
-			};
-			titles.push( test );
+			} );
 		} );
 
 		// Recursively add nested suites titles
