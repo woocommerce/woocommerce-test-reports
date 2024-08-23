@@ -47,7 +47,7 @@ export default class Flows extends BaseComponent {
 		// https://github.com/woocommerce/woocommerce/blob/db8890bbb0660683019042e344d604bb6cd731fd/plugins/woocommerce/tests/e2e-pw/tests/basic.spec.js#L19
 
 		const fileUrl = `https://github.com/woocommerce/woocommerce/blob/${ this.data.sha }/plugins/woocommerce/tests/e2e-pw/tests/`;
-
+		const skippedPill = <span className={ `label label-status-skipped` }>SKIPPED</span>;
 		return (
 			<div>
 				<ul className={ 'list-unstyled' }>
@@ -61,13 +61,14 @@ export default class Flows extends BaseComponent {
 								}
 								key={ index }
 							>
+								{ ' ' }
+								{ flow.skipped ? skippedPill : '' }{ ' ' }
 								<a
 									className={ 'report-link' }
 									href={ fileUrl + flow.file + '#L' + flow.line }
 									target={ '_blank' }
 									rel={ 'noreferrer' }
 								>
-									{ flow.skipped ? 'SKIPPED ' : '' }
 									{ flow.title }
 								</a>
 								<br />
