@@ -52,8 +52,8 @@ export default class Flows extends BaseComponent {
 			<div>
 				<ul className={'suitesList' }>
 					{Object.keys(this.data.flows).map((suite, suiteIndex) => (
-						<li key={suiteIndex} className={'groupTitle'}>
-							{suite}
+						<li key={suiteIndex} className={'groupTitle suiteElement'}>
+							<span className={'suiteTitle'}>{suite}</span>
 							<ul className={'flowsList'}>
 								{this.data.flows[suite].map((flow, flowIndex) => (
 									<li

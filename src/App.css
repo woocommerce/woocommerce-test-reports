@@ -315,8 +315,18 @@ hr {
 
 .suitesList {
 	list-style: none;
-	padding: 20px;
-	font-size: 1.2rem;
+}
+
+.suiteElement {
+	margin-top: 20px;
+	padding-bottom: 20px;
+	padding-top: 10px;
+
+}
+
+.suiteTitle {
+	font-size: 1.3rem;
+	border-bottom: 1px solid var( --borders-color );
 }
 
 .flowsList {
