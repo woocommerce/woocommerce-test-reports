@@ -86,5 +86,7 @@ function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
 		}
 	} );
 
-	return titles.sort();
+	return titles.sort( ( a, b ) => {
+		return `${ a.suite } ${ a.title }`.localeCompare( `${ b.suite } ${ b.title }` );
+	} );
 }
