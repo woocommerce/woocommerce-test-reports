@@ -43,20 +43,41 @@ export default class Flows extends BaseComponent {
 		if ( ! this.state.isDataReady ) {
 			return null;
 		}
+		// https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/tests/e2e-pw/tests/basic.spec.js#L19
+		// https://github.com/woocommerce/woocommerce/blob/db8890bbb0660683019042e344d604bb6cd731fd/plugins/woocommerce/tests/e2e-pw/tests/basic.spec.js#L19
+
+		const fileUrl = `https://github.com/woocommerce/woocommerce/blob/${ this.data.sha }/plugins/woocommerce/tests/e2e-pw/tests/`;
 
 		return (
 			<div>
-				<ul className={'list-unstyled'}>
-					{Array.isArray(this.data.flows) &&
-						this.data.flows.map((flow, index) => (
-							<li className={ flow.skipped ? 'flowItem skipped-flow' : 'flowItem active-flow' } key={index}>
-								<span className={ 'flowTitle' }>{flow.skipped ? 'SKIPPED ' : ''}{flow.title}</span>
-								<br/>
-								<small>{flow.file}:{flow.line}</small>
+				<ul className={ 'list-unstyled' }>
+					{ Array.isArray( this.data.flows ) &&
+						this.data.flows.map( ( flow, index ) => (
+							<li
+								className={
+									flow.skipped
+										? 'groupTitle flowItem skipped-flow'
+										: 'groupTitle flowItem active-flow'
+								}
+								key={ index }
+							>
+								<a
+									className={ 'report-link' }
+									href={ fileUrl + flow.file + '#L' + flow.line }
+									target={ '_blank' }
+									rel={ 'noreferrer' }
+								>
+									{ flow.skipped ? 'SKIPPED ' : '' }
+									{ flow.title }
+								</a>
+								<br />
+								<small className={ 'flowMetaData' }>
+									{ flow.file }:{ flow.line }
+								</small>
 							</li>
-						))}
+						) ) }
 				</ul>
 			</div>
-	);
+		);
 	}
-	}
+}

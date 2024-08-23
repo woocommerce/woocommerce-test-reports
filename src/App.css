@@ -322,8 +322,17 @@ hr {
 	font-size: 1.2rem;
 }
 
+.flowMetaData {
+	color: #484f58;
+}
+
+.flowMetaData > a {
+	color: #484f58;
+}
+
 .skipped-flow {
-	color: var(--color-skipped);
+	color: var( --color-skipped );
+	background: var( --accent-color );
 }
 
 .active-flow {
