@@ -95,7 +95,7 @@ function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
 
 function groupFlowsBySuite(flows) {
   return flows.reduce((acc, flow) => {
-    const suite = flow.suite || 'unknown';
+    const suite = flow.suite || 'Other';
     if (!acc[suite]) {
       acc[suite] = [];
     }
