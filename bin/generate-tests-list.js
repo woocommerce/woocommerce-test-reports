@@ -72,7 +72,8 @@ function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
 		// Add specs titles
 		suite.specs.forEach( spec => {
 			titles.push( {
-				title: `${ currentTitle ? currentTitle + ' --> ' : '' }${ spec.title }`,
+				suite: currentTitle,
+				title: spec.title,
 				file: spec.file,
 				line: spec.line,
 				skipped: spec.tests.every( test => test.expectedStatus === 'skipped' ),
