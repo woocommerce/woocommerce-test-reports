@@ -124,10 +124,9 @@ export default class Flows extends BaseComponent {
 					<div className="col">
 						<span>{ this.data.count } flows</span>
 						<br />
-						<span className={ 'caption' }>{ this.data.sha }</span>
-						<br />
 						<span className={ 'caption' }>
-							updated { moment( this.data.lastUpdate ).fromNow() }
+							commit { this.data.sha.substring( 0, 6 ) }, updated{ ' ' }
+							{ moment( this.data.lastUpdate ).fromNow() }
 						</span>
 					</div>
 					<div className="col filters right-align">{ this.getFilterButtons() }</div>
