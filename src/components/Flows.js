@@ -4,6 +4,7 @@ import { getDataSourceUrl } from '../config';
 import { Button } from 'react-bootstrap';
 import checkSquare from '../assets/check-square.svg';
 import square from '../assets/square.svg';
+import moment from 'moment';
 
 export default class Flows extends BaseComponent {
 	rawData = {};
@@ -57,6 +58,9 @@ export default class Flows extends BaseComponent {
 		}, {} );
 
 		this.data.count = count;
+		this.data.sha = this.rawData.sha;
+		this.data.ref = this.rawData.ref;
+		this.data.lastUpdate = this.rawData.lastUpdate;
 		this.setState( { isDataReady: true } );
 	}
 
@@ -117,8 +121,19 @@ export default class Flows extends BaseComponent {
 		return (
 			<div>
 				<div className="row headerRow">
-					<div className="col">{ this.data.count } flows</div>
+					<div className="col">
+						<span>{ this.data.count } flows</span>
+						<br />
+						<span className={ 'caption' }>{ this.data.sha }</span>
+						<br />
+						<span className={ 'caption' }>
+							updated { moment( this.data.lastUpdate ).fromNow() }
+						</span>
+					</div>
 					<div className="col filters right-align">{ this.getFilterButtons() }</div>
+				</div>
+				<div className="row">
+					<div className="col"></div>
 				</div>
 				<ul className={ 'suitesList' }>
 					{ Object.keys( this.data.flows ).map( ( suite, suiteIndex ) => (
