@@ -1,11 +1,15 @@
 import React from 'react';
 import BaseComponent from './BaseComponent';
 import { getDataSourceUrl } from '../config';
+import { Button } from 'react-bootstrap';
+import checkSquare from '../assets/check-square.svg';
+import square from '../assets/square.svg';
 
 export default class Flows extends BaseComponent {
+	rawData = {};
 	data = {};
 	state = {
-		filters: { isTrunkOnly: true },
+		filters: { skipped: true, active: true },
 		isDataReady: false,
 	};
 
@@ -18,7 +22,7 @@ export default class Flows extends BaseComponent {
 		} )
 			.then( response => response.json() )
 			.then( jsonData => {
-				this.data = jsonData;
+				this.rawData = jsonData;
 			} )
 			.catch( console.error );
 
@@ -36,51 +40,110 @@ export default class Flows extends BaseComponent {
 	}
 
 	filterAndSortData() {
-		// this.setState( { days: this.filterDataSet( this.rawData.dailyData ) } );
+		const { skipped, active } = this.state.filters;
+		let count = 0;
+
+		this.data.flows = Object.keys( this.rawData.flows ).reduce( ( acc, suite ) => {
+			const filteredSuiteFlows = this.rawData.flows[ suite ].filter( flow => {
+				return ( skipped && active ) || ( skipped && flow.skipped ) || ( active && ! flow.skipped );
+			} );
+
+			if ( filteredSuiteFlows.length > 0 ) {
+				acc[ suite ] = filteredSuiteFlows;
+				count += filteredSuiteFlows.length;
+			}
+
+			return acc;
+		}, {} );
+
+		this.data.count = count;
+		this.setState( { isDataReady: true } );
+	}
+
+	getFilterButtons() {
+		return (
+			<div>
+				<Button
+					variant="dark"
+					className="filter-btn"
+					onClick={ () => {
+						this.setState( prevState => ( {
+							filters: {
+								...prevState.filters,
+								active: ! this.state.filters.active,
+							},
+						} ) );
+					} }
+				>
+					<img
+						src={ this.state.filters.active ? checkSquare : square }
+						width={ 16 }
+						height={ 16 }
+						alt={ 'checkbox' }
+					/>{ ' ' }
+					active
+				</Button>
+				<Button
+					variant="dark"
+					className="filter-btn"
+					onClick={ () => {
+						this.setState( prevState => ( {
+							filters: {
+								...prevState.filters,
+								skipped: ! this.state.filters.skipped,
+							},
+						} ) );
+					} }
+				>
+					<img
+						src={ this.state.filters.skipped ? checkSquare : square }
+						width={ 16 }
+						height={ 16 }
+						alt={ 'checkbox' }
+					/>{ ' ' }
+					skipped
+				</Button>
+			</div>
+		);
 	}
 
 	render() {
 		if ( ! this.state.isDataReady ) {
 			return null;
 		}
-		// https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/tests/e2e-pw/tests/basic.spec.js#L19
-		// https://github.com/woocommerce/woocommerce/blob/db8890bbb0660683019042e344d604bb6cd731fd/plugins/woocommerce/tests/e2e-pw/tests/basic.spec.js#L19
 
 		const fileUrl = `https://github.com/woocommerce/woocommerce/blob/${ this.data.sha }/plugins/woocommerce/tests/e2e-pw/tests/`;
 		const skippedPill = <span className={ `label label-status-skipped` }>SKIPPED</span>;
 		return (
 			<div>
-				<ul className={'suitesList' }>
-					{Object.keys(this.data.flows).map((suite, suiteIndex) => (
-						<li key={suiteIndex} className={'groupTitle suiteElement'}>
-							<span className={'suiteTitle'}>{suite}</span>
-							<ul className={'flowsList'}>
-								{this.data.flows[suite].map((flow, flowIndex) => (
-									<li
-										className={
-											flow.skipped
-												? 'skipped-flow'
-												: ''
-										}
-										key={flowIndex}
-									>
+				<div className="row headerRow">
+					<div className="col">{ this.data.count } flows</div>
+					<div className="col filters right-align">{ this.getFilterButtons() }</div>
+				</div>
+				<ul className={ 'suitesList' }>
+					{ Object.keys( this.data.flows ).map( ( suite, suiteIndex ) => (
+						<li key={ suiteIndex } className={ 'groupTitle suiteElement' }>
+							<span className={ 'suiteTitle' }>{ suite }</span>
+							<ul className={ 'flowsList' }>
+								{ this.data.flows[ suite ].map( ( flow, flowIndex ) => (
+									<li className={ flow.skipped ? 'skipped-flow' : '' } key={ flowIndex }>
 										<a
-											className={'flowLink'}
-											href={fileUrl + flow.file + '#L' + flow.line}
-											target={'_blank'}
-											rel={'noreferrer'}
+											className={ 'flowLink' }
+											href={ fileUrl + flow.file + '#L' + flow.line }
+											target={ '_blank' }
+											rel={ 'noreferrer' }
 										>
-											{flow.skipped ? skippedPill : ''} {flow.title}
+											{ flow.skipped ? skippedPill : '' } { flow.title }
 										</a>
-										<br/>
-										<small className={'flowMetaData'}>
-											{flow.file}:{flow.line}
+										<br />
+										<small className={ 'flowMetaData' }>
+											{ flow.file }:{ flow.line }
 										</small>
 									</li>
-								))}
+								) ) }
 							</ul>
 						</li>
-					))}
+					) ) }
 				</ul>
 			</div>
 		);

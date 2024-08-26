@@ -313,6 +313,10 @@ hr {
 	text-align: center;
 }
 
+.countRow {
+	padding-left: 10px;
+}
+
 .suitesList {
 	list-style: none;
 }
@@ -321,7 +325,6 @@ hr {
 	margin-top: 20px;
 	padding-bottom: 20px;
 	padding-top: 10px;
-
 }
 
 .suiteTitle {
@@ -354,3 +357,32 @@ hr {
 	background: var( --accent-color );
 }
 
+.filters {
+	padding-bottom: 2px;
+}
+
+.filter-btn svg {
+	margin-right: 7px;
+
+}
+
+.filter-btn {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	background-color: var( --default-background );
+	border: 0;
+	margin-bottom: 1vh;
+}
+
+.filter-btn:hover {
+	background-color: var( --accent-color );
+}
+
+.right-align {
+	text-align: right;
+}
+
+.headerRow {
+	margin-top: 2vh;
+	border-bottom: 1px solid var( --borders-color );
+}
