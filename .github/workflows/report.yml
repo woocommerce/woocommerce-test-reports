@@ -141,5 +141,5 @@ jobs:
           RESULTS_PATH: ${{ env.DOWNLOAD_PATH }}
         run: |
           echo "::group::Update flows list"
-          node ./bin/generate-tests-list.js
+          node ./bin/generate-flows-list.js
           echo "::endgroup::"
