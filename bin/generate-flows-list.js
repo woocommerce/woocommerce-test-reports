@@ -1,7 +1,7 @@
 /**
  * This script will generate a list of tests titles grouped by suites (one level of suites) from the Playwright json reports.
  * It will also store the commit sha and the ref name in the generated file.
- * If the incoming sha is the same as the existing one, it will merge the new flows with the existing ones, avoiding duplicates. This is to account for multiple test runs on the same sha.
+ * If the incoming sha is the same as the existing one, it will merge the new flows with the existing ones, avoiding missing flows. This is to account for multiple test runs on the same sha.
  */
 
 const { s3Params, s3client } = require( './s3-client' );
