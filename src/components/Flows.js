@@ -111,6 +111,12 @@ export default class Flows extends BaseComponent {
 		);
 	}
 
+	renderTags(tags) {
+		return tags.map((tag, index) => (
+			<span key={index} className={`label label-status-neutral`}>{tag}</span>
+		));
+	}
+
 	render() {
 		if ( ! this.state.isDataReady ) {
 			return null;
@@ -140,24 +146,24 @@ export default class Flows extends BaseComponent {
 							<span className={ 'suiteTitle' }>{ suite }</span>
 							<ul className={ 'flowsList' }>
 								{ this.data.flows[ suite ].map( ( flow, flowIndex ) => (
-									<li className={ flow.skipped ? 'skipped-flow' : '' } key={ flowIndex }>
+									<li className={flow.skipped ? 'skipped-flow' : ''} key={flowIndex}>
 										<a
-											className={ 'flowLink' }
-											href={ fileUrl + flow.file + '#L' + flow.line }
-											target={ '_blank' }
-											rel={ 'noreferrer' }
+											className={'flowLink'}
+											href={fileUrl + flow.file + '#L' + flow.line}
+											target={'_blank'}
+											rel={'noreferrer'}
 										>
-											{ flow.skipped ? skippedPill : '' } { flow.title }
-										</a>
-										<br />
-										<small className={ 'flowMetaData' }>
-											{ flow.file }:{ flow.line }
+											{flow.skipped ? skippedPill : ''} {flow.title}
+										</a> { this.renderTags( flow.tags ) }
+										<br/>
+										<small className={'flowMetaData'}>
+											{flow.file}:{flow.line}
 										</small>
 									</li>
-								) ) }
+								))}
 							</ul>
 						</li>
-					) ) }
+					))}
 				</ul>
 			</div>
 		);
