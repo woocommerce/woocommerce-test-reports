@@ -100,8 +100,17 @@ function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
 
 		// Add specs titles
 		suite.specs.forEach( spec => {
+			// If there is an annotation of type 'suite', include it in the suite title
+			// We only take the first test into account, normally there should be only one test per spec
+			const suiteAnnotation = spec.tests[ 0 ].annotations.find(
+				annotation => annotation.type === 'suite'
+			);
+			const suiteTitle = suiteAnnotation
+				? `${ currentTitle } > ${ suiteAnnotation.description }`
+				: currentTitle;
+
 			titles.push( {
-				suite: currentTitle,
+				suite: suiteTitle,
 				title: spec.title,
 				file: spec.file,
 				line: spec.line,
