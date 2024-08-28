@@ -115,6 +115,7 @@ function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
 				file: spec.file,
 				line: spec.line,
 				skipped: spec.tests.every( test => test.expectedStatus === 'skipped' ),
+				tags: spec.tags,
 			} );
 		} );
 
