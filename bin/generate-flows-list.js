@@ -105,9 +105,9 @@ function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
 			const suiteAnnotation = spec.tests[ 0 ].annotations.find(
 				annotation => annotation.type === 'suite'
 			);
-			const suiteTitle = suiteAnnotation
+			const suiteTitle = (suiteAnnotation
 				? `${ currentTitle } > ${ suiteAnnotation.description }`
-				: currentTitle;
+				: currentTitle).replace( /^ > /, '' );
 
 			titles.push( {
 				suite: suiteTitle,
