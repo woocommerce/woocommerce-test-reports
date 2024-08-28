@@ -112,6 +112,7 @@ export default class Flows extends BaseComponent {
 	}
 
 	renderTags(tags) {
+		tags = tags || [];
 		return tags.map((tag, index) => (
 			<span key={index} className={`label label-status-neutral`}>{tag}</span>
 		));
