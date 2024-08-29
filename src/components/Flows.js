@@ -146,6 +146,13 @@ export default class Flows extends BaseComponent {
 		) );
 	}
 
+	toggleVisibility = suiteIndex => {
+		const flowsListElement = document.getElementById( `suite-${ suiteIndex }` );
+		flowsListElement.classList.toggle( 'collapsed' );
+		const collapseBtnElement = document.getElementById( `btn-${ suiteIndex }` );
+		collapseBtnElement.classList.toggle( 'collapsed' );
+	};
+
 	render() {
 		if ( ! this.state.isDataReady ) {
 			return null;
@@ -168,9 +175,27 @@ export default class Flows extends BaseComponent {
 				</div>
 				<ul className={ 'suitesList' }>
 					{ Object.keys( this.data.flows ).map( ( suite, suiteIndex ) => (
-						<li key={ suiteIndex } className={ 'groupTitle suiteElement' }>
-							<span className={ 'suiteTitle' }>{ suite }</span>
-							<ul className={ 'flowsList' }>
+						<li
+							key={ suiteIndex }
+							className={ 'groupTitle suiteElement' }
+							onClick={ () => this.toggleVisibility( suiteIndex ) }
+						>
+							<div className={ 'suiteTitleContainer' }>
+								<span className={ 'suiteTitle' }>{ suite }</span>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="48"
+									height="32"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									className={ 'collapse-indicator' }
+									id={ `btn-${ suiteIndex }` }
+								>
+									<polyline points="6 9 12 15 18 9"></polyline>
+								</svg>
+							</div>
+							<ul className={ 'flowsList' } id={ `suite-${ suiteIndex }` }>
 								{ this.data.flows[ suite ].map( ( flow, flowIndex ) => (
 									<li className={ flow.skipped ? 'skipped-flow' : '' } key={ flowIndex }>
 										<a
