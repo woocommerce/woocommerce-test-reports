@@ -395,12 +395,34 @@ hr {
     border-bottom: 1px solid var(--borders-color);
 }
 
+.search-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    top: 12px;
+    fill: var(--default-font-color);
+}
+
 .search-input {
     width: 250px;
-    /*padding: 10px;*/
     margin-bottom: 15px;
+    background-color: var(--accent-color);
     border: 1px solid var(--borders-color);
     border-radius: 5px;
+    padding-left: 30px;
+    color: var(--default-font-color);
+}
+
+.search-input:focus {
+    background-color: var(--accent-color);
+    color: var(--default-font-color);
 }
 
 /*.collapse-btn {*/
