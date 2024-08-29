@@ -357,13 +357,17 @@ hr {
 	background: var( --accent-color );
 }
 
+.filtersRow {
+	display: flex;
+	justify-content: flex-end;
+}
+
 .filters {
 	padding-bottom: 2px;
 }
 
 .filter-btn svg {
 	margin-right: 7px;
-
 }
 
 .filter-btn {
@@ -385,4 +389,12 @@ hr {
 .headerRow {
 	margin-top: 2vh;
 	border-bottom: 1px solid var( --borders-color );
+}
+
+.search-input {
+	width: 250px;
+	/*padding: 10px;*/
+	margin-bottom: 15px;
+	border: 1px solid var( --borders-color );
+	border-radius: 5px;
 }

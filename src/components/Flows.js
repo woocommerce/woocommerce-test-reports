@@ -1,7 +1,7 @@
 import React from 'react';
 import BaseComponent from './BaseComponent';
 import { getDataSourceUrl } from '../config';
-import { Button } from 'react-bootstrap';
+import { Button, FormControl } from 'react-bootstrap';
 import checkSquare from '../assets/check-square.svg';
 import square from '../assets/square.svg';
 import moment from 'moment';
@@ -10,7 +10,7 @@ export default class Flows extends BaseComponent {
 	rawData = {};
 	data = {};
 	state = {
-		filters: { skipped: true, active: true },
+		filters: { skipped: true, active: true, searchTerm: '' },
 		isDataReady: false,
 	};
 
@@ -41,12 +41,22 @@ export default class Flows extends BaseComponent {
 	}
 
 	filterAndSortData() {
-		const { skipped, active } = this.state.filters;
+		const { skipped, active, searchTerm } = this.state.filters;
 		let count = 0;
 
 		this.data.flows = Object.keys( this.rawData.flows ).reduce( ( acc, suite ) => {
 			const filteredSuiteFlows = this.rawData.flows[ suite ].filter( flow => {
-				return ( skipped && active ) || ( skipped && flow.skipped ) || ( active && ! flow.skipped );
+				const suiteMatch = suite.toLowerCase().includes( searchTerm.toLowerCase() );
+				const titleMatch = flow.title.toLowerCase().includes( searchTerm.toLowerCase() );
+				const fileNameMatch = flow.file.toLowerCase().includes( searchTerm.toLowerCase() );
+				const tagsMatch =
+					flow.tags &&
+					flow.tags.some( tag => tag.toLowerCase().includes( searchTerm.toLowerCase() ) );
+
+				return (
+					( suiteMatch || titleMatch || fileNameMatch || tagsMatch ) &&
+					( ( skipped && active ) || ( skipped && flow.skipped ) || ( active && ! flow.skipped ) )
+				);
 			} );
 
 			if ( filteredSuiteFlows.length > 0 ) {
@@ -64,9 +74,25 @@ export default class Flows extends BaseComponent {
 		this.setState( { isDataReady: true } );
 	}
 
-	getFilterButtons() {
+	handleSearchChange = event => {
+		this.setState( prevState => ( {
+			filters: {
+				...prevState.filters,
+				searchTerm: event.target.value,
+			},
+		} ) );
+	};
+
+	renderFiltersColum() {
 		return (
-			<div>
+			<div className={ 'filtersRow' }>
+				<FormControl
+					className={ 'search-input' }
+					type="text"
+					placeholder="search"
+					value={ this.state.searchTerm }
+					onChange={ this.handleSearchChange }
+				/>
 				<Button
 					variant="dark"
 					className="filter-btn"
@@ -111,11 +137,13 @@ export default class Flows extends BaseComponent {
 		);
 	}
 
-	renderTags(tags) {
+	renderTags( tags ) {
 		tags = tags || [];
-		return tags.map((tag, index) => (
-			<span key={index} className={`label label-status-neutral`}>{tag}</span>
-		));
+		return tags.map( ( tag, index ) => (
+			<span key={ index } className={ `label label-status-neutral` }>
+				{ tag }
+			</span>
+		) );
 	}
 
 	render() {
@@ -136,10 +164,7 @@ export default class Flows extends BaseComponent {
 							{ moment( this.data.lastUpdate ).fromNow() }
 						</span>
 					</div>
-					<div className="col filters right-align">{ this.getFilterButtons() }</div>
-				</div>
-				<div className="row">
-					<div className="col"></div>
+					<div className="col filters right-align">{ this.renderFiltersColum() }</div>
 				</div>
 				<ul className={ 'suitesList' }>
 					{ Object.keys( this.data.flows ).map( ( suite, suiteIndex ) => (
@@ -147,24 +172,25 @@ export default class Flows extends BaseComponent {
 							<span className={ 'suiteTitle' }>{ suite }</span>
 							<ul className={ 'flowsList' }>
 								{ this.data.flows[ suite ].map( ( flow, flowIndex ) => (
-									<li className={flow.skipped ? 'skipped-flow' : ''} key={flowIndex}>
+									<li className={ flow.skipped ? 'skipped-flow' : '' } key={ flowIndex }>
 										<a
-											className={'flowLink'}
-											href={fileUrl + flow.file + '#L' + flow.line}
-											target={'_blank'}
-											rel={'noreferrer'}
+											className={ 'flowLink' }
+											href={ fileUrl + flow.file + '#L' + flow.line }
+											target={ '_blank' }
+											rel={ 'noreferrer' }
 										>
-											{flow.skipped ? skippedPill : ''} {flow.title}
-										</a> { this.renderTags( flow.tags ) }
-										<br/>
-										<small className={'flowMetaData'}>
-											{flow.file}:{flow.line}
+											{ flow.skipped ? skippedPill : '' } { flow.title }
+										</a>{ ' ' }
+										{ this.renderTags( flow.tags ) }
+										<br />
+										<small className={ 'flowMetaData' }>
+											{ flow.file }:{ flow.line }
 										</small>
 									</li>
-								))}
+								) ) }
 							</ul>
 						</li>
-					))}
+					) ) }
 				</ul>
 			</div>
 		);
