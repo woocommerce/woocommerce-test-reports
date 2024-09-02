@@ -190,12 +190,11 @@ export default class Flows extends BaseComponent {
 				</div>
 				<ul className={ 'suitesList' }>
 					{ Object.keys( this.data.flows ).map( ( suite, suiteIndex ) => (
-						<li
-							key={ suiteIndex }
-							className={ 'groupTitle suiteElement' }
-							onClick={ () => this.toggleVisibility( suiteIndex ) }
-						>
-							<div className={ 'suiteTitleContainer' }>
+						<li key={ suiteIndex } className={ 'groupTitle suiteElement' }>
+							<div
+								className={ 'suiteTitleContainer' }
+								onClick={ () => this.toggleVisibility( suiteIndex ) }
+							>
 								<span className={ 'suiteTitle' }>{ suite }</span>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
