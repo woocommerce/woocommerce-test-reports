@@ -83,7 +83,7 @@ export default class Flows extends BaseComponent {
 		} ) );
 	};
 
-	renderFiltersColum() {
+	renderFiltersColumn() {
 		return (
 			<div className={ 'filtersRow' }>
 				<div className="search-input-container">
@@ -186,7 +186,7 @@ export default class Flows extends BaseComponent {
 							{ moment( this.data.lastUpdate ).fromNow() }
 						</span>
 					</div>
-					<div className="col filters right-align">{ this.renderFiltersColum() }</div>
+					<div className="col filters right-align">{ this.renderFiltersColumn() }</div>
 				</div>
 				<ul className={ 'suitesList' }>
 					{ Object.keys( this.data.flows ).map( ( suite, suiteIndex ) => (
