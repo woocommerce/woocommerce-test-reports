@@ -8,6 +8,7 @@ import logo from './assets/logo.png';
 import Summary from './components/Summary';
 import Reports from './components/Reports';
 import Flows from './components/Flows';
+import Errors from './components/Errors';
 
 function App() {
 	const basename = '/woocommerce-test-reports';
@@ -47,6 +48,7 @@ function App() {
 										)
 								) }
 								<Nav.Link href={ `${ basename }/#/flows` }>Flows</Nav.Link>
+								<Nav.Link href={ `${ basename }/#/errors` }>Errors</Nav.Link>
 							</Nav>
 						</Navbar.Collapse>
 					</Container>
@@ -63,6 +65,7 @@ function App() {
 							/>
 						) ) }
 						<Route exact path="/flows" element={ <Flows /> } />
+						<Route exact path="/errors" element={ <Errors /> } />
 					</Routes>
 				</HashRouter>
 			</div>

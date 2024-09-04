@@ -53,9 +53,9 @@ if ( ! localReportPath ) {
 			data.errors.push( error );
 		}
 
-		// Only keep the last 1000 errors
-		if ( data.errors.length > 1000 ) {
-			data.errors = data.errors.slice( -1000 );
+		// Only keep the last 500 errors
+		if ( data.errors.length > 500 ) {
+			data.errors = data.errors.slice( -500 );
 		}
 	}
 
