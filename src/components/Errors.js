@@ -9,7 +9,7 @@ export default class Errors extends BaseComponent {
 	rawData = {};
 	data = {};
 	state = {
-		filters: { searchTerm: '' },
+		filters: { searchTerm: 'Timeout 20000ms exceeded' },
 		isDataReady: false,
 	};
 
@@ -82,10 +82,10 @@ export default class Errors extends BaseComponent {
 						></path>
 					</svg>
 					<FormControl
-						className={ 'search-input' }
+						className={ 'search-input search-errors' }
 						type="text"
-						value={ this.state.searchTerm }
 						onChange={ this.handleSearchChange }
+						value={ this.state.filters.searchTerm }
 					/>
 				</div>
 			</div>
