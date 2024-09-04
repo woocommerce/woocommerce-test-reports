@@ -118,21 +118,25 @@ export default class Errors extends BaseComponent {
 				</div>
 				<ul className={ 'flowsList errorsList' }>
 					{ this.data.errors.map( ( error, errorIndex ) => (
-						<li key={errorIndex}>
+						<li key={ errorIndex }>
 							<a
-								className={'flowLink'}
-								href={this.getReportUrl(error)}
-								target={'_blank'}
-								rel={'noreferrer'}
+								className={ 'flowLink' }
+								href={ this.getReportUrl( error ) }
+								target={ '_blank' }
+								rel={ 'noreferrer' }
 							>
-								{error.test}
-							</a>{' '}
-							<br/>
-							<small className={'flowMetaData'}>{error.source}</small>
-							<br/>
-							<small className={'flowMetaData'}>{error.path}</small>
-							<br/>
-							<div className={'trace'}>{ error.trace }</div>
+								{ error.test }
+							</a>{ ' ' }
+							<br />
+							<small className={ 'flowMetaData' }>{ error.source }</small>
+							<br />
+							<small className={ 'flowMetaData' }>{ error.path }</small>
+							<br />
+							<div className={ 'trace' }>
+								{ error.trace.length > 1000
+									? `${ error.trace.substring( 0, 1000 ) }...`
+									: error.trace }
+							</div>
 						</li>
 					) ) }
 				</ul>
