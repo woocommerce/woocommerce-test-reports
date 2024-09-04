@@ -14,6 +14,7 @@ const { Octokit } = require( '@octokit/rest' );
 const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
 const config = require( '../src/config.json' );
 const moment = require( 'moment' );
+const {join} = require("node:path");
 const octokit = new Octokit( {
 	auth: process.env.GITHUB_TOKEN,
 } );
@@ -236,6 +237,30 @@ const dryRun = process.env.DRY_RUN;
 		if ( ! dryRun ) {
 			await removeS3Folder( dir );
 		}
+	}
+
+	console.groupEnd();
+	// endregion
+
+	// region Remove any errors referencing the recently removed reports
+	console.group( '\n', 'Removing orphan errors' );
+	const errorsFileKey = 'data/errors.json';
+	const errorsData = ( await getJSONFromS3( errorsFileKey ) ) || { errors: [] };
+
+	const newDirsToRemove = [ 'pull_request/51072/core-e2e-report' ];
+	for ( const dir of newDirsToRemove ) {
+		errorsData.errors = errorsData.errors.filter( error => error.path !== dir );
+	}
+
+	// Upload the report to S3
+	const s3cmd = new PutObjectCommand( {
+		Bucket: s3Params.Bucket,
+		Key: errorsFileKey,
+		Body: JSON.stringify( errorsData ),
+		ContentType: 'application/json',
+	} );
+	if ( ! dryRun ) {
+		await s3client.send( s3cmd );
 	}
 
 	console.groupEnd();
