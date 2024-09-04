@@ -128,8 +128,6 @@ export default class Errors extends BaseComponent {
 								{ error.test }
 							</a>{ ' ' }
 							<br />
-							<small className={ 'flowMetaData' }>{ error.source }</small>
-							<br />
 							<small className={ 'flowMetaData' }>{ error.path }</small>
 							<br />
 							<div className={ 'trace' }>
