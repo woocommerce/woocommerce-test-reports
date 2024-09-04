@@ -9,7 +9,7 @@ export default class Errors extends BaseComponent {
 	rawData = {};
 	data = {};
 	state = {
-		filters: { searchTerm: 'Timeout 20000ms exceeded' },
+		filters: { searchTerm: 'timeout' },
 		isDataReady: false,
 	};
 
