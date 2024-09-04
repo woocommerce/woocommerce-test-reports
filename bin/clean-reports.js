@@ -14,7 +14,6 @@ const { Octokit } = require( '@octokit/rest' );
 const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
 const config = require( '../src/config.json' );
 const moment = require( 'moment' );
-const {join} = require("node:path");
 const octokit = new Octokit( {
 	auth: process.env.GITHUB_TOKEN,
 } );
@@ -118,8 +117,7 @@ const dryRun = process.env.DRY_RUN;
 		if ( pull?.data?.state === 'closed' ) {
 			console.log( `PR ${ rg.pr_number } is closed, deleting reports in group ${ group }` );
 			delete prGroups[ group ];
-		} else {
-			if ( isOld( rg.lastUpdate, daysToKeepReports.pull_request, 'days' ) ) {
+		} else if ( isOld( rg.lastUpdate, daysToKeepReports.pull_request, 'days' ) ) {
 				console.log(
 					`PR ${ rg.pr_number } is still open but older than ${ daysToKeepReports.pull_request } days. Deleting reports in group ${ group }`
 				);
@@ -127,7 +125,6 @@ const dryRun = process.env.DRY_RUN;
 			} else {
 				console.log( `PR ${ rg.pr_number } is still open and not old enough. Keeping it.` );
 			}
-		}
 	}
 
 	logRemovedGroupsCount( initialCount, Object.keys( prGroups ).length );
@@ -137,6 +134,7 @@ const dryRun = process.env.DRY_RUN;
 	// region clean other events
 	for ( const event of [ 'push', 'daily-checks', 'release-checks' ] ) {
 		const eventGroups = reportsData[ event ] || {};
+		// eslint-disable-next-line no-shadow
 		const initialCount = Object.keys( eventGroups ).length;
 		console.log();
 		console.group( '\n', `Checking ${ initialCount } reports groups for ${ event } event` );
