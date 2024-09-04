@@ -37,22 +37,7 @@ function cleanTrace( trace ) {
 		.filter( line => ! line.includes( 'runMicrotasks' ) )
 		.join( '\n' )
 		.replace( /\n+/g, '\n' )
-		.replace( /at .+/gs, trace.match( /at .+/ ) ) // keep only the first "at" line
-		.replace( /https:\/\/.+.a8c-localtunnel.cyou/g, 'SITE-URL' )
-		.replace(
-			/waiting for selector "\.wp-block-jetpack-.+ \.components-sandbox" to be visible/g,
-			'waiting for selector ".wp-block-jetpack-BLOCK .components-sandbox" to be visible'
-		)
-		.replace(
-			/waiting for selector "#block-.* a\[href\*=\'calypso-marketing-connections\'\]" to be visible/g,
-			'waiting for selector "#block-... a[href*=\'calypso-marketing-connections\']" to be visible'
-		)
-		.replace( /partner_id=\S+/g, 'partner_id=***' )
-		.replace( /partner_secret=\S+/g, 'partner_secret=***' )
-		.replace(
-			/ms exceeded\.\n.*at SearchHomepage.waitForLoadState/gs,
-			'ms exceeded.\n    at SearchHomepage.waitForLoadState'
-		); // remove multiple possible events that can happen before timeout
+		.replace( /at .+/gs, trace.match( /at .+/ ) ); // keep only the first "at" line
 }
 
 function cleanError( message, trace ) {

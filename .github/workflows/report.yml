@@ -127,12 +127,16 @@ jobs:
 
       - name: Update dashboard data
         run: |
-          echo "::group::Update reports"
+          echo "::group::Update reports list"
           node ./bin/update-reports-list.js
           echo "::endgroup::"
           
-          echo "::group::Update runs"
+          echo "::group::Update runs list"
           node ./bin/update-runs-data.js
+          echo "::endgroup::"
+          
+          echo "::group::Update errors list"
+          node ./bin/update-errors-list.js
           echo "::endgroup::"
 
       - name: Update flows list
