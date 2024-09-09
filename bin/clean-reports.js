@@ -132,7 +132,7 @@ const dryRun = process.env.DRY_RUN;
 	// endregion
 
 	// region clean other events
-	for ( const event of [ 'push', 'daily-checks', 'release-checks' ] ) {
+	for ( const event of [ 'push', 'daily-checks', 'release-checks', 'other' ] ) {
 		const eventGroups = reportsData[ event ] || {};
 		// eslint-disable-next-line no-shadow
 		const initialCount = Object.keys( eventGroups ).length;
@@ -200,7 +200,7 @@ const dryRun = process.env.DRY_RUN;
 	let eventDirs = await listS3Folders( 'reports/', '/' );
 	eventDirs = eventDirs.map( report => report.replace( 'reports/', '' ).replace( '/', '' ) );
 	const reports = await getJSONFromS3( reportsFileKey );
-	const expectedDirs = [ 'push', 'pull_request', 'daily-checks', 'release-checks' ];
+	const expectedDirs = [ 'push', 'pull_request', 'daily-checks', 'release-checks', 'other' ];
 	const dirsToRemove = [];
 
 	for ( const eventDir of eventDirs ) {
