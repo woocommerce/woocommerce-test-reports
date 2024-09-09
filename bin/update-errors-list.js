@@ -4,7 +4,7 @@
  * It will read data from files in $reportID/report/data/test-cases
  */
 
-const { readJson, cleanError, getJSONFromS3 } = require( './utils' );
+const { readJson, cleanError, getJSONFromS3, acquireLockWithRetry, releaseLock} = require( './utils' );
 const path = require( 'path' );
 const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
 const { s3Params, s3client } = require( './s3-client' );
@@ -18,6 +18,7 @@ if ( ! localReportPath ) {
 
 ( async () => {
 	// Get the existing errors list
+	await acquireLockWithRetry( fileKey, true );
 	const data = ( await getJSONFromS3( fileKey ) ) || { errors: [] };
 
 	// Get the list of failures from  report/widgets/status-chart.json
@@ -73,4 +74,5 @@ if ( ! localReportPath ) {
 		ContentType: 'application/json',
 	} );
 	await s3client.send( cmd );
+	await releaseLock( fileKey );
 } )();
