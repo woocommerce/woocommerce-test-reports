@@ -44,10 +44,7 @@ export default class Errors extends BaseComponent {
 		const { searchTerm } = this.state.filters;
 
 		this.data.errors = this.rawData.errors.filter( e => {
-			return (
-				minimatch( e.message, `*${ searchTerm }*`, { debug: true } ) ||
-				minimatch( e.trace, `*${ searchTerm }*`, { debug: true } )
-			);
+			return minimatch( e.trace, `*${ searchTerm }*`, { debug: true } );
 		} );
 
 		this.data.count = this.data.errors.length;
