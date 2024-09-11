@@ -118,13 +118,13 @@ const dryRun = process.env.DRY_RUN;
 			console.log( `PR ${ rg.pr_number } is closed, deleting reports in group ${ group }` );
 			delete prGroups[ group ];
 		} else if ( isOld( rg.lastUpdate, daysToKeepReports.pull_request, 'days' ) ) {
-				console.log(
-					`PR ${ rg.pr_number } is still open but older than ${ daysToKeepReports.pull_request } days. Deleting reports in group ${ group }`
-				);
-				delete prGroups[ group ];
-			} else {
-				console.log( `PR ${ rg.pr_number } is still open and not old enough. Keeping it.` );
-			}
+			console.log(
+				`PR ${ rg.pr_number } is still open but older than ${ daysToKeepReports.pull_request } days. Deleting reports in group ${ group }`
+			);
+			delete prGroups[ group ];
+		} else {
+			console.log( `PR ${ rg.pr_number } is still open and not old enough. Keeping it.` );
+		}
 	}
 
 	logRemovedGroupsCount( initialCount, Object.keys( prGroups ).length );
@@ -219,7 +219,11 @@ const dryRun = process.env.DRY_RUN;
 
 		for ( const groupDir of groupDirs ) {
 			console.log( `Checking ${ eventDir }/${ groupDir }` );
-			if ( ! groupsListed[ groupDir ] ) {
+			if (
+				! Object.keys( groupsListed )
+					.map( key => key.toLowerCase() )
+					.includes( groupDir.toLowerCase() )
+			) {
 				console.log( `${ eventDir }.${ groupDir } not found in reports list. Will be removed.` );
 				dirsToRemove.push( `reports/${ eventDir }/${ groupDir }` );
 			} else {

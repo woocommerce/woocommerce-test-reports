@@ -4,7 +4,7 @@ import { getDataSourceUrl } from '../config';
 import config from '../config.json';
 import { FormControl } from 'react-bootstrap';
 import moment from 'moment';
-import { minimatch } from 'minimatch'
+import { minimatch } from 'minimatch';
 
 export default class Errors extends BaseComponent {
 	rawData = {};
@@ -45,8 +45,8 @@ export default class Errors extends BaseComponent {
 
 		this.data.errors = this.rawData.errors.filter( e => {
 			return (
-				minimatch( e.message, `*${searchTerm}*`, { debug: true } ) ||
-				minimatch( e.trace, `*${searchTerm}*`, { debug: true } )
+				minimatch( e.message, `*${ searchTerm }*`, { debug: true } ) ||
+				minimatch( e.trace, `*${ searchTerm }*`, { debug: true } )
 			);
 		} );
 

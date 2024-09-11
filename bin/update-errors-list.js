@@ -4,7 +4,13 @@
  * It will read data from files in $reportID/report/data/test-cases
  */
 
-const { readJson, cleanError, getJSONFromS3, acquireLockWithRetry, releaseLock} = require( './utils' );
+const {
+	readJson,
+	cleanError,
+	getJSONFromS3,
+	acquireLockWithRetry,
+	releaseLock,
+} = require( './utils' );
 const path = require( 'path' );
 const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
 const { s3Params, s3client } = require( './s3-client' );
