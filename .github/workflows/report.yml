@@ -117,10 +117,8 @@ jobs:
           # Check artifacts
           ls -la downloads
 
-      - name: Install Allure
-        env:
-          DESTINATION_PATH: ../
-        run: ./bin/install-allure.sh
+      - name: Install Allure commandline
+        run: npm install -g allure-commandline@2.30.0
 
       - name: Generate test report
         env:
