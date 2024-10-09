@@ -118,7 +118,7 @@ jobs:
           ls -la downloads
 
       - name: Install Allure commandline
-        run: npm install -g allure-commandline@^3.0.4
+        run: npm install -g allure-commandline@2.30.0
 
       - name: Generate test report
         env:
