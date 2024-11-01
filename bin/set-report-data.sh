@@ -55,6 +55,10 @@ elif [[ "$EVENT_NAME" == "release-checks" ]] || [[ "$EVENT_NAME" == "release" ]]
         REPORT_GROUP="$REF_NAME"
         REPORT_TITLE="Release checks $REF_NAME"
     fi
+elif [[ "$EVENT_NAME" == "pre-release" ]]; then
+    EVENT_NAME="release-checks"
+    REPORT_GROUP="$REF_NAME"
+    REPORT_TITLE="Pre-release checks $REF_NAME"
 elif [[ "$EVENT_NAME" == "push" ]] ; then
     REPORT_GROUP="$REF_NAME-$COMMIT_SHA"
     REPORT_GROUP=$(echo "$REPORT_GROUP" | tr ' /. ' '_')
