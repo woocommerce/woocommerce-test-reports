@@ -47,11 +47,11 @@ export default class Errors extends BaseComponent {
 		try {
 			regex = new RegExp( searchTerm, 'i' );
 			this.data.errors = this.rawData.errors.filter( e => {
-				return regex.test( e.trace );
+				return regex.test( e.trace ) || regex.test( e.test ) || regex.test( e.path );
 			} );
 		} catch ( e ) {
 			console.error( `Invalid regex pattern: ${ searchTerm }`, e );
-			this.setState( { errorMessage: 'Invalid regex pattern'} );
+			this.setState( { errorMessage: 'Invalid regex pattern' } );
 			this.data.errors = [];
 		}
 
@@ -115,36 +115,36 @@ export default class Errors extends BaseComponent {
 			<div>
 				<div className="row headerRow">
 					<div className="col">
-						<span>{this.data.count} results</span>
-						<br/>
-						<span className={'caption'}>
-							updated {moment(this.data.lastUpdate).fromNow()}
+						<span>{ this.data.count } results</span>
+						<br />
+						<span className={ 'caption' }>
+							updated { moment( this.data.lastUpdate ).fromNow() }
 						</span>
 					</div>
-					<div className="col filters right-align">{this.renderFiltersColumn()}</div>
+					<div className="col filters right-align">{ this.renderFiltersColumn() }</div>
 				</div>
-				<p className={'error'}>{this.state.errorMessage}</p>
-				<ul className={'flowsList errorsList'}>
-					{this.data.errors.map((error, errorIndex) => (
-						<li key={errorIndex}>
+				<p className={ 'error' }>{ this.state.errorMessage }</p>
+				<ul className={ 'flowsList errorsList' }>
+					{ this.data.errors.map( ( error, errorIndex ) => (
+						<li key={ errorIndex }>
 							<a
-								className={'flowLink'}
-								href={this.getReportUrl(error)}
-								target={'_blank'}
-								rel={'noreferrer'}
+								className={ 'flowLink' }
+								href={ this.getReportUrl( error ) }
+								target={ '_blank' }
+								rel={ 'noreferrer' }
 							>
-								{error.test}
-							</a>{' '}
-							<br/>
-							<small className={'flowMetaData'}>{error.path}</small>
-							<br/>
-							<div className={'trace'}>
-								{error.trace.length > 1000
-									? `${error.trace.substring(0, 1000)}...`
-									: error.trace}
+								{ error.test }
+							</a>{ ' ' }
+							<br />
+							<small className={ 'flowMetaData' }>{ error.path }</small>
+							<br />
+							<div className={ 'trace' }>
+								{ error.trace.length > 1000
+									? `${ error.trace.substring( 0, 1000 ) }...`
+									: error.trace }
 							</div>
 						</li>
-					))}
+					) ) }
 				</ul>
 			</div>
 		);
