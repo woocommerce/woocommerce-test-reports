@@ -59,9 +59,9 @@ const jsonFilePath = `data/${ reportFileName }.json`;
 /**
  * Get suites data from the json reports.
  * It parses multiple json files and returns the merges their content in a single array.
- * @param jsonReportsPath Path to the json reports folder
- * @param fileNamePattern Regex pattern to match the json files
- * @returns {*[]} Combined suites data
+ * @param {string} jsonReportsPath Path to the json reports folder
+ * @param {string} fileNamePattern Regex pattern to match the json files
+ * @return {*[]} Combined suites data
  */
 function getSuitesData( jsonReportsPath, fileNamePattern ) {
 	const suites = [];
@@ -81,10 +81,10 @@ function getSuitesData( jsonReportsPath, fileNamePattern ) {
 /**
  * Get unique nested test titles from the suites data.
  * The format of a test title is: "Suite title > Sub-suite title > Test title"
- * @param suites Suites data
- * @param depth Current depth level
- * @param parentTitle Parent suite title
- * @returns {*[]} Unique test titles
+ * @param {*[]}    suites      Suites data
+ * @param {number} depth       Current depth level
+ * @param {string} parentTitle Parent suite title
+ * @return {*[]} Unique test titles
  */
 function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
 	if ( depth > 100 ) return [];

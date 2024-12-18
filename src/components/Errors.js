@@ -4,14 +4,14 @@ import { getDataSourceUrl } from '../config';
 import config from '../config.json';
 import { FormControl } from 'react-bootstrap';
 import moment from 'moment';
-import { minimatch } from 'minimatch';
 
 export default class Errors extends BaseComponent {
 	rawData = {};
 	data = {};
 	state = {
-		filters: { searchTerm: 'Timed out *ms' },
+		filters: { searchTerm: 'Timed out \\d+ms' },
 		isDataReady: false,
+		errorMessage: '',
 	};
 
 	async componentDidMount() {
@@ -42,10 +42,18 @@ export default class Errors extends BaseComponent {
 
 	filterAndSortData() {
 		const { searchTerm } = this.state.filters;
+		let regex;
 
-		this.data.errors = this.rawData.errors.filter( e => {
-			return minimatch( e.trace, `*${ searchTerm }*`, { debug: true } );
-		} );
+		try {
+			regex = new RegExp( searchTerm, 'i' );
+			this.data.errors = this.rawData.errors.filter( e => {
+				return regex.test( e.trace );
+			} );
+		} catch ( e ) {
+			console.error( `Invalid regex pattern: ${ searchTerm }`, e );
+			this.setState( { errorMessage: 'Invalid regex pattern'} );
+			this.data.errors = [];
+		}
 
 		this.data.count = this.data.errors.length;
 		this.data.lastUpdate = this.rawData.lastUpdate;
@@ -58,6 +66,7 @@ export default class Errors extends BaseComponent {
 				...prevState.filters,
 				searchTerm: event.target.value,
 			},
+			errorMessage: '',
 		} ) );
 	};
 
@@ -106,35 +115,36 @@ export default class Errors extends BaseComponent {
 			<div>
 				<div className="row headerRow">
 					<div className="col">
-						<span>{ this.data.count } results</span>
-						<br />
-						<span className={ 'caption' }>
-							updated { moment( this.data.lastUpdate ).fromNow() }
+						<span>{this.data.count} results</span>
+						<br/>
+						<span className={'caption'}>
+							updated {moment(this.data.lastUpdate).fromNow()}
 						</span>
 					</div>
-					<div className="col filters right-align">{ this.renderFiltersColumn() }</div>
+					<div className="col filters right-align">{this.renderFiltersColumn()}</div>
 				</div>
-				<ul className={ 'flowsList errorsList' }>
-					{ this.data.errors.map( ( error, errorIndex ) => (
-						<li key={ errorIndex }>
+				<p className={'error'}>{this.state.errorMessage}</p>
+				<ul className={'flowsList errorsList'}>
+					{this.data.errors.map((error, errorIndex) => (
+						<li key={errorIndex}>
 							<a
-								className={ 'flowLink' }
-								href={ this.getReportUrl( error ) }
-								target={ '_blank' }
-								rel={ 'noreferrer' }
+								className={'flowLink'}
+								href={this.getReportUrl(error)}
+								target={'_blank'}
+								rel={'noreferrer'}
 							>
-								{ error.test }
-							</a>{ ' ' }
-							<br />
-							<small className={ 'flowMetaData' }>{ error.path }</small>
-							<br />
-							<div className={ 'trace' }>
-								{ error.trace.length > 1000
-									? `${ error.trace.substring( 0, 1000 ) }...`
-									: error.trace }
+								{error.test}
+							</a>{' '}
+							<br/>
+							<small className={'flowMetaData'}>{error.path}</small>
+							<br/>
+							<div className={'trace'}>
+								{error.trace.length > 1000
+									? `${error.trace.substring(0, 1000)}...`
+									: error.trace}
 							</div>
 						</li>
-					) ) }
+					))}
 				</ul>
 			</div>
 		);
