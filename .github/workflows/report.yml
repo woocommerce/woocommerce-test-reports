@@ -98,7 +98,7 @@ jobs:
         run: ./bin/wait-for-artifacts.sh
 
       - name: Download artifacts
-        uses: dawidd6/action-download-artifact@v5
+        uses: dawidd6/action-download-artifact@v6
         with:
           repo: ${{ env.REPOSITORY }}
           run_id: ${{ env.RUN_ID }}
