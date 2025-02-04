@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import logo from './assets/logo.png';
+import logo from './assets/logo-white.svg';
 import Summary from './components/Summary';
 import Reports from './components/Reports';
 import Flows from './components/Flows';
@@ -31,9 +31,8 @@ function App() {
 			<div className="App-content">
 				<Navbar variant="dark" expand="md" className="app-nav-bar">
 					<Container fluid className="app-nav-bar-inner-container">
-						<Navbar.Brand href={ `${ basename }/#/` }>
-							<img alt="logo" src={ logo } height="60" className="d-inline-block align-top" /> test
-							reports
+						<Navbar.Brand href={ `${ basename }/#/`}>
+							<img alt="logo" src={ logo } className="d-inline-block logo" /> <br/> test reports
 						</Navbar.Brand>
 						<Navbar.Toggle aria-controls="basic-navbar-nav" />
 						<Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
