@@ -74,10 +74,12 @@
 
 .label-status-passed {
     background-color: var(--color-passed);
+    color: var(--default-font-color);
 }
 
 .label-status-failed {
     background: var(--color-failed);
+    color: var(--default-font-color);
 }
 
 .label-status-broken {
@@ -87,14 +89,17 @@
 
 .label-status-skipped {
     background: var(--color-skipped);
+    color: var(--accent-color);
 }
 
 .label-status-unknown {
     background: #d35ebe;
+    color: var(--default-font-color);
 }
 
 .label-status-total {
     background: var(--color-total);
+    color: var(--default-font-color);
 }
 
 .label-status-neutral {
@@ -105,12 +110,12 @@
 .label {
     display: inline-block;
     letter-spacing: 1px;
-    color: var(--default-font-color);
+    /*color: var(--default-font-color);*/
     padding: 3px 6px 3px 6px;
     border-radius: 3px;
     margin: 3px;
     font-size: 0.7rem;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 .pill {
@@ -162,7 +167,7 @@ a {
 
 .report-link {
     color: var(--default-font-color);
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .report-link:hover {
