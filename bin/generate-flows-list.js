@@ -100,8 +100,8 @@ function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
 
 		// Add specs titles
 		suite.specs.forEach( spec => {
-			if(spec.file.includes('fixtures')) {
-				console.log(`Skipping fixture: ${spec.file}`);
+			if ( spec.file.includes( 'fixtures' ) ) {
+				console.log( `Skipping fixture: ${ spec.file }` );
 				return;
 			}
 
@@ -140,8 +140,8 @@ function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
  * Example:
  * [ "Suite 1 > Test 1.1", "Suite 1 > Test 1.2", "Suite 2 > Test 2.1" ] will return:
  * {"Suite 1": ["Test 1.1", "Test 1.2"], "Suite 2": ["Test 2.1"] }
- * @param  flows list of unique test titles
- * @return {*} Grouped test titles by suite
+ * @param {Array} flows list of unique test titles
+ * @return {Object} Grouped test titles by suite
  */
 function groupFlowsBySuite( flows ) {
 	return flows.reduce( ( acc, flow ) => {
@@ -156,9 +156,9 @@ function groupFlowsBySuite( flows ) {
 
 /**
  * Merge new flows with existing flows. If a flow in a suite already exists, it will not be added.
- * @param  newFlows
- * @param  existingFlows
- * @return {*}
+ * @param {Object} newFlows      - New flows to be merged.
+ * @param {Object} existingFlows - Existing flows to be merged with.
+ * @return {*} Merged flows.
  */
 function mergeFlows( newFlows, existingFlows ) {
 	const mergedFlows = { ...existingFlows };
