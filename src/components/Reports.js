@@ -185,16 +185,16 @@ class Reports extends React.Component {
 				</thead>
 				<tbody>
 					{ this.state.groups[ group ].reports.map( ( report, idx ) => {
-						return this.getReportRow( report, idx );
+						return this.getReportRow( report, idx, id !== 0 );
 					} ) }
 				</tbody>
 			</Table>
 		);
 	}
 
-	getReportRow( report, id ) {
+	getReportRow( report, id, collapsed = true ) {
 		return (
-			<tr key={ id } className={ 'collapsed' }>
+			<tr key={ id } className={ collapsed ? 'collapsed' : '' }>
 				<td className={ 'reportNameCell' }>{ this.getReportLinkCell( report ) }</td>
 				<td>
 					{ this.getTestResultsCell( report.results ) }{ ' ' }
