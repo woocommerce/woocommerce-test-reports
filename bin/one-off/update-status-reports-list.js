@@ -46,15 +46,17 @@ function determineReportsGroupStatus( reports ) {
 }
 
 async function updateReportData( json ) {
-	for (const event_name in json) {
+	for ( const event_name in json ) {
 		if ( event_name === 'lastUpdate' ) {
 			continue;
 		}
-		for (const group in json[ event_name ]) {
+		for ( const group in json[ event_name ] ) {
 			console.log( `Updating group ${ event_name }.${ group }` );
 			const reports = json[ event_name ][ group ].reports;
 			json[ event_name ][ group ].status = determineReportsGroupStatus( reports );
-			console.log( `Group ${ event_name }.${ group } status: ${ json[ event_name ][ group ].status }` );
+			console.log(
+				`Group ${ event_name }.${ group } status: ${ json[ event_name ][ group ].status }`
+			);
 		}
 	}
 
