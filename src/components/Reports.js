@@ -7,6 +7,7 @@ import prSVG from '../assets/pr.svg';
 import passedSVG from '../assets/passed.svg';
 import failedSVG from '../assets/failed.svg';
 import unknownSVG from '../assets/unknown.svg';
+import recoveredSVG from '../assets/recovered.svg';
 import { getDataSourceUrl } from '../config';
 import withRouter from './withRouter';
 
@@ -86,13 +87,14 @@ class Reports extends React.Component {
 
 	getGroupTable( group, id ) {
 		//       "lastUpdate": "2024-06-14T11:36:44.433Z",
-		const { pr_number, report_title, ref_name, repository, sha } = this.state.groups[ group ];
+		const { pr_number, report_title, ref_name, repository, sha, status } = this.state.groups[ group ];
 		const repo = repository ? repository : 'woocommerce/woocommerce';
 		const branchUrl = `https://github.com/${ repo }/tree/${ ref_name }`;
 		const prUrl = `https://github.com/${ repo }/pull/${ pr_number }`;
 		const shaUrl = `https://github.com/${ repo }/commit/${ sha }`;
 		const groupReportHref = `${ window.location.href }/${ group.replace( /^_|_$/g, '' ) }`;
 
+		const displayStatus = status ? status.toUpperCase() : '';
 		return (
 			<Table
 				key={ id }
@@ -106,8 +108,10 @@ class Reports extends React.Component {
 				<thead>
 					<tr>
 						<th colSpan={ 3 }>
+
 							<ul className={ 'list-unstyled' }>
 								<li className={ 'groupTitle' }>
+									{ this.getStatusIcon(displayStatus, 20, 20) } { ' ' }
 									<a
 										href={ this.props.params.groupKey ? window.location.href : groupReportHref }
 										className={ 'report-link' }
@@ -185,21 +189,16 @@ class Reports extends React.Component {
 
 	getReportLinkCell( report ) {
 		const { results, path, suite } = report;
-		const isFailed = results.total !== results.passed + results.skipped;
 		const linkUrl = `${ getDataSourceUrl() }/reports/${ path }/index.html`;
-		let statusIcon = <img src={ unknownSVG } alt={ 'status icon' } width={ 16 } height={ 16 } />;
+		let status = '';
 		if ( results.total > 0 ) {
-			statusIcon = isFailed ? (
-				<img src={ failedSVG } alt={ 'status icon' } width={ 16 } height={ 16 } />
-			) : (
-				<img src={ passedSVG } alt={ 'status icon' } width={ 16 } height={ 16 } />
-			);
+			status = results.total !== results.passed + results.skipped ? 'F' : 'P';
 		}
 
 		return (
 			<ul className={ 'list-unstyled' }>
 				<li>
-					{ statusIcon }
+					{ this.getStatusIcon( status, 16, 16) }
 					&nbsp;&nbsp;
 					<a href={ linkUrl } className="report-link" target="_blank" rel="noreferrer">
 						{ suite }
@@ -259,6 +258,25 @@ class Reports extends React.Component {
 				</li>
 			</ul>
 		);
+	}
+
+	getStatusIcon( status, height, width ) {
+		let svg;
+		switch (status) {
+			case 'F':
+				svg = failedSVG;
+				break;
+			case 'P':
+				svg = passedSVG;
+				break;
+			case 'R':
+				svg = recoveredSVG;
+				break;
+			default:
+				svg = unknownSVG;
+				break;
+		}
+		 return <img src={ svg } className={'status-icon'} alt={ 'status icon' } width={ width } height={ height } />
 	}
 
 	render() {
