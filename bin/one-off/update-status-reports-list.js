@@ -1,12 +1,10 @@
 /**
  * This script will update the json file containing the list of reports: data/reports.json
- * It will take the data of a recently generated report that exists on the disk, and push this data in the existing json file
- * It will read data from $reportID/report/widgets/summary.json, $reportID/metadata.json
  */
 
-const { acquireLockWithRetry, readS3Object, releaseLock } = require( './utils' );
+const { acquireLockWithRetry, readS3Object, releaseLock } = require( './../utils' );
 const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
-const { s3Params, s3client } = require( './s3-client' );
+const { s3Params, s3client } = require( './../s3-client' );
 
 const fileKey = 'data/reports.json';
 
