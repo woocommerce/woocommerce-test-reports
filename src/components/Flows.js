@@ -203,7 +203,7 @@ export default class Flows extends BaseComponent {
 									viewBox="0 0 24 24"
 									fill="none"
 									stroke="currentColor"
-									className={ 'collapse-indicator' }
+									className={ 'collapse-indicator collapsed' }
 									id={ `btn-${ suiteIndex }` }
 								>
 									<polyline points="6 9 12 15 18 9"></polyline>

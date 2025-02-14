@@ -175,7 +175,7 @@ class Reports extends React.Component {
 								viewBox="0 0 24 24"
 								fill="none"
 								stroke="currentColor"
-								className={ 'collapse-indicator' }
+								className={ id !== 0 ? 'collapse-indicator' : 'collapse-indicator collapsed' }
 								id={ `btn-${ id }` }
 							>
 								<polyline points="6 9 12 15 18 9"></polyline>
@@ -358,7 +358,7 @@ class Reports extends React.Component {
 			} );
 	}
 
-	toggleVisibility = groupIndex => {
+	toggleVisibility (groupIndex) {
 		const rows = document.querySelectorAll( `#group-${ groupIndex } tbody tr` );
 		for ( const row of rows ) {
 			row.classList.toggle( 'collapsed' );
