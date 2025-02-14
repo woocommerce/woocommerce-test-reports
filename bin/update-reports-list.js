@@ -37,6 +37,22 @@ if ( ! localReportPath ) {
 	await releaseLock( fileKey );
 } )();
 
+function determineReportsGroupStatus(reports) {
+	let status = 'P'; // Default status is 'P' (passed)
+
+	for (const report of reports) {
+		const history = report.history;
+		if (history.endsWith('F')) {
+			return 'F'; // If any report ends with 'F', set status to 'F' (failure)
+		}
+		if (history.includes('F')) {
+			status = 'R'; // If any report contains 'F' but ends with 'P', set status to 'R' (recovered)
+		}
+	}
+
+	return status;
+}
+
 async function updateReportData( reportPath, json ) {
 	// Get the metadata
 	const metadata = readJson( path.join( reportPath, 'metadata.json' ) );
@@ -60,6 +76,7 @@ async function updateReportData( reportPath, json ) {
 
 	json[ event_name ][ group ] = {
 		...json[ event_name ][ group ],
+		status: '',
 		lastUpdate: new Date().toISOString(),
 		pr_number: metadata.pr_number,
 		report_title: metadata.report_title,
@@ -106,6 +123,9 @@ async function updateReportData( reportPath, json ) {
 		// push new report
 		reports.push( report );
 	}
+
+	// Update the status of the reports group
+	json[ event_name ][ group ].status = determineReportsGroupStatus( reports );
 
 	json.lastUpdate = new Date().toISOString();
 	return json;
