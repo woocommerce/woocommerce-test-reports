@@ -85,14 +85,18 @@ class Reports extends React.Component {
 		return sortedGroups;
 	}
 
+	groupReportHref( group ) {
+		return `${ window.location.href }/${ group.replace( /^_|_$/g, '' ) }`;
+	}
+
 	getGroupTable( group, id ) {
 		//       "lastUpdate": "2024-06-14T11:36:44.433Z",
-		const { pr_number, report_title, ref_name, repository, sha, status } = this.state.groups[ group ];
+		const { pr_number, report_title, ref_name, repository, sha, status } =
+			this.state.groups[ group ];
 		const repo = repository ? repository : 'woocommerce/woocommerce';
 		const branchUrl = `https://github.com/${ repo }/tree/${ ref_name }`;
 		const prUrl = `https://github.com/${ repo }/pull/${ pr_number }`;
 		const shaUrl = `https://github.com/${ repo }/commit/${ sha }`;
-		const groupReportHref = `${ window.location.href }/${ group.replace( /^_|_$/g, '' ) }`;
 
 		const displayStatus = status ? status.toUpperCase() : '';
 		return (
@@ -108,12 +112,11 @@ class Reports extends React.Component {
 				<thead>
 					<tr>
 						<th colSpan={ 3 }>
-
 							<ul className={ 'list-unstyled' }>
 								<li className={ 'groupTitle' }>
-									{ this.getStatusIcon(displayStatus, 20, 20) } { ' ' }
+									{ this.getStatusIcon( displayStatus, 20, 20 ) }{ ' ' }
 									<a
-										href={ this.props.params.groupKey ? window.location.href : groupReportHref }
+										href={ this.props.params.groupKey ? window.location.href : this.groupReportHref( group ) }
 										className={ 'report-link' }
 										rel="noreferrer"
 									>
@@ -198,7 +201,7 @@ class Reports extends React.Component {
 		return (
 			<ul className={ 'list-unstyled' }>
 				<li>
-					{ this.getStatusIcon( status, 16, 16) }
+					{ this.getStatusIcon( status, 16, 16 ) }
 					&nbsp;&nbsp;
 					<a href={ linkUrl } className="report-link" target="_blank" rel="noreferrer">
 						{ suite }
@@ -262,7 +265,7 @@ class Reports extends React.Component {
 
 	getStatusIcon( status, height, width ) {
 		let svg;
-		switch (status) {
+		switch ( status ) {
 			case 'F':
 				svg = failedSVG;
 				break;
@@ -276,7 +279,49 @@ class Reports extends React.Component {
 				svg = unknownSVG;
 				break;
 		}
-		 return <img src={ svg } className={'status-icon'} alt={ 'status icon' } width={ width } height={ height } />
+		return (
+			<img
+				src={ svg }
+				className={ 'status-icon' }
+				alt={ 'status icon' }
+				width={ width }
+				height={ height }
+			/>
+		);
+	}
+
+	getGroupsHistory() {
+		const { groups } = this.state;
+		return Object.keys( groups )
+			.reverse()
+			.map( ( groupKey, idx ) => {
+				const status = groups[ groupKey ].status ? groups[ groupKey ].status.toUpperCase() : '';
+
+				let statusClass;
+				switch ( status ) {
+					case 'F':
+						statusClass = 'failed';
+						break;
+					case 'P':
+						statusClass = 'passed';
+						break;
+					case 'R':
+						statusClass = 'broken';
+						break;
+					default:
+						statusClass = 'neutral';
+						break;
+				}
+
+				return (
+					<span
+						key={idx}
+						className={`pill label-status-${statusClass}`}
+						onClick={() => window.open(this.props.params.groupKey ? window.location.href : this.groupReportHref(groupKey), '_blank')}
+						style={{ cursor: 'pointer' }}
+					/>
+				);
+			} );
 	}
 
 	render() {
@@ -299,6 +344,7 @@ class Reports extends React.Component {
 						reports
 					</small>
 				</p>
+				<p>{ this.getGroupsHistory() }</p>
 				<p className={ 'error' }>{ this.state.errorMessage }</p>
 				{ Object.keys( this.state.groups ).map( ( k, idx ) => {
 					return this.getGroupTable( k, idx );

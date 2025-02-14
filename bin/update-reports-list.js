@@ -37,15 +37,15 @@ if ( ! localReportPath ) {
 	await releaseLock( fileKey );
 } )();
 
-function determineReportsGroupStatus(reports) {
+function determineReportsGroupStatus( reports ) {
 	let status = 'P'; // Default status is 'P' (passed)
 
-	for (const report of reports) {
+	for ( const report of reports ) {
 		const history = report.history;
-		if (history.endsWith('F')) {
+		if ( history.endsWith( 'F' ) ) {
 			return 'F'; // If any report ends with 'F', set status to 'F' (failure)
 		}
-		if (history.includes('F')) {
+		if ( history.includes( 'F' ) ) {
 			status = 'R'; // If any report contains 'F' but ends with 'P', set status to 'R' (recovered)
 		}
 	}
