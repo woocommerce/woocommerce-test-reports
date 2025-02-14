@@ -110,7 +110,7 @@ class Reports extends React.Component {
 			>
 				<thead>
 					<tr>
-						<th colSpan={ 3 }>
+						<th colSpan={ 3 } onClick={ () => this.toggleVisibility( id ) }>
 							<ul className={ 'list-unstyled' } style={ { display: 'inline-block' } }>
 								<li className={ 'groupTitle' }>
 									{ this.getStatusIcon( displayStatus, 20, 20 ) }{ ' ' }
@@ -390,7 +390,7 @@ class Reports extends React.Component {
 				<p>{ this.getGroupsHistory() }</p>
 				<p className={ 'error' }>{ this.state.errorMessage }</p>
 				{ Object.keys( this.state.groups ).map( ( k, idx ) => (
-					<div key={ idx } id={ `group-${ idx }` } onClick={ () => this.toggleVisibility( idx ) }>
+					<div key={ idx } id={ `group-${ idx }` }>
 						{ this.getGroupTable( k, idx ) }
 					</div>
 				) ) }
