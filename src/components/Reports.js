@@ -116,7 +116,11 @@ class Reports extends React.Component {
 								<li className={ 'groupTitle' }>
 									{ this.getStatusIcon( displayStatus, 20, 20 ) }{ ' ' }
 									<a
-										href={ this.props.params.groupKey ? window.location.href : this.groupReportHref( group ) }
+										href={
+											this.props.params.groupKey
+												? window.location.href
+												: this.groupReportHref( group )
+										}
 										className={ 'report-link' }
 										rel="noreferrer"
 									>
@@ -315,10 +319,29 @@ class Reports extends React.Component {
 
 				return (
 					<span
-						key={idx}
-						className={`pill label-status-${statusClass}`}
-						onClick={() => window.open(this.props.params.groupKey ? window.location.href : this.groupReportHref(groupKey), '_blank')}
-						style={{ cursor: 'pointer' }}
+						key={ idx }
+						role="button"
+						tabIndex={0}
+						className={ `pill label-status-${ statusClass }` }
+						onClick={ () =>
+							window.open(
+								this.props.params.groupKey
+									? window.location.href
+									: this.groupReportHref( groupKey ),
+								'_blank'
+							)
+						}
+						onKeyDown={(e) => {
+							if (e.key === 'Enter' || e.key === ' ') {
+								window.open(
+									this.props.params.groupKey
+										? window.location.href
+										: this.groupReportHref(groupKey),
+									'_blank'
+								);
+							}
+						}}
+						style={ { cursor: 'pointer' } }
 					/>
 				);
 			} );
