@@ -102,7 +102,6 @@ class Reports extends React.Component {
 		return (
 			<Table
 				key={ id }
-				id={ id }
 				responsive="sm"
 				variant="dark"
 				borderless
@@ -112,7 +111,7 @@ class Reports extends React.Component {
 				<thead>
 					<tr>
 						<th colSpan={ 3 }>
-							<ul className={ 'list-unstyled' }>
+							<ul className={ 'list-unstyled' } style={{ display: 'inline-block' }}>
 								<li className={ 'groupTitle' }>
 									{ this.getStatusIcon( displayStatus, 20, 20 ) }{ ' ' }
 									<a
@@ -169,6 +168,18 @@ class Reports extends React.Component {
 									</small>
 								</li>
 							</ul>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="48"
+								height="32"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								className={ 'collapse-indicator' }
+								id={ `btn-${ id }` }
+							>
+								<polyline points="6 9 12 15 18 9"></polyline>
+							</svg>
 						</th>
 					</tr>
 				</thead>
@@ -183,7 +194,7 @@ class Reports extends React.Component {
 
 	getReportRow( report, id ) {
 		return (
-			<tr key={ id }>
+			<tr key={ id } className={ 'collapsed' }>
 				<td className={ 'reportNameCell' }>{ this.getReportLinkCell( report ) }</td>
 				<td>
 					{ this.getTestResultsCell( report.results ) }{ ' ' }
@@ -347,6 +358,15 @@ class Reports extends React.Component {
 			} );
 	}
 
+	toggleVisibility = groupIndex => {
+		const rows = document.querySelectorAll( `#group-${ groupIndex } tbody tr` );
+		for (const row of rows) {
+			row.classList.toggle( 'collapsed' );
+		}
+		const collapseBtnElement = document.getElementById( `btn-${ groupIndex }` );
+		collapseBtnElement.classList.toggle( 'collapsed' );
+	};
+
 	render() {
 		if ( ! this.state.isDataFetched ) {
 			return null;
@@ -369,9 +389,11 @@ class Reports extends React.Component {
 				</p>
 				<p>{ this.getGroupsHistory() }</p>
 				<p className={ 'error' }>{ this.state.errorMessage }</p>
-				{ Object.keys( this.state.groups ).map( ( k, idx ) => {
-					return this.getGroupTable( k, idx );
-				} ) }
+				{ Object.keys( this.state.groups ).map( ( k, idx ) => (
+					<div key={ idx } id={ `group-${ idx }` } onClick={ () => this.toggleVisibility( idx ) }>
+						{ this.getGroupTable( k, idx ) }
+					</div>
+				) ) }
 			</div>
 		);
 	}

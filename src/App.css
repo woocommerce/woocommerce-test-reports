@@ -444,6 +444,8 @@ hr {
 }
 
 .collapse-indicator {
+    display: inline-block;
+    vertical-align: top;
     margin-right: 10px;
     transition: transform 0.3s ease;
     color: var(--default-font-color);
@@ -456,6 +458,11 @@ hr {
 .flowsList.collapsed {
     max-height: 0;
     overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+tr.collapsed {
+    display: none;
     transition: max-height 0.3s ease;
 }
 
