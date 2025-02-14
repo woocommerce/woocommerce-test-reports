@@ -111,7 +111,7 @@ class Reports extends React.Component {
 				<thead>
 					<tr>
 						<th colSpan={ 3 }>
-							<ul className={ 'list-unstyled' } style={{ display: 'inline-block' }}>
+							<ul className={ 'list-unstyled' } style={ { display: 'inline-block' } }>
 								<li className={ 'groupTitle' }>
 									{ this.getStatusIcon( displayStatus, 20, 20 ) }{ ' ' }
 									<a
@@ -332,7 +332,7 @@ class Reports extends React.Component {
 					<span
 						key={ idx }
 						role="button"
-						tabIndex={0}
+						tabIndex={ 0 }
 						className={ `pill label-status-${ statusClass }` }
 						onClick={ () =>
 							window.open(
@@ -342,16 +342,16 @@ class Reports extends React.Component {
 								'_blank'
 							)
 						}
-						onKeyDown={(e) => {
-							if (e.key === 'Enter' || e.key === ' ') {
+						onKeyDown={ e => {
+							if ( e.key === 'Enter' || e.key === ' ' ) {
 								window.open(
 									this.props.params.groupKey
 										? window.location.href
-										: this.groupReportHref(groupKey),
+										: this.groupReportHref( groupKey ),
 									'_blank'
 								);
 							}
-						}}
+						} }
 						style={ { cursor: 'pointer' } }
 					/>
 				);
@@ -360,7 +360,7 @@ class Reports extends React.Component {
 
 	toggleVisibility = groupIndex => {
 		const rows = document.querySelectorAll( `#group-${ groupIndex } tbody tr` );
-		for (const row of rows) {
+		for ( const row of rows ) {
 			row.classList.toggle( 'collapsed' );
 		}
 		const collapseBtnElement = document.getElementById( `btn-${ groupIndex }` );
