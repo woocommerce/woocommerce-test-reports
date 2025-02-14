@@ -32,7 +32,7 @@ const jsonFilePath = `data/${ reportFileName }.json`;
 	const flows = getUniqueNestedTitles( fileSuites.flat(), 0, '' );
 
 	const newGroupedFlows = groupFlowsBySuite( flows );
-	const existingData = ( await getJSONFromS3( jsonFilePath ) ) || data;
+	const existingData = ( await getJSONFromS3( jsonFilePath, true ) ) || data;
 
 	let existingGroupedFlows = {};
 	if ( existingData.sha === data.sha ) {
@@ -55,6 +55,11 @@ const jsonFilePath = `data/${ reportFileName }.json`;
 	} );
 	await s3client.send( cmd );
 } )();
+
+function getSuiteFromFileName(fileName) {
+	const nameWithoutExtension = fileName.replace(/\.[^/.]+$/, '');
+	return nameWithoutExtension.replace('.test', '').replace('.spec', '').replace( /[_-]/g, ' ' );
+}
 
 /**
  * Get suites data from the json reports.
@@ -105,14 +110,22 @@ function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
 				return;
 			}
 
+			// Include each folder from the file path as a suite name
+			const filePathParts = spec.file.split(path.sep);
+			const folderPath = filePathParts.slice(0, -1).join(' > ');
+
 			// If there is an annotation of type 'suite', include it in the suite title
 			// We only take the first test into account, normally there should be only one test per spec
 			const suiteAnnotation = spec.tests[ 0 ].annotations.find(
 				annotation => annotation.type === 'suite'
 			);
+
+			const fileName = filePathParts.slice(-1)[0];
 			const suiteTitle = (
-				suiteAnnotation ? `${ currentTitle } > ${ suiteAnnotation.description }` : currentTitle
-			).replace( /^ > /, '' );
+				suiteAnnotation
+					? `${folderPath} > ${currentTitle} > ${suiteAnnotation.description} > ${filePathParts.slice(-1)[0]}`
+					: `${folderPath} > ${currentTitle} > ${getSuiteFromFileName(fileName)}`
+			).replace(/^ > /, '').toLowerCase();
 
 			titles.push( {
 				suite: suiteTitle,
