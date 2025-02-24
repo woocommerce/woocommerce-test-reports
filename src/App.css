@@ -460,7 +460,7 @@ hr {
     transform: rotate(-180deg);
 }
 
-.flowsList.collapsed {
+.collapsed {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
@@ -490,5 +490,12 @@ tr.collapsed {
 .status-icon {
     margin-bottom: 4px;
     margin-right: 5px;
+}
+
+.expand-collapse-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 

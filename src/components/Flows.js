@@ -44,7 +44,7 @@ export default class Flows extends BaseComponent {
 		const { skipped, active, searchTerm } = this.state.filters;
 		let count = 0;
 
-		this.data.flows = Object.keys( this.rawData.flows ).reduce( ( acc, suite ) => {
+		const filteredFlows = Object.keys( this.rawData.flows ).reduce( ( acc, suite ) => {
 			const filteredSuiteFlows = this.rawData.flows[ suite ].filter( flow => {
 				const suiteMatch = suite.toLowerCase().includes( searchTerm.toLowerCase() );
 				const titleMatch = flow.title.toLowerCase().includes( searchTerm.toLowerCase() );
@@ -67,11 +67,53 @@ export default class Flows extends BaseComponent {
 			return acc;
 		}, {} );
 
+		console.log( filteredFlows );
+		this.data.flows = this.groupFlowsByNestedSuites( filteredFlows );
+		// this.data.flows = filteredFlows;
+		console.log( this.data.flows );
+
 		this.data.count = count;
 		this.data.sha = this.rawData.sha;
 		this.data.ref = this.rawData.ref;
 		this.data.lastUpdate = this.rawData.lastUpdate;
 		this.setState( { isDataReady: true } );
+	}
+
+	groupFlowsByNestedSuites( flowsGroupedByUniqueSuite ) {
+		const flows = [];
+
+		// Push all flows from each suite into the flows array
+		Object.values( flowsGroupedByUniqueSuite ).forEach( suiteFlows => {
+			flows.push( ...suiteFlows );
+		} );
+
+		console.log( flows );
+
+		return flows.reduce( ( acc, flow ) => {
+			// Create the nested path using reduce
+			flow.suites.reduce( ( suiteAcc, suite, index ) => {
+				if ( ! suiteAcc[ suite ] ) {
+					// If it's the last suite in the hierarchy, store the flow
+					if ( index === flow.suites.length - 1 ) {
+						suiteAcc[ suite ] = {
+							flows: [ flow ],
+						};
+					} else {
+						// Otherwise, create a new nested object
+						suiteAcc[ suite ] = {};
+					}
+				} else if ( index === flow.suites.length - 1 ) {
+					// If the suite exists and it's the last one, append the flow
+					if ( ! suiteAcc[ suite ].flows ) {
+						suiteAcc[ suite ].flows = [];
+					}
+					suiteAcc[ suite ].flows.push( flow );
+				}
+				return suiteAcc[ suite ];
+			}, acc );
+
+			return acc;
+		}, {} );
 	}
 
 	handleSearchChange = event => {
@@ -162,40 +204,86 @@ export default class Flows extends BaseComponent {
 	}
 
 	toggleVisibility = suiteIndex => {
-		const flowsListElement = document.getElementById( `suite-${ suiteIndex }` );
-		flowsListElement.classList.toggle( 'collapsed' );
+		const collapsible = document.querySelector( `#suite-${ suiteIndex }` );
+		collapsible.classList.toggle( 'collapsed' );
 		const collapseBtnElement = document.getElementById( `btn-${ suiteIndex }` );
 		collapseBtnElement.classList.toggle( 'collapsed' );
 	};
 
-	render() {
-		if ( ! this.state.isDataReady ) {
-			return null;
-		}
+	toggleAll = shouldExpand => {
+		const suiteElements = document.querySelectorAll( '[id^="suite-"]' );
+		const buttons = document.querySelectorAll( '[id^="btn-"]' );
 
+		suiteElements.forEach( element => {
+			if ( shouldExpand ) {
+				element.classList.remove( 'collapsed' );
+			} else {
+				element.classList.add( 'collapsed' );
+			}
+		} );
+
+		buttons.forEach( button => {
+			if ( shouldExpand ) {
+				button.classList.remove( 'collapsed' );
+			} else {
+				button.classList.add( 'collapsed' );
+			}
+		} );
+	};
+
+	renderExpandCollapseButtons() {
+		return (
+			<div className="expand-collapse-buttons">
+				<Button variant="dark" className="filter-btn" onClick={ () => this.toggleAll( true ) }>
+					Expand all
+				</Button>
+				<Button variant="dark" className="filter-btn" onClick={ () => this.toggleAll( false ) }>
+					Collapse all
+				</Button>
+			</div>
+		);
+	}
+
+	renderFlowsList( flows ) {
 		const fileUrl = `https://github.com/woocommerce/woocommerce/blob/${ this.data.sha }/plugins/woocommerce/tests/e2e-pw/tests/`;
 		const skippedPill = <span className={ `label label-status-skipped` }>SKIPPED</span>;
+
 		return (
-			<div>
-				<div className="row headerRow">
-					<div className="col">
-						<span>{ this.data.count } flows</span>
+			<ul className={ 'flowsList' }>
+				{ flows.map( ( flow, flowIndex ) => (
+					<li className={ flow.skipped ? 'skipped-flow' : '' } key={ flowIndex }>
+						<a
+							className={ 'flowLink' }
+							href={ fileUrl + flow.file + '#L' + flow.line }
+							target={ '_blank' }
+							rel={ 'noreferrer' }
+						>
+							{ flow.skipped ? skippedPill : '' } { flow.title }
+						</a>{ ' ' }
+						{ this.renderTags( flow.tags ) }
 						<br />
-						<span className={ 'caption' }>
-							commit { this.data.sha.substring( 0, 6 ) }, updated{ ' ' }
-							{ moment( this.data.lastUpdate ).fromNow() }
-						</span>
-					</div>
-					<div className="col filters right-align">{ this.renderFiltersColumn() }</div>
-				</div>
-				<ul className={ 'suitesList' }>
-					{ Object.keys( this.data.flows ).map( ( suite, suiteIndex ) => (
+						<small className={ 'flowMetaData' }>
+							{ flow.file }:{ flow.line }
+						</small>
+					</li>
+				) ) }
+			</ul>
+		);
+	}
+
+	renderSuites( suites, parentIndex = '' ) {
+		return (
+			<ul className={ 'suitesList' }>
+				{ Object.entries( suites ).map( ( [ suiteName, suiteData ], index ) => {
+					const suiteIndex = `${ parentIndex }${ index }`;
+
+					return (
 						<li key={ suiteIndex } className={ 'groupTitle suiteElement' }>
 							<div
 								className={ 'suiteTitleContainer' }
 								onClick={ () => this.toggleVisibility( suiteIndex ) }
 							>
-								<span className={ 'suiteTitle' }>{ suite }</span>
+								<span className={ 'suiteTitle' }>{ suiteName }</span>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="48"
@@ -209,28 +297,38 @@ export default class Flows extends BaseComponent {
 									<polyline points="6 9 12 15 18 9"></polyline>
 								</svg>
 							</div>
-							<ul className={ 'flowsList' } id={ `suite-${ suiteIndex }` }>
-								{ this.data.flows[ suite ].map( ( flow, flowIndex ) => (
-									<li className={ flow.skipped ? 'skipped-flow' : '' } key={ flowIndex }>
-										<a
-											className={ 'flowLink' }
-											href={ fileUrl + flow.file + '#L' + flow.line }
-											target={ '_blank' }
-											rel={ 'noreferrer' }
-										>
-											{ flow.skipped ? skippedPill : '' } { flow.title }
-										</a>{ ' ' }
-										{ this.renderTags( flow.tags ) }
-										<br />
-										<small className={ 'flowMetaData' }>
-											{ flow.file }:{ flow.line }
-										</small>
-									</li>
-								) ) }
-							</ul>
+							<div id={ `suite-${ suiteIndex }` }>
+								{ suiteData.flows
+									? this.renderFlowsList( suiteData.flows )
+									: this.renderSuites( suiteData, `${ suiteIndex }-` ) }
+							</div>
 						</li>
-					) ) }
-				</ul>
+					);
+				} ) }
+			</ul>
+		);
+	}
+
+	render() {
+		if ( ! this.state.isDataReady ) {
+			return null;
+		}
+
+		return (
+			<div>
+				<div className="row headerRow">
+					<div className="col">
+						<span>{ this.data.count } flows</span>
+						<br />
+						<span className={ 'caption' }>
+							commit { this.data.sha.substring( 0, 6 ) }, updated{ ' ' }
+							{ moment( this.data.lastUpdate ).fromNow() }
+						</span>
+					</div>
+					<div className="col filters right-align">{ this.renderFiltersColumn() }</div>
+				</div>
+				{ this.renderExpandCollapseButtons() }
+				{ this.renderSuites( this.data.flows ) }
 			</div>
 		);
 	}

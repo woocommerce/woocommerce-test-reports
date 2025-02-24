@@ -358,14 +358,14 @@ class Reports extends React.Component {
 			} );
 	}
 
-	toggleVisibility (groupIndex) {
+	toggleVisibility( groupIndex ) {
 		const rows = document.querySelectorAll( `#group-${ groupIndex } tbody tr` );
 		for ( const row of rows ) {
 			row.classList.toggle( 'collapsed' );
 		}
 		const collapseBtnElement = document.getElementById( `btn-${ groupIndex }` );
 		collapseBtnElement.classList.toggle( 'collapsed' );
-	};
+	}
 
 	render() {
 		if ( ! this.state.isDataFetched ) {
