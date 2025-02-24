@@ -178,7 +178,7 @@ class Reports extends React.Component {
 								className={ id !== 0 ? 'collapse-indicator' : 'collapse-indicator collapsed' }
 								id={ `btn-${ id }` }
 							>
-								<polyline points="6 9 12 15 18 9"></polyline>
+								<polyline points="9 6 15 12 9 18"></polyline>
 							</svg>
 						</th>
 					</tr>

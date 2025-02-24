@@ -67,10 +67,7 @@ export default class Flows extends BaseComponent {
 			return acc;
 		}, {} );
 
-		console.log( filteredFlows );
 		this.data.flows = this.groupFlowsByNestedSuites( filteredFlows );
-		// this.data.flows = filteredFlows;
-		console.log( this.data.flows );
 
 		this.data.count = count;
 		this.data.sha = this.rawData.sha;
@@ -79,41 +76,51 @@ export default class Flows extends BaseComponent {
 		this.setState( { isDataReady: true } );
 	}
 
-	groupFlowsByNestedSuites( flowsGroupedByUniqueSuite ) {
+	groupFlowsByNestedSuites(flowsGroupedByUniqueSuite) {
 		const flows = [];
+		const suiteCounts = {};
 
 		// Push all flows from each suite into the flows array
-		Object.values( flowsGroupedByUniqueSuite ).forEach( suiteFlows => {
-			flows.push( ...suiteFlows );
-		} );
+		Object.values(flowsGroupedByUniqueSuite).forEach(suiteFlows => {
+			flows.push(...suiteFlows);
+		});
 
-		console.log( flows );
+		// First pass: collect all flow counts for each suite
+		flows.forEach(flow => {
+			flow.suites.forEach((suite, index) => {
+				const suitePath = flow.suites.slice(0, index + 1).join('|');
+				suiteCounts[suitePath] = (suiteCounts[suitePath] || 0) + 1;
+			});
+		});
 
-		return flows.reduce( ( acc, flow ) => {
-			// Create the nested path using reduce
-			flow.suites.reduce( ( suiteAcc, suite, index ) => {
-				if ( ! suiteAcc[ suite ] ) {
+		// Second pass: build the nested structure with counts
+		return flows.reduce((acc, flow) => {
+			flow.suites.reduce((suiteAcc, suite, index) => {
+				const suitePath = flow.suites.slice(0, index + 1).join('|');
+				const suiteWithCount = `${suite} (${suiteCounts[suitePath]})`;
+
+				if (!suiteAcc[suiteWithCount]) {
 					// If it's the last suite in the hierarchy, store the flow
-					if ( index === flow.suites.length - 1 ) {
-						suiteAcc[ suite ] = {
-							flows: [ flow ],
+					if (index === flow.suites.length - 1) {
+						suiteAcc[suiteWithCount] = {
+							flows: [flow],
 						};
 					} else {
 						// Otherwise, create a new nested object
-						suiteAcc[ suite ] = {};
+						suiteAcc[suiteWithCount] = {};
 					}
-				} else if ( index === flow.suites.length - 1 ) {
+				} else if (index === flow.suites.length - 1) {
 					// If the suite exists and it's the last one, append the flow
-					if ( ! suiteAcc[ suite ].flows ) {
-						suiteAcc[ suite ].flows = [];
+					if (!suiteAcc[suiteWithCount].flows) {
+						suiteAcc[suiteWithCount].flows = [];
 					}
-					suiteAcc[ suite ].flows.push( flow );
+					suiteAcc[suiteWithCount].flows.push(flow);
 				}
-				return suiteAcc[ suite ];
-			}, acc );
+				return suiteAcc[suiteWithCount];
+			}, acc);
 
 			return acc;
-		}, {} );
+		}, {});
 	}
 
 	handleSearchChange = event => {
@@ -294,7 +301,7 @@ export default class Flows extends BaseComponent {
 									className={ 'collapse-indicator collapsed' }
 									id={ `btn-${ suiteIndex }` }
 								>
-									<polyline points="6 9 12 15 18 9"></polyline>
+									<polyline points="9 6 15 12 9 18"></polyline>
 								</svg>
 							</div>
 							<div id={ `suite-${ suiteIndex }` }>

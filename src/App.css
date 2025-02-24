@@ -452,15 +452,15 @@ hr {
     display: inline-block;
     vertical-align: top;
     margin-right: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
     color: var(--default-font-color);
 }
 
 .collapse-indicator.collapsed {
-    transform: rotate(-180deg);
+    transform: rotate(90deg);
 }
 
-.collapsed {
+div.collapsed {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
