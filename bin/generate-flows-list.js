@@ -137,7 +137,7 @@ function getUniqueNestedTitles( inputSuites, depth = 0 ) {
 			}
 
 			titles.push( {
-				suites,
+				suites: [...new Set(suites)],
 				suite: suites.join( ' > ' ),
 				title: spec.title,
 				file: spec.file,
