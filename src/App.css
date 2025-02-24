@@ -338,6 +338,31 @@ hr {
 
 .suitesList {
     list-style: none;
+    padding-left: 20px;
+}
+
+.suitesList li {
+    position: relative;
+}
+
+/* Vertical line from parent to child */
+.suitesList li::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid var(--borders-color);
+}
+
+/* Horizontal line to the item */
+.suitesList li::after {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 25px;
+    width: 10px;
+    border-top: 1px solid var(--borders-color);
 }
 
 .suiteElement {
@@ -352,15 +377,26 @@ hr {
 
 .suiteTitle {
     font-size: 1.3rem;
-    border-bottom: 1px solid var(--borders-color);
+    /*border-bottom: 1px solid var(--borders-color);*/
 }
 
+/* Additional styling for nested flow lists */
 .flowsList {
     list-style: none;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin: 0;
 }
 
 .flowsList li {
+    position: relative;
     padding: 7px;
+}
+
+/* Remove tree lines from flows */
+.flowsList li::before,
+.flowsList li::after {
+    display: none;
 }
 
 .flowLink {
