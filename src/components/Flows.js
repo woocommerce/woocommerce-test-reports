@@ -76,51 +76,51 @@ export default class Flows extends BaseComponent {
 		this.setState( { isDataReady: true } );
 	}
 
-	groupFlowsByNestedSuites(flowsGroupedByUniqueSuite) {
+	groupFlowsByNestedSuites( flowsGroupedByUniqueSuite ) {
 		const flows = [];
 		const suiteCounts = {};
 
 		// Push all flows from each suite into the flows array
-		Object.values(flowsGroupedByUniqueSuite).forEach(suiteFlows => {
-			flows.push(...suiteFlows);
-		});
+		Object.values( flowsGroupedByUniqueSuite ).forEach( suiteFlows => {
+			flows.push( ...suiteFlows );
+		} );
 
 		// First pass: collect all flow counts for each suite
-		flows.forEach(flow => {
+		flows.forEach( flow => {
 			// Convert suites to lowercase
-			flow.suites = flow.suites.map(suite => suite.toLowerCase());
+			flow.suites = flow.suites.map( suite => suite.toLowerCase() );
 
-			flow.suites.forEach((suite, index) => {
-				const suitePath = flow.suites.slice(0, index + 1).join('|');
-				suiteCounts[suitePath] = (suiteCounts[suitePath] || 0) + 1;
-			});
-		});
+			flow.suites.forEach( ( suite, index ) => {
+				const suitePath = flow.suites.slice( 0, index + 1 ).join( '|' );
+				suiteCounts[ suitePath ] = ( suiteCounts[ suitePath ] || 0 ) + 1;
+			} );
+		} );
 
 		// Second pass: build the nested structure with counts
-		return flows.reduce((acc, flow) => {
-			flow.suites.reduce((suiteAcc, suite, index) => {
-				const suitePath = flow.suites.slice(0, index + 1).join('|');
-				const suiteWithCount = `${suite} (${suiteCounts[suitePath]})`;
+		return flows.reduce( ( acc, flow ) => {
+			flow.suites.reduce( ( suiteAcc, suite, index ) => {
+				const suitePath = flow.suites.slice( 0, index + 1 ).join( '|' );
+				const suiteWithCount = `${ suite } (${ suiteCounts[ suitePath ] })`;
 
-				if (!suiteAcc[suiteWithCount]) {
-					if (index === flow.suites.length - 1) {
-						suiteAcc[suiteWithCount] = {
-							flows: [flow],
+				if ( ! suiteAcc[ suiteWithCount ] ) {
+					if ( index === flow.suites.length - 1 ) {
+						suiteAcc[ suiteWithCount ] = {
+							flows: [ flow ],
 						};
 					} else {
-						suiteAcc[suiteWithCount] = {};
+						suiteAcc[ suiteWithCount ] = {};
 					}
-				} else if (index === flow.suites.length - 1) {
-					if (!suiteAcc[suiteWithCount].flows) {
-						suiteAcc[suiteWithCount].flows = [];
+				} else if ( index === flow.suites.length - 1 ) {
+					if ( ! suiteAcc[ suiteWithCount ].flows ) {
+						suiteAcc[ suiteWithCount ].flows = [];
 					}
-					suiteAcc[suiteWithCount].flows.push(flow);
+					suiteAcc[ suiteWithCount ].flows.push( flow );
 				}
-				return suiteAcc[suiteWithCount];
-			}, acc);
+				return suiteAcc[ suiteWithCount ];
+			}, acc );
 
 			return acc;
-		}, {});
+		}, {} );
 	}
 
 	handleSearchChange = event => {
