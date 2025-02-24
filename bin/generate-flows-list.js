@@ -90,9 +90,9 @@ function getSuitesData( jsonReportsPath, fileNamePattern ) {
  * 2. Second level: file name (without extension)
  * 3. Subsequent levels: suite titles from the test structure
  *
- * @param {Array} inputSuites - Array of suite objects containing test specifications
- * @param {number} depth - Current recursion depth to prevent infinite loops (default: 0)
- * @returns {Array} Array of objects containing:
+ * @param {Array}  inputSuites - Array of suite objects containing test specifications
+ * @param {number} depth       - Current recursion depth to prevent infinite loops (default: 0)
+ * @return {Array} Array of objects containing:
  *   - title: Test case title
  *   - file: Test file path
  *   - line: Line number in file
