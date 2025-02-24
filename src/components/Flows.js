@@ -87,6 +87,9 @@ export default class Flows extends BaseComponent {
 
 		// First pass: collect all flow counts for each suite
 		flows.forEach(flow => {
+			// Convert suites to lowercase
+			flow.suites = flow.suites.map(suite => suite.toLowerCase());
+
 			flow.suites.forEach((suite, index) => {
 				const suitePath = flow.suites.slice(0, index + 1).join('|');
 				suiteCounts[suitePath] = (suiteCounts[suitePath] || 0) + 1;
@@ -100,17 +103,14 @@ export default class Flows extends BaseComponent {
 				const suiteWithCount = `${suite} (${suiteCounts[suitePath]})`;
 
 				if (!suiteAcc[suiteWithCount]) {
-					// If it's the last suite in the hierarchy, store the flow
 					if (index === flow.suites.length - 1) {
 						suiteAcc[suiteWithCount] = {
 							flows: [flow],
 						};
 					} else {
-						// Otherwise, create a new nested object
 						suiteAcc[suiteWithCount] = {};
 					}
 				} else if (index === flow.suites.length - 1) {
-					// If the suite exists and it's the last one, append the flow
 					if (!suiteAcc[suiteWithCount].flows) {
 						suiteAcc[suiteWithCount].flows = [];
 					}
