@@ -56,14 +56,14 @@ const jsonFilePath = `data/${ reportFileName }.json`;
 	await s3client.send( cmd );
 } )();
 
-function getSuiteFromFileName(fileName) {
-	const nameWithoutExtension = fileName.replace(/\.[^/.]+$/, '');
-	return nameWithoutExtension.replace('.test', '').replace('.spec', '').replace( /[_-]/g, ' ' );
+function getSuiteFromFileName( fileName ) {
+	const nameWithoutExtension = fileName.replace( /\.[^/.]+$/, '' );
+	return nameWithoutExtension.replace( '.test', '' ).replace( '.spec', '' ).replace( /[_-]/g, ' ' );
 }
 
 /**
  * Get suites data from the json reports.
- * It parses multiple json files and returns the merges their content in a single array.
+ * It parses multiple json files and returns their merged content in a single array.
  * @param {string} jsonReportsPath Path to the json reports folder
  * @param {string} fileNamePattern Regex pattern to match the json files
  * @return {*[]} Combined suites data
@@ -84,51 +84,61 @@ function getSuitesData( jsonReportsPath, fileNamePattern ) {
 }
 
 /**
- * Get unique nested test titles from the suites data.
- * The format of a test title is: "Suite title > Sub-suite title > Test title"
- * @param {*[]}    suites      Suites data
- * @param {number} depth       Current depth level
- * @param {string} parentTitle Parent suite title
- * @return {*[]} Unique test titles
+ * Extracts unique test titles from suites data and organizes them in a hierarchical structure.
+ * The hierarchy is built as follows:
+ * 1. First level: folder name from the test file path
+ * 2. Second level: file name (without extension)
+ * 3. Subsequent levels: suite titles from the test structure
+ *
+ * @param {Array} inputSuites - Array of suite objects containing test specifications
+ * @param {number} depth - Current recursion depth to prevent infinite loops (default: 0)
+ * @returns {Array} Array of objects containing:
+ *   - title: Test case title
+ *   - file: Test file path
+ *   - line: Line number in file
+ *   - skipped: Boolean indicating if test is skipped
+ *   - tags: Array of test tags
+ *   - suites: Array representing the suite hierarchy
  */
-function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
+function getUniqueNestedTitles( inputSuites, depth = 0 ) {
 	if ( depth > 100 ) return [];
 
 	let titles = [];
 
-	suites.forEach( suite => {
-		const isFileSuite = suite.title === suite.file;
-		const currentSuiteTitle = isFileSuite ? '' : suite.title;
-		const currentTitle = parentTitle
-			? `${ parentTitle } > ${ currentSuiteTitle }`
-			: currentSuiteTitle;
+	inputSuites.forEach( currentSuite => {
+		// Skip fixtures and exit early
+		if ( currentSuite.file.includes( 'fixtures' ) ) {
+			console.log( `Skipping fixture: ${ currentSuite.file }` );
+			return;
+		}
 
 		// Add specs titles
-		suite.specs.forEach( spec => {
-			if ( spec.file.includes( 'fixtures' ) ) {
-				console.log( `Skipping fixture: ${ spec.file }` );
-				return;
-			}
+		currentSuite.specs.forEach( spec => {
+			const filePathParts = spec.file.split( path.sep );
 
 			// Include each folder from the file path as a suite name
-			const filePathParts = spec.file.split(path.sep);
-			const folderPath = filePathParts.slice(0, -1).join(' > ');
+			const suites = filePathParts.slice( 0, -1 );
 
-			// If there is an annotation of type 'suite', include it in the suite title
-			// We only take the first test into account, normally there should be only one test per spec
+			// Include file name as a suite name
+			suites.push( getSuiteFromFileName( filePathParts.slice( -1 )[ 0 ] ) );
+
+			// Include the describe block as a suite name
+			if ( currentSuite.title !== currentSuite.file ) {
+				suites.push( currentSuite.title );
+			}
+
+			// If there is an annotation of type 'suite', include it as a suite name
 			const suiteAnnotation = spec.tests[ 0 ].annotations.find(
 				annotation => annotation.type === 'suite'
 			);
 
-			const fileName = filePathParts.slice(-1)[0];
-			const suiteTitle = (
-				suiteAnnotation
-					? `${folderPath} > ${currentTitle} > ${suiteAnnotation.description} > ${filePathParts.slice(-1)[0]}`
-					: `${folderPath} > ${currentTitle} > ${getSuiteFromFileName(fileName)}`
-			).replace(/^ > /, '').toLowerCase();
+			if ( suiteAnnotation ) {
+				suites.push( suiteAnnotation.description );
+			}
 
 			titles.push( {
-				suite: suiteTitle,
+				suites,
+				suite: suites.join( ' > ' ),
 				title: spec.title,
 				file: spec.file,
 				line: spec.line,
@@ -138,13 +148,13 @@ function getUniqueNestedTitles( suites, depth = 0, parentTitle = '' ) {
 		} );
 
 		// Recursively add nested suites titles
-		if ( suite.suites && suite.suites.length > 0 ) {
-			titles = titles.concat( getUniqueNestedTitles( suite.suites, depth + 1, currentTitle ) );
+		if ( currentSuite.suites && currentSuite.suites.length > 0 ) {
+			titles = titles.concat( getUniqueNestedTitles( currentSuite.suites, depth + 1 ) );
 		}
 	} );
 
 	return titles.sort( ( a, b ) => {
-		return `${ a.suite } ${ a.title }`.localeCompare( `${ b.suite } ${ b.title }` );
+		return a.suite.localeCompare( b.suite );
 	} );
 }
 
