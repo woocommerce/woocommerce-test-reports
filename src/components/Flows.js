@@ -69,6 +69,8 @@ export default class Flows extends BaseComponent {
 
 		this.data.flows = this.groupFlowsByNestedSuites( filteredFlows );
 
+		console.log( this.data.flows );
+
 		this.data.count = count;
 		this.data.sha = this.rawData.sha;
 		this.data.ref = this.rawData.ref;
@@ -289,6 +291,13 @@ export default class Flows extends BaseComponent {
 							<div
 								className={ 'suiteTitleContainer' }
 								onClick={ () => this.toggleVisibility( suiteIndex ) }
+								role="button"
+								tabIndex={ 0 }
+								onKeyPress={ e => {
+									if ( e.key === 'Enter' ) {
+										this.toggleVisibility( suiteIndex );
+									}
+								} }
 							>
 								<span className={ 'suiteTitle' }>{ suiteName }</span>
 								<svg
@@ -305,9 +314,14 @@ export default class Flows extends BaseComponent {
 								</svg>
 							</div>
 							<div id={ `suite-${ suiteIndex }` }>
-								{ suiteData.flows
-									? this.renderFlowsList( suiteData.flows )
-									: this.renderSuites( suiteData, `${ suiteIndex }-` ) }
+								{ suiteData.flows && this.renderFlowsList( suiteData.flows ) }
+								{ Object.entries( suiteData ).filter( ( [ key ] ) => key !== 'flows' ).length > 0 &&
+									this.renderSuites(
+										Object.fromEntries(
+											Object.entries( suiteData ).filter( ( [ key ] ) => key !== 'flows' )
+										),
+										`${ suiteIndex }-`
+									) }
 							</div>
 						</li>
 					);
