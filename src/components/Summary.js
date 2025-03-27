@@ -186,11 +186,11 @@ export default class Summary extends BaseComponent {
 
 	off = data => {
 		const dataMax = Math.max( ...data.map( i => i.avgDelta ) );
-		const dataMin = Math.min( ...data.map( i => i.avgDelta ) );
-
 		if ( dataMax <= 0 ) {
 			return 0;
 		}
+
+		const dataMin = Math.min( ...data.map( i => i.avgDelta ) );
 		if ( dataMin >= 0 ) {
 			return 1;
 		}
@@ -238,7 +238,6 @@ export default class Summary extends BaseComponent {
 								dot={ { fill: 'rgba(186, 110, 98, 0.71)', r: 0 } }
 								activeDot={ { stroke: 'rgba(186, 110, 98, 0.71)', r: 8 } }
 							/>
-							/>
 							<Line
 								unit="%"
 								type="monotone"
@@ -250,7 +249,6 @@ export default class Summary extends BaseComponent {
 								legendType="circle"
 								dot={ { fill: 'rgba(186, 110, 98, 0.71)', r: 0 } }
 								activeDot={ { stroke: 'rgba(186, 110, 98, 0.71)', r: 8 } }
-							/>
 							/>
 							<defs>
 								<linearGradient id="splitColor" x1="0" y1="0" x2="0" y2="1">
@@ -399,7 +397,6 @@ export default class Summary extends BaseComponent {
 								dot={ { fill: 'rgba(186, 110, 98, 0.71)', r: 4 } }
 								activeDot={ { stroke: 'rgba(186, 110, 98, 0.71)', r: 8 } }
 							/>
-							/>
 						</ComposedChart>
 					</ResponsiveContainer>
 				</div>
@@ -502,7 +499,6 @@ export default class Summary extends BaseComponent {
 								legendType="cross"
 								dot={ { fill: 'rgba(186, 110, 98, 0.71)', r: 4 } }
 								activeDot={ { stroke: 'rgba(186, 110, 98, 0.71)', r: 8 } }
-							/>
 							/>
 						</ComposedChart>
 					</ResponsiveContainer>
