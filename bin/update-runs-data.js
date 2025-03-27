@@ -92,7 +92,7 @@ async function cleanupOldRuns( runsDataPath, daysThreshold ) {
 	// Filter out the runs that are older than the threshold
 	const filteredRuns = Object.fromEntries(
 		Object.entries( runs ).filter(
-			( [ runId, run ] ) =>
+			( [ run ] ) =>
 				moment.duration( moment.utc().diff( moment.utc( run.updated_on ) ) ).as( 'days' ) <
 				daysThreshold
 		)
