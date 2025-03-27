@@ -248,11 +248,11 @@ const dryRun = process.env.DRY_RUN;
 	console.group( '\n', 'Removing orphan errors' );
 	const errorsFileKey = 'data/errors.json';
 	const errorsData = ( await getJSONFromS3( errorsFileKey ) ) || { errors: [] };
+	const initialErrorsCount = errorsData.errors.length;
 
-	const newDirsToRemove = [ 'pull_request/51072/core-e2e-report' ];
-	for ( const dir of newDirsToRemove ) {
-		errorsData.errors = errorsData.errors.filter( error => error.path !== dir );
-	}
+	errorsData.errors = errorsData.errors.filter( error => !dirsToRemove.includes(error.path) );
+	console.log(`Removed ${initialErrorsCount - errorsData.errors.length} errors`);
+	console.groupEnd();
 
 	// Upload the report to S3
 	const s3cmd = new PutObjectCommand( {
