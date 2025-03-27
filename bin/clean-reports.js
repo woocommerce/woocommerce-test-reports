@@ -250,8 +250,9 @@ const dryRun = process.env.DRY_RUN;
 	const errorsData = ( await getJSONFromS3( errorsFileKey ) ) || { errors: [] };
 	const initialErrorsCount = errorsData.errors.length;
 
-	errorsData.errors = errorsData.errors.filter( error => !dirsToRemove.includes(error.path) );
-	console.log(`Removed ${initialErrorsCount - errorsData.errors.length} errors`);
+	const removedDirs = dirsToRemove.map( dir => dir.replace( 'reports/', '' ) );
+	errorsData.errors = errorsData.errors.filter( error => ! removedDirs.includes( error.path ) );
+	console.log( `Removed ${ initialErrorsCount - errorsData.errors.length } errors` );
 	console.groupEnd();
 
 	// Upload the report to S3
