@@ -251,20 +251,6 @@ const dryRun = process.env.DRY_RUN;
 	const initialErrorsCount = errorsData.errors.length;
 
 	const removedDirs = dirsToRemove.map( dir => dir.replace( 'reports/', '' ) );
-	// removedDirs.push(
-	// 	...[
-	// 		'push/trunk-d71d7bb',
-	// 		'push/trunk-9eff51e',
-	// 		'push/trunk-74a7ca9',
-	// 		'push/trunk-44dc889',
-	// 		'push/trunk-3228ce0',
-	// 		'pull_request/56747',
-	// 		'pull_request/55692',
-	// 		'pull_request/56642',
-	// 		'pull_request/56592',
-	// 		'pull_request/56554'
-	// 	]
-	// );
 	errorsData.errors = errorsData.errors.filter(
 		error => ! removedDirs.some( dir => error.path.startsWith( dir ) )
 	);
