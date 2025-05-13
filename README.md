@@ -14,7 +14,7 @@ All the reports are stored in an Amazon S3 bucket.
 
 The tests run in [Woocommerce monorepo](https://github.com/woocommerce/woocommerce) CI. The monorepo job sends a workflow call event to this repo with all the required information about the test run, triggering the report workflow.
 
-The reports are generated using [Allure](http://allure.qatools.ru) framework. Allure results in json format are being created by the tests and are stored as artefacts in GitHub after each test run. The workflow in this repo will download the artefacts, use the results to generate a new report and then push the results and the newly generated report in the configured S3 bucket.
+The reports are generated using [Allure](https://allurereport.org/) reporting tool. Allure results in json format are being created by the tests and are stored as artefacts in GitHub after each test run. The workflow in this repo will download the artefacts, use the results to generate a new report and then push the results and the newly generated report in the configured S3 bucket.
 
 ## Stats
 
