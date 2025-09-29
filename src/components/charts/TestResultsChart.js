@@ -9,34 +9,40 @@ import {
 	XAxis,
 	YAxis,
 } from 'recharts';
+import { Tooltip } from 'recharts';
 import moment from 'moment';
 import TestResultsTooltip from '../TestResultsTooltip';
 
-const TestResultsChart = React.memo(({ data }) => {
+const TestResultsChart = React.memo( ( { data } ) => {
 	const axisTickStyle = { fontSize: '0.8rem' };
 
 	return (
 		<div className="chartContainer">
 			<ResponsiveContainer width="100%" height="100%">
-				<ComposedChart data={data}>
+				<ComposedChart data={ data }>
 					<CartesianGrid stroke="#454c54" strokeDasharray="2 2" />
 					<XAxis
 						dataKey="date"
-						axisLine={false}
+						axisLine={ false }
 						interval="preserveStartEnd"
-						tickFormatter={tickItem => moment(tickItem).format('DD MMM YY')}
-						tick={{ fontSize: '0.8rem' }}
+						tickFormatter={ tickItem => moment( tickItem ).format( 'DD MMM YY' ) }
+						tick={ { fontSize: '0.8rem' } }
 					/>
-					<YAxis yAxisId="testCount" type="number" axisLine={false} tick={axisTickStyle} />
+					<YAxis yAxisId="testCount" type="number" axisLine={ false } tick={ axisTickStyle } />
 					<YAxis
 						yAxisId="failureRate"
 						orientation="right"
-						axisLine={false}
+						axisLine={ false }
 						unit="%"
-						tick={axisTickStyle}
+						tick={ axisTickStyle }
 					/>
-					{/* <Tooltip content={<TestResultsTooltip />} /> */}
-					<Legend verticalAlign="top" align="right" height={40} wrapperStyle={{ right: '55px' }} />
+					<Tooltip />
+					<Legend
+						verticalAlign="top"
+						align="right"
+						height={ 40 }
+						wrapperStyle={ { right: '55px' } }
+					/>
 					<Bar
 						unit=" tests"
 						dataKey="testsPassed"
@@ -45,7 +51,7 @@ const TestResultsChart = React.memo(({ data }) => {
 						fill="rgba( 115, 151, 75, 0.73 )"
 						stackId="a"
 						legendType="circle"
-						maxBarSize={20}
+						maxBarSize={ 20 }
 					/>
 					<Bar
 						unit=" tests"
@@ -55,7 +61,7 @@ const TestResultsChart = React.memo(({ data }) => {
 						fill="rgba( 253, 90, 62, 0.71 )"
 						stackId="a"
 						legendType="circle"
-						maxBarSize={20}
+						maxBarSize={ 20 }
 					/>
 					<Bar
 						unit=" tests"
@@ -65,7 +71,7 @@ const TestResultsChart = React.memo(({ data }) => {
 						fill="rgba( 170, 170, 170, 0.73 )"
 						stackId="a"
 						legendType="circle"
-						maxBarSize={20}
+						maxBarSize={ 20 }
 					/>
 					<Line
 						unit="%"
@@ -74,16 +80,16 @@ const TestResultsChart = React.memo(({ data }) => {
 						yAxisId="failureRate"
 						dataKey="testsFailedRate"
 						stroke="rgba(186, 110, 98, 0.71)"
-						strokeWidth={2}
+						strokeWidth={ 2 }
 						legendType="cross"
-						dot={{ fill: 'rgba(186, 110, 98, 0.71)', r: 4 }}
-						activeDot={{ stroke: 'rgba(186, 110, 98, 0.71)', r: 8 }}
+						dot={ { fill: 'rgba(186, 110, 98, 0.71)', r: 4 } }
+						activeDot={ { stroke: 'rgba(186, 110, 98, 0.71)', r: 8 } }
 					/>
 				</ComposedChart>
 			</ResponsiveContainer>
 		</div>
 	);
-});
+} );
 
 TestResultsChart.displayName = 'TestResultsChart';
 

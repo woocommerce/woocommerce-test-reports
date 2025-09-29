@@ -4,34 +4,34 @@ import config from '../config.json';
 import { FormControl } from 'react-bootstrap';
 import moment from 'moment';
 
-const Errors = React.memo(() => {
-	const [rawData, setRawData] = useState({});
-	const [searchTerm, setSearchTerm] = useState('Timed out \\d+ms');
-	const [isDataReady, setIsDataReady] = useState(false);
-	const [errorMessage, setErrorMessage] = useState('');
+const Errors = React.memo( () => {
+	const [ rawData, setRawData ] = useState( {} );
+	const [ searchTerm, setSearchTerm ] = useState( 'Timed out \\d+ms' );
+	const [ isDataReady, setIsDataReady ] = useState( false );
+	const [ errorMessage, setErrorMessage ] = useState( '' );
 
-	useEffect(() => {
+	useEffect( () => {
 		const fetchData = async () => {
 			try {
-				const response = await fetch(`${getDataSourceUrl()}/data/errors.json`, {
+				const response = await fetch( `${ getDataSourceUrl() }/data/errors.json`, {
 					headers: {
 						'Content-Type': 'application/json',
 						Accept: 'application/json',
 					},
-				});
+				} );
 				const jsonData = await response.json();
-				setRawData(jsonData);
-				setIsDataReady(true);
-			} catch (error) {
-				console.error(error);
+				setRawData( jsonData );
+				setIsDataReady( true );
+			} catch ( error ) {
+				console.error( error );
 			}
 		};
 
 		fetchData();
-	}, []);
+	}, [] );
 
-	const filteredData = useMemo(() => {
-		if (!rawData.errors || !isDataReady) {
+	const filteredData = useMemo( () => {
+		if ( ! rawData.errors || ! isDataReady ) {
 			return { errors: [], count: 0, lastUpdate: null };
 		}
 
@@ -39,14 +39,14 @@ const Errors = React.memo(() => {
 		let errors = [];
 
 		try {
-			regex = new RegExp(searchTerm, 'i');
-			errors = rawData.errors.filter(e => {
-				return regex.test(e.trace) || regex.test(e.test) || regex.test(e.path);
-			});
-			setErrorMessage('');
-		} catch (e) {
-			console.error(`Invalid regex pattern: ${searchTerm}`, e);
-			setErrorMessage('Invalid regex pattern');
+			regex = new RegExp( searchTerm, 'i' );
+			errors = rawData.errors.filter( e => {
+				return regex.test( e.trace ) || regex.test( e.test ) || regex.test( e.path );
+			} );
+			setErrorMessage( '' );
+		} catch ( e ) {
+			console.error( `Invalid regex pattern: ${ searchTerm }`, e );
+			setErrorMessage( 'Invalid regex pattern' );
 			errors = [];
 		}
 
@@ -55,18 +55,21 @@ const Errors = React.memo(() => {
 			count: errors.length,
 			lastUpdate: rawData.lastUpdate,
 		};
-	}, [rawData, searchTerm, isDataReady]);
+	}, [ rawData, searchTerm, isDataReady ] );
 
-	const handleSearchChange = useCallback((event) => {
-		setSearchTerm(event.target.value);
-		setErrorMessage('');
-	}, []);
+	const handleSearchChange = useCallback( event => {
+		setSearchTerm( event.target.value );
+		setErrorMessage( '' );
+	}, [] );
 
-	const getReportUrl = useCallback((error) => {
-		return `${config.reportDeepUrl}/${error.path}/#testresult/${error.source.replace('.json', '')}`;
-	}, []);
+	const getReportUrl = useCallback( error => {
+		return `${ config.reportDeepUrl }/${ error.path }/#testresult/${ error.source.replace(
+			'.json',
+			''
+		) }`;
+	}, [] );
 
-	const renderFiltersColumn = useCallback(() => {
+	const renderFiltersColumn = useCallback( () => {
 		return (
 			<div className="filtersRow">
 				<div className="search-input-container">
@@ -87,15 +90,15 @@ const Errors = React.memo(() => {
 					<FormControl
 						className="search-input search-errors"
 						type="text"
-						onChange={handleSearchChange}
-						value={searchTerm}
+						onChange={ handleSearchChange }
+						value={ searchTerm }
 					/>
 				</div>
 			</div>
 		);
-	}, [handleSearchChange, searchTerm]);
+	}, [ handleSearchChange, searchTerm ] );
 
-	if (!isDataReady) {
+	if ( ! isDataReady ) {
 		return null;
 	}
 
@@ -103,40 +106,33 @@ const Errors = React.memo(() => {
 		<div>
 			<div className="row headerRow">
 				<div className="col">
-					<span>{filteredData.count} results</span>
+					<span>{ filteredData.count } results</span>
 					<br />
-					<span className="caption">
-						updated {moment(filteredData.lastUpdate).fromNow()}
-					</span>
+					<span className="caption">updated { moment( filteredData.lastUpdate ).fromNow() }</span>
 				</div>
-				<div className="col filters right-align">{renderFiltersColumn()}</div>
+				<div className="col filters right-align">{ renderFiltersColumn() }</div>
 			</div>
-			<p className="error">{errorMessage}</p>
+			<p className="error">{ errorMessage }</p>
 			<ul className="flowsList errorsList">
-				{filteredData.errors.map((error, errorIndex) => (
-					<li key={errorIndex}>
-						<a
-							className="flowLink"
-							href={getReportUrl(error)}
-							target="_blank"
-							rel="noreferrer"
-						>
-							{error.test}
-						</a>{' '}
+				{ filteredData.errors.map( ( error, errorIndex ) => (
+					<li key={ errorIndex }>
+						<a className="flowLink" href={ getReportUrl( error ) } target="_blank" rel="noreferrer">
+							{ error.test }
+						</a>{ ' ' }
 						<br />
-						<small className="flowMetaData">{error.path}</small>
+						<small className="flowMetaData">{ error.path }</small>
 						<br />
 						<div className="trace">
-							{error.trace.length > 1000
-								? `${error.trace.substring(0, 1000)}...`
-								: error.trace}
+							{ error.trace.length > 1000
+								? `${ error.trace.substring( 0, 1000 ) }...`
+								: error.trace }
 						</div>
 					</li>
-				))}
+				) ) }
 			</ul>
 		</div>
 	);
-});
+} );
 
 Errors.displayName = 'Errors';
 
