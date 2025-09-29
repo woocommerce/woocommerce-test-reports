@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import moment from 'moment';
 import { useTrunkFilter } from '../hooks/useTrunkFilter';
+import { useDataRangeFilter } from '../hooks/useDataRangeFilter';
 import { useSummaryData } from '../hooks/useSummaryData';
 import FailureRatesChart from './charts/FailureRatesChart';
 import TestResultsChart from './charts/TestResultsChart';
@@ -10,11 +11,16 @@ import StatsSummary from './StatsSummary';
 
 const Summary = React.memo( () => {
 	const { isTrunkOnly, getTrunkOnlyFilterButton } = useTrunkFilter( true );
+	const { isAllData, getDataRangeFilterButton } = useDataRangeFilter( false );
 	const summaryData = useSummaryData();
 
 	useEffect( () => {
 		summaryData.setIsTrunkOnly( isTrunkOnly );
 	}, [ isTrunkOnly, summaryData.setIsTrunkOnly ] );
+
+	useEffect( () => {
+		summaryData.setIsAllData( isAllData );
+	}, [ isAllData, summaryData.setIsAllData ] );
 
 	if ( ! summaryData.isDataReady ) {
 		return null;
@@ -23,7 +29,10 @@ const Summary = React.memo( () => {
 	return (
 		<div>
 			<div className="row">
-				<div className="col-sm filters">{ getTrunkOnlyFilterButton() }</div>
+				<div className="col-sm filters">
+					{ getTrunkOnlyFilterButton() }
+					{ getDataRangeFilterButton() }
+				</div>
 			</div>
 			<div className="row title-row">
 				<div className="col-sm">

@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
+import moment from 'moment';
 import { sortArray } from '../utils/sort';
 import { getDataSourceUrl } from '../config';
 
@@ -11,6 +12,7 @@ export function useSummaryData() {
 		failureRatesData: [],
 	} );
 	const [ isTrunkOnly, setIsTrunkOnly ] = useState( true );
+	const [ isAllData, setIsAllData ] = useState( false );
 	const [ isDataReady, setIsDataReady ] = useState( false );
 
 	useEffect( () => {
@@ -87,6 +89,11 @@ export function useSummaryData() {
 				} ) );
 			}
 
+			if ( ! isAllData ) {
+				const thirtyDaysAgo = moment().subtract( 30, 'days' ).format( 'YYYY-MM-DD' );
+				filteredEntries = filteredEntries.filter( entry => entry.date >= thirtyDaysAgo );
+			}
+
 			sortArray( filteredEntries, 'date', false );
 			return filteredEntries;
 		};
@@ -121,12 +128,14 @@ export function useSummaryData() {
 			failureRates: processFailuresRatesData(),
 			lastUpdate: rawData.summaryData.lastUpdate,
 		};
-	}, [ rawData, isTrunkOnly, isDataReady ] );
+	}, [ rawData, isTrunkOnly, isAllData, isDataReady ] );
 
 	return {
 		...processedData,
 		isTrunkOnly,
 		setIsTrunkOnly,
+		isAllData,
+		setIsAllData,
 		isDataReady,
 	};
 }
