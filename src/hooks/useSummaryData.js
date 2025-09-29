@@ -74,16 +74,16 @@ export function useSummaryData() {
 			};
 		}
 
-		const filterDataSet = rawData => {
+		const filterDataSet = dataSet => {
 			let filteredEntries = [];
 
 			if ( isTrunkOnly ) {
-				filteredEntries = rawData.map( entry => ( {
+				filteredEntries = dataSet.map( entry => ( {
 					...entry.trunk,
 					date: entry.date,
 				} ) );
 			} else {
-				filteredEntries = rawData.map( entry => ( {
+				filteredEntries = dataSet.map( entry => ( {
 					...entry.total,
 					date: entry.date,
 				} ) );

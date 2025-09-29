@@ -16,11 +16,11 @@ const Summary = React.memo( () => {
 
 	useEffect( () => {
 		summaryData.setIsTrunkOnly( isTrunkOnly );
-	}, [ isTrunkOnly, summaryData.setIsTrunkOnly ] );
+	}, [ isTrunkOnly, summaryData ] );
 
 	useEffect( () => {
 		summaryData.setIsAllData( isAllData );
-	}, [ isAllData, summaryData.setIsAllData ] );
+	}, [ isAllData, summaryData ] );
 
 	if ( ! summaryData.isDataReady ) {
 		return null;
