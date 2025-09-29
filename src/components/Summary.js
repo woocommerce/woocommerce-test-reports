@@ -37,74 +37,52 @@ export default class Summary extends BaseComponent {
 	};
 
 	async componentDidMount() {
-		await fetch( `${ getDataSourceUrl() }/data/summary.json`, {
-			headers: {
-				'Content-Type': 'application/json',
-				Accept: 'application/json',
-			},
-		} )
-			.then( response => response.json() )
-			.then( jsonData => {
-				this.rawData.summaryData = jsonData;
-			} )
-			.catch( console.error );
+		const headers = {
+			'Content-Type': 'application/json',
+			Accept: 'application/json',
+		};
 
-		await fetch( `${ getDataSourceUrl() }/data/runs-daily.json`, {
-			headers: {
-				'Content-Type': 'application/json',
-				Accept: 'application/json',
-			},
-		} )
-			.then( response => response.json() )
-			.then( jsonData => {
-				this.rawData.dailyData = jsonData;
-			} )
-			.catch( console.error );
+		try {
+			const [
+				summaryResponse,
+				dailyResponse,
+				weeklyResponse,
+				monthlyResponse,
+				failureRatesResponse,
+			] = await Promise.all( [
+				fetch( `${ getDataSourceUrl() }/data/summary.json`, { headers } ),
+				fetch( `${ getDataSourceUrl() }/data/runs-daily.json`, { headers } ),
+				fetch( `${ getDataSourceUrl() }/data/runs-weekly.json`, { headers } ),
+				fetch( `${ getDataSourceUrl() }/data/runs-monthly.json`, { headers } ),
+				fetch( `${ getDataSourceUrl() }/data/failure-rates.json`, { headers } ),
+			] );
 
-		await fetch( `${ getDataSourceUrl() }/data/runs-weekly.json`, {
-			headers: {
-				'Content-Type': 'application/json',
-				Accept: 'application/json',
-			},
-		} )
-			.then( response => response.json() )
-			.then( jsonData => {
-				this.rawData.weeklyData = jsonData;
-			} )
-			.catch( console.error );
+			const [ summaryData, dailyData, weeklyData, monthlyData, failureRatesData ] =
+				await Promise.all( [
+					summaryResponse.json(),
+					dailyResponse.json(),
+					weeklyResponse.json(),
+					monthlyResponse.json(),
+					failureRatesResponse.json(),
+				] );
 
-		await fetch( `${ getDataSourceUrl() }/data/runs-monthly.json`, {
-			headers: {
-				'Content-Type': 'application/json',
-				Accept: 'application/json',
-			},
-		} )
-			.then( response => response.json() )
-			.then( jsonData => {
-				this.rawData.monthlyData = jsonData;
-			} )
-			.catch( console.error );
+			this.rawData.summaryData = summaryData;
+			this.rawData.dailyData = dailyData;
+			this.rawData.weeklyData = weeklyData;
+			this.rawData.monthlyData = monthlyData;
+			this.failureRatesData = failureRatesData;
 
-		await fetch( `${ getDataSourceUrl() }/data/failure-rates.json`, {
-			headers: {
-				'Content-Type': 'application/json',
-				Accept: 'application/json',
-			},
-		} )
-			.then( response => response.json() )
-			.then( jsonData => {
-				this.failureRatesData = jsonData;
-			} )
-			.catch( console.error );
+			this.filterAndSortData();
 
-		this.filterAndSortData();
-
-		this.setState( {
-			isDataReady: true,
-		} );
+			this.setState( {
+				isDataReady: true,
+			} );
+		} catch ( error ) {
+			console.error( error );
+		}
 	}
 
-	componentDidUpdate( prevProps, prevState ) {
+	componentDidUpdate( _, prevState ) {
 		if ( this.state.filters !== prevState.filters ) {
 			this.filterAndSortData();
 		}

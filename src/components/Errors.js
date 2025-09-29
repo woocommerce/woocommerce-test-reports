@@ -34,7 +34,7 @@ export default class Errors extends BaseComponent {
 		} );
 	}
 
-	componentDidUpdate( prevProps, prevState ) {
+	componentDidUpdate( _, prevState ) {
 		if ( this.state.filters !== prevState.filters ) {
 			this.filterAndSortData();
 		}
