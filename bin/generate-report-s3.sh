@@ -100,6 +100,15 @@ done <   <(find "$REPORT_PATH" -name '*.json' -print0)
 echo "Copying report to S3"
 aws s3 cp "$REPORT_PATH" "$s3_reports_path/$S3_REPORT_PATH" --recursive --only-show-errors
 
+# Check for results.xml and upload to S3 with timestamp
+if [[ -f "$RESULTS_PATH/results.xml" ]]; then
+  echo "Found results.xml, uploading to S3 with timestamp"
+  TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+  RESULTS_XML_NAME="results_${TIMESTAMP}.xml"
+  aws s3 cp "$RESULTS_PATH/results.xml" "$s3_reports_path/junit/$RESULTS_XML_NAME" --only-show-errors
+  echo "Uploaded results.xml as $RESULTS_XML_NAME to $s3_reports_path/junit/"
+fi
+
 #echo "Cleaning up: remove results dir $RESULTS_PATH"
 #rm -rf "$RESULTS_PATH"
 
