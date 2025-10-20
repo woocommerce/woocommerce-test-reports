@@ -106,8 +106,9 @@ if [[ -f "$RESULTS_PATH/results.xml" ]]; then
   echo "Found results.xml, uploading to S3 with timestamp"
   TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
   RESULTS_XML_NAME="results_${TIMESTAMP}.xml"
-  echo "Uploading $RESULTS_PATH/results.xml to $s3_reports_path/junit/$RESULTS_XML_NAME"
-  aws s3 cp "$RESULTS_PATH/results.xml" "$s3_reports_path/junit/$RESULTS_XML_NAME"
+  DESTINATION_PATH="$s3_reports_path/junit/queue/$RESULTS_XML_NAME"
+  echo "Uploading $RESULTS_PATH/results.xml to $DESTINATION_PATH"
+  aws s3 cp "$RESULTS_PATH/results.xml" "$DESTINATION_PATH"
   echo "Upload complete: $RESULTS_XML_NAME"
 else
   echo "No results.xml found in $RESULTS_PATH"
