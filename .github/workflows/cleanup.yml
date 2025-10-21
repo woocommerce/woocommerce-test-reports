@@ -16,6 +16,9 @@ concurrency:
 env:
   FORCE_COLOR: 1
 
+permissions:
+  contents: read
+
 jobs:
   update-stats:
     name: "Clean up reports"

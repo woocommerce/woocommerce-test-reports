@@ -224,7 +224,17 @@ async function acquireLockWithRetry(
 	const lockId = `${ Date.now().toString() }_${ rand }`;
 	console.log( `Expecting Lock ID: ${ lockId }` );
 
+	// Add absolute timeout of 10 minutes to prevent indefinite hangs
+	const absoluteTimeout = 10 * 60 * 1000; // 10 minutes in milliseconds
+	const startTime = Date.now();
+
 	while ( lockFound && retries-- > 0 ) {
+		// Check if absolute timeout has been exceeded
+		if ( Date.now() - startTime > absoluteTimeout ) {
+			console.error( 'Absolute timeout exceeded while waiting for lock' );
+			throw new Error( 'Lock acquisition timeout exceeded (10 minutes)' );
+		}
+
 		console.log( `Checking lockfile` );
 		const lock = await lockedInfo( fileName );
 		console.log( `Lock status: ${ lock }` );

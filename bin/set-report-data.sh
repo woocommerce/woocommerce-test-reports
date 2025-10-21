@@ -27,13 +27,23 @@ if [[ -z "$SUITE_NAME" ]]; then
      exit 1
 fi
 
-# Sanitize the input - use safer variable access pattern
+# Sanitize inputs - remove dangerous characters and limit length
 SUITE_NAME=$(echo "$SUITE_NAME" | tr -cd '[:alnum:]._ -' | head -c 200)
 REF_NAME=$(echo "$REF_NAME" | tr -cd '[:alnum:]._ -' | head -c 200)
 REPORT_TITLE=$(echo "$REPORT_TITLE" | tr -cd '[:alnum:]._ -' | head -c 200)
 
-# Use short commit sha
+# Validate RUN_ID is numeric
+if ! [[ "$RUN_ID" =~ ^[0-9]+$ ]]; then
+    echo "::error::RUN_ID must be numeric"
+    exit 1
+fi
+
+# Use short commit sha and validate format
 COMMIT_SHA=$(echo "$COMMIT_SHA" | cut -c 1-7)
+if [[ -n "$COMMIT_SHA" ]] && ! [[ "$COMMIT_SHA" =~ ^[a-f0-9]{1,7}$ ]]; then
+    echo "::error::COMMIT_SHA has invalid format"
+    exit 1
+fi
 
 if [[ "$EVENT_NAME" == "daily-checks" ]] || [[ "$EVENT_NAME" == "daily-e2e" ]]; then
     EVENT_NAME="daily-checks"
