@@ -27,12 +27,10 @@ if [[ -z "$SUITE_NAME" ]]; then
      exit 1
 fi
 
-# Sanitize the input
-for var in SUITE_NAME REF_NAME REPORT_TITLE; do
-    val="${!var}"
-    val=$(echo "$val" | tr -cd '[:alnum:]._ -')
-    declare "$var=$val"
-done
+# Sanitize the input - use safer variable access pattern
+SUITE_NAME=$(echo "$SUITE_NAME" | tr -cd '[:alnum:]._ -' | head -c 200)
+REF_NAME=$(echo "$REF_NAME" | tr -cd '[:alnum:]._ -' | head -c 200)
+REPORT_TITLE=$(echo "$REPORT_TITLE" | tr -cd '[:alnum:]._ -' | head -c 200)
 
 # Use short commit sha
 COMMIT_SHA=$(echo "$COMMIT_SHA" | cut -c 1-7)

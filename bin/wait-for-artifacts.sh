@@ -13,7 +13,13 @@ if [[ -z "$REPOSITORY" ]]; then
 fi
 
 get_artifacts_count() {
-  curl -s https://api.github.com/repos/"$REPOSITORY"/actions/runs/"$RUN_ID"/artifacts | jq '.total_count'
+  # Use GITHUB_TOKEN for authenticated requests to avoid rate limits
+  local auth_header=""
+  if [[ -n "$GITHUB_TOKEN" ]]; then
+    auth_header="-H \"Authorization: Bearer $GITHUB_TOKEN\""
+  fi
+
+  curl -s $auth_header https://api.github.com/repos/"$REPOSITORY"/actions/runs/"$RUN_ID"/artifacts | jq '.total_count'
 }
 
 ARTEFACTS_COUNT=$( get_artifacts_count )

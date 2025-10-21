@@ -21,6 +21,12 @@ if [[ -z "$RESULTS_PATH" ]]; then
   exit 1
 fi
 
+# Validate RESULTS_PATH doesn't contain command injection characters
+if [[ "$RESULTS_PATH" =~ [\;\&\|\$\`] ]]; then
+  echo "::error::RESULTS_PATH contains invalid characters"
+  exit 1
+fi
+
 ALLURE_RESULTS_PATH=$(realpath "$RESULTS_PATH"/allure-results)
 
 if [[ ! -d "$ALLURE_RESULTS_PATH" ]]; then
@@ -42,6 +48,17 @@ fi
 
 if [[ -z "$S3_REPORT_PATH" ]]; then
      echo "::error:: missing S3_REPORT_PATH environment variable"
+     exit 1
+fi
+
+# Validate S3_REPORT_PATH and REPORT_PATH don't contain command injection characters
+if [[ "$S3_REPORT_PATH" =~ [\;\&\|\$\`] ]]; then
+     echo "::error::S3_REPORT_PATH contains invalid characters"
+     exit 1
+fi
+
+if [[ "$REPORT_PATH" =~ [\;\&\|\$\`] ]]; then
+     echo "::error::REPORT_PATH contains invalid characters"
      exit 1
 fi
 

@@ -47,6 +47,9 @@ on:
 env:
   FORCE_COLOR: 1
 
+permissions:
+  contents: read
+
 jobs:
   report:
     name: "Create test report"
@@ -68,6 +71,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Validate repository input
+        run: |
+          # Only allow artifacts from woocommerce organization repositories
+          if [[ ! "${{ inputs.repository }}" =~ ^woocommerce/ ]]; then
+            echo "::error::Repository must be from woocommerce organization"
+            exit 1
+          fi
 
       - name: Set report information
         run: ./bin/set-report-data.sh
@@ -95,6 +106,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Wait for artifacts to be available
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./bin/wait-for-artifacts.sh
 
       - name: Download artifacts
