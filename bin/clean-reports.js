@@ -11,7 +11,7 @@ const {
 } = require( './utils' );
 const { s3Params, s3client } = require( './s3-client' );
 const { Octokit } = require( '@octokit/rest' );
-const { PutObjectCommand } = require( '@aws-sdk/client-s3' );
+const { PutObjectCommand, ListObjectsCommand, DeleteObjectCommand } = require( '@aws-sdk/client-s3' );
 const config = require( '../src/config.json' );
 const moment = require( 'moment' );
 const octokit = new Octokit( {
@@ -24,6 +24,7 @@ const daysToKeepReports = {
 	'daily-checks': 30,
 	'release-checks': 90,
 	other: 30,
+	junit: 7,
 };
 
 const plus = String.fromCodePoint( 0x2795 );
@@ -270,6 +271,76 @@ const dryRun = process.env.DRY_RUN;
 
 	console.groupEnd();
 	// endregion
+
+	// region Clean junit queue and processed folders
+	console.group( '\n', 'Cleaning junit queue and processed folders' );
+	const junitFolders = [ 'reports/junit/queue/', 'reports/junit/processed/' ];
+
+	for ( const folder of junitFolders ) {
+		console.log( `\nChecking ${ folder }` );
+
+		try {
+			// Collect all files with pagination
+			const allFiles = [];
+			let truncated = true;
+			let marker;
+			let pageCount = 0;
+
+			while ( truncated ) {
+				pageCount++;
+				console.log( `Fetching page ${ pageCount } for ${ folder }` );
+
+				const listCmd = new ListObjectsCommand( {
+					Bucket: s3Params.Bucket,
+					Prefix: folder,
+					Marker: marker,
+				} );
+				const listResponse = await s3client.send( listCmd );
+
+				if ( listResponse.Contents && listResponse.Contents.length > 0 ) {
+					allFiles.push( ...listResponse.Contents );
+				}
+
+				truncated = listResponse.IsTruncated;
+				if ( truncated ) {
+					marker = listResponse.Contents[ listResponse.Contents.length - 1 ].Key;
+				}
+			}
+
+			if ( allFiles.length === 0 ) {
+				console.log( `No files found in ${ folder }` );
+				continue;
+			}
+
+			console.log( `Found ${ allFiles.length } files in ${ folder }` );
+
+			// Sort by LastModified date ascending (oldest first)
+			allFiles.sort( ( a, b ) => a.LastModified - b.LastModified );
+
+			let removedCount = 0;
+			for ( const file of allFiles ) {
+				const fileKey = file.Key;
+				const lastModified = file.LastModified;
+
+				if ( isOld( lastModified, daysToKeepReports.junit, 'days' ) ) {
+					console.log( `Removing old file: ${ fileKey }` );
+					if ( ! dryRun ) {
+						await s3client.send(
+							new DeleteObjectCommand( { Bucket: s3Params.Bucket, Key: fileKey } )
+						);
+					}
+					removedCount++;
+				}
+			}
+
+			console.log( `${ done } Removed ${ removedCount } files from ${ folder }` );
+		} catch ( err ) {
+			console.error( `Error processing folder ${ folder }: ${ err.message }` );
+		}
+	}
+
+	console.groupEnd();
+	// endregion
 } )();
 
 function isOld( date, threshold, timeUnit = 'days' ) {
@@ -277,7 +348,7 @@ function isOld( date, threshold, timeUnit = 'days' ) {
 		.duration( moment.utc().diff( moment.utc( date ) ) )
 		.as( timeUnit )
 		.toFixed( 1 );
-	console.log( `Age: ${ duration } ${ timeUnit }` );
+	// console.log( `Age: ${ duration } ${ timeUnit }` );
 	return duration > threshold;
 }
 
