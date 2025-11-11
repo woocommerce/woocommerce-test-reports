@@ -25,6 +25,7 @@ const daysToKeepReports = {
 	'release-checks': 90,
 	other: 30,
 	junit: 7,
+	ctrf: 2,
 };
 
 const plus = String.fromCodePoint( 0x2795 );
@@ -337,6 +338,73 @@ const dryRun = process.env.DRY_RUN;
 		} catch ( err ) {
 			console.error( `Error processing folder ${ folder }: ${ err.message }` );
 		}
+	}
+
+	console.groupEnd();
+	// endregion
+
+	// region Clean ctrf folder
+	console.group( '\n', 'Cleaning ctrf folder' );
+	const ctrfFolder = 'reports/ctrf/';
+
+	console.log( `\nChecking ${ ctrfFolder }` );
+
+	try {
+		// Collect all files with pagination
+		const allFiles = [];
+		let truncated = true;
+		let marker;
+		let pageCount = 0;
+
+		while ( truncated ) {
+			pageCount++;
+			console.log( `Fetching page ${ pageCount } for ${ ctrfFolder }` );
+
+			const listCmd = new ListObjectsCommand( {
+				Bucket: s3Params.Bucket,
+				Prefix: ctrfFolder,
+				Marker: marker,
+			} );
+			const listResponse = await s3client.send( listCmd );
+
+			if ( listResponse.Contents && listResponse.Contents.length > 0 ) {
+				allFiles.push( ...listResponse.Contents );
+			}
+
+			truncated = listResponse.IsTruncated;
+			if ( truncated ) {
+				marker = listResponse.Contents[ listResponse.Contents.length - 1 ].Key;
+			}
+		}
+
+		if ( allFiles.length === 0 ) {
+			console.log( `No files found in ${ ctrfFolder }` );
+		} else {
+			console.log( `Found ${ allFiles.length } files in ${ ctrfFolder }` );
+
+			// Sort by LastModified date ascending (oldest first)
+			allFiles.sort( ( a, b ) => a.LastModified - b.LastModified );
+
+			let removedCount = 0;
+			for ( const file of allFiles ) {
+				const fileKey = file.Key;
+				const lastModified = file.LastModified;
+
+				if ( isOld( lastModified, daysToKeepReports.ctrf, 'days' ) ) {
+					console.log( `Removing old file: ${ fileKey }` );
+					if ( ! dryRun ) {
+						await s3client.send(
+							new DeleteObjectCommand( { Bucket: s3Params.Bucket, Key: fileKey } )
+						);
+					}
+					removedCount++;
+				}
+			}
+
+			console.log( `${ done } Removed ${ removedCount } files from ${ ctrfFolder }` );
+		}
+	} catch ( err ) {
+		console.error( `Error processing folder ${ ctrfFolder }: ${ err.message }` );
 	}
 
 	console.groupEnd();
