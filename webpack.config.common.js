@@ -26,17 +26,7 @@ module.exports = {
 			},
 			{
 				test: /\.(png|svg)$/,
-				use: [ 'file-loader' ],
-			},
-			{
-				test: /\.json$/,
-				type: 'javascript/auto',
-				exclude: /(node_modules|bower_components)/,
-				use: [
-					{
-						loader: 'json-loader',
-					},
-				],
+				type: 'asset/resource',
 			},
 		],
 	},

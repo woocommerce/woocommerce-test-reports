@@ -5,12 +5,11 @@ import {
 	ComposedChart,
 	Legend,
 	ResponsiveContainer,
+	Tooltip,
 	XAxis,
 	YAxis,
 } from 'recharts';
-import { Tooltip } from 'recharts';
 import moment from 'moment';
-import TestResultsTooltip from '../TestResultsTooltip';
 
 const TestsPerAttemptChart = React.memo( ( { data } ) => {
 	const axisTickStyle = { fontSize: '0.8rem' };

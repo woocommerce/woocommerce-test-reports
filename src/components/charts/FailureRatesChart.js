@@ -5,10 +5,10 @@ import {
 	ComposedChart,
 	Line,
 	ResponsiveContainer,
+	Tooltip,
 	XAxis,
 	YAxis,
 } from 'recharts';
-import { Tooltip } from 'recharts';
 import moment from 'moment';
 
 const FailureRatesChart = React.memo( ( { data } ) => {

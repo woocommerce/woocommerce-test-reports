@@ -6,12 +6,11 @@ import {
 	Legend,
 	Line,
 	ResponsiveContainer,
+	Tooltip,
 	XAxis,
 	YAxis,
 } from 'recharts';
-import { Tooltip } from 'recharts';
 import moment from 'moment';
-import TestResultsTooltip from '../TestResultsTooltip';
 
 const TestResultsChart = React.memo( ( { data } ) => {
 	const axisTickStyle = { fontSize: '0.8rem' };
