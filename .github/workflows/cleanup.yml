@@ -20,10 +20,10 @@ permissions:
   contents: read
 
 jobs:
-  update-stats:
+  clean-reports:
     name: "Clean up reports"
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 90
 
     steps:
       - name: Checkout
