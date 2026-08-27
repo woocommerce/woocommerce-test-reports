@@ -23,6 +23,7 @@ jobs:
   update-stats:
     name: "Clean up reports"
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout

@@ -54,6 +54,7 @@ jobs:
   report:
     name: "Create test report"
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     env:
       RUN_ID: ${{ inputs.run_id }}
       RUN_ATTEMPT: ${{ inputs.run_attempt }}
