@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { getDataSourceUrl } from '../config';
-import config from '../config.json';
 import { FormControl } from 'react-bootstrap';
 import moment from 'moment';
 
@@ -62,13 +61,6 @@ const Errors = React.memo( () => {
 		setErrorMessage( '' );
 	}, [] );
 
-	const getReportUrl = useCallback( error => {
-		return `${ config.reportDeepUrl }/${ error.path }/#testresult/${ error.source.replace(
-			'.json',
-			''
-		) }`;
-	}, [] );
-
 	const renderFiltersColumn = useCallback( () => {
 		return (
 			<div className="filtersRow">
@@ -116,9 +108,7 @@ const Errors = React.memo( () => {
 			<ul className="flowsList errorsList">
 				{ filteredData.errors.map( ( error, errorIndex ) => (
 					<li key={ errorIndex }>
-						<a className="flowLink" href={ getReportUrl( error ) } target="_blank" rel="noreferrer">
-							{ error.test }
-						</a>{ ' ' }
+						<span className="flowLink">{ error.test }</span>
 						<br />
 						<small className="flowMetaData">{ error.path }</small>
 						<br />
