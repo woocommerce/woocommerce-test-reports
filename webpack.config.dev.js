@@ -1,6 +1,5 @@
 const common = require( './webpack.config.common' );
 const { join } = require( 'node:path' );
-const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 const webpack = require( 'webpack' );
 
 module.exports = {
@@ -16,9 +15,6 @@ module.exports = {
 	},
 	plugins: [
 		...common.plugins,
-		new CopyWebpackPlugin( {
-			patterns: [ { from: 'data', to: 'data' } ],
-		} ),
 		new webpack.DefinePlugin( {
 			'process.env': {
 				NODE_ENV: JSON.stringify( 'development' ),
