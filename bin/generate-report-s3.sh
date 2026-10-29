@@ -117,38 +117,6 @@ done <   <(find "$REPORT_PATH" -name '*.json' -print0)
 echo "Copying report to S3"
 aws s3 cp "$REPORT_PATH" "$s3_reports_path/$S3_REPORT_PATH" --recursive --only-show-errors
 
-# Check for results.xml and upload to S3 with timestamp
-echo "Checking for results.xml in $RESULTS_PATH"
-if [[ -f "$RESULTS_PATH/results.xml" ]]; then
-  echo "Found results.xml, uploading to S3 with timestamp"
-  TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
-  RESULTS_XML_NAME="results_${TIMESTAMP}.xml"
-  DESTINATION_PATH="$s3_reports_path/junit/queue/$RESULTS_XML_NAME"
-  echo "Uploading $RESULTS_PATH/results.xml to $DESTINATION_PATH"
-  aws s3 cp "$RESULTS_PATH/results.xml" "$DESTINATION_PATH"
-  echo "Upload complete: $RESULTS_XML_NAME"
-else
-  echo "No results.xml found in $RESULTS_PATH"
-fi
-
-# Check for CTRF reports and upload to S3 with timestamp
-echo "Checking for CTRF reports in $RESULTS_PATH"
-CTRF_FILES=$(find "$RESULTS_PATH" -maxdepth 1 -name "ctrf-report-*.json" -print)
-if [[ -n "$CTRF_FILES" ]]; then
-  echo "Found CTRF reports, uploading to S3"
-  while IFS= read -r ctrf_file; do
-    if [[ -f "$ctrf_file" ]]; then
-      CTRF_FILENAME=$(basename "$ctrf_file")
-      DESTINATION_PATH="$s3_reports_path/ctrf/$CTRF_FILENAME"
-      echo "Uploading $ctrf_file to $DESTINATION_PATH"
-      aws s3 cp "$ctrf_file" "$DESTINATION_PATH"
-      echo "Upload complete: $CTRF_FILENAME"
-    fi
-  done <<< "$CTRF_FILES"
-else
-  echo "No CTRF reports found in $RESULTS_PATH"
-fi
-
 #echo "Cleaning up: remove results dir $RESULTS_PATH"
 #rm -rf "$RESULTS_PATH"
 
