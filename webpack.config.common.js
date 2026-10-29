@@ -42,6 +42,7 @@ module.exports = {
 		new HtmlWebpackPlugin( {
 			template: './src/templates/404.html',
 			filename: '404.html',
+			chunks: [],
 			favicon: './src/assets/favicon.ico',
 			title: 'Not found - Woocommerce test reports',
 		} ),
