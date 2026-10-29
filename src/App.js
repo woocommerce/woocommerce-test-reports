@@ -2,13 +2,14 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Navbar, Container, Nav, Alert } from 'react-bootstrap';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import logo from './assets/logo-white.svg';
 import Summary from './components/Summary';
 import Reports from './components/Reports';
 import Flows from './components/Flows';
 import Errors from './components/Errors';
+import config from './config.json';
 
 function App() {
 	const basename = '/woocommerce-test-reports';
@@ -52,6 +53,10 @@ function App() {
 						</Navbar.Collapse>
 					</Container>
 				</Navbar>
+				<Alert variant="warning" className="m-3">
+					This dashboard is archived. It shows a snapshot of the data from { config.archivedAt }{ ' ' }
+					and is no longer updated.
+				</Alert>
 				<HashRouter>
 					<Routes>
 						<Route exact path="/" element={ <Summary /> } />

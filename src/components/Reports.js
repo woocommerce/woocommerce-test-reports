@@ -9,6 +9,7 @@ import failedSVG from '../assets/failed.svg';
 import unknownSVG from '../assets/unknown.svg';
 import recoveredSVG from '../assets/recovered.svg';
 import { getDataSourceUrl } from '../config';
+import config from '../config.json';
 import withRouter from './withRouter';
 
 class Reports extends React.Component {
@@ -207,7 +208,7 @@ class Reports extends React.Component {
 
 	getReportLinkCell( report ) {
 		const { results, path, suite } = report;
-		const linkUrl = `${ getDataSourceUrl() }/reports/${ path }/index.html`;
+		const linkUrl = `${ config.dataSourceURL }/reports/${ path }/index.html`;
 		let status = '';
 		if ( results.total > 0 ) {
 			status = results.total !== results.passed + results.skipped ? 'F' : 'P';

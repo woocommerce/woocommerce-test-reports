@@ -49,6 +49,7 @@ module.exports = {
 			patterns: [
 				{ from: 'src/static', to: '.' },
 				{ from: 'manifest.json', to: 'manifest.json' },
+				{ from: 'data', to: 'data' },
 			],
 		} ),
 	],
