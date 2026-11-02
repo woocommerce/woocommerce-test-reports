@@ -53,6 +53,7 @@ permissions:
 jobs:
   report:
     name: "Create test report"
+    if: ${{ vars.REPORTS_ENABLED == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     env:
